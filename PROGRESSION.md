@@ -14,8 +14,8 @@ Each chat opens with this file, then the latest DECISIONS.md and LEARNINGS.md en
 - [x] Marks: which exist as SVG (2026-10-17)
 - [x] Inventory sheet and its links (2026-10-17)
 - [x] Live site: catalog snapshot, observed tokens, claims scan (2026-10-17, `outputs/step-1-review/site/`)
-- [ ] Live Figma: current templates counted by type, copy corpus from text layer names (playbook section 6), live formats and sizes. Blocked: no edit access on HLR-EMAIL or HLR-Social
-- [ ] One-page Brand Review in `outputs/step-1-review/` (v1 on 2026-10-17 without the Figma sections)
+- [x] Live Figma, read from Eddie's copy in Highlight-Rituals-Design-Forge: frames counted by type and size, copy corpus from text layer names (playbook section 6), fonts and fills (2026-10-17, `outputs/step-1-review/figma/`)
+- [x] Brand Review v2 in `outputs/step-1-review/` (2026-10-17; supersedes v1)
 - [ ] **Gate 1**: Eddie answers the ranked questions and rules on (a) who runs the forge (decided 2026-10-17: HLR's team, single-brand bundle), (b) organic social coverage, (c) where the library lives
 
 ## Step 2. Pack v0

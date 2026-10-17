@@ -30,5 +30,8 @@ variables:
 # Client files, read-only (rule 5); never written:
 #   HLR-EMAIL   CTaCEg0sZt40DIq1zH6cqi   full 4603:2; current templates 4998:1769
 #   HLR-Social  qpUX1PrWbYUgUMbyHIRmNY   full and main grid 8565:3704; templates 8024:2946
-#   2026-10-17: the connector refuses both (no edit access). Eddie is copying them into his Figma.
-#   Copies (snapshots, read-only): HLR-EMAIL {{copy-file-key}}, HLR-Social {{copy-file-key}}
+#   2026-10-17: the connector refuses both (no edit access), so Eddie copied both into his own file.
+#   Copies (snapshot 2026-10-17, read-only): LYyYXPDUHVoAABh865EvMI pages Email 0:1, Components 2:31579,
+#   Organic Social 2:32177, Website 2:182972, Paid Social 2:35858, Retail/Press 2:33120, Print 2:35751,
+#   Inspiration 2:35848, Images 2:31298. Key sections: final resized email templates 2:31293; social templates
+#   and social grid on 2:32177. No styles, variables or components in the file.

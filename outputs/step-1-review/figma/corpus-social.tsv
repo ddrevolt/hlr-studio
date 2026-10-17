@@ -1,0 +1,974 @@
+# HLR social copy corpus from Figma text layer names (playbook section 6). Source: Highlight-Rituals-Design-Forge (LYyYXPDUHVoAABh865EvMI), Eddie's copy of the client's files, read 2026-10-17. Provenance: observed. Verbatim client text, deduped case-insensitively. count = text layers carrying the line; units = frames it appears in; visible = layers not hidden; generic = a layer name that is probably not copy; flag = note (internal planning text) or placeholder, by a keyword heuristic, so voice work can skip it.
+line	count	units	visible	generic	sections	flag
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend purus nec. Integer non turpis at neque feugiat interdum.	8	6	8		(page)	placeholder
+Integer non turpis at neque feugiat. Curabitur placerat nunc placerat vitae non.	5	5	5		(page)	
+@HIGHLIGHTRITUALS	380	296	378		(page); hlr stories and work in progress; sept-october 2026; social grid; social templates	
+Integer non turpis at neque feugiat. Curabitur placerat.	2	2	2		(page)	
+Lorem ipsum dolor sit amet, consectetur adipiscing. Vivamus eleifend purus nec.	3	3	3		(page)	placeholder
+Lorem ipsum	13	13	13		(page)	placeholder
+Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl. Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl. Nunc placerat nisl. Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl. Vivamus eleifend purus nec.	15	15	15		(page)	
+dolor sit amet.	13	13	13		(page)	
+Vivamus eleifend purus nec nisl mollis convallis	3	3	3		(page)	
+Lorem ipsum dolor	3	3	3		(page)	placeholder
+sit amet.	3	3	3		(page)	
+Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl. Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl.	3	3	3		(page)	
+Nunc placerat nisl. Vivamus eleifend purus nec nisl mollis convallis. Integer non turpis at neque feugiat interdum vitae non tortor. Curabitur placerat nunc placerat nisl. Vivamus eleifend purus nec.	4	4	4		(page); hlr stories and work in progress	
+AWAKENING ADORNMENTS for self & space	3	3	3		(page); hlr stories and work in progress	
+AWAKENING ADORNMENTS	35	32	35		(page); hlr stories and work in progress	
+FOR SELF & SPACE	37	33	37		(page); hlr stories and work in progress	
+@HIGHTLIGHTRITUALS	51	40	48		(page); hlr stories and work in progress; social templates	
+Lorem ipsum dolor sit amet.	1	1	1		(page)	placeholder
+#HIGHTLIGHTRITUALS	1	1	1		(page)	
+As the moon	1	1	1		(page)	
+waxes and wanes	1	1	1		(page)	
+and each phase	1	1	1		(page)	
+so do the cycles	1	1	1		(page)	
+of my life.	1	1	1		(page)	
+teaches me	1	1	1		(page)	
+patience	1	1	1		(page)	
+and renewal.	1	1	1		(page)	
+AFFIRMAION	1	1	1		(page)	
+I am in harmony with these natural rhythms	1	1	1		(page)	
+Lorem	1	1	1		(page)	placeholder
+ipsum dolor	1	1	1		(page)	placeholder
+ipsum sit amet.	1	1	1		(page)	placeholder
+As the moon waxes and wanes, so do the cycles of my life. I am in harmony with these natural rhythms, and each phase teaches me patience and renewal.	1	1	1		(page)	
+placeholder	8	8	8		(page); hlr stories and work in progress	
+Timeless fine jewelry, rich in magic and meaning.	4	4	4		(page); hlr stories and work in progress	
+Mystic Heirlooms	4	4	4		(page); hlr stories and work in progress	
+Delicate layering jewelry adorned with healing crystals.	4	4	4		(page); hlr stories and work in progress	
+Sacred Layers	4	4	4		(page); hlr stories and work in progress	
+Healing crystals and ritual tools to uplift and support.	2	2	2		(page); hlr stories and work in progress	
+Crystals and Ritual Tools	2	2	2		(page); hlr stories and work in progress	
+Designed to usher in a rich life of abundance, this best-selling talisman is your daily reminder to cultivate your life with care and intention.	2	2	2		(page); hlr stories and work in progress	
+the garden pendant	3	3	3		(page); hlr stories and work in progress	
+Created as an homage to the goddesses of love and beauty, our Sacred Pendant helps you deepen the loving connection between your body and spirit.	2	2	2		(page); hlr stories and work in progress	
+the sacred pendant	2	2	2		(page); hlr stories and work in progress	
+A symbol of all creation - a talisman for life. The Genesis Pendant helps channel good fortune for all that you bring into the world.	2	2	2		(page); hlr stories and work in progress	
+the genesis pendant	2	2	2		(page); hlr stories and work in progress	
+Engraved with three eight-pointed stars in homage to the goddesses of love and fertility, this lucky charm invokes the softness and strength of feminine forces.	2	2	2		(page); hlr stories and work in progress	
+the large genesis pendant	3	3	3		(page); hlr stories and work in progress	
+A testament to the paths we forge, The Seeker Pendant honors the journeys we are on and all that we are destined for.	2	2	2		(page); hlr stories and work in progress	
+the seeker pendant	3	3	3		(page); hlr stories and work in progress	
+A dose of good luck when you need the support of the universe behind you, the Element Pendant embodies the natural balance of the world.	2	2	2		(page); hlr stories and work in progress	
+the element pendant	3	3	3		(page); hlr stories and work in progress	
+Inspired by the relationship between natural beauty and our inner world, The Spirit Pendant symbolizes the pursuit of our highest Self.	2	2	2		(page); hlr stories and work in progress	
+the spirit pendant	2	2	2		(page); hlr stories and work in progress	
+A calling for both Connection and Abundance, the Prayer Pendant embodies our prayers for a deeper connection and collective prosperity.	2	2	2		(page); hlr stories and work in progress	
+the prayer pendant	2	2	2		(page); hlr stories and work in progress	
+Cultivate the life you seek with this delicate strand of crystal beads that symbolize the seeds of your intentions. All crystal strand pieces include instructions for a short ritual.	2	2	2		(page); hlr stories and work in progress	
+THE CRYSTAL STRAND bracelet	2	2	2		(page); hlr stories and work in progress	
+Adorned with a rosette talisman and strung with delicate crystal beads, this necklace serves as a reminder to commit to your intentions of manifesting the life you seek.	1	1	1		(page)	
+THE CRYSTAL STRAND NECKLACE	5	5	5		(page); hlr stories and work in progress	
+Delicate bracelets with intention-setting crystals, meant to be worn daily to attract your deepest desires in life.	1	1	1		(page)	
+the spell bracelet	5	5	5		(page); hlr stories and work in progress	
+The Magic of Broken Things	2	2	2		(page); hlr stories and work in progress	
+From the Earth to the Maker to the Receiver and back again.	2	2	2		(page); hlr stories and work in progress	
+Broken jewelry carries a certain element of magic	2	2	2		(page); hlr stories and work in progress	
+In ritual, we believe that when jewelry breaks, broken items are seeds	2	2	2		(page); hlr stories and work in progress	
+A delicate, handmade silk bracelet, made to serve as a constant reminder to set your intentions and seek the life you desire. All of our spell bracelets comes with instructions for a short ritual to activate its power.	2	2	2		(page); hlr stories and work in progress	
+hand woven organic silk	2	2	2		(page); hlr stories and work in progress	
+18k solid gold round bead	2	2	2		(page); hlr stories and work in progress	
+18k solid gold flower bead	2	2	2		(page); hlr stories and work in progress	
+ethically sourced crystal beads	2	2	2		(page); hlr stories and work in progress	
+When your Spell Bracelet naturally breaks or falls off, it releases its energy and serves as a tangible sign that your spell has been heard.	2	2	2		(page); hlr stories and work in progress	
+Return to Earth	2	2	2		(page); hlr stories and work in progress	
+We recommend returning the materials to the Earth by burying the bracelet outdoors, or you can save it in a sacred space that is significant to you.	2	2	2		(page); hlr stories and work in progress	
+As I bury, I honor the break,	2	2	2		(page); hlr stories and work in progress	
+And with this ritual, a spell I make	2	2	2		(page); hlr stories and work in progress	
+I thank this intention: the jewelry held	2	2	2		(page); hlr stories and work in progress	
+And in this process, I am compelled	2	2	2		(page); hlr stories and work in progress	
+To ritualize energy transformed here today	2	2	2		(page); hlr stories and work in progress	
+I give my blessings to the Earth, and with this	2	2	2		(page); hlr stories and work in progress	
+I pray.	2	2	2		(page); hlr stories and work in progress	
+HIGHLIGHT OVERHAUL	2	2	2		(page); hlr stories and work in progress	
+Who is a Witch?	2	2	2		(page); hlr stories and work in progress	
+A Witch is someone who...	2	2	2		(page); hlr stories and work in progress	
+What is the Highest Self? How can I connect with it?	144	139	0		(page); hlr stories and work in progress; sept-october 2026	
+Aries	9	9	9		(page); hlr stories and work in progress	
+Your Zodiac Crystal Set	97	97	97		(page); hlr stories and work in progress; sept-october 2026	
+Carnelian ignites passion and motivation Citrine PROMOTES optimism AND abundance Red Jasper grounds and strengthens Clear Lemurian Quartz FOR GUIDED CLARITY Rose Quartz encourages compassion AND HARMONY	8	8	8		(page); hlr stories and work in progress	
+ZODIAC CRYSTAL SETS	4	4	4		(page); hlr stories and work in progress	
+Taurus	9	9	9		(page); hlr stories and work in progress	
+RHODONITE FOR SELF LOVE AND BALANCE PYRITE FOR DETERMINATION AND PROSPERITY MALACHITE FOR GROWTH AND PROTECTION GREEN AVENTURINE LUCK AND VITALITY Rose Quartz encourages compassion AND HARMONY	8	8	8		(page); hlr stories and work in progress	
+Gemini	10	10	10		(page); hlr stories and work in progress; social templates	
+LABRADORITE FOR INTUITION AND INSIGHT Citrine PROMOTES optimism AND abundance LAPIS LAZULI FOR COMMUNICATION, TRUTH AND WISDOM RAINBOW MOONSTONE FOR EMOTIONAL BALANCE TIGER’S EYE FOR ADAPTABILITY AND COURAGE	8	8	8		(page); hlr stories and work in progress	
+Sagittarius	9	9	9		(page); hlr stories and work in progress	
+amethyst supports inner balance Dumortierite for logical thinking LAPIS LAZULI FOR COMMUNICATION, TRUTH AND WISDOM black obsidian manages emotional intensity Rose quartz encourages compassion and harmony	8	8	8		(page); hlr stories and work in progress	
+Capricorn	9	9	9		(page); hlr stories and work in progress	
+Citrine PROMOTES optimism AND abundance TIGER’S EYE FOR ADAPTABILITY AND COURAGE red jasper grounds and strengthens clear quartz for mental clarity garnet ignites passion and commitment	8	8	8		(page); hlr stories and work in progress	
+Pisces	9	9	9		(page); hlr stories and work in progress	
+RAINBOW MOONSTONE FOR EMOTIONAL BALANCE black obsidian manages emotional intensity Rose quartz encourages compassion and harmony amethyst supports inner balance rainbow fluorite sharpens analytical skills	8	8	8		(page); hlr stories and work in progress	
+Aquarius	9	9	9		(page); hlr stories and work in progress	
+amethyst supports inner balance Rose quartz encourages compassion and harmony LABRADORITE FOR INTUITION AND INSIGHT Clear Lemurian Quartz FOR GUIDED CLARITY rainbow fluorite sharpens analytical skills	8	8	8		(page); hlr stories and work in progress	
+Scorpio	9	9	9		(page); hlr stories and work in progress	
+MALACHITE FOR GROWTH AND PROTECTION Rhodochrosite FOR nurturing and healing LABRADORITE FOR INTUITION AND INSIGHT smokey quartz offers stability and protection garnet ignites passion and commitment	8	8	8		(page); hlr stories and work in progress	
+Libra	10	10	10		(page); hlr stories and work in progress; sept-october 2026	
+Rhodochrosite FOR nurturing and healing Rhodonite for self love and balance GREEN AVENTURINE for LUCK AND VITALITY black tourmaline grounds and protects amazonite promotes harmonious relationships	9	9	9		(page); hlr stories and work in progress; sept-october 2026	
+Virgo	9	9	9		(page); hlr stories and work in progress	
+amethyst supports inner balance hematite for grounding and organization Carnelian ignites passion and motivation amazonite promotes harmonious relationships Clear Lemurian Quartz FOR GUIDED CLARITY	8	8	8		(page); hlr stories and work in progress	
+Leo	9	9	9		(page); hlr stories and work in progress	
+amethyst supports inner balance PYRITE FOR DETERMINATION AND PROSPERITY sunstone enhances natural radiance TIGER’S EYE FOR ADAPTABILITY AND COURAGE Citrine PROMOTES optimism AND abundance	8	8	8		(page); hlr stories and work in progress	
+Cancer	9	9	9		(page); hlr stories and work in progress	
+Rhodochrosite FOR nurturing and healing Rose quartz encourages compassion and harmony red jasper grounds and strengthens RAINBOW MOONSTONE FOR EMOTIONAL BALANCE Rhodonite for self love and balance	8	8	8		(page); hlr stories and work in progress	
+Bone	24	24	16		(page); hlr stories and work in progress; social templates	
+Discover your very own golden daisy talisman, delightfully concealed on the back of each diamond on our new Crystal Strand Necklaces.	2	2	2		(page); hlr stories and work in progress	
+For centuries, the daisy-shaped Rosette has adorned sacred spaces, embodying blessings and protection akin to the protection of the Evil Eye.	2	2	2		(page); hlr stories and work in progress	
+HISTORY OF THE ROSETTE	4	4	4		(page); hlr stories and work in progress	
+Serving as a beautiful constant reminder to call in all blessings that are out there for you and to manifest the lucky and abundant life you seek.	2	2	2		(page); hlr stories and work in progress	
+Aphrodite	2	2	2		(page); hlr stories and work in progress	
+“I embody the timeless allure of Aphrodite, weaving love's enchantment through the tapestry of existence.”	2	2	2		(page); hlr stories and work in progress	
+Venus	2	2	2		(page); hlr stories and work in progress	
+"I am the epitome of grace and desire, reflecting Venus's celestial radiance in every aspect of my being."	2	2	2		(page); hlr stories and work in progress	
+Inanna	2	2	2		(page); hlr stories and work in progress	
+"I traverse the realms of heaven and earth, embodying Inanna's divine journey of transformation and empowerment."	2	2	2		(page); hlr stories and work in progress	
+Ishtar	2	2	2		(page); hlr stories and work in progress	
+"I stand as the embodiment of strength and fertility, echoing the majestic presence of Ishtar in the realm of mortals."	2	2	2		(page); hlr stories and work in progress	
+The Rosette is a solar symbol in many cultures; commonly seen adorning doors, ceiling beams, everyday objects, furniture, and ritual items.	2	2	2		(page); hlr stories and work in progress	
+1%	5	5	5		(page); hlr stories and work in progress	
+of every purchase is donated to support women all year long.	2	2	2		(page); hlr stories and work in progress	
+Crystal Strand Jewelry in Smoky Quartz	2	2	2		(page); hlr stories and work in progress	
+15% SITE WIDE	4	4	4		(page); hlr stories and work in progress	
+Feeling overwhelmed? Let Smoky Quartz be your emotional anchor, keeping you balanced when life hits hard.	2	2	2		(page); hlr stories and work in progress	
+Crystal Strand Bracelet in Moonstone	2	2	2		(page); hlr stories and work in progress	
+In search of serenity and peace? Wrap your wrist with Moonstone and find your calm in the chaos.	2	2	2		(page); hlr stories and work in progress	
+Garden Pendant in Clear Quartz	2	2	2		(page); hlr stories and work in progress	
+15% off all orders of $150+	4	4	4		(page); hlr stories and work in progress	
+Need to break through the noise? Harness the purifying power of Clear Quartz to cut through the static and find your focus.	2	2	2		(page); hlr stories and work in progress	
+Light Heart Trio	3	3	3		(page); hlr stories and work in progress	
+Due for an emotional tune up? This trio of quartz crystals supports self-love and grounds your spirit.	2	2	2		(page); hlr stories and work in progress	
+Tewa Woman United Indigenous Equity	4	4	4		(page); hlr stories and work in progress	
+Fund a doula session with pregnancy education and labor support for 4 indigenous women	5	5	5		(page); hlr stories and work in progress	
+How to Donate Indigenous Equity	2	2	2		(page); hlr stories and work in progress	
+AT CHECKOUT SELECT THE CHARITY YOU WOULD LIKE TO SUPPORT AND 1% WILL BE SENT ON YOUR BEHALF.	2	2	2		(page); hlr stories and work in progress	
+NOTED MATERIALS	29	29	29		(page); hlr stories and work in progress; social templates	
+A look inside...	2	2	2		(page); hlr stories and work in progress	
+notes	17	17	17		(page); hlr stories and work in progress	
+Gold	2	2	2		(page); hlr stories and work in progress	
+Gold, associated with the sun, symbolizes purity, abundance, and enlightenment. Its radiant energy attracts prosperity and promotes healing, amplifying the positive energy of your intention.	2	2	2		(page); hlr stories and work in progress	
+Silk Strand	2	2	2		(page); hlr stories and work in progress	
+Silk strands represent the weaving of intentions into the universe, symbolizing balance and grace. Designs incorporate silk to integrate your intentions seamlessly into everyday life.	2	2	2		(page); hlr stories and work in progress	
+Crystals	2	2	2		(page); hlr stories and work in progress	
+Crystals are powerful tools for manifesting desires, each offering unique vibrations to enhance your spiritual journey. Carefully selected crystals align and amplify your intentions.	2	2	2		(page); hlr stories and work in progress	
+Diamonds	2	2	2		(page); hlr stories and work in progress	
+Diamonds symbolize purity, strength, and illumination, amplifying energy and bringing clarity. Their indestructible nature reminds us of the eternal spirit, empowering and uplifting.	2	2	2		(page); hlr stories and work in progress	
+Energy	2	2	2		(page); hlr stories and work in progress	
+At High Light Rituals, each piece of jewelry is charged and blessed by the founder, a skilled crystal healer. This process infuses the jewelry with positive energy, ensuring it aligns with your intentions and enhances your spiritual journey.	2	2	2		(page); hlr stories and work in progress	
+listens to the plants	2	2	2		(page); hlr stories and work in progress	
+holds the stones	2	2	2		(page); hlr stories and work in progress	
+honors the crystals	2	2	2		(page); hlr stories and work in progress	
+calls the circle	2	2	2		(page); hlr stories and work in progress	
+honors the cycles and seasons	2	2	2		(page); hlr stories and work in progress	
+carry knowledge against prosecution	2	2	2		(page); hlr stories and work in progress	
+A Witch is knowing and divine	2	2	2		(page); hlr stories and work in progress	
+Who is a Witch to you?	2	2	2		(page); hlr stories and work in progress	
+heals themselves and their community	2	2	2		(page); hlr stories and work in progress	
+15% OFF SITEWIDE—CODE AWAKEN	2	2	2		(page); hlr stories and work in progress	
+The Spring Event	2	2	2		(page); hlr stories and work in progress	
+Connect with Spirit Through	2	2	2		(page); hlr stories and work in progress	
+Rituals of Adornment	2	2	2		(page); hlr stories and work in progress	
+Wearing Jewelry to Set an Intention	2	2	2		(page); hlr stories and work in progress	
+To set your intentions, cleanse the piece using sacred smoke, salt, or crystals. Then, hold the jewelry in both your hands and speak your intention over the jewelry three times. Remember your intention when you take the jewelry on or off.	2	2	2		(page); hlr stories and work in progress	
+Adornment as a Protection Spell	2	2	2		(page); hlr stories and work in progress	
+Much like how warriors would wear specific armor for battle, jewelry can be used as a protective shield. Speak a spell of protection over your rings, earrings, necklaces, and bracelets, and feel them absorb any negative energy that comes your way.	2	2	2		(page); hlr stories and work in progress	
+Rituals of Adornment to Ground and Center	2	2	2		(page); hlr stories and work in progress	
+Wearing specific jewelry can aid you in grounding and centering. For example, adorning yourself with jewelry intentionally imbued with the healing power of crystals can balance, support and transform your energetic body.	2	2	2		(page); hlr stories and work in progress	
+Connecting with the Moon’s Magic through Jewelry	2	2	2		(page); hlr stories and work in progress	
+Place your jewelry on a windowsill or inside a bit of silk outside to absorb the glow and energy. Do this ritual during a new moon to set new intentions, and during a full moon to charge with powers of release, wholeness, and celebration.	2	2	2		(page); hlr stories and work in progress	
+Wearing Jewelry as Ancestral Veneration	2	2	2		(page); hlr stories and work in progress	
+Rituals of adornment can be a way to honor your ancestors. By wearing jewelry handed down through your family, you can honor those who came before you and remember them daily, working with your body as an altar of connection.	2	2	2		(page); hlr stories and work in progress	
+Let the	11	10	11		hlr stories and work in progress	
+light	10	10	10		hlr stories and work in progress	
+in	12	12	12		hlr stories and work in progress; social grid	
+Rituals	1	1	1		hlr stories and work in progress	
+Winter	1	1	1		hlr stories and work in progress	
+of	1	1	1		hlr stories and work in progress	
+I affirm that my inner garden is a place of wild beauty, growing, changing, and cultivated by intention. When I tend to this space, I heal myself. When I heal myself, I heal those around me.	3	3	3		hlr stories and work in progress	
+— walter russell	3	3	3		hlr stories and work in progress	
+altar kits	3	3	3		hlr stories and work in progress	
+Whether you seek soulmate connections, nurturing friendships, or a stronger bond with yourself, this ceremony empowers you to attract love in all its forms.	2	2	2		hlr stories and work in progress	
+Drawing Love	1	1	1		hlr stories and work in progress	
+Love Draw	1	1	1		hlr stories and work in progress	
+Seeking The Sublime: Sacred Geometry. Please make sure the eyebrow is low enough on the frame to not be obstructed by the native in app stories stuff :) If you don't like the positioning at the top of the frame, feel free to adjust. On our charcoal background (353535) and in white text please! post 1: Circles of life, Born from pulses of light, Vibrate to breathe, While spiraling outwards for infinity through the lens of time, And into a sea of stars and lucid dreams. -Suzy Kassem post 2: Opening and closing spirals constitute the heartbeat of the universe. -Walter Russell	1	1	1		hlr stories and work in progress	
+lso, this is what we want to use for the post going up this week. Can we see it with this text applied? Note we will also need a treatment for the author attribution line. Quote below: This universe itself unfolds in limitless spirals of adornment. Of what are the adornments of the universe? Of what are her necklaces? She is draped in galaxies that are draped in worlds that are draped in ranges that are draped in forests that are draped in branches that are draped in needles that are draped in infinite necklaces of December frost. Adorned in Summer lightness as the goddess Kali sang the hymns. The mother goddess they say, wears the whole universe as her ornament... -Universe, Adorned Joshua Michael Schrei	1	1	1		hlr stories and work in progress	note
+Circles of life, Born from pulses of light, Vibrate to breathe, While spiraling outwards for infinity through the lens of time. And into a sea of stars and lucid dreams.	2	2	2		hlr stories and work in progress	
+— Suzy Kassem	2	2	2		hlr stories and work in progress	
+seeking the sublime: sacred geometry	13	13	13		hlr stories and work in progress	
+Symbolism: the egg	7	7	7		hlr stories and work in progress	
+The golden egg is often seen as a protective talisman, warding off negative energies and bringing good luck and positive influences.	1	1	1		hlr stories and work in progress	
+The Egg	77	46	77		hlr stories and work in progress; social grid; social templates	
+signature Symbolism: the egg	4	4	4		hlr stories and work in progress	
+The egg's shape, representing a perfect and self-contained form, can symbolize completeness, unity, and harmony.	1	1	1		hlr stories and work in progress	
+The golden egg can also evoke nurturing and comforting attributes, representing care, protection, and unconditional love.	1	1	1		hlr stories and work in progress	
+Opening and closing spirals constitute the heartbeat of the universe.	2	2	2		hlr stories and work in progress	
+sudeley castle, england	4	4	4		hlr stories and work in progress	
+“In many creation myths, the universe was hatched from an egg, which has everything within itself and is needful only of brooding. The egg evokes the beginning, the simple, the source.”	1	1	1		hlr stories and work in progress	
+— the book of symbols	1	1	1		hlr stories and work in progress	
+Sanctuary of Self	2	2	2		hlr stories and work in progress	
+the fibonacci spiral	1	1	1		hlr stories and work in progress	
+DEEPER MEANING	4	4	4		hlr stories and work in progress	
+The Number 3	1	1	1		hlr stories and work in progress	
+a divine number symbolizing harmony, connection and cycles of life.	1	1	1		hlr stories and work in progress	
+unknown source	1	1	1		hlr stories and work in progress	
+The golden egg is a symbol of fertility and the potential for creation. It represents the possibility of new beginnings, growth, and transformation.	1	1	1		hlr stories and work in progress	
+unknown location	1	1	1		hlr stories and work in progress	
+In various mythologies, the golden egg is linked to the creation of the universe or the birth of deities. It represents the primordial cosmic energy from which all life emerges.	1	1	1		hlr stories and work in progress	
+1999 crop circles	1	1	1		hlr stories and work in progress	
+Rams horn squid or “spirula spirula” shells	1	1	1		hlr stories and work in progress	
+fern spiral	1	1	1		hlr stories and work in progress	
+Sciathericum Seleniacum, 1658	1	1	1		hlr stories and work in progress	
+seeking the sublime: the moon	9	1	9		hlr stories and work in progress	
+Le nozze di Costantio Sforza e Camilla d'Aragona, 1480	1	1	1		hlr stories and work in progress	
+Eclipses luminarium Cyprian Leowitz, 1554	1	1	1		hlr stories and work in progress	
+by unknown	1	1	1		hlr stories and work in progress	
+The moon works on all of us equally, presiding over our dreams and memories, and revealing our inner emotions and turmoil. It’s shadows - the result of the many craters on its pocked surface - mirror our own shadows, the dark unknown places within.	1	1	1		hlr stories and work in progress	
+— the divine dreamer	1	1	1		hlr stories and work in progress	
+Selene Albert Aublet, 1880	1	1	1		hlr stories and work in progress	
+Jee Won Park	1	1	1		hlr stories and work in progress	
+Celestial splendor Maria Clara Eimmart, 1799 (the world’s first professional woman astronomer)	1	1	1		hlr stories and work in progress	
+Like the horns of a white cow, the crescent moon curves delicately around space that is black and hollow, yet fecund with the promise of light to come as the moon swells into fullness.	1	1	1		hlr stories and work in progress	
+— creation and cosmos	1	1	1		hlr stories and work in progress	
+I affirm that my inner fire is always lit, I tend to this fire as it urges me forward with clarity, passion, and creativity toward my most-aligned life.	1	1	1		hlr stories and work in progress	
+THE ARIES CRYSTAL SET	3	3	3		hlr stories and work in progress	
+I affirm that I am always nourished by the earth, divinely protected, and that abundance comes up through my roots and blossoms in my life.	1	1	1		hlr stories and work in progress	
+THE TAURUS CRYSTAL SET	3	3	3		hlr stories and work in progress	
+I affirm that I am always carried on the winds of my inner wisdom, my intuition supports me, and I am able to cultivate balance in my diverse pursuits.	1	1	1		hlr stories and work in progress	
+THE GEMINI CRYSTAL SET	4	4	4		hlr stories and work in progress; social templates	
+I affirm that like the tides I move in my own authentic way, I honor my cycles, I nurture my inner life, and as water does, I create and express myself.	1	1	1		hlr stories and work in progress	
+THE CANCER CRYSTAL SET	3	3	3		hlr stories and work in progress	
+I affirm that I am connected to my inner lion. I celebrate my creative force, which is courageous, and comes from the flame of deep authenticity.	1	1	1		hlr stories and work in progress	
+THE LEO CRYSTAL SET	4	3	4		hlr stories and work in progress	
+I affirm that I am grounded within the earth, approaching my life through both my intuition and analysis, always in creative flow with clarity.	2	1	2		hlr stories and work in progress	
+THE VIRGO CRYSTAL SET	11	9	11		hlr stories and work in progress; sept-october 2026	
+I affirm that I bring beauty and harmony to all that I do. My magic honors the scales of life, always knowing that balance is a continuous process.	1	1	1		hlr stories and work in progress	
+THE LIBRA CRYSTAL SET	4	4	4		hlr stories and work in progress; sept-october 2026	
+I affirm that my curious nature and adventurous spirit guides me through my life. I embrace intensity. I am both the match and the flame.	1	1	1		hlr stories and work in progress	
+THE SAGITTARIUS CRYSTAL SET	3	3	3		hlr stories and work in progress	
+I affirm that there are gems to be found within the mountain, at the peak, and on the journey. I embrace the process, knowing that my intuition and ambition help forge my path.	2	2	2		hlr stories and work in progress	
+THE CAPRICORN CRYSTAL SET	3	3	3		hlr stories and work in progress	
+I affirm that I ride on the winds of innovation. I follow my visionary pursuits, celebrating the individual and community simultaneously. I am in balance, I dream of a harmonious earth.	2	2	2		hlr stories and work in progress	
+THE AQUARIUS CRYSTAL SET	5	5	5		hlr stories and work in progress	
+I affirm that my creativity and intuition are ancient and carry a deep knowing. I call on my imagination to assist me in seeking balance and connection. My emotions are a lantern, my visions a river through a dark forest.	3	3	3		hlr stories and work in progress	
+THE PISCES CRYSTAL SET	5	5	5		hlr stories and work in progress	
+I affirm that I am an alchemist, transforming all the time, I listen to my intuition to ground me, knowing that I have the wisdom to traverse the underworld.	1	1	1		hlr stories and work in progress	
+THE SCORPIO CRYSTAL SET	3	3	3		hlr stories and work in progress	
+aerial view of a hurricane	1	1	1		hlr stories and work in progress	
+Originally astrology was not separate from astronomy. They were the two wings of the butterfly, the left brain and the right brain, and a more symbolic way of looking at things. They were meant to help you realise your connection to the cosmos and learn about the cycles that occur, both in nature and in our lives.	1	1	1		hlr stories and work in progress	
+— divine harmony	2	2	2		hlr stories and work in progress	
+The sun, with all those planets revolving around it and dependent on it, can still ripen a bunch of grapes as if it had nothing else in the universe to do.	2	2	2		hlr stories and work in progress	note
+— Galileo Galilei	2	2	2		hlr stories and work in progress	
+Craftsmanship	4	4	4		hlr stories and work in progress	
+We merge time-honored traditions with modern techniques to create the highest level of quality in every piece. Inspired by classic workmanship and heritage design, our partners take pride in carefully crafting each piece to order, with a special touch that can't be replicated by machines.	3	3	3		hlr stories and work in progress	
+We merge time-honored traditions with modern techniques to create the highest level of quality in every piece.	1	1	1		hlr stories and work in progress	
+Inspired by classic workmanship and heritage design, our partners take pride in carefully crafting each piece to order, with a special touch that can't be replicated by machines.	1	1	1		hlr stories and work in progress	
+Purpose	5	5	5		hlr stories and work in progress	
+We seek to inspire you to reconnect with yourself, to delight in the natural wonders we so often overlook, to feel gratitude for the gift that is the present – with the belief that these individual actions can foster deeper appreciation for the Earth and for each other.	1	1	1		hlr stories and work in progress	
+We seek to inspire you to reconnect with yourself, to delight in the natural wonders we so often overlook, to feel gratitude for the gift that is the present–with the belief that these individual actions can lead to a deeper sense of compassion for others.	4	4	4		hlr stories and work in progress	
+Responsibility	5	5	5		hlr stories and work in progress	
+To minimize our environmental impact, High Light pieces are handmade to order and crafted from certified recycled solid gold, ethically sourced materials, and consciously created lab-cultured diamonds.	5	5	5		hlr stories and work in progress	
+Rituals of Winter	27	27	27		hlr stories and work in progress; social templates	
+Of what are the adornments of the universe? Of what are her necklaces? She is draped in galaxies that are draped in worlds that are draped in ranges that are draped in forests that are draped in branches that are draped in needles that are draped in infinite necklaces of December frost. Adorned in Summer lightness as the goddess Kali sang the hymns. The mother goddess they say, wears the whole universe as her ornament...	2	2	2		hlr stories and work in progress	
+The universe itself	2	2	2		hlr stories and work in progress	
+spirals of adornments	2	2	2		hlr stories and work in progress	
+unfolds in limitless	2	2	2		hlr stories and work in progress	
+— Universe, Adorned Joshua Michael Schrei	2	2	2		hlr stories and work in progress	
+She is a wild, tangled forest with temples and treasures concealed within.	8	5	8		hlr stories and work in progress	
+john mark green	6	5	6		hlr stories and work in progress	
+Winter is the cauldron where alchemy is made	2	2	2		hlr stories and work in progress	
+This season of the hermit is the dark time of the year, the archetypal hearth where the soul can find respite and support. During this portal, lean on rituals to embrace the season's shadows and wisdom.	5	5	5		hlr stories and work in progress; social templates	
+Write by candlelight. Light a candle, allowing the flickering glow to fill your room. By the soft glow, write your intentions for the year ahead, dreaming of possibility and celebrating the magic of Winter.	4	4	4		hlr stories and work in progress; social templates	
+Ritual One:	4	4	4		hlr stories and work in progress; social templates	
+Commit to learning. Seek a new skill, embrace a hobby, reach for the unread book on your shelf, or take a snowy walk to the library. What you learn in the cocoon of Winter will support the seeds you plant in Spring.	4	4	4		hlr stories and work in progress; social templates	
+Ritual Two:	4	4	4		hlr stories and work in progress; social templates	
+Practice Green Magic. Cultivate a houseplant, blend a new tea and sip, or brew medicine like fire cider or herbal salves. The soil of Spring is cultivated in Winter. Connecting with plant magic can strengthen your roots in the earth even when all appears dormant.	4	4	4		hlr stories and work in progress; social templates	
+Ritual Three:	4	4	4		hlr stories and work in progress; social templates	
+We are deeply and innately connected, each of us small, but important parts of a greater whole. A return to self looks a lot like a reintegration - a gentle coming home to nature, to community, to the power that lives within. A rekindling of the universal truths we’ve always known.	11	11	11		hlr stories and work in progress	
+To inspire	11	11	11		hlr stories and work in progress	
+a return to self.	11	11	11		hlr stories and work in progress	
+— founder, donnie soddu	11	11	11		hlr stories and work in progress; social templates	
+At the core of our mission is a commitment to creating pieces that will stir your soul and invite you inward.	5	5	5		hlr stories and work in progress	
+The divine spark	11	11	11		hlr stories and work in progress	
+is within us all.	1	1	1		hlr stories and work in progress	
+And when we are conscious of it, we touch the eternal.	1	1	1		hlr stories and work in progress	
+sigurd olson	11	11	11		hlr stories and work in progress	
+Winter is the	1	1	1		hlr stories and work in progress	
+cauldron where	1	1	1		hlr stories and work in progress	
+alchemy is made	1	1	1		hlr stories and work in progress	
+is within us all,	10	10	10		hlr stories and work in progress	
+and when we are	10	10	10		hlr stories and work in progress	
+conscious of it	12	12	12		hlr stories and work in progress	
+we touch the eternal.	11	11	11		hlr stories and work in progress	
+And when we are conscious of it,We touch the eternal.–Sigurd Olson	1	1	1		hlr stories and work in progress	
+The divine	1	1	1		hlr stories and work in progress	
+spark is within us all	1	1	1		hlr stories and work in progress	
+And when we are conscious of it,	1	1	1		hlr stories and work in progress	
+— Sigurd Olson	1	1	1		hlr stories and work in progress	
+Let	1	1	1		hlr stories and work in progress	
+the light	1	1	1		hlr stories and work in progress	
+Awakening adornments for self & spaceTO INSPIRE A RETURN TO SELF. We are deeply and innately connected, each of us small, but important parts of a greater whole. A return to self looks a lot likea reintegration - a gentle coming home to nature, to community, to the power that lives within. A rekindling of the universaltruths we’ve always known.	1	1	1		hlr stories and work in progress	
+It is time for us to kiss the earth again,	2	2	2		hlr stories and work in progress	
+It is time to let the leaves rain from the skies,	2	2	2		hlr stories and work in progress	
+— Robinson Jeffers	2	2	2		hlr stories and work in progress	
+Let the rich life run to the roots again.	2	2	2		hlr stories and work in progress	
+— UNKNOWN	1	1	1		hlr stories and work in progress	
+Let us be the beauty that we seek.	1	1	1		hlr stories and work in progress	
+— EUDORA WELTY	1	1	1		hlr stories and work in progress	
+Gardening is akin to writing stories. No experience could have taught me more about grief or flowers, about achieving survival by going, your fingers in the ground.	1	1	1		hlr stories and work in progress	
+Request: Text graphics for feed Due: ASAP Intention: To share our three pillars and guiding principles Slide 1: Craftsmanship - We merge time-honored traditions with modern techniques to create the highest level of quality in every piece. Inspired by classic workmanship and heritage design, our partners take pride in carefully crafting each piece to order, with a special touch that can't be replicated by machines. Slide 2: Responsibility - To minimize our environmental impact, High Light pieces are handmade to order and crafted from certified recycled solid gold, ethically sourced materials, and consciously created lab-cultured diamonds. Slide 3: Purpose - We seek to inspire you to reconnect with yourself, to delight in the natural wonders we so often overlook, to feel gratitude for the gift that is the present–with the belief that these individual actions can lead to a deeper sense of compassion for others.	1	1	1		hlr stories and work in progress	
+Copy 1: At the core of our mission is a commitment to creating pieces that will stir your soul and invite you inward. Copy 2: To me, High Light is about the practice. The shift in mindset toward the deeper appreciation and compassion that our future requires. Copy 3: The pieces we create are simply manifestations of that mindset, made to help support that shift.	1	1	1		hlr stories and work in progress	
+Slide 1: “At the core of our mission is a commitment to creating pieces that will stir your soul and invite you inward.” - Founder, Donnie Soddu Slide 2: Dear reader, High Light began as a personal pursuit, a creative outlet, an escape. As a mother and person of color with a deep respect for nature, I felt a strong pull to create something hopeful and environmentally responsible. Slide 3: I decided to channel my experience in the fashion, wellness and beauty industries to create a company that combines timeless design with a sense of intentionality and care for our shared future. Slide 4: To me, High Light is about the practice. The shift in mindset toward the deeper appreciation and compassion that our future requires. Slide 5: The pieces we create are simply manifestations of that mindset, made to help support that shift. I hope they bring you pleasure and peace. — Donnie	2	2	2		hlr stories and work in progress	
+Asset: Launch Story Set Due: ASAP Intention: To share our perspective/lifestyle we embody and encourageAsset: Copy Quote: "The sun, with all those planets revolving around it and dependent on it, can still ripen a bunch of grapes as if it had nothing else in the universe to do." - Galileo Galilei	1	1	1		hlr stories and work in progress	note
+Vintage Mano Figa	3	3	3		hlr stories and work in progress	
+Field Notes—	1	1	1		hlr stories and work in progress	
+Field Notes	3	3	3		hlr stories and work in progress	
+one-of-one, vintage mano figa	1	1	1		hlr stories and work in progress	
+1	19	11	19		hlr stories and work in progress; social grid; social templates	
+2	19	11	19		hlr stories and work in progress; social grid; social templates	
+Sterling Silver	9	9	9		hlr stories and work in progress; social templates	
+item name	1	1	1		hlr stories and work in progress	
+material 1	1	1	1		hlr stories and work in progress	
+material 2	1	1	1		hlr stories and work in progress	
+Sterling	9	9	9		hlr stories and work in progress; social templates	
+Silver	9	9	9		hlr stories and work in progress; social templates	
+1 of 1	1	1	1		hlr stories and work in progress	
+material	4	4	4		hlr stories and work in progress	
+An organic material. It connects us to the earth and its everlasting cycle of life and death.	6	6	6		hlr stories and work in progress; social templates	
+of Mano Figa	2	2	2		hlr stories and work in progress	
+A mineral with healing properties that is said to mirror the soul and strengthen the connection between astral and physical bodies.	9	9	9		hlr stories and work in progress; social templates	
+field notes · vintage mano figa	5	5	5		hlr stories and work in progress; social templates	
+The talisman’s material composition brings additional benefits and meaning to its wearer.	1	1	1		hlr stories and work in progress	
+an organic material. Bone connects us to the earth and its everlasting cycle of life and death.	1	1	1		hlr stories and work in progress	
+Bone—an organic material.	1	1	1		hlr stories and work in progress	
+Bone connects us to the earth and its everlasting cycle of life and death.	1	1	1		hlr stories and work in progress	
+Sterling silver—a mineral with healing properties.	1	1	1		hlr stories and work in progress	
+it is said to mirror the soul and strengthen the connection between astral and physical bodies.	2	2	2		hlr stories and work in progress	
+We connect with the divine through the act of prayer, calling on higher realms to hear our gratitude, hopes and desires.	1	1	1		hlr stories and work in progress	
+“At the core of our mission is a commitment to creating pieces that will stir your soul and invite you inward.”	7	7	7		hlr stories and work in progress; social templates	
+Dear reader, High Light began as a personal pursuit, a creative outlet, an escape. As a mother and person of color with a deep respect for nature, I felt a strong pull to create something hopeful and environmentally responsible.	1	1	1		hlr stories and work in progress	
+EXPLORE THE DEEPER MEANING	1	1	1		hlr stories and work in progress	
+The Large Genesis Pendant and The Element Pendant	1	1	1		hlr stories and work in progress	
+Engage in this powerful ritual with our Prayer Pendants	2	2	2		hlr stories and work in progress	
+founder’s story	1	1	1		hlr stories and work in progress	
+The Genesis Pendant and Tiny Genesis Pendant	2	2	2		hlr stories and work in progress	
+introducing	1	1	1		hlr stories and work in progress	
+The 8-pointed star	3	3	3		hlr stories and work in progress	
+our signature mark paying homage to THE goddess Ishtar and all divine feminine forces.	1	1	1		hlr stories and work in progress	
+Abundance Prayer Pendant	2	2	2		hlr stories and work in progress	
+to invoke a fruitful mindset of gratitude and prosperity.	1	1	1		hlr stories and work in progress	
+wear the	2	2	2		hlr stories and work in progress	
+wear it to invoke a fruitful mindset of gratitude and prosperity.	1	1	1		hlr stories and work in progress	
+With remarkable healing properties, we selected Clear Quartz as our first launched stone, recognizing its ability to amplify intentions and promote overall well-being.	1	1	1		hlr stories and work in progress	
+our signature mark paying homage to Ishtar, Venus, and all goddesses of love, pleasure and beauty.	4	4	4		hlr stories and work in progress	
+featuring	4	4	4		hlr stories and work in progress	
+The Golden Egg	1	1	1		hlr stories and work in progress	
+representing Luck, inner transformation, creation and renewal.	1	1	1		hlr stories and work in progress	
+Connection Prayer Pendant	3	3	3		hlr stories and work in progress	
+to inspire reconnection with yourself and the world around you.	1	1	1		hlr stories and work in progress	
+wear it to inspire reconnection with yourself and the world around you.	2	2	2		hlr stories and work in progress	
+representing inner transformation, creation and renewal.	1	1	1		hlr stories and work in progress	
+Available now.	4	4	4		hlr stories and work in progress	
+in 18k gold & lab-grown diamond	1	1	1		hlr stories and work in progress	
+We chose Clear Quartz, the Master Healer, as our first Garden Pendant stone because of its remarkable healing properties and universal nature — it absorbs, amplifies, releases and regulates energy.	1	1	1		hlr stories and work in progress	
+A soul cleanser, it draws away negative energy; promotes alignment of the chakras; and harmonizes our physical, mental, emotional and spiritual selves.	1	1	1		hlr stories and work in progress	
+Wear it to attract harmony, balance and healing white light.	1	1	1		hlr stories and work in progress	
+Recycled solid 18 karat gold Lab diamonds Ethically sourced clear quartz	2	2	2		hlr stories and work in progress	
+HANDCRAFTED WITH INTENTION	1	1	1		hlr stories and work in progress	
+Available now in 18K gold & lab-grown diamond.	1	1	1		hlr stories and work in progress	
+highlightrituals.com	3	3	3		hlr stories and work in progress	
+Flower Agate The Nurturer	2	2	2		hlr stories and work in progress	
+CRYSTALS FOR 2024	10	10	10		hlr stories and work in progress	
+Our top crystal for 2024, Flower Agate is a heart-healing stone that supports emotional well-being and self-discovery. Swipe to learn how it can support your journey this year.	2	2	2		hlr stories and work in progress	
+CRYSTALS FOR 2024: FLOWER AGATE	15	15	15		hlr stories and work in progress	
+If you’re in need of support as you tend to others, turn to Flower Agate to nourish and protect you.	2	2	2		hlr stories and work in progress	
+For the caretakers	2	2	2		hlr stories and work in progress	
+If you’re looking for a spark, reach for Flower Agate as an ally in artistic expression.	2	2	2		hlr stories and work in progress	
+For the creative souls	2	2	2		hlr stories and work in progress	
+If you’re looking to create harmony and balance on this tight rope of life, Flower Agate will show you the way.	2	2	2		hlr stories and work in progress	
+For those seeking balance	2	2	2		hlr stories and work in progress	
+Turn to the symbolic sunlight with Flower Agate, and celebrate a hopeful mindset imbued with optimism.	2	2	2		hlr stories and work in progress	
+For those cultivating optimism	2	2	2		hlr stories and work in progress	
+Banish stagnancy, and honor all lessons and stages of growth with Flower Agate’s support.	2	2	2		hlr stories and work in progress	
+For those who are growing	2	2	2		hlr stories and work in progress	
+This nurturing gem is associated with the heart chakra. Flower Agate helps open us up to giving and receiving love, supporting us as we heal.	3	3	3		hlr stories and work in progress	
+For those who are healing	3	3	3		hlr stories and work in progress	
+Featuring the 8-pointed star	1	1	1		hlr stories and work in progress	
+“To me, High Light is about the practice. The shift in mindset toward the deeper appreciation and compassion that our future requires.”	4	4	4		hlr stories and work in progress; social templates	
+“The pieces we create are simply manifestations of that mindset, made to help support that shift.”	4	4	4		hlr stories and work in progress; social templates	
+To me, High Light is about the practice. The shift in mindset toward the deeper appreciation and compassion that our future requires.	4	4	4		hlr stories and work in progress	
+The pieces we create are simply manifestations of that mindset, made to help support that shift.	3	3	3		hlr stories and work in progress	
+of every purchase is donated to a nonprofit of your choice.	3	3	3		hlr stories and work in progress	
+Black Outside, Inc. Racial Equity	2	2	2		hlr stories and work in progress	
+Fund A Full Day Outdoor Excursion For Three Black Youth	2	2	2		hlr stories and work in progress	
+Goodgrow Sustainable Farming	2	2	2		hlr stories and work in progress	
+fund 2 days of wages for 1 housing insecure person to maintain an urban farm in la	2	2	2		hlr stories and work in progress	
+West Street Recovery Climate Resilience	2	2	2		hlr stories and work in progress	
+fund 1 water purification system for the home of a disaster survivor in Houston	2	2	2		hlr stories and work in progress	
+Indigenous Equity, Tewa Women United Fund A Doula Session With Pregnancy Education And Labor Support For 4 Indigenous women	1	1	1		hlr stories and work in progress	
+Indigenous Equity, Tewa Woman United	1	1	1		hlr stories and work in progress	
+Slide 1: 1% (in large scale) of every purchase is donated to a nonprofit of your choice Slide 2: Indigenous Equity, Tewa Women United Fund A Doula Session With Pregnancy Education And Labor Support For 4 Indigenous women Slide 3: Sustainable Farming, Growgood Fund 2 Days Of Wages For 1 Housing Insecure Person To Maintain An Urban Farm In La Slide 4: Climate Resilience, West Street Recovery Fund 1 Water Purification System For The Home Of A Disaster Survivor In Houston Slide 5: Racial Equity, Black Outside, Inc. Fund A Full Day Outdoor Excursion For Three Black Youth	1	1	1		hlr stories and work in progress	
+Request: Clear Quartz Spotlight Story Set Intention: Introduce the first launched gem stone and begin the crystal educational dialogue To be posted: July 19Slide 1: Radiating pure light and energy, we encased a Clear Quartz gemstone in our Garden Pendant Slide 2: With remarkable healing properties, we selected Clear Quartz as our first launched stone, recognizing its ability to amplify intentions and promote overall well-being. Slide 3: Wear close to your heart to attract positivity	1	1	1		hlr stories and work in progress	
+Slide 1: High Light Rituals is proudly Mother led, Black owned, and Family rooted. Slide 2: Our story is one of magic… Slide 3: of ancestral wisdom rekindled in the modern world… Slide 4: of delicate designs filled with potent energies. Slide5: Learn more about what drives us and discover our new collection of fine jewelry, healing crystals, altar kits, and ritual tools. [link: highlightrituals.com]	1	1	1		hlr stories and work in progress	
+Slide 1: What is the Highest Self? And how can I connect with it? Slide2: Everyone has a Highest Self. While drawing from multiple lineages (teachings transmitted between generations of spiritual seekers), the Highest Self is an expression of a person’s soul. Slide 3: Your Highest Self is the eternal, conscious part of you, which exists outside of this dimension. Slide 4: You can turn to your Highest Self when you need to connect to your inner wisdom, and knowing. Slide 5: Communicate with this aspect of your soul through meditation, ritual, adornment, and channeling. Your Highest Self always remembers who you are, even across lifetimes.	1	1	1		hlr stories and work in progress	
+Slide 1: Introducing our new ritual kits. Simple Ceremonies for everyday rituals. Slide 2: *Image of Cleansing & Protection kit* The Cleansing and Protection Kit Clear away energetic debris, experience peace, and access divine protection. Slide 3: Use this kit when you want to cleanse your energy or that of your space to invoke peace, resilience, and protection. Slide 4:*Image of Love Drawing kit*The Love Drawing Kit Whether you seek soulmate connections, nurturing friendships, or a stronger bond with yourself, this ceremony empowers you to attract love in all its forms. Slide 5: Use this kit to draw or deepen love in any area of your life. Slide 6: Which ceremony is for you?	1	1	1		hlr stories and work in progress	
+Request: Spell bracelet story set Intention: Introduce spell bracelets To be posted: Sept 6/7Story set needed: YES STORY SET ONLY Slide 1: Are you a seeker, a weaver, a lover, a starchild? Slide 2: New in the realm of High Light Rituals, Spell Bracelets are wearable intentions. Slide 3: Adorn your wrist with The Seeker Spell Bracelet to access cosmic connection and spiritual awakening. Wear it to help you tap into your highest potential and navigate the currents of self-discovery. Labradorite acts as a conduit for higher consciousness. Its energy clears mental clutter to reveal a path to your intuitive wisdom. Moonstone channels the energy of the moon and the divine feminine, facilitating a deeper connection to intuition and inner wisdom. Herkimer Diamond acts as a bridge between your highest self and the cosmic realm. Its clarity and high vibration amplify spiritual awareness and psychic abilities. Clear Quartz, the “Master Healer”, amplifies and protects your spell. Slide 4: Call on The Wealth Weaver Spell Bracelet to invoke financial success and greatness. Wear it during a negotiation or business opportunity to channel the strength and confidence to claim what’s yours. Pyrite will boost your confidence and attract opportunities for financial growth. Citrine, a stone of abundance, radiates positivity and joy while fostering a mindset that attracts opportunities. Green Aventurine, the ""Stone of Opportunity,"" aligns with the heart chakra, bringing about good luck and opening doors to greatness. Clear Quartz, the “Master Healer”, amplifies and protects your spell. Slide 5: Wear the Love Spell Bracelet when you’re ready to accept the kind of love you deserve (you know the kind) and to help clear out any blockages that keep you from receiving love. Or, just wear it as a reminder that self-love might be the most important love there is. Rose Quartz, the “Love Stone” opens your heart to give and receive affection, attracting romantic, platonic, and self-love. Pink Tourmaline deepens compassion and promotes trust and safety in matters of the heart. Rhodochrosite supports emotional healing and self-love, for deeper connections with yourself and others. Clear Quartz, the “Master Healer”, amplifies the love spell while protecting your heart. Slide 6: Reach for The Cosmic Bliss Spell Bracelet to channel your utmost happiness and bliss, or when you feel empowered to tap into your inner joy but need a boost to get there. Wear it to appreciate your many gifts and start navigating your life with positivity. Dalmatian Jasper conjures a playful positivity that encourages that infuses your spirit with vitality. Citrine, the stone of abundance and happiness, radiates warm and uplifting vibrations, helping you attract joy and embrace the sunny side of life. Rose Quartz, the ultimate heart healer, creates a foundation for happiness from within. Clear Quartz, the “Master Healer”, amplifies and protects your spell. Slide 7: (as option) What spell will you cast in this season of your life?	1	1	1		hlr stories and work in progress	
+Request: Light Heart Trio Story Set Intention: Introduce the crystal set To be posted: Sept 10 Story set needed: Yes just a story set Slide 1: Introducing our Light Heart Trio Crystal set Slide 2: As you venture out on your journey, keep harmony, clarity, and love in the palm of your hand (or pocket, or bra). This crystal set is perfect for on-the-go grounding, and a little bit of stone healing, wherever you go. Slide 3: Together, these exquisite quartz hearts foster emotional balance, support manifestation, and resonate with your heart chakra, offering support on your path of self-discovery and well-being.	1	1	1		hlr stories and work in progress	
+Request: The Ritualist blog post break down Intention: Promote the blog and themes To be posted: October 17Story set needed: Yes - Story and feed Copy: Slide 1: Five Ways to Connect with Spirit Through Rituals of Adornment Slide 2: Perhaps you are already working with jewelry ritually subconsciously, or maybe you are already ritually minded, casting spells with your sacred and favorite pieces. Here are five ways to connect with spirit through rituals of adornment.Slide 3: 1. Wearing Jewelry to Set an Intention Call on rituals of adornment to help set intentions. To do this, first, cleanse the piece using sacred smoke, salt, or crystals. Then, hold the jewelry in both your hands. Speak your intention over the jewelry three times. Slide 4: 2. Adornment as a Protection Spell Speak a spell of protection over your rings, earrings, necklaces, and bracelets, and feel them absorb any negative energy that comes your way. Use healing smoke to cleanse your pieces, place them in a dish of salt, or allow them to sit in the light of the moon to help clear any energy from your day-to-day. Slide 5: 3. Rituals of Adornment to Ground and Center Adorning yourself with jewelry intentionally imbued with the healing power of crystals can balance, support and transform your energetic body. When you feel your energy become low, chaotic or detached, simply pause, touch the necklace you’re intentionally wearing, and take a deep breath. Slide 6: 4. Connecting with the Moon’s Magic through Jewelry Place your jewelry on a windowsill or inside a bit of silk outside to absorb the glow and energy of the moon. You might feel called to do this on a new moon phase if you wish to enchant your jewelry with the energy of new beginnings or intention setting, or on a full moon if you wish to charge your jewelry with the powers of release, wholeness, or celebration. Slide 7: 5. Wearing Jewelry as Ancestral Veneration By wearing jewelry handed down through your family, you honor those who came before you, working with your body as an altar. If you don’t have a relationship with your ancestors, or heirlooms to wear, you can purchase auspicious pieces of jewelry in the name and honor of a specific family member, or acquire jewelry that is special to you to pass down to the next generation, as you will one day be a benevolent ancestor. Slide 8: Read the full blog post here (this would just be in the story set)	1	1	1		hlr stories and work in progress	note
+Request: Flower Agate intro and promo Intention: To share our new palm stone and what it does To be posted: October 6th Story set needed: Yes - JUST STORY SET Copy: Slide 1: What is the Divine Feminine? Slide 2: The Divine Feminine is a spiritual concept that transcends the gender binary but is a theory of energetic principles and balance that create the universe. Slide 3: The Divine Feminine is about flow, restoration, balance, and receiving. Slide 4: Hold a Flower Agate Palm Stone in your hand to connect with the divine feminine, and to find your flow.	1	1	1		hlr stories and work in progress	
+Request: Citrine chain/Gem stone chain Intention: To show our WIP and ask what other stones our audience might like to wear To be posted: October 7th Story set needed: Yes - JUST STORY SET Copy: Slide 1: WIP: crystal chains to add a layer of supportive energy to our solid gold charms. Slide 2: This one is made of Citrine, a stone of abundance and happiness. Its uplifting vibration is like a ray of light, breaking through the clouds. Slide 3: Help us choose which other crystal chains to launch (will add Question box with: What energy do you want to embody?)	1	1	1		hlr stories and work in progress	
+Slide One: What is the Shadow Self? & Why Should I Connect with It? Slide Two: Everyone has a Shadow Self. The term was popularized by psychiatrist & psychoanalyst Carl Jung, & refers to an unconscious part of a person that constitutes a blind spot or repressed traits. Perhaps you’re prone to jealousy, reactivity, or judgment. The Shadow is somehow deemed “not ideal” and therefore not integrated with the whole individual, existing just out of sight. Slide Three: Image Slide Four: Invite your demons to tea. Slide Five: Their wisdom may surprise you. Slide Six: Your Shadow Self longs to be accepted & seen. It asks you to get curious about the parts of yourself that you reject, so that you can live a more empowered and authentic life. Slide Seven: The Shadow offers wisdom and clarity. It celebrates your wholeness. Slide Eight: Honor & integrate your Shadow through ritual, journaling, meditation, practicing non-judgment, & working with a professional. Slide Nine: Your Shadow Self is full of rich wisdom, lessons, and deep self-love.	1	1	1		hlr stories and work in progress	
+Slide 1: We connect with the divine through the act of prayer, calling on higher realms to hear our gratitude, hopes and desires​ Slide 2: Engage in this powerful ritual with our Prayer Pendants: Slide 3: Wear the Abundance Prayer Pendant to invoke a fruitful mindset of gratitude and prosperity.Slide 4: Wear the Connection Prayer Pendant to inspire reconnection with yourself and the world around you.Slide 5: Available now in 18k gold and lab-grown diamond at highlightrituals.com	1	1	1		hlr stories and work in progress	
+Request: Introducing High Light Rituals TBCRequest: Field Notes feed carouselIntention: To weigh in on materials used and their significance, materiality and metaphysical properties To be posted: June 25thSlide 1: Add annotations to this asset that say “Bone”and “Sterling Silver” https://www.dropbox.com/s/icj4qkhhkguu8du/DC_HIGHLIGHT_MAR23_0369%20copy.jpg?dl=0 Slide 2: Bone – an organic material. Bone connects us to the earth and its everlasting cycle of life and death. Slide 3: Sterling Silver – A mineral with healing properties that is said to mirror the soul and strengthen the connection between astral and physical bodies.**use raw material images of bone and silver in slides 2 and 3*https://depositphotos.com/stock-photos/mineral-raw-materials.html https://pin.it/aUgazrO Request: Field Notes story set Intention: To weigh in on materials used and their significance, materiality and metaphysical properties To be posted: June 25th Slide 1: A talisman that embodies abundance, the Bone Mana Figa was worn in ancient times as a call to The Goddess for fertility, pleasure and protection. Slide 2: Bone – an organic material. Bone connects us to the earth and its everlasting cycle of life and death. Slide 3: Sterling Silver – A mineral with healing properties that is said to mirror the soul and strengthen the connection between astral and physical bodies. Slide 4: Find it in our Fine Vintage selection *insert link*	1	1	1		hlr stories and work in progress	note
+Request: Mantras in feed text graphic Intention: The start of our Mantra content module To be posted: June 28 Slide 1: I unconditionally love and accept myself Slide 2: I am worthy of everything I desire Slide 3: I give and receive love effortlessly Slide 4: I am enough, I give enough, I do enough	1	1	1		hlr stories and work in progress	
+I unconditionally	4	4	4		hlr stories and work in progress	
+love & accept myself	3	3	3		hlr stories and work in progress	
+I am worthy of	4	4	4		hlr stories and work in progress	
+everything I desire	2	2	2		hlr stories and work in progress	
+I give & receive	4	4	4		hlr stories and work in progress	
+love effortlessly	2	2	2		hlr stories and work in progress	
+I am enough,	4	4	4		hlr stories and work in progress	
+I give enough,	4	4	4		hlr stories and work in progress	
+I do enough	3	3	3		hlr stories and work in progress	
+How To Celebrate The Winter Solstice Decorate with Evergreens Work with Pine, Cedar, Holly or Mistletoe Light a candle in the window for passing spirits Make Pomanders Practice Divination Go for a Winter’s walk Tell stories around a fire Reflect on the year and set intentions for the year ahead	1	1	1		hlr stories and work in progress	
+Text	2	2	2	y	hlr stories and work in progress	
+everything I desire.	2	2	2		hlr stories and work in progress	
+love effortlessly.	2	2	2		hlr stories and work in progress	
+I do enough.	1	1	1		hlr stories and work in progress	
+love & accept myself.	1	1	1		hlr stories and work in progress	
+Radiating pure light and energy, we encased a Clear Quartz gemstone in our Garden Pendant Slide 2: With remarkable healing properties, we selected Clear Quartz as our first launched stone, recognizing its ability to amplify intentions and promote overall well-being. Slide 3: Wear close to your heart to attract positivity	1	1	1		hlr stories and work in progress	
+"For millennia and across the world, the egg has been a powerful symbol, representing the earth, fertility and resurrection. Little surprise that eggs also figure widely in folkloric beliefs; such fragile packages of life have a magical quality that appeals to us all."	15	14	15		hlr stories and work in progress	
+Tending the inner fire	1	1	1		hlr stories and work in progress	
+Connecting with the inner tides	1	1	1		hlr stories and work in progress	
+Moving forward with confidence and harmony	1	1	1		hlr stories and work in progress	
+Promoting precision and positivity	1	1	1		hlr stories and work in progress	
+HARMONY & COMPASSION	3	3	3		hlr stories and work in progress	
+Rose Quartz	32	29	32		hlr stories and work in progress; social grid; social templates	
+INTUITION & CLARITY	2	2	2		hlr stories and work in progress	
+Lemurian Quartz	2	2	2		hlr stories and work in progress	
+OPTIMISM & ABUNDANCE	1	1	1		hlr stories and work in progress	
+Citrine	32	29	32		hlr stories and work in progress; social grid; social templates	
+COURAGE & MOTIVATION	1	1	1		hlr stories and work in progress	
+Carnelian	5	5	5		hlr stories and work in progress; sept-october 2026	
+GROUNDING & MOTIVATION	1	1	1		hlr stories and work in progress	
+Red Jasper	4	4	4		hlr stories and work in progress; social grid	
+Cleansing & amplification	15	15	15		hlr stories and work in progress; social templates	
+Selenite	15	15	15		hlr stories and work in progress; social templates	
+intuition & balance	2	2	2		hlr stories and work in progress; social grid	
+Moonstone	17	17	17		hlr stories and work in progress; social grid; social templates	
+emotional balance & self-acceptance	2	2	2		hlr stories and work in progress; social grid	
+stability & nurturing	2	2	2		hlr stories and work in progress; social grid	
+emotional healing & self-love	2	2	2		hlr stories and work in progress; social grid	
+Rhodochrosite	15	15	15		hlr stories and work in progress; sept-october 2026; social grid	
+confidence & emotional healing	2	2	2		hlr stories and work in progress; social grid	
+Rhodonite	5	5	5		hlr stories and work in progress; sept-october 2026; social grid	
+communication & clarity	2	2	2		hlr stories and work in progress	
+Amazonite	6	6	6		hlr stories and work in progress; sept-october 2026	
+harmony & self-acceptance	1	1	1		hlr stories and work in progress	
+grounding & protection	1	1	1		hlr stories and work in progress	
+Black Tourmaline	4	3	4		hlr stories and work in progress; sept-october 2026	
+harmony & luck	1	1	1		hlr stories and work in progress	
+Green Aventurine	13	13	13		hlr stories and work in progress; sept-october 2026	
+balance & compassion	1	1	1		hlr stories and work in progress	
+Optimism & positivity	1	1	1		hlr stories and work in progress	
+clarity	1	1	1		hlr stories and work in progress	
+Clear Quartz	27	27	27		hlr stories and work in progress	
+clarity & grounding	1	1	1		hlr stories and work in progress	
+Tiger’s Eye	6	6	6		hlr stories and work in progress; social grid; social templates	
+grounding & stability	1	1	1		hlr stories and work in progress	
+commitment & motivation	1	1	1		hlr stories and work in progress	
+Garnet	2	2	2		hlr stories and work in progress	
+AFFIRMATION FOR ARIES	1	1	1		hlr stories and work in progress	
+I affirm that my inner fire is always lit. I tend to this fire as it urges me forward with clarity, passion, and creativity toward my most-aligned life.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR CANCER	1	1	1		hlr stories and work in progress	
+I affirm that like the tides I move in my own authentic way. I honor my cycles, I nurture my inner life, and as water does, I freely express myself.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR LIBRA	1	1	1		hlr stories and work in progress	
+I affirm that I bring beauty and harmony to all that I do. My magic honors the scales of life, knowing that balance is a continuous process.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR CAPRICORN	1	1	1		hlr stories and work in progress	
+Strengthening Earth connection	1	1	1		hlr stories and work in progress	
+Manifesting dreams and radiance	1	1	1		hlr stories and work in progress	
+For intuition and transformation	1	1	1		hlr stories and work in progress	
+Supporting visionary pursuits and collective well-being	1	1	1		hlr stories and work in progress	
+Self-love & Emotional balance	1	1	1		hlr stories and work in progress	
+prosperity & vitality	1	1	1		hlr stories and work in progress	
+universal Love & emotional healing	1	1	1		hlr stories and work in progress	
+abundance & manifestation	2	2	2		hlr stories and work in progress	
+Pyrite	14	14	14		hlr stories and work in progress; social grid; social templates	
+protection & emotional release	1	1	1		hlr stories and work in progress	
+Malachite	2	2	2		hlr stories and work in progress	
+leadership & positivity	2	2	2		hlr stories and work in progress; social grid	
+Sunstone	2	2	2		hlr stories and work in progress; social grid	
+protection & confidence	2	2	2		hlr stories and work in progress; social grid	
+abundance & optimism	2	2	2		hlr stories and work in progress; social grid	
+balance & confidence	1	1	1		hlr stories and work in progress	
+Amethyst	9	9	9		hlr stories and work in progress; sept-october 2026; social grid	
+passion & committment	1	1	1		hlr stories and work in progress	
+intuition & transformation	1	1	1		hlr stories and work in progress	
+Labradorite	17	17	17		hlr stories and work in progress; social grid; social templates	
+harmony & balance	1	1	1		hlr stories and work in progress	
+Transformation & release	1	1	1		hlr stories and work in progress	
+stability & protection	1	1	1		hlr stories and work in progress	
+Smoky Quartz	3	2	3		hlr stories and work in progress	
+awakening & insight	1	1	1		hlr stories and work in progress	
+insight & discernment	1	1	1		hlr stories and work in progress	
+clarity & creativity	1	1	1		hlr stories and work in progress	
+Rainbow Fluorite	2	2	2		hlr stories and work in progress	
+AFFIRMATION FOR TAURUS	1	1	1		hlr stories and work in progress	
+I affirm that I am always nourished by the Earth, divinely protected. Abundance comes up through my roots and blossoms in my life.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR LEO	1	1	1		hlr stories and work in progress	
+I affirm that I am connected to my inner lion. I celebrate my creative force, which is courageous and comes from the flame of deep authenticity.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR SCORPIO	1	1	1		hlr stories and work in progress	
+I affirm that I am in intuitive flow, transforming all the time. I seek truth as I explore the depths of my psyche, carrying a lantern of wisdom, unafraid of the dark.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR AQUARIUS	1	1	1		hlr stories and work in progress	
+I affirm that the depths of my imagination are boundless, filling my heart with possibility. I am a beacon of innovation using my magic to aid the collective. I work tirelessly to usher in a world united in harmony.	1	1	1		hlr stories and work in progress	
+Honoring adaptability	2	2	2		hlr stories and work in progress; social templates	
+Invoking calm, creativity, and clarity	1	1	1		hlr stories and work in progress	
+Supporting expansion through exploration and self-discovery	1	1	1		hlr stories and work in progress	
+Celebrating deep feelings and deeper knowing	1	1	1		hlr stories and work in progress	
+optimism & clarity	2	2	2		hlr stories and work in progress; social templates	
+truth & wisdom	3	3	3		hlr stories and work in progress; social grid; social templates	
+Lapis Lazuli	8	5	8		hlr stories and work in progress; social grid; social templates	
+intuition & communication	3	3	3		hlr stories and work in progress; social grid; social templates	
+COURAGE & ADAPTABILITY	3	3	3		hlr stories and work in progress; social grid; social templates	
+insight & emotional balance	3	3	3		hlr stories and work in progress; social grid; social templates	
+grounding & focus	4	4	4		hlr stories and work in progress; sept-october 2026	
+Hematite	5	5	5		hlr stories and work in progress; sept-october 2026; social templates	
+communication & emotional balance	5	5	5		hlr stories and work in progress; sept-october 2026	
+calmness & clarity	4	4	4		hlr stories and work in progress; sept-october 2026	
+confidence & motivation	4	4	4		hlr stories and work in progress; sept-october 2026	
+intuition & awakening	4	4	4		hlr stories and work in progress; sept-october 2026	
+Lemurian Clear Quartz	4	4	4		hlr stories and work in progress; sept-october 2026	
+truth & self-expression	1	1	1		hlr stories and work in progress	
+emotional balance & clarity	1	1	1		hlr stories and work in progress	
+release & emotional balance	1	1	1		hlr stories and work in progress	
+Black Obsidian	2	2	2		hlr stories and work in progress	
+Dumortierite	1	1	1		hlr stories and work in progress	
+self-acceptance & harmony	1	1	1		hlr stories and work in progress	
+protection & release	1	1	1		hlr stories and work in progress	
+spiritual expansion & intuition	1	1	1		hlr stories and work in progress	
+stability & confidence	1	1	1		hlr stories and work in progress	
+intuition & connection	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR GEMINI	2	2	2		hlr stories and work in progress; social templates	
+I affirm that I am always carried on the winds of my inner wisdom. My intuition and flexibility support me, and I am able to cultivate balance in my diverse pursuits.	2	2	2		hlr stories and work in progress; social templates	
+AFFIRMATION FOR VIRGO	1	1	1		hlr stories and work in progress	
+As I step into my season, I honor my inner wisdom and the clarity it brings. I embrace my meticulous nature as a gift, knowing that my attention to detail creates a life of purpose and alignment. I trust in my ability to nurture, organize, and bring my visions into reality.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR SAGITTARIUS	1	1	1		hlr stories and work in progress	
+I affirm that I am a seeker of truth, constantly expanding my horizons and embracing the freedom to live authentically. I am both the match and the flame. With every step, I forge a trail of boundless possibilities, guided by the unwavering light of my curious spirit.	1	1	1		hlr stories and work in progress	
+AFFIRMATION FOR pisces	1	1	1		hlr stories and work in progress	
+Our story is one of magic...	1	1	1		hlr stories and work in progress	
+Our story is	1	1	1		hlr stories and work in progress	
+one of magic...	1	1	1		hlr stories and work in progress	
+of ancestral wisdom rekindled in the modern world…	1	1	1		hlr stories and work in progress	
+of ancestral wisdom	1	1	1		hlr stories and work in progress	
+in the modern world…	1	1	1		hlr stories and work in progress	
+rekindled	1	1	1		hlr stories and work in progress	
+of delicate designs filled with potent energies.	1	1	1		hlr stories and work in progress	
+of delicate designs	1	1	1		hlr stories and work in progress	
+filled with potent energies.	1	1	1		hlr stories and work in progress	
+Learn more about what drives us and discover our new collection of fine jewelry, healing crystals, altar kits, and ritual tools.	2	2	2		hlr stories and work in progress	
+what is the highest self?	6	6	6		hlr stories and work in progress	
+Everyone has a Highest Self	1	1	1		hlr stories and work in progress	
+Drawing from multiple lineages (teachings transmitted between generations of spiritual seekers), the Highest Self is an expression of a person’s soul.	1	1	1		hlr stories and work in progress	
+Energy Cleansing & Protection	1	1	1		hlr stories and work in progress	
+Clear away energetic debris, experience peace, and access divine protection	1	1	1		hlr stories and work in progress	
+Adorn your wrist with The Seeker Spell Bracelet to access cosmic connection and spiritual awakening. Wear it to help you tap into your highest potential and navigate the currents of self-discovery.	2	2	2		hlr stories and work in progress	
+spell bracelets	14	14	14		hlr stories and work in progress	
+The Seeker	6	6	6		hlr stories and work in progress	
+Cosmic Bliss	36	34	1		hlr stories and work in progress	
+The Cosmic Bliss	7	7	7		hlr stories and work in progress; social templates	
+spell BRACELET	17	17	17		hlr stories and work in progress; social templates	
+Abundance and happiness	5	5	5		hlr stories and work in progress; social templates	
+Playful positivity	5	5	5		hlr stories and work in progress; social templates	
+Heart healer	5	5	5		hlr stories and work in progress; social templates	
+Dalmatian Jasper	11	11	11		hlr stories and work in progress; social templates	
+Abundance And Positivity	17	17	17		hlr stories and work in progress; social templates	
+Solid Gold	33	33	33		hlr stories and work in progress; social templates	
+Dalmatian Jasper: playful positivity Citrine: abundance and happiness Rose Quartz: heart healer	1	1	1		hlr stories and work in progress	
+The Wealth Weaver	6	6	6		hlr stories and work in progress	
+Radiates positivity	4	4	4		hlr stories and work in progress	
+invites opportunity and abundance	4	4	4		hlr stories and work in progress	
+boosts confidence	4	4	4		hlr stories and work in progress	
+Supports clarity and intuition	4	4	4		hlr stories and work in progress	
+Amplifies energy	4	4	4		hlr stories and work in progress	
+boosts intuition	4	4	4		hlr stories and work in progress	
+Herkimer Diamond	12	12	12		hlr stories and work in progress	
+Call on The Wealth Weaver Spell Bracelet to invoke financial success and greatness. Wear it during a negotiation or business opportunity to channel the strength and confidence to claim what’s yours.	2	2	2		hlr stories and work in progress	
+Wear the Love Spell Bracelet when you’re ready to accept the kind of love you deserve (you know the kind) and to help clear out any blockages that keep you from receiving love. Or, just wear it as a reminder that self-love might be the most important love there is.	2	2	2		hlr stories and work in progress	
+The Love Spell	2	2	2		hlr stories and work in progress	
+Reach for The Cosmic Bliss Spell Bracelet to channel your utmost happiness and bliss, or when you feel empowered to tap into your inner joy but need a boost to get there. Wear it to appreciate your many gifts and start navigating your life with positivity.	3	3	3		hlr stories and work in progress	
+Acts as a conduit for higher consciousness. Its energy clears mental clutter to reveal a path to your intuitive wisdom.	7	7	7		hlr stories and work in progress	
+Channels the energy of the moon and the divine feminine, facilitating a deeper connection to intuition and inner wisdom.	7	7	7		hlr stories and work in progress	
+Acts as a bridge between your highest self and the cosmic realm. Its clarity and high vibration amplify spiritual awareness and psychic abilities.	7	7	7		hlr stories and work in progress	
+The “Master Healer”, amplifies and protects your spell.	22	22	22		hlr stories and work in progress	
+as seen in	39	28	35		hlr stories and work in progress	
+Press Name	2	2	2		hlr stories and work in progress	
+Pink Tourmaline	10	10	10		hlr stories and work in progress	
+Boosts your confidence and attract opportunities for financial growth.	7	7	7		hlr stories and work in progress	
+A stone of abundance, radiates positivity and joy while fostering a mindset that attracts opportunities.	5	5	5		hlr stories and work in progress	
+The "Stone of Opportunity," aligns with the heart chakra, bringing about good luck and opening doors to greatness.	5	5	5		hlr stories and work in progress	
+The “Love Stone” opens your heart to give and receive affection, attracting romantic, platonic, and self-love.	8	8	8		hlr stories and work in progress	
+Deepens compassion and promotes trust and safety in matters of the heart.	5	5	5		hlr stories and work in progress	
+Supports emotional healing and self-love, for deeper connections with yourself and others.	5	5	5		hlr stories and work in progress	
+The stone of abundance and happiness, radiates warm and uplifting vibrations, helping you attract joy and embrace the sunny side of life.	5	5	5		hlr stories and work in progress	
+The ultimate heart healer, creates a foundation for happiness from within.	5	5	5		hlr stories and work in progress	
+the cosmic bliss spell bracelet	4	4	4		hlr stories and work in progress	
+Attracts abundance and positive energy.	16	16	16		hlr stories and work in progress	
+ALabradorite acts as a conduit for higher consciousness. Its energy clears mental clutter to reveal a path to your intuitive wisdom. Moonstone channels the energy of the moon and the divine feminine, facilitating a deeper connection to intuition and inner wisdom. Herkimer Diamond acts as a bridge between your highest self and the cosmic realm. Its clarity and high vibration amplify spiritual awareness and psychic abilities. Clear Quartz, the “Master Healer”, amplifies and protects your spell.	1	1	1		hlr stories and work in progress	
+Your Highest Self always remembers who you are, even across lifetimes.	2	2	2		hlr stories and work in progress	
+Communicate with this aspect of your soul through meditation, ritual, adornment, and channeling.	1	1	1		hlr stories and work in progress	
+Celebrate The Winter Solstice With Us	2	2	2		hlr stories and work in progress	
+❅ Decorate with Evergreens ❅ Work with Pine, Cedar, Holly or Mistletoe ❅ Light a candle in the window for passing spirits ❅ Make Pomanders ❅ Practice Divination ❅ Go for a Winter’s walk ❅ Tell stories around a fire ❅ Reflect on the year and set intentions for the year ahead	1	1	1		hlr stories and work in progress	
+winter solstice rituals	1	1	1		hlr stories and work in progress	
+Beautiful tools for	1	1	1		hlr stories and work in progress	
+calling in protection	1	1	1		hlr stories and work in progress	
+and love	1	1	1		hlr stories and work in progress	
+introducing our new altar kits	1	1	1		hlr stories and work in progress	
+Spell Bracelets are wearable intentions.	1	1	1		hlr stories and work in progress	
+new in the realm of high light rituals	1	1	1		hlr stories and work in progress	
+a weaver, a lover,	5	5	2		hlr stories and work in progress	
+Are you a seeker,	2	2	2		hlr stories and work in progress	
+a starchild?	5	5	2		hlr stories and work in progress	
+The New York Times	1	1	1		hlr stories and work in progress	
+Style Magazine	1	1	1		hlr stories and work in progress	
+Essence	1	1	1		hlr stories and work in progress	
+WWD	1	1	1		hlr stories and work in progress	
+Are you a seeker, a weaver, a lover, a starchild?	3	3	3		hlr stories and work in progress	
+Our silk & stone Spell Bracelets attract your intentions.	4	4	4		hlr stories and work in progress	
+THE love SPELL BRACELET	4	4	4		hlr stories and work in progress	
+the seeker spell bracelet	4	4	4		hlr stories and work in progress	
+the wealth weaver spell bracelet	4	4	4		hlr stories and work in progress	
+Attracts love	4	4	4		hlr stories and work in progress	
+SUpports emotional healing	4	4	4		hlr stories and work in progress	
+deepens compassion	4	4	4		hlr stories and work in progress	
+The Love	4	4	4		hlr stories and work in progress	
+The New York Times Style Magazine	1	1	1		hlr stories and work in progress	
+What spell will you cast in this season of your life?	4	4	4		hlr stories and work in progress	
+RSVP BY 1/16 TO ALLIE@TBOYCHICLIVING.COM	1	1	1		hlr stories and work in progress	
+A TOAST TO NEW BEGINNINGS WITH	2	2	2		hlr stories and work in progress	
+x	1	1	1		hlr stories and work in progress	
+RSVP TO BETH@B-GOODPR.COM	1	1	1		hlr stories and work in progress	
+Crystal immersion & intention ceremony [Include another activation] Wine, cheese & light bites	1	1	1		hlr stories and work in progress	
+Join us for a restorative evening of intention setting & reflection for 2024.	1	1	1		hlr stories and work in progress	
+Which ceremony is for you?	1	1	1		hlr stories and work in progress	
+Love Spell	1	1	1		hlr stories and work in progress	
+Winter is the cauldron where alchemy is made.	2	2	2		hlr stories and work in progress; social templates	
+“Looking for a way to carry her favorite stones with her and share them with her friends, she [Donnie] began making delicate pieces of jewlery”	2	2	2		hlr stories and work in progress	
+“Looking for a way to carry her favorite stones with her and share them with her friends, she began making delicate pieces of jewelry.”	6	6	6		hlr stories and work in progress	
+“Emerging JEWELRY BRANDS TO BOOKMARK”	2	2	2		hlr stories and work in progress	
+“Looking for a way to carry her favorite stones with her and share them with her friends, she [Donnie] began making delicate pieces of jewelry.”	1	1	1		hlr stories and work in progress	
+A New Line of Delicate Jewelry Meant for Spell Casting	4	4	4		hlr stories and work in progress	
+“I worked with reiki masters, shamans, crystal healers and a few mediums"	1	1	1		hlr stories and work in progress	
+“After a period of what she calls “inner upheaval and regeneration,” the former marketing executive Donnie Soddu began exploring different versions of spirituality.”	3	3	3		hlr stories and work in progress	
+after a period of what she calls “inner upheaval and regeneration,” the former marketing executive Donnie Soddu began exploring different versions of spirituality.	1	1	1		hlr stories and work in progress	
+light heart trio crystal set	1	1	1		hlr stories and work in progress	
+The Divine Feminine	1	1	1		hlr stories and work in progress	
+Crystal Set	1	1	1		hlr stories and work in progress	
+introducing our	1	1	1		hlr stories and work in progress	
+What is the	2	2	2		hlr stories and work in progress	
+Divine Feminine?	1	1	1		hlr stories and work in progress	
+Shadow Self?	1	1	1		hlr stories and work in progress	
+and why should i connect with it?	1	1	1		hlr stories and work in progress	
+Everyone has a Shadow Self.	1	1	1		hlr stories and work in progress	
+Invite your	3	3	3		hlr stories and work in progress	
+demons to tea.	3	3	3		hlr stories and work in progress	
+HighLight_IGStorySet-SpellBracelets-05	1	1	1		hlr stories and work in progress	
+What is the Shadow Self?	12	2	12		hlr stories and work in progress	
+& Why should I connect with it?	2	2	2		hlr stories and work in progress	
+Everyone has a Shadow Self	2	2	2		hlr stories and work in progress	
+The term was popularized by psychiatrist & psychoanalyst Carl Jung, & refers to an unconscious part of a person that constitutes a blind spot or repressed traits. Perhaps you’re prone to jealousy, reactivity, or judgment. The Shadow is somehow deemed “not ideal” and therefore not integrated with the whole individual, existing just out of sight.	2	2	2		hlr stories and work in progress	
+Your Shadow Self is full of rich wisdom, lessons, and deep self-love.	2	2	2		hlr stories and work in progress	
+Coming Soon	2	2	2		hlr stories and work in progress	
+Slide 1: Aries: Tending The Inner Fire*bordered image* https://www.dropbox.com/scl/fo/6ifzmt7gxat0e425fbnt9/h?rlkey=2flbsd93my8xjm6fu60tdxfbt&dl=0 Slide 2: *Annotations* Carnelian - Courage & Motivation Citrine - Optimism & Creativity Red Jasper - Grounding & Perseverance Clear Lemurian - Guidance & Clarity Rose Quartz - Love & Compassion Slide 3: I affirm that my inner fire is always lit, I tend to this fire as it urges me forward with clarity, passion, and creativity toward my most-aligned life. Slide 4: Taurus: Strengthening Earth Connection *bordered image*https://www.dropbox.com/scl/fo/qzb6oo3zjpv2vahrdelqg/h?rlkey=23c6kv0ewp9wo3p01azczp7sn&dl=0 Slide 5: *Annotations*Rhodonite - Nurturing And BalancingPyrite - Determination & ProsperityMalachite - Growth & ProtectionGreen Aventurine - Luck & VitalityRose Quartz - Romance & AffectionSlide 6: I affirm that I am always nourished by the earth, divinely protected, and that abundance comes up through my roots and blossoms in my life. Slide 7: Gemini: Honoring adaptability and inner wisdom*bordered image*https://www.dropbox.com/scl/fo/q9komqy5b6e7adm77xife/h?rlkey=g8zd72esfnajjjkxoaoa42ab2&dl=0 Slide 8: *Annotations*Citrine - Lively & Optimistic Labradorite - Curiosity & IntuitionLapis Lazuli - Truth & WisdomRainbow Moonstone - Balance & GraceTigers Eye - Versatility & AdaptabilitySlide 9: I affirm that I am always carried on the winds of my inner wisdom, my intuition supports me, and I am able to cultivate balance in my diverse pursuits.	1	1	1		hlr stories and work in progress	
+Rhodochrosite - emotional healing & self-love Rose quartz - emotional balance & self-acceptance Red jasper - stability & nurturing Rainbow moonstone - intuition & balance Rhodonite - confidence & emotional healing	1	1	1		hlr stories and work in progress	
+Amethyst - balance & confidence Pyrite - abundance & manifestation Sunstone - leadership & positivity Tigers Eye - protection & confidence Citrine - abundance & optimism	1	1	1		hlr stories and work in progress	
+Amethyst - calmness & clarity Hematite - grounding & focus Carnelian - confidence & motivation Amazonite - communication & emotional balance Lemurian Quartz - intuition & awakening	1	1	1		hlr stories and work in progress	
+Rhodochrosite - harmony & self-acceptance Rhodonite - balance & compassion Green aventurine - harmony & luck Black tourmaline - grounding & protection Amazonite - communication & clarity	1	1	1		hlr stories and work in progress	
+Malachite - transformation & release Rhodochrosite - harmony & balance Smoky Quartz - stability & protection Labradorite - intuition & transformation Garnet - passion & committment	1	1	1		hlr stories and work in progress	
+Smoky Quartz - grounding & protection Dumortierite - communication & clarity Lapis Lazuli - truth & self-expression Black Obsidian - release & emotional balance Rose Quartz (rough) - harmony & compassion	1	1	1		hlr stories and work in progress	
+Citrine - optimism & positivity Tiger's eye - clarity & grounding Red Jasper - grounding & stability Clear quartz (tumbled) - clarity Garnet - committment & motivation	1	1	1		hlr stories and work in progress	
+Amethyst - intuition & clarity Rose Quartz - harmony & compassion Labradorite - insight & discernment Lemurian Clear Quartz - awakening & insight Rainbow Fluorite - clarity & creativity	1	1	1		hlr stories and work in progress	
+Moonstone - intuition & connection Black Obsidian - protection & release Rose Quartz (rough) - self-acceptance & harmony Amethyst - spiritual expansion & intuition Rainbow Fluorite - stability & confidence	1	1	1		hlr stories and work in progress	
+Giveaway	1	1	1		hlr stories and work in progress	
+seeds of intention	29	2	15		hlr stories and work in progress	
+Love and Self-Acceptance	4	1	2		hlr stories and work in progress	
+Creativity and Abundance	5	2	3		hlr stories and work in progress	
+Grounding and Focus	4	1	2		hlr stories and work in progress	
+Insight and Intuition	8	1	4		hlr stories and work in progress	
+Communication and Wisdom	2	1	1		hlr stories and work in progress	
+Protection and Clarity	2	1	1		hlr stories and work in progress	
+Courage and Calm	4	1	2		hlr stories and work in progress	
+Text will be here	6	1	6		hlr stories and work in progress	
+Support their MANIFESTations with a CUSTOM BRACELET hand-crafted with crystals, solid gold, & silk.	1	1	1		hlr stories and work in progress	
+custom spell bracelet	4	4	4		hlr stories and work in progress	
+Tailored for them.	1	1	1		hlr stories and work in progress	
+Your recipient receives a complimentary remote meditation and intuitive crystal selection.	1	1	1		hlr stories and work in progress	
+Personalized Experience	1	1	1		hlr stories and work in progress	
+Their Custom Spell Bracelet arrives in 1-2 weeks along with personal affirmations to support and activate.	1	1	1		hlr stories and work in progress	
+Bespoke Ritual	1	1	1		hlr stories and work in progress	
+Surprise gifts arrive with every spell bracelet.	1	1	1		hlr stories and work in progress	
+Spiritual Gifts	1	1	1		hlr stories and work in progress	
+Enchant them with the gift of magic.	5	4	5		hlr stories and work in progress	
+click the link below and follow these instructions to get your gift sent out today.	1	1	1		hlr stories and work in progress	
+How to gift.	1	1	1		hlr stories and work in progress	
+Reserve a time that may work for your recipient. If you’re not sure, they can always reschedule.	1	1	1		hlr stories and work in progress	
+Book Their Session	1	1	1		hlr stories and work in progress	
+Add your recipient’s email to the invite you receive.	1	1	1		hlr stories and work in progress	
+Forward The Booking	1	1	1		hlr stories and work in progress	
+Our silk & stone Spell Bracelets turn intentions into reality.	1	1	1		hlr stories and work in progress	
+Little treasures for your loved ones	1	1	1		hlr stories and work in progress	
+Need a gift? Send them a spell.	1	1	1		hlr stories and work in progress	
+Gift a custom spell bracelet and your Valentine receives an energy cleansing.	1	1	1		hlr stories and work in progress	
+delivered in time for valentine’s day	3	2	3		hlr stories and work in progress	
+An intention is a seed.	2	1	2		hlr stories and work in progress	
+NEW: THE CRYSTAL STRAND COLLECTION	2	1	2		hlr stories and work in progress	
+FEATURED IN THE LOVE SHOP	1	1	1		hlr stories and work in progress	
+THE CRYSTAL STRAND COLLECTION	6	3	6		hlr stories and work in progress	
+Seeds of truth	4	1	4		hlr stories and work in progress	
+Seeds of abundance	4	1	4		hlr stories and work in progress	
+Seeds of protection	2	1	2		hlr stories and work in progress	
+Seeds of stability	2	1	2		hlr stories and work in progress	
+Seeds of love	4	1	4		hlr stories and work in progress	
+I am a vessel of profound transformation, empowered to manifest my highest potential.	1	1	1		hlr stories and work in progress	
+Fortune flows towards me in a cascade of golden opportunities, because I am in harmony with the universe.	1	1	1		hlr stories and work in progress	
+I embrace the limitless light within, charting new paths with grace and wisdom.	1	1	1		hlr stories and work in progress	
+Why We’re Different	1	1	1		hlr stories and work in progress	
+In Practice	1	1	1		hlr stories and work in progress	
+Custom Pieces	1	1	1		hlr stories and work in progress	
+Seeking	1	1	1		hlr stories and work in progress	
+Sanctuary	1	1	1		hlr stories and work in progress	
+In The Wild	1	1	1		hlr stories and work in progress	
+for setting spring intentions	1	1	1		hlr stories and work in progress	
+Ready to fall in love?	1	1	1		hlr stories and work in progress	
+the garden pendant in rose quartz for the love of self and others	1	1	1		hlr stories and work in progress	
+the garden pendant in moonstone for harmony and new opportunities	1	1	1		hlr stories and work in progress	
+Need a fresh start?	1	1	1		hlr stories and work in progress	
+Warding off bad vibes?	1	1	1		hlr stories and work in progress	
+the garden pendant in smoky quartz for protection and grounding	1	1	1		hlr stories and work in progress	
+the garden pendant in clear quartz for spiritual growth and healing	1	1	1		hlr stories and work in progress	
+Need to clear your mind?	1	1	1		hlr stories and work in progress	
+five hand-selected crystals to amplify virgo’s gifts and support the more challenging traits	1	1	1		hlr stories and work in progress	
+to shield your energy and amplify your personal power. available in 14K solid gold or sterling silver, as a pendant, on a rope chain, or...	1	1	1		hlr stories and work in progress	
+The Sapphire Protection Amulet	1	1	1		hlr stories and work in progress	
+The Birthstone Energy Bracelet	1	1	1		hlr stories and work in progress	
+activated sapphire to support anyone looking for wisdom and strength.	1	1	1		hlr stories and work in progress	
+paired with our red coral necklace to create ‘the sea and sky necklace’, a talisman that bridges body and spirit.	1	1	1		hlr stories and work in progress	
+Curious about the energy of the September birthstone?	1	1	1		hlr stories and work in progress	
+TEMPLATES FROM HLR	1	1	1		social templates	
+I’m allowed to want more and to move toward it.	1	1	1		social templates	
+WORDS FOR YOUR JOURNEY	15	15	15		sept-october 2026; social grid; social templates	
+high spirits	1	1	1		social templates	
+kind words	1	1	1		social templates	
+blessings	1	1	1		social templates	
+welcome	1	1	1		social templates	
+daily magic	1	1	1		social templates	
+the mermaid bracelet	2	2	2		social grid; social templates	
+For the woman who’s ready to stop skimming the surface of her life.	2	2	2		social grid; social templates	
+you already know the truth - now you’re ready to stop holding it at a distance.	1	1	1		social templates	
+Made for the moment when	1	1	1		social templates	
+The Mermaid Bracelet is handcrafted with Amazonite & Silver for courage, emotional truth, intuition and the willingness to go deeper.	1	1	1		social templates	
+Blessed and activated in ceremony at our Westport, CT studio.	1	1	1		social templates	
+The first step isn’t fixing it ~ it’s being willing to meet it.	1	1	1		social templates	
+Don’t dismiss the ripple because you were expecting a wave.	2	2	2		social grid; social templates	
+Angelite for serenity and guidance	1	1	1		social templates	
+1:1 shamanic healing sessions for releasing what’s been lingering	1	1	1		social templates	
+Energy clearing + blessing sprays	1	1	1		social templates	
+Rose Gallica Essence for heart healing	1	1	1		social templates	
+I honor what’s ending / I trust what’s beginning I let the spiral take me deeper, through the dark toward the gold.	1	1	1		social templates	
+“The reading cracked something open in me. It was exactly what I didn’t know I needed.”	1	1	1		social templates	
+THE CUSTOM SPELL JEWELRY SESSION	2	2	2		social grid; social templates	
+Eat something with your hands	1	1	1		social templates	
+Make something with no agenda	1	1	1		social templates	
+(details in the caption)	1	1	1		social templates	
+Do hip openers with the music on	1	1	1		social templates	
+Wear something beautiful that *moves* when you do	1	1	1		social templates	
+Let someone who loves you delight you	1	1	1		social templates	
+EASY WAYS TO SUPPORT YOUR SACRAL CENTER	1	1	1		social templates	
+4	2	1	2		social templates	
+AUGUST CRYSTAL ALLIES	1	1	1		social templates	
+quartz	1	1	1		social templates	
+fluorite	1	1	1		social templates	
+3	2	1	2		social templates	
+When this conditioning lives in your energy field, it might show up like this:	2	2	2		sept-october 2026; social templates	
+Sometimes usefulness — doing more or doing it all — becomes tied to safety or worth because of the way it was rewarded in the past. Maybe you were praised for being mature, helpful, easy or responsible. Or things went more smoothly when you didn’t need much. Maybe you learned being useful kept you connected, protected, or out of conflict.	2	2	2		sept-october 2026; social templates	
+what I see underneath:	2	2	2		sept-october 2026; social templates	
+Usefulness tied to safety	2	2	2		sept-october 2026; social templates	
+Over time, this lesson (usefulness = safety, security, acceptance) can become ingrained emotionally and energetically. So even if you understand intellectually that you’re allowed to rest, rest may not actually feel safe to your system. “Doing nothing” can register as risk instead of relief.	2	2	2		sept-october 2026; social templates	
+an inner child juggling all the luggage and corralling siblings of the family	2	2	2		sept-october 2026; social templates	
+a cloudy thought form that says “this is how I stay loved / this is how I stay safe / this is why I matter”	2	2	2		sept-october 2026; social templates	
+a soul dressed up in a way that implies responsibility, but doesn’t seem to fit quite right	2	2	2		sept-october 2026; social templates	
+or	3	3	3		sept-october 2026; social templates	
+Feeling guilty the second you stop doing something “productive”	2	2	2		sept-october 2026; social templates	
+Automatically stepping in before anyone asks	2	2	2		sept-october 2026; social templates	
+Taking on more than you want to, then resenting how much everyone depends on you.	2	2	2		sept-october 2026; social templates	
+Feeling uneasy when no one needs you	2	2	2		sept-october 2026; social templates	
+Struggling to receive without immediately wanting to give something back	2	2	2		sept-october 2026; social templates	
+i. an inner child juggling all the luggage and corralling siblings of the family	1	1	1		social templates	
+iii. a cloudy thought form that says “this is how I stay loved / this is how I stay safe / this is why I matter”	1	1	1		social templates	
+ii. a soul dressed up in a way that implies responsibility, but doesn’t seem to fit quite right	1	1	1		social templates	
+In session, we can work with whatever is there. The helping spirits transmute the energetic piece that is enforcing the old usefulness rules. They help you separate who you are from the role you learned to perform so rest can become rest again, not something you have to earn, justify, or feel guilty for.	2	2	2		sept-october 2026; social templates	note
+Why does rest make me feel SO ANXIOUS?	3	3	3		sept-october 2026; social grid; social templates	
+And in session, I see it like this:	2	2	2		sept-october 2026; social templates	
+If this pattern feels familiar, this is the kind of thing we can explore together in a private Shamanic Healing Session.	3	3	3		sept-october 2026; social templates	note
+Your yes has a texture	3	3	3		sept-october 2026; social grid; social templates	
+pay attention to it	3	3	3		sept-october 2026; social grid; social templates	
+Keep an eye on what gives you your energy back	2	2	2		sept-october 2026; social templates	
+Learning what my own yes feels like	3	3	3		sept-october 2026; social grid; social templates	
+libra season	3	3	3		sept-october 2026; social grid; social templates	
+crystals & rituals	3	3	3		sept-october 2026; social grid; social templates	
+October energy medicine	3	3	3		social grid; social templates	
+steady yourself	1	1	1		social templates	
+Your life should have places where Your life should have places where Your life should have places where Your life should have places where Your life should have places where Your	1	1	1		social templates	
+Sometimes alignment feels less like fireworks and more like relief	2	2	2		sept-october 2026; social templates	
+REFERENCES	1	1	1		social templates	
+WATERMELON tourmaline HEART CHAKRA	1	1	1		social grid	
+Long before we called it manifesting, humans wore their spells.	1	1	1		social grid	
+OUR ONLY SALE OF THE YEAR	1	1	1		social grid	
+25% off sitewide	1	1	1		social grid	
+grounding in water	1	1	1		social grid	
+If YOUR gratitude PRACTICE feels forced right now, try this→	1	1	1		social grid	
+the cherished inner child spell	1	1	1		social grid	
+INNER CHILD HEALING	1	1	1		social grid	
+SOLSTICE SALE • 20% OFF SITEWIDE	1	1	1		social grid	
+treat yourself like a sanctuary	1	1	1		social grid	
+LET WINTER SET THE PACE	1	1	1		social grid	
+After the madness stops	1	1	1		social grid	
+(SWIPE FOR TOOLS)	1	1	1		social grid	
+THE MOST MEANINGFUL GIFT YOU CAN GIVE (SWIPE TO LEARN MORE)	1	1	1		social grid	
+Rainbow Moonstone	1	1	1		social grid	
+CRYSTALS FOR CANCER	1	1	1		social grid	
+My desire is not a distraction. It’s direction.	2	2	2		social grid	
+ABUNDANCE IS MY NATURAL STATE	1	1	1		social grid	
+chakra deep dive	1	1	1		social grid	
+A MORE CONSIDERED CHAKRA BRACELET	1	1	1		social grid	
+New Seeds bracelets	1	1	1		social grid	
+SWIPE TO EXPLORE	1	1	1		social grid	
+SUNDAY 4/12 AT 1PM	1	1	1		social grid	
+THE SPACE BY EVOLVE LONG BEACH, NY	1	1	1		social grid	
+a breathwork & crystal healing experience	1	1	1		social grid	
+Lorem ipsum dolor sit amet, consectetur adipiscing elit jud. Vivamus eleifend purus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit jud. Vivamus eleifend purus nec. Vivamus eleifend purus nec. Vivamus eleifend purus nec.	1	1	1		social grid	placeholder
+Before you know what kindness really is you must lose things, feel the future dissolve in a moment like salt in a weakened broth. What you held in your hand, what you counted and carefully saved, all this must go so you know how desolate the landscape can be between the regions of kindness. How you ride and ride thinking the bus will never stop, the passengers eating maize and chicken will stare out the window forever. Before you learn the tender gravity of kindness, you must travel where the Indian in a white poncho lies dead by the side of the road. You must see how this could be you, how he too was someone who journeyed through the night with plans and the simple breath that kept him alive. Before you know kindness as the deepest thing inside, you must know sorrow as the other deepest thing. You must wake up with sorrow. You must speak to it till your voice catches the thread of all sorrows and you see the size of the cloth. Then it is only kindness that makes sense anymore, only kindness that ties your shoes and sends you out into the day to mail letters and purchase bread, only kindness that raises its head from the crowd of the world to say it is I you have been looking for, and then goes with you every where like a shadow or a friend.	1	1	1		social grid	
+for the ancestors	1	1	1		social grid	
+I am not one soul healing alone. I am a doorway my grandmother walks through.	1	1	1		social grid	
+QUESTIONS	1	1	1		social grid	
+FOR	1	1	1		social grid	
+between	1	1	1		social grid	
+THE	1	1	1		social grid	
+HOW TO CHOOSE · SEEDS VS CLASSICS	1	1	1		social grid	
+The Classic Stretch Bracelet in Mother of Pearl	1	1	1		social grid	
+The Birthstone Seeds Bracelet in Pearl	1	1	1		social grid	
+A spell for the mother ~ Softness of pearl. Clarity of fluorite. Tenderness of rose quartz. Wisdom of moonstone. Warmth of rose gold. May you remember that your needs are sacred too. May love return to you in equal measure. May you move toward what nourishes you instead of only what is required of you. May you feel cherished and deeply seen.	1	1	1		social grid	
+optimism, clarity, ABUNDANCE	1	1	1		social grid	
+CRYSTALS FOR GEMini	1	1	1		social grid	
+Pleasure counts as spiritual practice, by the way.	1	1	1		social grid	
+crystal energy	1	1	1		social grid	
+UNDERSTANDING	1	1	1		social grid	
+What is meant for me does not ask me to abandon myself.	1	1	1		social grid	
+they told us to fear them	1	1	1		social grid	
+Surrender is not the same as giving up.	1	1	1		social grid	
+july monthly medicine	1	1	1		social grid	
+Let the lesson change you without letting it condemn you.	1	1	1		social grid	
+LEO SEASON crystals	1	1	1		social grid	
+Crystals for Leo	1	1	1		social grid	
+POWER, abundance & manifestation	1	1	1		social grid	
+balance & regal wisdom	1	1	1		social grid	
+proof of magic	1	1	1		social grid	
+A monthly collection of signs, small wonders & everyday enchantment	1	1	1		social grid	
+BLESSING	1	1	1		social grid	
+august energy reading	1	1	1		social grid	
+YOUR LINEAGE IS NOT DANGEROUS	5	5	5		sept-october 2026; social grid	
+september energy medicine	14	7	14		sept-october 2026; social grid	
+on thresholds	2	2	2		sept-october 2026; social grid	
+ANCESTRAL HEALING CAN LOOK LIKE THIS	1	1	1		social grid	
+What wants to expand through you is already speaking	1	1	1		social grid	
+tools for Virgo season	2	2	2		sept-october 2026; social grid	
+Your life should have places where	7	3	7		sept-october 2026; social grid	
+nothing	7	3	7		sept-october 2026; social grid	
+is required of you	7	3	7		sept-october 2026; social grid	
+let’s get together	3	3	3		sept-october 2026; social grid	
+what’s it like to do a healing session?	2	2	2		sept-october 2026; social grid	
+IG Stories	14	14	14		sept-october 2026	
+LIBRA SEASON TRUTH	1	1	1		sept-october 2026	
+Harmony only works when your needs are part of the equation	1	1	1		sept-october 2026	
+My needs belong in the room too.	1	1	1		sept-october 2026	
+LIBRA SEASON AFFIRMATION	2	1	2		sept-october 2026	
+I am safe in relationships where care goes both ways.	1	1	1		sept-october 2026	
+LIBRA SEASON IN PRACTICE	1	1	1		sept-october 2026	
+For 1 week, notice the moments when you’re about to say, “whatever works for you” just to keep the peace. Pause and ask yourself: What would I choose if I knew my preference mattered just as much as theirs? Practice saying one honest preference out loud each day.	1	1	1		sept-october 2026	
+LIBRA SEASON CRYSTALS	1	1	1		sept-october 2026	
+nurturing & healing	1	1	1		sept-october 2026	
+LUCK & VITALITY	1	1	1		sept-october 2026	
+grounds & protects	1	1	1		sept-october 2026	
+self love & balance	1	1	1		sept-october 2026	
+Libra season is an invitation to balance. Rhodonite helps us identify what is genuine connection, what is people-pleasing, and where one honest preference could restore the balance. Swipe for more Libra season tools + crystal allies.	1	1	1		sept-october 2026	
+Caption Grounding isn't really about the activity itself, it's about the end state. Coming back into your body. Back into the present moment. Back into a sense of safety and sovereignty. So many of us live from the neck up, thinking and thinking because it feels like control. But that's often the very thing that leaves us feeling swirly and untethered. A long shower. Cooking without your phone. Feet on the earth. If it brings you back into yourself, it counts. Full article on Substack. Link in bio.	1	1	1		sept-october 2026	
+IG Post	10	9	10		sept-october 2026	
+TikTok	9	9	9		sept-october 2026	
+Grounding is the process of coming back into your body, back into the present moment, and/or back into a sense of physical and energetic stability.	2	1	2		sept-october 2026	
+link to article	1	1	1		sept-october 2026	
+feed repost	5	3	5		sept-october 2026	
+Heavy energies don't have to stay stuck in us, and the Earth can participate in their transformation if we ask for help with loving intention.	1	1	1		sept-october 2026	
+Caption Virgo season is an invitation to refine. Lemurian Quartz helps us identify what is necessary, what is noise, and where a small adjustment could create a meaningful shift. Swipe for more Virgo season tools + crystal allies.	1	1	1		sept-october 2026	
+Caption What if you chose your jewelry differently? Not by what matches your outfit, but by what you want to carry with you.	1	1	1		sept-october 2026	
+TikTok/ Reels	1	1	1		sept-october 2026	
+link to Virgo Set	1	1	1		sept-october 2026	
+A message FOR VIRGO	2	1	2		sept-october 2026	
+Perfectionism is not the same as devotion.	2	1	2		sept-october 2026	
+I refine with care, not criticism.	2	1	2		sept-october 2026	
+AFFIRMATIONS FOR VIRGO	7	1	7		sept-october 2026	
+I give my energy to what truly matters.	2	1	2		sept-october 2026	
+I honor the power of small, intentional choices.	3	1	3		sept-october 2026	
+caption: August ~ A treasure from the Oak outside of my studio yes i'm that mom who throws sound bath playdates 🙏 @om_mermaidyoga you guys make the best stacks!!! loved this one abundance @weirfarmnps the morning after i decided to gift my daughter a willow tree for her birthday surprise this year, she gave me this drawing of her dream 👯 🧚‍♀️🧚‍♀️🧚‍♀️ @strattonparks it's just not a pool party without @om_mermaidyoga rosie finally found me 💞 my boy and his butterfly guide elemental wisdom	1	1	1		sept-october 2026	
+Caption for everyone nurturing a new beginning right now.	1	1	1		sept-october 2026	
+IG Post - Monthly Round Up	1	1	1		sept-october 2026	
+Caption A love letter to Word Witchery, waist beads, and wandering toward what's next. Our founder, Donnie sat down with her friend and collaborator Kate Belew (@k8belew) of Word Witch for this month's Correspondence series, and the conversation wanders through more than one season. Fire ceremonies and letting go. Mermaid medicine and the waist beads she never takes off. The ancestral guild she now calls her healing team. And the moment her own guides told her the jewelry was only ever meant to be a bridge, not the destination. Read the full letter via link in bio.	1	1	1		sept-october 2026	
+IG Post - Waist Beads Feature	1	1	1		sept-october 2026	
+Within you there is a stillness and a sanctuary to which you can retreat at any time. — Hermann Hesse	1	1	1		sept-october 2026	
+Protect what lets you soften	1	1	1		sept-october 2026	
+led by DANA CLARK + donnie soddu	2	2	2		sept-october 2026	
+Registration link in bio	2	2	2		sept-october 2026	
+September 20 4-6pm Yoga 203 Norwalk, CT	2	2	2		sept-october 2026	
+restorative yoga & crystal reiki	2	2	2		sept-october 2026	
+Caption find your sanctuaries we tend to think of a sanctuary as somewhere we have to escape to. somewhere quiet, beautiful, far enough away from everyday life that we can finally exhale. but finding sanctuary doesn’t require escape, expense, or excess. a sanctuary is a container. a space that gives you something you need in order to come back to yourself. and different sanctuaries can give us different things. a library can be a sanctuary because it gives you somewhere to feed your mind. you can find writers who make you feel less alone, ideas that open something up in you, or words that bring you new perspective. water can be a sanctuary when you need to clear your energy. your body can be a sanctuary because it is the one home you always carry with you. a place where you can belong to yourself completely. where you don’t have to perform, prove, or be anything other than who you are. your rituals can create sanctuary when they connect you to the sacred. you might have more than one sanctuary. I know I do. as you keep building your grounding practice this month, find your sanctuaries and practice returning to them. these are the spaces that bring you back - that help you feel more like yourself again. #wordsforyourjourney #gentlereminders	1	1	1		sept-october 2026	note
+Caption this weekend ~ join me on saturday 9/19 for community wellness with @kiin [need to check] and friends and on sunday 9/20 for the gentlest yoga & reiki healing practice with @om_mermaidyoga and @yoga203 [need to check]. can't wait to move, relax and practice with you all. details + tickets in bio 🤍	2	2	2		sept-october 2026	
+September is asking us to ground.	2	2	2		sept-october 2026	
+Grounding is the process of coming back into your body, back into the present moment, and/or back into a sense of physical and energetic stability. Even of safety, of sovereignty.	2	2	2		sept-october 2026	
+September Crystal Allies:	2	2	2		sept-october 2026	
+Black Tourmaline - grounding that protects Smoky Quartz - grounding that transforms Rhodonite - grounding with compassion Red Jasper - grounding like a grandmother you love Montana Agate - grounding that balances	2	2	2		sept-october 2026	
+jewelry & crystal reiki	2	2	2		sept-october 2026	
+September 19 11-2pm KiiN Westport, CT	2	2	2		sept-october 2026	
+IG Post - Naming the pattern	2	2	2		sept-october 2026	
+Caption i often see this in healing sessions: rest starts to feel unsafe long before anyone can explain why. not because they don't know how to rest. because somewhere along the way, being useful became the thing that kept them safe, loved, or connected — and the body never got the memo that it's allowed to stop. so even when the mind understands rest is allowed, the system still responds like usefulness is the price of belonging. swipe through for what that pattern can look like energetically — and what it takes to work with it, not just around it. 🤍 if this feels familiar, book a session with me at the link in my bio.	1	1	1		sept-october 2026	
+FINAL CAPTION: what if the issue isn’t that you don’t know how to relax, but that (deep down) resting makes you feel unsafe? I see this pattern often in healing sessions, especially when usefulness has become tied to safety, love, or belonging. swipe through for what that can look like energetically and if this feels familiar, book a session with me at the link in my bio. you can still be capable, ambitious, caring, and generous without feeling anxious every time you choose to take a break. 🤍 xx donnie	1	1	1		sept-october 2026	note
+caption - a blessing for the threshold.	1	1	1		sept-october 2026	
+The Mermaid collection supports self-trust through change and periods of integration. This necklace is for the moments when something is shifting: a new job, a move, the beginning or end of a relationship, or simply taking steps to do things differently.	1	1	1		sept-october 2026	note
+Consider this your invitation.	1	1	1		sept-october 2026	
+Go ahead and breathe life into it.	1	1	1		sept-october 2026	
+You’re arriving with everything you’ve learned.	1	1	1		sept-october 2026	
+You’re not starting over.	1	1	1		sept-october 2026	
+Welcome to the equinox ~ a threshold between seasons, where what’s been shifting quietly begins to take form. Here are a few words of encouragement for the in-between times.	1	1	1		sept-october 2026	
+[caption:] some words for your journey & questions for recognizing your YES: your desires, what’s aligned, what brings you joy. what did I want before I started asking everyone else? am I looking for clarity, or am I looking for permission? what am I trying to convince myself to want? if I trusted myself fully, what would I do next? what am I hoping someone will talk me out of (because i’m afraid to go there)? [link post to HLR home]	1	1	1		sept-october 2026	
+“I like who I am around this”	1	1	1		sept-october 2026	
+you’ll know it’s for you	1	1	1		sept-october 2026	
+when you feel yourself open	1	1	1		sept-october 2026	
+THE protection amulets	3	2	3		sept-october 2026	
+The Mermaid Necklace for New Beginnings carries the medicine of possibility	1	1	1		sept-october 2026	
+Rhodonite opens the heart to healing. Yellow Agate rekindles optimism and self-belief. Amazonite quiets the noise of fear so you can hear your own inner knowing again. Together, they remind you that your past doesn't have to define what comes next.	1	1	1		sept-october 2026	
+Courage-boosting Amazonite soothes the nervous system + opens the Heart and Throat, so you have the emotional depth to feel it and the voice to name it. Wear it as an invitation to surrender into what's truE and trust that the descent is where healing actually begins.	1	1	1		sept-october 2026	
+The Mermaid Bracelet carries the healing intelligence of water.	1	1	1		sept-october 2026	
+The Mermaid Necklace in Siren carries the most magnetic mermaid medicine of all: the siren song. Pure carnelian ignites creation energy, awakens the sacred feminine flame, and unlocks the force that lives at your core. Wear it to create, to call in what is yours, and to remember that your full magnetic power was never meant to be made comfortable for anyone.	1	1	1		sept-october 2026	
+Reel	1	1	1		sept-october 2026	
+caption what’s it like? this is probably the question I get most often about my shamanic healing sessions, so I wanted to pull back the curtain a little bit. the way clients describe it is: part conversation, part psychic reading, part coaching - mixed with crystals, drumming, and energy healing. it’s hard to describe exactly, but almost everyone has some version of the same responses: “I feel so much calmer” “that was not what I expected” “when can I do another” most clients don’t actually know what they’re looking for when they book. they just know something feels off, stuck, or ready to be cleared. you don’t need to have the answers or even an inkling of what’s going on. you just need an intention for the session. my job is to work with the helping spirits to see what’s ready to shift or come to light, and then do whatever is needed to facilitate that transformation. I offer private and small-group sessions virtually and in person in westport, ct. dm me to learn more 🤍 xx donnie	1	1	1		sept-october 2026	note
+tools to mark...beginning🌊🐚✨ the mermaid medicine collection is available now	1	1	1		sept-october 2026	
+Listen to your inner knowing	1	1	1		sept-october 2026	
+You can stop reopening what you already know	1	1	1		sept-october 2026	
+Sometimes asking again is a way of avoiding the answer.	1	1	1		sept-october 2026	
+Sometimes the next sign	1	1	1		sept-october 2026	
+is the one you already received	1	1	1		sept-october 2026	
+You may be waiting for a different answer, not a clearer one.	1	1	1		sept-october 2026	
+Your guides when you ask them the same thing for the millionth time and they’re already given you permission	1	1	1		sept-october 2026	
+WORDS FOR YOUR JOURNEY YOU ALREADY KNOW The emotional world: over-asking, looking for more signs, knowing but not being ready, waiting for an easier answer. Visuals: knowing looks raised eyebrows leaving the room text threads/group-chat memes tarot/sign memes road signs mirrors crossroads someone putting their phone down “girl…” energy Possible lines: You may be waiting for a different answer, not a clearer one. Clarity and readiness are not the same thing. Sometimes asking again is a way of avoiding the answer. The answer doesn’t become less true because it asks something of you. You can stop reopening what you already know. Sometimes the next sign is the one you already received.	1	1	1		sept-october 2026	
+9.17	1	1	1		sept-october 2026	
+Caption September is asking us to ground. Grounding isn't about the activity, it's about where you end up: back in your body, back in the present, back in a sense of safety. So many of us live from the neck up, thinking and thinking because it feels like control. But that's often what leaves us feeling swirly and untethered. A long shower. Cooking without your phone. Feet on the earth. If it brings you back, it counts. September Crystal Allies: Black Tourmaline ~ grounding that protects Smoky Quartz ~ grounding that transforms Rhodonite ~ grounding with compassion Red Jasper ~ grounding like a grandmother you love Montana Agate ~ grounding that balances	1	1	1		sept-october 2026	
+if I trusted myself, what would I do next?	1	1	1		sept-october 2026	
+what did I want before I started asking everyone else?	1	1	1		sept-october 2026	
+am I looking for clarity, or am I looking for permission?	1	1	1		sept-october 2026	
+what answer am I hoping someone will talk me out of?	1	1	1		sept-october 2026	
+questions for recognizing your ~ yes ~ what did I want before I started asking everyone else? am I looking for clarity, or am I looking for permission? what am I trying to convince myself to want? what answer am I hoping someone will talk me out of? if I trusted myself, what would I do next?	1	1	1		sept-october 2026	
