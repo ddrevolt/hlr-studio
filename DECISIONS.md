@@ -1,0 +1,14 @@
+# HLR decisions
+
+Newest first. Each line: the decision, its reason, what it replaced. Only Eddie ratifies a derived value.
+
+## 2026-10-17
+
+- Gate 1 (a): HLR's team will run the forge. Step 3 builds a single-brand bundle (the engine plus the HLR pack, a registry listing only `hlr`). Reason: Eddie's ruling. Replaced: the kickoff's open option of an Eddie-run multi-brand registration as the end state. Consequences: the bundle needs a brand-free engine release first (the installed 0.4.0 names other registered brands in all 10 skill descriptions and ships another brand's pack additions); the verifier's calibration marks eventually come from HLR's own reviewers.
+- Figma for Step 1: Eddie copies HLR-EMAIL and HLR-Social into his own Figma and the review reads the copies, dated as snapshots. Reason: the cloud connector refuses both client files (no edit access) and the desktop connector setting was not found. Replaced: reading the client's live files.
+- The brand home is a git repo. It tracks our work (record files, `brand-pack/`, `outputs/`, `.gitignore`) and ignores the client originals (brand book, fonts, marks, imagery, inventory sheet: about 5.8 GB, licensed or client-owned) and `_setup/` (Eddie's working instructions, which name other brands; the repo may be handed to HLR's team). Reason: Eddie's ruling; size, licensing and rule 9. Replaced: no version control.
+- Registry id `hlr`; aliases HLR, High Light Rituals, HighLight, highlight-brandbook; slot namespace `hlr`. Reason: kickoff brand block; the folder alias lets folder-path resolution work without renaming the brand home. Replaced: nothing (new brand).
+- The client's live Figma files (HLR-EMAIL `CTaCEg0sZt40DIq1zH6cqi`, HLR-Social `qpUX1PrWbYUgUMbyHIRmNY`) stay read-only until Gate 3. Reason: kickoff and project rule 5. Replaced: nothing.
+- Brand home layout: `brand-pack/` (the only source of HLR facts), `outputs/`, `PROGRESSION.md`, `DECISIONS.md`, `LEARNINGS.md`; client originals read-only. Reason: playbook section 1 (record files on day one) and the project instructions. Replaced: nothing.
+- No em dashes in any HLR copy or deliverable. Reason: standing project rule. Replaced: the brand book's own practice (its copy pages, p26 to p35, use em dashes throughout); flagged in the Brand Review so the client hears it from us.
+- The brand book is cited by PDF page number. Reason: its table of contents and section labels do not match its pages (Behaviors on p10 and p11 are labelled "IV. 4.4" and "4.7" inside section I; Taglines on p32 is labelled "VI"). Replaced: nothing.
