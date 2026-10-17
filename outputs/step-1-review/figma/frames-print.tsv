@@ -1,0 +1,6 @@
+# HLR Print page (2:35751) top-level children, from Highlight-Rituals-Design-Forge (LYyYXPDUHVoAABh865EvMI), one get_metadata call read 2026-10-17. Provenance: observed. In 2:35791 and 2:35799, 3 of the text layers sit outside the frame (copied leftovers, clipped). One text layer name carrying a publication name is not repeated here.
+section	id	name	type	w	h	texts	hidden
+(page)	2:35752	Poster	frame	3600	5400	3	
+(page)	2:35791	Poster	frame	1200	1800	6	
+(page)	2:35799	Poster	frame	1800	1200	8	
+(page)	2:35808	Poster	frame	3600	5400	3	
