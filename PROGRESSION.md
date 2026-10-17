@@ -15,7 +15,7 @@ Each chat opens with this file, then the latest DECISIONS.md and LEARNINGS.md en
 - [x] Inventory sheet and its links (2026-10-17)
 - [ ] Live Figma: current templates counted by type, copy corpus from text layer names (playbook section 6), live formats and sizes. Blocked: no edit access on HLR-EMAIL or HLR-Social
 - [ ] One-page Brand Review in `outputs/step-1-review/` (v1 on 2026-10-17 without the Figma sections)
-- [ ] **Gate 1**: Eddie answers the ranked questions and rules on (a) who runs the forge, (b) organic social coverage, (c) where the library lives
+- [ ] **Gate 1**: Eddie answers the ranked questions and rules on (a) who runs the forge (decided 2026-10-17: HLR's team, single-brand bundle), (b) organic social coverage, (c) where the library lives
 
 ## Step 2. Pack v0
 

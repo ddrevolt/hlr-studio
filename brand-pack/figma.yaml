@@ -1,0 +1,34 @@
+# HLR Figma state. Read before any Figma call; write every id here the moment it is created.
+# 2026-10-17, Step 1: nothing built. file_key stays null until Gate 3 confirms the file.
+slots:
+  namespace: hlr
+  key: slot                  # setSharedPluginData('hlr', 'slot', '<prefix>##.role')
+  prefixes: null             # set at Gate 4
+figma:
+  file_key: null             # Gate 1 (c) default: LYyYXPDUHVoAABh865EvMI (Highlight-Rituals-Design-Forge, Eddie's file); confirmed at Gate 3
+  file_name: null
+  pages: null
+  breakpoints: null
+fonts:
+  licensed: false            # raised until every production face is confirmed. Evidence, 2026-10-17:
+                             #   Instrument Serif: SIL OFL 1.1 (LICENSE in instrument-serif.zip): cleared
+                             #   Homemade Apple: Apache 2.0 (LICENSE in homemade-apple.zip): cleared
+                             #   Saol Display, Saol Standard: no license file
+                             #   Trade Gothic LT Std (desktop): no license file
+                             #   Trade Gothic LT W01 (web kit): Monotype Webfonts Pay-As-You-Go EULA, websites only
+                             #   GT Walsheim Pro Bold, Cannu Regular: no license file; role unknown
+lengths:
+  min_flex_multiple: 2       # engine default (probe every body slot at 2x)
+variable_ids: {}
+variables:
+  css_prefix: null
+  extensions_namespace: null
+  collections:
+    primitives: null
+    semantic: null
+    layout: null
+# Client files, read-only (rule 5); never written:
+#   HLR-EMAIL   CTaCEg0sZt40DIq1zH6cqi   full 4603:2; current templates 4998:1769
+#   HLR-Social  qpUX1PrWbYUgUMbyHIRmNY   full and main grid 8565:3704; templates 8024:2946
+#   2026-10-17: the connector refuses both (no edit access). Eddie is copying them into his Figma.
+#   Copies (snapshots, read-only): HLR-EMAIL {{copy-file-key}}, HLR-Social {{copy-file-key}}
