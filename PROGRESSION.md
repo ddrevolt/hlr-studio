@@ -27,7 +27,7 @@ Every page of the reference file `LYyYXPDUHVoAABh865EvMI`, read against the bran
 
 ## Step 2. Pack v0
 
-Built per the engine's `references/pack-contract.md` (by default the HLR bundle's, `hlr-studio-engine` 0.5.0): `brand-context.md` with its File map (null for roles HLR lacks); the voice contract (principles with operational definitions and sounds-like and not-like lines, never a mannerism spec); a claims ledger seed; the product database (no figure without a source); a taxonomy for email, organic social, paid and web marked draft-for-ratification; `tokens.json` (DTCG; primitives, semantic, component, layout; kebab names; a neutral ramp; a provenance tag on every token); the contrast law with its certified pairs; `figma.yaml` (namespace `hlr`, file_key null); `logo-assets.md`; `art-direction.md`; `asset-types.md`; for paid and web, `slotmap_paid`, the `section_library`, 9:16 safe zones and display floors (Gate 1 scope).
+Built per the engine's `references/pack-contract.md` (the HLR bundle's, `hlr-studio-engine` 0.5.0; confirmed by Eddie 2026-10-17): `brand-context.md` with its File map (null for roles HLR lacks); the voice contract (principles with operational definitions and sounds-like and not-like lines, never a mannerism spec); a claims ledger seed; the product database (no figure without a source); a taxonomy for email, organic social, paid and web marked draft-for-ratification; `tokens.json` (DTCG; primitives, semantic, component, layout; kebab names; a neutral ramp; a provenance tag on every token); the contrast law with its certified pairs; `figma.yaml` (namespace `hlr`, file_key null); `logo-assets.md`; `art-direction.md`; `asset-types.md`; for paid and web, `slotmap_paid`, the `section_library`, 9:16 safe zones and display floors (Gate 1 scope).
 
 - [ ] Corpus re-cut to visible text first (Gate 1, call 8)
 
@@ -40,7 +40,7 @@ Built per the engine's `references/pack-contract.md` (by default the HLR bundle'
 
 - [x] Confirm which of the two 0.4.0 bundles is canonical: the installed copy (2026-10-17, `outputs/step-3-bundle/bundle-report.md`)
 - [x] Brand-free engine release studio-engine 0.5.0, then the single-brand bundle `hlr-studio-engine` 0.5.0: registry lists only `hlr`, pack referenced live, every skill description under 1024 characters, census 0, 576 tests pass (2026-10-17; ran ahead of Step 2, so every skill stops at the missing `brand-context.md` until Pack v0)
-- [x] Hand Eddie the `.plugin` to install: `outputs/step-3-bundle/hlr-studio-engine-0.5.0.plugin` (2026-10-17; install pending)
+- [x] Hand Eddie the `.plugin` to install: `outputs/step-3-bundle/hlr-studio-engine-0.5.0.plugin` (2026-10-17; installed: it syncs to sessions as `hlr-studio-engine` 0.5.0, registry `hlr` only)
 - [ ] 0.5.1: carousel recipe, organic caption route and story-set recipes (Gate 1 b, ruled 2026-10-17); the engine gaps in the Gate 3 proposal; rebuild with HLR's own pack path at handoff
 
 ## Step 4. Figma
