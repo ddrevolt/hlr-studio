@@ -5,7 +5,7 @@ slots:
   key: slot                  # setSharedPluginData('hlr', 'slot', '<prefix>##.role')
   prefixes: null             # set at Gate 4
 figma:
-  file_key: null             # Gate 1 (c) default: LYyYXPDUHVoAABh865EvMI (Highlight-Rituals-Design-Forge, Eddie's file); confirmed at Gate 3
+  file_key: null             # Gate 1 (c), 2026-10-17: library file Gq3yUbLs6MCRM0nOhjvnIW (Highlight-Rituals-Design-Forge, clean); written here at Gate 3
   file_name: null
   pages: null
   breakpoints: null

@@ -4,7 +4,7 @@ High Light Rituals (HLR), a client brand. Phase 1: 4 weeks from Fri 2026-10-16. 
 Method: `_setup/brand-forge-playbook.md`. Rules: `_setup/hlr-project-instructions.md`. Kickoff: `_setup/hlr-kickoff-prompt.md`.
 Registry id `hlr`; aliases HLR, High Light Rituals, HighLight, highlight-brandbook. Slot namespace `hlr`.
 
-Each chat opens with this file, then the latest DECISIONS.md and LEARNINGS.md entries. Each chat closes with those files current, `brand-pack/figma.yaml` and `brand-pack/slotmap.yaml` updated, outputs in `outputs/`, and a five-line status: done, waiting on Eddie, next. A fresh chat at each gate.
+Next-chat prompts: `_setup/next-chat-prompts.md`. Each chat opens with this file, then the latest DECISIONS.md and LEARNINGS.md entries. Each chat closes with those files current, `brand-pack/figma.yaml` and `brand-pack/slotmap.yaml` updated, outputs in `outputs/`, and a five-line status: done, waiting on Eddie, next. A fresh chat at each gate.
 
 ## Step 1. Review (read-only)
 
@@ -16,7 +16,13 @@ Each chat opens with this file, then the latest DECISIONS.md and LEARNINGS.md en
 - [x] Live site: catalog snapshot, observed tokens, claims scan (2026-10-17, `outputs/step-1-review/site/`)
 - [x] Live Figma, read from Eddie's copy in Highlight-Rituals-Design-Forge: frames counted by type and size, copy corpus from text layer names (playbook section 6), fonts and fills (2026-10-17, `outputs/step-1-review/figma/`)
 - [x] Brand Review v2 in `outputs/step-1-review/` (2026-10-17; supersedes v1)
-- [ ] **Gate 1**: Eddie answers the ranked questions and rules on (a) who runs the forge (decided 2026-10-17: HLR's team, single-brand bundle), (b) organic social coverage, (c) where the library lives
+- [ ] **Gate 1**: Eddie answers the ranked questions and rules on (a) who runs the forge (decided 2026-10-17: HLR's team, single-brand bundle), (b) organic social coverage, (c) where the library lives (decided 2026-10-17: `Gq3yUbLs6MCRM0nOhjvnIW`)
+
+## Step 1b. Pattern review (read-only)
+
+Every page of the reference file `LYyYXPDUHVoAABh865EvMI`, read against the brand book: patterns per channel, cross-channel equivalents, channel requirements, a draft system skeleton, outliers to retire. Deliverable: `outputs/step-1-review/pattern-review.md`. Gate 1 closes after it.
+
+- [ ] Pattern review delivered
 
 ## Step 2. Pack v0
 
