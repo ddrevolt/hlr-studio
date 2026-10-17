@@ -8,7 +8,7 @@ Read: the brand book `061022_HighLight_BrandBook_DS.pdf` (54 slides at 1920x1080
 
 | Area | Documented (book, 2022) | Observed (client files, 2023 to 2025) | Flag |
 |---|---|---|---|
-| Name | HIGH LIGHT, set in caps inside sentences (p6, p13) | HIGH LIGHT RITUALS wordmark and HLR monogram; IG post 2023-08-17: "High Light Rituals is proudly mother led, black owned and family rooted" | C1 |
+| Name | HIGH LIGHT, set in caps inside sentences (p14, p19, p26); High Light on p6 | HIGH LIGHT RITUALS wordmark and HLR monogram; IG post 2023-08-17: "High Light Rituals is proudly mother led, black owned and family rooted" | C1 |
 | Logotype | HIGH LIGHT, custom serif, three spacing cuts by size (p13) | HIGH LIGHT RITUALS horizontal (SVG in black, forest and white; `logo.pdf`), two-line (SVG, black), three-line with star (PNG only) | C1 |
 | Mark | Scallop shell: alone, H shell L, or H over shell over L; beside the logotype, the shell only (p14) | Shell with inner star, HLR with star, 8-point star, crest reading HIGH LIGHT RITUALS (PNG only, in black, forest and white); HLR without star (SVG); the 2022 HIGH LIGHT crest, HL monogram and star families sit in Archive (SVG, AI, EPS) | C2 |
 | Lockup | Shell, logotype, then SANCTUARIES OF SELF AND SPACE in tracked Trade Gothic caps (p15) | No current lockup file | C5 |
