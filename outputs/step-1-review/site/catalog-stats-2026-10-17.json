@@ -1,0 +1,45 @@
+{
+ "products": 182,
+ "variants": 650,
+ "variants_with_sku": 549,
+ "products_without_any_sku": 20,
+ "price_min": 5.0,
+ "price_max": 2300.0,
+ "types": {
+  "Necklace": 65,
+  "Bracelet": 94,
+  "Anklet": 1,
+  "Waist Beads": 1,
+  "-": 2,
+  "Not for Collections": 3,
+  "Crystals": 3,
+  "Chain": 1,
+  "Ritual Kit": 12
+ },
+ "made_to_order": 74,
+ "unavailable": 13,
+ "services": [
+  "Initiation Session & Anchor Charm ($200)",
+  "Shamanic Healing Session — 60 Minutes ($200)",
+  "Custom Soul Spell Bracelet And Energy Reading ($405)",
+  "Custom Seeds Bracelet And Energy Reading ($250)",
+  "Crystal Reiki Session with Donnie - 45 minutes ($150)",
+  "Personal Intuitive Message Add-On ($33)"
+ ],
+ "type_mismatch": [
+  "The Seeds of Abundance Necklace — Citrine [Bracelet]",
+  "The Word Witch Bracelet [Necklace]"
+ ],
+ "handle_title_mismatch": [
+  "the-seeds-of-abundance-bracelet-citrine-copy -> The Seeds of Communion Bracelet — Angelite",
+  "the-seeds-of-x-bracelet-white-fossil-jasper -> The Seeds of Belonging Bracelet — White Fossil Jasper",
+  "the-january-birthstone-aura-pendant-garnet -> The January Birthstone Nova Pendant — Garnet",
+  "in-person-reiki-healing-with-donnie-90-minutes -> Crystal Reiki Session with Donnie - 45 minutes",
+  "energy-healing-session-with-donnie-90-minutes -> Shamanic Healing Intensive — 2 hours",
+  "energy-healing-session-with-donnie -> Personal Intuitive Message Add-On"
+ ],
+ "titles_with_em_dash": 68,
+ "titles_with_en_dash": 11,
+ "published_min": "2023-05-01",
+ "published_max": "2026-09-10"
+}

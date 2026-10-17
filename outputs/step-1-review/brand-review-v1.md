@@ -2,7 +2,7 @@
 
 Step 1, read-only. 2026-10-17. For Gate 1 and Review 1.
 
-Read: the brand book `061022_HighLight_BrandBook_DS.pdf` (54 slides at 1920x1080, InDesign, 2022-06-11; cited by PDF page as pN), `High Light Rituals Fonts/`, `HLR Logo & Marks/`, `HLR Content/` and `HLR Creative AI System.xlsx`. Not yet read: the live Figma files HLR-EMAIL and HLR-Social, because the connector refuses view-only files. Eddie is copying both into his own Figma; v2 adds the live-work rows, the template counts and the copy corpus.
+Read: the brand book `061022_HighLight_BrandBook_DS.pdf` (54 slides at 1920x1080, InDesign, 2022-06-11; cited by PDF page as pN), `High Light Rituals Fonts/`, `HLR Logo & Marks/`, `HLR Content/`, `HLR Creative AI System.xlsx`, and the live site highlightrituals.com (homepage, one product page and the public catalog feed, in `site/`). Not yet read: the live Figma files HLR-EMAIL and HLR-Social, because the connector refuses view-only files. Eddie is copying both into his own Figma; v2 adds the live-work rows, the template counts and the copy corpus.
 
 ## 1. Documented vs observed
 
@@ -30,14 +30,18 @@ Read: the brand book `061022_HighLight_BrandBook_DS.pdf` (54 slides at 1920x1080
 - **C5 Tagline.** "Timeless jewelry for self and space" (p32) against "Sanctuaries of self and space" (p15, p51 to p53). Decide the current line and where each one lives.
 - **C6 Em dashes.** The book's copy uses them throughout; our house rule removes them from everything we make. The client should hear this from us.
 - **C7 Book against live templates.** Unknown until the copies are readable.
+- **C8 Positioning.** The book sells "Timeless jewelry for self and space" and says "We are not creating a new-age practice" (p8, p32). The site sells shamanic energy healing, "energy medicine" and healer-activated jewelry, and lists healing sessions as products. Decide which governs voice and claims.
+- **C9 Ink and ground.** The book's primary pair is Onyx on Alabaster; the site runs Forest #17280A on #F7F4EE and never uses Onyx. One ruling covers this and C3.
+- **C10 CTA.** The book's block CTA is tracked Trade Gothic caps in an outline box; the site's buttons are square with Saol labels (filled Forest, or a black outline).
+- **C11 Free shipping.** $50+ in the announcement bar, $100 in the cart drawer.
 
 ## 3. Licensing
 
 | Face or asset | On disk | Evidence | State |
 |---|---|---|---|
-| Saol Display (Light, Light Italic, Regular, Regular Italic) and Saol Standard (Regular, Italic, Medium), Schick Toikka | Desktop OTF; web kits (WOFF, WOFF2, EOT) | No license file | Unconfirmed: flagged on every deliverable |
+| Saol Display (Light, Light Italic, Regular, Regular Italic) and Saol Standard (Regular, Italic, Medium), Schick Toikka | Desktop OTF; Saol Display web kits (WOFF, WOFF2, EOT) | No license file. The site self-hosts Saol Display and Saol Standard web files; no Saol Standard web kit is on disk | Unconfirmed: flagged on every deliverable |
 | Trade Gothic LT Std (Regular, Bold, Light, Oblique, Light Oblique) | Desktop OTF | No license file | Unconfirmed |
-| Trade Gothic LT W01 Roman and Bold, Monotype | Web kit (projects 5730909, 5730917) | Webfonts Pay-As-You-Go EULA: sites the licensee owns or controls, @font-face only, tracking code kept, 250,000 page views unless the invoice says otherwise. No email cover found | Web only; invoice not seen |
+| Trade Gothic LT W01 Roman and Bold, Monotype | Web kit (projects 5730909, 5730917) | Webfonts Pay-As-You-Go EULA: sites the licensee owns or controls, @font-face only, tracking code kept, 250,000 page views unless the invoice says otherwise. No email cover found | Web only; invoice not seen; no Monotype page-view tracking request on the homepage |
 | Instrument Serif (Regular, Italic) | Zip: TTF, WOFF, WOFF2 | SIL OFL 1.1 in the zip | Cleared |
 | Homemade Apple | Zip: TTF, WOFF, WOFF2 | Apache 2.0 in the zip | Cleared |
 | GT Walsheim Pro Bold (Grilli Type), Cannu Regular (DYSA Studio) | Desktop OTF | No license file | Unconfirmed; role unknown |
@@ -54,21 +58,23 @@ No marking anywhere. The book's text layer carries no confidential, proprietary,
 | Email | Live | Book mockups at mobile width; live sizes pending | p51 to p53; sheet rows 4.0, 7.0 |
 | Organic social (Instagram) | Live | 9x16 and 8x10 video; feed, story and grid formats pending | `HLR Video`, `HLR IG Archives`; sheet rows 5.0, 6.0 |
 | Paid social | Unconfirmed | Book: 9:16 Instagram ads with motion notes | p48 to p50 |
-| Web | Unconfirmed | Book: homepage; categories Embody, Adorn, Receive | p36, p46, p47 |
+| Web | Live (Shopify); Phase 1 scope unconfirmed | Custom theme (Nov 2025 release); Klaviyo forms; Judge.me reviews; 182 products | `site/`; book p36, p46, p47 |
 | Print and packaging | In the book, outside Phase 1 | Carton, envelope, ritual box, postcard, poster | p40 to p45 |
 
 ## 6. Questions, ranked by production-blocking risk
 
 1. **Figma copies** of HLR-EMAIL and HLR-Social. Blocks the corpus, the template counts, live formats and every Figma step. Owner: Eddie (in progress).
-2. **Saol and Trade Gothic licenses**, desktop and web, and whether email use is covered. Blocks text styles on uploaded OTFs (Step 4) and any shipped asset. Owner: HLR.
-3. **Current name and mark roster**, with vector masters for the PNG-only marks (three-line stack with star, HLR with star, shell with star, star, crest). Blocks `logo-assets.md` and the mark components. Owner: HLR.
-4. **Who signs claims.** Blocks the claims ledger and any product copy. The book's own examples carry metaphysical, health and sourcing claims: "ward off negativity, lift your mood" (p37), "amplifier and cleanser of energy" (p45), "Fertility Ritual Kit" (p49), "ethically-sourced" (p51), "responsibly-made" (p45), "18k gold talisman is handmade by an artist in Rome" (p34). Owner: HLR.
-5. **Product source of truth**: the current catalog with names, materials and prices. The book's products date from 2022 (Smoky Quartz Pendant, Crystal Ball, Calcite, the ritual kits) and the posts add the Spell Bracelet. Blocks the product database. Owner: HLR.
+2. **Positioning and claims (C8).** Which positioning governs copy, and who signs claims. The book's examples (p34, p37, p45, p49, p51) and the site's descriptions carry health-adjacent lines ("soothes anxiety", "calm the nervous system"), set the work against talk therapy, and make sourcing and origin claims (recycled gold, "ethically-sourced", "untreated", Westport, CT, "Made in America"). The site footer's disclaimer is the only required language found (`site/claims-scan-2026-10-17.md`). Blocks the voice contract, the claims ledger and any copy. Owner: HLR.
+3. **Saol and Trade Gothic licenses**: desktop, web (including the Saol Standard files the site self-hosts) and email, plus the Monotype tracking code. Blocks text styles on uploaded OTFs (Step 4) and any shipped asset. Owner: HLR.
+4. **Current name and mark roster**, with vector masters for the PNG-only marks (three-line stack with star, HLR with star, shell with star, star, crest). Blocks `logo-assets.md` and the mark components. Owner: HLR.
+5. **A Shopify products export (CSV)** to key the database by SKU: 101 of 650 variants have no SKU in the public feed, and the feed carries type, handle and tag defects (`site/site-observed-2026-10-17.md`). Blocks the product database. Owner: HLR.
 6. **Image rights per folder**: owned shoot, licensed stock (Vault Stock terms, including its AI-generated sets) or reference only. Blocks real imagery. Owner: HLR.
-7. **Black (C3) and tagline (C5).** Owner: HLR, ratified by Eddie.
-8. **Roles for the extra faces (C4).** Owner: HLR.
-9. **Paid and web**: in Phase 1 scope or not. Owner: Eddie.
-10. **Live review dates.** Owner: Eddie.
+7. **Ink, ground and black (C3, C9)** and the **tagline (C5)**. Owner: HLR, ratified by Eddie.
+8. **Free shipping threshold (C11).** Until it lands, offers stay merge tokens. Owner: HLR.
+9. **Product names in our copy**: a dash-free rendering, for example "The Seeds of Protection Bracelet in Black Tourmaline". Owner: Eddie.
+10. **Roles for the extra faces (C4).** Owner: HLR.
+11. **Paid and web**: in Phase 1 scope or not. Owner: Eddie.
+12. **Live review dates.** Owner: Eddie.
 
 ## 7. Gate 1 calls
 
