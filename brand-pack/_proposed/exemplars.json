@@ -1,0 +1,2614 @@
+{
+ "_role": "exemplars",
+ "_status": "proposed: candidates for Eddie (Gate 2); nothing reads this file until he approves it and lane E points the exemplars role at it",
+ "_note": "HLR's exemplar candidates, Pack v0 lane C, 2026-10-18. Every line is verbatim visible text from HLR's reference Figma file LYyYXPDUHVoAABh865EvMI, walked by lane A (outputs/step-2-pack/corpus/, method.md): [observed]. Role, type and voice tags are [derived] by lane C: role from the face, size and frame (email at the 600-wide scale, social and paid on 1080 canvases, paid on_image as the largest line in its frame), type from the frame name against type-registry-core.json v0.2.0 for email and social (null where no frame says), the engine's bundled ad type for paid (text_forward, with HLR's held type kept in source, because paid runs on the bundled roster until Review 2), null for web, voice as the quality the line leads with (voice-contract.md). Every line passed: no ledger row of any status, no prohibited pattern, no em or en dash, no figure, no placeholder, note or planning layer (captions excepted, with the leading label removed), no boilerplate, no product or stone name alone, no customer or press quote (Brand Review v2 question 7), and lane C's read for claims the triggers miss and for healing, witch or spell positioning (C2, C7). The writer imitates cadence and never wording, figures or claims (exemplar_pick.js says so on every pick).",
+ "built": "2026-10-18",
+ "built_by": "lane C (Pack v0, words side)",
+ "channels": {
+  "email": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+  "social": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+  "paid": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+  "web": "outputs/step-2-pack/corpus/corpus-visible-web.tsv"
+ },
+ "gaps": [
+  {
+   "gap": "web: 8 lines only. The Website page is mostly navigation, filters and labels (184 distinct visible strings); no clean description or card copy (the one PDP description carries a ledger row). Web types stay null: the section library is held for Review 2 (DECISIONS 2026-10-18, Gate 2 call 1 b)",
+   "owner": "HLR (live site copy) and Review 2"
+  },
+  {
+   "gap": "email subject and preheader: the Figma corpus carries none",
+   "owner": "HLR (ESP export) or Eddie"
+  },
+  {
+   "gap": "paid primary_text, headline and description: the platform fields are not in the Figma file",
+   "owner": "HLR (Meta and Google ad exports)"
+  },
+  {
+   "gap": "social captions: 3 lines; where captions live is an HLR question (Review 1)",
+   "owner": "HLR"
+  },
+  {
+   "gap": "social cta: 2 lines (thin)",
+   "owner": "lane C at the next corpus pass"
+  }
+ ],
+ "exemplars": [
+  {
+   "id": "hlr-email-headline-01",
+   "text": "Seek the sublime",
+   "channel": "email",
+   "role": "headline",
+   "type": "moodboard",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:913",
+    "text_id": "2:949",
+    "frame_name": "Inspiration Moodboard",
+    "section": "modular blocks",
+    "occurrences": 19
+   }
+  },
+  {
+   "id": "hlr-email-headline-02",
+   "text": "It’s calling you...",
+   "channel": "email",
+   "role": "headline",
+   "type": "cart_abandon",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:189904",
+    "text_id": "2:189923",
+    "frame_name": "Cart 1 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-03",
+   "text": "Plant seeds of intention",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:8599",
+    "text_id": "2:8627",
+    "frame_name": "Editorial- RESIZED",
+    "section": "welcome 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-headline-04",
+   "text": "Invoke the magic of fire, flow of water, stability of earth, power of spirit and movement of wind.",
+   "channel": "email",
+   "role": "headline",
+   "type": "product_spotlight",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:563",
+    "text_id": "2:591",
+    "frame_name": "Product Spotlight with Feature Deep Dive",
+    "section": "modular blocks",
+    "occurrences": 16
+   }
+  },
+  {
+   "id": "hlr-email-headline-05",
+   "text": "The Year of the Horse",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:481",
+    "text_id": "2:506",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-06",
+   "text": "Did you connect with this?",
+   "channel": "email",
+   "role": "headline",
+   "type": "browse_abandon",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:189609",
+    "text_id": "2:189610",
+    "frame_name": "Browse 1 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-07",
+   "text": "If you feel overwhelmed and drained",
+   "channel": "email",
+   "role": "headline",
+   "type": "welcome",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:8838",
+    "text_id": "2:8883",
+    "frame_name": "Email 1",
+    "section": "welcome 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-headline-08",
+   "text": "Grand Gestures",
+   "channel": "email",
+   "role": "headline",
+   "type": "offer_launch",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1894",
+    "text_id": "2:1909",
+    "frame_name": "Ref: Black Friday 24",
+    "section": "campaigns 2025",
+    "occurrences": 9
+   }
+  },
+  {
+   "id": "hlr-email-headline-09",
+   "text": "Changes causing uncertainty",
+   "channel": "email",
+   "role": "headline",
+   "type": "the_edit",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1330",
+    "text_id": "2:1336",
+    "frame_name": "TheEdit",
+    "section": "modular blocks",
+    "occurrences": 14
+   }
+  },
+  {
+   "id": "hlr-email-headline-10",
+   "text": "The Gift of Good Vibes",
+   "channel": "email",
+   "role": "headline",
+   "type": "welcome",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:2320",
+    "text_id": "2:2401",
+    "frame_name": "Welcome Email 8",
+    "section": "holiday 2025",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-11",
+   "text": "From our altar",
+   "channel": "email",
+   "role": "headline",
+   "type": "the_edit",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1588",
+    "text_id": "2:1591",
+    "frame_name": "TheEdit",
+    "section": "final resized email templates",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-12",
+   "text": "Each path below is a way back to you",
+   "channel": "email",
+   "role": "headline",
+   "type": "welcome",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:8838",
+    "text_id": "2:8879",
+    "frame_name": "Email 1",
+    "section": "welcome 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-headline-13",
+   "text": "One of One",
+   "channel": "email",
+   "role": "headline",
+   "type": "offer_launch",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1894",
+    "text_id": "2:1917",
+    "frame_name": "Ref: Black Friday 24",
+    "section": "campaigns 2025",
+    "occurrences": 8
+   }
+  },
+  {
+   "id": "hlr-email-headline-14",
+   "text": "Stay Grounded",
+   "channel": "email",
+   "role": "headline",
+   "type": "the_edit",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1155",
+    "text_id": "2:1226",
+    "frame_name": "Our picks for fall",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-headline-15",
+   "text": "May we suggest...",
+   "channel": "email",
+   "role": "headline",
+   "type": "checkout_abandon",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190240",
+    "text_id": "2:190259",
+    "frame_name": "Checkout 1 White 3",
+    "section": "cart checkout browse flows",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-16",
+   "text": "Find your flow",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:251",
+    "text_id": "2:347",
+    "frame_name": "Editorial- RESIZED",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-headline-17",
+   "text": "Little Luxuries",
+   "channel": "email",
+   "role": "headline",
+   "type": "offer_launch",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1894",
+    "text_id": "2:1928",
+    "frame_name": "Ref: Black Friday 24",
+    "section": "campaigns 2025",
+    "occurrences": 7
+   }
+  },
+  {
+   "id": "hlr-email-headline-18",
+   "text": "Let’s go deeper",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:251",
+    "text_id": "2:377",
+    "frame_name": "Editorial- RESIZED",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-headline-19",
+   "text": "From Mother to Mother",
+   "channel": "email",
+   "role": "headline",
+   "type": "checkout_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191433",
+    "text_id": "2:191492",
+    "frame_name": "Abandon Checkout V2 - Genesis",
+    "section": "cart checkout browse flows",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-20",
+   "text": "Jewelry to hold your intentions",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:8599",
+    "text_id": "2:8622",
+    "frame_name": "Editorial- RESIZED",
+    "section": "welcome 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-headline-21",
+   "text": "Release & Renew",
+   "channel": "email",
+   "role": "headline",
+   "type": "the_edit",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1155",
+    "text_id": "2:1205",
+    "frame_name": "Our picks for fall",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-headline-22",
+   "text": "Let Mom choose",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:29509",
+    "text_id": "2:29567",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-23",
+   "text": "Prepare to bloom from within",
+   "channel": "email",
+   "role": "headline",
+   "type": "checkout_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190629",
+    "text_id": "2:190668",
+    "frame_name": "Abandon Checkout V1- Garden Pendant",
+    "section": "cart checkout browse flows",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-24",
+   "text": "Welcome to your sanctuary",
+   "channel": "email",
+   "role": "headline",
+   "type": "product_listing",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:683",
+    "text_id": "2:748",
+    "frame_name": "Product Listing in Grids",
+    "section": "modular blocks",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-email-headline-25",
+   "text": "Ground your body",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:251",
+    "text_id": "2:298",
+    "frame_name": "Editorial- RESIZED",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-headline-26",
+   "text": "Your tools for transformation",
+   "channel": "email",
+   "role": "headline",
+   "type": "cart_abandon",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190399",
+    "text_id": "2:190418",
+    "frame_name": "Cart 2 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-27",
+   "text": "The Mercury Retrograde Edit",
+   "channel": "email",
+   "role": "headline",
+   "type": "the_edit",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1330",
+    "text_id": "2:1332",
+    "frame_name": "TheEdit",
+    "section": "modular blocks",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-headline-28",
+   "text": "A talisman for your journey",
+   "channel": "email",
+   "role": "headline",
+   "type": null,
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:193004",
+    "text_id": "2:193025",
+    "frame_name": "Email 3",
+    "section": "modular blocks",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-29",
+   "text": "What brings you back?",
+   "channel": "email",
+   "role": "headline",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:31002",
+    "text_id": "2:31055",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-headline-30",
+   "text": "No worries",
+   "channel": "email",
+   "role": "headline",
+   "type": "checkout_abandon",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191052",
+    "text_id": "2:191075",
+    "frame_name": "Abandon Checkout V2 - Garden",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-headline-31",
+   "text": "Made for the Mothers",
+   "channel": "email",
+   "role": "headline",
+   "type": "checkout_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:4528",
+    "text_id": "2:4536",
+    "frame_name": "Parents Day",
+    "section": "campaigns 2025",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-subhead-01",
+   "text": "For remembering your strength and gifts. Wear and repeat: What I carry is needed",
+   "channel": "email",
+   "role": "subhead",
+   "type": "editorial_letter",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:30849",
+    "text_id": "2:30893",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-subhead-02",
+   "text": "Adorn yourself",
+   "channel": "email",
+   "role": "subhead",
+   "type": "editorial_letter",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:194186",
+    "text_id": "2:194227",
+    "frame_name": "HL_LONGEMAIL-1",
+    "section": "modular blocks",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-subhead-03",
+   "text": "Adorn your space",
+   "channel": "email",
+   "role": "subhead",
+   "type": "editorial_letter",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:194186",
+    "text_id": "2:194231",
+    "frame_name": "HL_LONGEMAIL-1",
+    "section": "modular blocks",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-subhead-04",
+   "text": "To represent pleasure, bounty, and beauty.",
+   "channel": "email",
+   "role": "subhead",
+   "type": "cart_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190841",
+    "text_id": "2:190848",
+    "frame_name": "Abandon Cart- Sacred",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-subhead-05",
+   "text": "To represent ascension & connection to the Divine.",
+   "channel": "email",
+   "role": "subhead",
+   "type": "cart_abandon",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190950",
+    "text_id": "2:190977",
+    "frame_name": "Abandon Cart - Spirit",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-subhead-06",
+   "text": "For strength, resilience, and grace under pressure.",
+   "channel": "email",
+   "role": "subhead",
+   "type": "cart_abandon",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190841",
+    "text_id": "2:190854",
+    "frame_name": "Abandon Cart- Sacred",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-01",
+   "text": "We noticed you were considering this. We saved it for you in case you needed to take a second look.",
+   "channel": "email",
+   "role": "body",
+   "type": "browse_abandon",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:189609",
+    "text_id": "2:189615",
+    "frame_name": "Browse 1 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-body-02",
+   "text": "When you’re not sure what she needs most, this is the most thoughtful place to start.",
+   "channel": "email",
+   "role": "body",
+   "type": "welcome",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:29260",
+    "text_id": "2:29295",
+    "frame_name": "Welcome Email 16",
+    "section": "campaign 2026",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-body-03",
+   "text": "The rosette charm on this Black Tourmaline necklace is an ancient symbol of blessing and protection.",
+   "channel": "email",
+   "role": "body",
+   "type": "the_edit",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1155",
+    "text_id": "2:1231",
+    "frame_name": "Our picks for fall",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-body-04",
+   "text": "The pieces in your cart were made to support the changes you want to invite into your life. Use them in your daily rituals and welcome new beginnings.",
+   "channel": "email",
+   "role": "body",
+   "type": "cart_abandon",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190399",
+    "text_id": "2:190419",
+    "frame_name": "Cart 2 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-body-05",
+   "text": "Barely-there silk layering bracelets mean you can finally embrace your spirituality in a way that complements your personal style.",
+   "channel": "email",
+   "role": "body",
+   "type": "welcome",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:194315",
+    "text_id": "2:194356",
+    "frame_name": "WelcomeSeries_2",
+    "section": "modular blocks",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-06",
+   "text": "For self-connection, support, and returning care to herself after giving so much.",
+   "channel": "email",
+   "role": "body",
+   "type": "editorial_letter",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:29509",
+    "text_id": "2:29554",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-body-07",
+   "text": "All that is for you will come to you.",
+   "channel": "email",
+   "role": "body",
+   "type": "cart_abandon",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191019",
+    "text_id": "2:191022",
+    "frame_name": "Abandon Cart - Abundance",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-08",
+   "text": "The Ritualist is a place for seekers, for those wishing to bring more ritual into their lives, and for magic makers looking for a place to dig deeper, explore, learn, educate, and create with no judgment. The Ritualist is a journal and a blog, but more than that, it is a home and a sacred space for spells, guidance, musings, and an everyday reminder that magic is everywhere. You just need to look for it.",
+   "channel": "email",
+   "role": "body",
+   "type": "the_edit",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:193107",
+    "text_id": "2:193130",
+    "frame_name": "TheEdit",
+    "section": "modular blocks",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-09",
+   "text": "Perfect if you: You feel drawn to a specific symbol, stone, or material. You’re called to adornment that’s both beautiful and intentional. You’re seeking energy, meaning, or support that you can carry with you.",
+   "channel": "email",
+   "role": "body",
+   "type": "welcome",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:2956",
+    "text_id": "2:3071",
+    "frame_name": "Welcome Email 3",
+    "section": "holiday 2025",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-10",
+   "text": "Need that special something? We can customize any of our pieces with the metals, crystals, and intentions you desire.",
+   "channel": "email",
+   "role": "body",
+   "type": "product_launch",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:5169",
+    "text_id": "2:5197",
+    "frame_name": "Sterling Silver Launch",
+    "section": "campaigns 2025",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-body-11",
+   "text": "What I see in this work is a community that is actively choosing to show up for themselves. I don't take that lightly. Thank you for letting me be part of the journey. With love from the altar",
+   "channel": "email",
+   "role": "body",
+   "type": "the_edit",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:30163",
+    "text_id": "2:30204",
+    "frame_name": "Editorial Style Edit ",
+    "section": "campaign 2026",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-body-12",
+   "text": "The garden rose on the back represents strength, resilience, and grace under pressure.",
+   "channel": "email",
+   "role": "body",
+   "type": "checkout_abandon",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191115",
+    "text_id": "2:191164",
+    "frame_name": "Abandon Checkout V2 - Sacred",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-13",
+   "text": "Spring is here! And with it comes that sense of loosening, unwinding. Maybe a little hope creeping back in after a long Winter. And yet, this season of rebirth arrives in the midst so much collective heaviness, with heart-wrenching lessons we’re being asked to learn.",
+   "channel": "email",
+   "role": "body",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:251",
+    "text_id": "2:405",
+    "frame_name": "Editorial- RESIZED",
+    "section": "final resized email templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-body-14",
+   "text": "A reminder to awaken the senses to the magic that surrounds you, even if at times it may be hard to see.",
+   "channel": "email",
+   "role": "body",
+   "type": "cart_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190950",
+    "text_id": "2:190954",
+    "frame_name": "Abandon Cart - Spirit",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-15",
+   "text": "Like all of our Spell bracelets, you can wear this piece daintily on its own or stacked with our other styles for a layered look full of intention.",
+   "channel": "email",
+   "role": "body",
+   "type": "product_spotlight",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:4105",
+    "text_id": "2:4132",
+    "frame_name": "Spell Bracelet 1",
+    "section": "campaigns 2025",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-body-16",
+   "text": "Wishing you a beautiful Mother’s Day full of joy, leisure, and blessings.",
+   "channel": "email",
+   "role": "body",
+   "type": "the_edit",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:30223",
+    "text_id": "2:30244",
+    "frame_name": "Editorial Style Edit ",
+    "section": "campaign 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-17",
+   "text": "Ancient and encoded, Lemurian Quartz tends to find its person rather than the other way around. If you're drawn to it, trust that.",
+   "channel": "email",
+   "role": "body",
+   "type": "editorial_letter",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:408",
+    "text_id": "2:449",
+    "frame_name": "Editorial- RESIZED",
+    "section": "final resized email templates",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-email-body-18",
+   "text": "Wear your Garden Pendant as a daily reminder to tend to your inner garden with the care and dedication you deserve.",
+   "channel": "email",
+   "role": "body",
+   "type": "checkout_abandon",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191052",
+    "text_id": "2:191054",
+    "frame_name": "Abandon Checkout V2 - Garden",
+    "section": "cart checkout browse flows",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-body-19",
+   "text": "What I reach for when I feel overstimulated, porous, or like too much is getting in.",
+   "channel": "email",
+   "role": "body",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:31002",
+    "text_id": "2:31030",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-01",
+   "text": "INTRODUCING:",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "editorial_letter",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:251",
+    "text_id": "2:277",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 13
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-02",
+   "text": "FEATURING",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "product_spotlight",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:563",
+    "text_id": "2:597",
+    "frame_name": "Product Spotlight with Feature Deep Dive",
+    "section": "modular blocks",
+    "occurrences": 7
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-03",
+   "text": "MADE FOR YOU",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "cart_abandon",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190749",
+    "text_id": "2:190840",
+    "frame_name": "Abandon Cart - Garden",
+    "section": "cart checkout browse flows",
+    "occurrences": 6
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-04",
+   "text": "FOUNDER’S NOTE",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:7443",
+    "text_id": "2:7488",
+    "frame_name": "May Newsletter",
+    "section": "campaigns 2025",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-05",
+   "text": "HONORING THE FEMININE",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "the_edit",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:1588",
+    "text_id": "2:1594",
+    "frame_name": "TheEdit",
+    "section": "final resized email templates",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-06",
+   "text": "RECLAIM YOUR MAGIC",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "cart_abandon",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:189904",
+    "text_id": "2:189929",
+    "frame_name": "Cart 1 White",
+    "section": "cart checkout browse flows",
+    "occurrences": 6
+   }
+  },
+  {
+   "id": "hlr-email-eyebrow-07",
+   "text": "COMMISSION YOUR PIECE",
+   "channel": "email",
+   "role": "eyebrow",
+   "type": "the_edit",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:30163",
+    "text_id": "2:30198",
+    "frame_name": "Editorial Style Edit ",
+    "section": "campaign 2026",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-email-cta-01",
+   "text": "SHOP NOW",
+   "channel": "email",
+   "role": "cta",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:9",
+    "text_id": "2:71",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 338
+   }
+  },
+  {
+   "id": "hlr-email-cta-02",
+   "text": "SHOP",
+   "channel": "email",
+   "role": "cta",
+   "type": "product_listing",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:683",
+    "text_id": "2:708",
+    "frame_name": "Product Listing in Grids",
+    "section": "campaigns 2025",
+    "occurrences": 234
+   }
+  },
+  {
+   "id": "hlr-email-cta-03",
+   "text": "SHOP THE SALE",
+   "channel": "email",
+   "role": "cta",
+   "type": "welcome",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:2153",
+    "text_id": "2:2200",
+    "frame_name": "Welcome Email 1",
+    "section": "holiday 2025",
+    "occurrences": 17
+   }
+  },
+  {
+   "id": "hlr-email-cta-04",
+   "text": "RETURN TO YOUR CART",
+   "channel": "email",
+   "role": "cta",
+   "type": "cart_abandon",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:190912",
+    "text_id": "2:190924",
+    "frame_name": "Abandon Cart - Genesis",
+    "section": "cart checkout browse flows",
+    "occurrences": 12
+   }
+  },
+  {
+   "id": "hlr-email-cta-05",
+   "text": "SHOP NEW ARRIVALS",
+   "channel": "email",
+   "role": "cta",
+   "type": "welcome",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:126",
+    "text_id": "2:184",
+    "frame_name": "Welcome Email 14",
+    "section": "final resized email templates",
+    "occurrences": 6
+   }
+  },
+  {
+   "id": "hlr-email-cta-06",
+   "text": "CHOOSE YOUR TALISMAN",
+   "channel": "email",
+   "role": "cta",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:193004",
+    "text_id": "2:193027",
+    "frame_name": "Email 3",
+    "section": "modular blocks",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-email-cta-07",
+   "text": "FIND YOUR PIECE",
+   "channel": "email",
+   "role": "cta",
+   "type": "the_edit",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:8947",
+    "text_id": "2:8970",
+    "frame_name": "Editorial Style Edit ",
+    "section": "welcome 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-email-cta-08",
+   "text": "LEARN MORE",
+   "channel": "email",
+   "role": "cta",
+   "type": "editorial_letter",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:481",
+    "text_id": "2:510",
+    "frame_name": "Editorial- RESIZED",
+    "section": "campaign 2026",
+    "occurrences": 48
+   }
+  },
+  {
+   "id": "hlr-email-cta-09",
+   "text": "EXPLORE",
+   "channel": "email",
+   "role": "cta",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+    "frame_id": "2:191672",
+    "text_id": "2:191687",
+    "frame_name": "Text+Image - Review",
+    "section": "cart checkout browse flows",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-social-cover-01",
+   "text": "Your yes has a texture",
+   "channel": "social",
+   "role": "cover",
+   "type": "mantra",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181028",
+    "text_id": "2:181032",
+    "frame_name": "9.30 - wfyj",
+    "section": "social templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-social-cover-02",
+   "text": "After the madness stops",
+   "channel": "social",
+   "role": "cover",
+   "type": null,
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181328",
+    "text_id": "2:181331",
+    "frame_name": "12/22",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-cover-03",
+   "text": "Harmony only works when your needs are part of the equation",
+   "channel": "social",
+   "role": "cover",
+   "type": "education",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182056",
+    "text_id": "2:182060",
+    "frame_name": "9.24",
+    "section": "sept-october 2026 / Sept 24",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-cover-04",
+   "text": "Perfectionism is not the same as devotion.",
+   "channel": "social",
+   "role": "cover",
+   "type": "mantra",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182195",
+    "text_id": "2:182197",
+    "frame_name": "HighLight_IGStorySet-Moon-5",
+    "section": "sept-october 2026 / Sept 7",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-cover-05",
+   "text": "a blessing for the threshold",
+   "channel": "social",
+   "role": "cover",
+   "type": "mantra",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182602",
+    "text_id": "2:182603",
+    "frame_name": "9.23",
+    "section": "sept-october 2026 / Sept 23",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-cover-06",
+   "text": "Listen to your inner knowing",
+   "channel": "social",
+   "role": "cover",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182831",
+    "text_id": "2:182834",
+    "frame_name": "9.29",
+    "section": "sept-october 2026 / oct 05",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-cover-07",
+   "text": "let’s get together",
+   "channel": "social",
+   "role": "cover",
+   "type": null,
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181979",
+    "text_id": "2:181981",
+    "frame_name": "9/16",
+    "section": "social grid",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-social-cover-08",
+   "text": "on thresholds",
+   "channel": "social",
+   "role": "cover",
+   "type": "mantra",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181810",
+    "text_id": "2:181813",
+    "frame_name": "9/21",
+    "section": "social grid",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-headline-01",
+   "text": "The divine spark",
+   "channel": "social",
+   "role": "headline",
+   "type": null,
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:63239",
+    "text_id": "2:63245",
+    "frame_name": "Instagram story - 34",
+    "section": "hlr stories and work in progress",
+    "occurrences": 11
+   }
+  },
+  {
+   "id": "hlr-social-headline-02",
+   "text": "Return to Earth",
+   "channel": "social",
+   "role": "headline",
+   "type": null,
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:60958",
+    "text_id": "2:60961",
+    "frame_name": "HighLight_IGHighLights_Spell Bracelet 7",
+    "section": "(page)",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-headline-03",
+   "text": "Everyone has a Shadow Self.",
+   "channel": "social",
+   "role": "headline",
+   "type": "education",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:139140",
+    "text_id": "2:139143",
+    "frame_name": "HighLight_IGStorySet-ShadowSelf-02",
+    "section": "hlr stories and work in progress",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-social-headline-04",
+   "text": "She is a wild, tangled forest with temples and treasures concealed within.",
+   "channel": "social",
+   "role": "headline",
+   "type": null,
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:63028",
+    "text_id": "2:63034",
+    "frame_name": "Instagram story - 150",
+    "section": "hlr stories and work in progress",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-social-headline-05",
+   "text": "seeds of intention",
+   "channel": "social",
+   "role": "headline",
+   "type": "product_spotlight",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:175638",
+    "text_id": "2:175658",
+    "frame_name": "1080x1920 ROSE QUARTZ Crystal Strand Tea",
+    "section": "hlr stories and work in progress",
+    "occurrences": 15
+   }
+  },
+  {
+   "id": "hlr-social-headline-06",
+   "text": "A look inside...",
+   "channel": "social",
+   "role": "headline",
+   "type": "annotated_product",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:61553",
+    "text_id": "2:61556",
+    "frame_name": "HighLight_IGStorySet-FieldNotes",
+    "section": "(page)",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-headline-07",
+   "text": "Rituals of Adornment",
+   "channel": "social",
+   "role": "headline",
+   "type": "education",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:61716",
+    "text_id": "2:61722",
+    "frame_name": "HighLightRituals_Rituals of Adornment 1",
+    "section": "(page)",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-headline-08",
+   "text": "I do enough",
+   "channel": "social",
+   "role": "headline",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:64972",
+    "text_id": "2:64981",
+    "frame_name": "Instagram story - 71",
+    "section": "hlr stories and work in progress",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-social-headline-09",
+   "text": "The Magic of Broken Things",
+   "channel": "social",
+   "role": "headline",
+   "type": "launch",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:60924",
+    "text_id": "2:60927",
+    "frame_name": "HighLight_IGHighLights_Spell Bracelet 1",
+    "section": "(page)",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-headline-10",
+   "text": "What spell will you cast in this season of your life?",
+   "channel": "social",
+   "role": "headline",
+   "type": "launch",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:98848",
+    "text_id": "2:98852",
+    "frame_name": "HighLight_IGStorySet-AltarKits-01",
+    "section": "hlr stories and work in progress",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-social-headline-11",
+   "text": "Enchant them with the gift of magic.",
+   "channel": "social",
+   "role": "headline",
+   "type": "product_spotlight",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:176821",
+    "text_id": "2:176898",
+    "frame_name": "IG Story - Custom Spell Bracelet - Valen",
+    "section": "hlr stories and work in progress",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-social-body-01",
+   "text": "At the core of our mission is a commitment to creating pieces that will stir your soul and invite you inward.",
+   "channel": "social",
+   "role": "body",
+   "type": "quote",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:63156",
+    "text_id": "2:63164",
+    "frame_name": "Instagram story - 64",
+    "section": "hlr stories and work in progress",
+    "occurrences": 12
+   }
+  },
+  {
+   "id": "hlr-social-body-02",
+   "text": "Learning what my own yes feels like",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181042",
+    "text_id": "2:181044",
+    "frame_name": "9.30 - wfyj",
+    "section": "social templates",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-social-body-03",
+   "text": "I honor the power of small, intentional choices.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182264",
+    "text_id": "2:182270",
+    "frame_name": "Instagram story - 166",
+    "section": "sept-october 2026 / Sept 7",
+    "occurrences": 3
+   }
+  },
+  {
+   "id": "hlr-social-body-04",
+   "text": "Grounding is the process of coming back into your body, back into the present moment, and/or back into a sense of physical and energetic stability.",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182130",
+    "text_id": "2:182133",
+    "frame_name": "HighLight_IGStorySet-Moon-6",
+    "section": "sept-october 2026 / Sept 4",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-05",
+   "text": "May you trust what is becoming",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182611",
+    "text_id": "2:182615",
+    "frame_name": "9.23",
+    "section": "sept-october 2026 / Sept 23",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-06",
+   "text": "My needs belong in the room too.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182061",
+    "text_id": "2:182065",
+    "frame_name": "9.24",
+    "section": "sept-october 2026 / Sept 24",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-07",
+   "text": "if I trusted myself, what would I do next?",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182927",
+    "text_id": "2:182932",
+    "frame_name": "9.30",
+    "section": "sept-october 2026",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-08",
+   "text": "I refine with care, not criticism.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182236",
+    "text_id": "2:182240",
+    "frame_name": "Instagram story - 162",
+    "section": "sept-october 2026 / Sept 7",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-09",
+   "text": "Heavy energies don't have to stay stuck in us, and the Earth can participate in their transformation if we ask for help with loving intention.",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182171",
+    "text_id": "2:182175",
+    "frame_name": "9/4 -",
+    "section": "sept-october 2026 / Sept 4",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-10",
+   "text": "You can stop reopening what you already know",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182845",
+    "text_id": "2:182850",
+    "frame_name": "9.29",
+    "section": "sept-october 2026 / oct 05",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-11",
+   "text": "You’re arriving with everything you’ve learned.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182716",
+    "text_id": "2:182719",
+    "frame_name": "8/31 - monday",
+    "section": "sept-october 2026 / Sept 21",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-12",
+   "text": "Surrender is not the same as giving up.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181675",
+    "text_id": "2:181685",
+    "frame_name": "Instagram story - 161",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-13",
+   "text": "September is asking us to ground.",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182502",
+    "text_id": "2:182507",
+    "frame_name": "HighLight_IGStorySet-Moon-2",
+    "section": "sept-october 2026 / Sept 15",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-14",
+   "text": "Feeling uneasy when no one needs you",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:180961",
+    "text_id": "2:180967",
+    "frame_name": "8/28",
+    "section": "social templates",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-15",
+   "text": "Sometimes asking again is a way of avoiding the answer.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182853",
+    "text_id": "2:182855",
+    "frame_name": "9.29",
+    "section": "sept-october 2026 / oct 05",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-16",
+   "text": "Automatically stepping in before anyone asks",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:180961",
+    "text_id": "2:180965",
+    "frame_name": "8/28",
+    "section": "social templates",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-17",
+   "text": "Pleasure counts as spiritual practice, by the way.",
+   "channel": "social",
+   "role": "body",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181642",
+    "text_id": "2:181644",
+    "frame_name": "7/22",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-18",
+   "text": "You may be waiting for a different answer, not a clearer one.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182864",
+    "text_id": "2:182871",
+    "frame_name": "9.29",
+    "section": "sept-october 2026 / oct 05",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-19",
+   "text": "May you have the courage to release what has finished and the patience to meet what comes next",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:182607",
+    "text_id": "2:182610",
+    "frame_name": "9.23",
+    "section": "sept-october 2026 / Sept 23",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-20",
+   "text": "What wants to expand through you is already speaking",
+   "channel": "social",
+   "role": "body",
+   "type": null,
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181851",
+    "text_id": "2:181903",
+    "frame_name": "7/15 - meme dump",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-21",
+   "text": "Sometimes alignment feels less like fireworks and more like relief",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181076",
+    "text_id": "2:181078",
+    "frame_name": "9.30 - wfyj",
+    "section": "social templates",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-body-22",
+   "text": "Let the lesson change you without letting it condemn you.",
+   "channel": "social",
+   "role": "body",
+   "type": "mantra",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181751",
+    "text_id": "2:181753",
+    "frame_name": "7/27",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-body-23",
+   "text": "Timeless fine jewelry, rich in magic and meaning.",
+   "channel": "social",
+   "role": "body",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:60839",
+    "text_id": "2:60843",
+    "frame_name": "HighLight_IGHighLights_Welcome 2",
+    "section": "(page)",
+    "occurrences": 4
+   }
+  },
+  {
+   "id": "hlr-social-body-24",
+   "text": "The Shadow offers wisdom and clarity. It celebrates your wholeness.",
+   "channel": "social",
+   "role": "body",
+   "type": "education",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:139914",
+    "text_id": "2:139916",
+    "frame_name": "HighLight_IGStorySet-ShadowSelf-06",
+    "section": "hlr stories and work in progress",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-social-body-25",
+   "text": "For the woman who’s ready to stop skimming the surface of her life.",
+   "channel": "social",
+   "role": "body",
+   "type": null,
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:180807",
+    "text_id": "2:180811",
+    "frame_name": "7/9",
+    "section": "social templates",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-social-cta-01",
+   "text": "EXPLORE THE DEEPER MEANING",
+   "channel": "social",
+   "role": "cta",
+   "type": "launch",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:64042",
+    "text_id": "2:64049",
+    "frame_name": "HighLight_IGStorySet-Launch-02",
+    "section": "hlr stories and work in progress",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-cta-02",
+   "text": "SWIPE TO EXPLORE",
+   "channel": "social",
+   "role": "cta",
+   "type": null,
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "2:181475",
+    "text_id": "2:181482",
+    "frame_name": "1/5",
+    "section": "social grid",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-social-caption-01",
+   "text": "Grounding isn't really about the activity itself, it's about the end state. Coming back into your body. Back into the present moment. Back into a sense of safety and sovereignty. So many of us live from the neck up, thinking and thinking because it feels like control. But that's often the very thing that leaves us feeling swirly and untethered. A long shower. Cooking without your phone. Feet on the earth. If it brings you back into yourself, it counts. Full article on Substack. Link in bio.",
+   "channel": "social",
+   "role": "caption",
+   "type": "education",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "",
+    "text_id": "2:182118",
+    "frame_name": null,
+    "section": "sept-october 2026 / Sept 4",
+    "occurrences": 1,
+    "transform": "leading caption label removed"
+   }
+  },
+  {
+   "id": "hlr-social-caption-02",
+   "text": "What if you chose your jewelry differently? Not by what matches your outfit, but by what you want to carry with you.",
+   "channel": "social",
+   "role": "caption",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "",
+    "text_id": "2:182182",
+    "frame_name": null,
+    "section": "sept-october 2026 / Sept 7",
+    "occurrences": 1,
+    "transform": "leading caption label removed"
+   }
+  },
+  {
+   "id": "hlr-social-caption-03",
+   "text": "for everyone nurturing a new beginning right now.",
+   "channel": "social",
+   "role": "caption",
+   "type": null,
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+    "frame_id": "",
+    "text_id": "2:182287",
+    "frame_name": null,
+    "section": "sept-october 2026 / Sept 8",
+    "occurrences": 1,
+    "transform": "leading caption label removed"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-01",
+   "text": "Embody your intention",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:41373",
+    "text_id": "2:41377",
+    "frame_name": "Ads 1080x1350 BRACELET",
+    "section": "Section 1",
+    "occurrences": 26,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-02",
+   "text": "A Gift of Good Energy",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:56414",
+    "text_id": "2:56421",
+    "frame_name": "GIFT CARD OPTION 7 UPDATE",
+    "section": "Section 1 / GIFT CARD IMAGE OPTIONS",
+    "occurrences": 1,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-03",
+   "text": "Unlock your Birthstone Energy",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:53684",
+    "text_id": "2:53711",
+    "frame_name": "STONE 4:5",
+    "section": "Section 1 / BIRTHSTONE CHART OPTIONS",
+    "occurrences": 11,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-04",
+   "text": "I’m tapping into...",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:47354",
+    "text_id": "2:47378",
+    "frame_name": "Ads 1080x1920 - IMAGE 7",
+    "section": "Section 1",
+    "occurrences": 15,
+    "hlr_type_held": "mantra"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-05",
+   "text": "Set your intentions in gemstones",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:54485",
+    "text_id": "2:54514",
+    "frame_name": "Ads 1080x 2016",
+    "section": "Section 1",
+    "occurrences": 13,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-06",
+   "text": "Fine jewelry that speaks to your soul",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:40766",
+    "text_id": "2:40770",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 13,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-07",
+   "text": "Fine jewelry for the Modern Mystic",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:39156",
+    "text_id": "2:39213",
+    "frame_name": "Ads 1080x1350",
+    "section": "Section 1",
+    "occurrences": 9,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-08",
+   "text": "Add intention to your stack",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59587",
+    "text_id": "2:59595",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-09",
+   "text": "Jewelry for women returning to themselves.",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:60325",
+    "text_id": "2:60351",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 6,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-10",
+   "text": "Jewelry to hold your intention",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59284",
+    "text_id": "2:59306",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 5,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-11",
+   "text": "Channel your power",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:53344",
+    "text_id": "2:53354",
+    "frame_name": "Ads 1080x1350",
+    "section": "Section 1",
+    "occurrences": 4,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-12",
+   "text": "A new season, a new intention",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59447",
+    "text_id": "2:59454",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 4,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-13",
+   "text": "Elevate your energy, layer by layer",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:51330",
+    "text_id": "2:51333",
+    "frame_name": "Ads 1080x 1977",
+    "section": "Section 1",
+    "occurrences": 4,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-14",
+   "text": "Open your heart",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:53265",
+    "text_id": "2:53268",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 3,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-15",
+   "text": "Lift your spirit",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:56681",
+    "text_id": "2:56713",
+    "frame_name": "Ads 1080x1350",
+    "section": "Section 1",
+    "occurrences": 3,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-16",
+   "text": "A clear path forward",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:56524",
+    "text_id": "2:56552",
+    "frame_name": "Ads 1080x1350",
+    "section": "Section 1",
+    "occurrences": 3,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-17",
+   "text": "Layer with intention",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:57444",
+    "text_id": "2:57449",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 3,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-18",
+   "text": "Resolutions you can wear",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:37279",
+    "text_id": "2:37283",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-19",
+   "text": "For your spring awakening",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59396",
+    "text_id": "2:59397",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-20",
+   "text": "A talisman for transformation",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:49551",
+    "text_id": "2:49571",
+    "frame_name": "Frame 66",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-21",
+   "text": "Your intentions, set in stone",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59882",
+    "text_id": "2:59908",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-22",
+   "text": "Enter this season with intention",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59647",
+    "text_id": "2:59671",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-23",
+   "text": "A different intention in every piece",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59527",
+    "text_id": "2:59535",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-24",
+   "text": "Ceremonial jewelry for the return to self.",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "eloquent",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:59953",
+    "text_id": "2:59979",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-25",
+   "text": "Are you a seeker, a weaver, a lover, a starchild?",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:39013",
+    "text_id": "2:39015",
+    "frame_name": "HighLight_IGStorySet-PressKit",
+    "section": "Section 1",
+    "occurrences": 2,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-26",
+   "text": "I nurture my inner life",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:40311",
+    "text_id": "2:40314",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 1,
+    "hlr_type_held": "mantra"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-27",
+   "text": "My intuition supports me",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:40315",
+    "text_id": "2:40318",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 1,
+    "hlr_type_held": "mantra"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-28",
+   "text": "Wearable blessings for Mom",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:51663",
+    "text_id": "2:51682",
+    "frame_name": "Mother's Day '25",
+    "section": "Section 1",
+    "occurrences": 1,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-29",
+   "text": "Feel grounded, look stunning",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:49350",
+    "text_id": "2:49352",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 1,
+    "hlr_type_held": "brand_line"
+   }
+  },
+  {
+   "id": "hlr-paid-onimage-30",
+   "text": "I choose pleasure and abundance",
+   "channel": "paid",
+   "role": "on_image",
+   "type": "text_forward",
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+    "frame_id": "2:40307",
+    "text_id": "2:40310",
+    "frame_name": "Ads 1080x1920",
+    "section": "Section 1",
+    "occurrences": 1,
+    "hlr_type_held": "mantra"
+   }
+  },
+  {
+   "id": "hlr-web-heading-01",
+   "text": "The energy inside this piece",
+   "channel": "web",
+   "role": "heading",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:183289",
+    "text_id": "2:183411",
+    "frame_name": "M_Nav",
+    "section": "(page)",
+    "occurrences": 13
+   }
+  },
+  {
+   "id": "hlr-web-heading-02",
+   "text": "Sacred jewelry to support your Spirit",
+   "channel": "web",
+   "role": "heading",
+   "type": null,
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:184427",
+    "text_id": "2:184430",
+    "frame_name": "M_Nav_1",
+    "section": "(page)",
+    "occurrences": 6
+   }
+  },
+  {
+   "id": "hlr-web-heading-03",
+   "text": "Spiritual jewelry for returning to yourself",
+   "channel": "web",
+   "role": "heading",
+   "type": null,
+   "voice": "uplifting",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:185789",
+    "text_id": "2:185800",
+    "frame_name": "D_HP_V1",
+    "section": "(page)",
+    "occurrences": 2
+   }
+  },
+  {
+   "id": "hlr-web-heading-04",
+   "text": "Words from the Heart",
+   "channel": "web",
+   "role": "heading",
+   "type": null,
+   "voice": "sensual",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:183590",
+    "text_id": "2:183715",
+    "frame_name": "M_Nav",
+    "section": "(page)",
+    "occurrences": 5
+   }
+  },
+  {
+   "id": "hlr-web-cta-01",
+   "text": "Find your energetic ally",
+   "channel": "web",
+   "role": "cta",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:184322",
+    "text_id": "I2:184411;27:956",
+    "frame_name": "D_PDP",
+    "section": "(page)",
+    "occurrences": 1
+   }
+  },
+  {
+   "id": "hlr-web-cta-02",
+   "text": "Learn more",
+   "channel": "web",
+   "role": "cta",
+   "type": null,
+   "voice": "real",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:184468",
+    "text_id": "2:184520",
+    "frame_name": "M_Nav_1",
+    "section": "(page)",
+    "occurrences": 7
+   }
+  },
+  {
+   "id": "hlr-web-eyebrow-01",
+   "text": "THE RITUAL THAT MAKES IT YOURS",
+   "channel": "web",
+   "role": "eyebrow",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:183289",
+    "text_id": "2:183383",
+    "frame_name": "M_Nav",
+    "section": "(page)",
+    "occurrences": 7
+   }
+  },
+  {
+   "id": "hlr-web-eyebrow-02",
+   "text": "SUMMER OFFERINGS",
+   "channel": "web",
+   "role": "eyebrow",
+   "type": null,
+   "voice": "refined",
+   "source": {
+    "file": "outputs/step-2-pack/corpus/corpus-visible-web.tsv",
+    "frame_id": "2:184523",
+    "text_id": "2:184569",
+    "frame_name": "D_HP_V1",
+    "section": "(page)",
+    "occurrences": 1
+   }
+  }
+ ]
+}

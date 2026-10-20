@@ -1,0 +1,217 @@
+{
+ "_note": "HLR web section library (role section_library), in the shape of the engine's skills/web-copy/references/section-data.json. PLANNED, NOT BUILT: lane D, Pack v0 structure side, 2026-10-18. Held for Review 2 (Gate 2 call 1 b, Eddie, 2026-10-18): the web taxonomy is ratified with the first masters, so the File map leaves section_library null until then and web-copy stops by design, because the engine ships no web roster to fall back to; this file is the Step 4 build plan. Case per slot role is house style (Gate 2 call 2 a): headings and lines in sentence case, eyebrows, labels and CTA labels in caps, quotes, names and verbatim strings as written. Every section and slot is proposed and unbuilt; every budget is null at every breakpoint until Step 4 builds the W## masters and measures typical_chars and flex_verified per the slot contract. No budget is invented. A slot a breakpoint does not render will carry 0 there once measured; null means not measured yet. Sources: outputs/step-1-review/pattern-review.md (2.4, 3), pattern-review-addendum.md (1), patterns/patterns-web-other.md, site/site-observed-2026-10-17.md. Node ids are the reference file LYyYXPDUHVoAABh865EvMI (read-only). Tags: [observed] the design file or the live site shows it; [derived] our proposal.",
+ "_status": "planned, held for Review 2 (Gate 2 call 1 b)",
+ "_version": "2026-10-18",
+ "_schema": "skills/web-copy/references/section-data.json (engine 0.5.1): sections, page_types, breakpoints, pins",
+ "pins": {
+  "note": "Null until Step 4: the budgets will be measured against brand-pack's slotmap_web, which does not exist yet.",
+  "slotmap_generated": null,
+  "checked_on": null
+ },
+ "_budget_method": {
+  "how": "Measured, not estimated: Step 4 builds each W## master in the library file (Gq3yUbLs6MCRM0nOhjvnIW), flex-probes every text slot at 2x (figma.yaml lengths.min_flex_multiple) and records typical_chars and flex_verified per breakpoint here.",
+  "status": "proposed, unbuilt",
+  "why_null": "Every budget is null because no master exists. page_lint.js skips a null budget, so web copy is unchecked for length until Step 4 (an engine gap logged in outputs/step-2-pack/structure-notes.md)."
+ },
+ "breakpoints": {
+  "desktop": {"label": "Desktop", "width": 1440, "note": "[observed] the design frames are 1440 wide; desktop side margins about 100 to 158 px"},
+  "mobile_stack": {"label": "Mobile stack", "width": 375, "note": "[observed] the design frames are 375 wide; sections stack and desktop tabs become accordions; gutter about 20 px. The engine's reference phone is 390: Gate 4 rules the breakpoints (figma.yaml breakpoints null)"},
+  "mobile_carousel": {"label": "Mobile carousel", "width": 375, "note": "[observed] cross-sell cards scroll sideways on the mobile PDP (2:183590)"}
+ },
+ "sections": [
+  {
+   "id": "W01",
+   "name": "Announcement Bar",
+   "status": "proposed, unbuilt",
+   "reach": "every page [observed: instance 113, 34 uses]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "message": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "an offer or shipping line; the threshold is a merge token until C10 ($50, $100 and $150 all appear) [observed]"}
+   },
+   "evidence": "[observed] W-NAV bar, 2:184523"
+  },
+  {
+   "id": "W02",
+   "name": "Header and Menus",
+   "status": "proposed, unbuilt",
+   "reach": "every page [observed: instance 111, 34 uses]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "data_fed": true,
+   "slots": {},
+   "note": "Navigation labels and menu tiles are site structure kept in Shopify's menus, not page copy: no copy slot. [observed] menus RECOMMENDED, SHOP BY MEANING, SHOP BY TYPE; Find Your Match; the drawer on mobile.",
+   "open_decision": "The mobile drawer's About Us feature (founder line, image, eyebrow, body, button; 2:184749) is promotional copy inside navigation. Page copy with its own section, or menu settings? Eddie, at Step 4.",
+   "evidence": "[observed] W-NAV 2:184523, W-MNAV 2:184749"
+  },
+  {
+   "id": "W03",
+   "name": "Split Hero",
+   "status": "proposed, unbuilt",
+   "reach": "home [observed: instance 112, 28 uses; main component 2:185204, 1440x760]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "heading": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "Saol Display Light with one italic accent word [observed]"},
+    "cta_label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "cta", "case": "upper", "status": "proposed, unbuilt", "note": "C6 outline caps box primary, trailing-rule text link secondary (DECISIONS 2026-10-17)"}
+   },
+   "evidence": "[observed] W-HERO 2:185212, 2:185878"
+  },
+  {
+   "id": "W04",
+   "name": "Trust Marquee",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "claim1": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim2": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim3": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim4": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim5": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim6": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim7": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "claim8": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"}
+   },
+   "note": "Every line is a claim (\"Healer-led\" and seven more [observed]): each needs a claims-ledger row before it ships (C2, lane C).",
+   "evidence": "[observed] W-TRUST 2:185646"
+  },
+  {
+   "id": "W05",
+   "name": "Buy Box",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "founder_line": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
+    "cta_label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "cta", "case": "upper", "status": "proposed, unbuilt", "note": "C6: the outline caps box; the price joins the label from data [observed: \"ADD TO BAG\" with a price]"}
+   },
+   "note": "Data-fed, not copy: the product title and price (product database, Shopify), stars (reviews widget), option selectors (metal, chain length, stone), pay-in-4, ship date, tabs and the add-on. Badges such as \"BEST SELLER\" need a source.",
+   "evidence": "[observed] W-BUY 2:185628, 2:185489; mobile W-MPDP 2:183590"
+  },
+  {
+   "id": "W06",
+   "name": "Story Tabs",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed: main component 2:184058]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "heading": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "\"The energy inside this piece\" [observed]"},
+    "tab1.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt"},
+    "tab1.body": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "CRYSTALS: stone meaning is a claim (C2)"},
+    "tab2.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt"},
+    "tab2.body": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "FOUNDER'S NOTE"},
+    "tab3.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt"},
+    "tab3.body": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt", "note": "DESIGN ELEMENTS; the metal tooltip copy makes claims about three metals (C2)"},
+    "fig1.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt", "note": "numbered plates, \"FIG. 1\" [observed]"},
+    "fig2.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt"},
+    "fig3.label": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt"}
+   },
+   "note": "Desktop tabs become mobile accordions [observed]: the same slots stack.",
+   "evidence": "[observed] W-STORY 2:184078"
+  },
+  {
+   "id": "W07",
+   "name": "Ritual Block",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "statement": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"}
+   },
+   "note": "Two images and a statement; imagery needs usage rights (rule 8).",
+   "evidence": "[observed] W-STORY ritual block 2:184122"
+  },
+  {
+   "id": "W08",
+   "name": "Testimonial",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "requires_verbatim": true,
+   "slots": {
+    "eyebrow": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt", "note": "\"Words from the Heart\" [observed]"},
+    "quote": {"budget": {"desktop": null, "mobile_stack": null}, "role": "verbatim", "case": "as-is", "status": "proposed, unbuilt", "note": "a real customer's words, sourced in Judge.me; never trimmed"},
+    "attribution": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "as-is", "status": "proposed, unbuilt"}
+   },
+   "evidence": "[observed] W-QUOTE 2:185733"
+  },
+  {
+   "id": "W09",
+   "name": "Reviews",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "data_fed": true,
+   "slots": {},
+   "note": "The Judge.me widget renders the rating and the reviews: no copy slot [observed: a pasted widget, \"5.00 out of 5\"].",
+   "evidence": "[observed] W-PROOF 2:185655"
+  },
+  {
+   "id": "W10",
+   "name": "Cross-sell Row",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_carousel"],
+   "slots": {
+    "eyebrow": {"budget": {"desktop": null, "mobile_carousel": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt", "note": "\"You may also like\" [observed, 10], a caps section label (call 2 a: eyebrows in caps)"}
+   },
+   "note": "Three product cards with a \"More options\" pill, fed by the product database: names and prices are data, not copy. On mobile the cards scroll sideways [observed].",
+   "evidence": "[observed] W-PROOF 2:185665; W-MPDP 2:183590"
+  },
+  {
+   "id": "W11",
+   "name": "Press Row",
+   "status": "proposed, unbuilt",
+   "reach": "pdp [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "slots": {
+    "eyebrow": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "upper", "status": "proposed, unbuilt", "note": "\"AS FEATURED IN\" [observed]"}
+   },
+   "note": "Publication logos are third-party marks: rights before they ship.",
+   "evidence": "[observed] W-PROOF press row"
+  },
+  {
+   "id": "W12",
+   "name": "Footer",
+   "status": "proposed, unbuilt",
+   "reach": "every page [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "requires_verbatim": true,
+   "slots": {
+    "disclaimer": {"budget": {"desktop": null, "mobile_stack": null}, "role": "verbatim", "case": "as-is", "status": "proposed, unbuilt", "note": "the site's disclaimer, the only required language found (Brand Review v2 Q1): set verbatim from the claims ledger's required_language (lane C), never trimmed"}
+   },
+   "note": "Links and the copyright line are site structure and data, not copy.",
+   "evidence": "[observed] W-FOOT 2:185644, 2:185645"
+  },
+  {
+   "id": "W13",
+   "name": "Collection Filter",
+   "status": "proposed, unbuilt",
+   "reach": "collection [observed]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "data_fed": true,
+   "slots": {},
+   "note": "Filter groups, the meanings list and the product count come from Shopify's filters: no copy slot. [observed] the mobile filter lists six meanings while the live site lists five intentions.",
+   "evidence": "[observed] W-FILTER 2:185324"
+  },
+  {
+   "id": "W14",
+   "name": "Collection Grid",
+   "status": "proposed, unbuilt",
+   "reach": "collection [derived: the filter's product count implies the grid; the inventory does not describe its design]",
+   "breakpoints": ["desktop", "mobile_stack"],
+   "data_fed": true,
+   "slots": {},
+   "note": "Product cards fed by the product database and Shopify collections: no copy slot.",
+   "open_decision": "A collection header (title and intro, the SEO block) is not in the file. Add one at Step 4, or keep collection pages to the grid? Eddie.",
+   "evidence": "[derived] from W-FILTER 2:185324 and the mega menu (SHOP BY MEANING, SHOP BY TYPE)"
+  }
+ ],
+ "page_types": {
+  "home": {"label": "Home", "status": "proposed, Review 2", "typical": ["W01", "W02", "W03", "W12"], "requires": ["W03"], "note": "Only the hero is in the file; the rest of the home page is a gap (Eddie, Step 4)."},
+  "pdp": {"label": "Product page", "status": "proposed, Review 2", "typical": ["W01", "W02", "W05", "W04", "W06", "W07", "W08", "W09", "W10", "W11", "W12"], "requires": ["W05"], "note": "[derived] order from the PDP design frames and the live capture 2:184418; confirm at Step 4."},
+  "collection": {"label": "Collection page", "status": "proposed, Review 2", "typical": ["W01", "W02", "W13", "W14", "W12"], "requires": ["W14"]}
+ },
+ "page_type_gaps": {
+  "editorial": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Eddie (scope), HLR (content).",
+  "landing": "No campaign landing page in the file. Owner: Eddie (scope)."
+ }
+}

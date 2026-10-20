@@ -1,0 +1,549 @@
+{
+ "_role": "legal_ledger",
+ "_status": "test-seed",
+ "version": "hlr-ledger-0.1.0 (test-seed, 2026-10-18)",
+ "_note": "HLR's claims ledger seed (Pack v0, lane C, 2026-10-18). Built from outputs/step-1-review/site/claims-scan-2026-10-17.md, the corpus re-cut (outputs/step-2-pack/corpus/), the brand book Copy section (p25 to p38) and Brand Review v2 (C2, C10, Q1, Q7); nothing from memory. Every row waits for a ruling from HLR's claims signer, who is not yet named (C2, Review 1). Status test-seed: the lints enforce every row provisionally and say so; nothing here is counsel-approved and no row clears copy for production. Severity uses the engine's words (lib/claims.js): needs_legal blocks every lint, craft mode included, until the row is ruled; conditional asks a person to confirm and record each use (craft mode reports it); info never blocks. The playbook's three statuses map as allowed = approved, needs_legal = needs_legal, blocked = prohibited, plus conditional for rows a person confirms per use. The prohibited patterns in brand-context.md are the floor every brief inherits and are not repeated here. Trigger rows are [derived]; their evidence is [observed] or [documented] as each says.",
+ "trigger_format": "regex",
+ "signer": null,
+ "sources": [
+  "outputs/step-1-review/site/claims-scan-2026-10-17.md",
+  "outputs/step-2-pack/corpus/corpus-visible-email.tsv",
+  "outputs/step-2-pack/corpus/corpus-visible-social.tsv",
+  "outputs/step-2-pack/corpus/corpus-visible-paid.tsv",
+  "061022_HighLight_BrandBook_DS.pdf p25 to p38",
+  "outputs/step-1-review/brand-review-v2.md"
+ ],
+ "topics": {
+  "health": {
+   "posture": "needs_legal: blocks until ruled",
+   "owner": "HLR's claims signer (not yet named; C2, Review 1)"
+  },
+  "fertility": {
+   "posture": "needs_legal: blocks until ruled",
+   "owner": "HLR's claims signer (not yet named; C2, Review 1)"
+  },
+  "sourcing": {
+   "posture": "needs_legal: blocks until ruled",
+   "owner": "HLR's claims signer (not yet named; C2, Review 1)"
+  },
+  "origin": {
+   "posture": "needs_legal: blocks until ruled",
+   "owner": "HLR's claims signer (not yet named; C2, Review 1)"
+  },
+  "materials": {
+   "posture": "conditional: a person confirms each use against the product facts",
+   "owner": "HLR (Shopify export, Review 1)"
+  },
+  "metaphysical": {
+   "posture": "conditional: allowed as tradition, intention or ritual framing once C2 is ruled; each use signed until then",
+   "owner": "HLR's claims signer (not yet named; C2, Review 1)"
+  },
+  "endorsements": {
+   "posture": "conditional: verbatim and sourced only",
+   "owner": "HLR (Judge.me, press)"
+  },
+  "offers": {
+   "posture": "conditional: terms are merge tokens until C10",
+   "owner": "HLR (C10)"
+  },
+  "identity": {
+   "posture": "conditional: HLR's own wording, confirmed by HLR",
+   "owner": "HLR"
+  },
+  "required_language": {
+   "posture": "info: carried verbatim",
+   "owner": "HLR"
+  }
+ },
+ "entries": [
+  {
+   "id": "HLR-H01",
+   "topic": "health",
+   "severity": "needs_legal",
+   "title": "Disease, cure, treatment and healing",
+   "lemmas": [
+    "cure",
+    "remedy",
+    "remedies",
+    "therapy",
+    "therapies",
+    "therapeutic",
+    "medicine",
+    "medicinal",
+    "heal",
+    "healer",
+    "symptom",
+    "illness",
+    "disease",
+    "detox",
+    "toxin",
+    "prescription"
+   ],
+   "triggers": [
+    "\\bclinically\\b",
+    "\\bscientifically (proven|shown)\\b",
+    "\\bdoctor[- ]approved\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1). Until then no line states or implies that a piece, a crystal or a session heals, treats, cures or remedies anything.",
+   "ruling": null,
+   "evidence": "[observed] claims scan 2026-10-17: 'heal' 64 products, 'cure / treat / remedy' 13 (mostly 'heat-treated', a false positive the triggers here avoid); corpus re-cut: 'healing crystals', 'Heart-healing Kunzite', 'Monthly energy medicine' (email 2:35). [documented] the site footer disclaimer says the products are not intended to diagnose or treat ailments.",
+   "note": "Product and service names that carry 'Healing' (two in products.json) trip this entry: naming them in copy waits for the same ruling. The words 'treat', 'diagnose', 'medical' and 'ailment' are left out on purpose: they occur only in the required disclaimer (HLR-REQ-01), which must pass every lint.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-H02",
+   "topic": "health",
+   "severity": "needs_legal",
+   "title": "Mental and emotional health",
+   "lemmas": [
+    "anxiety",
+    "anxious",
+    "depression",
+    "trauma",
+    "traumatic",
+    "grief",
+    "grieve",
+    "insomnia",
+    "panic",
+    "stress",
+    "stressed",
+    "nervous system",
+    "mental health",
+    "mental clarity",
+    "emotional balance",
+    "emotional equilibrium",
+    "emotional release",
+    "emotional overload",
+    "emotional support",
+    "emotional healing",
+    "well being",
+    "burnout",
+    "ptsd",
+    "adhd"
+   ],
+   "triggers": [
+    "\\b(lift|lifts|boost|boosts|improve|improves|elevate|elevates|brighten|brightens)\\s+(your\\s+|the\\s+)?mood\\b",
+    "\\bmood[- ](boost|boosting|lifting|enhancing)\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1). No line ties a piece or a stone to anxiety, stress, mood, grief, trauma, sleep or any mental-health state.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'anxiety / stress' 11 products, 'depression / grief / trauma' 2; corpus: 'Feeling Anxious?', 'stress-relieving gemstones', 'support emotional balance', paid 'Fine Jewelry for Stress Relief'; Brand Review v2 Q1 ('CALM YOUR ANXIETY', a send titled 'Anxiety Calming Pieces'). [documented p37] the book's own product example promises to 'lift your mood' and 'mental clarity'.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-H03",
+   "topic": "health",
+   "severity": "needs_legal",
+   "title": "Body, sleep, allergy and skin",
+   "lemmas": [
+    "pain",
+    "ache",
+    "headache",
+    "migraine",
+    "immune",
+    "immunity",
+    "hormone",
+    "hormonal",
+    "inflammation",
+    "blood pressure",
+    "circulation",
+    "digestion",
+    "metabolism",
+    "fatigue",
+    "hypoallergenic",
+    "nickel free",
+    "allergy",
+    "allergic",
+    "lose weight",
+    "weight loss"
+   ],
+   "triggers": [
+    "\\b(better|deeper|restful|improved?|improves)\\s+(your\\s+)?sleep\\b",
+    "\\bsleep\\s+(better|deeper|soundly)\\b",
+    "\\bsensitive skin\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1). No physical-health, sleep, allergy or skin claim.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'pain / ache', 'sleep / insomnia', 'immune / detox / hormone', 'hypoallergenic / nickel' all 0 products; no corpus line. Preventive: these are common jewelry and crystal claims."
+  },
+  {
+   "id": "HLR-H04",
+   "topic": "health",
+   "severity": "needs_legal",
+   "title": "Energy healing services, readings and practitioner credentials",
+   "lemmas": [
+    "reiki",
+    "soul retrieval",
+    "clairvoyant",
+    "psychic",
+    "shamanic",
+    "shamanically",
+    "extraction"
+   ],
+   "triggers": [
+    "\\benergy (work|healing) sessions?\\b",
+    "\\bcertified\\b",
+    "\\bpractitioner\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1) on how sessions and readings sold as products are described (products.json gap: services sold as products, C2), and HLR's confirmation of each credential before it is named.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'reiki' 19 products, 'shamanic' 24; corpus: 'breathwork, 1:1 crystal healing, and Reiki', 'Reiki-charged', 'RITUALLY ACTIVATED through sacred shamanic practice'; products.json kinds 'service' 4, 'service with jewelry' 1, 'jewelry with a service' 2."
+  },
+  {
+   "id": "HLR-F01",
+   "topic": "fertility",
+   "severity": "needs_legal",
+   "title": "Fertility, pregnancy and the body's cycles",
+   "lemmas": [
+    "fertility",
+    "fertile",
+    "conceive",
+    "conception",
+    "pregnancy",
+    "pregnant",
+    "postpartum",
+    "menstrual",
+    "menstruation",
+    "womb",
+    "ovulation"
+   ],
+   "triggers": [
+    "\\bTTC\\b",
+    "\\bIVF\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1). No line links a piece to fertility, conception, pregnancy or the cycle, including as symbolism.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 0 products; corpus: email 4 lines (egg talismans 'crafted to bring strength, fertility, and confidence'), social 9 ('the goddesses of love and fertility'); Brand Review v2 Q1 ('uses fertility symbolism'). [documented p29] the Sensual principle names fertility as part of the brand's energy, which describes the voice and licenses no claim.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-S01",
+   "topic": "sourcing",
+   "severity": "needs_legal",
+   "title": "Ethical, responsible, recycled and sustainable sourcing",
+   "lemmas": [
+    "ethical",
+    "ethically",
+    "responsibly",
+    "sustainable",
+    "sustainably",
+    "recycled",
+    "conflict free",
+    "eco friendly",
+    "fair trade",
+    "traceable",
+    "upcycled"
+   ],
+   "triggers": [
+    "\\bethically[- ](sourced|mined|made)\\b",
+    "\\b(earth|eco)[- ]conscious\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1) and the supplier evidence behind each claim (chain of custody, recycled-content records).",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'ethical / ethically' 51 products, 'conflict-free / responsibly' 47, 'sustainable / recycled' 79; corpus: 'ethically sourced crystal beads', 'Recycled solid 18 karat gold', 'certified recycled'; web PDP badge 'Earth-Conscious Production'."
+  },
+  {
+   "id": "HLR-S02",
+   "topic": "sourcing",
+   "severity": "needs_legal",
+   "title": "Natural, genuine and untreated stones; grades and quality",
+   "lemmas": [
+    "untreated",
+    "heat treated",
+    "unheated",
+    "genuine",
+    "high grade",
+    "aaa",
+    "all natural"
+   ],
+   "triggers": [
+    "\\bnatural\\s+(crystal|crystals|stone|stones|gemstone|gemstones|gems)\\b",
+    "\\breal\\s+(crystal|crystals|gemstone|gemstones|gold|silver)\\b",
+    "\\bauthentic\\s+(natural\\s+)?(crystal|crystals|stone|stones|citrine|quartz|turquoise)\\b",
+    "\\bhigh[- ]quality\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1) and HLR's supplier records for treatment and grade.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'natural / genuine / ethically sourced stone' 21 products; site text 'AAA-grade, not heat-treated', 'high quality, untreated natural crystals'; corpus: email 6 lines, social 1."
+  },
+  {
+   "id": "HLR-O01",
+   "topic": "origin",
+   "severity": "needs_legal",
+   "title": "Origin, place of making, handmade and one of a kind",
+   "lemmas": [
+    "handmade",
+    "hand made",
+    "handcrafted",
+    "hand crafted",
+    "hand strung",
+    "hand selected",
+    "hand picked",
+    "hand carved",
+    "handwoven",
+    "hand woven",
+    "artisan",
+    "artisanal",
+    "one of a kind"
+   ],
+   "triggers": [
+    "\\bmade (in|by hand|by an?)\\b",
+    "\\b(crafted|designed|sourced|mined|carved|strung|blessed) (in|from)\\s+[A-Z]",
+    "\\bwestport\\b",
+    "\\bnot mass[- ]?(made|produced)\\b"
+   ],
+   "requires": "A ruling from HLR's claims signer (not yet named; C2, Review 1) and HLR's confirmation of where and by whom each piece is made.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'handmade / hand-' 95 products, 'made in / artisan' 1 ('Made in America'); site 'Handmade & Shamanically Activated in Westport, CT'; corpus: paid 'Handmade in America', email 'handcrafted heirlooms'. [documented p34] the book's caption example names an artist in Rome; p29 asks copy to tell 'where it's from, and how it's made'.",
+   "note": "Place words inside product names (for example 'Peruvian Turquoise') are not triggers here, so a verifier reads them: paraphrase_risk.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-K01",
+   "topic": "materials",
+   "severity": "conditional",
+   "title": "Metal and karat",
+   "lemmas": [
+    "karat",
+    "solid gold",
+    "gold filled",
+    "vermeil",
+    "gold plated",
+    "sterling silver",
+    "rose gold",
+    "platinum"
+   ],
+   "triggers": [
+    "\\b(9|10|14|18|22|24)\\s?k(t|arat)?\\b",
+    "\\b925\\b"
+   ],
+   "requires": "The metal and karat exactly as the product database carries them for the piece named, from HLR's Shopify export (products.json gap: metals and karat by variant; Review 1). A person confirms and records it; nothing machine-checks it yet.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: '14k / 18k / solid gold' 89 products, 'gold filled' 57, 'sterling silver' 83; corpus: email 36 lines, social 17, paid 29 ('18k solid gold Recycled'). The figure rule blocks a karat number the facts layer does not carry."
+  },
+  {
+   "id": "HLR-K02",
+   "topic": "materials",
+   "severity": "conditional",
+   "title": "Durability, water, tarnish and guarantees",
+   "lemmas": [
+    "waterproof",
+    "water resistant",
+    "tarnish resistant",
+    "tarnish free",
+    "warranty",
+    "guarantee",
+    "guaranteed",
+    "durable"
+   ],
+   "triggers": [
+    "\\bwon[’']t tarnish\\b",
+    "\\bnever tarnish",
+    "\\blifetime (warranty|guarantee)\\b"
+   ],
+   "requires": "The care facts as the product database carries them (none yet: descriptions are empty), and HLR's written policy for any guarantee or warranty.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'waterproof / tarnish' 93 products, 'lifetime / guarantee / warranty' 0; corpus: 'durable' 6 email lines; pattern review: 'Satisfaction guranteed' in a paid frame (2:194032)."
+  },
+  {
+   "id": "HLR-M01",
+   "topic": "metaphysical",
+   "severity": "conditional",
+   "title": "Protection and warding stated as what the piece does",
+   "triggers": [
+    "\\bprotects?\\s+(you|your|against|from|the wearer)\\b",
+    "\\bprotection (from|against)\\b",
+    "\\bshields?\\s+(you|your)\\b",
+    "\\bwards?\\s+off\\b",
+    "\\b(deflect|deflects|absorb|absorbs|repel|repels|banish|banishes|block|blocks|clear|clears|dispel|dispels|draw|draws)\\s+(away\\s+)?(negativity|negative energ(y|ies)|bad vibes|evil)\\b",
+    "\\bpsychic protection\\b",
+    "\\bevil eye protection\\b",
+    "\\b(designed|made|crafted|meant|here) to (protect|shield|guard|ward)\\b",
+    "\\bdefends? (you\\s+)?against\\b",
+    "\\bkeeps? you (protected|safe|shielded|guarded)\\b",
+    "\\bshield(s|ing)?\\s+(yourself\\s+|you\\s+)?(from|against)\\b",
+    "\\bfor (daily )?defense\\b",
+    "\\b(deflect|deflects|deflecting|release|releases|releasing)\\s+(negativity|negative energ(y|ies))\\b"
+   ],
+   "trigger_format": "regex",
+   "requires": "HLR's C2 ruling on how far spiritual benefit may go, then a person's sign-off on each use. Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect. Any piece that carries one also carries the footer disclaimer (HLR-REQ-01).",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'protect' 50 products, 'ward off / repel / shield' 33, 'negativity' 49; corpus: 'Protect your energy', 'grounds and protects your energy', paid 'blocks evil eye & boosts divine defenses'. [documented p37] the book's own example: 'known to ward off negativity'.",
+   "paraphrase_risk": true,
+   "note": "Product names that carry 'Protection' (Seeds of Protection, Birthstone Protection Amulet) are not triggers; the claim forms are."
+  },
+  {
+   "id": "HLR-M02",
+   "topic": "metaphysical",
+   "severity": "conditional",
+   "title": "Abundance, luck, love and manifestation stated as an outcome",
+   "lemmas": [
+    "attract",
+    "manifest",
+    "manifestation",
+    "law of attraction",
+    "luck",
+    "lucky",
+    "good fortune",
+    "prosperity"
+   ],
+   "triggers": [
+    "\\battract(s|ing)?\\s+(more\\s+)?(abundance|wealth|money|luck|love|success|prosperity|opportunit\\w*|your soulmate)\\b",
+    "\\bbrings?\\s+(you\\s+)?(luck|wealth|money|love|success|abundance)\\b",
+    "\\bcall(s|ing)? in\\s+(abundance|wealth|money|love)\\b",
+    "\\b(invite|invites|inviting)\\s+(abundance|wealth|luck|money|prosperity)\\b"
+   ],
+   "requires": "As HLR-M01: C2, then a sign-off per use, framed as intention, never as a result.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'abundance / wealth / prosperity' 20 products, 'manifest / attract / luck' 29; corpus: 'This lucky stone of opportunity', paid 'Attracts love', 'THE “MERCHANT’S STONE” attracts success'.",
+   "note": "'Abundance' alone is one of the book's sensual words (p29) and is not a trigger; 'attract abundance' is.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-M03",
+   "topic": "metaphysical",
+   "severity": "conditional",
+   "title": "Energy work done to the piece: activated, charged, infused, blessed",
+   "lemmas": [
+    "activate",
+    "activation",
+    "energetically",
+    "infused",
+    "hand charged",
+    "attuned",
+    "hand blessed",
+    "spellwork"
+   ],
+   "triggers": [
+    "\\bcharged (with|by|under|in)\\b",
+    "\\bblessed (by|with|under|in)\\b",
+    "\\benergy[- ]charged\\b"
+   ],
+   "requires": "HLR's C2 ruling, and HLR's confirmation that the process happens for the piece named.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'charged / blessed / infused' 32 products, 'healer-activated / activated' 32; corpus: 'charged and blessed by the founder', paid 'Charged by an Energy Healer & packaged in a ceremony', 'Energy-infused Fine Jewelry'; web PDP badge 'Energy-Charged'. Brand Review v2 C2: the live positioning 'Healer-Activated'."
+  },
+  {
+   "id": "HLR-M04",
+   "topic": "metaphysical",
+   "severity": "conditional",
+   "title": "Chakra, vibration, frequency and aura",
+   "lemmas": [
+    "chakra",
+    "vibration",
+    "high vibration",
+    "frequency",
+    "aura",
+    "energy field"
+   ],
+   "triggers": [
+    "\\braise(s)? your vibe",
+    "\\bbalance(s)? (your )?(energy|chakras)\\b"
+   ],
+   "requires": "As HLR-M01.",
+   "ruling": null,
+   "evidence": "[observed] claims scan: 'chakra' 34 products, 'vibration / frequency' 29; corpus: 'promotes alignment of the chakras', paid 'Balance your energy'. The two products with the non-stone tail 'Chakra' trip it by name."
+  },
+  {
+   "id": "HLR-M05",
+   "topic": "metaphysical",
+   "severity": "conditional",
+   "title": "Stone meaning stated as an outcome",
+   "triggers": [
+    "\\b(boost|boosts|enhance|enhances|amplify|amplifies|heighten|heightens|increase|increases|promote|promotes|restore|restores|cleanse|cleanses|unblock|unblocks|release|releases)\\s+(your\\s+)?(\\w+\\s+)?(intuition|clarity|confidence|courage|focus|energy|creativity|self[- ]love|love|abundance|aura|chakras?|blocks|negativity|emotions|optimism|awareness|vitality|radiance)\\b",
+    "\\bhelps?\\s+(you\\s+|us\\s+|her\\s+|him\\s+|them\\s+)?(attract|release|heal|manifest|let go of|overcome|calm|soothe|find your balance|restore|balance|ground|clear|open your heart|feel|stay|keep|navigate|identify)\\b",
+    "\\b(calm|calms|soothe|soothes|soothing)\\s+(your\\s+|the\\s+)?(mind|nerves|heart|spirit|soul|emotions)\\b"
+   ],
+   "trigger_format": "regex",
+   "requires": "As HLR-M01. A stone's meaning is said as what the stone has long stood for, never as what it will do for the reader.",
+   "ruling": null,
+   "evidence": "[observed] corpus: paid annotated builds 'BOOST INTUITION', 'calm the mind'; social 'boosts confidence'; email 'helps release negativity'. Lane D: annotated and meaning types carry high claims exposure.",
+   "paraphrase_risk": true
+  },
+  {
+   "id": "HLR-T01",
+   "topic": "endorsements",
+   "severity": "conditional",
+   "title": "Reviews, press, ratings and popularity",
+   "lemmas": [
+    "bestseller",
+    "best seller",
+    "best selling",
+    "award winning",
+    "customer favorite",
+    "fan favorite",
+    "cult favorite"
+   ],
+   "triggers": [
+    "\\bas seen (in|on)\\b",
+    "\\bfeatured (in|on|by)\\b",
+    "\\bloved by\\b",
+    "\\bvoted\\b",
+    "\\b(five|5)[- ]star (review|rating|rated)",
+    "(★\\s*){3,}"
+   ],
+   "requires": "The verbatim source: a review in Judge.me or a press piece with its URL, held in customer evidence. Never written, never paraphrased into a quote (Brand Review v2 Q7).",
+   "ruling": null,
+   "evidence": "[observed] corpus: 'as seen in' (social, paid), 'best-selling Seeds Collection', 'Save 25% on our bestsellers', a five-star review card in paid. Brand Review v2 Q7: 20 quote-like lines in email and 11 in social need sourcing before reuse."
+  },
+  {
+   "id": "HLR-T02",
+   "topic": "identity",
+   "severity": "conditional",
+   "title": "Ownership and identity claims",
+   "lemmas": [
+    "black owned",
+    "mother led",
+    "woman owned",
+    "women owned",
+    "family rooted",
+    "family owned",
+    "minority owned",
+    "bipoc owned",
+    "female founded",
+    "woman founded"
+   ],
+   "requires": "HLR's own wording, confirmed by HLR as current, for any ownership or identity line; never paraphrased.",
+   "ruling": null,
+   "evidence": "[documented p6] 'High Light is proudly Mother-led, Black-owned, and committed to the Collective.' [observed] corpus: paid 'Black owned, Mother led', email 'As a mother-led company', a social draft 'proudly Mother led, Black owned, and Family rooted'; claims scan: 'mother-led / Black-owned' 0 products."
+  },
+  {
+   "id": "HLR-P01",
+   "topic": "offers",
+   "severity": "conditional",
+   "title": "Offer terms: free shipping, gifts with purchase, codes, sale windows",
+   "lemmas": [
+    "free shipping",
+    "gift with purchase",
+    "free gift",
+    "sitewide",
+    "discount",
+    "promo code"
+   ],
+   "triggers": [
+    "\\buse code\\b",
+    "\\b\\d+\\s?% off\\b",
+    "\\bends (tonight|today|soon|at midnight|sunday|monday)\\b",
+    "\\blast chance\\b"
+   ],
+   "requires": "Every figure, threshold, code and date as a merge token until HLR rules C10 ({{ free_shipping_threshold }}, {{ discount_code }}); a person confirms the terms against the brief.",
+   "ruling": null,
+   "evidence": "[observed] Brand Review v2 C10: free shipping at three thresholds, codes LIGHT25 and LIGHT30, '30% off sitewide'; corpus: email 51 offer lines, paid 14."
+  },
+  {
+   "id": "HLR-REQ-01",
+   "topic": "required_language",
+   "severity": "info",
+   "title": "The site footer disclaimer, verbatim",
+   "triggers": [
+    "not intended to diagnose or treat ailments"
+   ],
+   "trigger_format": "literal",
+   "requires": "Carried verbatim, never paraphrased, in the footer of every email and on every product page, and wherever a line carries a health-adjacent or metaphysical benefit (the M entries). Brief-fed into the disclaimer slot. Whether paid and organic social carry it, and in what form, is HLR's to rule (C2).",
+   "ruling": null,
+   "evidence": "[observed] highlightrituals.com footer, read 2026-10-17 (outputs/step-1-review/site/claims-scan-2026-10-17.md). Brand Review v2 Q1: the only required language found.",
+   "required_language": "We have experienced the transformative power of crystals and stones firsthand, but we do not consider energy work to be a substitute for medical treatment. Our products are not intended to diagnose or treat ailments.",
+   "note": "Status info, so no lint blocks on it: the lints check required language line by line, and a footer is its own slot. The literal trigger records each run that carries it. Every trigger in this ledger and every prohibited pattern is tested against this text and must not match it."
+  }
+ ]
+}

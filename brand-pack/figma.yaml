@@ -1,16 +1,23 @@
 # HLR Figma state. Read before any Figma call; write every id here the moment it is created.
-# 2026-10-17, Steps 1 and 1b: nothing built. file_key stays null until Gate 3 confirms the file.
+# 2026-10-17: Gate 3 ruled (DECISIONS; outputs/step-4-figma/gate-3-conventions.md). file_key confirmed.
+# 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
 slots:
   namespace: hlr
   key: slot                  # setSharedPluginData('hlr', 'slot', '<prefix>##.role')
-  prefixes: null             # set at Gate 4
+  prefixes: { module: W, element: E, social: S, email: M, paid: P, template: T }   # Gate 3 call 10, 2026-10-17. module is the engine's key for web masters; W and P reserved until scope (Q11)
 figma:
-  file_key: null             # Gate 1 (c), 2026-10-17: library file Gq3yUbLs6MCRM0nOhjvnIW (Highlight-Rituals-Design-Forge, clean); written here at Gate 3
-  file_name: null
-  pages: null
+  file_key: Gq3yUbLs6MCRM0nOhjvnIW   # Gate 1 (c) chose it; Gate 3 confirmed it, 2026-10-17
+  file_name: HLR Library   # renamed by Eddie in Figma, 2026-10-17 (Gate 3 call 1 b; was Highlight-Rituals-Design-Forge)
+  pages: { "00 Foundations": "0:1", "01 Elements": "7:2", "02 Modules": "7:3", "03 Templates": "7:4", "04 Staging": "7:5" }   # 2026-10-17
+  boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; empty until Pack v0 tokens
   breakpoints: null
 fonts:
+  build_stand_ins: { "Saol Display": "Instrument Serif", "Saol Standard": "Instrument Serif", "Trade Gothic LT Std": "Inter" }   # Gate 3 call 7, path 1: the build sets these; Eddie switches the family variables to the real faces in the desktop app
+  build_stand_in_styles:     # Gate 2 question 2 (Eddie, 2026-10-18): per stand-in family, real style -> stand-in style; Inter carries Trade Gothic's Regular and Bold
+    "Instrument Serif": { "Light": "Regular", "Light Italic": "Italic", "Regular Italic": "Italic", "Medium": "Regular" }
   licensed: false            # raised until every production face is confirmed. Evidence, 2026-10-17:
+                             #   Build path (Figma connector, 2026-10-17): Homemade Apple and Instrument Serif load; Saol and
+                             #   Trade Gothic do not (installed on the Mac only; a Pro team cannot host fonts)
                              #   Instrument Serif: SIL OFL 1.1 (LICENSE in instrument-serif.zip): cleared
                              #   Homemade Apple: Apache 2.0 (LICENSE in homemade-apple.zip): cleared
                              #   Saol Display, Saol Standard: no license file
@@ -20,13 +27,19 @@ fonts:
 lengths:
   min_flex_multiple: 2       # engine default (probe every body slot at 2x)
 variable_ids: {}
+collection_ids:                    # 2026-10-17, Gate 3 scaffold: collection id, then each mode's id
+  primitives: { id: "VariableCollectionId:7:6", default: "7:0" }
+  semantic: { id: "VariableCollectionId:7:7", light: "7:1" }      # ground modes; the alternates are named at Gate 4
+  component: { id: "VariableCollectionId:7:8", default: "7:2" }
+  layout: { id: "VariableCollectionId:7:9", default: "7:3" }
 variables:
-  css_prefix: null
-  extensions_namespace: null
+  css_prefix: --hlr-               # Gate 3 call 6
+  extensions_namespace: com.hlr     # Gate 3 call 6
   collections:
-    primitives: null
-    semantic: null
-    layout: null
+    primitives: HLR / Primitives
+    semantic: HLR / Semantic
+    component: HLR / Component
+    layout: HLR / Layout
 # Client files, read-only (rule 5); never written:
 #   HLR-EMAIL   CTaCEg0sZt40DIq1zH6cqi   full 4603:2; current templates 4998:1769
 #   HLR-Social  qpUX1PrWbYUgUMbyHIRmNY   full and main grid 8565:3704; templates 8024:2946

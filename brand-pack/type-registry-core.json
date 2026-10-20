@@ -1,0 +1,498 @@
+{
+ "_role": "type_registry_core",
+ "_status": "ratified in part: email and organic social (Gate 2 call 1 b, 2026-10-18); paid and web held for Review 2",
+ "_note": "HLR's content-type taxonomy (role type_registry_core). Ratified in part by Eddie on 2026-10-18 (Gate 2 call 1 b, DECISIONS): email and organic social are the copy engines' contract. Paid and web are ratified at Review 2 with the first masters; until then their rosters sit under `held_for_review_2`, a key the engine does not read, so paid briefs run on the engine's bundled ad types (paid-ad-copy references/ad-type-data.json) and say so, and web briefs wait (the engine ships no web roster to fall back to). Built 2026-10-18 by lane D from outputs/step-1-review/pattern-review.md, its addendum and patterns/*.md; nothing from memory. Tags: [observed] the live work shows it (node ids in the reference file LYyYXPDUHVoAABh865EvMI); [documented] the brand book states it (pN); [derived] our proposal, ratified where a status says so. `types` holds the email content types, keyed by id, because copy_lint.js and preflight.py read `types` as the email registry; organic social sits under `channels`. Email module ids (M##) are assigned by Chat 6 with brand-pack/slotmap.yaml, so `sections` names module jobs from the pattern review's skeleton (section 4.3), not module ids.",
+ "version": "0.2.0",
+ "built": "2026-10-18",
+ "ratification": {
+  "by": "Eddie",
+  "on": "2026-10-18",
+  "ruling": "Gate 2 call 1 b: ratify email and social now, paid and web at Review 2 with the first masters; paid and web briefs fall back to the engine's generic roster meanwhile",
+  "google_formats": "Gate 2 call 1, Google a: no overlaid copy and no drawn CTA on Google art",
+  "record": "DECISIONS.md 2026-10-18; outputs/step-2-pack/structure-notes.md section 2"
+ },
+ "sources": [
+  "outputs/step-1-review/pattern-review.md (sections 2, 3, 4)",
+  "outputs/step-1-review/pattern-review-addendum.md",
+  "outputs/step-1-review/patterns/patterns-email.md (template masters, sends by era)",
+  "outputs/step-1-review/patterns/patterns-social.md, patterns-paid.md, patterns-web-other.md",
+  "outputs/step-1-review/brand-review-v2.md",
+  "DECISIONS.md 2026-10-17 (Gate 1: C3, C4, C5, C6, C8, Q10, Q11, Gate 1 (b))"
+ ],
+ "module_jobs": {
+  "_note": "[derived] The one set of module jobs every channel shares (pattern-review 4.3). A channel changes layout values and which jobs it uses, never the job.",
+  "chrome.header": "wordmark bar or lockup (E-H1, E-H2)",
+  "chrome.promo_bar": "one offer or notice line with a long arrow (E-M18)",
+  "chrome.footer": "sign-off: nav footer, stacked footer, social footer, follow block (E-F0, E-F1, E-M20, E-P6)",
+  "hero": "image header with overlay copy (E-M17, E-H3)",
+  "spotlight": "one product: feature split, The Edit, numbered split (E-M01, E-M09, E-M14)",
+  "text_block": "header and body arrangements (E-M03 to E-M07, E-M11)",
+  "image": "image on a mat or full bleed (E-M12)",
+  "cta": "outline caps box, the C6 primary (E-M16)",
+  "rule": "hairline divider (E-M19)",
+  "product_grid": "shop grid, 2 or 3 columns, data-fed from the product database (E-M15, E-P1)",
+  "quote": "review split or centered review; sourced quotes only (E-M02, E-M08)",
+  "letter": "founder letter with signature (E-P2)",
+  "mantra": "affirmation or mantra (E-P3)",
+  "offer": "offer block, code line or struck price; merge tokens until C10 (E-P4, E-M11 offer variant)",
+  "meaning": "spec rows: stone, design, material (E-P5)",
+  "collage": "offset two-image collage or moodboard (E-M13, E-M10)",
+  "flow_card": "transactional card with a dynamic block (E-P7)"
+ },
+ "types": {
+  "product_spotlight": {
+   "label": "Product spotlight",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["chrome.header", "spotlight", "text_block", "image", "cta", "image", "text_block", "cta", "chrome.promo_bar", "chrome.footer"],
+   "observed_sequence": "H1>M01>M03>M12>M16>M12>M06>M16>M18 FO>F1",
+   "template_nodes": ["2:563"],
+   "evidence": "[observed] Product Spotlight template at 1200 (Lorem copy), one of the five most-used templates",
+   "content": "names and prices resolve through the product database; prices as merge tokens"
+  },
+  "product_listing": {
+   "label": "Product listing",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["chrome.header", "hero", "text_block", "product_grid", "chrome.footer"],
+   "observed_sequence": "H1>M17>M07>M15 2x4>F1",
+   "template_nodes": ["2:683"],
+   "evidence": "[observed] Product Listing template at 1200",
+   "content": "the grid is data-fed from the product database"
+  },
+  "product_launch": {
+   "label": "Product launch",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["hero", "spotlight", "product_grid", "cta", "chrome.footer"],
+   "observed_sequence": null,
+   "template_nodes": [],
+   "evidence": "[observed] the E-H3 hero with an \"INTRODUCING\" eyebrow (14 layers) and launch story sets; no launch template exists, so `sections` is [derived]",
+   "content": "the launch eyebrow is a hero variant (pattern-review 4.3)"
+  },
+  "editorial_letter": {
+   "label": "Editorial send: founder letter, product notes, affirmation",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["hero", "chrome.promo_bar", "letter", "product_grid", "text_block", "quote", "mantra", "chrome.footer"],
+   "observed_sequence": "H3>M18 grey (order cutoff)>P2>P1 2x2 x2>grey block (M04, review split)>P3>footnote",
+   "template_nodes": ["2:9", "2:1478", "2:1767", "2:251", "2:481"],
+   "evidence": "[observed] the 2026 sends at 700 (8 of 14 carry a founder letter); C8 rebuilds them as 1200 masters with slice-sized type",
+   "content": "the letter is the voice contract's work; quotes sourced only"
+  },
+  "the_edit": {
+   "label": "The Edit: curated pieces with short notes",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["chrome.header", "hero", "cta", "rule", "spotlight", "rule", "spotlight", "cta", "chrome.footer"],
+   "observed_sequence": "H2>image+SD head+M16>(M19>M09) x4>signed close+M16",
+   "template_nodes": ["2:30619", "2:1330"],
+   "evidence": "[observed] The Edit module (E-M09, 7 frames) and the 7/7 and event sends; pattern-review 4.4 groups 2:1330 with the editorial sends",
+   "content": "spotlights repeat; the close may be signed"
+  },
+  "monthly_ritual": {
+   "label": "Monthly ritual: energy medicine, zodiac season, birthstone month",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["hero", "letter", "text_block", "product_grid", "text_block", "chrome.footer"],
+   "observed_sequence": "H3>P2+ON filled \"READ MORE\">M04>P1 2x2>AL block>tail",
+   "template_nodes": ["2:31200"],
+   "evidence": "[observed] \"9/30 - October energy medicine\" send; the same series runs monthly in organic social (S-ENERGY)",
+   "content": "meaning lines are claims (C2): the ledger governs them"
+  },
+  "testimonials": {
+   "label": "Testimonials",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["chrome.header", "image", "quote", "quote", "quote", "product_grid", "image", "quote", "chrome.footer"],
+   "observed_sequence": "H1 FO>M12+M08 FO>M02 L>M02 R>M15 2x1+head AL>M12+M08 FA>F1",
+   "template_nodes": ["2:809"],
+   "evidence": "[observed] Testimonials template at 1200; its quotes are library defaults with Lorem and a placeholder attribution",
+   "requires_verbatim": true,
+   "content": "every quote is a real customer's words, sourced in Judge.me (Brand Review v2 Q7); none is written"
+  },
+  "moodboard": {
+   "label": "Moodboard",
+   "status": "ratified",
+   "gates": ["angle", "hero", "cta", "subject"],
+   "sections": ["chrome.header", "image", "text_block", "cta", "collage", "text_block", "image", "text_block", "cta", "spotlight", "spotlight", "chrome.footer"],
+   "observed_sequence": "H1>M12+M04+M16>M13>M04 \"01 /\">M12+M04 \"02 /\"+M16>M14 L>M14 R>F1",
+   "template_nodes": ["2:913", "2:1696"],
+   "evidence": "[observed] Moodboard template at 1200",
+   "content": "imagery needs usage rights (rule 8)"
+  },
+  "offer_launch": {
+   "label": "Offer launch: sale, holiday event",
+   "status": "ratified",
+   "gates": ["angle", "hero", "offer", "cta", "subject"],
+   "sections": ["chrome.header", "offer", "image", "text_block", "cta", "product_grid", "rule", "chrome.footer"],
+   "observed_sequence": "H1>M11 offer>M12>M05+M16>M15 2x2+head>M19>F1",
+   "template_nodes": ["2:984", "2:2153"],
+   "evidence": "[observed] Sale template at 1200 and the holiday 2025 sends (codes LIGHT25, LIGHT30, struck prices)",
+   "content": "percent, code, threshold and dates are merge tokens until C10 lands"
+  },
+  "offer_urgency": {
+   "label": "Offer urgency: ends soon",
+   "status": "ratified",
+   "gates": ["hero", "offer", "cta", "subject"],
+   "gates_note": "No angle gate: a reminder send takes one copy family.",
+   "sections": ["hero", "offer", "cta"],
+   "observed_sequence": "H3>M11 offer+code link>tail",
+   "template_nodes": ["2:3434"],
+   "evidence": "[observed] the E-M11 offer variant \"THIS WEEK ONLY\" (5 of 28 sends) and the short holiday offer send",
+   "content": "merge tokens for the offer and the end date"
+  },
+  "welcome": {
+   "label": "Welcome series (lifecycle)",
+   "status": "ratified",
+   "gates": ["hero", "offer", "cta", "subject"],
+   "gates_note": "Lifecycle: no angle gate, one copy family per step.",
+   "sections": ["chrome.header", "image", "letter", "offer", "spotlight", "cta", "offer", "chrome.footer"],
+   "observed_sequence": "H2>M12>P2 justified>AL block (M11, DIVINE10 line)>zigzag x3+M16>code line>P6",
+   "template_nodes": ["2:8838", "2:193003"],
+   "evidence": "[observed] Welcome 1 to 5 (board 2:193003 holds 3 to 5) and the 2026 welcome at 700; a WELCOME 10% line appears 31 times in the corpus",
+   "content": "the welcome offer stays a merge token (C10); justified body retires (pattern-review 5)"
+  },
+  "browse_abandon": {
+   "label": "Browse abandonment flow",
+   "status": "ratified",
+   "gates": ["hero", "cta", "subject"],
+   "gates_note": "Flow: no angle gate, one copy family. Add the offer gate only if HLR's flows carry an offer (C10).",
+   "sections": ["chrome.header", "image", "text_block", "cta", "chrome.promo_bar", "chrome.footer", "chrome.footer"],
+   "observed_sequence": "H2>M12>M04+M16>M18>M20>F1",
+   "template_nodes": ["2:189609"],
+   "evidence": "[observed] flow at 1200"
+  },
+  "cart_abandon": {
+   "label": "Cart abandonment flow",
+   "status": "ratified",
+   "gates": ["hero", "cta", "subject"],
+   "gates_note": "Flow: no angle gate, one copy family. Two cart flows exist; which step each is waits for HLR's ESP setup.",
+   "sections": ["chrome.header", "text_block", "image", "text_block", "cta", "text_block", "chrome.promo_bar", "chrome.footer", "chrome.footer"],
+   "observed_sequence": "H2>M04>M12>M05>M16>M05>M18>M20>F1 | H3>founder quote>star>M04>P5 x4>M16>grey block",
+   "template_nodes": ["2:189904", "2:190749"],
+   "evidence": "[observed] cart flow and abandoned-cart flow at 1200; the second carries spec rows (E-P5)",
+   "content": "spec rows (meaning) resolve through the product database and the ledger"
+  },
+  "checkout_abandon": {
+   "label": "Checkout abandonment flow",
+   "status": "ratified",
+   "gates": ["hero", "cta", "subject"],
+   "gates_note": "Flow: no angle gate, one copy family.",
+   "sections": ["hero", "text_block", "text_block", "quote", "text_block", "cta", "chrome.footer"],
+   "observed_sequence": "H3>M04+empty gap>M05>M02 AL>M11+M16>F1",
+   "template_nodes": ["2:191052"],
+   "evidence": "[observed] Checkout V2 at 1200 (an image gap and a typo to fix: pattern-review 5)"
+  },
+  "transactional": {
+   "label": "Transactional card",
+   "status": "ratified",
+   "gates": ["hero", "subject"],
+   "gates_note": "Transactional: facts first, no angle, no offer.",
+   "sections": ["flow_card"],
+   "observed_sequence": null,
+   "template_nodes": ["2:194032"],
+   "evidence": "[observed] a board of 3 cards with a \"DYNAMIC BLOCK\" slot; whether HLR's ESP sends these is open (Review 1)"
+  }
+ },
+ "channels": {
+  "email": {
+   "_status": "ratified (Gate 2 call 1 b, 2026-10-18)",
+   "types": [
+    "product_spotlight",
+    "product_listing",
+    "product_launch",
+    "editorial_letter",
+    "the_edit",
+    "monthly_ritual",
+    "testimonials",
+    "moodboard",
+    "offer_launch",
+    "offer_urgency",
+    "welcome",
+    "browse_abandon",
+    "cart_abandon",
+    "checkout_abandon",
+    "transactional"
+   ],
+   "masters": "1200 wide, type sized for image slices (body 45, small 35); live-text sizes (body 28, small 22) if HLR's ESP sends live copy. C8, DECISIONS 2026-10-17",
+   "send_format": "[observed] 2026 sends ship as image slices at 700 (2:9 holds 10 slices); the ESP and how it builds sends are HLR's to confirm (Review 1). [observed] Klaviyo forms on the site",
+   "module_ids": "M## (Gate 3 call 10). Assigned by Chat 6 with brand-pack/slotmap.yaml; `sections` above name jobs until then",
+   "held": [
+    {"what": "the send \"Anxiety Calming Pieces\" (2:1092) and any health-adjacent send", "until": "C2 positioning and claims (HLR, Review 1)"}
+   ],
+   "compliance": "[observed] 13 of 19 sends carry no footer in frame and one carries an unsubscribe line and postal address (addendum 8): whether the ESP appends them is HLR's to confirm"
+  },
+  "social": {
+   "_status": "ratified (Gate 2 call 1 b, 2026-10-18)",
+   "_note": "Organic Instagram. The post formats and their gates are engine data (social-copy/references/gate-data.json FORMATS: feed_post S01, carousel S03, story_set S04). HLR's types and series are brand data and live here; the masters and their slots live in slotmap_social (brand-pack/slotmap-social.yaml).",
+   "formats": {
+    "feed_post": {"master": "S01", "ratios": ["4x5"], "evidence": "[observed] 378 feed frames at 4:5 plus 87 nested in Sept to Oct 2026; 27 older 1:1 retire to 4:5"},
+    "carousel": {
+     "master": "S03",
+     "ratios": ["4x5"],
+     "build_modes": ["gutter"],
+     "evidence": "[observed] carousels now carry the feed: about 5 feed frames a posting day in Sept to Oct 2026; the 2023 strips with gutters retire to separate 4:5 frames (pattern-review 5)"
+    },
+    "story_set": {"master": "S04", "ratios": ["9x16"], "structures": ["text", "inset", "full_bleed", "split"], "evidence": "[observed] about 525 story frames; Gate 1 (b) recipes"}
+   },
+   "types": {
+    "launch": {
+     "label": "Launch",
+     "formats": ["story_set", "carousel"],
+     "patterns": ["ST-FULL", "S-PHOTOTEXT"],
+     "evidence": "[observed] Launch 34, Launch Story 13, Spell Bracelets 40 story frames"
+    },
+    "product_spotlight": {"label": "Product spotlight", "formats": ["story_set", "feed_post"], "patterns": ["ST-SPLIT", "S-PHOTOTEXT"], "evidence": "[observed] zodiac families, 100 split story frames"},
+    "annotated_product": {
+     "label": "Annotated product",
+     "formats": ["carousel", "story_set"],
+     "patterns": ["S-ANNOT"],
+     "evidence": "[documented p48 to p50] annotations; [observed] 9 feed and 32 story frames",
+     "content": "callout words come from the claims ledger"
+    },
+    "education": {
+     "label": "Education: stone meaning, ritual how-to",
+     "formats": ["carousel"],
+     "patterns": ["S-LONG", "S-PHOTOTEXT"],
+     "evidence": "[observed] 11 long-copy slides; question-led headline tiles",
+     "content": "meaning and benefit lines are claims (C2)"
+    },
+    "mantra": {
+     "label": "Mantra or affirmation",
+     "formats": ["feed_post", "story_set", "carousel"],
+     "patterns": ["S-TEXT", "ST-TEXT", "C-STRIP"],
+     "evidence": "[observed] 12 sign affirmations; Moon story set 34; [documented p35] the HIGH SPIRITS lineage"
+    },
+    "quote": {
+     "label": "Quote: customer, founder, philosophy",
+     "formats": ["feed_post", "story_set"],
+     "patterns": ["S-TEXT", "ST-INSET"],
+     "requires_verbatim": true,
+     "evidence": "[observed] 11 quote-like lines in social",
+     "content": "customer quotes sourced in Judge.me; none is written"
+    },
+    "offer": {"label": "Offer", "formats": ["feed_post", "story_set"], "patterns": ["S-OFFER"], "evidence": "[observed] 3 offer tiles, 8 sale stories", "content": "merge tokens until C10"},
+    "photo": {
+     "label": "Photo post (no text on the art)",
+     "formats": ["feed_post"],
+     "patterns": ["S-PHOTO"],
+     "evidence": "[observed] text-free grid share 6 of 23 in Sept to Oct 2026; reel covers are photo-only 4:5",
+     "content": "the caption carries the copy; imagery needs usage rights"
+    }
+   },
+   "series": {
+    "_note": "[observed] recurring series, each a type with a fixed format and cadence. Cadence is what the file shows, not a commitment: HLR confirms the calendar.",
+    "words_for_your_journey": {
+     "label": "WORDS FOR YOUR JOURNEY",
+     "type": "mantra",
+     "format": "carousel",
+     "cadence": "weekly, Mondays (4 of 23 posts in the Oct 2026 calendar)",
+     "patterns": ["S-WFYJ"],
+     "nodes": ["2:181816", "2:181810"]
+    },
+    "energy_medicine": {
+     "label": "Energy medicine",
+     "type": "education",
+     "format": "carousel and story_set",
+     "cadence": "monthly",
+     "patterns": ["S-ENERGY"],
+     "nodes": ["2:181792", "2:182011"],
+     "content": "the \"CRYSTAL ALLIES\" slide is annotated; meaning lines are claims (C2)"
+    },
+    "field_notes": {
+     "label": "Field Notes",
+     "type": "annotated_product",
+     "format": "carousel and story_set",
+     "cadence": "not fixed in the file",
+     "patterns": ["S-ANNOT"],
+     "nodes": ["2:180130", "2:180877"]
+    },
+    "season_crystals": {
+     "label": "Zodiac season crystals",
+     "type": "education",
+     "format": "carousel",
+     "cadence": "with each zodiac season (May, Jun, Aug, Sep 2026 seen)",
+     "patterns": ["S-SEASON"],
+     "nodes": ["2:181620", "2:181993"]
+    },
+    "proof_of_magic": {
+     "label": "proof of magic",
+     "type": "photo",
+     "format": "carousel [derived: a monthly collection]",
+     "cadence": "monthly from Sept 2026 (1 tile, 1 calendar row)",
+     "patterns": ["S-PROOF"],
+     "nodes": ["2:181769"]
+    }
+   },
+   "captions": "[observed] captions sit in layers beside some posts (14 lines for 16 posting days in Sept to Oct 2026, labelled five ways); the Gate 1 (b) reason reads \"captions live in layers\". Where captions live stays an HLR question (Review 1)",
+   "not_planned": {
+    "highlight_covers": "ST-HL covers (6 at 1507x1468) carry no copy: an asset type for lane B, not a copy type",
+    "reel_cover": "S02 is not planned: HLR's reel covers are photo-only 4:5 (2:181774), which S01's photo structure covers"
+   }
+  }
+ },
+ "held_for_review_2": {
+  "_note": "Held, not live. Paid and web are ratified at Review 2 with the first masters (Gate 2 call 1 b). The engine reads `channels`, never this key: paid-ad-copy finds no `channels.paid` and runs on its bundled roster, saying so; web-copy stops while the File map leaves `section_library` null. At Review 2 the ratified parts move back under `channels`.",
+  "paid": {
+   "_status": "held for Review 2 (Gate 2 call 1 b)",
+   "_note": "HLR's live paid roster (paid-ad-copy reads channels.paid; its ad-type-data.json is the engine fallback). Ids are HLR's own; `engine_type` names the engine type whose copy shape fits, or null where none does. Placements are platform names; their numbers (safe zones, Meta copy limits) stay in the engine's placement-specs.json. In-frame copy fits the planned masters in slotmap_paid (brand-pack/slotmap-paid.yaml). [observed] no CTA is drawn in Meta art: the platform adds it.",
+   "placements": {"meta": ["1x1 (1080x1080)", "4x5 (1080x1350)", "9x16 (1080x1920)"], "google": ["1.91x1 (1200x628)", "1x1 (1200x1200)"], "display": ["728x90", "300x250", "160x600"]},
+   "types": [
+    {
+     "id": "product_hero",
+     "label": "Product hero",
+     "status": "proposed",
+     "engine_type": null,
+     "shape": "One piece, cut out on a plain ground or inset on Alabaster: a caps eyebrow, the name in Saol, a caps subline. The product is the argument.",
+     "module": "P02",
+     "patterns": ["P-HERO", "P-INSET"],
+     "nodes": ["2:53235", "2:46166"],
+     "claims_exposure": "low: names resolve through the product database"
+    },
+    {
+     "id": "offer",
+     "label": "Offer",
+     "status": "proposed",
+     "engine_type": null,
+     "shape": "The offer is the headline, over full-bleed photo or beside the product; a gift with purchase names what comes free and on what terms.",
+     "module": "P06",
+     "patterns": ["P-OFFER", "P-GWP"],
+     "nodes": ["2:53265", "2:51663"],
+     "claims_exposure": "offer terms: percent, code, threshold and dates are merge tokens until C10"
+    },
+    {
+     "id": "annotated",
+     "label": "Annotated piece",
+     "status": "proposed",
+     "engine_type": "educational",
+     "shape": "The piece with one to four callouts on hairline leaders naming stones and materials; a build adds one callout per frame for motion.",
+     "module": "P03",
+     "patterns": ["P-ANNOT-BUILD", "P-ANNOT-MODEL", "P-STACK"],
+     "nodes": ["2:42498", "2:37799", "2:57502"],
+     "claims_exposure": "high: callout benefit lines (\"BOOST INTUITION\") are claims; the ledger governs every callout"
+    },
+    {
+     "id": "meaning",
+     "label": "Stone or material meaning",
+     "status": "proposed",
+     "engine_type": "educational",
+     "shape": "A material card (name and a one-line gloss) or a list of intention and stone pairs.",
+     "module": "P07",
+     "patterns": ["P-INGRED", "P-LIST"],
+     "nodes": ["2:47064", "2:54733"],
+     "claims_exposure": "high: meaning is a benefit claim (C2)"
+    },
+    {
+     "id": "birthstone_grid",
+     "label": "Birthstone grid",
+     "status": "proposed",
+     "engine_type": "listicle",
+     "shape": "Twelve months, each a tile with the piece, the month and the stone.",
+     "module": "P08",
+     "patterns": ["P-GRID"],
+     "nodes": ["2:57657"],
+     "claims_exposure": "tiles are data-fed (product database attributes.birth_month); any meaning line goes through the ledger"
+    },
+    {
+     "id": "brand_line",
+     "label": "Brand line",
+     "status": "proposed",
+     "engine_type": "text_forward",
+     "shape": "One Saol line with one italic accent word over a model photo, or the wordmark as a masthead with a short line.",
+     "module": "P01",
+     "patterns": ["P-LINE", "P-MAST"],
+     "nodes": ["2:50853", "2:60736"],
+     "claims_exposure": "positioning lines wait for C2 and C7 (\"witch within\", \"healing journey\")"
+    },
+    {
+     "id": "mantra",
+     "label": "Mantra",
+     "status": "proposed",
+     "engine_type": "text_forward",
+     "shape": "A short affirmation alone on an image or a flat ground, or built word by word for motion.",
+     "module": "P05",
+     "patterns": ["P-MANTRA"],
+     "nodes": ["2:47957"],
+     "claims_exposure": "health-adjacent mantras (\"In my healing era\") wait for C2"
+    },
+    {
+     "id": "press_quote",
+     "label": "Press quote",
+     "status": "proposed",
+     "engine_type": "testimonial",
+     "shape": "A publication's words in Saol with its logo under them.",
+     "module": "P04",
+     "patterns": ["P-PRESS"],
+     "nodes": ["2:36273"],
+     "requires_verbatim": true,
+     "claims_exposure": "verbatim and sourced; the publication's logo needs rights"
+    },
+    {
+     "id": "customer_review",
+     "label": "Customer review",
+     "status": "proposed",
+     "engine_type": "ugc_review",
+     "shape": "One or two short customer quotes over customer imagery.",
+     "module": "P04",
+     "patterns": ["P-REVIEW"],
+     "nodes": ["2:58872"],
+     "requires_verbatim": true,
+     "claims_exposure": "verbatim and sourced in Judge.me; UGC imagery needs rights"
+    },
+    {
+     "id": "dm_reply",
+     "label": "DM reply",
+     "status": "proposed",
+     "engine_type": "testimonial",
+     "shape": "A customer's message in a reply bubble over customer imagery.",
+     "module": "P04",
+     "patterns": ["P-DM"],
+     "nodes": ["2:48723"],
+     "requires_verbatim": true,
+     "claims_exposure": "a real message, verbatim and sourced; a dramatised exchange is the engine's fake_thread and needs a disclosure"
+    },
+    {
+     "id": "link_ad",
+     "label": "Link ad (Google formats)",
+     "status": "proposed",
+     "engine_type": null,
+     "shape": "A photo with the product; the words live in the platform's headline and description fields.",
+     "module": "P10",
+     "patterns": ["P-LAND"],
+     "nodes": ["2:36590", "2:56900"],
+     "claims_exposure": "low",
+     "platform_note": "Ruled (Gate 2 call 1, Google a, Eddie, 2026-10-18): no overlaid copy and no drawn CTA; the words live in the platform's headline and description fields. Source: Google's responsive display guidance advises against text overlaid on images (support.google.com/google-ads/answer/9823397, read 2026-10-18). The drawn \"Shop now\" box on the live link ads (P-LAND) retires."
+    },
+    {
+     "id": "display_banner",
+     "label": "Display banner",
+     "status": "proposed",
+     "engine_type": "text_forward",
+     "shape": "The wordmark one side, a Saol line or a press quote the other, an image between.",
+     "module": "P11",
+     "patterns": ["P-BANNER"],
+     "nodes": ["2:36253", "2:36273"],
+     "claims_exposure": "a quote variant is verbatim and sourced"
+    }
+   ],
+   "not_planned": {
+    "video": "Storyboards and supers (P-VIDEO, 3 boards) wait for video_rules, null in the pack; the end frame is planned as P09 so the wordmark sign-off has a master",
+    "aura_gradients": "500x500 gradients on the paid page are not ads (pattern-review 5): assets, not a type"
+   }
+  },
+  "web": {
+   "_status": "held for Review 2 (Gate 2 call 1 b)",
+   "_note": "Shopify storefront. Page types, their section sequences and the planned budgets live in the section library (brand-pack/section-library.json); this lists which page types HLR has and what is missing.",
+   "page_types": {
+    "home": {"status": "observed", "evidence": "[observed] split hero, 24 hero frames (2:185212)"},
+    "pdp": {"status": "observed", "evidence": "[observed] PDP redesign at 1440 and 375 (2:185628, 2:183590); live capture 2:184418"},
+    "collection": {"status": "observed", "evidence": "[observed] mega menu (SHOP BY MEANING, SHOP BY TYPE) and the mobile filter (2:185324); no collection header design in the file"},
+    "editorial": {"status": "gap", "evidence": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Eddie (scope) and HLR (content)"},
+    "landing": {"status": "gap", "evidence": "no campaign landing page in the file. Owner: Eddie (scope)"}
+   },
+   "breakpoints": "desktop 1440 and mobile 375 in the design frames [observed]; the theme breaks at 576, 768, 992, 1024, 1200 and 1280 [observed]. figma.yaml breakpoints are null until Gate 4",
+   "forced_elements": "[observed] Shopify payment badge and the Judge.me reviews widget"
+  }
+ }
+}

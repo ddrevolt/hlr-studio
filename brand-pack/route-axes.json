@@ -1,0 +1,29 @@
+{
+ "_role": "route_axes",
+ "_status": "ratified",
+ "_note": "The strategic frames an HLR route may lead, the plan's bounds and any standing policy. Read by brief-intake and brief_lint.js through lib/pack.js loadRouteAxes. Built 2026-10-18 by lane D. Ratified by Eddie on 2026-10-18 on Gate 2 call 6 a, the file's one open call: the six frames, 3 routes by default, 5 at most and no standing policy stand as drafted.",
+ "ratification": {
+  "by": "Eddie",
+  "on": "2026-10-18",
+  "ruling": "Gate 2 call 6 a: no standing angle policy; the file stands as drafted",
+  "record": "DECISIONS.md 2026-10-18; outputs/step-2-pack/structure-notes.md section 2"
+ },
+ "axes": ["benefit", "occasion", "product", "proof", "urgency", "curiosity"],
+ "default_route_count": 3,
+ "max_route_count": 5,
+ "standing_angle_policy": {},
+ "provenance": {
+  "axes": "[derived] the engine's six frames, kept whole: each one is supportable from HLR's live work (axis_notes). No HLR-only frame is added (engine_compatibility).",
+  "counts": "[derived] the engine defaults, 3 and 5; nothing in HLR's material argues for others.",
+  "standing_angle_policy": "ruled: none (Gate 2 call 6 a, Eddie, 2026-10-18). With it empty, an unattended run selects every route and marks the plan provisional."
+ },
+ "axis_notes": {
+  "benefit": "What the piece does in the wearer's life. HLR's live benefit language is health-adjacent and intention-led (\"CALM YOUR ANXIETY\", \"Protect your energy\"; tags such as Calm and Protection): every benefit line goes through the claims ledger and waits for C2. A benefit route the ledger cannot clear stays empty.",
+  "occasion": "A moment in the calendar. [observed] monthly rituals (energy medicine, zodiac seasons, birthstone months), Mother's Day (2:57602), Valentine story sets, Black Friday and holiday events, launches.",
+  "product": "The piece itself: its stone, metal, making and wear. [observed] annotated builds and callouts (P-ANNOT-BUILD, S-ANNOT), spotlights, the Seeds of and Spell Bracelet families. Names and materials resolve through the product database.",
+  "proof": "Someone else's words. [observed] Judge.me reviews (72 on one bracelet), press quotes, DM replies. Verbatim and sourced only; origin, karat and warranty statements wait for Review 1 (addendum 6).",
+  "urgency": "A deadline or a limited offer. [observed] \"THIS WEEK ONLY\", LIGHT25 and LIGHT30 events, order cutoffs. Offers stay merge tokens until C10.",
+  "curiosity": "Something the reader did not know. [observed] stone meanings, zodiac season crystals (S-SEASON), education carousels (S-LONG) and question-led headline tiles (S-PHOTOTEXT). Meaning lines are claims (C2), so a curiosity route needs ledger rows before copy."
+ },
+ "engine_compatibility": "Each axis is one of the engine's frames, which are also the email angle gate's axes. copy_lint.js refuses an angle option whose axis is outside the gate's set or off the selected route's axis, so an HLR-only frame (for example ritual or meaning) would fail every email run inside that route. Logged as an engine gap in structure-notes.md; HLR's ritual and meaning content leads through occasion and curiosity meanwhile."
+}

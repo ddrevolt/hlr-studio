@@ -1,0 +1,5895 @@
+{
+ "_meta": {
+  "role": "product_db",
+  "brand": "High Light Rituals",
+  "version": "v0",
+  "status": "v0 built from the public catalog snapshot because the Shopify export has not arrived. Replace it from HLR's export when it lands (Brand Review v2 question 5; owner HLR; Review 1). Ruled by Eddie 2026-10-18: display names (Q10; Gate 2 call 4 a) and keys (Gate 2 call 7 a). The derived fields kind and family are unratified proposals.",
+  "built": "2026-10-18",
+  "built_by": "lane D, Pack v0 structure side (Step 2)",
+  "source": {
+   "file": "outputs/step-1-review/site/catalog-2026-10-17.tsv",
+   "origin": "https://highlightrituals.com/products.json, the public storefront feed (182 published products)",
+   "captured": "2026-10-17",
+   "provenance": "observed",
+   "snapshot_header": "HLR catalog snapshot, 2026-10-17. Source: https://highlightrituals.com/products.json (public storefront, 182 published products). Provenance: observed. Names, prices and tags are verbatim from the store, including its dashes; the house rule on dashes applies to what we write, not to source data. price_usd is the variant range; skus counts variants that carry a SKU. Not the product database: Step 2 builds that from a client export."
+  },
+  "keys": "Ruled (Gate 2 call 7 a, Eddie, 2026-10-18): Shopify product handles until HLR's export lands, then SKUs with the handle kept as a field. Handles, not SKUs, because the snapshot is product-level: 549 of 650 variants carry a SKU and it keeps one example per product (observed.sku_example). A brief's \"sku\" for HLR is the handle until the export supplies variant SKUs; brief_lint.js and sku_lookup.js match on these keys.",
+  "how_to_read": "Never wholesale. Resolve with skills/email-copy/scripts/sku_lookup.js --pack <pack> --match \"<name or handle>\". sku_lookup returns name, category, description, ingredients, nutrition and badges only; the observed block never reaches a writer.",
+  "fields": {
+   "name": "[derived by ruled rules] the house-style display name copy uses: a dash and a stone tail become \"in\" (Q10, DECISIONS 2026-10-17); a title with no dash is unchanged; a non-stone tail drops where the head names one product (Gate 2 call 4 a, DECISIONS 2026-10-18). name_status says which rule applied.",
+   "shopify_title": "[observed] the Shopify title verbatim, dashes included. Source data, never copy.",
+   "name_status": "which rule produced name: ruled, unchanged or proposed.",
+   "category": "[observed] the Shopify product type verbatim (two are wrong at source; see flags).",
+   "kind": "[derived] jewelry, crystal, ritual kit, packaging, service, service with jewelry, or jewelry with a service, from the type and title words (Session, Intensive, Message Add-On, Energy Reading, Gift Bag).",
+   "family": "[derived] a product line read from a title pattern, kept only where two or more products share it; null otherwise. Feeds concrete_lexicon.product_families (lane C).",
+   "description": "empty: the snapshot carries no product copy. Named gap; the export's Body HTML fills it.",
+   "ingredients": "[observed] materials the Shopify title itself names: a stone tail, an \"in X\" material the catalog confirms as a stone, tag or metal, or \"The X Palm Stone\" / \"The X Point\". Words that are not confirmed materials (Siren, Queen Conch) stay out. Option metals are not copied here.",
+   "nutrition": "null: not applicable to this catalog.",
+   "badges": "empty: no badge is sourced. Badges license figures in sku_lookup.js, so nothing goes here without a source.",
+   "observed": "[observed] storefront values verbatim from the snapshot: price ranges, variants, availability, publish date, options and tags. Reference only: no writer reads them.",
+   "attributes": "[observed] a birth month or zodiac sign the title names.",
+   "flags": "defects and open questions on the record, each with its source."
+  },
+  "figures": "This database licenses no figure. sku_lookup.js draws allowed figures from description, badges and nutrition, which are empty or null. Prices are observed storefront values for reference; copy carries prices, percentages, thresholds and codes as merge tokens ({{ ... }}) until HLR's export confirms them. Karat and metal statements follow the claims ledger (lane C) and the karat question at Review 1.",
+  "claims_note": "Observed tags include intention words (Calm, Protection, Love, Emotional balance, Vitality and others). They are store data, not facts copy may state: benefit and health-adjacent language waits for C2 and the claims ledger.",
+  "counts": {
+   "products": 182,
+   "by_kind": {
+    "jewelry": 159,
+    "crystal": 3,
+    "ritual kit": 12,
+    "packaging": 1,
+    "service": 4,
+    "service with jewelry": 1,
+    "jewelry with a service": 2
+   },
+   "names": {
+    "unchanged (no dash)": 102,
+    "in rule (Q10)": 75,
+    "non-stone tail dropped (Gate 2 call 4 a)": 5
+   },
+   "title_dashes_at_source": {
+    "em": 68,
+    "en": 11,
+    "spaced hyphen": 1
+   },
+   "unavailable": 13,
+   "records_with_flags": 31,
+   "families": {
+    "Birthstone Energy Bracelet": 12,
+    "Birthstone Nova Pendant": 12,
+    "Birthstone Protection Amulet": 12,
+    "Classic Bracelet": 10,
+    "Crystal Set": 12,
+    "Garden Pendant": 10,
+    "Genesis": 3,
+    "Mermaid": 4,
+    "Palm Stone": 2,
+    "Prayer Pendant": 2,
+    "Sacred Layer": 18,
+    "Sea Star": 2,
+    "Seeds of": 40,
+    "Spell Bracelet": 19,
+    "Spirit Pendant": 2
+   }
+  },
+  "gaps": [
+   {
+    "gap": "Variant SKUs, barcodes and inventory: 101 of 650 variants carry no SKU in the public feed and the snapshot keeps one example per product.",
+    "owner": "HLR (Shopify products export, Review 1)"
+   },
+   {
+    "gap": "Product descriptions (Body HTML): description is empty on every record, so no product prose is verifiable.",
+    "owner": "HLR (export)"
+   },
+   {
+    "gap": "Prices confirmed by HLR: observed storefront ranges only; copy uses merge tokens.",
+    "owner": "HLR (export)"
+   },
+   {
+    "gap": "Metals and karat by variant (14K Solid Gold, 14K Gold Filled, Sterling Silver, 14K Rose Gold seen in options) and the karat and origin claims in paid.",
+    "owner": "HLR (Review 1); lane C ledger rows"
+   },
+   {
+    "gap": "Re-key by SKU when the export lands, the handle kept as a field (Gate 2 call 7 a).",
+    "owner": "Eddie, when HLR's export arrives"
+   },
+   {
+    "gap": "Source defects to fix in Shopify: 2 type mismatches, 6 stale handles, 3 copied stone tags, \"Gold FIlled\" casing, 80 dashed titles.",
+    "owner": "HLR"
+   },
+   {
+    "gap": "Services sold as products (sessions, readings): positioning and claims (C2).",
+    "owner": "HLR (Review 1)"
+   },
+   {
+    "gap": "Pack shots per product (pack_shot_index): imagery waits for usage rights (rule 8).",
+    "owner": "HLR"
+   }
+  ]
+ },
+ "the-genesis-memorial-talisman": {
+  "name": "The Genesis Memorial Talisman",
+  "shopify_title": "The Genesis Memorial Talisman",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Genesis",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "950-2300",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-09-10",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "genesis",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-abundance-necklace-citrine": {
+  "name": "The Seeds of Abundance Necklace in Citrine",
+  "shopify_title": "The Seeds of Abundance Necklace — Citrine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "125-175",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 2,
+   "sku_example": "4000",
+   "available": true,
+   "published": "2026-07-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Length: 17\"/22\"",
+   "tags": [
+    "Abundance",
+    "Citrine",
+    "Confidence",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "type mismatch at source: the title names one jewelry type and the Shopify type is \"Bracelet\""
+  ]
+ },
+ "the-seeds-of-wholeness-necklace-chakra": {
+  "name": "The Seeds of Wholeness Necklace",
+  "shopify_title": "The Seeds of Wholeness Necklace — Chakra",
+  "name_status": "ruled: a non-stone tail (\"Chakra\") drops where the head names one product in the catalog (Gate 2 call 4 a, DECISIONS 2026-10-18)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "125-150",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-07-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Length: 17\"/22\"",
+   "tags": [
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-calm-necklace-aquamarine": {
+  "name": "The Seeds of Calm Necklace in Aquamarine",
+  "shopify_title": "The Seeds of Calm Necklace — Aquamarine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Aquamarine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "125-150",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 2,
+   "sku_example": "4003",
+   "available": true,
+   "published": "2026-07-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Length: 17\"/22\"",
+   "tags": [
+    "Aquamarine",
+    "Calm",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-mermaid-bracelet": {
+  "name": "The Mermaid Bracelet",
+  "shopify_title": "The Mermaid Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Mermaid",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "95",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-mermaid-bracelet-for-deep-delight": {
+  "name": "The Mermaid Bracelet for Deep Delight",
+  "shopify_title": "The Mermaid Bracelet for Deep Delight",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Mermaid",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "95",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-mermaid-necklace-in-siren": {
+  "name": "The Mermaid Necklace in Siren",
+  "shopify_title": "The Mermaid Necklace in Siren",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Mermaid",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "175",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "necklace"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-sea-star-necklace-in-queen-conch": {
+  "name": "The Sea Star Necklace in Queen Conch",
+  "shopify_title": "The Sea Star Necklace in Queen Conch",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sea Star",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "525",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "necklace"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-sea-star-necklace-in-mother-of-pearl": {
+  "name": "The Sea Star Necklace in Mother of Pearl",
+  "shopify_title": "The Sea Star Necklace in Mother of Pearl",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sea Star",
+  "description": "",
+  "ingredients": [
+   "Mother of Pearl"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "525",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "necklace"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-serpent-and-the-siren-anklet": {
+  "name": "The Serpent and Siren Anklet",
+  "shopify_title": "The Serpent and Siren Anklet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Anklet",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": "Size: S/M/M/L/L/XL",
+   "tags": [],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-mermaid-necklace-for-new-beginnings": {
+  "name": "The Mermaid Necklace for New Beginnings",
+  "shopify_title": "The Mermaid Necklace for New Beginnings",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Mermaid",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "175",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "necklace"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-water-woman-waist-beads": {
+  "name": "The Water Woman Waist Beads",
+  "shopify_title": "The Water Woman Waist Beads",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Waist Beads",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "45-80",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": "Size: S/M/M/L/L/XL; Quantity: Single/Layered Set of 2",
+   "tags": [],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-golden-thread-bracelet": {
+  "name": "The Golden Thread Bracelet",
+  "shopify_title": "The Golden Thread Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "185",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-safe-passage-bracelet": {
+  "name": "The Safe Passage Bracelet",
+  "shopify_title": "The Safe Passage Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": false,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-deep-waters-bracelet": {
+  "name": "The Deep Waters Bracelet",
+  "shopify_title": "The Deep Waters Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "385",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-06-29",
+   "options": null,
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-abundance-bracelet-citrine-copy": {
+  "name": "The Seeds of Communion Bracelet in Angelite",
+  "shopify_title": "The Seeds of Communion Bracelet — Angelite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Angelite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4118",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "Angelite",
+    "bracelet",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)"
+  ]
+ },
+ "the-seeds-of-grounding-bracelet-crazy-agate": {
+  "name": "The Seeds of Grounding Bracelet in Agate",
+  "shopify_title": "The Seeds of Grounding Bracelet — Agate",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Agate"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4127",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "crazy agate",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-authenticity-bracelet-peruvian-turquoise": {
+  "name": "The Seeds of Authenticity Bracelet in Peruvian Turquoise",
+  "shopify_title": "The Seeds of Authenticity Bracelet — Peruvian Turquoise",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Peruvian Turquoise"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4142",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "peruvian turquoise",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-safety-bracelet-black-obsidian": {
+  "name": "The Seeds of Safety Bracelet in Black Obsidian",
+  "shopify_title": "The Seeds of Safety Bracelet — Black Obsidian",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Black Obsidian"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4121",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "black obsidian",
+    "bracelet",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-self-trust-bracelet-sunset-sodalite": {
+  "name": "The Seeds of Self Trust Bracelet in Sunset Sodalite",
+  "shopify_title": "The Seeds of Self Trust Bracelet — Sunset Sodalite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Sunset Sodalite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4148",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Sacred Layers",
+    "Sunset Sodalite"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-x-bracelet-white-fossil-jasper": {
+  "name": "The Seeds of Belonging Bracelet in White Fossil Jasper",
+  "shopify_title": "The Seeds of Belonging Bracelet — White Fossil Jasper",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "White Fossil Jasper"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4151",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Sacred Layers",
+    "White Fossil Jasper"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)"
+  ]
+ },
+ "the-seeds-of-inner-fire-bracelet-carnelian": {
+  "name": "The Seeds of Inner Fire Bracelet in Carnelian",
+  "shopify_title": "The Seeds of Inner Fire Bracelet — Carnelian",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Carnelian"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 Inches/7 Inches/7.5 Inches",
+   "tags": [
+    "bracelet",
+    "Carnelian",
+    "Creativity"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-pure-heart-bracelet-kunzite": {
+  "name": "The Seeds of Pure Heart Bracelet in Kunzite",
+  "shopify_title": "The Seeds of Pure Heart Bracelet — Kunzite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Kunzite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "golden rutilated quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "stone tag copied from another product at source (site-observed: tagged golden rutilated quartz)",
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-sage-vision-bracelet-dumortierite": {
+  "name": "The Seeds of Sage Vision Bracelet in Dumortierite",
+  "shopify_title": "The Seeds of Sage Vision Bracelet — Dumortierite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Dumortierite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "golden rutilated quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "stone tag copied from another product at source (site-observed: tagged golden rutilated quartz)",
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-wholeness-bracelet-chakra": {
+  "name": "The Seeds of Wholeness Bracelet",
+  "shopify_title": "The Seeds of Wholeness Bracelet — Chakra",
+  "name_status": "ruled: a non-stone tail (\"Chakra\") drops where the head names one product in the catalog (Gate 2 call 4 a, DECISIONS 2026-10-18)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "golden rutilated quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "stone tag copied from another product at source (site-observed: tagged golden rutilated quartz)",
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-expansion-bracelet-golden-rutilated-quartz": {
+  "name": "The Seeds of Expansion Bracelet in Golden Rutilated Quartz",
+  "shopify_title": "The Seeds of Expansion Bracelet — Golden Rutilated Quartz",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Golden Rutilated Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4133",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "golden rutilated quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-empowerment-bracelet-chrysocolla": {
+  "name": "The Seeds of Empowerment Bracelet in Chrysocolla",
+  "shopify_title": "The Seeds of Empowerment Bracelet — Chrysocolla",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Chrysocolla"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4124",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Chrysocolla",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-stillness-bracelet-phosphosiderite": {
+  "name": "The Seeds of Stillness Bracelet in Phosphosiderite",
+  "shopify_title": "The Seeds of Stillness Bracelet — Phosphosiderite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Phosphosiderite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4145",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Phosphosiderite",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-prosperity-bracelet-jade": {
+  "name": "The Seeds of Prosperity Bracelet in Jade",
+  "shopify_title": "The Seeds of Prosperity Bracelet — Jade",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Jade"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4136",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "jade",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-encouragement-bracelet-peach-aventurine": {
+  "name": "The Seeds of Encouragement Bracelet in Pink Aventurine",
+  "shopify_title": "The Seeds of Encouragement Bracelet — Pink Aventurine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Pink Aventurine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4139",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "peach aventurine",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-illumination-bracelet-golden-obsidian": {
+  "name": "The Seeds of Illumination Bracelet in Golden Obsidian",
+  "shopify_title": "The Seeds of Illumination Bracelet — Golden Obsidian",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Golden Obsidian"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4130",
+   "available": true,
+   "published": "2026-04-22",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "golden obsidian",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "initiation-session-talisman": {
+  "name": "Initiation Session & Anchor Charm",
+  "shopify_title": "Initiation Session & Anchor Charm",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "service with jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "200",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2026-02-01",
+   "options": "Metal: 14K Gold Filled/Sterling silver",
+   "tags": [
+    "Made to order"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "no SKU on any variant in the public feed",
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "the-word-witch-bracelet": {
+  "name": "The Word Witch Bracelet",
+  "shopify_title": "The Word Witch Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-145",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "R1",
+   "available": true,
+   "published": "2026-01-22",
+   "options": "Type: No Charm/Diamond Charm; Size: 6.5 Inches/7 Inches/7.5 Inches",
+   "tags": [
+    "made to order"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "type mismatch at source: the title names one jewelry type and the Shopify type is \"Necklace\""
+  ]
+ },
+ "the-classic-bracelet-in-black-tourmaline": {
+  "name": "The Classic Bracelet in Black Tourmaline",
+  "shopify_title": "The Classic Bracelet in Black Tourmaline",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Black Tourmaline"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3242-SG",
+   "available": true,
+   "published": "2025-12-17",
+   "options": "Metal: Gold/Sterling Silver; Quantity: Single/Set of two",
+   "tags": [
+    "Black Tourmaline",
+    "bracelet",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-smoky-quartz": {
+  "name": "The Classic Bracelet in Smoky Quartz",
+  "shopify_title": "The Classic Bracelet in Smoky Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Smoky Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3260-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Sacred Layers",
+    "Smoky Quartz"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-rose-quartz": {
+  "name": "The Classic Bracelet in Rose Quartz",
+  "shopify_title": "The Classic Bracelet in Rose Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Rose Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3258-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Rose Quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-mother-of-pearl": {
+  "name": "The Classic Bracelet in Mother of Pearl",
+  "shopify_title": "The Classic Bracelet in Mother of Pearl",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Mother of Pearl"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3256-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Mother of Pearl",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-moonstone": {
+  "name": "The Classic Bracelet in Moonstone",
+  "shopify_title": "The Classic Bracelet in Moonstone",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Moonstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3254-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Moonstone",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-montana-agate": {
+  "name": "The Classic Bracelet in Montana Agate",
+  "shopify_title": "The Classic Bracelet in Montana Agate",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Montana Agate"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3252-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "montana agate",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-labradorite": {
+  "name": "The Classic Bracelet in Labradorite",
+  "shopify_title": "The Classic Bracelet in Labradorite",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Labradorite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3250-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Quantity: Single/Set of two; Size: 6.5 inches/7 inches",
+   "tags": [
+    "bracelet",
+    "Labradorite",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-clear-quartz": {
+  "name": "The Classic Bracelet in Clear Quartz",
+  "shopify_title": "The Classic Bracelet in Clear Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Clear Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3248-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Clear Quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-carnelian": {
+  "name": "The Classic Bracelet in Carnelian",
+  "shopify_title": "The Classic Bracelet in Carnelian",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Carnelian"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3246-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "bracelet",
+    "Carnelian",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-classic-bracelet-in-angelite": {
+  "name": "The Classic Bracelet in Angelite",
+  "shopify_title": "The Classic Bracelet in Angelite",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Classic Bracelet",
+  "description": "",
+  "ingredients": [
+   "Angelite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "68-128",
+   "compare_at_usd": null,
+   "variants": 8,
+   "variants_with_sku": 4,
+   "sku_example": "3244-SG",
+   "available": true,
+   "published": "2025-12-12",
+   "options": "Metal: Gold/Sterling Silver; Size: 6.5 inches/7 inches; Quantity: Single/Set of two",
+   "tags": [
+    "Angelite",
+    "bracelet",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-protection-necklace-black-tourmaline": {
+  "name": "The Seeds of Protection Necklace in Black Tourmaline",
+  "shopify_title": "The Seeds of Protection Necklace – Black Tourmaline",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Black Tourmaline"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "125-175",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 2,
+   "sku_example": "4210",
+   "available": true,
+   "published": "2025-11-25",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Length: 17\"/22\"",
+   "tags": [
+    "Black Tourmaline",
+    "Calm",
+    "necklace",
+    "Protection"
+   ],
+   "made_to_order": false
+  }
+ },
+ "energy-healing-session-with-donnie-60-minutes": {
+  "name": "Shamanic Healing Session",
+  "shopify_title": "Shamanic Healing Session — 60 Minutes",
+  "name_status": "ruled: a non-stone tail (\"60 Minutes\") drops where the head names one product in the catalog (Gate 2 call 4 a, DECISIONS 2026-10-18)",
+  "category": "-",
+  "kind": "service",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "200",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": true,
+   "published": "2025-11-22",
+   "options": null,
+   "tags": [],
+   "made_to_order": false
+  },
+  "flags": [
+   "no SKU on any variant in the public feed",
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "the-march-birthstone-nova-pendant-aquamarine": {
+  "name": "The March Birthstone Nova Pendant in Aquamarine",
+  "shopify_title": "The March Birthstone Nova Pendant — Aquamarine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Aquamarine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3291-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "Aquamarine",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "March"
+  }
+ },
+ "the-february-birthstone-nova-pendant-amethyst": {
+  "name": "The February Birthstone Nova Pendant in Amethyst",
+  "shopify_title": "The February Birthstone Nova Pendant — Amethyst",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Amethyst"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3289-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "Amethyst",
+    "made to order",
+    "necklace"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "February"
+  }
+ },
+ "the-january-birthstone-aura-pendant-garnet": {
+  "name": "The January Birthstone Nova Pendant in Garnet",
+  "shopify_title": "The January Birthstone Nova Pendant — Garnet",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Garnet"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3287-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "garnet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "January"
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)"
+  ]
+ },
+ "the-october-birthstone-nova-pendant-opal": {
+  "name": "The October Birthstone Nova Pendant in Opal",
+  "shopify_title": "The October Birthstone Nova Pendant — Opal",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Opal"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3305-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "opal",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "October"
+  }
+ },
+ "the-september-birthstone-nova-pendant-sapphire": {
+  "name": "The September Birthstone Nova Pendant in Sapphire",
+  "shopify_title": "The September Birthstone Nova Pendant — Sapphire",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Sapphire"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3303-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant",
+    "sapphire"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "September"
+  }
+ },
+ "the-august-birthstone-nova-pendant-peridot": {
+  "name": "The August Birthstone Nova Pendant in Peridot",
+  "shopify_title": "The August Birthstone Nova Pendant — Peridot",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Peridot"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3301-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant",
+    "Peridot"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "August"
+  }
+ },
+ "the-july-birthstone-nova-pendant-ruby": {
+  "name": "The July Birthstone Nova Pendant in Ruby",
+  "shopify_title": "The July Birthstone Nova Pendant — Ruby",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Ruby"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3299-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant",
+    "Ruby"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "July"
+  }
+ },
+ "the-june-birthstone-nova-pendant-moonstone": {
+  "name": "The June Birthstone Nova Pendant in Moonstone",
+  "shopify_title": "The June Birthstone Nova Pendant — Moonstone",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Moonstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3297-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "Moonstone",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "June"
+  }
+ },
+ "the-may-birthstone-nova-pendant-emerald": {
+  "name": "The May Birthstone Nova Pendant in Emerald",
+  "shopify_title": "The May Birthstone Nova Pendant — Emerald",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Emerald"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3295-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "emerald",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "May"
+  }
+ },
+ "the-april-birthstone-nova-pendant-white-topaz": {
+  "name": "The April Birthstone Nova Pendant in White Topaz",
+  "shopify_title": "The April Birthstone Nova Pendant — White Topaz",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "White Topaz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3293-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant",
+    "white topaz"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "April"
+  }
+ },
+ "the-november-birthstone-nova-pendant-citrine": {
+  "name": "The November Birthstone Nova Pendant in Citrine",
+  "shopify_title": "The November Birthstone Nova Pendant — Citrine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3307-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "Citrine",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "November"
+  }
+ },
+ "the-december-birthstone-nova-pendant-turquoise": {
+  "name": "The December Birthstone Nova Pendant in Turquoise",
+  "shopify_title": "The December Birthstone Nova Pendant — Turquoise",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Nova Pendant",
+  "description": "",
+  "ingredients": [
+   "Turquoise"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "425-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3309-SG",
+   "available": true,
+   "published": "2025-11-10",
+   "options": "Metal: 14K Solid Gold/14K Gold Filled/Sterling Silver; Chain: 15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant",
+    "Turquoise"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "December"
+  }
+ },
+ "custom-soul-spell-bracelet-and-energy-cleansing": {
+  "name": "Custom Soul Spell Bracelet And Energy Reading",
+  "shopify_title": "Custom Soul Spell Bracelet And Energy Reading",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry with a service",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "405",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "7781",
+   "available": true,
+   "published": "2025-11-07",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "CustomSpell",
+    "Made to order",
+    "Not for collections"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "custom-seeds-bracelet-and-energy-cleansing": {
+  "name": "Custom Seeds Bracelet And Energy Reading",
+  "shopify_title": "Custom Seeds Bracelet And Energy Reading",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry with a service",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "250",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "7789-GF",
+   "available": true,
+   "published": "2025-11-07",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Made to order",
+    "Not for collections"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "in-person-reiki-healing-with-donnie-90-minutes": {
+  "name": "Crystal Reiki Session with Donnie",
+  "shopify_title": "Crystal Reiki Session with Donnie - 45 minutes",
+  "name_status": "ruled: a non-stone tail (\"45 minutes\") drops where the head names one product in the catalog (Gate 2 call 4 a, DECISIONS 2026-10-18)",
+  "category": "Not for Collections",
+  "kind": "service",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "150",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7808",
+   "available": true,
+   "published": "2025-10-21",
+   "options": null,
+   "tags": [
+    "Made to order"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)",
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "energy-healing-session-with-donnie-90-minutes": {
+  "name": "Shamanic Healing Intensive",
+  "shopify_title": "Shamanic Healing Intensive — 2 hours",
+  "name_status": "ruled: a non-stone tail (\"2 hours\") drops where the head names one product in the catalog (Gate 2 call 4 a, DECISIONS 2026-10-18)",
+  "category": "-",
+  "kind": "service",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "300",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7807",
+   "available": true,
+   "published": "2025-10-21",
+   "options": null,
+   "tags": [
+    "Made to order"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)",
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "the-seeker-woven-spell-bracelet": {
+  "name": "The Seeker Spell Bracelet",
+  "shopify_title": "The Seeker Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3235",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-master-protection-spell-bracelet-1": {
+  "name": "The Master Protection Spell Bracelet",
+  "shopify_title": "The Master Protection Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3234",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "black obsidian",
+    "bracelet",
+    "Hematite",
+    "herkimer diamond",
+    "Labradorite",
+    "Made to order",
+    "Pyrite",
+    "Smoky Quartz"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-fire-within-spell-bracelet": {
+  "name": "The Fire Within Spell Bracelet",
+  "shopify_title": "The Fire Within Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3233",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-cherished-inner-child-spell-bracelet": {
+  "name": "The Cherished Inner Child Spell Bracelet",
+  "shopify_title": "The Cherished Inner Child Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3236",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-sacred-creation-spell-bracelet": {
+  "name": "The Sacred Creation Spell Bracelet",
+  "shopify_title": "The Sacred Creation Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3237",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-solid-ground-spell-bracelet": {
+  "name": "The Solid Ground Spell Bracelet",
+  "shopify_title": "The Solid Ground Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3232",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "golden pearl",
+    "Made to order",
+    "White Fossil Jasper"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-true-north-spell-bracelet": {
+  "name": "The True North Spell Bracelet",
+  "shopify_title": "The True North Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3231",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "alignment",
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-wealth-weaver-woven-spell-bracelet": {
+  "name": "The Wealth Weaver Spell Bracelet",
+  "shopify_title": "The Wealth Weaver Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": "95",
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3238",
+   "available": true,
+   "published": "2025-10-05",
+   "options": null,
+   "tags": [
+    "bracelet",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-sacred-layer-of-stability-necklace-hematite": {
+  "name": "The Sacred Layer of Stability Necklace in Hematite",
+  "shopify_title": "The Sacred Layer of Stability Necklace – Hematite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [
+   "Hematite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3241-SG",
+   "available": true,
+   "published": "2025-09-24",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Hematite",
+    "necklace",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-harmony-necklace-in-watermelon-tourmaline": {
+  "name": "The Sacred Layer of Harmony Necklace",
+  "shopify_title": "The Sacred Layer of Harmony Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3240-SG",
+   "available": true,
+   "published": "2025-09-22",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Emotional balance",
+    "Love",
+    "necklace",
+    "Sacred Layers",
+    "Watermelon Tourmaline"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-aligned-action-bracelet": {
+  "name": "The Sacred Layer of Aligned Action Bracelet",
+  "shopify_title": "The Sacred Layer of Aligned Action Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3239-SG",
+   "available": false,
+   "published": "2025-09-22",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "alignment",
+    "bracelet",
+    "Clarity",
+    "Confidence",
+    "Emotional balance",
+    "Red Coral",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-timeless-cross": {
+  "name": "The Timeless Cross",
+  "shopify_title": "The Timeless Cross",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "85-175",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3229-SG",
+   "available": true,
+   "published": "2025-09-14",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-moonbeam-pendant": {
+  "name": "The Moonbeam Pendant",
+  "shopify_title": "The Moonbeam Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "115-520",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3227-SG",
+   "available": true,
+   "published": "2025-09-14",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-sacred-layer-of-aligned-action-necklace": {
+  "name": "The Sacred Layer of Aligned Action Necklace",
+  "shopify_title": "The Sacred Layer of Aligned Action Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3190-SG",
+   "available": true,
+   "published": "2025-09-02",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "alignment",
+    "Clarity",
+    "Confidence",
+    "Emotional balance",
+    "necklace",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-harmony-bracelet": {
+  "name": "The Sacred Layer of Harmony Bracelet",
+  "shopify_title": "The Sacred Layer of Harmony Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3189-SG",
+   "available": false,
+   "published": "2025-09-02",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "bracelet",
+    "Emotional balance",
+    "Love",
+    "Sacred Layers",
+    "Watermelon Tourmaline"
+   ],
+   "made_to_order": false
+  }
+ },
+ "energy-healing-session-with-donnie": {
+  "name": "Personal Intuitive Message Add-On",
+  "shopify_title": "Personal Intuitive Message Add-On",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Not for Collections",
+  "kind": "service",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "33",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7801",
+   "available": true,
+   "published": "2025-08-06",
+   "options": null,
+   "tags": [
+    "Made to order"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "handle no longer matches the title (catalog stats)",
+   "C2: a healing or reading service sold as a product; claims and positioning wait for HLR (Review 1)"
+  ]
+ },
+ "the-love-drop": {
+  "name": "The Love Drop",
+  "shopify_title": "The Love Drop",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "85-400",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3187-SG",
+   "available": true,
+   "published": "2025-06-20",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-december-birthstone-protection-amulet-turquoise": {
+  "name": "The December Birthstone Protection Amulet in Turquoise",
+  "shopify_title": "The December Birthstone Protection Amulet – Turquoise",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Turquoise"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3183-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "December"
+  }
+ },
+ "the-november-birthstone-protection-amulet-citrine": {
+  "name": "The November Birthstone Protection Amulet in Citrine",
+  "shopify_title": "The November Birthstone Protection Amulet – Citrine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3182-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "November"
+  }
+ },
+ "the-october-birthstone-protection-amulet-opal": {
+  "name": "The October Birthstone Protection Amulet in Opal",
+  "shopify_title": "The October Birthstone Protection Amulet – Opal",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Opal"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3181-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "October"
+  }
+ },
+ "the-september-birthstone-protection-amulet-sapphire": {
+  "name": "The September Birthstone Protection Amulet in Sapphire",
+  "shopify_title": "The September Birthstone Protection Amulet – Sapphire",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Sapphire"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3180-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant",
+    "sapphire"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "September"
+  }
+ },
+ "the-august-birthstone-protection-amulet-peridot": {
+  "name": "The August Birthstone Protection Amulet in Peridot",
+  "shopify_title": "The August Birthstone Protection Amulet – Peridot",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Peridot"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3179-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "August"
+  }
+ },
+ "the-july-birthstone-protection-amulet-ruby": {
+  "name": "The July Birthstone Protection Amulet in Ruby",
+  "shopify_title": "The July Birthstone Protection Amulet – Ruby",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Ruby"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3178-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "July"
+  }
+ },
+ "the-june-birthstone-protection-amulet-moonstone": {
+  "name": "The June Birthstone Protection Amulet in Moonstone",
+  "shopify_title": "The June Birthstone Protection Amulet – Moonstone",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Moonstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3177-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "June"
+  }
+ },
+ "the-may-birthstone-protection-amulet-emerald": {
+  "name": "The May Birthstone Protection Amulet in Emerald",
+  "shopify_title": "The May Birthstone Protection Amulet – Emerald",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Emerald"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3176-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "May"
+  }
+ },
+ "the-april-birthstone-protection-amulet-diamond": {
+  "name": "The April Birthstone Protection Amulet in Diamond",
+  "shopify_title": "The April Birthstone Protection Amulet – Diamond",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Diamond"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3184-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "April"
+  }
+ },
+ "the-march-birthstone-protection-amulet-aquamarine": {
+  "name": "The March Birthstone Protection Amulet in Aquamarine",
+  "shopify_title": "The March Birthstone Protection Amulet — Aquamarine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Aquamarine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3175-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "March"
+  }
+ },
+ "the-february-birthstone-protection-amulet-amethyst": {
+  "name": "The February Birthstone Protection Amulet in Amethyst",
+  "shopify_title": "The February Birthstone Protection Amulet — Amethyst",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Amethyst"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3174-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "February"
+  }
+ },
+ "the-january-birthstone-protection-amulet-garnet": {
+  "name": "The January Birthstone Protection Amulet in Garnet",
+  "shopify_title": "The January Birthstone Protection Amulet — Garnet",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Birthstone Protection Amulet",
+  "description": "",
+  "ingredients": [
+   "Garnet"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-505",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3173-SG",
+   "available": true,
+   "published": "2025-04-30",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain: No Chain/15-17\" Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  },
+  "attributes": {
+   "birth_month": "January"
+  }
+ },
+ "the-garden-pendant-in-rutilated-quartz": {
+  "name": "The Garden Pendant in Rutilated Quartz",
+  "shopify_title": "The Garden Pendant in Rutilated Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-GRQ-20-SG",
+   "available": true,
+   "published": "2025-03-21",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Clarity",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-garden-pendant-in-black-obsidian": {
+  "name": "The Garden Pendant in Black Obsidian",
+  "shopify_title": "The Garden Pendant in Black Obsidian",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Black Obsidian"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-BO-20-SG",
+   "available": true,
+   "published": "2025-03-21",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Clarity",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-garden-pendant-in-citrine": {
+  "name": "The Garden Pendant in Citrine",
+  "shopify_title": "The Garden Pendant in Citrine",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-C-20-SG",
+   "available": true,
+   "published": "2025-03-21",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-garden-pendant-in-lapis-lazuli": {
+  "name": "The Garden Pendant in Lapis Lazuli",
+  "shopify_title": "The Garden Pendant in Lapis Lazuli",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Lapis Lazuli"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 0,
+   "sku_example": null,
+   "available": false,
+   "published": "2025-03-06",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Clarity",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  },
+  "flags": [
+   "no SKU on any variant in the public feed"
+  ]
+ },
+ "the-seeds-of-radiance-bracelet-sunstone": {
+  "name": "The Seeds of Radiance Bracelet in Sunstone",
+  "shopify_title": "The Seeds of Radiance Bracelet — Sunstone",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Sunstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4107",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Sacred Layers",
+    "Sunstone"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-flow-bracelet-larimar": {
+  "name": "The Seeds of Flow Bracelet in Larimar",
+  "shopify_title": "The Seeds of Flow Bracelet — Larimar",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Larimar"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4104",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Larimar",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-awakening-bracelet-malachite": {
+  "name": "The Seeds of Awakening Bracelet in Malachite",
+  "shopify_title": "The Seeds of Awakening Bracelet — Malachite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Malachite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4101",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "malachite",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-aligned-action-bracelet-red-coral": {
+  "name": "The Seeds of Aligned Action Bracelet in Red Coral",
+  "shopify_title": "The Seeds of Aligned Action Bracelet — Red Coral",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Red Coral"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4098",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "alignment",
+    "bracelet",
+    "Red Coral",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-progress-bracelet-red-jasper": {
+  "name": "The Seeds of Progress Bracelet in Red Jasper",
+  "shopify_title": "The Seeds of Progress Bracelet — Red Jasper",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Red Jasper"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4095",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Red Jasper",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-renewal-bracelet-pink-opal": {
+  "name": "The Seeds of Renewal Bracelet in Pink Opal",
+  "shopify_title": "The Seeds of Renewal Bracelet — Pink Opal",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Pink Opal"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4092",
+   "available": true,
+   "published": "2025-02-19",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Pink Opal",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-focus-bracelet-flourite": {
+  "name": "The Seeds of Focus Bracelet in Fluorite",
+  "shopify_title": "The Seeds of Focus Bracelet — Fluorite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Fluorite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4086",
+   "available": true,
+   "published": "2025-02-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Fluorite",
+    "focus",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-stability-bracelet-hematite": {
+  "name": "The Seeds of Stability Bracelet in Hematite",
+  "shopify_title": "The Seeds of Stability Bracelet — Hematite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Hematite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4083",
+   "available": true,
+   "published": "2025-02-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Hematite",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-resilience-bracelet-zircon": {
+  "name": "The Seeds of Resilience Bracelet in Zircon",
+  "shopify_title": "The Seeds of Resilience Bracelet — Zircon",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Zircon"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4080",
+   "available": true,
+   "published": "2025-02-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Sacred Layers",
+    "Zircon"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-harmony-bracelet-watermelon-tourmaline": {
+  "name": "The Seeds of Harmony Bracelet in Watermelon Tourmaline",
+  "shopify_title": "The Seeds of Harmony Bracelet — Watermelon Tourmaline",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Watermelon Tourmaline"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4077",
+   "available": true,
+   "published": "2025-02-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Emotional balance",
+    "Love",
+    "Sacred Layers",
+    "Watermelon Tourmaline"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-open-heart-spell-bracelet-in-sterling-silver": {
+  "name": "The Open Heart Spell Bracelet in Sterling Silver",
+  "shopify_title": "The Open Heart Spell Bracelet in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "5032",
+   "available": true,
+   "published": "2025-02-03",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Love",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-golden-self-spell-bracelet-in-sterling-silver": {
+  "name": "The Golden Self Spell Bracelet in Sterling Silver",
+  "shopify_title": "The Golden Self Spell Bracelet in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "5036",
+   "available": true,
+   "published": "2025-02-03",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Confidence",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-inner-oracle-spell-bracelet-in-sterling-silver": {
+  "name": "The Inner Oracle Spell Bracelet in Sterling Silver",
+  "shopify_title": "The Inner Oracle Spell Bracelet in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "5038",
+   "available": true,
+   "published": "2025-02-03",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Intuition",
+    "Made to order",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-crystal-evil-eye-spell-bracelet-in-sterling-silver": {
+  "name": "The Crystal Evil Eye Spell Bracelet in Sterling Silver",
+  "shopify_title": "The Crystal Evil Eye Spell Bracelet in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "5030",
+   "available": true,
+   "published": "2025-02-03",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Made to order",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-vitality-blessings-spell-bracelet-in-sterling-silver": {
+  "name": "The Vitality Blessings Spell Bracelet in Sterling Silver",
+  "shopify_title": "The Vitality Blessings Spell Bracelet in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "5034",
+   "available": true,
+   "published": "2025-02-03",
+   "options": "Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Made to order",
+    "Vitality"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-garden-pendant-in-rose-quartz-rose-gold": {
+  "name": "The Rose Gold Garden Pendant in Rose Quartz",
+  "shopify_title": "The Rose Gold Garden Pendant in Rose Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Rose Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "1150",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3008-RQ-20-RG",
+   "available": true,
+   "published": "2025-01-17",
+   "options": null,
+   "tags": [
+    "Blessed",
+    "Calm",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Rose Quartz"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-abundance-prayer-pendant-in-sterling-silver": {
+  "name": "The Abundance Prayer Pendant in Sterling Silver",
+  "shopify_title": "The Abundance Prayer Pendant in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Prayer Pendant",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "565",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3013-20-SS",
+   "available": true,
+   "published": "2025-01-16",
+   "options": null,
+   "tags": [
+    "Abundance",
+    "Blessed",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "prayer-pendant",
+    "sublime"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-spirit-pendant-in-sterling-silver": {
+  "name": "The Spirit Pendant in Sterling Silver",
+  "shopify_title": "The Spirit Pendant in Sterling Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Spirit Pendant",
+  "description": "",
+  "ingredients": [
+   "Sterling Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "595",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3009-SS-20",
+   "available": true,
+   "published": "2025-01-16",
+   "options": "Chain: 16-18\" Rope Chain",
+   "tags": [
+    "Blessed",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection",
+    "sublime"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-garden-pendant-in-clear-quartz-sterling-silver": {
+  "name": "The Garden Pendant in Clear Quartz, Silver",
+  "shopify_title": "The Garden Pendant in Clear Quartz, Silver",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Clear Quartz",
+   "Silver"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3008-CQ-20-SS",
+   "available": true,
+   "published": "2025-01-16",
+   "options": "Metal: Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Clarity",
+    "Clear Quartz",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-open-heart-spell-bracelet": {
+  "name": "The Open Heart Spell Bracelet",
+  "shopify_title": "The Open Heart Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100-230",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "3113",
+   "available": true,
+   "published": "2024-11-27",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Love",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-vitality-blessings-spell-bracelet": {
+  "name": "The Vitality Blessings Spell Bracelet",
+  "shopify_title": "The Vitality Blessings Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100-230",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "3112",
+   "available": true,
+   "published": "2024-11-27",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Made to order",
+    "Vitality"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-golden-self-spell-bracelet": {
+  "name": "The Golden Self Spell Bracelet",
+  "shopify_title": "The Golden Self Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100-230",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "3111",
+   "available": true,
+   "published": "2024-11-27",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Confidence",
+    "Made to order"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-inner-oracle-spell-bracelet": {
+  "name": "The Inner Oracle Spell Bracelet",
+  "shopify_title": "The Inner Oracle Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100-230",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "3110",
+   "available": true,
+   "published": "2024-11-27",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Intuition",
+    "Made to order",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-crystal-evil-eye-spell-bracelet": {
+  "name": "The Crystal Evil Eye Spell Bracelet",
+  "shopify_title": "The Crystal Evil Eye Spell Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Spell Bracelet",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "100-230",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "3109",
+   "available": true,
+   "published": "2024-11-27",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Made to order",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-blessings-protection-amulet": {
+  "name": "The Blessings & Protection Amulet",
+  "shopify_title": "The Blessings & Protection Amulet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "195-520",
+   "compare_at_usd": null,
+   "variants": 4,
+   "variants_with_sku": 4,
+   "sku_example": "3103-SG",
+   "available": true,
+   "published": "2024-11-25",
+   "options": "Metal: 14K Solid Gold/Sterling Silver; Chain Style: No chain/Rope Chain",
+   "tags": [
+    "amulet",
+    "made to order",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-december-birthstone-energy-bracelet-turquoise": {
+  "name": "The December Birthstone Energy Bracelet in Turquoise",
+  "shopify_title": "The December Birthstone Energy Bracelet — Turquoise",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Turquoise"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4073",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "December"
+  }
+ },
+ "the-november-birthstone-energy-bracelet-citrine": {
+  "name": "The November Birthstone Energy Bracelet in Citrine",
+  "shopify_title": "The November Birthstone Energy Bracelet — Citrine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4070",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "November"
+  }
+ },
+ "the-october-birthstone-energy-bracelet-opal": {
+  "name": "The October Birthstone Energy Bracelet in Opal",
+  "shopify_title": "The October Birthstone Energy Bracelet — Opal",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Opal"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4067",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "October"
+  }
+ },
+ "the-september-birthstone-energy-bracelet-sapphire": {
+  "name": "The September Birthstone Energy Bracelet in Sapphire",
+  "shopify_title": "The September Birthstone Energy Bracelet — Sapphire",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Sapphire"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4064",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "sapphire"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "September"
+  }
+ },
+ "the-august-birthstone-energy-bracelet-peridot": {
+  "name": "The August Birthstone Energy Bracelet in Peridot",
+  "shopify_title": "The August Birthstone Energy Bracelet — Peridot",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Peridot"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4061",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "August"
+  }
+ },
+ "the-july-birthstone-energy-bracelet-ruby": {
+  "name": "The July Birthstone Energy Bracelet in Ruby",
+  "shopify_title": "The July Birthstone Energy Bracelet — Ruby",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Ruby"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4058",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "July"
+  }
+ },
+ "the-june-birthstone-energy-bracelet-pearl": {
+  "name": "The June Birthstone Energy Bracelet in Pearl",
+  "shopify_title": "The June Birthstone Energy Bracelet — Pearl",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Pearl"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4055",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "June"
+  }
+ },
+ "the-may-birthstone-energy-bracelet-emerald": {
+  "name": "The May Birthstone Energy Bracelet in Emerald",
+  "shopify_title": "The May Birthstone Energy Bracelet — Emerald",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Emerald"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4052",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "May"
+  }
+ },
+ "the-march-birthstone-energy-bracelet-aquamarine": {
+  "name": "The March Birthstone Energy Bracelet in Aquamarine",
+  "shopify_title": "The March Birthstone Energy Bracelet — Aquamarine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Aquamarine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4046",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "March"
+  }
+ },
+ "the-april-birthstone-energy-bracelet-clear-quartz": {
+  "name": "The April Birthstone Energy Bracelet in Clear Quartz",
+  "shopify_title": "The April Birthstone Energy Bracelet — Clear Quartz",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Clear Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4049",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "April"
+  }
+ },
+ "the-february-birthstone-energy-bracelet-amethyst": {
+  "name": "The February Birthstone Energy Bracelet in Amethyst",
+  "shopify_title": "The February Birthstone Energy Bracelet — Amethyst",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Amethyst"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4043",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "February"
+  }
+ },
+ "the-january-birthstone-energy-bracelet-garnet": {
+  "name": "The January Birthstone Energy Bracelet in Garnet",
+  "shopify_title": "The January Birthstone Energy Bracelet — Garnet",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Birthstone Energy Bracelet",
+  "description": "",
+  "ingredients": [
+   "Garnet"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4040",
+   "available": true,
+   "published": "2024-11-18",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "birth_month": "January"
+  }
+ },
+ "gift-box": {
+  "name": "Gift Bag",
+  "shopify_title": "Gift Bag",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Not for Collections",
+  "kind": "packaging",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "5",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7782",
+   "available": true,
+   "published": "2024-11-12",
+   "options": null,
+   "tags": [
+    "judgeme_excluded",
+    "Not for collections"
+   ],
+   "made_to_order": false
+  }
+ },
+ "flower-agate-palm-stone": {
+  "name": "The Flower Agate Palm Stone",
+  "shopify_title": "The Flower Agate Palm Stone",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Crystals",
+  "kind": "crystal",
+  "family": "Palm Stone",
+  "description": "",
+  "ingredients": [
+   "Flower Agate"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "28",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7006",
+   "available": true,
+   "published": "2024-11-05",
+   "options": null,
+   "tags": [
+    "Confidence",
+    "Creativity",
+    "crystals",
+    "Flower Agate",
+    "space-home"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-positivity-bracelet": {
+  "name": "The Sacred Layer of Positivity Bracelet",
+  "shopify_title": "The Sacred Layer of Positivity Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3050-SG",
+   "available": false,
+   "published": "2024-09-17",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "bracelet",
+    "Peridot",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-signature-gold-bead-chain-in-14k-solid-gold": {
+  "name": "The Signature Gold Bead Chain in 14K Solid Gold",
+  "shopify_title": "The Signature Gold Bead Chain in 14K Solid Gold",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Chain",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [
+   "14K Solid Gold"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "450-585",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "C003-18",
+   "available": true,
+   "published": "2024-09-11",
+   "options": "Chain Length: 18\"/20\"/24\"",
+   "tags": [
+    "chain",
+    "made to order",
+    "mystic heirlooms"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-sacred-layer-of-intuition-bracelet": {
+  "name": "The Sacred Layer of Intuition Bracelet",
+  "shopify_title": "The Sacred Layer of Intuition Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3038-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "bracelet",
+    "Calm",
+    "Intuition",
+    "Moonstone",
+    "Opal",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-inner-peace-bracelet": {
+  "name": "The Sacred Layer of Inner Peace Bracelet",
+  "shopify_title": "The Sacred Layer of Inner Peace Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3045-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Amethyst",
+    "bracelet",
+    "Calm",
+    "Clarity",
+    "Sacred Layers",
+    "Spiritual connection",
+    "Stability"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-courage-bracelet": {
+  "name": "The Sacred Layer of Courage Bracelet",
+  "shopify_title": "The Sacred Layer of Courage Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3049-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Amazonite",
+    "bracelet",
+    "Confidence",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-clarity-bracelet": {
+  "name": "The Sacred Layer of Clarity Bracelet",
+  "shopify_title": "The Sacred Layer of Clarity Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3039-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Clear Quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-truth-necklace": {
+  "name": "The Sacred Layer of Truth Necklace",
+  "shopify_title": "The Sacred Layer of Truth Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3069-SG",
+   "available": true,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Clarity",
+    "Confidence",
+    "Lapis Lazuli",
+    "necklace",
+    "Sacred Layers",
+    "Truth"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-clarity-necklace": {
+  "name": "The Sacred Layer of Clarity Necklace",
+  "shopify_title": "The Sacred Layer of Clarity Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3072-SG",
+   "available": true,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Clarity",
+    "Clear Quartz",
+    "necklace",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-alignment-bracelet": {
+  "name": "The Sacred Layer of Alignment Bracelet",
+  "shopify_title": "The Sacred Layer of Alignment Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3051-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "alignment",
+    "Blue Kyanite",
+    "bracelet",
+    "Emotional balance",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-intuition-necklace": {
+  "name": "The Sacred Layer of Intuition Necklace",
+  "shopify_title": "The Sacred Layer of Intuition Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3073-SG",
+   "available": true,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Calm",
+    "Intuition",
+    "Moonstone",
+    "necklace",
+    "opal",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-protection-bracelet": {
+  "name": "The Sacred Layer of Protection Bracelet",
+  "shopify_title": "The Sacred Layer of Protection Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3037-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Black Tourmaline",
+    "bracelet",
+    "Calm",
+    "Protection",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-protection-necklace": {
+  "name": "The Sacred Layer of Protection Necklace",
+  "shopify_title": "The Sacred Layer of Protection Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3070-SG",
+   "available": true,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Black Tourmaline",
+    "Calm",
+    "necklace",
+    "Protection",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-transformation-necklace": {
+  "name": "The Sacred Layer of Transformation Necklace",
+  "shopify_title": "The Sacred Layer of Transformation Necklace",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "515",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3071-SG",
+   "available": true,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "Calm",
+    "Emotional balance",
+    "necklace",
+    "Protection",
+    "Sacred Layers",
+    "Smoky Quartz",
+    "Spiritual connection",
+    "Stability"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-sacred-layer-of-transformation-bracelet": {
+  "name": "The Sacred Layer of Transformation Bracelet",
+  "shopify_title": "The Sacred Layer of Transformation Bracelet",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Sacred Layer",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "325",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "3040-SG",
+   "available": false,
+   "published": "2024-08-30",
+   "options": "Metal: 14K Solid Gold",
+   "tags": [
+    "bracelet",
+    "Calm",
+    "Emotional balance",
+    "Protection",
+    "Sacred Layers",
+    "Smoky Quartz",
+    "Spiritual connection",
+    "Stability"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-opportunity-bracelet": {
+  "name": "The Seeds of Opportunity Bracelet in Green Aventurine",
+  "shopify_title": "The Seeds of Opportunity Bracelet — Green Aventurine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Green Aventurine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4018",
+   "available": true,
+   "published": "2024-07-29",
+   "options": "Metal: 14K Gold FIlled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "Abundance",
+    "bracelet",
+    "Confidence",
+    "Green Aventurine",
+    "Sacred Layers",
+    "Vitality"
+   ],
+   "made_to_order": false
+  },
+  "flags": [
+   "option casing at source: \"Gold FIlled\""
+  ]
+ },
+ "the-rhodonite-palm-stone-1": {
+  "name": "The Rhodonite Palm Stone",
+  "shopify_title": "The Rhodonite Palm Stone",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Crystals",
+  "kind": "crystal",
+  "family": "Palm Stone",
+  "description": "",
+  "ingredients": [
+   "Rhodonite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "28",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7012",
+   "available": false,
+   "published": "2024-06-21",
+   "options": null,
+   "tags": [
+    "crystals",
+    "Emotional balance",
+    "Love",
+    "Rhodonite",
+    "space-home"
+   ],
+   "made_to_order": false
+  }
+ },
+ "lemurian-quartz-point": {
+  "name": "The Lemurian Quartz Point",
+  "shopify_title": "The Lemurian Quartz Point",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Crystals",
+  "kind": "crystal",
+  "family": null,
+  "description": "",
+  "ingredients": [
+   "Lemurian Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "45",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7014-M",
+   "available": true,
+   "published": "2024-03-15",
+   "options": null,
+   "tags": [
+    "Clarity",
+    "Clear Quartz",
+    "crystals",
+    "Lemurian Clear Quartz",
+    "Protection",
+    "space-home",
+    "Spiritual connection"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-transformation-bracelet": {
+  "name": "The Seeds of Transformation Bracelet in Smoky Quartz",
+  "shopify_title": "The Seeds of Transformation Bracelet — Smoky Quartz",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Smoky Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4024",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Calm",
+    "Emotional balance",
+    "Protection",
+    "Sacred Layers",
+    "Smoky Quartz",
+    "Spiritual connection",
+    "Stability"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-compassion-bracelet": {
+  "name": "The Seeds of Compassion Bracelet in Rhodonite",
+  "shopify_title": "The Seeds of Compassion Bracelet — Rhodonite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Rhodonite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4006",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Emotional balance",
+    "Love",
+    "Rhodonite",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-intuition-bracelet": {
+  "name": "The Seeds of Intuition Bracelet in Moonstone",
+  "shopify_title": "The Seeds of Intuition Bracelet — Moonstone",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Moonstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4012",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Calm",
+    "Intuition",
+    "Moonstone",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-love-bracelet": {
+  "name": "The Seeds of Love Bracelet in Rose Quartz",
+  "shopify_title": "The Seeds of Love Bracelet — Rose Quartz",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Rose Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4015",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Calm",
+    "Love",
+    "Rose Quartz",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-truth-bracelet": {
+  "name": "The Seeds of Truth Bracelet in Lapis Lazuli",
+  "shopify_title": "The Seeds of Truth Bracelet — Lapis Lazuli",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Lapis Lazuli"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4027",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Confidence",
+    "Lapis Lazuli",
+    "Sacred Layers",
+    "Truth"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-divine-insight-bracelet": {
+  "name": "The Seeds of Divine Insight Bracelet in Labradorite",
+  "shopify_title": "The Seeds of Divine Insight Bracelet — Labradorite",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Labradorite"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4009",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "bracelet",
+    "Clarity",
+    "Intuition",
+    "Labradorite",
+    "Sacred Layers",
+    "Truth"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-protection-bracelet": {
+  "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+  "shopify_title": "The Seeds of Protection Bracelet — Black Tourmaline",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Black Tourmaline"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4021",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "Black Tourmaline",
+    "bracelet",
+    "Calm",
+    "Protection",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-calm-bracelet": {
+  "name": "The Seeds of Calm Bracelet in Aquamarine",
+  "shopify_title": "The Seeds of Calm Bracelet — Aquamarine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Aquamarine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4003",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "Aquamarine",
+    "bracelet",
+    "Calm",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "the-seeds-of-abundance-bracelet": {
+  "name": "The Seeds of Abundance Bracelet in Citrine",
+  "shopify_title": "The Seeds of Abundance Bracelet — Citrine",
+  "name_status": "ruled: Q10 \"in\" rule (DECISIONS 2026-10-17)",
+  "category": "Bracelet",
+  "kind": "jewelry",
+  "family": "Seeds of",
+  "description": "",
+  "ingredients": [
+   "Citrine"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "75",
+   "compare_at_usd": null,
+   "variants": 6,
+   "variants_with_sku": 6,
+   "sku_example": "4000",
+   "available": true,
+   "published": "2024-02-05",
+   "options": "Metal: 14K Gold Filled/Sterling Silver; Size: 6.5 inches/7 inches/7.5 inches",
+   "tags": [
+    "Abundance",
+    "bracelet",
+    "Citrine",
+    "Confidence",
+    "Sacred Layers"
+   ],
+   "made_to_order": false
+  }
+ },
+ "garden-pendant-in-smoky-quartz": {
+  "name": "The Garden Pendant in Smoky Quartz",
+  "shopify_title": "The Garden Pendant in Smoky Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Smoky Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-SQ-20",
+   "available": true,
+   "published": "2024-01-10",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Calm",
+    "Emotional balance",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection",
+    "Smoky Quartz",
+    "Stabilit"
+   ],
+   "made_to_order": true
+  }
+ },
+ "garden-pendant-in-rose-quartz": {
+  "name": "The Garden Pendant in Rose Quartz",
+  "shopify_title": "The Garden Pendant in Rose Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Rose Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 3,
+   "variants_with_sku": 3,
+   "sku_example": "3008-RQ-20",
+   "available": true,
+   "published": "2024-01-10",
+   "options": "Metal: 14K Solid Gold/14K Rose Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Calm",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Rose Quartz"
+   ],
+   "made_to_order": true
+  }
+ },
+ "garden-pendant-in-moonstone": {
+  "name": "The Garden Pendant in Moonstone",
+  "shopify_title": "The Garden Pendant in Moonstone",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Moonstone"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-RM-20",
+   "available": true,
+   "published": "2024-01-10",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Calm",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Rainbow Moonstone"
+   ],
+   "made_to_order": true
+  }
+ },
+ "seeker-pendant": {
+  "name": "The Seeker Pendant",
+  "shopify_title": "The Seeker Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "485-1500",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3002-20",
+   "available": true,
+   "published": "2023-11-19",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Confidence",
+    "genesis",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "the-aquarius-crystal-set-1": {
+  "name": "The Aquarius Crystal Set",
+  "shopify_title": "The Aquarius Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-AQ",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amethyst",
+    "Aquarius",
+    "Clear Quartz",
+    "crystals",
+    "Labradorite",
+    "Lemurian Clear Quartz",
+    "Rainbow Flourite",
+    "ritual-kit",
+    "Rose Quart"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Aquarius"
+  }
+ },
+ "the-pisces-crystal-set-1": {
+  "name": "The Pisces Crystal Set",
+  "shopify_title": "The Pisces Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-PI",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amethyst",
+    "black obsidian",
+    "crystals",
+    "Pisces",
+    "Rainbow Flourite",
+    "Rainbow Moonstone",
+    "ritual-kit",
+    "Rose Quartz",
+    "Selenite",
+    "spac"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Pisces"
+  }
+ },
+ "the-capricorn-crystal-set-1": {
+  "name": "The Capricorn Crystal Set",
+  "shopify_title": "The Capricorn Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-CAP",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Capricorn",
+    "Citrine",
+    "Clear Quartz",
+    "crystals",
+    "Garnet",
+    "Red Jasper",
+    "ritual-kit",
+    "Selenite",
+    "space-home",
+    "Tiger's Eye"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Capricorn"
+  }
+ },
+ "the-sagittarius-crystal-set": {
+  "name": "The Sagittarius Crystal Set",
+  "shopify_title": "The Sagittarius Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-SA",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amethyst",
+    "black obsidian",
+    "crystals",
+    "dumortierite",
+    "Lapis Lazuli",
+    "ritual-kit",
+    "Rose Quartz",
+    "Sagittarius",
+    "Selenite",
+    "space-ho"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Sagittarius"
+  }
+ },
+ "the-scorpio-crystal-set": {
+  "name": "The Scorpio Crystal Set",
+  "shopify_title": "The Scorpio Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-SC",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "crystals",
+    "garnet",
+    "Labradorite",
+    "malachite",
+    "Rhodochrosite",
+    "ritual-kit",
+    "Scorpio",
+    "Selenite",
+    "Smoky Quartz",
+    "space-home"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Scorpio"
+  }
+ },
+ "the-libra-crystal-set-1": {
+  "name": "The Libra Crystal Set",
+  "shopify_title": "The Libra Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-LI",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amazonite",
+    "Black Tourmaline",
+    "crystals",
+    "Green Aventurine",
+    "Libra",
+    "Rhodochrosite",
+    "ritual-kit",
+    "Selenite",
+    "space-home"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Libra"
+  }
+ },
+ "the-virgo-crystal-set-1": {
+  "name": "The Virgo Crystal Set",
+  "shopify_title": "The Virgo Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-VI",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amazonite",
+    "Amethyst",
+    "Carnelian",
+    "Clear Quartz",
+    "crystals",
+    "Hematite",
+    "Lemurian Clear Quartz",
+    "ritual-kit",
+    "Selenite",
+    "space-hom"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Virgo"
+  }
+ },
+ "the-leo-crystal-set-1": {
+  "name": "The Leo Crystal Set",
+  "shopify_title": "The Leo Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-LE",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Amethyst",
+    "Citrine",
+    "crystals",
+    "Leo",
+    "Pyrite",
+    "ritual-kit",
+    "Selenite",
+    "space-home",
+    "Sunstone",
+    "Tiger's Eye"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Leo"
+  }
+ },
+ "cancer-crystal-set": {
+  "name": "The Cancer Crystal Set",
+  "shopify_title": "The Cancer Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-CAN",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Cancer",
+    "crystals",
+    "Rainbow Moonstone",
+    "Red Jasper",
+    "Rhodochrosite",
+    "Rhodonite",
+    "ritual-kit",
+    "Rose Quartz",
+    "Selenite",
+    "space-home"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Cancer"
+  }
+ },
+ "taurus-crystal-set": {
+  "name": "The Taurus Crystal Set",
+  "shopify_title": "The Taurus Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-TA",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "crystals",
+    "Green Aventurine",
+    "malachite",
+    "Pyrite",
+    "Rhodonite",
+    "ritual-kit",
+    "Rose Quartz",
+    "Selenite",
+    "space-home",
+    "Taurus"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Taurus"
+  }
+ },
+ "the-aries-crystal-set": {
+  "name": "The Aries Crystal Set",
+  "shopify_title": "The Aries Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-AR",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Aries",
+    "Carnelian",
+    "Citrine",
+    "Clear Quartz",
+    "crystals",
+    "Lemurian Clear Quartz",
+    "Red Jasper",
+    "ritual-kit",
+    "Rose Quartz",
+    "Selenite"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Aries"
+  }
+ },
+ "gemini-crystal-set": {
+  "name": "The Gemini Crystal Set",
+  "shopify_title": "The Gemini Crystal Set",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Ritual Kit",
+  "kind": "ritual kit",
+  "family": "Crystal Set",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "40",
+   "compare_at_usd": null,
+   "variants": 1,
+   "variants_with_sku": 1,
+   "sku_example": "7009-GE",
+   "available": true,
+   "published": "2023-11-17",
+   "options": null,
+   "tags": [
+    "Citrine",
+    "crystals",
+    "Gemini",
+    "Labradorite",
+    "Lapis Lazuli",
+    "Rainbow Moonstone",
+    "ritual-kit",
+    "Selenite",
+    "space-home",
+    "Tiger's Eye"
+   ],
+   "made_to_order": false
+  },
+  "attributes": {
+   "sign": "Gemini"
+  }
+ },
+ "genesis-pendant": {
+  "name": "The Genesis Pendant",
+  "shopify_title": "The Genesis Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Genesis",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "450-1300",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3016-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "genesis",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "abundance-prayer-pendant": {
+  "name": "The Abundance Prayer Pendant",
+  "shopify_title": "The Abundance Prayer Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Prayer Pendant",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "565-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3013-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Abundance",
+    "Blessed",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "prayer-pendant",
+    "sublime"
+   ],
+   "made_to_order": true
+  }
+ },
+ "spirit-pendant": {
+  "name": "The Spirit Pendant",
+  "shopify_title": "The Spirit Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Spirit Pendant",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "595-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3009-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection",
+    "sublime"
+   ],
+   "made_to_order": true
+  }
+ },
+ "garden-pendant-in-clear-quartz": {
+  "name": "The Garden Pendant in Clear Quartz",
+  "shopify_title": "The Garden Pendant in Clear Quartz",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Garden Pendant",
+  "description": "",
+  "ingredients": [
+   "Clear Quartz"
+  ],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "575-1150",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3008-CQ-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Clarity",
+    "Clear Quartz",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "sacred-pendant": {
+  "name": "The Sacred Pendant",
+  "shopify_title": "The Sacred Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "550-1770",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3007-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "Creativity",
+    "Intuition",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Spiritual connection",
+    "sublime"
+   ],
+   "made_to_order": true
+  }
+ },
+ "element-pendant": {
+  "name": "The Element Pendant",
+  "shopify_title": "The Element Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": null,
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "565-1500",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3003-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "Blessed",
+    "genesis",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection",
+    "Spiritual connection"
+   ],
+   "made_to_order": true
+  }
+ },
+ "large-genesis-pendant": {
+  "name": "The Large Genesis Pendant",
+  "shopify_title": "The Large Genesis Pendant",
+  "name_status": "unchanged: the Shopify title carries no dash",
+  "category": "Necklace",
+  "kind": "jewelry",
+  "family": "Genesis",
+  "description": "",
+  "ingredients": [],
+  "nutrition": null,
+  "badges": [],
+  "observed": {
+   "price_usd": "550-1900",
+   "compare_at_usd": null,
+   "variants": 2,
+   "variants_with_sku": 2,
+   "sku_example": "3001-20",
+   "available": true,
+   "published": "2023-05-01",
+   "options": "Metal: 14K Solid Gold/Sterling Silver",
+   "tags": [
+    "best-sellers",
+    "Blessed",
+    "genesis",
+    "Love",
+    "made to order",
+    "mystic heirlooms",
+    "necklace",
+    "pendant",
+    "Protection"
+   ],
+   "made_to_order": true
+  }
+ }
+}

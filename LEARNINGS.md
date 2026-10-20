@@ -2,6 +2,100 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-18: lane C, Pack v0 words side
+
+- The device shell turns a typed backslash-u escape into the character itself: a `\u2028` in a command broke a JS regex, and the em dash escape in a notes template became an em dash that only the byte grep caught. Build such characters in code (`chr`, `String.fromCharCode`) and grep for the UTF-8 bytes after every write; lane F saw the same in the file tools.
+- The playbook's ledger statuses are not all engine words: `lib/claims.js` knows needs_legal, prohibited, conditional (needs_edit) and approved (info), and anything else compiles as conditional. Write the engine's words.
+- Required language is checked inside the same string as the claim, so a footer disclaimer cannot be a claim row's `required_language`, and the disclaimer's own words ("treat", "diagnose", "medical treatment", "energy work") must stay out of every trigger, or the required text fails the lints. Run the required text against every rule.
+- Lexical triggers miss the claim forms the work uses: reading 519 candidates found 13 uncaught forms ("designed to protect", "helps you feel", "energy-charged", "earth-conscious" among them), which became triggers, and an identity row. Read the corpus before trusting a trigger list, and mark what stays loose `paraphrase_risk`.
+- Most visible copy is not voice: of about 3,100 distinct strings, the automatic filters left about 1,350 and the read kept 159. Product names, labels, offers, claims and planning layers dominate; the Website page is almost all interface (8 of 160 kept).
+- Captions sit in loose layers labelled "Caption" beside the posts: strip the label and record the strip. Only the posted grid tells a cover from a panel; the corpus keeps no frame order inside a board.
+- An input can land mid-lane: lane A's web TSV arrived and Gate 2 call 1 b moved the paid and web rosters while lane C ran. Re-run the opening scan before closing.
+- Cost: main chat not measured; no subagents; no Figma calls.
+
+## 2026-10-18: lane A, web re-cut
+
+- Escaping at the source and hashing in Figma before each chunk is saved removed the repair: all 1,398 web rows matched on the first read. Cost about 0.34M tokens over 51 tool calls and 30 minutes (about 245 tokens per text node, method reading included) against a 0.25M target.
+- Web comps strain a fixed-canvas visibility model. A homepage comp passed the board size test, so its clipping was not applied to its children (8 rows count as visible that the canvas hides); comps cut to a viewport send below-the-fold copy off frame; 43% of web text sits in component instances, and desktop and mobile comps repeat the same lines.
+- The website comps carry one block of template copy about picture framing, repeated above 39 desktop comps (312 rows), all clipped off frame.
+
+## 2026-10-18: lane H, engine 0.5.2
+
+- Build against the real pack before the first review. Lane H's first grammar (its own ground-mode list, stand-ins as objects, explicit style links only) met lane B's draft with 20 findings; adopting lane B's grammar and reading the text style roster left 2, both real (the accent styles' family links).
+- A probe from a brand review carries the brand into the engine. Round-1 probes, copied in as tests, held an HLR palette name and hex, HLR's scrim value and "owner HLR"; the reverse census on the next build caught them. Give a probe fictional values before it becomes an engine test.
+- A probe's letter can outlive its finding. Three round-1 probes (P01, P03, P18) still fail on their criteria after the failure they guard is gone, because the fix took another mechanism; round 2 judged them on the failure scenario, and they stay as evidence, unedited.
+- Second sightings come back at the seams: round 2 found round 1's classes again through new paths (a way forward that leaves text blocked, a parser that drops input without a word, unchecked text counted toward exit 0). Each now has a test, per REVIEW's seen-twice rule.
+- The connector cannot load faces installed on the Mac: two read-only calls on three type-specimen nodes in the reference copy (nothing written) found Saol Display and Trade Gothic LT Std unloadable and flagged missing. Path 1's stand-ins rest on that, and `face_check.js` names what cannot be edited.
+- Three rounds leave the residue at the edges of the last fix: round 3's two should-fix items were round 2's restore fix met with the accent word first, and the same accent built by the second driver (the native agent). A fix to text styling needs every position and every driver checked, not only the case the finding named.
+- Stage every build under a new path before committing it to the Mac and check its sha256 there: a repeated staged path resent the previous build once (lane F saw the same).
+- The shared YAML parser throws on a sequence item whose keys sit two spaces past the dash (the common YAML layout); it is loud, so Pack v0's files avoid it, but a hand-written file will hit it.
+- Cost: review subagents 0.38M and 0.42M tokens (round 1), 0.40M (round 2), 0.34M (round 3); main chat not measured; Figma: 2 read-only calls, no writes.
+
+## 2026-10-18: lane F, REVIEW.md
+
+- Run each check once on real data before writing it down. The first provenance scan called a token derived if any of its tags was, and counted 68 against lane B's 67 (two tokens carry two tags); it now counts by first tag and lists the two-tag tokens. Every command block in REVIEW.md ran as written on 0.5.1 and on lane B's `tokens.json`, and the rebuild reproduced both shipped 0.5.1 sha256s.
+- Rules that send a reviewer to the author's transcript contradict their own brief. Round 1's one blocker was exactly that (rules 1, 5 and 10 were checked against the transcript, which the brief forbids), plus checks a cloud reviewer cannot run. Now the author runs the Cowork-shell commands and hands over their output, and the reviewer says which checks only the author ran.
+- The census term list rebuilt today has 331 terms against 0.5.1's 327, and all four new ones are junk: `build_terms.py` takes `com` from other packs' `extensions_namespace:` lines and three `{font.family.*}` alias values as font families. They hit HLR's own files 269 times. Read a rebuilt list's new terms before a census. Fixed the same day with a test, on Eddie's ruling.
+- A common word can be a census term: REVIEW.md's draft hit one twice through an ordinary verb. Census your own prose before it lands in the brand home.
+- A written escape does not survive the file tools: a typed escape for the em dash became the character, and only the grep caught it. Name a character by its code point in prose, and grep for its UTF-8 bytes, which works in any locale (`grep -P` with a code point fails in the cloud shell's C locale).
+- Reusing a staged file name for a commit to the Mac can resend the previous version: one commit wrote the old file (same size, old sha). Stage each version under a new name and check the sha after every commit.
+- `get_variable_defs` and `get_metadata` cannot list a library's collections, variables or styles, and no connector reads a file's version history: a read-only `use_figma` script lists them, and Eddie reads the history in the app.
+- The claude.ai project instructions skip rule 6 (the brand-free engine); the copy in `_setup/` has it.
+- Two clocks date the record: the Cowork shell's `date` is UTC, so this evening's lanes are dated 2026-10-18 while Eddie's local date is 2026-10-17.
+- Findings, three fresh-context rounds, kept in the session (lane F's write scope is REVIEW.md): round 1, 1 blocker, 13 should-fix and 16 notes; round 2, 3 should-fix and 5 notes; round 3, 4 notes. Every blocker and should-fix was fixed and its check rerun. Two notes were left by choice: the scans stay inline until they are files in `_tools/` (lane H), and section 7 stays because ten rules point into it.
+- Eddie ruled all seven calls in one reply. Rule 6 was missing from the claude.ai instructions on purpose: the tool is HLR's own. A gap between two copies of the rules can be a decision, so ask before restoring it.
+- A house rule needs a lint, not only a grep: the copy lints let em dashes through (`copy_lint.js` warns only on an unspaced one; the others never check). One fragment in the pack's `prohibited_patterns` closes it for every lint.
+- The tag grammar drifts in use: `[derived, ruled]` and `[observed, <note>]` appeared in `tokens.json` within hours, and a strict scan read them as untagged. Scans read the first word; the grammar wants a DECISIONS line.
+- The rulings round's review found 1 blocker (a paid-only ruling written as a gate on every platform), 3 should-fix and 5 notes; each fix used the reviewer's own wording, so no second round ran.
+- Cost: review subagents 0.27M, 0.22M, 0.16M and 0.23M tokens (0.88M); main chat not measured; no Figma calls.
+
+## 2026-10-18: lane D, Pack v0 structure side
+
+- A slot map's roles are wiring, not labels. `paid_lint.js` maps a slate's `on_image` only to a slot whose role is `hook` or `title`; a map with `headline` roles passes every on-image line unchecked. Run a planned map through every lint that reads it, with a synthetic slate, before calling it done.
+- An unmeasured slot (null budget) reads three ways: `copy_lint.js` reports INSUFFICIENT-INPUT, `social_lint.js` asks for a sign-off, and `page_lint.js` and `paid_lint.js` skip it silently (`paid_lint.js` even reports "checked against measured ceilings"). Until the engine changes, web and paid copy is unchecked for length: read the slot statuses, not the verdict.
+- `_meta` is the only top-level key `sku_lookup.js` and `brief_lint.js` skip in a product database; any other key becomes a SKU. Only `description`, `badges` and `nutrition` license figures, so observed prices kept elsewhere in a record license none.
+- The public catalog is product-level and cannot key a database by SKU: it keeps one example SKU per product, and 101 of 650 variants carry none. The Shopify products export is what unlocks SKUs, descriptions and confirmed prices.
+- Parallel lanes can answer one question two ways from two sources: lane B drew the C6 CTA on Google art (from the CTA ruling), lane D left Google art without copy (from Google's guidance). Read sibling lanes' new files before closing and flag the conflict for the gate; neither lane edits the other's file.
+- Platform numbers stay in the engine; the pack records the brand's policy (which zone governs, where the sign-off sits) and points at the engine file. A copied number becomes a second source that drifts when the platform moves.
+- Write an option's consequence against the engine path for every channel it names. Call 1 b promised paid and web a fallback to the engine's generic roster; paid has one (`ad-type-data.json`), web has none (an empty section library that web-copy refuses), so web copy waits for Review 2.
+- Check what the engine does before an option's tradeoff rests on what its docs say. Call 2 said the lints enforce case, as the slot contract says; in 0.5.1 the social and web lints never read case and nothing checks sentence case.
+- A partial ratification cannot sit in one `_status`: the engine reads `channels.paid` and never a status, so the held paid and web rosters moved to a key it skips, and their slot maps stay unwired until Review 2.
+- Once a case rule is law, one slot cannot carry two roles: P07's item line held a sentence-case gloss on the card and a caps intention on the list, so it split in two.
+- Rulings land in other lanes' files: four of the seven changed 12 lines in lane B's closed files. Name the files each call changes when packaging a gate, so one go covers them.
+- Cost: not measured.
+
+## 2026-10-18: lane B, Pack v0 design side
+
+- Rulings can collide only in their cross-product. Call 7 (one roster by role and size), call 4 (one Layout mode) and C8 with the floors (three canvas scales) cannot all hold, and it showed only when the roster was written out. Write the roster before ruling the collections.
+- A stand-in maps families, not styles. Instrument Serif has Regular and Italic, so Saol's Light, Light Italic, Regular Italic and Medium have no match: `fonts.build_stand_ins` needs a style map before Chat 5 builds text styles (token proposal question 2).
+- `tokens_build.js export` keys Tailwind on one segment under `space`, `radius` and `breakpoint` and one under `font.size`; deeper names overwrite each other in `tailwind.tokens.js` without a warning. Keep those names flat.
+- `check` grades only the roles a pair lists, so a failing pair recorded with empty roles and a `restriction` keeps the law on file without failing the run.
+- A 50 percent black scrim gives white text 3.95:1 over a white area of a photo: display only. Body needs 55 percent (4.74:1).
+- The 2022 archive marks carry #faf8f2, #1f2918 and #baada3, not the book's own hexes. Read fills from every file before trusting a palette.
+- The monogram's vector was on disk under two names. Hashing path data across the marks folder found it, and a contact sheet of PNGs beside rendered SVGs (cairosvg in the cloud workspace) settled it in two staging calls.
+- `pdftotext -layout` on the Mac reads the book's palette and type pages exactly (CMYK, PMS, hex, sizes, tracking): cheaper than page renders for text facts.
+- No step or lane owns the strictness map, though the playbook puts it before any module and the Foundations board expects it.
+- Run the next engine build against the pack before a lane closes. 0.5.2 `figma-plan` stopped on three lane B tokens: a malformed tag another chat wrote, and two style tokens no text style uses, so the plan could not pick their stand-in. Each was a one-line fix.
+- A tag is exactly [documented], [observed] or [derived]. "[derived, ruled]" reads as untagged; a ratified value flips to [documented] with "(ratified <date> by <name>)".
+- A worst-case contrast test for copy on a photo certifies a case nobody designs and asks for an overlay the brand does not use; with every image a placeholder, nothing real can be tested at build anyway. Put the rule where the build's check reads (a recorded entry in contrast-pairs), so the check reports instead of blocking.
+- Figma binds a number variable to line height and letter spacing only as pixels (Figma forum, 2024 and 2025, community answers). Percent set on the style, unbound, follows the size, across modes too.
+- Figma's mode cap per collection is no longer 4: a pinned forum reply gives Pro 10 and Org 20 (its date and staff status not shown). HLR's 4 ground modes and 3 canvas modes fit even the old cap.
+- Merging per-canvas tokens into one moded token merges their provenance: the token takes its weakest tag (`font.size.label`: web ratified, social derived, so [derived]), and its description carries each canvas's state.
+- A pack change can run ahead of the engine: the canvas modes pass the installed 0.5.1 and stop every 0.5.2 command. Check which release a grammar change needs, and put that release on the plan in the same step.
+- 0.5.2's `check` counts mode-grammar findings in its contrast total ("10 contrast finding(s)" with every colour pair passing). Read the lines, not the count.
+- A shared closing line ("Cost: ... no Figma calls") is no anchor: lane C's entry carries the same one. Anchor a patch on the entry's own heading.
+- Cost: main chat not measured; no subagents; no Figma calls.
+
+## 2026-10-18: lane A, corpus re-cut (email, organic social, paid)
+
+- Copying text through model context changes invisible characters, and a length check cannot see it: 188 strings came back with soft line breaks (U+2028) as newlines and no-break spaces as spaces, and the lane's own method notes lost two written escapes the same way. Check a copy against hashes taken inside Figma by a read-only call, and escape non-ASCII text in tool output.
+- A verbatim round trip costs about 155 tokens per text node: plan a walk from the node count. Lane A ran 204 tool calls over 3.4 hours (the harness counts 0.23M subagent tokens; the lane's own estimate is about 1.8M against a 0.4M target, 0.4M of it on the repair). It stopped at budget in the brief's order, so email, social and paid are whole and web and the other pages wait.
+- Chat 1's lists held only the direct children of each first-level section (527 email, 1,288 social, 723 paid entries); the recursive walk finds 428, 1,670 and 1,112 frames.
+- Step 1b counted 486 paid frames in 13 boards; the walk finds 514 in 16 (the 38 in nested sections agree). Board detection is a size heuristic, and an independent count of text nodes equals the rows on every page, so the text is complete whichever split is right.
+- The connector cannot read image transparency: 296 rows under images count as buried and may show through a cut-out PNG. A few screenshots would settle it.
+- The social corpus has the handle misspelled as @HIGHTLIGHTRITUALS in 48 rows against 391 spelled right: a candidate check for the social lint or the prohibited patterns.
+- A cloud subagent keeps running whether or not the Mac is awake; only the copy into the brand home needs the Mac.
+
 ## 2026-10-17: Chat 3 prompt, a second Step 1b pass, Gate 1 closed
 
 - The Chat 3 prompt arrived before the pattern review existed (its precondition line was added after the paste). On Eddie's go this chat ran Step 1b while the Chat 2 chat was running it: two full passes, about 2.07M subagent tokens here against 2.06M there, and about 180 Figma calls here. Before redirecting a chat to an earlier step, look for another live chat on that step: `git status`, new untracked outputs, record mtimes.
@@ -11,15 +105,25 @@ One dated entry per chat, newest first.
 - Gate 1 closed here on both passes' calls; the second pass's deltas went to an addendum rather than into the canonical review.
 - Cost: subagents 2.07M tokens (email 0.43M, organic social 0.42M, paid 0.46M, web and other pages 0.46M, measurement 0.30M); main chat not measured.
 
-## 2026-10-17: chat 4, Chat 4 prompt, engine 0.5.0 and the bundle
+## 2026-10-17: chat 4, Chat 4 prompt, engines 0.5.0 and 0.5.1 and the bundle
 
-- The leak was taste as well as names. 0.4.0 briefed every pairwise judge with one brand owner's measured preference and hard-coded a product family in a script. A name census passes on that: read the judge's brief and the generation contracts too.
-- A census term has to count plurals and possessives. A singular product-family term missed its plural in the 0.4.0 tests until the pattern took an optional "s".
+- The leak was taste as well as names. 0.4.0 briefed every pairwise judge with one brand owner's measured preference and hard-coded a product family in a script. Read the judge's brief and the generation contracts, not only the names.
+- A name census proves names only. 0.5.0 passed it with zero hits; two fresh-context audits and two overlap scans against every other brand folder (8-word runs, verbatim quoted strings) then found that brand's taste as engine defaults, its slot-map values and module ids with budgets in test fixtures, its barred territories, and its copy in test strings. Run the overlap scans on every engine release before handover.
+- A census term has to count plurals and possessives. A singular product-family term missed its plural until the pattern took an optional "s".
+- Test fixtures are where another brand's facts hide: copied slot maps, measured budgets, a ledger's barred terms, review ids, reworded quotes. Write fixtures fresh, in a domain no pack covers, and label them synthetic.
+- A number labelled "platform" can be a brand's. The paid safe bands in the asset-types recipe were one brand's guide layer and contradicted the engine's own placement specs.
+- Evals drift from their fixtures: three 0.4.0 evals graded against an earlier version of their fixture brief.
+- A new skill breaks at its seams, not in its own tests. The review of the organic social work found seven should-fix items, all where social met existing machinery (the asset lint, the board's renders, the squad prompt, the verifier's per-surface signals, malformed input), none inside social-copy's own suite.
+- A reviewer's probe files are a free fuzz set: rerun them after the fixes, then keep them as tests.
+- The fallback lexicon ships empty in 0.5.1: a pack without a `concrete_lexicon` (`product` key) earns no concreteness credit at all.
+- The Mac's Cowork shell is a Linux sandbox: the brand home is at `~/mnt/claude-cowork`, `/Users/eddie` does not exist, and background processes die with each call, so a long check has to finish inside one call.
+- Re-read DECISIONS.md before the last build of a long chat. Gate 1 (b) was ruled in another chat mid-run and widened this release.
 - A zip made from an installed plugin carries the cache's `.in_use/` lock file. Build bundles from source and strip runtime files.
-- A bundle that references the working pack needs no rebuild when the pack changes. It needs one for a new engine release or a new pack path.
-- The engine's fallback lexicon is food nouns. A brand that makes anything else needs its own `concrete_lexicon` (`product` key) in Pack v0, or concreteness scores near zero.
-- Four chats wrote this brand home today. These record files were re-read and patched in one step, with an mtime check, not rewritten from an earlier read.
-- Cost: not measured.
+- A bundle that references the working pack needs no rebuild when the pack changes, only for a new engine release or a new pack path.
+- Several chats wrote this brand home today. These record files were re-read and patched in one step with an mtime check.
+- The Figma connector's build path loads Google Fonts and fonts an organization hosts, not fonts installed on the Mac: Homemade Apple and Instrument Serif load, Saol and Trade Gothic do not. A Pro team cannot host fonts, so the real faces reach the library only through the Figma desktop app where they are installed, or an org plan.
+- The Plugin API cannot rename a Figma file: the document reads "Document". File names are changed in Figma itself.
+- Cost: audit subagents 0.29M and 0.39M tokens, the review 0.34M; main chat not measured.
 
 ## 2026-10-17: Step 1b pattern review (the Chat 2 prompt)
 

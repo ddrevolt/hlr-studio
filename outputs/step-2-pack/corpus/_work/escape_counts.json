@@ -1,0 +1,8 @@
+{
+ "escapes": {
+  "newline": 4088,
+  "U+2028": 459,
+  "tab": 6,
+  "carriage_return": 8
+ }
+}

@@ -60,3 +60,20 @@ Breakpoints and the email width (C8) stay with Gate 4.
 Ranked by rework if wrong: 3, 4 and 7 (every binding depends on them), then 5, 6, 8 and 10, then 1, 2 and 9 (cheap to change later).
 
 Sources: playbook section 4; engine 0.4.0 (`design-system/SKILL.md`, `references/token-model.md`, `tokens_build.js`, `references/pack-contract.md`, `asset-production/references/slot-contract.md` and `asset-types.md`); Brand Review v2 (C1, C3, C4, C8; Q2, Q11); Figma `whoami` 2026-10-17; Figma Help, "Upload custom fonts to an organization" (help.figma.com/hc/en-us/articles/360039956774).
+
+## Ruling (Eddie, 2026-10-17, chat 4)
+
+1. b: rename the file now, to `HLR Library`.
+2. a: pages `00 Foundations`, `01 Elements`, `02 Modules`, `03 Templates`, `04 Staging`; `Page 1` renamed to `00 Foundations`.
+3. a: four collections, `HLR / Primitives`, `HLR / Semantic`, `HLR / Component`, `HLR / Layout`.
+4. Delegated to Claude, on best practice: ground modes on `HLR / Semantic`, one per ground, named by role (`light` the default; the alternates named at Gate 4 with the roster). Primitives, Component and Layout keep one mode, `default`. Component tokens alias semantic tokens, so a frame set to a ground switches everything inside it. Replaces 4 a.
+5. b: every variable scoped; primitives also open to fills and strokes for one-off art.
+6. a: names mirror `tokens.json` paths; CSS prefix `--hlr-`; `$extensions` namespace `com.hlr`.
+7. Changed: role and size names bound to variables, set in the real faces (Saol, Trade Gothic, Homemade Apple), no stand-ins. The license flag stays raised (rule 8) until HLR confirms the licenses.
+8. a: one component per mark, fill bound to a variable.
+9. a: the six boards on `00 Foundations`.
+10. a: namespace `hlr`, key `slot`; `E##` elements, `M##` email, `S##` social (S01 to S04 since 0.5.1), `P##` and `W##` reserved, `T##` templates; names `<PREFIX> <Name>`.
+
+Section 0 is overtaken: Gate 1 is closed and 0.5.1 shipped. The variables and text styles wait for Pack v0's `tokens.json` (lane B) and Gate 2.
+
+Built at the ruling (2026-10-17): pages `00 Foundations` (0:1), `01 Elements` (7:2), `02 Modules` (7:3), `03 Templates` (7:4), `04 Staging` (7:5); collections `HLR / Primitives` (7:6, mode `default`), `HLR / Semantic` (7:7, mode `light`), `HLR / Component` (7:8, `default`), `HLR / Layout` (7:9, `default`), all empty; the six boards on `00 Foundations` (7:10 to 7:15), empty. Not done: the file rename (the Plugin API cannot rename a file; rename it to `HLR Library` in Figma); the text styles, which wait for Pack v0's ramp, and whose real faces the build path cannot load (Saol and Trade Gothic are installed on the Mac only).

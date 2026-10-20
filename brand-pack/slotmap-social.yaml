@@ -1,0 +1,131 @@
+# HLR organic social slot map (role slotmap_social). PLANNED, NOT BUILT: lane D, Pack v0 structure side, 2026-10-18.
+# Status: the organic social taxonomy is ratified (Gate 2 call 1 b, Eddie, 2026-10-18), so the File map
+# wires this map now. The masters are planned and unbuilt: every slot is "proposed, unbuilt" until
+# Step 4 measures it.
+# Budgets: every max_chars is null with a status until Step 4 builds the masters and measures each
+# slot on its tightest variant with the flex probe (slot contract, fixed canvases). No budget is
+# invented; social_lint.js asks for a sign-off on copy written into a null slot.
+# Masters follow the engine's portable recipes (asset-production references/asset-types.md):
+# S01 feed post set, S03 carousel set, S04 story set. S02 is not planned: HLR's reel covers are
+# photo-only 4:5, which S01's photo structure covers. Gate 1 (b) ruled S03 and S04 for HLR.
+# Sources: outputs/step-1-review/pattern-review.md (2.2, 3, 4.3, 4.4), patterns/patterns-social.md,
+# DECISIONS 2026-10-17. Node ids are the reference file LYyYXPDUHVoAABh865EvMI (read-only).
+# case, house style (Gate 2 call 2 a, Eddie, 2026-10-18): headlines and lines in sentence case
+# [documented p17]; eyebrows in tracked caps [documented p17]; callouts, labels, sublines and terms
+# in caps [observed]; names, quotes, scripts and cues as written (as-is). The live grid's serif caps
+# headlines retire with Instrument Serif (C5). Caption layers are not set on the art and take their
+# case as written.
+# Handle, star and wordmark are elements (E##), never slots. No CTA box on social: cues are plain
+# text [observed: 0 of 52 renders carry a button].
+# Captions: S01.caption and S03.caption are caption layers beside the set, never exported. The
+# Gate 1 (b) reason reads "captions live in layers"; where captions live stays HLR's (Review 1).
+
+meta:
+  namespace: hlr
+  key: slot
+  file_key: Gq3yUbLs6MCRM0nOhjvnIW
+  page: "02 Modules"
+  modules: 3
+  status: "proposed, unbuilt"
+  built: null
+  measured_at: null
+  safe_zones:
+    status: "ruled (Gate 2 call 3 b, Eddie, 2026-10-18)"
+    authority: "Platform numbers live in the engine, never here: social-copy/references/organic-specs.json (grid crop, story band) and paid-ad-copy/references/placement-specs.json (the ads 9x16 zone)."
+    story: "S04 keeps text, marks and the product's key detail inside the organic story band (organic-specs.json story: top and bottom 250 px, confidence contested), not the ads zone. This departs from the engine's default for story sets (the ads 9x16 keep-clear). A story runs as an ad only after a re-layout onto a P## master (slotmap-paid.yaml). The organic band rests on one 2026 guide: confirm it on a live story before the first S04 build (owner Eddie)."
+    sign_off: "The handle sits above the bottom band. [observed] story handles sit at y 1607 of 1920 with 289 px clear below, outside the organic band, so the live placement holds."
+    stickers: "Link, poll and question stickers are added in the app [observed]. Each S04 structure leaves a clear band for them; its position is set at Step 4, not here."
+    feed: "S01 and S03 keep text and the focal point inside the profile grid's 3:4 crop (organic-specs.json grid) plus HLR's side margin, a layout token (lane B)."
+
+modules:
+  S01:
+    name: "Feed Post"
+    family: social
+    use_when: "A single 4:5 post: photo only, headline on photo, text tile on a flat ground, or offer tile (social types photo, mantra, quote, offer, product_spotlight). Patterns S-PHOTO, S-PHOTOTEXT, S-TEXT, S-OFFER; nodes 2:181774, 2:181982, 2:181328, 2:181188. 1x1 and 9x16 siblings are the engine recipe's; HLR's live feed is 4:5 only and its older 1:1 posts retire."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["4x5"], Structure: ["Photo", "Headline on photo", "Text tile", "Offer tile"] }
+    variants:
+      - { name: "Ratio=4x5", size: "1080x1350" }
+    slots:
+      - { id: S01.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S01.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S01.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S01.script, role: script, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S01.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S01.image, role: image, status: "proposed, unbuilt" }
+      - { id: S01.caption, role: caption, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+  S03:
+    name: "Carousel Set"
+    family: social
+    use_when: "The default post: a cover, one or more inner panels and an end panel, separate 4:5 frames in gutter mode (social types education, annotated_product, mantra; series words_for_your_journey, energy_medicine, field_notes, season_crystals, proof_of_magic). Patterns S-WFYJ, S-ENERGY, S-ANNOT, S-SEASON, S-LONG, S-PROOF; nodes 2:181816, 2:181792, 2:180130, 2:181620, 2:180943, 2:181769. Inner items carry callouts and stone labels; their words come from the claims ledger."
+    status: "proposed, unbuilt"
+    parts: [cover, inner, end]
+    build_modes: [gutter]
+    property: { Panel: ["Cover", "Inner", "End"] }
+    variants:
+      - { name: "Panel=Cover", size: "1080x1350" }
+      - { name: "Panel=Inner", size: "1080x1350" }
+      - { name: "Panel=End", size: "1080x1350" }
+    repeats:
+      - { group: item, in: inner, max: 4 }
+    slots:
+      - { id: S03.cover.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.cover.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S03.cover.script, role: script, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.cover.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.cover.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.cover.image, role: image, status: "proposed, unbuilt" }
+      - { id: S03.inner.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.inner.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S03.inner.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S03.inner.item1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.inner.item1.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.inner.item2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.inner.item2.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.inner.item3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.inner.item3.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.inner.item4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.inner.item4.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S03.inner.image, role: image, status: "proposed, unbuilt" }
+      - { id: S03.end.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S03.end.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S03.end.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.end.image, role: image, status: "proposed, unbuilt" }
+      - { id: S03.caption, role: caption, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+  S04:
+    name: "Story Set"
+    family: social
+    use_when: "A run of 9x16 frames, each one structure: text on a solid ground, an inset image on a mat, a full-bleed photo with a title, or a photo over a solid panel (social types launch, product_spotlight, mantra, quote, offer; series energy_medicine, field_notes). Patterns ST-TEXT, ST-INSET, ST-FULL, ST-SPLIT; nodes 2:62552, 2:62473, 2:64042, 2:178746. Benefit and callout lines come from the claims ledger."
+    status: "proposed, unbuilt"
+    parts: [text, inset, full_bleed, split]
+    property: { Structure: ["Text", "Inset", "Full bleed", "Split"] }
+    variants:
+      - { name: "Structure=Text", size: "1080x1920" }
+      - { name: "Structure=Inset", size: "1080x1920" }
+      - { name: "Structure=Full bleed", size: "1080x1920" }
+      - { name: "Structure=Split", size: "1080x1920" }
+    repeats:
+      - { group: item, in: full_bleed, max: 4 }
+      - { group: item, in: split, max: 4 }
+    slots:
+      - { id: S04.text.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.text.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.inset.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.inset.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.inset.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.inset.attribution, role: attribution, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S04.inset.image, role: image, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.full_bleed.image, role: image, status: "proposed, unbuilt" }
+      - { id: S04.split.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: S04.split.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.split.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.split.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.split.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: S04.split.image, role: image, status: "proposed, unbuilt" }

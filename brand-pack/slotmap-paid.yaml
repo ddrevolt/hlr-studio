@@ -1,0 +1,230 @@
+# HLR paid slot map (role slotmap_paid). PLANNED, NOT BUILT: lane D, Pack v0 structure side, 2026-10-18.
+# Status: held for Review 2 (Gate 2 call 1 b, Eddie, 2026-10-18). The paid taxonomy and these masters
+# are ratified at Review 2 with the first masters. Until then the File map leaves slotmap_paid null
+# and paid briefs run on the engine's bundled ad types; this file is the Step 4 build plan. Type ids
+# in use_when name the held paid roster (type-registry-core.json held_for_review_2.paid). Every
+# module and slot is "proposed, unbuilt".
+# Budgets: every max_chars is null until Step 4 builds and measures the masters (slot contract,
+# fixed canvases). No budget is invented. paid_lint.js reads a null ceiling as no ceiling; the
+# copy lints say a slot carries no measured budget.
+# Sources: outputs/step-1-review/pattern-review.md (2.3, 3, 4.3, 4.4), patterns/patterns-paid.md,
+# DECISIONS 2026-10-17 (Q11: Meta 1:1, 4:5, 9:16; Google 1.91:1 and 1200x1200; IAB display).
+# Node ids are the reference file LYyYXPDUHVoAABh865EvMI (read-only); library node ids arrive at Step 4.
+# Ids: P## per Gate 3 call 10; slots P##.<role> or P##.<group><n>.<role>. One line per slot: the
+# engine's paid_lint.js and fit_check.js read slot lines with a line parser.
+# case, house style (Gate 2 call 2 a, Eddie, 2026-10-18): headlines and lines in sentence case
+# [documented p17]; eyebrows in tracked caps [documented p17]; callouts, labels, sublines and terms
+# in caps [observed]; names, quotes, scripts and cues as written (as-is).
+# Role hook (title on P03) marks each module's primary on-image line: paid_lint.js maps a copy
+# execution's on_image to it. Other slots take explicit in_frame ids. P02's name and P08's tiles are
+# data from the product database, never written.
+# Wordmark, star and handle are elements (E##), never slots. No CTA is drawn in Meta art: the
+# platform adds it [observed].
+
+meta:
+  namespace: hlr
+  key: slot
+  file_key: Gq3yUbLs6MCRM0nOhjvnIW
+  page: "02 Modules"
+  modules: 11
+  status: "proposed, unbuilt"
+  built: null
+  measured_at: null
+  safe_zones:
+    status: "ruled (Gate 2 call 3 b, Eddie, 2026-10-18)"
+    authority: "Platform numbers live in the engine, never here: skills/paid-ad-copy/references/placement-specs.json (ratios, keep_clear_px; verified 2026-07-27). Meta's Ads Guide refuses automated reads, so confirm the 9x16 zone in Ads Manager's placement preview before the first paid build (LEARNINGS 2026-10-17; owner Eddie)."
+    nine_by_sixteen: "Every paid 9x16 master keeps text, marks, callouts and the product's key detail inside the engine's ads 9x16 keep-clear, the unified Stories and Reels zone. Organic stories (S04) keep the organic story band instead (slotmap-social.yaml meta.safe_zones); a story runs as an ad only after a re-layout onto a P## master."
+    sign_off: "The wordmark sits above the bottom keep-clear in 9x16. [observed] it sits 120 px from the foot in 27 board frames, and the lowest text sits 30 to 185 px from the foot in 14 of 16 checked frames: inside the band."
+    feed: "1x1 and 4x5 follow the engine's keep_clear_px as comfort padding (no platform UI overlay); HLR's margins are layout tokens (lane B)."
+    google_and_display: "No platform UI overlay. Google art carries no overlaid copy and no drawn CTA (Gate 2 call 1, Google a), so P10 stamps no text. Display keeps HLR's margins (lane B)."
+  display_floors:
+    status: "ruled (Gate 2 call 5 a, Eddie, 2026-10-18)"
+    unit: "CSS px at 1x; masters built at the IAB size and exported at 1x and 2x [derived]"
+    body: 14
+    small: 12
+    applies_to: "P11 at 728x90, 300x250 and 160x600, and the web type ramp: lane B's web label step moves from 11 to 12 (tokens.json font.size.web-label)"
+    provenance: "[derived, ruled] the rendered floors of the pattern review's addendum 5: no text under 12 px rendered, body at 14 px. Replaced small 11 (the review's section 3 table and lane B's first web ramp)."
+    observed: "[observed] live banners set text at 3.5 to 9 px; leaderboard quote about 13 px, medium rectangle 16, wide skyscraper 14, 180x150 quote about 8 px and tagline about 3 px; banners named for IAB sizes are built at 500x300 and 600x160 (patterns-paid.md)."
+    sizes_source: "IAB sizes as Google lists them for display (support.google.com/authorizedbuyers/answer/3011898, read 2026-10-18): 300x250, 728x90 and 160x600 are among its top performers; 180x150 (small rectangle) and 320x50 (mobile leaderboard) are supported. 180x150 is not planned (its text rendered at 3 to 8 px); 320x50 is not observed."
+
+modules:
+  P01:
+    name: "Brand Line"
+    family: paid
+    use_when: "One Saol line with one italic accent word over a model photo, or the wordmark as a masthead with a short line (types brand_line). Patterns P-LINE, P-MAST; nodes 2:50853, 2:60736."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Line", "Masthead"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    slots:
+      - { id: P01.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P01.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+  P02:
+    name: "Product Hero"
+    family: paid
+    use_when: "One piece cut out on a plain ground or inset on Alabaster, named in Saol (types product_hero). Patterns P-HERO, P-INSET; nodes 2:53235, 2:46166, 2:52919."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Cut-out", "Inset"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    slots:
+      - { id: P02.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P02.name, role: name, max_chars: null, case: as-is, feed: product_db, status: "proposed, unbuilt" }
+      - { id: P02.subline, role: hook, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P02.side_label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P02.offer, role: offer, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+  P03:
+    name: "Annotated"
+    family: paid
+    use_when: "The piece with one to four callouts on hairline leaders, on a ground or on model; a build adds one callout per frame (types annotated). Patterns P-ANNOT-BUILD, P-ANNOT-MODEL, P-STACK; nodes 2:42498, 2:37799, 2:57502. Callout words come from the claims ledger."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["On ground", "On model"], Callouts: ["1", "2", "3", "4"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    repeats:
+      - { group: callout, max: 4 }
+    slots:
+      - { id: P03.title, role: title, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P03.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P03.callout1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P03.callout1.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P03.callout2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P03.callout2.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P03.callout3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P03.callout3.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P03.callout4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P03.callout4.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+  P04:
+    name: "Quote"
+    family: paid
+    use_when: "Someone else's words: a press quote with the publication's logo, one or two customer reviews over customer imagery, or a DM reply bubble (types press_quote, customer_review, dm_reply). Patterns P-PRESS, P-REVIEW, P-DM; nodes 2:36273, 2:58872, 2:48723. Verbatim and sourced only: never trimmed to fit."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Press", "Review", "DM"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    repeats:
+      - { group: review, max: 2 }
+    slots:
+      - { id: P04.quote, role: hook, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
+      - { id: P04.attribution, role: attribution, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P04.review1.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
+      - { id: P04.review2.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
+  P05:
+    name: "Mantra"
+    family: paid
+    use_when: "A short affirmation alone on an image or a flat ground, or built word by word for motion (types mantra). Pattern P-MANTRA; nodes 2:47957, 2:40303."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Ground: ["Photo", "Flat"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    slots:
+      - { id: P05.line, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+  P06:
+    name: "Offer"
+    family: paid
+    use_when: "The offer is the headline over full-bleed photo; a gift-with-purchase variant names what comes free and on what terms (types offer). Patterns P-OFFER, P-GWP; nodes 2:53265, 2:51663. Percent, code, threshold and dates are merge tokens until C10."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Offer", "Gift with purchase"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    repeats:
+      - { group: side, max: 2 }
+    slots:
+      - { id: P06.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P06.offer, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P06.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P06.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P06.terms, role: disclaimer, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P06.side1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P06.side2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+  P07:
+    name: "Meaning"
+    family: paid
+    use_when: "A stone or material card, or a list of intention and stone pairs (types meaning). Card style: itemN.name and itemN.line, the gloss (one card; 9x16 stacks two). List style: itemN.label, the intention, over itemN.name, the stone, up to eight. Patterns P-INGRED, P-LIST; nodes 2:47064, 2:54733. Meaning is a benefit claim (C2): the ledger governs every line."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Card", "List"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    repeats:
+      - { group: item, max: 8 }
+    slots:
+      - { id: P07.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P07.item1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item1.line, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P07.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item2.line, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P07.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item5.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item5.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item6.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item6.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item7.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item7.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.item8.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: P07.item8.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+  P08:
+    name: "Birthstone Grid"
+    family: paid
+    use_when: "Twelve months, each a tile with the piece, the month and the stone (types birthstone_grid). Pattern P-GRID; nodes 2:57657, 2:54760. Tiles are an element repeat fed by the product database (attributes.birth_month and the stone in the name), not copy slots."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1x1", "4x5", "9x16"] }
+    variants:
+      - { name: "Ratio=1x1", size: "1080x1080" }
+      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    slots:
+      - { id: P08.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P08.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+  P09:
+    name: "End Frame"
+    family: paid
+    use_when: "The video end frame: the wordmark centered and an optional line. Pattern P-VIDEO; node 2:48703. Supers and storyboards wait for video_rules (null in the pack)."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["9x16"] }
+    variants:
+      - { name: "Ratio=9x16", size: "1080x1920" }
+    slots:
+      - { id: P09.line, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+  P10:
+    name: "Link Image"
+    family: paid
+    use_when: "Google formats: a photo with the product and no overlaid copy; the words go in the platform's headline and description fields (types link_ad). Pattern P-LAND; nodes 2:36590, 2:56900. Retires the 1280x628, 1260x628 and 1280x720 frames to 1200x628."
+    status: "proposed, unbuilt"
+    property: { Ratio: ["1.91x1", "1x1"] }
+    variants:
+      - { name: "Ratio=1.91x1", size: "1200x628" }
+      - { name: "Ratio=1x1", size: "1200x1200" }
+    stamps_no_text: true
+    reason: "Ruled (Gate 2 call 1, Google a, Eddie, 2026-10-18): no overlaid copy and no drawn CTA on Google art; copy lives in the platform's headline and description fields. Source: Google's responsive display guidance advises against text overlaid on images (support.google.com/google-ads/answer/9823397, read 2026-10-18)"
+  P11:
+    name: "Display Banner"
+    family: paid
+    use_when: "IAB display: the wordmark one side, a Saol line or a press quote the other, an image between (types display_banner). Pattern P-BANNER; nodes 2:36253, 2:36273. Display floors in meta.display_floors."
+    status: "proposed, unbuilt"
+    property: { Size: ["728x90", "300x250", "160x600"], Style: ["Line", "Quote"] }
+    variants:
+      - { name: "Size=728x90", size: "728x90" }
+      - { name: "Size=300x250", size: "300x250" }
+      - { name: "Size=160x600", size: "160x600" }
+    slots:
+      - { id: P11.line, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P11.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
