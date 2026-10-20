@@ -2,6 +2,10 @@
 
 Newest first. Each line: the decision, its reason, what it replaced. Only Eddie ratifies a derived value.
 
+## 2026-10-20
+
+- The two 0.5.0 bundles (`outputs/step-3-bundle/hlr-studio-engine-0.5.0.plugin`, `studio-engine-0.5.0.plugin`) are out of git history: removed from every commit that held them, the reflog expired and the objects pruned; their blob ids no longer resolve. The two commits after Step 1b carry new ids (`8a9528c`, `ad99594`); earlier commits keep theirs. Reason: Eddie's go; the audits found another brand's content in both, and the repo may go to HLR's team (rule 9). Replaced: the 2026-10-17 commits that held them.
+
 ## 2026-10-18
 
 - Gate 2 question 2 (Eddie, 2026-10-18): option 1. `figma.yaml` carries `fonts.build_stand_in_styles`: for Instrument Serif, Light and Medium build as Regular, and Light Italic and Regular Italic as Italic; Inter carries Trade Gothic's Regular and Bold. Every face the build loads exists (0.5.2 `figma-plan` on a scratch copy with the committed `figma.yaml`), and the switch in the desktop app covers eight variables, three families and five styles. Reason: Eddie's go; a stand-in maps families, not styles. Replaced: nothing; closes the 0.5.2 bundle report's section 7, item 3.

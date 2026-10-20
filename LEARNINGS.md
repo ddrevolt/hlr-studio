@@ -2,6 +2,14 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-20: restart triage and git checkpoint
+
+- The lane protocol patches the records but never commits: the 2026-10-18 lanes sat untracked for two days until this checkpoint. Commit at each gate from one chat while no lane writes.
+- Leaked files leave history cheaply while the repo has no remote: filter-branch with an index filter on the paths, drop refs/original, expire the reflog, gc with prune now, then ask git for the old blob ids. Commits before the first one that held the files keep their ids.
+- The Cowork shell needs delete permission for any git write (lock files, the rewrite's temp folder, gc).
+- Gap: no census ran over the rewritten history; access to `claude-cowork/_tools/release-checks/` was declined in this chat. Owner: Eddie.
+- Cost: not measured.
+
 ## 2026-10-18: lane C, Pack v0 words side
 
 - The device shell turns a typed backslash-u escape into the character itself: a `\u2028` in a command broke a JS regex, and the em dash escape in a notes template became an em dash that only the byte grep caught. Build such characters in code (`chr`, `String.fromCharCode`) and grep for the UTF-8 bytes after every write; lane F saw the same in the file tools.

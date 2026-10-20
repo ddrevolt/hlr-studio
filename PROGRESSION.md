@@ -73,6 +73,8 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 
 - [x] Lane F: REVIEW.md at the brand home root, the review rules every lane's review reads (2026-10-18; three fresh-context review rounds; in the project docs; Eddie ruled its seven calls the same day)
 - [x] Release-check tools kept outside the brand folders: `claude-cowork/_tools/release-checks/` (2026-10-17)
+- [x] Git checkpoint of the 2026-10-18 lanes; the two 0.5.0 bundles removed from history (2026-10-20, DECISIONS)
+- [ ] Census over every commit in git history with `claude-cowork/_tools/release-checks/`, before the repo goes to HLR
 
 ## Reviews (default plan)
 
