@@ -4,19 +4,26 @@
   "module_library": "module-library.json"
  },
  "note": "Generated, never hand-edited. Regenerate whenever the slot map or the module library changes; a stale map is worse than none because it certifies a seam that has moved.",
- "modules_in_slotmap": 29,
- "modules_the_engine_can_write": 20,
+ "modules_in_slotmap": 42,
+ "modules_the_engine_can_write": 26,
  "derivation": "slotmap-derived: every module stamping at least one slot is writable by its real slot ids. MOD_GEN supplies legacy shorthand aliases only and does not gate what exists.",
  "modules_stamping_no_slots": [
   "E03",
   "E04",
   "E05",
   "E08",
+  "E10",
+  "E11",
+  "E12",
+  "E13",
+  "E14",
+  "E15",
   "M01",
   "M05",
   "M10",
   "M14",
-  "M20"
+  "M20",
+  "M23"
  ],
  "map": {
   "M02": {
@@ -96,6 +103,18 @@
    }
   },
   "M04": {
+   "eyebrow": {
+    "slot": "M04.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M04.eyebrow": {
+    "slot": "M04.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
    "headline": {
     "slot": "M04.headline",
     "max_chars": 140,
@@ -615,6 +634,184 @@
     "case": "sentence"
    }
   },
+  "M22": {
+   "headline": {
+    "slot": "M22.headline",
+    "max_chars": 108,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M22.headline": {
+    "slot": "M22.headline",
+    "max_chars": 108,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "eyebrow": {
+    "slot": "M22.eyebrow",
+    "max_chars": 60,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M22.eyebrow": {
+    "slot": "M22.eyebrow",
+    "max_chars": 60,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "body": {
+    "slot": "M22.body",
+    "max_chars": 236,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M22.body": {
+    "slot": "M22.body",
+    "max_chars": 236,
+    "role": "body",
+    "case": "sentence"
+   }
+  },
+  "M24": {
+   "nav1.label": {
+    "slot": "M24.nav1.label",
+    "max_chars": 16,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M24.nav1.label": {
+    "slot": "M24.nav1.label",
+    "max_chars": 16,
+    "role": "label",
+    "case": "as-is"
+   },
+   "nav2.label": {
+    "slot": "M24.nav2.label",
+    "max_chars": 36,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M24.nav2.label": {
+    "slot": "M24.nav2.label",
+    "max_chars": 36,
+    "role": "label",
+    "case": "as-is"
+   },
+   "nav3.label": {
+    "slot": "M24.nav3.label",
+    "max_chars": 52,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M24.nav3.label": {
+    "slot": "M24.nav3.label",
+    "max_chars": 52,
+    "role": "label",
+    "case": "as-is"
+   },
+   "disclaimer": {
+    "slot": "M24.disclaimer",
+    "max_chars": 864,
+    "role": "disclaimer",
+    "case": "as-is"
+   },
+   "M24.disclaimer": {
+    "slot": "M24.disclaimer",
+    "max_chars": 864,
+    "role": "disclaimer",
+    "case": "as-is"
+   },
+   "legal": {
+    "slot": "M24.legal",
+    "max_chars": 124,
+    "role": "legal",
+    "case": "as-is"
+   },
+   "M24.legal": {
+    "slot": "M24.legal",
+    "max_chars": 124,
+    "role": "legal",
+    "case": "as-is"
+   }
+  },
+  "M25": {
+   "line": {
+    "slot": "M25.line",
+    "max_chars": 212,
+    "role": "line",
+    "case": "sentence"
+   },
+   "M25.line": {
+    "slot": "M25.line",
+    "max_chars": 212,
+    "role": "line",
+    "case": "sentence"
+   }
+  },
+  "M26": {
+   "headline": {
+    "slot": "M26.headline",
+    "max_chars": 124,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M26.headline": {
+    "slot": "M26.headline",
+    "max_chars": 124,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M26.body",
+    "max_chars": 364,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M26.body": {
+    "slot": "M26.body",
+    "max_chars": 364,
+    "role": "body",
+    "case": "sentence"
+   },
+   "closing": {
+    "slot": "M26.closing",
+    "max_chars": 164,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M26.closing": {
+    "slot": "M26.closing",
+    "max_chars": 164,
+    "role": "body",
+    "case": "sentence"
+   }
+  },
+  "M27": {
+   "title": {
+    "slot": "M27.title",
+    "max_chars": 52,
+    "role": "name",
+    "case": "as-is"
+   },
+   "M27.title": {
+    "slot": "M27.title",
+    "max_chars": 52,
+    "role": "name",
+    "case": "as-is"
+   },
+   "date": {
+    "slot": "M27.date",
+    "max_chars": 68,
+    "role": "date",
+    "case": "as-is"
+   },
+   "M27.date": {
+    "slot": "M27.date",
+    "max_chars": 68,
+    "role": "date",
+    "case": "as-is"
+   }
+  },
   "E01": {
    "label": {
     "slot": "E01.label",
@@ -692,6 +889,32 @@
     "slot": "E07.name",
     "max_chars": 40,
     "role": "name",
+    "case": "as-is"
+   }
+  },
+  "E09": {
+   "price": {
+    "slot": "E09.price",
+    "max_chars": 44,
+    "role": "price",
+    "case": "as-is"
+   },
+   "E09.price": {
+    "slot": "E09.price",
+    "max_chars": 44,
+    "role": "price",
+    "case": "as-is"
+   },
+   "compare_at": {
+    "slot": "E09.compare_at",
+    "max_chars": 64,
+    "role": "price",
+    "case": "as-is"
+   },
+   "E09.compare_at": {
+    "slot": "E09.compare_at",
+    "max_chars": 64,
+    "role": "price",
     "case": "as-is"
    }
   }

@@ -3,7 +3,7 @@
 // against Gate 1 C4, which keeps white as the email page ground. Run with use_figma (read-only) once per page: set PAGE
 // to 02 Modules 7:3, 03 Templates 7:4 or 04 Staging 7:5. It asserts, positively:
 //   1. every visible fill on every email module root (each variant of a set on 02 Modules; each module instance placed
-//      on 03 and 04) binds `background/email-page` (VariableID:19:20); M02 Hero's root is the photo well, whose fills
+//      on 03 and 04) binds `background/email-page` (VariableID:19:20); M02 Hero's and M22 Follow block's roots are photo wells, whose fills
 //      may be `component/placeholder/fill` (19:43), the scrim `background/scrim` (19:23) or a cleared photo (IMAGE);
 //   2. no paint on the page binds `background/default` (VariableID:19:19);
 //   3. once a cleared photo fills a well (an IMAGE fill), no placeholder label inside it is still visible
@@ -18,7 +18,7 @@ const fails = [];
 const vis = f => f.visible !== false && (f.opacity === undefined || f.opacity > 0);
 const checkRoot = (n, moduleName) => {
   const fills = (Array.isArray(n.fills) ? n.fills : []).filter(vis);
-  const isHero = /^Email\/M02 /.test(moduleName);
+  const isHero = /^Email\/M(02|22) /.test(moduleName);   // the photo-well roots: M02 Hero and M22 Follow block (2026-10-23)
   if (!fills.length) { fails.push(n.id + ' ' + moduleName + ': no visible fill'); return; }
   for (const f of fills) {
     const id = f.boundVariables && f.boundVariables.color ? f.boundVariables.color.id : null;

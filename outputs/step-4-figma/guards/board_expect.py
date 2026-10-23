@@ -6,8 +6,11 @@ Builds what the 00 Foundations boards must say from the pack: every colour cell'
 description adds "; the alias [derived], for Eddie to confirm"), every Certified pairs cell's four lines (its ratio,
 computed as the engine computes it; its source; "certified: <roles>" or "recorded: <restriction>"; the pair with its
 hexes), every Type specimen line in full (exemplars.json, and the two board lines that quote no exemplar) and how many
-specimens the board holds (text styles x canvases), the strictness map rows (strictness-map.md) and the gates already
-closed (PROGRESSION.md).
+specimens the board holds (text styles x canvases), the strictness map rows, header, closing note and status
+(strictness-map.md), the Layout board's token lines (each space step, the two margins, the radius, the CTA and rule
+strokes on each canvas with their tags, the breakpoints; tokens.json and figma.yaml) and the gates already closed
+(PROGRESSION.md). Every Color cell is expected in full: its label, its path, "HEX" or "HEX, alias of PATH" and its tag
+line. Type lines are compared in their exact case, as the board renders them (Foundations review round 3, F3-05).
 Usage: python3 board_expect.py <brand home> > board-expect.json, then paste its output as EXPECT in board_drift.js and
 run that with use_figma (read-only). Prints hashed, compact JSON; --plain prints the values themselves."""
 import json, re, sys
@@ -47,8 +50,10 @@ for p, o in walk(tok):
         continue
     v = o['$value']
     hexv = resolve(v)
-    colors[p.replace('.', '/')] = {'hex': hexv.upper() if isinstance(hexv, str) else hexv,
-                                   'alias': v.strip('{}').replace('.', '/') if isinstance(v, str) and v.startswith('{') else None,
+    parts = p.split('.'); alias = v.strip('{}').replace('.', '/') if isinstance(v, str) and v.startswith('{') else None
+    hx = hexv.upper() if isinstance(hexv, str) else hexv
+    colors[p.replace('.', '/')] = {'label': ' '.join(parts[2:] if parts[0] == 'color' else parts[1:]), 'path': p.replace('.', '/'),
+                                   'value': hx + (', alias of ' + alias if alias else ''), 'hex': hx, 'alias': alias,
                                    'tag': tag_line(o.get('$description', ''))}
 def lum(h):
     c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
@@ -88,6 +93,35 @@ rows = [[c.strip().replace('`', '') for c in l.strip().strip('|').split(' | ')] 
 paras = sm.split('\n\n')
 header = ' '.join(x.replace('`', '') for x in paras if x.startswith('Rules from the playbook') or x.startswith('Element classes from'))
 closing = [x for x in paras if x.startswith('Adopted with')][0].strip().replace('`', '')
+st = re.search(r"(Drafted by .*? delegation)\b.*?\(ratified (\d{4}-\d\d-\d\d) by Eddie", sm.replace('\u2019', "'"))
+status = {'drafted': st.group(1), 'ratified': st.group(2)}
+TAG = r'\[(documented|observed|derived)((?:,[^\]]*)?)\]'
+def ruled_date(rest):
+    m = re.search(r'\b(?:ruled|ratified) (\d{4}-\d\d-\d\d)', rest); return m.group(1) if m else None
+def modes_from(text):
+    """{canvas: [px, tag kind, ruled date]} from "web 1 px [observed, ...]", "web: 1 px [...]" or "1 px on web and social [...]"."""
+    out, last = {}, 0
+    for m in re.finditer(TAG, text):
+        span = text[last:m.start()]; last = m.end()
+        for c, px in re.findall(r'\b(web|social|email):? (\d+) px\b', span): out[c] = [int(px), m.group(1), ruled_date(m.group(2))]
+        for px, cs in re.findall(r'\b(\d+) px on ((?:web|social|email)(?:(?:, | and )(?:web|social|email))*)', span):
+            for c in re.findall(r'web|social|email', cs): out[c] = [int(px), m.group(1), ruled_date(m.group(2))]
+    return out
+px = lambda v: int(str(resolve(v)).replace('px', ''))
+first_tag = lambda d: (re.search(TAG, d) or [None, None])[1]
+space = {'space/' + k: '%d px' % px(o['$value']) for k, o in tok['space'].items() if re.fullmatch(r'\d+', k)}
+margins = {'space/' + k: {'px': px(o['$value']), 'alias': o['$value'].strip('{}').replace('.', '/'), 'tag': first_tag(o.get('$description', '')),
+                          'ratified': (re.search(r'\(ratified (\d{4}-\d\d-\d\d)', o.get('$description', '')) or [None, None])[1]}
+           for k, o in tok['space'].items() if k.endswith('-margin')}
+radius = {'radius/' + k: {'v': str(o['$value']).replace('px', ''), 'tag': first_tag(o.get('$description', ''))} for k, o in tok['radius'].items()}
+strokes = {}
+for k in ('cta', 'rule'):
+    o = tok['stroke'][k]; got = modes_from(o.get('$description', ''))
+    vals = {'web': px(o['$value']), **{c: px(v) for c, v in o.get('$extensions', {}).get('com.hlr', {}).get('modes', {}).items()}}
+    strokes['stroke/' + k] = {c: [vals[c]] + got.get(c, [None, None, None])[1:] for c in vals}
+fy = open(home + '/brand-pack/figma.yaml', encoding='utf-8').read()
+bp = re.search(r'^\s*breakpoints:\s*\{([^}]*)\}', fy, re.M)
+breakpoints = sorted(int(x) for x in re.findall(r':\s*(\d+)', bp.group(1))) if bp else []
 prog = open(home + '/PROGRESSION.md', encoding='utf-8').read()
 closed = sorted({int(n) for n in re.findall(r'- \[x\] \*\*Gate (\d)\*\*', prog)} | {int(n) for n in re.findall(r'\*\*Gate (\d)\*\* closed', prog)})
 def fnv(s):
@@ -99,12 +133,14 @@ def fnv(s):
 # script's --plain output shows what the pack says for it.
 if '--plain' in sys.argv:
     print(json.dumps({'colors': colors, 'pairs': pairs, 'lines': {k: v for k, v in lines.items() if k.startswith('hlr-')}, 'other': OTHER,
-                      'specimens': specimens, 'strictness': {'rows': rows, 'header': header, 'closing': closing}, 'closedGates': closed},
+                      'specimens': specimens, 'strictness': {'rows': rows, 'header': header, 'closing': closing, 'status': status}, 'closedGates': closed,
+                      'layout': {'space': space, 'margins': margins, 'radius': radius, 'strokes': strokes, 'breakpoints': breakpoints}},
                      ensure_ascii=False, indent=1))
 else:
-    print(json.dumps({'colors': {k: fnv('%s|%s|%s' % (v['hex'], v['alias'] or '', v['tag'])) for k, v in colors.items()},
-                      'pairs': [fnv(chr(1).join(p)) for p in pairs],
-                      'lines': {k: fnv(v.lower()) for k, v in lines.items() if k.startswith('hlr-')},
-                      'other': {k: fnv(v.lower()) for k, v in OTHER.items()}, 'specimens': specimens,
-                      'rows': [fnv(chr(1).join(r)) for r in rows], 'header': fnv(header), 'closing': fnv(closing), 'closed': closed},
+    print(json.dumps({'colors': {k: fnv(chr(1).join([v['label'], v['path'], v['value'], v['tag'] or ''])) for k, v in colors.items()},
+                      'pairs': [fnv(chr(1).join(p)) for p in pairs], 'pairNames': [p[1] for p in pairs],
+                      'lines': {k: fnv(v) for k, v in lines.items() if k.startswith('hlr-')},
+                      'other': {k: fnv(v) for k, v in OTHER.items()}, 'specimens': specimens,
+                      'rows': [fnv(chr(1).join(r)) for r in rows], 'header': fnv(header), 'closing': fnv(closing), 'status': status,
+                      'space': space, 'margins': margins, 'radius': radius, 'strokes': strokes, 'breakpoints': breakpoints, 'closed': closed},
                      separators=(',', ':')))

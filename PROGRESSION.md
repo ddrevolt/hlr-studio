@@ -1,6 +1,6 @@
 # HLR Phase 1: progression
 
-High Light Rituals (HLR), a client brand. Phase 1: 4 weeks from Fri 2026-10-16. Live reviews: {{review-1-date}}, {{review-2-date}}, {{review-3-date}} (dates not set; owner Eddie).
+High Light Rituals (HLR), a client brand. Phase 1: 4 weeks from Fri 2026-10-16. Live reviews: {{review-1-date}}, Review 2 on Fri 2026-10-30 (Eddie, 2026-10-23), {{review-3-date}} (dates 1 and 3 not set; owner Eddie).
 Method: `_setup/brand-forge-playbook.md`. Rules: `_setup/hlr-project-instructions.md`. Kickoff: `_setup/hlr-kickoff-prompt.md`.
 Registry id `hlr`; aliases HLR, High Light Rituals, HighLight, highlight-brandbook. Slot namespace `hlr`.
 
@@ -60,15 +60,17 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 - [x] **Gate 3** (lane G): Eddie ruled the file and the conventions (2026-10-17, chat 4: `outputs/step-4-figma/gate-3-conventions.md`, DECISIONS); the variables and text styles wait for Pack v0 and Gate 2
 - [x] Foundations through the engine's design-system skill (2026-10-17: the pages, the four empty collections with their modes and the six empty boards exist; ids in `figma.yaml`): pages, variables with every id recorded, text styles on the real faces with the OTFs uploaded, marks as SVG components, the certified-pairs board, the strictness map (2026-10-23, Chat 5: built, with the text styles on the stand-ins under Gate 2 question 2 and the license flag raised; guards R8 and R13; DECISIONS; 2026-10-23, Chat 6: switched to the real faces at Eddie’s request, every slot re-measured on them, the flag still raised)
   - 2026-10-23: fresh-context review, round 1 (`outputs/step-4-figma/review-foundations-r1.md`): 2 blockers, 3 should-fix, 3 notes on the boards and descriptions, all fixed; round 2 (`review-foundations-r2.md`): 0 blockers, 2 should-fix, 5 notes, all fixed, the guards tightened (`guards/tests/run_all.sh`); round 3, the last (`review-foundations-r3.md`): 0 blockers, 1 should-fix, 6 notes; closed with F3-01’s approach (the closed-gate guard) and F3-04 (rule 4’s wording) on Eddie’s decision sheet and F3-05 to F3-07 logged for Chat 6’s next close
-- [x] **Gate 4**: Eddie rules on the ground roster and batch scope (CTA shape ruled at Gate 1, C6) (2026-10-23: decided by Claude under Eddie's delegation, for Eddie to confirm: grounds light, warm, deep and night; the placeholder label ink; the strictness map adopted; email first; DECISIONS)
+- [x] **Gate 4**: Eddie rules on the ground roster and batch scope (CTA shape ruled at Gate 1, C6) (2026-10-23: decided by Claude under Eddie's delegation and ratified by Eddie the same day on his decision sheet: grounds light, warm, deep and night; the placeholder label ink; the strictness map adopted; email first; DECISIONS)
 - [ ] Before the first paid build: a person confirms the 9:16 keep-clear bands and the copy limits in Meta's Ads Guide, and `placement-specs.json`'s `_verified` moves (DECISIONS 2026-10-18)
-- [x] Elements and the first module batch through asset-production, email at 1200px with slice-sized type, slot-stamped `hlr`, flex-probed, screenshot-checked (2026-10-23, Chat 6 overnight under Eddie's delegation, for Eddie to confirm: 8 elements and 21 modules after the comprehensiveness pass over HLR's live sends; structure lint, flex at 2x or better, canvas and face checks; `slotmap.yaml`, `module-library.json` and `seam-map.json` in the pack; DECISIONS)
+- [x] Elements and the first module batch through asset-production, email at 1200px with slice-sized type, slot-stamped `hlr`, flex-probed, screenshot-checked (2026-10-23, Chat 6 overnight under Eddie's delegation, ruled by Eddie on his decision sheet the same day: 8 elements and 21 modules after the comprehensiveness pass over HLR's live sends; structure lint, flex at 2x or better, canvas and face checks; `slotmap.yaml`, `module-library.json` and `seam-map.json` in the pack; DECISIONS)
   - 2026-10-23: fresh-context review, three rounds (`outputs/step-4-figma/review-email-batch-r1.md` to `-r3.md`): 2 blockers, 10 should-fix and 23 notes found in all, every blocker and should-fix fixed and verified; closed with no finding open
-- [ ] The next module batches: social, paid and web at the formats the review found, slot-stamped `hlr`, flex-probed, screenshot-checked (organic social next; paid and web after Review 2's taxonomy ruling)
+- [ ] Chat 6b (Eddie, 2026-10-23): Donnie's ownership carried through every record and guard that still names Eddie for an open item; the Staging comparison of HLR's original sends beside the library's rebuild; the Elements and Modules pages grouped into a plain-language registry (prompt in `_setup/next-chat-prompts.md`)
+- [ ] The next module batches: social, paid and web at the formats the review found, slot-stamped `hlr`, flex-probed, screenshot-checked (organic social after the rest of the email templates and the flows, Eddie, 2026-10-23, and after Chat 6b; paid and web after Review 2's taxonomy ruling)
 - [x] The first email templates rebuilt as pure instances: T01 Product Spotlight, T02 Editorial send, T03 Product listing (2026-10-23, Chat 6)
-- [ ] The rest of the client's most-used templates rebuilt as pure instances: Sale, Testimonials, Moodboard, Welcome 1 to 5, the monthly energy medicine send and the flows
+- [x] The rest of the module roster (Eddie, 2026-10-23: "build the rest"): the filled CTA (E01) and the follow block, the lockup header (a labelled placeholder until HLR's vector) and the star (E15, HLR's own live footer vector, Eddie, 2026-10-23), the stacked and social footers without the crest (C3; Eddie kept it retired on 2026-10-23), the transactional card, the struck price, the Ritualist masthead, a press logo slot; product image elements per category (Eddie, 2026-10-23) (2026-10-23, Chat 6: M22 to M27, E09 to E15; reviewed fresh-context, `outputs/step-4-figma/review-batch-2-r1.md` and on)
+- [x] The rest of the client's most-used templates rebuilt as pure instances, before organic social (Eddie, 2026-10-23): Sale, Testimonials, Moodboard, Welcome 1 to 5, the monthly energy medicine send and the flows (2026-10-23, Chat 6: T04 to T17, `outputs/step-4-figma/templates-batch-2.md`)
 - [x] `tokens.css` and Tailwind tokens exported from `tokens.json` (2026-10-23: `brand-pack/web/`)
-- [x] Engine gaps logged where a skill falls short for HLR (no workarounds) (2026-10-23: G1 to G9 in `outputs/step-4-figma/engine-gaps-chat6.md`, for lane H's 0.5.4)
+- [x] Engine gaps logged where a skill falls short for HLR (no workarounds) (2026-10-23: G1 to G9 in `outputs/step-4-figma/engine-gaps-chat6.md`; Eddie added all nine to lane H's 0.5.4 the same day)
 
 ## Step 5. Forge proof
 
@@ -82,9 +84,11 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 - [x] Release-check tools kept outside the brand folders: `claude-cowork/_tools/release-checks/` (2026-10-17)
 - [x] Git checkpoint of the 2026-10-18 lanes; the two 0.5.0 bundles removed from history (2026-10-20, DECISIONS)
 - [ ] Census over every commit in git history with `claude-cowork/_tools/release-checks/`, before the repo goes to HLR
+- [ ] Explainer for Eddie and HLR (the journey from the ask to the send, the rulebook, change scenarios, the forge or Claude Design): plan in `outputs/explainer/plan.md` (2026-10-23); built at the plan's defaults and published privately (Eddie, 2026-10-23); review round 1 fixed, round 2's 5 should-fix and 10 notes open; paused at Eddie's request; Eddie's go before HLR sees it
 
 ## Reviews (default plan)
 
 - Review 1 ({{review-1-date}}): the Brand Review and the token proposal, with Eddie's Gate 1 picks (C3, C4, C5, C6, C8) for HLR to confirm
-- Review 2 ({{review-2-date}}): Figma foundations and the first modules, with the paid and web taxonomy ratified on them (Gate 2 call 1 b)
+  - 2026-10-23: the review workbook (`outputs/review/`, private artifact) published for today's review with Donnie; its decisions reach the pack only on Eddie's go after the review closes
+- Review 2 (Fri 2026-10-30): Figma foundations and the first modules, with the paid and web taxonomy ratified on them (Gate 2 call 1 b)
 - Review 3 ({{review-3-date}}): templates and the forge proof

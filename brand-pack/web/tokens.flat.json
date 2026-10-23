@@ -156,7 +156,12 @@
  },
  "color.semantic.text.on-placeholder": {
   "value": "#353535",
-  "provenance": "derived",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.semantic.text.on-photo-fill": {
+  "value": "#353535",
+  "provenance": "observed",
   "type": "color"
  },
  "color.semantic.interactive.cta": {
@@ -213,6 +218,38 @@
   "provenance": "documented",
   "type": "color"
  },
+ "component.cta.fill": {
+  "value": "#353535",
+  "provenance": "observed",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.cta.fill-label": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color",
+  "modes": {
+   "light": "#ffffff",
+   "warm": "#beada3",
+   "deep": "#17280a",
+   "night": "#353535"
+  }
+ },
+ "component.cta.fill-on-photo": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "component.cta.fill-label-on-photo": {
+  "value": "#353535",
+  "provenance": "observed",
+  "type": "color"
+ },
  "component.cta.weight": {
   "value": "1px",
   "provenance": "documented",
@@ -258,8 +295,13 @@
  },
  "component.rule.weight": {
   "value": "1px",
-  "provenance": "observed",
-  "type": "dimension"
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "1px",
+   "social": "1px",
+   "email": "2px"
+  }
  },
  "component.callout.leader": {
   "value": "#353535",
@@ -313,6 +355,17 @@
   "value": "#353535",
   "provenance": "documented",
   "type": "color"
+ },
+ "component.price.strike-line": {
+  "value": "#63615f",
+  "provenance": "derived",
+  "type": "color",
+  "modes": {
+   "light": "#63615f",
+   "warm": "#353535",
+   "deep": "#c5c2be",
+   "night": "#c5c2be"
+  }
  },
  "font.family.display": {
   "value": "Saol Display",
@@ -651,6 +704,16 @@
   "canvas": {
    "web": "1px",
    "social": "2px",
+   "email": "2px"
+  }
+ },
+ "stroke.rule": {
+  "value": "1px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "1px",
+   "social": "1px",
    "email": "2px"
   }
  }

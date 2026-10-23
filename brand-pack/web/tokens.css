@@ -26,12 +26,17 @@
   --hlr-color-semantic-text-muted: #63615f;
   --hlr-color-semantic-text-on-photo: #ffffff;
   --hlr-color-semantic-text-on-placeholder: #353535;
+  --hlr-color-semantic-text-on-photo-fill: #353535;
   --hlr-color-semantic-interactive-cta: #353535;
   --hlr-color-semantic-interactive-link: #353535;
   --hlr-component-cta-stroke: #353535;
   --hlr-component-cta-label: #353535;
   --hlr-component-cta-stroke-on-photo: #ffffff;
   --hlr-component-cta-label-on-photo: #ffffff;
+  --hlr-component-cta-fill: #353535;
+  --hlr-component-cta-fill-label: #ffffff;
+  --hlr-component-cta-fill-on-photo: #ffffff;
+  --hlr-component-cta-fill-label-on-photo: #353535;
   --hlr-component-cta-weight: 1px;
   --hlr-component-link-label: #353535;
   --hlr-component-link-rule: #353535;
@@ -44,6 +49,7 @@
   --hlr-component-mark-fill-on-photo: #ffffff;
   --hlr-component-placeholder-fill: #dcd8d4;
   --hlr-component-placeholder-label: #353535;
+  --hlr-component-price-strike-line: #63615f;
   --hlr-font-family-display: Saol Display;
   --hlr-font-family-title: Saol Standard;
   --hlr-font-family-body: Trade Gothic LT Std;
@@ -89,6 +95,7 @@
   --hlr-space-social-margin: 64px;
   --hlr-radius-none: 0px;
   --hlr-stroke-cta: 1px;
+  --hlr-stroke-rule: 1px;
 }
 
 /* Ground modes, one block per ground (default: light). Set data-ground on an element to switch everything inside it. */
@@ -102,12 +109,15 @@
   --hlr-color-semantic-interactive-link: #353535;
   --hlr-component-cta-stroke: #353535;
   --hlr-component-cta-label: #353535;
+  --hlr-component-cta-fill: #353535;
+  --hlr-component-cta-fill-label: #ffffff;
   --hlr-component-link-label: #353535;
   --hlr-component-link-rule: #353535;
   --hlr-component-rule-stroke: #353535;
   --hlr-component-callout-leader: #353535;
   --hlr-component-callout-label: #353535;
   --hlr-component-mark-fill: #353535;
+  --hlr-component-price-strike-line: #63615f;
 }
 [data-ground="warm"] {
   --hlr-color-semantic-background-default: #beada3;
@@ -119,12 +129,15 @@
   --hlr-color-semantic-interactive-link: #353535;
   --hlr-component-cta-stroke: #353535;
   --hlr-component-cta-label: #353535;
+  --hlr-component-cta-fill: #353535;
+  --hlr-component-cta-fill-label: #beada3;
   --hlr-component-link-label: #353535;
   --hlr-component-link-rule: #353535;
   --hlr-component-rule-stroke: #353535;
   --hlr-component-callout-leader: #353535;
   --hlr-component-callout-label: #353535;
   --hlr-component-mark-fill: #353535;
+  --hlr-component-price-strike-line: #353535;
 }
 [data-ground="deep"] {
   --hlr-color-semantic-background-default: #17280a;
@@ -136,12 +149,15 @@
   --hlr-color-semantic-interactive-link: #fbf7ef;
   --hlr-component-cta-stroke: #fbf7ef;
   --hlr-component-cta-label: #fbf7ef;
+  --hlr-component-cta-fill: #fbf7ef;
+  --hlr-component-cta-fill-label: #17280a;
   --hlr-component-link-label: #fbf7ef;
   --hlr-component-link-rule: #fbf7ef;
   --hlr-component-rule-stroke: #fbf7ef;
   --hlr-component-callout-leader: #fbf7ef;
   --hlr-component-callout-label: #fbf7ef;
   --hlr-component-mark-fill: #fbf7ef;
+  --hlr-component-price-strike-line: #c5c2be;
 }
 [data-ground="night"] {
   --hlr-color-semantic-background-default: #353535;
@@ -153,10 +169,13 @@
   --hlr-color-semantic-interactive-link: #fbf7ef;
   --hlr-component-cta-stroke: #fbf7ef;
   --hlr-component-cta-label: #fbf7ef;
+  --hlr-component-cta-fill: #fbf7ef;
+  --hlr-component-cta-fill-label: #353535;
   --hlr-component-link-label: #fbf7ef;
   --hlr-component-link-rule: #fbf7ef;
   --hlr-component-rule-stroke: #fbf7ef;
   --hlr-component-callout-leader: #fbf7ef;
   --hlr-component-callout-label: #fbf7ef;
   --hlr-component-mark-fill: #fbf7ef;
+  --hlr-component-price-strike-line: #c5c2be;
 }

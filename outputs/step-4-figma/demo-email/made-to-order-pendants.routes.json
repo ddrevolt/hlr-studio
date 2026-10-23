@@ -38,8 +38,8 @@
     "email"
    ],
    "register_held_constant": true,
-   "selected": false,
-   "selected_by": null,
+   "selected": true,
+   "selected_by": "human",
    "weakness": "No product description is on file, so the making cannot be shown in detail: the route carries one fact and leans on the images."
   },
   {
@@ -99,7 +99,7 @@
    "why": "Design meanings and stone lore need product descriptions and ledger rows, neither on file."
   }
  ],
- "provisional": true,
+ "provisional": false,
  "provenance": {
   "brand": "High Light Rituals",
   "brand_context": "brand-pack/brand-context.md",
@@ -113,6 +113,6 @@
   }
  },
  "notes": [
-  "No human pick yet. Eddie delegated the angle for this demo; Claude develops R1, the recommended route, and the plan stays provisional until Eddie confirms or picks again."
+  "Eddie delegated the angle for this demo and Claude developed R1, the recommended route; Eddie confirmed R1 and its lines on 2026-10-23 (decision sheet), so the plan is no longer provisional."
  ]
 }

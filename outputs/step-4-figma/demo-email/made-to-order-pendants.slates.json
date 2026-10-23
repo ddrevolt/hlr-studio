@@ -44,8 +44,8 @@
  },
  "angle_gate": {
   "ran_inside_route": true,
-  "picked_by": "recommended",
-  "provisional": true,
+  "picked_by": "human",
+  "provisional": false,
   "picked": 1
  },
  "routes": [

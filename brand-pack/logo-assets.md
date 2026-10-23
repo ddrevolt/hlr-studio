@@ -22,7 +22,7 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 | Wordmark, one line, HIGH LIGHT RITUALS | Primary | `HLR Logo & Marks/SVG LOGOS/HLR-BLACK LOGO.svg`, `HLR-DARK GREEN-LOGO.svg`, `HLR-WHITE-LOGO.svg` (2024-03-07) | `HLR-Logo_FNL.ai` (2024-01-05, source, not opened); `HLR-Logo_FNL-02.png` (3111x299); `HLR full logo_black.png` and `_white.png` (4688x1576, with clear space, 2024-07-29); `logo.pdf` (Illustrator, 2024-06-21, with clear space); `Archive/HLR-Logo_FNL-02.svg` (2024-10-07) | Ready for Step 4 |
 | Monogram, HLR letters with the tall L | Small mark | `HLR Logo & Marks/HLR-Jewelry Logo_Monogram.svg` (2024-09-11) | `HLR-Jewelry Logo_Monogram.jpg`; the same geometry as `Archive/HLR-Logo_FNL-03.svg` (2024-01-08) | Letters ready for Step 4 |
 | Monogram with the star above | Social avatar | none | `Logo Marks_Black/HLR_black.png` (966x1214), `Logo Marks_Forest Green/HLR_green.png` (741x930), `Logo Marks_White/HLR_white.png` (966x1214), all 2024-02-19; `Social Avatar.png` (3375x3375, 2024-04-12) | Vector requested from HLR |
-| Star, four long points and four short | The one decorative device | none current | `Logo Marks_*/Star_*.png` (507x567, 2024-02-19) | Vector requested from HLR |
+| Star, four long points and four short | The one decorative device | none on disk; HLR's live email file places it as a vector (reference file 2:1085) | `Logo Marks_*/Star_*.png` (507x567, 2024-02-19) | Placed from HLR's live footer vector as Marks/Star and E15 (Eddie, 2026-10-23); HLR confirms the master at Review 1 |
 | Crest | Retired | 2022 only, `Archive/High Light - Crest*` | `Logo Marks_*/Crest_*.png` (1671x1856, 2024-02-19) | Not placed |
 | Shell with a star inside | Packaging only | none | `Logo Marks_*/Shell_*.png` (1467x1346, 2024-02-19) | Not placed in digital work |
 | Stacked lockup, HIGH / LIGHT / RITUALS under the star | Not in C3's roster | none; `Archive/HLR-Logo_FNL-01.svg` (2024-01-08) is a two-line HIGH LIGHT / RITUALS without the star | `Logo Marks_*/Logo_stacked_*.png` (1554x1605; green 1268x1309; 2024-02-19) | Not placed until ruled |
@@ -47,10 +47,13 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 - No current vector exists on disk. The 2022 `Archive/High Light - Star` and `Star 2` SVGs are different drawings: an irregular sparkle and a rayed outline star.
 - A draft vector sits in the reference file `LYyYXPDUHVoAABh865EvMI`, Components, DRAFT 01 (2:31993; the star at 2:32034, described by the second pass as an eight-point star). It is a draft source, not a master. addendum item 2
 - Live placements: the email nav footer (2:1062), story tops and feed corners (2:62552, 2:180130), display cards (2:35604), icons (2:31684). pattern-review 1.4
+- The live sends place the current drawing as a vector [observed 2026-10-23]: the footer of 2:1062 (2:1085, 64 x 71), the abandoned cart flow 2:190749 (2:190786, the same path scaled by 1.46875) and 2:7443 (2:7513); the Components draft 2:32034 is the same path at 169 x 189, so the live copies run 0.8 percent wider than the draft. Overlaid on `Star_black.png`, the footer vector covers 97.5 percent of the shape; the 2022 `Archive/High Light - Star` sparkle covers 27 percent.
+- Eddie chose the footer vector on 2026-10-23 over the 2022 sparkle he had added to 01 Elements (`Archive/High Light - Star - 1` to `- 6`: one path, 493 x 554, six colourways). Marks/Star copies the footer path unchanged: its 26 commands match, every coordinate within 0.000002 px (single precision). E15 places it; M09 and M10 Style=Star carry E15.
 
 ### Crest, shell and stacked lockup [observed; dispositions from C3]
 
 - The crest PNG is an ornate shield with HIGH LIGHT RITUALS and a star. It retires; the email footers that carry it (2:192035, 2:194481) rebuild without it.
+- The live email system carries the 2022 vector, not the 2024 PNG [observed 2026-10-23]: the reference file places "High Light - Crest - 4" 15 times plus 2 footer slices (the board templates' stacked footer 2:192035, the post-purchase series 2:194032, the flows' social footer 2:194481). It reads HIGH LIGHT with EST. 2020 on the ribbon and an older star; its SVGs (`Archive/High Light - Crest/SVG/`, 2022-12-18) are one drawing (45 paths) in six fills (Onyx, #FAF8F2, Sea Salt, #1F2918, #BAADA3, a gold gradient). The 2024 PNG reads HIGH LIGHT RITUALS, with the current star and a blank ribbon. Eddie kept the crest retired on 2026-10-23 after reviewing the 2022 SVGs (DECISIONS).
 - The shell PNG is a scallop outline with a star inside. It stays on packaging (outside Phase 1). Draft vectors of the shell and its ribs sit in the reference file (Components 2:31994, 2:32016).
 - The stacked lockup is not in C3's roster and has no vector. Question for HLR at Review 1. Default: not used; the one-line wordmark covers every Phase 1 placement.
 
@@ -68,7 +71,7 @@ p13: the logotype "HIGH LIGHT" in three cuts by size (large formats over 6 inche
 
 | Gap | Owner | Blocks |
 |---|---|---|
-| Vector of the current star | HLR | the star device in every master |
+| The master vector of the current star (the live footer vector is placed until it comes) | HLR | nothing: the star is placed from HLR's live file |
 | Vector of the monogram lockup with the star | HLR | the avatar lockup (the monogram letters are ready) |
 | Clear space and minimum sizes for the current roster | HLR, with the vectors (Review 1); Gate 4 left it open (DECISIONS 2026-10-23) | placement rules in elements and modules |
 | Whether the stacked lockup is current, and its vector | HLR | nothing in Phase 1 by default |

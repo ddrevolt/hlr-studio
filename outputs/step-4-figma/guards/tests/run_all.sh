@@ -9,6 +9,7 @@ python3 -I "$G/closed_gate_scan.py" "$HB" | head -1 || rc=1
 python3 -I "$G/closed_gate_scan.py" "$HB" > /dev/null || rc=1
 node "$G/tests/closed_gate_parity.js" "$HB" || rc=1
 python3 -I "$G/host_shape_check.py" "$HB/brand-pack" || rc=1
+python3 -I "$G/tests/build_close_checks.py" "$HB" --check || rc=1
 python3 -I "$G/tests/host_shape_mutations.py" "$HB/brand-pack" "$G/host_shape_check.py" "$OUT/hsc" > "$OUT/hsc.txt" || { rc=1; grep MISS "$OUT/hsc.txt"; }
 echo "host_shape_mutations: $(grep -c '^ok' "$OUT/hsc.txt") ok, $(grep -c '^MISS' "$OUT/hsc.txt") missed"
 python3 -I "$G/tests/board_expect_mutations.py" "$HB" "$G/board_expect.py" "$OUT/bem" > "$OUT/bem.txt" || { rc=1; grep MISS "$OUT/bem.txt"; }

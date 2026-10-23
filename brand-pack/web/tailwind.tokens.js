@@ -27,6 +27,7 @@ module.exports = {
     "semantic-text-muted": "#63615f",
     "semantic-text-on-photo": "#ffffff",
     "semantic-text-on-placeholder": "#353535",
+    "semantic-text-on-photo-fill": "#353535",
     "semantic-interactive-cta": "#353535",
     "semantic-interactive-link": "#353535"
   },
@@ -88,7 +89,8 @@ module.exports = {
     "none": "0px"
   },
   "borderWidth": {
-    "cta": "1px"
+    "cta": "1px",
+    "rule": "1px"
   },
   "screens": {}
 };

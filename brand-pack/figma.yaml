@@ -8,6 +8,12 @@
 # 2026-10-23: Foundations review round 2 fixes: the descriptions of color/brand/forest (19:5) and component/placeholder/label (19:44) from the figma-plan; Color cell 22:267’s tag line; the five alternate pair sources on Certified pairs (29:136, 29:145, 29:154, 29:181, 29:190); the Strictness map table’s last column set to fill its row (header and 18 rows).
 # 2026-10-23: Foundations review round 3 fixes: color/brand/forest’s description (19:5) from the figma-plan; the five alternate pair cells (29:136, 29:145, 29:154, 29:181, 29:190) renamed to their source lines.
 # 2026-10-23: the library switched to HLR’s real faces at Eddie’s request (fonts.switched_to_real_faces); the six license notices on 00 Foundations renamed License notice and reworded, the Type board’s meta lines and 14 text style descriptions updated; the license flag stays raised.
+# 2026-10-23: Eddie's decision sheet: stroke/rule created (164:161) and component/rule/weight (19:37) aliased to it; the descriptions of 19:5, 31:40 and 19:44 ratified from the figma-plan; on 00 Foundations the Ground modes and Alternate grounds lines (32:43, 29:134), the Canvases line (25:138, breakpoints 1440 and 390), the Strokes by canvas line (25:134), the strictness flag and its note (30:44, 30:45), the text link row (30:106) and two Color tag lines (111:109, 22:272); the demo frame 63:354 renamed (R1, Eddie's pick).
+# 2026-10-23, after the decision sheet: six variables (168:170 to 168:175: text/on-photo-fill, the four filled CTA colours, price/strike-line); E01 Style=Filled; E09, E10, E11 to E14 on 01 Elements and the image swap on E06 and E07; M22 to M27 on 02 Modules; options on M02, M04, M17, M19; M18 Split right; M10 a set with Style=Star; M09's star placeholder; T04 to T17 on 03 Templates. Ids below.
+# 2026-10-23, at Chat 6's close: the four M21 row labels (54:330, 54:337, 54:344, 54:351) bind font/family/title (19:46; this line said body until the batch 2 review round 1, BR1-12), missed because the R8 node guard was not rerun on 02 Modules; the M24, M25 and M27 roots bind background/email-page (19:20), not background/default (the ground guard); M23's and M26's labels sit in Decor / Placeholder label frames; on 00 Foundations the Color cells for the six new variables (180:161 to 180:191), the two filled CTA pair cells (180:197, 180:206), the Strictness map rows CTA, Rule and Price (30:96, 30:112, 30:176), and the on-placeholder cell's value line (111:108) in the HEX, alias of PATH form every cell takes (Foundations review round 3, F3-05).
+# 2026-10-23, Eddie's star and packshot calls: Marks/Star (200:161) from HLR's live footer vector, E15 Star (201:175) on 01 Elements, the star in M09 (201:365) and M10 Style=Star (201:368), a star on each of the Marks board's five ground tiles, its components row (star cell 200:163), its import note (28:9), and the Star placeholder (28:94) retired; E11 and E12 show the cleared packshots 27:174 and 27:244 by default, their labels hidden. Eddie's six 2022 sparkle frames (161:2366 to 161:2482) sat outside the board, unused; by the batch 2 review round 3 one remained (161:2420, vector 161:2421), five having been removed after the star build by no recorded write of this chat (BR3-01; Figma's version history names who).
+# 2026-10-23, batch 2 review round 1 fixes (outputs/step-4-figma/review-batch-2-r1.md): M11 gains Show eyebrow (property "Show eyebrow#208:3") and M12 Show CTA ("Show CTA#208:0"); E01 Style=Filled's strokes bind component/cta/stroke (19:29) and stroke-on-photo (19:31), STROKE_COLOR variables, where they bound the fill variables (BR1-13); new template instances: T05 M14 208:1946; T09 M11 208:1952 and 208:1965 (eyebrow off) and M04 208:1978; T11 M04 208:1985 in place of its M07; T15 M14 208:1992; T16 M05 208:1996 and M04 208:2000; CTA styles and options set on T06, T07, T09, T12, T15 and T16 (templates-batch-2.md); on 00 Foundations the Marks board's mark row (28:10) wraps inside its Components frame (28:6), the Strictness map's CTA Ground cell (30:99) marks the filled box [derived], its 18 owner cells (30:62 to 30:198) name Donnie and its closing note (30:200) records her ownership (Eddie, 2026-10-23).
+# 2026-10-23, batch 2 review round 2 fixes (outputs/step-4-figma/review-batch-2-r2.md): E15 Star (201:175) made auto-layout, its Marks/Star instance (201:176) filling it, so M09's star (201:365, 64 x 71) and M10 Style=Star's (201:368, 94 x 104.28) keep their sizes and the structure lint reads E15 as a container (BR2-01); every master on 01 and 02 linted clean (32 and 35 roots).
 # 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
 slots:
   namespace: hlr
@@ -18,7 +24,7 @@ figma:
   file_name: HLR Library   # renamed by Eddie in Figma, 2026-10-17 (Gate 3 call 1 b; was Highlight-Rituals-Design-Forge)
   pages: { "00 Foundations": "0:1", "01 Elements": "7:2", "02 Modules": "7:3", "03 Templates": "7:4", "04 Staging": "7:5", "photos": "27:104" }   # 2026-10-17; photos added 2026-10-23 (Eddie pasted the reference Images page: 97 cleared images, DECISIONS 2026-10-23)
   boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; built 2026-10-23 (Chat 5); 00 Foundations moved to the top of the page list
-  breakpoints: null
+  breakpoints: { desktop: 1440, mobile: 390 }   # Eddie, 2026-10-23, decision sheet ("lets start with 1440 and 390 for mobile"); web margins and grid open (token-model L3)
 fonts:
   build_stand_ins: {}        # none since 2026-10-23: the build path loads the real faces (Eddie loaded them to the team Figma), and the library was switched to them. Before that (Gate 3 call 7, path 1) the build set Instrument Serif for Saol Display and Saol Standard and Inter for Trade Gothic LT Std
   build_stand_in_styles: {}  # none since 2026-10-23. Before: Instrument Serif carried Saol's Light, Light Italic, Regular Italic and Medium as Regular and Italic (Gate 2 question 2, Eddie, 2026-10-18)
@@ -127,6 +133,13 @@ variable_ids:   # 2026-10-23, Chat 5 Foundations build: the 88 plan variables, v
   "space/social-margin": "VariableID:19:87"
   "radius/none": "VariableID:19:88"
   "stroke/cta": "VariableID:19:89"
+  "color/semantic/text/on-photo-fill": "VariableID:168:170"   # 2026-10-23, the filled CTA on photos
+  "component/cta/fill": "VariableID:168:171"
+  "component/cta/fill-label": "VariableID:168:172"
+  "component/cta/fill-on-photo": "VariableID:168:173"
+  "component/cta/fill-label-on-photo": "VariableID:168:174"
+  "component/price/strike-line": "VariableID:168:175"   # [derived], for Eddie to confirm
+  "stroke/rule": "VariableID:164:161"     # 2026-10-23, Eddie's decision sheet: 1, 1, 2 px (web, social, email); component/rule/weight (19:37) aliases it
 text_style_ids:   # 2026-10-23, Chat 5: the 15-style roster; family, style and size bound to HLR / Layout (R8 guard: 0 unbound)
   "display/xl": "S:bab1f929d27d88b0970c42c42e10d7b85eca2179,"
   "display/l": "S:45374a4bafcb3ced930e566841a6a20cc34584a9,"
@@ -146,44 +159,75 @@ text_style_ids:   # 2026-10-23, Chat 5: the 15-style roster; family, style and s
 components:   # 2026-10-23, Chat 5: marks as SVG components, fills bound to component/mark/fill
   "Marks/Wordmark": "28:28"   # 16 vectors, geometry 01aacb71b78d1a59 (R13 guard)
   "Marks/Monogram": "28:35"   # 3 vectors, geometry 991e3de808779295 (R13 guard)
+  "Marks/Star": "200:161"     # 1 vector (200:162), HLR's live footer vector copied unchanged (reference file 2:1085, path e4688450a80a1c43; stored in single precision, every coordinate within 0.000002 px); Eddie, 2026-10-23
   # 2026-10-23, Chat 6: email elements on 01 Elements (board 39:104), stamped E##.role; every element stays on Auto
-  "Elements/E01 CTA": "39:109"                      # set: Surface=Ground 39:105, Surface=Photo 39:106
+  "Elements/E01 CTA": "39:109"                      # set: Style=Outline, Surface=Ground 39:105; Style=Outline, Surface=Photo 39:106; Style=Filled, Surface=Ground 168:176; Style=Filled, Surface=Photo 168:178 (filled added 2026-10-23, Eddie; its strokes bind cta/stroke and stroke-on-photo, BR1-13)
   "Elements/E02 Text link": "39:116"                # set: Style=Rule 39:110, Style=Arrow 39:113
   "Elements/E03 Rule": "39:117"
   "Elements/E04 Image": "39:131"                    # set: Full bleed 39:119, Mat square 39:122, Mat portrait 39:125, Mat landscape 39:128
   "Elements/E05 Product image": "39:142"            # set: Crop=Square 39:132, Crop=Portrait 39:135, Crop=On ground 39:138
-  "Elements/E06 Product card": "39:143"
-  "Elements/E07 Product card, labelled": "53:109"
+  "Elements/E06 Product card": "39:143"             # props: Show price#39:0, Product image#168:0 (swap: E05, E11 to E14), Show struck price#168:2 (E09 instance 168:798)
+  "Elements/E07 Product card, labelled": "53:109"  # prop: Product image (swap: E05, E11 to E14), 2026-10-23
   "Elements/E08 Star row": "53:119"
+  # 2026-10-23, after Eddie's decision sheet: the struck price, the press logo slot and the product images by category
+  "Elements/E09 Price, struck": "168:180"           # E09.price, E09.compare_at; strike line binds component/price/strike-line (168:175)
+  "Elements/E10 Press logo": "168:185"             # labelled placeholder until press rights
+  "Elements/E11 Product image, necklace": "168:188"   # Crop=Portrait 168:192 (default), Square 168:189, On ground 168:195; default image 27:174 in every crop (Eddie, 2026-10-23)
+  "Elements/E12 Product image, bracelet": "168:199"   # Crop=Square 168:200 (default), Portrait 168:203, On ground 168:206; default image 27:244 in every crop (Eddie, 2026-10-23)
+  "Elements/E13 Product image, ritual kit": "168:210" # Crop=Portrait 168:214 (default), Square 168:211, On ground 168:217
+  "Elements/E14 Product image, crystal": "168:221"    # Crop=Portrait 168:225 (default), Square 168:222, On ground 168:228
+  "Elements/E15 Star": "201:175"                      # an instance of Marks/Star at 64 x 71 (201:176); in M09 (201:365) and M10 Style=Star at 94 x 104.28 (201:368); Eddie, 2026-10-23; auto-layout since the batch 2 review round 2 (BR2-01): its Marks/Star (201:176) fills it, so a placement resized in proportion scales the star
   "Specimen: E01 on photo": "39:152"                # frame, filled with the cleared photo 27:137
   # 2026-10-23, Chat 6: email modules on 02 Modules, 1200 wide, email canvas set on every root
   "Email/M01 Header": "40:104"
-  "Email/M02 Hero": "40:122"                # options: Show eyebrow#40:0, Show wordmark#54:4, Show body#54:5, Show script#54:6, Space below#73:0 (spacer 73:287); IMAGE label 73:285; the scrim is the root's second fill
+  "Email/M02 Hero": "40:122"                # options: Show eyebrow#40:0, Show wordmark#54:4, Show body#54:5, Show script#54:6, Space below#73:0 (spacer 73:287), Show CTA#173:0 (2026-10-23); IMAGE label 73:285; the scrim is the root's second fill
   "Email/M03 Spotlight": "40:148"                   # set: Image=Right 40:128, Image=Left 40:138
-  "Email/M04 Text block": "40:161"                  # set: Align=Left 40:149, Align=Center 40:155
+  "Email/M04 Text block": "40:161"                  # set: Align=Left 40:149, Align=Center 40:155; Show CTA#40:1, Show eyebrow#173:1 (slot M04.eyebrow), Show headline#173:4, Show body#173:7 (2026-10-23)
   "Email/M05 Image": "41:137"                       # set: Shape=Mat 41:129, Shape=Full bleed 41:133
   "Email/M06 Product grid": "41:138"
   "Email/M07 Mantra": "41:181"
   "Email/M08 Promo bar": "41:184"
-  "Email/M09 Footer": "41:188"
-  "Email/M10 Divider": "41:211"
-  "Email/M11 Edit feature": "48:186"            # CTA label stamped M11.cta (I48:195;39:107); spacer 89:284; image 400 x 600, column minimum 600
-  "Email/M12 Numbered feature": "48:217"            # set: Image=Left 48:197, Image=Right 48:207; CTA labels stamped M12.cta
+  "Email/M09 Footer": "41:188"                      # Show legal line#54:7; Show star#169:2 (E15 instance 201:365 since 2026-10-23; the placeholder 169:377 retired)
+  "Email/M10 Divider": "173:417"                    # set since 2026-10-23: Style=Rule 41:211, Style=Star 173:412 (E15 instance 201:368 at 94 x 104.28)
+  "Email/M11 Edit feature": "48:186"            # CTA label stamped M11.cta (I48:195;39:107); spacer 89:284; image 400 x 600, column minimum 600; Show eyebrow#208:3
+  "Email/M12 Numbered feature": "48:217"            # set: Image=Left 48:197, Image=Right 48:207; CTA labels stamped M12.cta; Show CTA#208:0
   "Email/M13 Product details": "48:218"
   "Email/M14 CTA": "54:198"
   "Email/M15 Product grid, three up": "54:201"
   "Email/M16 Two-column text": "54:276"             # set: Style=Plain 54:268, Style=Inset 54:272
-  "Email/M17 Letter": "54:277"
-  "Email/M18 Review": "54:309"                      # set: Layout=Split 54:282, Layout=Centered 54:299
-  "Email/M19 Offer": "54:310"
+  "Email/M17 Letter": "54:277"                      # Show eyebrow#54:2, Show headline#173:10 (2026-10-23)
+  "Email/M18 Review": "54:309"                      # set: Layout=Split 54:282, Layout=Centered 54:299, Layout=Split right 173:394 (2026-10-23); Show press logo#169:3 (E10 instance 169:429)
+  "Email/M19 Offer": "54:310"                       # Show CTA#173:11 (2026-10-23)
   "Email/M20 Collage": "54:317"
   "Email/M21 Spec rows": "54:324"
+  # 2026-10-23, Eddie's roster call ("build the rest"): row at y 10100 on 02 Modules
+  "Email/M22 Follow block": "169:345"               # E-P6; CTA E01 Style=Filled, Surface=Photo
+  "Email/M23 Lockup header": "169:354"              # E-H1; lockup placeholder 375 x 103 until HLR's vector
+  "Email/M24 Footer, stacked": "169:357"            # E-F0 without the crest; Show legal line#169:0
+  "Email/M25 Social footer": "169:364"              # E-M20 without the crest; deep ground
+  "Email/M26 Transactional card": "169:366"         # E-P7; Show closing line#169:1
+  "Email/M27 Ritualist masthead": "169:374"         # E-M10; warm ground
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09
-  "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767
+  "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767; M07 (46:262) on Auto (Eddie, kept 2026-10-23)
   "T03 Product listing": "64:354"     # from 2:683 (H1>M17>M07>M15 2x4>F1)
+  # 2026-10-23, Eddie: the rest of the templates and the flows before organic social; pure instances in the source order (sources in outputs/step-4-figma/templates-batch-2.md)
+  "T04 Sale": "174:569"                # 2:984 (board 2:192559)
+  "T05 Testimonials": "174:680"        # 2:809 (board 2:192314); M14 208:1946 (BR1-04); every instance light (Eddie)
+  "T06 Moodboard": "174:862"           # 2:913 = 2:1696 (board 2:192453); M12 Left 174:920 Show CTA off (BR1-11); every instance Auto (Eddie)
+  "T07 Welcome 1": "174:972"           # 2:8838 (welcome 2026, 700)
+  "T08 Welcome 2": "174:1079"          # 2:8917 (welcome 2026, 700)
+  "T09 Welcome 3": "174:1136"          # 2:193004 (Welcome Series 3-5 board); M11 208:1952, 208:1965, M04 208:1978 (BR1-02)
+  "T10 Welcome 4": "174:1196"          # 2:193050 (Welcome Series 3-5 board)
+  "T11 Welcome 5": "174:1286"          # 2:193107 (Welcome Series 3-5 board, TheEdit); M04 208:1985 in place of M07 (BR1-11)
+  "T12 Energy medicine": "174:1373"    # 2:31200 (9/30 October energy medicine)
+  "T13 Browse flow": "174:1510"        # 2:189609
+  "T14 Cart flow": "174:1572"          # 2:189904
+  "T15 Abandoned cart flow": "174:1648"  # 2:190749 (footer star off: one star per surface); M14 208:1992 (BR1-04)
+  "T16 Checkout flow": "174:1761"      # 2:191052; M05 208:1996, M04 208:2000 (BR1-02)
+  "T17 Post-purchase": "174:1853"      # 2:194122 (the post-purchase series 2:194032)
 staging:     # 2026-10-23, Chat 6: on 04 Staging
-  "Demo email: The made-to-order pendants (R1, provisional)": "63:354"   # outputs/step-4-figma/demo-email/build.md
+  "Demo email: The made-to-order pendants (R1)": "63:354"   # outputs/step-4-figma/demo-email/build.md
 photos:      # 2026-10-23: cleared images on the photos page used by the build (fills reuse these hashes in this file only)
   hero_27_137: "3cf0754f86b885891e1c949e49b47c194695bfc6"
   band_27_136: "39dbf9fccbe65446d23a81c29ecfcf70610deb75"
@@ -193,7 +237,7 @@ photos:      # 2026-10-23: cleared images on the photos page used by the build (
   seeker_pendant_27_191: "5ba736b8e4505e46b815894bbbfefeac8c52b8c8"
 collection_ids:                    # 2026-10-17, Gate 3 scaffold: collection id, then each mode's id
   primitives: { id: "VariableCollectionId:7:6", default: "7:0" }
-  semantic: { id: "VariableCollectionId:7:7", light: "7:1", warm: "31:0", deep: "31:1", night: "31:2" }   # Gate 4 (2026-10-23, Claude under Eddie's delegation): ground modes named by role, warm Fawn, deep Forest, night Onyx (pattern-review 4.1)
+  semantic: { id: "VariableCollectionId:7:7", light: "7:1", warm: "31:0", deep: "31:1", night: "31:2" }   # Gate 4 (2026-10-23, Claude under Eddie's delegation): ground modes named by role, warm Fawn, deep Forest, night Onyx (pattern-review 4.1); ratified by Eddie the same day (decision sheet)
   component: { id: "VariableCollectionId:7:8", default: "7:2" }
   layout: { id: "VariableCollectionId:7:9", web: "7:3", social: "19:0", email: "19:1" }   # 2026-10-23, Chat 5: default renamed to web, social and email created (engine 0.5.3 plan record_as)
 variables:

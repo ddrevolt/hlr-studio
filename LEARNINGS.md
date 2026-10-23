@@ -2,6 +2,44 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-23: Chat 6, batch 2 (the decision sheet, the roster, the star, the templates and flows, the guards)
+
+- A tool layer between Claude and the files decodes `\u` escapes: written through the Write tool or pasted into use_figma, an escaped U+2028 inside a JS regex literal becomes the real character and a syntax error, and escapes in Python source turn into literal characters. Build such characters from char codes (`String.fromCharCode`, `chr`), write files that need escapes from a script, and grep each written file for non-ASCII.
+- A page guard rerun only where a fix landed misses the rest: the R8 node guard found M21's four unbound labels only when rerun on all of 02 Modules, and round 2 found r8 and the entity scan left off 01 Elements. Seen twice, it became one script: `close_checks.js`, generated from the page guards, runs every page guard on every library page in one call.
+- A guard that looks for masters at a page's top level finds none when they sit inside a board, and passes empty: the first lint of 01 Elements returned 0 roots and 0 fails. Give every page guard a floor (the slot map's set count) so it fails when it finds fewer.
+- A rule and its twin in another language agree by construction only when both normalise the same input before matching (every space one plain space) and both test words and case the same way (ASCII); a seeded fuzz in the parity test keeps it so.
+- A register is data: reading its Status and Closes at columns found 20 stale rows in the 02:31 pack that phrase patterns had passed. Read it fully, though: a word list for open states and step names missed "to be confirmed", "awaiting", "Gate four" and "G4", and a quoted plan line that matched nothing passed silently (BR1-06, BR1-07).
+- A rules table typed by hand drifts from the data it guards: E09's merge-token rule never reached host_shape_check's list. Check that every ruled slot note has an entry, so a new rule cannot go unchecked (BR1-08).
+- A test harness reads the guard's own verdict, never its exit code alone: a crash exits 1 like a FAIL and reads as a catch.
+- Board text that paraphrases the pack can be checked where it carries data (values, aliases, tags, dates, names); a format kept identical across cells (`HEX, alias of PATH`) is what lets a guard read every cell in full.
+- A source frame's children and a screenshot of the frame node miss the layers drawn over it later in its section: T09's two "gaps" held two features and a heading, T16's an image (BR1-02). Read the section's order and screenshot the section, then list the source block by block against the template; that list also finds a CTA dropped without a record (BR1-04).
+- Map a source CTA by its fill and its stroke, not by the word white: a white box with an ink stroke on a pale band is the outline box with a white fill (BR1-03).
+- Placed marks are assets: exempt them from the structure lint by their main component, not their layer name. Renaming E15's inner instance to Marks/Star took it out of a name list, and the element itself needed auto-layout with the star filling it, so a placement scales the star and the lint reads a container (BR2-01).
+- A package written before its review must not say the review passed; its review line is written from the review files at close (BR1-09). Tick a PROGRESSION box after the round that checks the work, not before it.
+- Figma descriptions are records too: retiring the star's placeholder reached the pack's files and missed M09's and M10's component descriptions, which a grep of the pack cannot see (BR3-02). A state change goes through every description that states it.
+- Another chat wrote to the Mac brand home mid-session (the explainer: a DECISIONS line, a PROGRESSION box, a LEARNINGS entry, its own folders and a re-rendered demo intake). Before a sync, read git status on the Mac, merge the shared record files line by line, push only this chat's files, and leave the other chat's work for it to commit. A PNG that differs by md5 can be the same image re-encoded by the bridge: compare pixels before pushing it.
+- Decision ownership moved mid-close (Eddie: "Donnie owns everything"). The instruction named the strictness map, so that changed at once; the sweep of every other record that names Eddie as owner or confirmer (several hundred mentions, history to keep) is the next chat's first task, written into its prompt, rather than a half-done sweep at the end of a compacted chat.
+- The chat compacted several times; the fix lists survived because they lived in files (the review files, the DECISIONS lines, a fix ledger) and not only in the transcript.
+- Cost: the batch 2 review round 1 was not recorded before a compaction; round 2 used 536,426 tokens and 114 tool calls over about 35 minutes; round 3 446,616 tokens and 91 tool calls over about 30 minutes.
+
+## 2026-10-23: review workbook, explainer build
+
+- The device commit tool resends the first upload made from a staged path: a file overwritten at the same container path reached the Mac in its old version while the tool reported it written. Stage each new version under a fresh path and compare hashes after every commit.
+- Figma screenshot URLs stay unreachable from both shells (403). For HLR's own type and marks, render from HLR's files on the Mac (Pillow is there), which also shows the real faces.
+- census.py reads a bundled page whole, so library code and embedded images produce hits (a two-letter term inside React's minified names, key-shaped tokens inside base64). Adjudicate by where each hit sits, and keep the guard on our own words: a naive string-literal scan of a minified bundle desyncs on backticks and regex literals.
+- Every fact on the workbook passed the verbatim check on the first run because each was copied by script from files read in the same session, never typed from memory.
+- A typed escape for the em dash can land as the real character, in our files and in a reviewer's (REVIEW.md R12): scan every written file for U+2014 after writing it.
+- Parcel resolves Radix's subpath imports only with `"@parcel/resolver-default": {"packageExports": true}` in package.json.
+- Cost: explainer review round 1, 497,577 subagent tokens; round 2, 426,126. The workbook build: not measured.
+
+## 2026-10-23: explainer plan
+
+- The demo run's files map one to one onto the journey's stages (ask, intake, route pick, copy, build), so an explainer can teach from the run's own evidence instead of examples written for it.
+- The record's ids (M15, R3-01, Gate 2 call 1 b, lane H) are the main barrier for a reader outside the build; a page for HLR leads with names and keeps the ids behind a toggle.
+- A demo file can disagree with its own lint: `made-to-order-pendants.intake.md` reads FAIL while `brief-lint.json` reads PASS after G7's workaround. Read the JSON verdict, not the rendered header, and re-render after a workaround.
+- `_setup/` names other brands and `.gitignore` keeps it out of the repo; nothing written for HLR may quote it.
+- Claude Design's facts here come from Anthropic's announcement of 2026-04-17, when it was a research preview; date them and re-check at each use.
+
 ## 2026-10-23: overnight run (Gate 2 closed, Chat 5 Foundations, Gate 4 under delegation, Chat 6 email batch)
 
 - An instance carries its main component's explicit canvas mode as its own: M02 placed in T02 reads back `explicitVariableModes` email (19:1), the same as its master. So a module master pins its canvas for every placement, and an element must stay on Auto to follow the frame it sits in.

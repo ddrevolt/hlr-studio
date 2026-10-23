@@ -12,7 +12,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 
 - Default: Alabaster with Onyx ink. [documented p19] Gate 1 C4.
 - Email page: white with Onyx ink; grey (`neutral-100`) or Alabaster bands. [observed] 96 of 109 send frames; Gate 1 C4.
-- Alternate grounds: Forest and Onyx with Alabaster ink; Fawn with Onyx ink. Fawn is an accent ink on Forest and Onyx only. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Gate 1 C4; Gate 4 named the modes warm (Fawn), deep (Forest) and night (Onyx), for Eddie to confirm.
+- Alternate grounds: Forest and Onyx with Alabaster ink; Fawn with Onyx ink. Fawn is an accent ink on Forest and Onyx only. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Gate 1 C4; Gate 4 named the modes warm (Fawn), deep (Forest) and night (Onyx), ratified 2026-10-23 by Eddie (decision sheet).
 - Photography: white ink where the image is calm and dark enough under the copy, judged by eye on the real image at review; the 50 percent overlay is optional. [observed] white on photography in every channel; no pair test (Eddie, 2026-10-18)
 - Where each is used today [observed]: the email library cycles an Alabaster, Fawn and Forest trio; 2026 sends sit on white; stories alternate Alabaster and Onyx; the grid is photo-first.
 - The certified set is `tokens.json` contrast-pairs; the law and the mode values are in `token-model.md`. A new pairing is a contrast check and a proposal into that table.

@@ -1,6 +1,6 @@
 # Demo email build: The made-to-order pendants (Review 2)
 
-Built 2026-10-23 by Claude under Eddie's overnight delegation. Provisional: the angle (R1, scene 1) is the recommendation, not a human pick (`made-to-order-pendants.slates.json`, `angle_gate.picked_by: recommended`).
+Built 2026-10-23 by Claude under Eddie's overnight delegation. The angle (R1, scene 1) was the recommendation, then Eddie's pick: he confirmed R1 and its lines and kept the hero as built (scrim off, the pendant whole below the CTA, the chain behind it) on 2026-10-23 (decision sheet; `made-to-order-pendants.slates.json`, `angle_gate.picked_by: human`).
 
 ## Where it is
 
@@ -54,5 +54,5 @@ Each card in slice 4 links to its own product page; the ESP's image map or four 
 ## Checks
 
 - Library checks behind it: every module and element passes structure lint, flex at 2x or better, canvas and face checks (`outputs/step-4-figma/` check notes; slot map regenerated 2026-10-23).
-- Set in the real faces since 2026-10-23 (Saol Display Light with its Light Italic accent, Saol Standard, Trade Gothic LT Std); the preview is a server screenshot of 63:354 on those faces. On the stand-ins the server screenshots showed a fallback sans for the italic accent; on Saol it renders.
-- Standing flags: fonts not yet licensed (the real faces are in the file; HLR confirms the licenses, Brand Review v2 Q2); the ledger is a test seed, so no line is cleared for production; the four-point star in the footer waits for its vector (HLR).
+- Set in the real faces since 2026-10-23 (Saol Display Light with its Light Italic accent, Saol Standard, Trade Gothic LT Std); the preview is a server screenshot of 63:354 on those faces, reshot 2026-10-23 after the footer took the star (E15). On the stand-ins the server screenshots showed a fallback sans for the italic accent; on Saol it renders.
+- Standing flags: fonts not yet licensed (the real faces are in the file; HLR confirms the licenses, Brand Review v2 Q2); the ledger is a test seed, so no line is cleared for production; the footer's four-point star is HLR's own vector from its live footer (E15), [observed] until HLR confirms the master.
