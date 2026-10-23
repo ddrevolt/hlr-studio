@@ -15,7 +15,7 @@
  },
  "breakpoints": {
   "desktop": {"label": "Desktop", "width": 1440, "note": "[observed] the design frames are 1440 wide; desktop side margins about 100 to 158 px"},
-  "mobile_stack": {"label": "Mobile stack", "width": 375, "note": "[observed] the design frames are 375 wide; sections stack and desktop tabs become accordions; gutter about 20 px. The engine's reference phone is 390: Gate 4 rules the breakpoints (figma.yaml breakpoints null)"},
+  "mobile_stack": {"label": "Mobile stack", "width": 375, "note": "[observed] the design frames are 375 wide; sections stack and desktop tabs become accordions; gutter about 20 px. The engine's reference phone is 390: the breakpoints are open, for Eddie at Review 2 with the web masters (figma.yaml breakpoints null)"},
   "mobile_carousel": {"label": "Mobile carousel", "width": 375, "note": "[observed] cross-sell cards scroll sideways on the mobile PDP (2:183590)"}
  },
  "sections": [

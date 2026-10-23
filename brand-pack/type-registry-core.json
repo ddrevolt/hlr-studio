@@ -491,7 +491,7 @@
     "editorial": {"status": "gap", "evidence": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Eddie (scope) and HLR (content)"},
     "landing": {"status": "gap", "evidence": "no campaign landing page in the file. Owner: Eddie (scope)"}
    },
-   "breakpoints": "desktop 1440 and mobile 375 in the design frames [observed]; the theme breaks at 576, 768, 992, 1024, 1200 and 1280 [observed]. figma.yaml breakpoints are null until Gate 4",
+   "breakpoints": "desktop 1440 and mobile 375 in the design frames [observed]; the theme breaks at 576, 768, 992, 1024, 1200 and 1280 [observed]. figma.yaml breakpoints are null: open, for Eddie at Review 2 with the web masters (Gate 4 left them open)",
    "forced_elements": "[observed] Shopify payment badge and the Judge.me reviews widget"
   }
  }

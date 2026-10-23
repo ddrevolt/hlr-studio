@@ -2,6 +2,47 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-23: overnight run (Gate 2 closed, Chat 5 Foundations, Gate 4 under delegation, Chat 6 email batch)
+
+- An instance carries its main component's explicit canvas mode as its own: M02 placed in T02 reads back `explicitVariableModes` email (19:1), the same as its master. So a module master pins its canvas for every placement, and an element must stay on Auto to follow the frame it sits in.
+- Figma's server screenshots render Instrument Serif Italic in a fallback sans, even on a plain, unbound text node (tested with a throwaway node on 04 Staging). Judge the accent face in the Figma app; a screenshot only proves layout.
+- Screenshot URLs are refused by this session's egress proxy; `enableBase64Response: true` returns the image inline and also saves the PNG under the session's tool results, which is the copy to reuse.
+- Context compaction drops earlier tool results from the transcript, so the M11 to M21 probe results had to be re-run. Write every probe or inventory result to a file in the same turn it returns.
+- The Plugin API refuses a `maxWidth` override on an instance sublayer, so a column that must narrow for its copy is fixed in the master (M12's image to 440 x 550), never per placement.
+- Component descriptions written earlier came back holding `&quot;` and `&#39;` as text. Write typographic quotes and read every description back after writing it.
+- A probe that sets `characters` loses range-bound variables and list formatting; snapshot each range's `fontStyle` binding and list type before the probe and re-bind and read them back after (engine gap G4).
+- `fit_check.js` needs a `cuts` array even when nothing was cut; recording each mapped string unchanged (cut equals composed) lets it confirm every budget and keeps the compose, map, cut, lint order auditable.
+- The brief lint reads guidance notes for ledger lemmas: a note that names a banned word ("handmade") trips HLR-O01. State the rule without the word.
+- `copy_lint.js` reads "four starting points" as the spelled quantity "four star" (a ratings pattern); reword rather than argue with a regex.
+- A photo is reframed for a slot with crop mode: `imageTransform` [[1, 0, 0], [0, h, y]] shows the full width and a window of height h starting at y, as fractions of the image; the demo hero moved its window up 8 percent so the pendant hangs below the CTA.
+- The optional scrim is a judgement on the real photo: on 27:137 it buried the subject, and the dark ground already carried white type.
+- The engine's report text (one-pager, findings, lint) carries em dashes, and Eddie's 2026-10-18 ruling exempts engine text; the chat first rewrote them, then restored the reports as the engine wrote them. Re-read REVIEW.md's house rules before changing machine output.
+- A text style id ends in a comma ("S:...,"); `setTextStyleIdAsync` with the id minus the comma detaches the style without an error. Take the id from `getLocalTextStylesAsync()` by name and read the style back after setting it.
+- A frame made by script clips its content by default; set `clipsContent = false` on a wrapper unless clipping is the design, or the flex probe fails a label the column could carry.
+- Structure lint rule 3 (no fixed height) must allow a column that stretches to its row: `FILL` vertical inside a horizontal auto-layout parent that hugs. The check library exempts that case now.
+- The Write tool turned a typed escape for U+2014 into the character itself inside two scripts, and an assert caught it. Build the character with `chr(0x2014)` or `String.fromCharCode(0x2014)` in any script that tests for it.
+- A crop alone could not clear the hero's CTA: the photo's subject sat where the CTA sits. A module option that adds room under the CTA (Space below) solved it, and the crop window then places the subject in that room.
+- C8's CTA label (35 px) runs wider than the sources' (26 px), so a split that holds the CTA in its text column needs a narrower image than its source (M12 at 440; M11 at 400 with its own 16-character CTA slot) for the label to prove 2x.
+- Round 1 of the fresh-context review found a blocker in a batch that had passed every scripted check: module roots bound to the wrong semantic ground, which no lint reads. The review now checks that every module root binds the email page ground.
+- `absoluteRenderBounds` is cropped by a clipping ancestor: a label clipped by its column reports ink that stops at the column's edge. Test clipping on the text's box; use ink only for collisions and a fixed box's overflow.
+- A probe that grows every slot at once can hide a collision: a long body pushed M11's long CTA below the image it would hit beside a short body. Grow each slot alone as well.
+- A fix verified by a probe alone can ship a defect the probe cannot see: round 1's M11 rebuild passed the flex probe while its body ran through the CTA. Screenshot every module a fix touches.
+- A fix to an element's placeholder does not reach a host's placed instances that override it (M15's six cards kept "Product name"). Fix the hosts in the same pass.
+- A record kept in two places drifts: the strictness map file took round 1's change and its board did not. Diff the board against the file at each close.
+- Plugin data set on an instance's sublayer inside a master (M11's E01 label) reads back on that master while the main component keeps its own stamp, so a host can re-stamp a composed slot with its own budget.
+- Cost: the round 1 review subagent used 385,427 tokens and 79 tool calls over about 20 minutes, round 2 356,630 tokens and 86 tool calls over about 23 minutes, round 3 389,346 tokens and 67 tool calls over about 27 minutes, the Foundations review 377,617 tokens and 73 tool calls over about 20 minutes, its round 2 420,173 tokens and 91 tool calls over about 29 minutes, its round 3 442,414 tokens and 105 tool calls over about 31 minutes; the rest of the run was not measured.
+- A phrase rule for promises is a heuristic: round 3 broke the closed-gate rule 20 ways in 22 lines. Where a promise lives in a table (a register’s step column), check the structure, not the prose.
+- Review rounds on guard code cost as much as rounds on the deliverable (Foundations: about 1.24M tokens over three rounds) and keep finding near variants. Build a guard for the class a round names, record its known limits in the R row, and stop.
+- The bridge to the Mac dropped at about 06:46 UTC, before the night’s last sync, so three review rounds of records waited in the session: sync and commit at each round’s close, not once at the end.
+- A scan beats a list: round 2 named six pack lines still promising Gate 4’s work, and the scan built for them found five more. Fix a class with a scan, then let the scan find the instances.
+- A guard that hashes a prefix, a first tag word or only a pair’s names cannot see a change past what it hashes (F2-02: an exemplar changed after character 40, a ratio or a role, "[derived], ratified"). Hash the whole of what the board shows, and keep the cases that must fail beside the guard (`guards/tests/run_all.sh`).
+- A token description edit is a Figma edit too: the engine’s figma-plan is the source of the variables’s descriptions, so 19:5 and 19:44 changed in the same release as tokens.json.
+- The Plugin API's description setter stores a straight apostrophe, a straight double quote and an ampersand as HTML entities (`&#39;`, `&quot;`, `&amp;`) on text styles, variables and components alike. Write descriptions with typographic quotes and no ampersand, and keep the source text (tokens.json) in the same characters so the two still compare equal.
+- A wrap grid sums wider than its frame, so a scroller test that sums child widths reads it as a scroller and turns the clip check off inside it: check `layoutWrap` first.
+- A probe's filler words bound what it proves: with no word over 7 letters, nothing tested a stone name wider than a 320 card (Phosphosiderite breaks inside the word). Test the longest real value of a name slot as well.
+- Boards drift from the pack after a gate closes: Foundations' five boards still said what Gate 4 would do after it had done it. A guard that hashes what the pack says and checks every board cell is cheap once written (`board_drift.js`).
+- Each fresh-context review cost about 360K to 390K tokens however tight the brief's aim (150K): briefs should cap the work by scope (what to verify) rather than by a token number the reviewer cannot see.
+
 ## 2026-10-21: lane H, engine 0.5.3
 
 - Tests written against the real pack's shape first made the pack the oracle: on lane B's canvas-mode `tokens.json` the plan came out at the token proposal's forecast to the count (Primitives 17, Semantic 10, Component 16, Layout 45, 15 styles, 14 not planned) on the first run of the new code.

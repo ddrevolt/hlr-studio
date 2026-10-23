@@ -6,7 +6,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 
 ## 1. What `tokens.json` carries
 
-102 tokens: 82 [documented], 20 [observed], 0 [derived] (counted 2026-10-22, after the Gate 2 rulings).
+103 tokens: 82 [documented], 20 [observed], 1 [derived] by first tag (counted 2026-10-23, after Gate 4 added `color.semantic.text.on-placeholder`, for Eddie to confirm; `component.placeholder.label` carries a second tag, its alias [derived], for Eddie to confirm; 102 and 0 [derived] on 2026-10-22, after the Gate 2 rulings).
 
 | Tier | Paths | Collection (Gate 3 call 3 a) | Modes |
 |---|---|---|---|
@@ -17,7 +17,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 
 - Names mirror paths: `color/semantic/text/primary` in Figma, `--hlr-color-semantic-text-primary` in CSS, `$extensions` namespace `com.hlr` (Gate 3 call 6 a).
 - Mode grammar. The root declares the modes per collection in `$extensions.com.hlr.modes`. Ground modes (the engine's grammar since 0.5.2): a semantic token's `$value` is its `light` value; every semantic token states each alternate ground (`warm`, `deep`, `night`, named at Gate 4) as `$extensions.com.hlr.modes.<mode>` (values in section 2). Canvas modes (Gate 2 question 1): a Layout token's `$value` is its `web` value; a token whose value depends on the canvas states `social` and `email` under `$extensions.com.hlr.modes`, and every `font.size.*` and `stroke.*` token must; a Layout token without modes holds its `$value` on every canvas [documented: the space scale, radius, families and styles do not change by canvas] (ratified 2026-10-22 by Eddie, Gate 2 package call 1). A frame carries a ground mode and a canvas mode at once.
-- Canvas-dependent geometry lives in Layout with a value per canvas mode, and a component aliases it (`component.cta.weight` to `stroke.cta`), as component colours alias the semantic grounds; an element then serves every canvas. A master sets its canvas mode on its root; an element stays on Auto. The margins stay two tokens (`space.email-margin`, `space.social-margin`) until Gate 4 sets the web margins, then fold into one canvas-moded `space.margin` (gap L2).
+- Canvas-dependent geometry lives in Layout with a value per canvas mode, and a component aliases it (`component.cta.weight` to `stroke.cta`), as component colours alias the semantic grounds; an element then serves every canvas. A master sets its canvas mode on its root; an element stays on Auto. The margins stay two tokens (`space.email-margin`, `space.social-margin`) until Eddie sets the web margins at Review 2 (Gate 4 left them open), then fold into one canvas-moded `space.margin` (gap L2).
 - Format notes: colours are hex strings, as `tokens_build.js` reads them (DTCG 2025.10 also allows an object form); the scrim is 8-digit hex (#00000080). `font.style.*` (Figma face-style names) and `font.tracking.*` (em) carry no `$type`: DTCG has no type for a face-style name, and its dimension units are px and rem, while tracking is in em so it holds at every canvas size. `font.leading.*` is a unitless `number`.
 - The engine. The installed engine is 0.5.3 (Eddie, 2026-10-22): `check` passes in every ground and canvas, and `figma-plan` plans the four collections with their ground and canvas modes (built in Figma by Chat 5, 2026-10-23). 0.5.2 refuses modes outside Semantic and does not plan the `stroke` category: its `check`, `export` and `figma-plan` all count the canvas modes as findings and stop (every colour pair still passes), so 0.5.2 is not installed and 0.5.3 adds both (spec: `outputs/step-2-pack/token-proposal.md` section 7). Before the canvas modes, 0.5.2 `figma-plan` exited 0 on a scratch copy (Primitives 17, Semantic 10, Component 17, Layout 60, 42 text styles). Not planned, by design: `font.leading` and `font.tracking`, set on each text style, unbound, in percent, and `font.weight`, which serves the web. The stand-in block is in `figma.yaml` (Gate 2 question 2, 2026-10-18), so every face the build loads exists.
 - The text style roster rides in `$extensions.com.hlr.text_styles` (section 3). `tokens_build.js` ignores `$` keys, so it never reaches CSS.
@@ -44,9 +44,9 @@ Floors (WCAG 2): body 4.5:1; display 3.0:1, for the headline and display steps o
 4. A pair absent from `tokens.json` contrast-pairs is uncertified: check it with `tokens_build.js check`, add it, then ship it (the intake rule).
 5. Where a slot would land on a failing pair in some variant, its copy is carded on a certified ground, or the slot is declared `not_rendered_on` that variant in its slot map. Copy never disappears silently.
 
-`tokens.json` contrast-pairs holds 20 entries: 9 light-mode semantic pairs, 7 candidate-ground pairs as primitives, and 4 recorded entries with empty roles and a restriction (three failures; copy over a placeholder). 0.5.2 `tokens_build.js check` (2026-10-18): 32 graded pair-roles, all pass.
+`tokens.json` contrast-pairs holds 20 entries: 9 light-mode semantic pairs, 7 alternate-ground pairs as primitives (the warm, deep and night grounds, named at Gate 4), and 4 recorded entries with empty roles and a restriction (three failures; copy over a placeholder). 0.5.2 `tokens_build.js check` (2026-10-18): 32 graded pair-roles, all pass.
 
-Candidate values for the alternate ground modes [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 2). Gate 4 named the modes by role (2026-10-23, Claude under Eddie's delegation, for Eddie to confirm): the Forest ground is `deep`, the Onyx ground `night`, the Fawn ground `warm`. The placeholder label aliases `color.semantic.text.on-placeholder` (Onyx on every ground) [derived], since `text.primary` turns Alabaster on deep and night and would fail on the grey placeholder (1.33:1).
+Values for the alternate ground modes [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 2). Gate 4 named the modes by role (2026-10-23, Claude under Eddie's delegation, for Eddie to confirm): the Forest ground is `deep`, the Onyx ground `night`, the Fawn ground `warm`. The placeholder label aliases `color.semantic.text.on-placeholder` (Onyx on every ground) [derived], since `text.primary` turns Alabaster on deep and night and would fail on the grey placeholder (1.33:1).
 
 | Semantic token | light (default) | Forest ground | Onyx ground | Fawn ground |
 |---|---|---|---|---|
@@ -121,7 +121,7 @@ Status: open, [observed], [derived] proposal, ruled, conflict. Owner is who clos
 | # | Gap | Status | Filled by | Owner | Closes at |
 |---|---|---|---|---|---|
 | C1 | Ink and default ground per channel | ruled by Eddie (C4), for HLR to confirm | Onyx on Alabaster; white email page; white on photography | HLR | Review 1 |
-| C2 | Alternate ground modes | values ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 2); names ruled at Gate 4 (2026-10-23): `warm`, `deep`, `night` | section 2 table | Eddie | Gate 4 (names), Gate 2 (values) |
+| C2 | Alternate ground modes | values ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 2); names set at Gate 4 (2026-10-23, Claude under Eddie's delegation), for Eddie to confirm: `warm`, `deep`, `night` | section 2 table | Eddie | Gate 2 (values); Review 2 (the names, on the morning decision sheet before it) |
 | C3 | Sea Salt | open | [documented p19] primitive, no role | HLR | Review 1 |
 | C4 | Neutral ramp | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 6) | 10 OKLCH steps anchored on the observed warm email grey #ece8e3 | Eddie | Gate 2 |
 | C5 | Muted ink | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 6) | neutral-700 (light), neutral-300 (Forest, Onyx) | Eddie | Gate 2 |
@@ -144,15 +144,15 @@ Status: open, [observed], [derived] proposal, ruled, conflict. Owner is who clos
 | T11 | Live-text email sizes (body 28, small 22) | conditional (C8) | no tokens until HLR says the ESP sends live text | HLR | Review 1 |
 | T12 | Case and text-style properties a variable cannot bind | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 5) | the roster in `$extensions.com.hlr.text_styles` | Chat 5 | Step 4 |
 | L1 | Space scale | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): 4-based, Tailwind numbering | normalises observed 10, 15, 50 | Eddie | Gate 2 |
-| L2 | Social side margin 64 | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): from 62 and 63 | `space.social-margin`; with `space.email-margin` it folds into one canvas-moded `space.margin` once Gate 4 sets the web margins | Eddie | Gate 2, Gate 4 |
-| L3 | Web margins, grid and breakpoints | open | `figma.yaml` breakpoints null | Eddie | Gate 4 |
+| L2 | Social side margin 64 | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): from 62 and 63 | `space.social-margin`; with `space.email-margin` it folds into one canvas-moded `space.margin` once Eddie sets the web margins at Review 2 | Eddie | Gate 2, Review 2 |
+| L3 | Web margins, grid and breakpoints | open | `figma.yaml` breakpoints null | Eddie | Review 2, with the web masters (Gate 4 closed and left it open, DECISIONS 2026-10-23) |
 | L4 | Email module geometry (mats, cards, CTA box) | [observed], measured at build | `asset-types.md` | Chat 6 | Step 4 |
 | L5 | Safe zones and display floors | ruled (Gate 2 calls 3 b and 5 a, 2026-10-18); outside the tokens | the engine's platform specs; the policy in `slotmap-paid.yaml` and `slotmap-social.yaml` meta; `font.size.label` (web 12) | Eddie | Gate 2 |
 | L6 | Motion | open: annotations fade in (p48 to p50); `video_rules` null | | Eddie | later |
 | L7 | Photography grade | open: the cards only (p21 to p24) | `art-direction.md` | HLR | later |
 | K1 | CTA padding and box size | measured at build, per canvas | Layout values with a value per canvas mode, aliased by the CTA component, like `stroke.cta` | Chat 6 | Step 4 |
-| K2 | Web focus ring | open | not tokenized | Eddie | Gate 4 |
-| K3 | Strictness map | ruled at Gate 4 (2026-10-23, Claude under Eddie's delegation, for Eddie to confirm): `strictness-map.md` | board `Strictness map` (7:15) | Eddie (confirms) | Gate 4 |
+| K2 | Web focus ring | open | not tokenized | Eddie | Review 2, with the web masters (Gate 4 closed without it) |
+| K3 | Strictness map | adopted at Gate 4 (2026-10-23, Claude under Eddie's delegation), for Eddie to confirm: `strictness-map.md` | board `Strictness map` (7:15) | Eddie (confirms) | Review 2 (the morning decision sheet before it) |
 | M1 | Mark vectors (star, monogram lockup, stacked lockup), clear space, minimum sizes | open | `logo-assets.md` | HLR | Review 1 |
 
 ## 6. Ratification log

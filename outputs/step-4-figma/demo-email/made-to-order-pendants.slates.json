@@ -1,0 +1,1171 @@
+{
+ "skill": "email-copy",
+ "format": 3,
+ "generated_at": "2026-10-23",
+ "brief_name": "The made-to-order pendants",
+ "channel": "email",
+ "type": "product_listing",
+ "brief": {
+  "name": "The made-to-order pendants",
+  "type": "product_listing",
+  "objective": "Introduce four of HLR’s made-to-order pendants to the email list and send each reader to a pendant’s page.",
+  "audience": "HLR’s email subscribers. No segment data is on file.",
+  "guidance": "Vocabulary: made to order, pendant. Tone: the voice contract as written, short lines, one accent word in a headline. No figures; intentions only as tradition or intention.",
+  "must_say": [],
+  "cta": null,
+  "subject": null,
+  "preheader": null,
+  "offer": null,
+  "codes": {},
+  "products": [
+   {
+    "name": "The Element Pendant (element-pendant)",
+    "desc": ""
+   },
+   {
+    "name": "The Sacred Pendant (sacred-pendant)",
+    "desc": ""
+   },
+   {
+    "name": "The Genesis Pendant (genesis-pendant)",
+    "desc": ""
+   },
+   {
+    "name": "The Seeker Pendant (seeker-pendant)",
+    "desc": ""
+   }
+  ],
+  "macros": [],
+  "selected_route": {
+   "id": "R1",
+   "axis": "Product",
+   "selected_by": "recommended"
+  }
+ },
+ "angle_gate": {
+  "ran_inside_route": true,
+  "picked_by": "recommended",
+  "provisional": true,
+  "picked": 1
+ },
+ "routes": [
+  {
+   "route": 1,
+   "developed": true,
+   "angle": {
+    "copy": "Made after you choose it",
+    "copy2": "The made-to-order fact is the story: the reader’s choice is the first step of the making.",
+    "tension": "Jewelry usually waits on a shelf; these four wait for the person who will wear them.",
+    "axis": "Product",
+    "scene": "the order as the first step of the making",
+    "why": "It rests on the one fact the pack carries for all four (made to order) and gives the reader a scene: the moment of choosing."
+   },
+   "composed": {
+    "subject": "Four pendants, made to order",
+    "preheader": "The Element, Sacred, Genesis, and Seeker pendants, and where each one begins.",
+    "hero": {
+     "eyebrow": "MADE TO ORDER",
+     "head": "Made after you choose it",
+     "accent": "choose"
+    },
+    "text_block": {
+     "head": "Nothing here waits on a shelf",
+     "accent": "shelf",
+     "body": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+    },
+    "grid": {
+     "heading": "The four designs"
+    },
+    "cta": "CHOOSE YOURS",
+    "closing": "SHOP THE PENDANTS"
+   },
+   "cuts": [
+    {
+     "slot": "M02.eyebrow",
+     "from": "hero.eyebrow",
+     "composed": "MADE TO ORDER",
+     "cut": "MADE TO ORDER"
+    },
+    {
+     "slot": "M02.headline",
+     "from": "hero.head",
+     "composed": "Made after you choose it",
+     "cut": "Made after you choose it"
+    },
+    {
+     "slot": "E01.label",
+     "from": "cta",
+     "composed": "CHOOSE YOURS",
+     "cut": "CHOOSE YOURS"
+    },
+    {
+     "slot": "M16.headline",
+     "from": "text_block.head",
+     "composed": "Nothing here waits on a shelf",
+     "cut": "Nothing here waits on a shelf"
+    },
+    {
+     "slot": "M16.body",
+     "from": "text_block.body",
+     "composed": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear.",
+     "cut": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+    },
+    {
+     "slot": "M06.heading",
+     "from": "grid.heading",
+     "composed": "The four designs",
+     "cut": "The four designs"
+    },
+    {
+     "slot": "E01.label",
+     "from": "closing",
+     "composed": "SHOP THE PENDANTS",
+     "cut": "SHOP THE PENDANTS"
+    }
+   ],
+   "gates": {
+    "hero": [
+     {
+      "copy": "Made after you choose it",
+      "accent": "choose",
+      "axis": "Product",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "States the made-to-order fact in plain words and puts the reader at the start of it; the accent falls on the verb."
+     },
+     {
+      "copy": "A pendant that begins with you",
+      "accent": "you",
+      "axis": "Benefit",
+      "register": "uplifting",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": true
+      },
+      "why": "Turns the fact into something given to the reader: the piece starts with her choice."
+     },
+     {
+      "copy": "Something to choose slowly this season",
+      "accent": "slowly",
+      "axis": "Occasion",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Places the send in the giving season without promising a delivery date, since none is on file."
+     },
+     {
+      "copy": "Where does a pendant begin?",
+      "accent": "begin",
+      "axis": "Curiosity",
+      "register": "eloquent",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "A question the reader might ask, answered by the next module: with her choice."
+     },
+     {
+      "copy": "Four pendants, every one made to order",
+      "accent": "every",
+      "axis": "Proof",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Lets the record do the persuading: all four carry made to order in products.json."
+     }
+    ],
+    "subject": [
+     {
+      "copy": "Four pendants, made to order",
+      "axis": "Product",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Says what is inside and the one fact that sets it apart."
+     },
+     {
+      "copy": "Where a pendant begins",
+      "axis": "Curiosity",
+      "register": "eloquent",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Opens a small question the email answers."
+     },
+     {
+      "copy": "Made for the one who chooses it",
+      "axis": "Benefit",
+      "register": "sensual",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": true,
+       "real": false,
+       "uplifting": true
+      },
+      "why": "Warm toward the reader, and true of a made-to-order piece."
+     },
+     {
+      "copy": "A season for choosing slowly",
+      "axis": "Occasion",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Ties the send to the season without a date it cannot keep."
+     },
+     {
+      "copy": "Every one of these is made to order",
+      "axis": "Proof",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": false,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "The fact as the reason to open."
+     }
+    ],
+    "cta": [
+     {
+      "copy": "CHOOSE YOURS",
+      "axis": "Imperative",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Verb first, two words, and it repeats the angle’s one action."
+     },
+     {
+      "copy": "SHOP THE PENDANTS",
+      "axis": "Product",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "The plainest route to the four product pages."
+     },
+     {
+      "copy": "FIND THE ONE",
+      "axis": "Curiosity",
+      "register": "sensual",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": true,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "A light wink on choosing one of four; warm without flirting."
+     },
+     {
+      "copy": "BEGIN YOURS",
+      "axis": "Benefit",
+      "register": "uplifting",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": true
+      },
+      "why": "Frames the click as the start of the making."
+     },
+     {
+      "copy": "CHOOSE ONE TO GIVE",
+      "axis": "Occasion",
+      "register": "uplifting",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": false,
+       "sensual": false,
+       "real": true,
+       "uplifting": true
+      },
+      "why": "The giving season, with no promise of when it arrives."
+     },
+     {
+      "copy": "THE CHOICE IS YOURS",
+      "axis": "Statement",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "A statement rather than an order; it reads as an invitation."
+     }
+    ]
+   },
+   "modules": {
+    "M02": [
+     {
+      "id": "m1",
+      "vals": {
+       "eyebrow": "MADE TO ORDER",
+       "headline": "Made after you choose it"
+      },
+      "accent": {
+       "headline": "choose"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "eyebrow": "FOUR PENDANTS",
+       "headline": "A pendant that begins with you"
+      },
+      "accent": {
+       "headline": "you"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "eyebrow": "THE PENDANTS",
+       "headline": "Where does a pendant begin?"
+      },
+      "accent": {
+       "headline": "begin"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M16": [
+     {
+      "id": "m1",
+      "vals": {
+       "headline": "Nothing here waits on a shelf",
+       "body": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+      },
+      "accent": {
+       "headline": "shelf"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "headline": "The making starts with your choice",
+       "body": "These four pendants are made to order. None of them is made ahead and set aside: each one begins when you choose it. Look closely, and take the one that feels like yours."
+      },
+      "accent": {
+       "headline": "choice"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "headline": "First the choice, then the making",
+       "body": "Every pendant here is made to order, after it is chosen. So start with the design that holds your eye, and let the making follow."
+      },
+      "accent": {
+       "headline": "making"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M06": [
+     {
+      "id": "m1",
+      "vals": {
+       "heading": "The four designs"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "heading": "The made-to-order pendants"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "heading": "Choose your pendant"
+      },
+      "under_angle": 1
+     }
+    ]
+   },
+   "preheader": [
+    "The Element, Sacred, Genesis, and Seeker pendants, and where each one begins.",
+    "Four designs, and the making starts with your choice.",
+    "Choose first. The making follows."
+   ]
+  },
+  {
+   "route": 2,
+   "developed": false,
+   "angle": {
+    "copy": "A pendant worn as a reminder of what you are calling in",
+    "axis": "Benefit",
+    "tension": "An intention set in the morning is gone by noon; something worn stays.",
+    "why": "Waits on HLR’s C2 ruling; every line would stay intention, never effect."
+   }
+  },
+  {
+   "route": 3,
+   "developed": false,
+   "angle": {
+    "copy": "The giving season: a piece made for one person, chosen for one person",
+    "axis": "Occasion",
+    "tension": "Gifts in November are bought in a rush; a made-to-order piece is chosen on purpose.",
+    "why": "Needs an order cutoff or delivery window HLR has not given."
+   }
+  }
+ ],
+ "provenance": {
+  "campaign": null,
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "voice": "voice-contract.md: ratified by Eddie at Gate 2 (2026-10-21, lane C calls 1, 7, 8; 2026-10-22, package calls 4, 10, 12)",
+  "register_lines": [],
+  "exemplars_shown": {
+   "angle": {
+    "favorites": [],
+    "exemplars": [],
+    "note": "angles drafted from the brief and the route plan; no exemplar role for angles"
+   },
+   "hero": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-headline-01",
+     "hlr-email-headline-02",
+     "hlr-email-headline-03",
+     "hlr-email-headline-04",
+     "hlr-email-headline-05",
+     "hlr-email-headline-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "cta": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-cta-01",
+     "hlr-email-cta-02",
+     "hlr-email-cta-03",
+     "hlr-email-cta-04",
+     "hlr-email-cta-05",
+     "hlr-email-cta-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "subject": {
+    "favorites": [],
+    "exemplars": [],
+    "exit": 1,
+    "note": "no exemplar for this role; drafted from the contract"
+   },
+   "preheader": {
+    "favorites": [],
+    "exemplars": [],
+    "exit": 1,
+    "note": "no exemplar for this role; drafted from the contract"
+   },
+   "eyebrow": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-eyebrow-01",
+     "hlr-email-eyebrow-02",
+     "hlr-email-eyebrow-03",
+     "hlr-email-eyebrow-04",
+     "hlr-email-eyebrow-05",
+     "hlr-email-eyebrow-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "body": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-body-01",
+     "hlr-email-body-02",
+     "hlr-email-body-03",
+     "hlr-email-body-04",
+     "hlr-email-body-05",
+     "hlr-email-body-06"
+    ],
+    "widened": true,
+    "thin": false
+   }
+  },
+  "facts": [
+   {
+    "sku": "element-pendant",
+    "name": "The Element Pendant",
+    "figures": []
+   },
+   {
+    "sku": "sacred-pendant",
+    "name": "The Sacred Pendant",
+    "figures": []
+   },
+   {
+    "sku": "genesis-pendant",
+    "name": "The Genesis Pendant",
+    "figures": []
+   },
+   {
+    "sku": "seeker-pendant",
+    "name": "The Seeker Pendant",
+    "figures": []
+   }
+  ],
+  "guardrails": [
+   "no unverified figures (allowed_figures empty)",
+   "prohibited patterns from brand-context.md (6)",
+   "legal ledger hlr-ledger-0.2.0, test-seed: every row enforced provisionally, nothing cleared for production",
+   "slot budgets from seam-map.json (slotmap.yaml, 2026-10-23, 21 modules, 8 elements)",
+   "house conventions: no em dashes, serial comma, curly quotes, sentence-case headlines, caps CTAs, one accent word per headline"
+  ],
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ },
+ "brief_figures": [],
+ "gates": {
+  "angle": [
+   {
+    "copy": "Made after you choose it",
+    "copy2": "The made-to-order fact is the story: the reader’s choice is the first step of the making.",
+    "tension": "Jewelry usually waits on a shelf; these four wait for the person who will wear them.",
+    "axis": "Product",
+    "scene": "the order as the first step of the making",
+    "why": "It rests on the one fact the pack carries for all four (made to order) and gives the reader a scene: the moment of choosing."
+   },
+   {
+    "copy": "Four ways to begin",
+    "copy2": "Present each of the designs as a place to start, with the reader’s choice as the beginning.",
+    "tension": "A lineup of four can read as a catalog; framed as four beginnings, it asks for one decision.",
+    "axis": "Product",
+    "scene": "a lineup: four designs, one choice",
+    "why": "It suits the grid this type carries and keeps the reader on the pieces rather than the process."
+   },
+   {
+    "copy": "Chosen, then made",
+    "copy2": "Tell the made-to-order fact as a two-step sequence the reader can follow: you choose, it is made.",
+    "tension": "Waiting usually feels like a cost; here the wait is the making.",
+    "axis": "Product",
+    "scene": "a sequence: the choice, then the making",
+    "why": "Clear and quick to read, but it draws attention to a wait, and no making time is on file to say how long."
+   }
+  ],
+  "hero": [
+   {
+    "copy": "Made after you choose it",
+    "accent": "choose",
+    "axis": "Product",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "States the made-to-order fact in plain words and puts the reader at the start of it; the accent falls on the verb."
+   },
+   {
+    "copy": "A pendant that begins with you",
+    "accent": "you",
+    "axis": "Benefit",
+    "register": "uplifting",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": true
+    },
+    "why": "Turns the fact into something given to the reader: the piece starts with her choice."
+   },
+   {
+    "copy": "Something to choose slowly this season",
+    "accent": "slowly",
+    "axis": "Occasion",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Places the send in the giving season without promising a delivery date, since none is on file."
+   },
+   {
+    "copy": "Where does a pendant begin?",
+    "accent": "begin",
+    "axis": "Curiosity",
+    "register": "eloquent",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "A question the reader might ask, answered by the next module: with her choice."
+   },
+   {
+    "copy": "Four pendants, every one made to order",
+    "accent": "every",
+    "axis": "Proof",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Lets the record do the persuading: all four carry made to order in products.json."
+   }
+  ],
+  "subject": [
+   {
+    "copy": "Four pendants, made to order",
+    "axis": "Product",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Says what is inside and the one fact that sets it apart."
+   },
+   {
+    "copy": "Where a pendant begins",
+    "axis": "Curiosity",
+    "register": "eloquent",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Opens a small question the email answers."
+   },
+   {
+    "copy": "Made for the one who chooses it",
+    "axis": "Benefit",
+    "register": "sensual",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": true,
+     "real": false,
+     "uplifting": true
+    },
+    "why": "Warm toward the reader, and true of a made-to-order piece."
+   },
+   {
+    "copy": "A season for choosing slowly",
+    "axis": "Occasion",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Ties the send to the season without a date it cannot keep."
+   },
+   {
+    "copy": "Every one of these is made to order",
+    "axis": "Proof",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": false,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "The fact as the reason to open."
+   }
+  ],
+  "cta": [
+   {
+    "copy": "CHOOSE YOURS",
+    "axis": "Imperative",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Verb first, two words, and it repeats the angle’s one action."
+   },
+   {
+    "copy": "SHOP THE PENDANTS",
+    "axis": "Product",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "The plainest route to the four product pages."
+   },
+   {
+    "copy": "FIND THE ONE",
+    "axis": "Curiosity",
+    "register": "sensual",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": true,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "A light wink on choosing one of four; warm without flirting."
+   },
+   {
+    "copy": "BEGIN YOURS",
+    "axis": "Benefit",
+    "register": "uplifting",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": true
+    },
+    "why": "Frames the click as the start of the making."
+   },
+   {
+    "copy": "CHOOSE ONE TO GIVE",
+    "axis": "Occasion",
+    "register": "uplifting",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": false,
+     "sensual": false,
+     "real": true,
+     "uplifting": true
+    },
+    "why": "The giving season, with no promise of when it arrives."
+   },
+   {
+    "copy": "THE CHOICE IS YOURS",
+    "axis": "Statement",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "A statement rather than an order; it reads as an invitation."
+   }
+  ]
+ },
+ "composed": {
+  "subject": "Four pendants, made to order",
+  "preheader": "The Element, Sacred, Genesis, and Seeker pendants, and where each one begins.",
+  "hero": {
+   "eyebrow": "MADE TO ORDER",
+   "head": "Made after you choose it",
+   "accent": "choose"
+  },
+  "text_block": {
+   "head": "Nothing here waits on a shelf",
+   "accent": "shelf",
+   "body": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+  },
+  "grid": {
+   "heading": "The four designs"
+  },
+  "cta": "CHOOSE YOURS",
+  "closing": "SHOP THE PENDANTS"
+ },
+ "cuts": [
+  {
+   "slot": "M02.eyebrow",
+   "from": "hero.eyebrow",
+   "composed": "MADE TO ORDER",
+   "cut": "MADE TO ORDER"
+  },
+  {
+   "slot": "M02.headline",
+   "from": "hero.head",
+   "composed": "Made after you choose it",
+   "cut": "Made after you choose it"
+  },
+  {
+   "slot": "E01.label",
+   "from": "cta",
+   "composed": "CHOOSE YOURS",
+   "cut": "CHOOSE YOURS"
+  },
+  {
+   "slot": "M16.headline",
+   "from": "text_block.head",
+   "composed": "Nothing here waits on a shelf",
+   "cut": "Nothing here waits on a shelf"
+  },
+  {
+   "slot": "M16.body",
+   "from": "text_block.body",
+   "composed": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear.",
+   "cut": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+  },
+  {
+   "slot": "M06.heading",
+   "from": "grid.heading",
+   "composed": "The four designs",
+   "cut": "The four designs"
+  },
+  {
+   "slot": "E01.label",
+   "from": "closing",
+   "composed": "SHOP THE PENDANTS",
+   "cut": "SHOP THE PENDANTS"
+  }
+ ],
+ "modules": {
+  "M02": [
+   {
+    "id": "m1",
+    "vals": {
+     "eyebrow": "MADE TO ORDER",
+     "headline": "Made after you choose it"
+    },
+    "accent": {
+     "headline": "choose"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "eyebrow": "FOUR PENDANTS",
+     "headline": "A pendant that begins with you"
+    },
+    "accent": {
+     "headline": "you"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "eyebrow": "THE PENDANTS",
+     "headline": "Where does a pendant begin?"
+    },
+    "accent": {
+     "headline": "begin"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M16": [
+   {
+    "id": "m1",
+    "vals": {
+     "headline": "Nothing here waits on a shelf",
+     "body": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear."
+    },
+    "accent": {
+     "headline": "shelf"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "headline": "The making starts with your choice",
+     "body": "These four pendants are made to order. None of them is made ahead and set aside: each one begins when you choose it. Look closely, and take the one that feels like yours."
+    },
+    "accent": {
+     "headline": "choice"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "headline": "First the choice, then the making",
+     "body": "Every pendant here is made to order, after it is chosen. So start with the design that holds your eye, and let the making follow."
+    },
+    "accent": {
+     "headline": "making"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M06": [
+   {
+    "id": "m1",
+    "vals": {
+     "heading": "The four designs"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "heading": "The made-to-order pendants"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "heading": "Choose your pendant"
+    },
+    "under_angle": 1
+   }
+  ]
+ },
+ "envelope": {
+  "preheader": [
+   "The Element, Sacred, Genesis, and Seeker pendants, and where each one begins.",
+   "Four designs, and the making starts with your choice.",
+   "Choose first. The making follows."
+  ]
+ },
+ "notes": [
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Angle not ratified: R1 and its first scene were developed as the recommendation under Eddie’s overnight delegation (2026-10-23). R2 (benefit) and R3 (occasion) stay live; pick again and only the copy below the angle changes."
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Products resolved from products.json: element-pendant, sacred-pendant, genesis-pendant, seeker-pendant. Descriptions are empty until HLR’s Shopify export lands, so the copy states no metal, karat, stone, meaning, size or price; the one fact used is made to order (observed.made_to_order on all four)."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "The subject and preheader were drafted from the voice contract alone: the exemplar file has no subject or preheader lines."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "The pack has no favorites yet, so every gate saw historical exemplars only; no measured preference is on file, so the checklist carries the voice contract’s five checks and the brief items, and a human picks."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "Type product_listing read live from type-registry-core.json (ratified). The grid’s card names are data-fed from products.json (E06.name), so they are not drafted as options; the footer carries HLR-REQ-01 verbatim in M09 and is not redrafted here."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "Every composed string fit its slot budget, so the cut pass changed nothing: cuts lists each mapped string unchanged so fit_check can confirm the budgets."
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Revised after the fresh-context review (round 1): “choose” appeared six times, so the body, the grid heading, the preheader and the closing CTA now vary the verb; the hero line and its CTA keep it."
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Each headline names its accent word (field accent); the build sets that word in font/style/headline-accent."
+  },
+  {
+   "owner": "legal",
+   "severity": "note",
+   "text": "The ledger is a test seed (hlr-ledger-0.2.0): its rows are enforced provisionally and no line here is cleared for production until HLR names its claims signer (C2)."
+  }
+ ]
+}

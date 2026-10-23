@@ -1,0 +1,407 @@
+# HLR email slot map (role slotmap): the email masters and the elements they compose, as built.
+# Chat 6, 2026-10-23, overnight (Claude under Eddie's delegation; DECISIONS 2026-10-23). Library HLR Library
+# Gq3yUbLs6MCRM0nOhjvnIW: modules on 02 Modules (7:3), elements on 01 Elements (7:2), templates on 03 Templates (7:4).
+# 21 modules (M01 to M21) and 8 elements (E01 to E08). M11 to M21, E07 and E08 came from the comprehensiveness
+# pass over HLR's live sends (Design Pull 2:4458, 2:4432, 2:7443, 2:190749 and the pattern review), 2026-10-23.
+# Canvas: email. Masters are 1200 wide, sent as image slices (Gate 1 C8); every master sets the email mode on its
+# root (every variant of a set), and elements stay on Auto.
+# Budgets: an email module hugs its height, so its copy never clips. typical_chars is the drawn copy, flex_verified
+# the multiple the flex probe proved at 1200 (2x, 3x, 4x; each slot alone and all slots together; no text clipped,
+# none colliding with a painted neighbour, none overflowing a fixed box; the tightest variant; re-probed after review
+# round 2), and max_chars = typical_chars x flex_verified, the proven length that build_seam_map.py and
+# copy_lint.js read. It is not a design ceiling (slot contract: no ceilings); the gap between the two contracts is
+# logged for lane H (engine gap G3).
+# Optional slots (option: ...) are hidden by default and were measured on an instance with the option switched on.
+# Measured on the build stand-ins (Instrument Serif for Saol, Inter for Trade Gothic; license flag raised): every
+# budget is provisional until re-measured on the real faces in the desktop app.
+# case, house style (Gate 2 call 2 a, Eddie, 2026-10-18): headlines and lines in sentence case; eyebrows and CTA
+# labels in caps; names, scripts, nav labels, labels, numbered headlines, reviews and the disclaimer as written
+# (as-is). E02.label and E07.name are as-is because their styles set the caps.
+# Composed elements are stamped once on the element (E##.role) and declared on the host module (composed). A composed
+# slot carries the tightest budget among the element and its hosts (budget_from names the host that sets it); a host
+# whose column cannot take the element budget stamps its own slot (M11.cta, M12.cta: the E01 label at 2x there).
+# The footer disclaimer is legal-ledger.json HLR-REQ-01, carried verbatim (verbatim: true). Reviews (M18) are a
+# sourced export, verbatim: no review slot is ever filled without a source.
+
+meta:
+  namespace: hlr
+  key: slot
+  file_key: Gq3yUbLs6MCRM0nOhjvnIW
+  page: "02 Modules"
+  elements_page: "01 Elements"
+  templates_page: "03 Templates"
+  canvas: email
+  modules: 21
+  elements: 8
+  status: built
+  built: "2026-10-23"
+  measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+  breakpoints: ["email"]
+  stamp_readback: "ok: instance children carry the stamps (probed on an M04 Align=Left instance and on option-on M02 and M09 instances, 2026-10-23)"
+
+modules:
+  M01:
+    name: "Header"
+    family: email
+    use_when: "The wordmark bar that opens a send (E-H2). Set a ground mode on the instance for a coloured bar."
+    status: built
+    node_id: "40:104"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    stamps_no_text: true
+    reason: "the wordmark is a placed mark (logo-assets.md); no copy slot"
+  M02:
+    name: "Hero"
+    family: email
+    use_when: "The image header: a cleared photo, the optional scrim, an eyebrow, one display line with one italic accent word, the CTA on photo; options add the wordmark, a body line and one script line (E-M17, E-H3). Opens a launch, an edit or a welcome."
+    status: built
+    node_id: "40:122"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01.label }
+    options: "Show eyebrow (on), Show wordmark (off), Show body (off), Show script (off), Space below (off; space/40 under the CTA for a photo whose subject sits low); the scrim is the root's second fill (background/scrim at 50 percent, on in the master), the designer's call per photo"
+    slots:
+      - { id: M02.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: M02.headline, role: headline, case: sentence, typical_chars: 35, flex_verified: ">=4x", max_chars: 140 }
+      - { id: M02.body, role: body, case: sentence, typical_chars: 71, flex_verified: ">=4x", max_chars: 284, option: "Show body, off by default", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+      - { id: M02.script, role: script, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, option: "Show script, off by default", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+  M03:
+    name: "Spotlight"
+    family: email
+    use_when: "The feature split: eyebrow, the product name from products.json, an arrow link, the product image (E-M01; The Edit is M11, the numbered split M12). Image=Right or Left."
+    status: built
+    node_id: "40:148"
+    variant_ids: ["40:128", "40:138"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { link: E02.label, image: E05 }
+    variants: ["Image=Right", "Image=Left"]
+    slots:
+      - { id: M03.eyebrow, role: eyebrow, case: upper, typical_chars: 9, flex_verified: ">=4x", max_chars: 36 }
+      - { id: M03.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+  M04:
+    name: "Text block"
+    family: email
+    use_when: "A short header with one italic accent word, body, and an optional CTA (E-M03 to E-M06, E-M11; two columns are M16). Align=Left or Center."
+    status: built
+    node_id: "40:161"
+    variant_ids: ["40:149", "40:155"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01.label }
+    options: "Show CTA (off)"
+    variants: ["Align=Left", "Align=Center"]
+    slots:
+      - { id: M04.headline, role: headline, case: sentence, typical_chars: 35, flex_verified: ">=4x", max_chars: 140 }
+      - { id: M04.body, role: body, case: sentence, typical_chars: 128, flex_verified: ">=4x", max_chars: 512 }
+  M05:
+    name: "Image"
+    family: email
+    use_when: "An image on a mat inside the margin, or full bleed (E-M12)."
+    status: built
+    node_id: "41:137"
+    variant_ids: ["41:129", "41:133"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { image: E04 }
+    variants: ["Shape=Mat", "Shape=Full bleed"]
+    stamps_no_text: true
+    reason: "an image well; the photo is a fill on the E04 instance"
+  M06:
+    name: "Product grid"
+    family: email
+    use_when: "A heading and E06 product cards two up, one or two rows (E-M15, E-P1). Names from products.json; no prices on the live grid."
+    status: built
+    node_id: "41:138"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { card: E06 }
+    repeats: { card: E06, count: 4 }
+    options: "Show heading (on), Second row (on)"
+    slots:
+      - { id: M06.heading, role: heading, case: sentence, typical_chars: 22, flex_verified: ">=4x", max_chars: 88 }
+  M07:
+    name: "Mantra"
+    family: email
+    use_when: "One line in the quote style, centered, and an optional script line (E-P3). Usually on the warm or deep ground."
+    status: built
+    node_id: "41:181"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    options: "Show script (on)"
+    slots:
+      - { id: M07.mantra, role: mantra, case: sentence, typical_chars: 37, flex_verified: ">=4x", max_chars: 148 }
+      - { id: M07.script, role: script, case: as-is, typical_chars: 17, flex_verified: ">=4x", max_chars: 68 }
+  M08:
+    name: "Promo bar"
+    family: email
+    use_when: "One line and a long arrow (E-M18), usually on the deep ground. An offer only as merge tokens until HLR rules on offers (C10)."
+    status: built
+    node_id: "41:184"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    slots:
+      - { id: M08.line, role: line, case: sentence, typical_chars: 31, flex_verified: ">=4x", max_chars: 124 }
+  M09:
+    name: "Footer"
+    family: email
+    use_when: "Nav labels, the wordmark, the footer disclaimer verbatim from legal-ledger.json HLR-REQ-01, and an optional legal line of ESP merge tokens for live-text sends only (in a slice they never resolve, so the ESP footer carries them) (E-F1). Every email ends on it."
+    status: built
+    node_id: "41:188"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    options: "Show legal line (off)"
+    slots:
+      - { id: M09.nav1.label, role: label, case: as-is, typical_chars: 8, flex_verified: ">=4x", max_chars: 32, repeat: true, in: "nav" }
+      - { id: M09.nav2.label, role: label, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, repeat: true, in: "nav" }
+      - { id: M09.nav3.label, role: label, case: as-is, typical_chars: 9, flex_verified: ">=4x", max_chars: 36, repeat: true, in: "nav" }
+      - { id: M09.disclaimer, role: disclaimer, case: as-is, typical_chars: 216, flex_verified: ">=4x", max_chars: 864, verbatim: true }
+      - { id: M09.legal, role: legal, case: as-is, typical_chars: 31, flex_verified: ">=4x", max_chars: 124, option: "Show legal line, off by default; live-text sends only, never in a slice", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+  M10:
+    name: "Divider"
+    family: email
+    use_when: "The hairline inside the margin (E-M19)."
+    status: built
+    node_id: "41:211"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { rule: E03 }
+    stamps_no_text: true
+    reason: "a rule; no copy slot"
+  M11:
+    name: "Edit feature"
+    family: email
+    use_when: "The Edit: an eyebrow, a display headline with one italic accent word, body beside a 2:3 portrait image (its size and the copy column minimum change together, as the 48:186 description says), and the outline CTA at the foot of the text column, on the image bottom line at the drawn copy; longer copy grows the module (E-M09, 2:193565). Usually on the warm ground."
+    status: built
+    node_id: "48:186"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01, image: E05 }
+    slots:
+      - { id: M11.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: M11.headline, role: headline, case: sentence, typical_chars: 40, flex_verified: ">=4x", max_chars: 160 }
+      - { id: M11.body, role: body, case: sentence, typical_chars: 140, flex_verified: ">=4x", max_chars: 560 }
+      - { id: M11.cta, role: label, case: upper, typical_chars: 8, flex_verified: ">=2x", max_chars: 16, note: "the E01 label, stamped for this host: the column proves 2x, so E01.label budget does not apply here" }
+  M12:
+    name: "Numbered feature"
+    family: email
+    use_when: "A half-bleed image beside a display headline (a numbered label such as 03 / Material, or a line with one accent word), body and the CTA (E-M14, 2:193777). Image=Left or Right; alternate them for a zigzag. Usually on the deep ground."
+    status: built
+    node_id: "48:217"
+    variant_ids: ["48:197", "48:207"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01, image: E05 }
+    variants: ["Image=Left", "Image=Right"]
+    slots:
+      - { id: M12.headline, role: headline, case: as-is, typical_chars: 10, flex_verified: ">=4x", max_chars: 40, note: "a numbered label (03 / Material) or a sentence-case line with one accent word" }
+      - { id: M12.body, role: body, case: sentence, typical_chars: 125, flex_verified: ">=4x", max_chars: 500 }
+      - { id: M12.cta, role: label, case: upper, typical_chars: 8, flex_verified: ">=2x", max_chars: 16, note: "the E01 label, stamped for this host: the column proves 2x, so E01.label budget does not apply here" }
+  M13:
+    name: "Product details"
+    family: email
+    use_when: "An image on a mat, a heading, a bullet list of details and the CTA (the details block of 2:563); Show image off makes it the bullet-list text block (E-M06). Details only as products.json carries them."
+    status: built
+    node_id: "48:218"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01.label, image: E04 }
+    options: "Show image (on)"
+    slots:
+      - { id: M13.heading, role: heading, case: sentence, typical_chars: 15, flex_verified: ">=4x", max_chars: 60 }
+      - { id: M13.list, role: list, case: sentence, typical_chars: 109, flex_verified: ">=4x", max_chars: 436, note: "one detail per line; the node sets the bullets" }
+  M14:
+    name: "CTA"
+    family: email
+    use_when: "The outline button on its own, centered, after an image or a text block (E-M16; in 23 of 28 sends)."
+    status: built
+    node_id: "54:198"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01.label }
+    stamps_no_text: true
+    reason: "the only copy is the composed CTA (E01.label), stamped on the element"
+  M15:
+    name: "Product grid, three up"
+    family: email
+    use_when: "A heading and labelled cards three up, one or two rows (the birthstone grid of 2:7443). Names from products.json only."
+    status: built
+    node_id: "54:201"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { card: E07 }
+    repeats: { card: E07, count: 6 }
+    options: "Show heading (on), Second row (on)"
+    slots:
+      - { id: M15.heading, role: heading, case: sentence, typical_chars: 22, flex_verified: ">=4x", max_chars: 88 }
+  M16:
+    name: "Two-column text"
+    family: email
+    use_when: "A display headline with one accent word beside the body (E-M07, 2:193487; the callout of 2:7443). Style=Plain, or Inset on a warm band inside the margin."
+    status: built
+    node_id: "54:276"
+    variant_ids: ["54:268", "54:272"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    variants: ["Style=Plain", "Style=Inset"]
+    slots:
+      - { id: M16.headline, role: headline, case: sentence, typical_chars: 31, flex_verified: ">=4x", max_chars: 124 }
+      - { id: M16.body, role: body, case: sentence, typical_chars: 87, flex_verified: ">=4x", max_chars: 348 }
+  M17:
+    name: "Letter"
+    family: email
+    use_when: "A centered letter: eyebrow, a headline with one accent word, body and a script sign-off (E-P2; the founder's note of 2:7443). First person only on a brief that says the piece is from the founder. Usually on the warm ground."
+    status: built
+    node_id: "54:277"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    options: "Show eyebrow (on)"
+    slots:
+      - { id: M17.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: M17.headline, role: headline, case: sentence, typical_chars: 46, flex_verified: ">=4x", max_chars: 184 }
+      - { id: M17.body, role: body, case: sentence, typical_chars: 157, flex_verified: ">=4x", max_chars: 628 }
+      - { id: M17.signoff, role: script, case: as-is, typical_chars: 17, flex_verified: ">=4x", max_chars: 68 }
+  M18:
+    name: "Review"
+    family: email
+    use_when: "A sourced review: stars, a pull quote, the body and the attribution, verbatim (E-M02 split with an image and the link, 2:193247; E-M08 centered, 2:193520). Never an invented reviewer or rating."
+    status: built
+    node_id: "54:309"
+    variant_ids: ["54:282", "54:299"]
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { stars: E08, link: E02.label, image: E05 }
+    variants: ["Layout=Split", "Layout=Centered"]
+    slots:
+      - { id: M18.quote, role: quote, case: as-is, typical_chars: 38, flex_verified: ">=4x", max_chars: 152, source: "a sourced review, verbatim" }
+      - { id: M18.body, role: body, case: as-is, typical_chars: 68, flex_verified: ">=4x", max_chars: 272, source: "a sourced review, verbatim" }
+      - { id: M18.attribution, role: attribution, case: as-is, typical_chars: 38, flex_verified: ">=4x", max_chars: 152, source: "as the review source names the reviewer" }
+  M19:
+    name: "Offer"
+    family: email
+    use_when: "An offer: eyebrow, a headline with one accent word, a terms line and the CTA (E-M11 offer variant, 2:193736; E-P4). Every figure, code and date a merge token until HLR rules on offers (C10); the master carries a neutral placeholder, never drafted terms."
+    status: built
+    node_id: "54:310"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { cta: E01.label }
+    slots:
+      - { id: M19.eyebrow, role: eyebrow, case: upper, typical_chars: 17, flex_verified: ">=4x", max_chars: 68 }
+      - { id: M19.headline, role: headline, case: sentence, typical_chars: 30, flex_verified: ">=4x", max_chars: 120 }
+      - { id: M19.terms, role: terms, case: sentence, typical_chars: 32, flex_verified: ">=4x", max_chars: 128, note: "merge tokens until C10 rules" }
+  M20:
+    name: "Collage"
+    family: email
+    use_when: "Two cleared images offset, the first half-bleed and tall, the second smaller (E-M13, 2:193764; book p52)."
+    status: built
+    node_id: "54:317"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { image: E05 }
+    repeats: { image: E05, count: 2 }
+    stamps_no_text: true
+    reason: "two image wells; the photos are fills on the E05 instances"
+  M21:
+    name: "Spec rows"
+    family: email
+    use_when: "Rows of a square image, a label with one accent word (Crystal: Clear Quartz) and body (E-P5, 2:190749). Two or four rows (Rows 3 and 4). Values from products.json; meanings as ledger claims framed as tradition or intention."
+    status: built
+    node_id: "54:324"
+    canvas: email
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { image: E05 }
+    repeats: { row: M21.row, count: 4 }
+    options: "Rows 3 and 4 (on)"
+    slots:
+      - { id: M21.row1.label, role: label, case: as-is, typical_chars: 14, flex_verified: ">=4x", max_chars: 56, repeat: true, in: "rows" }
+      - { id: M21.row1.body, role: body, case: sentence, typical_chars: 58, flex_verified: ">=4x", max_chars: 232, repeat: true, in: "rows" }
+      - { id: M21.row2.label, role: label, case: as-is, typical_chars: 14, flex_verified: ">=4x", max_chars: 56, repeat: true, in: "rows" }
+      - { id: M21.row2.body, role: body, case: sentence, typical_chars: 58, flex_verified: ">=4x", max_chars: 232, repeat: true, in: "rows" }
+      - { id: M21.row3.label, role: label, case: as-is, typical_chars: 14, flex_verified: ">=4x", max_chars: 56, repeat: true, in: "rows" }
+      - { id: M21.row3.body, role: body, case: sentence, typical_chars: 58, flex_verified: ">=4x", max_chars: 232, repeat: true, in: "rows" }
+      - { id: M21.row4.label, role: label, case: as-is, typical_chars: 14, flex_verified: ">=4x", max_chars: 56, repeat: true, in: "rows" }
+      - { id: M21.row4.body, role: body, case: sentence, typical_chars: 58, flex_verified: ">=4x", max_chars: 232, repeat: true, in: "rows" }
+  E01:
+    name: "CTA"
+    family: element
+    use_when: "The outline caps box (Gate 1 C6): Surface=Ground follows the ground mode, Surface=Photo is the inverse on photography."
+    status: built
+    node_id: "39:109"
+    variant_ids: ["39:105", "39:106"]
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    variants: ["Surface=Ground", "Surface=Photo"]
+    slots:
+      - { id: E01.label, role: label, case: upper, typical_chars: 8, flex_verified: ">=4x", max_chars: 32 }
+  E02:
+    name: "Text link"
+    family: element
+    use_when: "The secondary CTA (book p17): Style=Rule, a caps label over a hairline on the eyebrow style (Regular caps, as HLR SHOP links); Style=Arrow, a serif link with a long arrow on the link style."
+    status: built
+    node_id: "39:116"
+    variant_ids: ["39:110", "39:113"]
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    variants: ["Style=Rule", "Style=Arrow"]
+    slots:
+      - { id: E02.label, role: label, case: as-is, typical_chars: 4, flex_verified: ">=3x", max_chars: 12, budget_from: "M06" }
+  E03:
+    name: "Rule"
+    family: element
+    use_when: "The hairline divider."
+    status: built
+    node_id: "39:117"
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    stamps_no_text: true
+    reason: "a rule"
+  E04:
+    name: "Image"
+    family: element
+    use_when: "The image frame: full bleed and mats; a cleared photo replaces the grey fill on the instance."
+    status: built
+    node_id: "39:131"
+    variant_ids: ["39:119", "39:122", "39:125", "39:128"]
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    variants: ["Shape=Full bleed", "Shape=Mat square", "Shape=Mat portrait", "Shape=Mat landscape"]
+    stamps_no_text: true
+    reason: "an image well"
+  E05:
+    name: "Product image"
+    family: element
+    use_when: "One product image element with crop variants (Eddie, 2026-10-23); the picture is swapped per product."
+    status: built
+    node_id: "39:142"
+    variant_ids: ["39:132", "39:135", "39:138"]
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    variants: ["Crop=Square", "Crop=Portrait", "Crop=On ground"]
+    stamps_no_text: true
+    reason: "an image well"
+  E06:
+    name: "Product card"
+    family: element
+    use_when: "Product image (E05 Portrait), name, optional price (Show price; its placeholder is the merge token {{ price }}), text link (E02 Rule). Names and prices from products.json only."
+    status: built
+    node_id: "39:143"
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { link: E02.label, image: E05 }
+    slots:
+      - { id: E06.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: E06.price, role: price, case: as-is, typical_chars: 11, flex_verified: ">=4x", max_chars: 44, option: "Show price, off by default; the placeholder is the merge token {{ price }}", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+  E07:
+    name: "Product card, labelled"
+    family: element
+    use_when: "The three-up card (2:7443): a square product image (E05), one italic label word, the caps name, the SHOP link (E02 Rule). Names from products.json only."
+    status: built
+    node_id: "53:109"
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    composed: { link: E02.label, image: E05 }
+    slots:
+      - { id: E07.label, role: label, case: as-is, typical_chars: 5, flex_verified: ">=4x", max_chars: 20, note: "one accent word, a month or a stone" }
+      - { id: E07.name, role: name, case: as-is, typical_chars: 10, flex_verified: ">=4x", max_chars: 40, note: "a short form: the stone, or the display name tail after in; the full name only where it fits two lines; the style sets caps; a word wider than the 320 card breaks inside the word (Chrysocolla, Dumortierite and Phosphosiderite do), so those cards are set by hand" }
+  E08:
+    name: "Star row"
+    family: element
+    use_when: "Five stars in the text ink, only beside a sourced review (EL-11; E-M02, E-M08). Never decoration, never a rating nobody gave."
+    status: built
+    node_id: "53:119"
+    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    stamps_no_text: true
+    reason: "five stars, no copy; only beside a sourced review"

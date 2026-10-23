@@ -1,0 +1,222 @@
+{
+ "errors": [],
+ "warns": [],
+ "needs_human_signoff": [],
+ "verdict": "PASS",
+ "checked": {
+  "slate": "/tmp/claude-0/-home-claude/3acf7116-d2a8-5e59-a1de-d39332dbfdb2/scratchpad/hb/outputs/step-4-figma/demo-email/made-to-order-pendants.slates.json",
+  "slate_sha256": "ca1145584dd14640fd1c84b355d01158a30c3b884187ec1a30ce60572d035ca0",
+  "cuts_checked": 14,
+  "composed_blocks": 2,
+  "thresholds": {
+   "retention_floor": 0.5,
+   "retention_factor": 0.8,
+   "new_word_ceiling": 0.25,
+   "rule": "retention >= max(floor, factor x min(1, budget / composed chars)); new content words <= ceiling of the cut"
+  },
+  "seam_map": "/tmp/claude-0/-home-claude/3acf7116-d2a8-5e59-a1de-d39332dbfdb2/scratchpad/hb/brand-pack/seam-map.json",
+  "paid_slotmap": null,
+  "social_slotmap": null,
+  "budgets": null,
+  "brand_context": null,
+  "pack_resolved_by": null,
+  "results": [
+   {
+    "where": "routes[0].cuts[0]",
+    "slot": "M02.eyebrow",
+    "findings": [
+     "ok"
+    ],
+    "budget": 64,
+    "budget_source": "seam map",
+    "composed_chars": 13,
+    "cut_chars": 13,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[1]",
+    "slot": "M02.headline",
+    "findings": [
+     "ok"
+    ],
+    "budget": 140,
+    "budget_source": "seam map",
+    "composed_chars": 24,
+    "cut_chars": 24,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[2]",
+    "slot": "E01.label",
+    "findings": [
+     "ok"
+    ],
+    "budget": 32,
+    "budget_source": "seam map",
+    "composed_chars": 12,
+    "cut_chars": 12,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[3]",
+    "slot": "M16.headline",
+    "findings": [
+     "ok"
+    ],
+    "budget": 124,
+    "budget_source": "seam map",
+    "composed_chars": 29,
+    "cut_chars": 29,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[4]",
+    "slot": "M16.body",
+    "findings": [
+     "ok"
+    ],
+    "budget": 348,
+    "budget_source": "seam map",
+    "composed_chars": 176,
+    "cut_chars": 176,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[5]",
+    "slot": "M06.heading",
+    "findings": [
+     "ok"
+    ],
+    "budget": 88,
+    "budget_source": "seam map",
+    "composed_chars": 16,
+    "cut_chars": 16,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "routes[0].cuts[6]",
+    "slot": "E01.label",
+    "findings": [
+     "ok"
+    ],
+    "budget": 32,
+    "budget_source": "seam map",
+    "composed_chars": 17,
+    "cut_chars": 17,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[0]",
+    "slot": "M02.eyebrow",
+    "findings": [
+     "ok"
+    ],
+    "budget": 64,
+    "budget_source": "seam map",
+    "composed_chars": 13,
+    "cut_chars": 13,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[1]",
+    "slot": "M02.headline",
+    "findings": [
+     "ok"
+    ],
+    "budget": 140,
+    "budget_source": "seam map",
+    "composed_chars": 24,
+    "cut_chars": 24,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[2]",
+    "slot": "E01.label",
+    "findings": [
+     "ok"
+    ],
+    "budget": 32,
+    "budget_source": "seam map",
+    "composed_chars": 12,
+    "cut_chars": 12,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[3]",
+    "slot": "M16.headline",
+    "findings": [
+     "ok"
+    ],
+    "budget": 124,
+    "budget_source": "seam map",
+    "composed_chars": 29,
+    "cut_chars": 29,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[4]",
+    "slot": "M16.body",
+    "findings": [
+     "ok"
+    ],
+    "budget": 348,
+    "budget_source": "seam map",
+    "composed_chars": 176,
+    "cut_chars": 176,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[5]",
+    "slot": "M06.heading",
+    "findings": [
+     "ok"
+    ],
+    "budget": 88,
+    "budget_source": "seam map",
+    "composed_chars": 16,
+    "cut_chars": 16,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   },
+   {
+    "where": "cuts[6]",
+    "slot": "E01.label",
+    "findings": [
+     "ok"
+    ],
+    "budget": 32,
+    "budget_source": "seam map",
+    "composed_chars": 17,
+    "cut_chars": 17,
+    "retention": 1,
+    "retention_threshold": 0.8,
+    "new_word_share": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,515 @@
+{
+ "verdict": "WARN",
+ "advisory": true,
+ "note": "Advisory. This lint never fails a slate: likelihoods and flags inform a human pick and the selection tiebreak; they do not block.",
+ "warns": [
+  "model: no voice_model role resolved (null in the file map), so the ENGINE DEFAULT weights ran: the AI-register tells only, fitted to no brand's labels and carrying no brand's taste. Its likelihood is no tiebreak and nothing here measures this brand's voice. Fit the pack's model with --calibration and name it in the File map.",
+  "model: the voice model is WEAK (leave-one-out accuracy not measured against a majority-class baseline of unknown; the bar is 65%). Likelihoods are a faint signal. Read the AI-register flags; no taste is measured until the brand fits its own model."
+ ],
+ "notes": [],
+ "lines": [
+  {
+   "where": "gates.hero[0]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Made after you choose it",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[1]",
+   "group": "hero",
+   "role": "headline",
+   "text": "A pendant that begins with you",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[2]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Something to choose slowly this season",
+   "words": 6,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[3]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Where does a pendant begin?",
+   "words": 5,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[4]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Four pendants, every one made to order",
+   "words": 7,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[0]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Four pendants, made to order",
+   "words": 5,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[1]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Where a pendant begins",
+   "words": 4,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[2]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Made for the one who chooses it",
+   "words": 7,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[3]",
+   "group": "subject",
+   "role": "subject",
+   "text": "A season for choosing slowly",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[4]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Every one of these is made to order",
+   "words": 8,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[0]",
+   "group": "cta",
+   "role": "cta",
+   "text": "CHOOSE YOURS",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[1]",
+   "group": "cta",
+   "role": "cta",
+   "text": "SHOP THE PENDANTS",
+   "words": 3,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[2]",
+   "group": "cta",
+   "role": "cta",
+   "text": "FIND THE ONE",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[3]",
+   "group": "cta",
+   "role": "cta",
+   "text": "BEGIN YOURS",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[4]",
+   "group": "cta",
+   "role": "cta",
+   "text": "CHOOSE ONE TO GIVE",
+   "words": 4,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[5]",
+   "group": "cta",
+   "role": "cta",
+   "text": "THE CHOICE IS YOURS",
+   "words": 4,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[0].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "MADE TO ORDER",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[0].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "Made after you choose it",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[1].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "FOUR PENDANTS",
+   "words": 2,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[1].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "A pendant that begins with you",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[2].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "THE PENDANTS",
+   "words": 2,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[2].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "Where does a pendant begin?",
+   "words": 5,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[0].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "Nothing here waits on a shelf",
+   "words": 6,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[0].body",
+   "group": "M16",
+   "role": "body",
+   "text": "Each of these four pendants is made to order, so the making begins only once you have picked one. Take your time with the four designs below, and find the one you mean to wear.",
+   "words": 35,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[1].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "The making starts with your choice",
+   "words": 6,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[1].body",
+   "group": "M16",
+   "role": "body",
+   "text": "These four pendants are made to order. None of them is made ahead and set aside: each one begins when you choose it. Look closely, and take the one that feels like yours.",
+   "words": 33,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[2].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "First the choice, then the making",
+   "words": 6,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[2].body",
+   "group": "M16",
+   "role": "body",
+   "text": "Every pendant here is made to order, after it is chosen. So start with the design that holds your eye, and let the making follow.",
+   "words": 25,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[0].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "The four designs",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[1].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "The made-to-order pendants",
+   "words": 5,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[2].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "Choose your pendant",
+   "words": 3,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[0]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "The Element, Sacred, Genesis, and Seeker pendants, and where each one begins.",
+   "words": 12,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[1]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "Four designs, and the making starts with your choice.",
+   "words": 9,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[2]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "Choose first. The making follows.",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  }
+ ],
+ "distribution": {
+  "n": 34,
+  "mean_likelihood": 0.5,
+  "median_likelihood": 0.5,
+  "share_over_half": 1,
+  "bands": {
+   "under_0_35": 0,
+   "from_0_35_to_0_5": 0,
+   "from_0_5_to_0_65": 34,
+   "over_0_65": 0
+  },
+  "by_group": {
+   "hero": {
+    "n": 5,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "subject": {
+    "n": 5,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "cta": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M02": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M16": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M06": {
+    "n": 3,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "preheader": {
+    "n": 3,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   }
+  }
+ },
+ "skipped": [],
+ "checked": {
+  "source": "made-to-order-pendants.slates.json",
+  "slate_sha256": "ca1145584dd14640fd1c84b355d01158a30c3b884187ec1a30ce60572d035ca0",
+  "lines_scored": 34,
+  "lines_skipped": 0,
+  "brand_context": "/tmp/claude-0/-home-claude/3acf7116-d2a8-5e59-a1de-d39332dbfdb2/scratchpad/hb/brand-pack/brand-context.md",
+  "pack_resolved_by": "--pack",
+  "voice_model": {
+   "source": "/root/.claude/plugins/synced/fee23b9d-02ce-46f2-8d0d-5d57b8d57b3b_bee9053b-6ede-4ee2-8faa-b10c7cb4e847/hlr-studio-engine/lib/voice-model.default.json",
+   "version": "default-0.5.1",
+   "status": "engine default (hand-set, uncalibrated)",
+   "sha256": "a22eb2a1b97f92f0f33e2c56720e18724c1b21fdaf1f2886411d50c530a1b6ef",
+   "weak": true,
+   "loo_accuracy": null,
+   "loo_auc": null,
+   "base_rate": null,
+   "majority_class_accuracy": null,
+   "fitted_on": null
+  },
+  "lexicon": {
+   "source": "/tmp/claude-0/-home-claude/3acf7116-d2a8-5e59-a1de-d39332dbfdb2/scratchpad/hb/brand-pack/concrete-lexicon.json",
+   "status": "ratified 2026-10-22 by Eddie, Gate 2 package call 14",
+   "counts": {
+    "product": 58,
+    "scene": 42,
+    "product_families": 15,
+    "product_names": 182
+   }
+  },
+  "seam_map": "resolved (module fields carry their slot roles)"
+ }
+}

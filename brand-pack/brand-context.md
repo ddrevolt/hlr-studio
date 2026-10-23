@@ -100,7 +100,7 @@ Voice-side house style lives in `voice-contract.md` section 6 and wins over this
 
 ## Design system
 
-- Tokens: `tokens.json` (DTCG; 103 tokens, 82 [documented], 20 [observed], 1 [derived] (`color.semantic.text.on-placeholder`, Gate 4), counted 2026-10-23; namespace `com.hlr`, CSS prefix `--hlr-`). Ground modes on `HLR / Semantic` (`light`, `warm`, `deep`, `night`, named at Gate 4 on 2026-10-23); canvas modes on `HLR / Layout` (`web`, `social`, `email`; DECISIONS 2026-10-18, Gate 2 question 1). The installed engine is 0.5.3 (Eddie, 2026-10-22): `check` passes in every ground and canvas.
+- Tokens: `tokens.json` (DTCG; 103 tokens, 82 [documented], 20 [observed], 1 [derived] by first tag (`color.semantic.text.on-placeholder`, Gate 4; the placeholder label’s alias carries a second, [derived] tag), counted 2026-10-23; namespace `com.hlr`, CSS prefix `--hlr-`). Ground modes on `HLR / Semantic` (`light`, `warm`, `deep`, `night`, named at Gate 4 on 2026-10-23); canvas modes on `HLR / Layout` (`web`, `social`, `email`; DECISIONS 2026-10-18, Gate 2 question 1). The installed engine is 0.5.3 (Eddie, 2026-10-22): `check` passes in every ground and canvas. Web exports: `web/tokens.css`, `web/tailwind.tokens.js` and `web/tokens.flat.json`, generated from `tokens.json` by `tokens_build.js export` on 2026-10-23 (regenerated, never hand-edited; `font.style` stays in Figma, the web takes `font.weight`).
 - The contrast law, the type roster, the gap register and the ratification log: `token-model.md`. The law is [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 2): every ground in the roster carries body copy in its ink; Fawn is never an ink on Alabaster, white or the neutrals. Copy on photography is judged by eye on the real image [documented, DECISIONS 2026-10-18: Eddie's ruling, Gate 2 question 4].
 - Faces (Gate 1, C5, for HLR to confirm): Saol Display, Saol Standard, Trade Gothic LT Std, Homemade Apple. License flag raised: Saol and Trade Gothic have no license file (`figma.yaml` `fonts.licensed: false`) [observed, 2026-10-17], so every deliverable that renders text carries the flag [documented, project rule 8]. The Figma build sets Instrument Serif and Inter as stand-ins and Eddie switches the family variables in the desktop app (Gate 3 call 7, path 1).
 - Marks: `logo-assets.md`. The wordmark and the monogram exist as SVG [observed, `HLR Logo & Marks/`, 2026-10-18]; the star and every lockup with it wait for HLR's vectors, and no lockup is composed by eye [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11); a mark is placed, never redrawn or set in a font [documented, playbook section 4; the pack contract's `logo_assets` row]. The rest of the mark rules are [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11).
@@ -112,7 +112,7 @@ All four channels are in Phase 1 [documented, DECISIONS 2026-10-17, Gate 1]. Eve
 
 | Channel | Taxonomy | Slot map | What runs today |
 |---|---|---|---|
-| Email | ratified: 15 types [documented, DECISIONS 2026-10-18, Gate 2 call 1 b] | `slotmap` null until Chat 6 builds the masters | `email-copy` drafts; `copy_lint.js` runs with slot checking off (no seam map) |
+| Email | ratified: 15 types [documented, DECISIONS 2026-10-18, Gate 2 call 1 b] | `slotmap.yaml` wired: 21 modules and 8 elements built and measured on the email canvas (Chat 6, 2026-10-23); `seam-map.json` generated from it | `email-copy` drafts with slot checking on: `copy_lint.js` resolves every field and ceiling against the seam map |
 | Organic social | ratified: formats, 8 types, 5 series [documented, the same ruling] | `slotmap-social.yaml` wired, masters unbuilt | `social-copy` drafts; `social_lint.js` asks for a sign-off on every unmeasured slot |
 | Paid | held for Review 2 [documented, the same ruling] | `slotmap-paid.yaml` planned, `slotmap_paid` null | `paid-ad-copy` on the engine's bundled ad types, in-frame checks off; a person confirms Meta's 9:16 bands before the first paid build |
 | Web | held for Review 2 [documented, the same ruling] | `section-library.json` planned, `section_library` null | `web-copy` stops by design and waits for Review 2, when the W## masters exist [documented, DECISIONS 2026-10-22, Gate 2 package call 13] |
@@ -135,7 +135,7 @@ Book (2022) against live work (2023 to 2026), from Brand Review v2 sections 1 an
 | C10 | Offers: three free shipping thresholds and two codes in live work | open; merge tokens until HLR rules | HLR, Review 1 | Brand Review v2, C10 [documented], [observed] |
 | token-model C9 | Archive mark fills (#faf8f2, #1f2918, #baada3) against the p19 hexes | tokens carry p19; marks bind to the tokens | HLR, Review 1 | `token-model.md` gap register, C9 [documented], [observed] |
 | token-model T4 | Pull quote face: Saol Standard Regular (p16) or Saol Display (p18) | ruled: Saol Display Light [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 9) | Eddie, Gate 2 | `token-model.md` gap register, T4 [documented], [observed] |
-| token-model T6 | The italic accent word: in every channel, not in the book (p17 is roman) | [observed]; ruled: one word per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); HLR hears it at Review 1 | Eddie at Gate 2, then HLR | `token-model.md` gap register, T6 [documented], [observed] |
+| token-model T6 | The italic accent word: in every channel, not in the book (p17 is roman) | [observed]; ruled: one word per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); HLR hears it at Review 1 | Eddie (ruled at Gate 2), then HLR | `token-model.md` gap register, T6 [documented], [observed] |
 
 ## Gaps and owners
 
@@ -150,9 +150,6 @@ Every null role and every required artifact with no file yet, its owner, and the
 | `judge_calibration` | role | null | Chat 7 | `Eddie's blind keep or cut sheet marked` | every rank says it was never checked against the owner |
 | `corpus` | role | null by design: the re-cut is evidence, never retrieved per run | Eddie | none | nothing |
 | `type_registry_overlay` | role | null: the core registry governs | Eddie | none | nothing |
-| `module_library` | role | null until the email module masters exist | Chat 6 | `Elements and the first module batch through asset-production` | module copy is written to slot ids alone and the one-pager labels modules UNKNOWN |
-| `slotmap` | role | null; Chat 6 creates `slotmap.yaml` with the first masters | Chat 6 | `Elements and the first module batch through asset-production` | no seam map can be generated |
-| `seam_map` | role | null; generated by `build_seam_map.py` from the slot map | Chat 6 | `Elements and the first module batch through asset-production` | `copy_lint.js` runs with slot checking off |
 | `options_register` | role | null until a first real choice is recorded; then `options-register.jsonl`, created on first append | Chat 7 | `One real HLR brief` | the reason a line was kept is lost |
 | `onepager_palette` | role | null; the engine's neutral default renders | Eddie | none | nothing a reader would notice |
 | `importer` | role | null; optional, and most brands have none: a question only if HLR's team wants slates imported into a tool | Eddie | none | nothing; the JSON and the one-pager are the deliverables |
@@ -163,17 +160,17 @@ Every null role and every required artifact with no file yet, its owner, and the
 | `insight_register` | role | null; no research received; asked at Review 1 (Gate 2 package call 17); Eddie relays HLR's answer | Eddie | none | nothing can be recognised as already assumed beyond the section above |
 | `recency_months` | role | null; the engine default (12) applies | Eddie | none | nothing |
 | `faces_policy` | role | null; image rights and releases for people in imagery; asked by token proposal HLR 5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real imagery with people |
-| `image_look` | role | null; no generation ruling for HLR, placeholders only | Eddie | none | the image layer |
+| `image_look` | role | null; no generation ruling for HLR: the cleared photos on the `photos` page or labelled placeholders, nothing generated | Eddie | none | the image layer |
 | `pack_shot_index` | role | null; the cleared product shots sit on the library's `photos` page (27:104, DECISIONS 2026-10-23), and the index keys on SKUs from HLR's Shopify products export (Brand Review v2 Q5) | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real product imagery |
 | `video_rules` | role | null; video scope not set | Eddie | none | video beyond the P09 end frame |
 | Star and lockup vectors, clear space, minimum sizes | artifact | PNG only; asked by Brand Review v2 Q3 and token proposal HLR 2 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | the star in every master |
 | Licenses for Saol Display, Saol Standard and Trade Gothic LT Std | artifact | no license file; asked by Brand Review v2 Q2 and token proposal HLR 1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every shipped asset (the flag stays raised) |
 | Shopify products export | artifact | not received; asked by Brand Review v2 Q5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | SKUs, product prose, confirmed prices |
 | HLR's claims signer and the needs_legal rulings | artifact | not named; asked by Brand Review v2 Q1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every line a needs_legal row hits |
-| Web breakpoints, margins and grid (`figma.yaml` `breakpoints: null`) | artifact | open | Eddie | none | web budgets |
+| Web breakpoints, margins and grid (`figma.yaml` `breakpoints: null`) | artifact | open; Gate 4 left them open | Eddie | `Review 2 ({{review-2-date}}): Figma foundations and the first modules` | web budgets |
+| Web focus ring (`token-model.md` K2) | artifact | open, not tokenized; Gate 4 left it open | Eddie | `Review 2 ({{review-2-date}}): Figma foundations and the first modules` | the web masters’ interactive states |
 | Meta 9:16 keep-clear bands and copy limits confirmed (`_verified` in the engine's placement specs) | artifact | secondary sources only | Eddie | `Before the first paid build: a person confirms the 9:16 keep-clear bands` | the paid 9:16 masters |
 | The organic story band confirmed on a live story | artifact | one 2026 guide | Eddie | none | the S04 masters |
-| `tokens.css` and Tailwind tokens | artifact | not exported | Chat 6 | `and Tailwind tokens exported from` | web handoff |
 | Live review dates | artifact | not set | Eddie | none | Reviews 1 to 3 |
 
 ## File map
@@ -206,9 +203,9 @@ Machine-readable; scripts parse the fenced block below. Every role of the pack c
  "legal_ledger": "legal-ledger.json",
  "type_registry_core": "type-registry-core.json",
  "type_registry_overlay": null,
- "module_library": null,
- "slotmap": null,
- "seam_map": null,
+ "module_library": "module-library.json",
+ "slotmap": "slotmap.yaml",
+ "seam_map": "seam-map.json",
  "strictness_map": "strictness-map.md",
  "options_register": null,
  "onepager_palette": null,

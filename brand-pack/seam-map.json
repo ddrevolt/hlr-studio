@@ -1,0 +1,702 @@
+{
+ "generated_from": {
+  "slotmap": "slotmap.yaml",
+  "module_library": "module-library.json"
+ },
+ "note": "Generated, never hand-edited. Regenerate whenever the slot map or the module library changes; a stale map is worse than none because it certifies a seam that has moved.",
+ "modules_in_slotmap": 29,
+ "modules_the_engine_can_write": 20,
+ "derivation": "slotmap-derived: every module stamping at least one slot is writable by its real slot ids. MOD_GEN supplies legacy shorthand aliases only and does not gate what exists.",
+ "modules_stamping_no_slots": [
+  "E03",
+  "E04",
+  "E05",
+  "E08",
+  "M01",
+  "M05",
+  "M10",
+  "M14",
+  "M20"
+ ],
+ "map": {
+  "M02": {
+   "eyebrow": {
+    "slot": "M02.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M02.eyebrow": {
+    "slot": "M02.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "headline": {
+    "slot": "M02.headline",
+    "max_chars": 140,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M02.headline": {
+    "slot": "M02.headline",
+    "max_chars": 140,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M02.body",
+    "max_chars": 284,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M02.body": {
+    "slot": "M02.body",
+    "max_chars": 284,
+    "role": "body",
+    "case": "sentence"
+   },
+   "script": {
+    "slot": "M02.script",
+    "max_chars": 52,
+    "role": "script",
+    "case": "as-is"
+   },
+   "M02.script": {
+    "slot": "M02.script",
+    "max_chars": 52,
+    "role": "script",
+    "case": "as-is"
+   }
+  },
+  "M03": {
+   "eyebrow": {
+    "slot": "M03.eyebrow",
+    "max_chars": 36,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M03.eyebrow": {
+    "slot": "M03.eyebrow",
+    "max_chars": 36,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "name": {
+    "slot": "M03.name",
+    "max_chars": 64,
+    "role": "name",
+    "case": "as-is"
+   },
+   "M03.name": {
+    "slot": "M03.name",
+    "max_chars": 64,
+    "role": "name",
+    "case": "as-is"
+   }
+  },
+  "M04": {
+   "headline": {
+    "slot": "M04.headline",
+    "max_chars": 140,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M04.headline": {
+    "slot": "M04.headline",
+    "max_chars": 140,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M04.body",
+    "max_chars": 512,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M04.body": {
+    "slot": "M04.body",
+    "max_chars": 512,
+    "role": "body",
+    "case": "sentence"
+   }
+  },
+  "M06": {
+   "heading": {
+    "slot": "M06.heading",
+    "max_chars": 88,
+    "role": "heading",
+    "case": "sentence"
+   },
+   "M06.heading": {
+    "slot": "M06.heading",
+    "max_chars": 88,
+    "role": "heading",
+    "case": "sentence"
+   }
+  },
+  "M07": {
+   "mantra": {
+    "slot": "M07.mantra",
+    "max_chars": 148,
+    "role": "mantra",
+    "case": "sentence"
+   },
+   "M07.mantra": {
+    "slot": "M07.mantra",
+    "max_chars": 148,
+    "role": "mantra",
+    "case": "sentence"
+   },
+   "script": {
+    "slot": "M07.script",
+    "max_chars": 68,
+    "role": "script",
+    "case": "as-is"
+   },
+   "M07.script": {
+    "slot": "M07.script",
+    "max_chars": 68,
+    "role": "script",
+    "case": "as-is"
+   }
+  },
+  "M08": {
+   "line": {
+    "slot": "M08.line",
+    "max_chars": 124,
+    "role": "line",
+    "case": "sentence"
+   },
+   "M08.line": {
+    "slot": "M08.line",
+    "max_chars": 124,
+    "role": "line",
+    "case": "sentence"
+   }
+  },
+  "M09": {
+   "nav1.label": {
+    "slot": "M09.nav1.label",
+    "max_chars": 32,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M09.nav1.label": {
+    "slot": "M09.nav1.label",
+    "max_chars": 32,
+    "role": "label",
+    "case": "as-is"
+   },
+   "nav2.label": {
+    "slot": "M09.nav2.label",
+    "max_chars": 52,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M09.nav2.label": {
+    "slot": "M09.nav2.label",
+    "max_chars": 52,
+    "role": "label",
+    "case": "as-is"
+   },
+   "nav3.label": {
+    "slot": "M09.nav3.label",
+    "max_chars": 36,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M09.nav3.label": {
+    "slot": "M09.nav3.label",
+    "max_chars": 36,
+    "role": "label",
+    "case": "as-is"
+   },
+   "disclaimer": {
+    "slot": "M09.disclaimer",
+    "max_chars": 864,
+    "role": "disclaimer",
+    "case": "as-is"
+   },
+   "M09.disclaimer": {
+    "slot": "M09.disclaimer",
+    "max_chars": 864,
+    "role": "disclaimer",
+    "case": "as-is"
+   },
+   "legal": {
+    "slot": "M09.legal",
+    "max_chars": 124,
+    "role": "legal",
+    "case": "as-is"
+   },
+   "M09.legal": {
+    "slot": "M09.legal",
+    "max_chars": 124,
+    "role": "legal",
+    "case": "as-is"
+   }
+  },
+  "M11": {
+   "eyebrow": {
+    "slot": "M11.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M11.eyebrow": {
+    "slot": "M11.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "headline": {
+    "slot": "M11.headline",
+    "max_chars": 160,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M11.headline": {
+    "slot": "M11.headline",
+    "max_chars": 160,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M11.body",
+    "max_chars": 560,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M11.body": {
+    "slot": "M11.body",
+    "max_chars": 560,
+    "role": "body",
+    "case": "sentence"
+   },
+   "cta": {
+    "slot": "M11.cta",
+    "max_chars": 16,
+    "role": "label",
+    "case": "upper"
+   },
+   "M11.cta": {
+    "slot": "M11.cta",
+    "max_chars": 16,
+    "role": "label",
+    "case": "upper"
+   }
+  },
+  "M12": {
+   "headline": {
+    "slot": "M12.headline",
+    "max_chars": 40,
+    "role": "headline",
+    "case": "as-is"
+   },
+   "M12.headline": {
+    "slot": "M12.headline",
+    "max_chars": 40,
+    "role": "headline",
+    "case": "as-is"
+   },
+   "body": {
+    "slot": "M12.body",
+    "max_chars": 500,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M12.body": {
+    "slot": "M12.body",
+    "max_chars": 500,
+    "role": "body",
+    "case": "sentence"
+   },
+   "cta": {
+    "slot": "M12.cta",
+    "max_chars": 16,
+    "role": "label",
+    "case": "upper"
+   },
+   "M12.cta": {
+    "slot": "M12.cta",
+    "max_chars": 16,
+    "role": "label",
+    "case": "upper"
+   }
+  },
+  "M13": {
+   "heading": {
+    "slot": "M13.heading",
+    "max_chars": 60,
+    "role": "heading",
+    "case": "sentence"
+   },
+   "M13.heading": {
+    "slot": "M13.heading",
+    "max_chars": 60,
+    "role": "heading",
+    "case": "sentence"
+   },
+   "list": {
+    "slot": "M13.list",
+    "max_chars": 436,
+    "role": "list",
+    "case": "sentence"
+   },
+   "M13.list": {
+    "slot": "M13.list",
+    "max_chars": 436,
+    "role": "list",
+    "case": "sentence"
+   }
+  },
+  "M15": {
+   "heading": {
+    "slot": "M15.heading",
+    "max_chars": 88,
+    "role": "heading",
+    "case": "sentence"
+   },
+   "M15.heading": {
+    "slot": "M15.heading",
+    "max_chars": 88,
+    "role": "heading",
+    "case": "sentence"
+   }
+  },
+  "M16": {
+   "headline": {
+    "slot": "M16.headline",
+    "max_chars": 124,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M16.headline": {
+    "slot": "M16.headline",
+    "max_chars": 124,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M16.body",
+    "max_chars": 348,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M16.body": {
+    "slot": "M16.body",
+    "max_chars": 348,
+    "role": "body",
+    "case": "sentence"
+   }
+  },
+  "M17": {
+   "eyebrow": {
+    "slot": "M17.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M17.eyebrow": {
+    "slot": "M17.eyebrow",
+    "max_chars": 64,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "headline": {
+    "slot": "M17.headline",
+    "max_chars": 184,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M17.headline": {
+    "slot": "M17.headline",
+    "max_chars": 184,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "body": {
+    "slot": "M17.body",
+    "max_chars": 628,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M17.body": {
+    "slot": "M17.body",
+    "max_chars": 628,
+    "role": "body",
+    "case": "sentence"
+   },
+   "signoff": {
+    "slot": "M17.signoff",
+    "max_chars": 68,
+    "role": "script",
+    "case": "as-is"
+   },
+   "M17.signoff": {
+    "slot": "M17.signoff",
+    "max_chars": 68,
+    "role": "script",
+    "case": "as-is"
+   }
+  },
+  "M18": {
+   "quote": {
+    "slot": "M18.quote",
+    "max_chars": 152,
+    "role": "quote",
+    "case": "as-is"
+   },
+   "M18.quote": {
+    "slot": "M18.quote",
+    "max_chars": 152,
+    "role": "quote",
+    "case": "as-is"
+   },
+   "body": {
+    "slot": "M18.body",
+    "max_chars": 272,
+    "role": "body",
+    "case": "as-is"
+   },
+   "M18.body": {
+    "slot": "M18.body",
+    "max_chars": 272,
+    "role": "body",
+    "case": "as-is"
+   },
+   "attribution": {
+    "slot": "M18.attribution",
+    "max_chars": 152,
+    "role": "attribution",
+    "case": "as-is"
+   },
+   "M18.attribution": {
+    "slot": "M18.attribution",
+    "max_chars": 152,
+    "role": "attribution",
+    "case": "as-is"
+   }
+  },
+  "M19": {
+   "eyebrow": {
+    "slot": "M19.eyebrow",
+    "max_chars": 68,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "M19.eyebrow": {
+    "slot": "M19.eyebrow",
+    "max_chars": 68,
+    "role": "eyebrow",
+    "case": "upper"
+   },
+   "headline": {
+    "slot": "M19.headline",
+    "max_chars": 120,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "M19.headline": {
+    "slot": "M19.headline",
+    "max_chars": 120,
+    "role": "headline",
+    "case": "sentence"
+   },
+   "terms": {
+    "slot": "M19.terms",
+    "max_chars": 128,
+    "role": "terms",
+    "case": "sentence"
+   },
+   "M19.terms": {
+    "slot": "M19.terms",
+    "max_chars": 128,
+    "role": "terms",
+    "case": "sentence"
+   }
+  },
+  "M21": {
+   "row1.label": {
+    "slot": "M21.row1.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M21.row1.label": {
+    "slot": "M21.row1.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "row1.body": {
+    "slot": "M21.row1.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M21.row1.body": {
+    "slot": "M21.row1.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "row2.label": {
+    "slot": "M21.row2.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M21.row2.label": {
+    "slot": "M21.row2.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "row2.body": {
+    "slot": "M21.row2.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M21.row2.body": {
+    "slot": "M21.row2.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "row3.label": {
+    "slot": "M21.row3.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M21.row3.label": {
+    "slot": "M21.row3.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "row3.body": {
+    "slot": "M21.row3.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M21.row3.body": {
+    "slot": "M21.row3.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "row4.label": {
+    "slot": "M21.row4.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "M21.row4.label": {
+    "slot": "M21.row4.label",
+    "max_chars": 56,
+    "role": "label",
+    "case": "as-is"
+   },
+   "row4.body": {
+    "slot": "M21.row4.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   },
+   "M21.row4.body": {
+    "slot": "M21.row4.body",
+    "max_chars": 232,
+    "role": "body",
+    "case": "sentence"
+   }
+  },
+  "E01": {
+   "label": {
+    "slot": "E01.label",
+    "max_chars": 32,
+    "role": "label",
+    "case": "upper"
+   },
+   "E01.label": {
+    "slot": "E01.label",
+    "max_chars": 32,
+    "role": "label",
+    "case": "upper"
+   }
+  },
+  "E02": {
+   "label": {
+    "slot": "E02.label",
+    "max_chars": 12,
+    "role": "label",
+    "case": "as-is"
+   },
+   "E02.label": {
+    "slot": "E02.label",
+    "max_chars": 12,
+    "role": "label",
+    "case": "as-is"
+   }
+  },
+  "E06": {
+   "name": {
+    "slot": "E06.name",
+    "max_chars": 64,
+    "role": "name",
+    "case": "as-is"
+   },
+   "E06.name": {
+    "slot": "E06.name",
+    "max_chars": 64,
+    "role": "name",
+    "case": "as-is"
+   },
+   "price": {
+    "slot": "E06.price",
+    "max_chars": 44,
+    "role": "price",
+    "case": "as-is"
+   },
+   "E06.price": {
+    "slot": "E06.price",
+    "max_chars": 44,
+    "role": "price",
+    "case": "as-is"
+   }
+  },
+  "E07": {
+   "label": {
+    "slot": "E07.label",
+    "max_chars": 20,
+    "role": "label",
+    "case": "as-is"
+   },
+   "E07.label": {
+    "slot": "E07.label",
+    "max_chars": 20,
+    "role": "label",
+    "case": "as-is"
+   },
+   "name": {
+    "slot": "E07.name",
+    "max_chars": 40,
+    "role": "name",
+    "case": "as-is"
+   },
+   "E07.name": {
+    "slot": "E07.name",
+    "max_chars": 40,
+    "role": "name",
+    "case": "as-is"
+   }
+  }
+ },
+ "unresolved_fields": [],
+ "underfilled_modules": [],
+ "fields_targeting_unknown_modules": []
+}

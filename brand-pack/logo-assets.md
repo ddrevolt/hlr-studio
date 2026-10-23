@@ -13,7 +13,7 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 3. Strip any full-canvas background rect before import. None of the current SVGs carries one. [observed] 2026-10-18
 4. The star is the one decorative device: at most one per surface. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) from Gate 1 C3
 5. A mark that exists only as PNG is not placed in a master until HLR supplies its vector. The master carries a labelled placeholder in its place. Two marks are never combined by eye into a lockup HLR has not drawn. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) playbook section 4 (real SVG components)
-6. Clear space and minimum sizes: none documented for the current roster; the book's size rules (p13) cover the 2022 HIGH LIGHT logotype. Gap, owner HLR; a proposal comes at Gate 4. [observed absence]
+6. Clear space and minimum sizes: none documented for the current roster; the book's size rules (p13) cover the 2022 HIGH LIGHT logotype. Gap, owner HLR: Gate 4 left it open for HLR's vectors (Review 1, DECISIONS 2026-10-23). [observed absence]
 
 ## Current roster (Gate 1 C3)
 
@@ -70,7 +70,7 @@ p13: the logotype "HIGH LIGHT" in three cuts by size (large formats over 6 inche
 |---|---|---|
 | Vector of the current star | HLR | the star device in every master |
 | Vector of the monogram lockup with the star | HLR | the avatar lockup (the monogram letters are ready) |
-| Clear space and minimum sizes for the current roster | HLR; proposal at Gate 4 | placement rules in elements and modules |
+| Clear space and minimum sizes for the current roster | HLR, with the vectors (Review 1); Gate 4 left it open (DECISIONS 2026-10-23) | placement rules in elements and modules |
 | Whether the stacked lockup is current, and its vector | HLR | nothing in Phase 1 by default |
 | Whether any 2022 archive vector is current | HLR | nothing (out by default) |
 | The shell on packaging | HLR | nothing in Phase 1 |

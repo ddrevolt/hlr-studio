@@ -1,6 +1,12 @@
 # HLR Figma state. Read before any Figma call; write every id here the moment it is created.
 # 2026-10-17: Gate 3 ruled (DECISIONS; outputs/step-4-figma/gate-3-conventions.md). file_key confirmed.
-# 2026-10-23: Foundations build (Chat 5, overnight run on Eddie's go): 88 variables, Layout modes web, social, email; ids below.
+# 2026-10-23: Foundations build (Chat 5, overnight run on Eddie's go): the 88 plan variables, Layout modes web, social, email; Gate 4 added color/semantic/text/on-placeholder (31:40), 89 in all; ids below.
+# 2026-10-23: Chat 6 (overnight, Claude under Eddie's delegation): 8 elements, 21 email modules, 3 templates and the Review 2 demo email; ids under components, templates and staging; slot ids in slotmap.yaml.
+# 2026-10-23: review round 1 fixes (outputs/step-4-figma/review-email-batch-r1.md): M02 gains Space below (property "Space below#73:0", spacer 73:287 bound to space/40) and an IMAGE label (73:285); T01 rebuilt in 2:563's order with new M14 and M13 instances (73:688, 73:691).
+# 2026-10-23: review round 2 fixes (outputs/step-4-figma/review-email-batch-r2.md): M11 rebuilt (copy column 73:284 hugs with a 630 minimum, spacer 89:284, image 420 x 630); CTA labels stamped M11.cta (I48:195;39:107) and M12.cta (I48:205;39:107, I48:215;39:107); M02's IMAGE label on a placeholder chip (73:285); M18 Split inset by space/20; board 7:15 synced to strictness-map.md (its flag frame 30:43 renamed Status flag); PNG 1x and @2x export settings on the demo's seven slices.
+# 2026-10-23: review round 3 and Foundations review fixes: M11's image 400 x 600 with the column minimum at 600; on 00 Foundations an on-placeholder swatch cell (111:104), the marks on warm, deep and night (tiles 111:110, 111:133, 111:156), the stand-in license notice on every board (111:179, 111:182, 111:185, 111:188, 111:191).
+# 2026-10-23: Foundations review round 2 fixes: the descriptions of color/brand/forest (19:5) and component/placeholder/label (19:44) from the figma-plan; Color cell 22:267’s tag line; the five alternate pair sources on Certified pairs (29:136, 29:145, 29:154, 29:181, 29:190); the Strictness map table’s last column set to fill its row (header and 18 rows).
+# 2026-10-23: Foundations review round 3 fixes: color/brand/forest’s description (19:5) from the figma-plan; the five alternate pair cells (29:136, 29:145, 29:154, 29:181, 29:190) renamed to their source lines.
 # 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
 slots:
   namespace: hlr
@@ -9,7 +15,7 @@ slots:
 figma:
   file_key: Gq3yUbLs6MCRM0nOhjvnIW   # Gate 1 (c) chose it; Gate 3 confirmed it, 2026-10-17
   file_name: HLR Library   # renamed by Eddie in Figma, 2026-10-17 (Gate 3 call 1 b; was Highlight-Rituals-Design-Forge)
-  pages: { "00 Foundations": "0:1", "01 Elements": "7:2", "02 Modules": "7:3", "03 Templates": "7:4", "04 Staging": "7:5" }   # 2026-10-17
+  pages: { "00 Foundations": "0:1", "01 Elements": "7:2", "02 Modules": "7:3", "03 Templates": "7:4", "04 Staging": "7:5", "photos": "27:104" }   # 2026-10-17; photos added 2026-10-23 (Eddie pasted the reference Images page: 97 cleared images, DECISIONS 2026-10-23)
   boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; built 2026-10-23 (Chat 5); 00 Foundations moved to the top of the page list
   breakpoints: null
 fonts:
@@ -27,7 +33,7 @@ fonts:
                              #   GT Walsheim Pro Bold, Cannu Regular: no license file; role unknown
 lengths:
   min_flex_multiple: 2       # engine default (probe every body slot at 2x)
-variable_ids:   # 2026-10-23, Chat 5 Foundations build: all 88 plan variables, values set in every mode
+variable_ids:   # 2026-10-23, Chat 5 Foundations build: the 88 plan variables, values set in every mode; Gate 4 added on-placeholder (31:40), 89 in all
   "color/brand/onyx": "VariableID:19:2"
   "color/brand/alabaster": "VariableID:19:3"
   "color/brand/sea-salt": "VariableID:19:4"
@@ -136,6 +142,51 @@ text_style_ids:   # 2026-10-23, Chat 5: the 15-style roster; family, style and s
 components:   # 2026-10-23, Chat 5: marks as SVG components, fills bound to component/mark/fill
   "Marks/Wordmark": "28:28"   # 16 vectors, geometry 01aacb71b78d1a59 (R13 guard)
   "Marks/Monogram": "28:35"   # 3 vectors, geometry 991e3de808779295 (R13 guard)
+  # 2026-10-23, Chat 6: email elements on 01 Elements (board 39:104), stamped E##.role; every element stays on Auto
+  "Elements/E01 CTA": "39:109"                      # set: Surface=Ground 39:105, Surface=Photo 39:106
+  "Elements/E02 Text link": "39:116"                # set: Style=Rule 39:110, Style=Arrow 39:113
+  "Elements/E03 Rule": "39:117"
+  "Elements/E04 Image": "39:131"                    # set: Full bleed 39:119, Mat square 39:122, Mat portrait 39:125, Mat landscape 39:128
+  "Elements/E05 Product image": "39:142"            # set: Crop=Square 39:132, Crop=Portrait 39:135, Crop=On ground 39:138
+  "Elements/E06 Product card": "39:143"
+  "Elements/E07 Product card, labelled": "53:109"
+  "Elements/E08 Star row": "53:119"
+  "Specimen: E01 on photo": "39:152"                # frame, filled with the cleared photo 27:137
+  # 2026-10-23, Chat 6: email modules on 02 Modules, 1200 wide, email canvas set on every root
+  "Email/M01 Header": "40:104"
+  "Email/M02 Hero": "40:122"                # options: Show eyebrow#40:0, Show wordmark#54:4, Show body#54:5, Show script#54:6, Space below#73:0 (spacer 73:287); IMAGE label 73:285; the scrim is the root's second fill
+  "Email/M03 Spotlight": "40:148"                   # set: Image=Right 40:128, Image=Left 40:138
+  "Email/M04 Text block": "40:161"                  # set: Align=Left 40:149, Align=Center 40:155
+  "Email/M05 Image": "41:137"                       # set: Shape=Mat 41:129, Shape=Full bleed 41:133
+  "Email/M06 Product grid": "41:138"
+  "Email/M07 Mantra": "41:181"
+  "Email/M08 Promo bar": "41:184"
+  "Email/M09 Footer": "41:188"
+  "Email/M10 Divider": "41:211"
+  "Email/M11 Edit feature": "48:186"            # CTA label stamped M11.cta (I48:195;39:107); spacer 89:284; image 400 x 600, column minimum 600
+  "Email/M12 Numbered feature": "48:217"            # set: Image=Left 48:197, Image=Right 48:207; CTA labels stamped M12.cta
+  "Email/M13 Product details": "48:218"
+  "Email/M14 CTA": "54:198"
+  "Email/M15 Product grid, three up": "54:201"
+  "Email/M16 Two-column text": "54:276"             # set: Style=Plain 54:268, Style=Inset 54:272
+  "Email/M17 Letter": "54:277"
+  "Email/M18 Review": "54:309"                      # set: Layout=Split 54:282, Layout=Centered 54:299
+  "Email/M19 Offer": "54:310"
+  "Email/M20 Collage": "54:317"
+  "Email/M21 Spec rows": "54:324"
+templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
+  "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09
+  "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767
+  "T03 Product listing": "64:354"     # from 2:683 (H1>M17>M07>M15 2x4>F1)
+staging:     # 2026-10-23, Chat 6: on 04 Staging
+  "Demo email: The made-to-order pendants (R1, provisional)": "63:354"   # outputs/step-4-figma/demo-email/build.md
+photos:      # 2026-10-23: cleared images on the photos page used by the build (fills reuse these hashes in this file only)
+  hero_27_137: "3cf0754f86b885891e1c949e49b47c194695bfc6"
+  band_27_136: "39dbf9fccbe65446d23a81c29ecfcf70610deb75"
+  element_pendant_27_174: "54c5cf67046a3138820eb7d8a2552124097867bc"
+  sacred_pendant_27_210: "caef9c1a99f5718880111942a4ac72207db11a71"
+  genesis_pendant_27_206: "2ec8982aaf5a6dc2131925523130fa1af06d3394"
+  seeker_pendant_27_191: "5ba736b8e4505e46b815894bbbfefeac8c52b8c8"
 collection_ids:                    # 2026-10-17, Gate 3 scaffold: collection id, then each mode's id
   primitives: { id: "VariableCollectionId:7:6", default: "7:0" }
   semantic: { id: "VariableCollectionId:7:7", light: "7:1", warm: "31:0", deep: "31:1", night: "31:2" }   # Gate 4 (2026-10-23, Claude under Eddie's delegation): ground modes named by role, warm Fawn, deep Forest, night Onyx (pattern-review 4.1)

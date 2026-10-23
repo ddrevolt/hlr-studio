@@ -1,0 +1,173 @@
+{
+ "skill": "brief-intake",
+ "format": 1,
+ "slug": "made-to-order-pendants",
+ "brand": "High Light Rituals",
+ "source": {
+  "kind": "file",
+  "path": "outputs/step-4-figma/demo-email/brief-made-to-order-pendants.md",
+  "extracted_with": null,
+  "received_at": "2026-10-23"
+ },
+ "objective": "Introduce four of HLR's made-to-order pendants to the email list and send each reader to a pendant's page.",
+ "audience": "HLR's email subscribers. No segment data is on file.",
+ "message": "Each of these pendants is made to order: it is made after you choose it.",
+ "offer": {
+  "present": false,
+  "text": null,
+  "code_token": null,
+  "allowed_figures": []
+ },
+ "products": [
+  {
+   "name": "The Element Pendant",
+   "sku": "element-pendant",
+   "resolved": true,
+   "figures": [],
+   "role": "hero"
+  },
+  {
+   "name": "The Sacred Pendant",
+   "sku": "sacred-pendant",
+   "resolved": true,
+   "figures": [],
+   "role": "lineup"
+  },
+  {
+   "name": "The Genesis Pendant",
+   "sku": "genesis-pendant",
+   "resolved": true,
+   "figures": [],
+   "role": "lineup"
+  },
+  {
+   "name": "The Seeker Pendant",
+   "sku": "seeker-pendant",
+   "resolved": true,
+   "figures": [],
+   "role": "lineup"
+  }
+ ],
+ "channels": [
+  {
+   "surface": "email",
+   "type": "product_listing",
+   "send_date": "2026-11-05",
+   "deliverables": [
+    {
+     "name": "The made-to-order pendants, 1200 master",
+     "module": "M01 Header, M02 Hero, M16 Two-column text, M06 Product grid (two rows), M05 Image (full bleed), M14 CTA, M09 Footer on 04 Staging: the type's observed sequence (H1>M17>M07>M15>F1, template 2:683) plus the cleared editorial band and a closing CTA",
+     "notes": "One 1200 email master, sent as image slices with alt text on every slice (asset-types.md, Delivery). The schema's breakpoint list covers web widths only (1440, 390), so the email canvas is named here rather than in breakpoints (engine gap G7). The demo date is for Review 2 only."
+    }
+   ]
+  }
+ ],
+ "dates": {
+  "launch": null,
+  "in_market_from": "2026-11-05",
+  "in_market_to": null,
+  "review_by": null
+ },
+ "must_say": [],
+ "guidance": {
+  "vocabulary": [
+   "made to order",
+   "pendant"
+  ],
+  "tone": [
+   "the voice contract as written",
+   "short lines",
+   "one accent word in a headline"
+  ],
+  "notes": [
+   "No figures: the product descriptions are empty, so no material, karat, stone meaning, size or price.",
+   "Intentions only as tradition or intention, never as a promised effect (ledger HLR-M rows).",
+   "No line on how, where or by whom a piece is made beyond made to order: products.json carries only that, and the rest is ledger HLR-O01 until HLR’s signer rules."
+  ]
+ },
+ "never_say": {
+  "brief": [],
+  "pack": [
+   "\\u2014",
+   "\\bhightlight",
+   "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+   "\\bcur(e|es|ed|ing)\\b",
+   "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+   "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+  ],
+  "union": [
+   "\\u2014",
+   "\\bhightlight",
+   "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+   "\\bcur(e|es|ed|ing)\\b",
+   "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+   "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+  ]
+ },
+ "references": {
+  "visual": [
+   "photos page 27:137, HLR Editorial: a hand with two chains and a pendant on a dark ground (hero)",
+   "photos page 27:174, 27:210, 27:206, 27:191: packshots of the four pendants (grid)",
+   "photos page 27:136, HLR Editorial: a pendant held over a table (full-bleed band)",
+   "All cleared by Eddie, DECISIONS 2026-10-23"
+  ],
+  "copy": [
+   "brand-pack/exemplars.json, email lines, for cadence only"
+  ]
+ },
+ "success_metric": "Clicks to the four pendant pages.",
+ "gaps": [
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Audience segments: none on file; asked at Review 1 (Gate 2 package call 17).",
+   "field": "audience"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Success baseline: no click history on file; HLR, Review 1.",
+   "field": "success_metric"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Product descriptions are empty until HLR's Shopify export lands (Brand Review v2 Q5), so no material, karat, size or meaning line is allowed.",
+   "field": "products"
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "The send date is a demo date for Review 2; Eddie sets a real one if the email ships.",
+   "field": "channels[0].send_date"
+  },
+  {
+   "owner": "legal",
+   "severity": "note",
+   "text": "Intention lines follow the ledger's HLR-M framing and carry the footer disclaimer; HLR's C2 ruling may change the posture.",
+   "field": "message"
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "No launch date: the four pendants are already on sale, and the send date is a Review 2 demo date.",
+   "field": "dates.launch"
+  }
+ ],
+ "provenance": {
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "generated_at": "2026-10-23",
+  "route_axes": "brand-pack/route-axes.json (ratified)",
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ },
+ "notes": [
+  "Written by Claude under Eddie's delegation (overnight chat, 2026-10-23) as the Review 2 demo; the pack read is the brand home's brand-pack, staged to the session."
+ ]
+}

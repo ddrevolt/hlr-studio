@@ -1,0 +1,46 @@
+{
+ "matched": [
+  {
+   "query": "element-pendant",
+   "sku": "element-pendant",
+   "name": "The Element Pendant",
+   "category": "Necklace",
+   "description": "",
+   "ingredients": [],
+   "nutrition": null,
+   "badges": []
+  },
+  {
+   "query": "sacred-pendant",
+   "sku": "sacred-pendant",
+   "name": "The Sacred Pendant",
+   "category": "Necklace",
+   "description": "",
+   "ingredients": [],
+   "nutrition": null,
+   "badges": []
+  },
+  {
+   "query": "genesis-pendant",
+   "sku": "genesis-pendant",
+   "name": "The Genesis Pendant",
+   "category": "Necklace",
+   "description": "",
+   "ingredients": [],
+   "nutrition": null,
+   "badges": []
+  },
+  {
+   "query": "seeker-pendant",
+   "sku": "seeker-pendant",
+   "name": "The Seeker Pendant",
+   "category": "Necklace",
+   "description": "",
+   "ingredients": [],
+   "nutrition": null,
+   "badges": []
+  }
+ ],
+ "unmatched": [],
+ "allowed_figures": []
+}

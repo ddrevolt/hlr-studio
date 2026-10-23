@@ -59,16 +59,21 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 
 - [x] **Gate 3** (lane G): Eddie ruled the file and the conventions (2026-10-17, chat 4: `outputs/step-4-figma/gate-3-conventions.md`, DECISIONS); the variables and text styles wait for Pack v0 and Gate 2
 - [x] Foundations through the engine's design-system skill (2026-10-17: the pages, the four empty collections with their modes and the six empty boards exist; ids in `figma.yaml`): pages, variables with every id recorded, text styles on the real faces with the OTFs uploaded, marks as SVG components, the certified-pairs board, the strictness map (2026-10-23, Chat 5: built, with the text styles on the stand-ins under Gate 2 question 2 and the license flag raised; guards R8 and R13; DECISIONS)
+  - 2026-10-23: fresh-context review, round 1 (`outputs/step-4-figma/review-foundations-r1.md`): 2 blockers, 3 should-fix, 3 notes on the boards and descriptions, all fixed; round 2 (`review-foundations-r2.md`): 0 blockers, 2 should-fix, 5 notes, all fixed, the guards tightened (`guards/tests/run_all.sh`); round 3, the last (`review-foundations-r3.md`): 0 blockers, 1 should-fix, 6 notes; closed with F3-01’s approach (the closed-gate guard) and F3-04 (rule 4’s wording) on Eddie’s decision sheet and F3-05 to F3-07 logged for Chat 6’s next close
 - [x] **Gate 4**: Eddie rules on the ground roster and batch scope (CTA shape ruled at Gate 1, C6) (2026-10-23: decided by Claude under Eddie's delegation, for Eddie to confirm: grounds light, warm, deep and night; the placeholder label ink; the strictness map adopted; email first; DECISIONS)
 - [ ] Before the first paid build: a person confirms the 9:16 keep-clear bands and the copy limits in Meta's Ads Guide, and `placement-specs.json`'s `_verified` moves (DECISIONS 2026-10-18)
-- [ ] Elements and the first module batch through asset-production (email at 1200px with slice-sized type; social, paid and web at the formats the review found), slot-stamped `hlr`, flex-probed, screenshot-checked
-- [ ] The client's most-used templates rebuilt as pure instances
-- [ ] `tokens.css` and Tailwind tokens exported from `tokens.json`
-- [ ] Engine gaps logged where a skill falls short for HLR (no workarounds)
+- [x] Elements and the first module batch through asset-production, email at 1200px with slice-sized type, slot-stamped `hlr`, flex-probed, screenshot-checked (2026-10-23, Chat 6 overnight under Eddie's delegation, for Eddie to confirm: 8 elements and 21 modules after the comprehensiveness pass over HLR's live sends; structure lint, flex at 2x or better, canvas and face checks; `slotmap.yaml`, `module-library.json` and `seam-map.json` in the pack; DECISIONS)
+  - 2026-10-23: fresh-context review, three rounds (`outputs/step-4-figma/review-email-batch-r1.md` to `-r3.md`): 2 blockers, 10 should-fix and 23 notes found in all, every blocker and should-fix fixed and verified; closed with no finding open
+- [ ] The next module batches: social, paid and web at the formats the review found, slot-stamped `hlr`, flex-probed, screenshot-checked (organic social next; paid and web after Review 2's taxonomy ruling)
+- [x] The first email templates rebuilt as pure instances: T01 Product Spotlight, T02 Editorial send, T03 Product listing (2026-10-23, Chat 6)
+- [ ] The rest of the client's most-used templates rebuilt as pure instances: Sale, Testimonials, Moodboard, Welcome 1 to 5, the monthly energy medicine send and the flows
+- [x] `tokens.css` and Tailwind tokens exported from `tokens.json` (2026-10-23: `brand-pack/web/`)
+- [x] Engine gaps logged where a skill falls short for HLR (no workarounds) (2026-10-23: G1 to G9 in `outputs/step-4-figma/engine-gaps-chat6.md`, for lane H's 0.5.4)
 
 ## Step 5. Forge proof
 
 - [ ] One real HLR brief (or one Eddie supplies) through the engine for email and social: estimate before spend, measured cost after
+  - 2026-10-23: a rehearsal on a brief Claude wrote under Eddie's delegation (the made-to-order pendants, email only, cost not measured) ran brief-intake, email-copy and the build end to end (`outputs/step-4-figma/demo-email/`); the real-brief run stays open
 - [ ] Eddie's blind keep or cut sheet marked; the result in LEARNINGS.md
 
 ## Process

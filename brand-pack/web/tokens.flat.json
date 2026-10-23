@@ -1,0 +1,657 @@
+{
+ "color.brand.onyx": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.brand.alabaster": {
+  "value": "#fbf7ef",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.brand.sea-salt": {
+  "value": "#e0e3e5",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.brand.forest": {
+  "value": "#17280a",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.brand.fawn": {
+  "value": "#beada3",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.white": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "color.extended.scrim": {
+  "value": "#00000080",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "color.extended.neutral-50": {
+  "value": "#f4efe9",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-100": {
+  "value": "#ece8e3",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-200": {
+  "value": "#dcd8d4",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-300": {
+  "value": "#c5c2be",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-400": {
+  "value": "#aca9a5",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-500": {
+  "value": "#918f8b",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-600": {
+  "value": "#797774",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-700": {
+  "value": "#63615f",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-800": {
+  "value": "#514f4e",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.extended.neutral-900": {
+  "value": "#454342",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.semantic.background.default": {
+  "value": "#fbf7ef",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#fbf7ef",
+   "warm": "#beada3",
+   "deep": "#17280a",
+   "night": "#353535"
+  }
+ },
+ "color.semantic.background.email-page": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color",
+  "modes": {
+   "light": "#ffffff",
+   "warm": "#beada3",
+   "deep": "#17280a",
+   "night": "#353535"
+  }
+ },
+ "color.semantic.background.subtle": {
+  "value": "#ece8e3",
+  "provenance": "observed",
+  "type": "color",
+  "modes": {
+   "light": "#ece8e3",
+   "warm": "#beada3",
+   "deep": "#17280a",
+   "night": "#353535"
+  }
+ },
+ "color.semantic.background.placeholder": {
+  "value": "#dcd8d4",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "color.semantic.background.scrim": {
+  "value": "#00000080",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "color.semantic.text.primary": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "color.semantic.text.muted": {
+  "value": "#63615f",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#63615f",
+   "warm": "#353535",
+   "deep": "#c5c2be",
+   "night": "#c5c2be"
+  }
+ },
+ "color.semantic.text.on-photo": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "color.semantic.text.on-placeholder": {
+  "value": "#353535",
+  "provenance": "derived",
+  "type": "color"
+ },
+ "color.semantic.interactive.cta": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "color.semantic.interactive.link": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.cta.stroke": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.cta.label": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.cta.stroke-on-photo": {
+  "value": "#ffffff",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "component.cta.label-on-photo": {
+  "value": "#ffffff",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "component.cta.weight": {
+  "value": "1px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "1px",
+   "social": "2px",
+   "email": "2px"
+  }
+ },
+ "component.link.label": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.link.rule": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.rule.stroke": {
+  "value": "#353535",
+  "provenance": "observed",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.rule.weight": {
+  "value": "1px",
+  "provenance": "observed",
+  "type": "dimension"
+ },
+ "component.callout.leader": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.callout.label": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.callout.leader-on-photo": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "component.mark.fill": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color",
+  "modes": {
+   "light": "#353535",
+   "warm": "#353535",
+   "deep": "#fbf7ef",
+   "night": "#fbf7ef"
+  }
+ },
+ "component.mark.fill-on-photo": {
+  "value": "#ffffff",
+  "provenance": "observed",
+  "type": "color"
+ },
+ "component.placeholder.fill": {
+  "value": "#dcd8d4",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "component.placeholder.label": {
+  "value": "#353535",
+  "provenance": "documented",
+  "type": "color"
+ },
+ "font.family.display": {
+  "value": "Saol Display",
+  "provenance": "documented",
+  "type": "fontFamily"
+ },
+ "font.family.title": {
+  "value": "Saol Standard",
+  "provenance": "documented",
+  "type": "fontFamily"
+ },
+ "font.family.body": {
+  "value": "Trade Gothic LT Std",
+  "provenance": "documented",
+  "type": "fontFamily"
+ },
+ "font.family.script": {
+  "value": "Homemade Apple",
+  "provenance": "observed",
+  "type": "fontFamily"
+ },
+ "font.style.display": {
+  "value": "Light",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.display-accent": {
+  "value": "Light Italic",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.headline": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.headline-accent": {
+  "value": "Regular Italic",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.quote": {
+  "value": "Light",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.title": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.link": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.price": {
+  "value": "Medium",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.body": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.eyebrow": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.label": {
+  "value": "Bold",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.cta": {
+  "value": "Bold",
+  "provenance": "observed",
+  "type": null
+ },
+ "font.style.fine": {
+  "value": "Regular",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.style.script": {
+  "value": "Regular",
+  "provenance": "observed",
+  "type": null
+ },
+ "font.weight.light": {
+  "value": 300,
+  "provenance": "observed",
+  "type": "fontWeight"
+ },
+ "font.weight.regular": {
+  "value": 400,
+  "provenance": "observed",
+  "type": "fontWeight"
+ },
+ "font.weight.medium": {
+  "value": 500,
+  "provenance": "observed",
+  "type": "fontWeight"
+ },
+ "font.weight.bold": {
+  "value": 700,
+  "provenance": "observed",
+  "type": "fontWeight"
+ },
+ "font.size.label": {
+  "value": "12px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "12px",
+   "social": "32px",
+   "email": "35px"
+  }
+ },
+ "font.size.body": {
+  "value": "14px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "14px",
+   "social": "40px",
+   "email": "45px"
+  }
+ },
+ "font.size.title": {
+  "value": "19px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "19px",
+   "social": "54px",
+   "email": "60px"
+  }
+ },
+ "font.size.headline": {
+  "value": "25px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "25px",
+   "social": "72px",
+   "email": "80px"
+  }
+ },
+ "font.size.display-s": {
+  "value": "33px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "33px",
+   "social": "96px",
+   "email": "106px"
+  }
+ },
+ "font.size.display-m": {
+  "value": "44px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "44px",
+   "social": "127px",
+   "email": "142px"
+  }
+ },
+ "font.size.display-l": {
+  "value": "59px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "59px",
+   "social": "170px",
+   "email": "189px"
+  }
+ },
+ "font.size.display-xl": {
+  "value": "79px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "79px",
+   "social": "226px",
+   "email": "251px"
+  }
+ },
+ "font.leading.display": {
+  "value": 1,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.headline": {
+  "value": 1.1,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.quote": {
+  "value": 1.29,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.title": {
+  "value": 1.2,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.link": {
+  "value": 1.44,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.body": {
+  "value": 1.47,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.caps": {
+  "value": 1.4,
+  "provenance": "documented",
+  "type": "number"
+ },
+ "font.leading.script": {
+  "value": 1.4,
+  "provenance": "observed",
+  "type": "number"
+ },
+ "font.tracking.none": {
+  "value": "0em",
+  "provenance": "documented",
+  "type": null
+ },
+ "font.tracking.caps": {
+  "value": "0.2em",
+  "provenance": "documented",
+  "type": null
+ },
+ "space.0": {
+  "value": "0px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.1": {
+  "value": "4px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.2": {
+  "value": "8px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.3": {
+  "value": "12px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.4": {
+  "value": "16px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.5": {
+  "value": "20px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.6": {
+  "value": "24px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.8": {
+  "value": "32px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.10": {
+  "value": "40px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.12": {
+  "value": "48px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.16": {
+  "value": "64px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.20": {
+  "value": "80px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.24": {
+  "value": "96px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.30": {
+  "value": "120px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.40": {
+  "value": "160px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "space.email-margin": {
+  "value": "80px",
+  "provenance": "observed",
+  "type": "dimension"
+ },
+ "space.social-margin": {
+  "value": "64px",
+  "provenance": "documented",
+  "type": "dimension"
+ },
+ "radius.none": {
+  "value": "0px",
+  "provenance": "observed",
+  "type": "dimension"
+ },
+ "stroke.cta": {
+  "value": "1px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "1px",
+   "social": "2px",
+   "email": "2px"
+  }
+ }
+}
