@@ -57,7 +57,7 @@
   "E01": "label: the CTA, caps, one to three words.",
   "E02": "label: a short link label; caps in the Rule style, sentence case in the Arrow style.",
   "E06": "name: the product display name from products.json; price: only from products.json, hidden by default.",
-  "E07": "label: one accent word (a month, a stone); name: a short form of the product, the stone or the tail after in of the products.json display name (The January Birthstone Protection Amulet in Garnet reads Garnet), never invented; the full name only where it fits two lines (the style sets caps); a single word wider than the 320 card breaks inside the word (Chrysocolla, Dumortierite, Phosphosiderite), so flag those cards for a hand setting.",
+  "E07": "label: one accent word (a month, a stone); name: a short form of the product, the stone or the tail after in of the products.json display name (The January Birthstone Protection Amulet in Garnet reads Garnet), never invented; the full name only where it fits two lines (the style sets caps); a single word wider than the 320 card breaks inside the word (Phosphosiderite does; Rhodochrosite would), so flag those cards for a hand setting.",
   "E08": "No copy: five stars, only beside a sourced review."
  },
  "MOD_GEN": {},

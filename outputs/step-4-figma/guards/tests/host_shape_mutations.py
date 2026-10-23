@@ -18,7 +18,7 @@ cases = {
  'm2 M11 shape without its 16': shape('M11', json.loads(ml0)['MOD_SHAPE']['M11'].replace('16 characters at most', 'short')) + (1,),
  'm3 M15 shape names E07.name with the full-name rule and the words "short form" negated': shape('M15', m15.split('the short form')[0] + 'the full product name (E07.name, never a short form; set in caps by the style) and a caps link (E02.label, 12 characters at most).') + (1,),
  'm4 M15 shape gives the full-name rule without writing the slot id': shape('M15', m15.split('the short form')[0] + 'the product display name from products.json as written, set in caps by the style, and a caps link (E02.label, 12 characters at most).') + (1,),
- 'm5 slot map E02.label budget 12 -> 10, M15 shape still says 12': slot('max_chars: 12, budget_from: "M06"', 'max_chars: 10, budget_from: "M06"') + (1,),
+ 'm5 slot map E02.label budget 12 -> 10, M15 shape still says 12': (ml0, re.sub(r'(id: E02\.label, [^}]*max_chars: )12', r'\g<1>10', sm0), 1),
  'm6 slot map E07.name note back to the full display name': slot('note: "a short form: the stone,', 'note: "the full display name: the stone,') + (1,),
  'm7 slot map M12.cta 16 -> 14, M12 shape still says 16': (ml0, re.sub(r'(id: M12\.cta, [^}]*max_chars: )16', r'\g<1>14', sm0), 1),
  'm8 E07 own shape back to the full display name': shape('E07', 'label: one accent word (a month, a stone); name: the product display name from products.json, as written (the style sets caps).') + (1,),

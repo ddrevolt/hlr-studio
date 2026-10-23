@@ -34,6 +34,10 @@ One dated entry per chat, newest first.
 - A phrase rule for promises is a heuristic: round 3 broke the closed-gate rule 20 ways in 22 lines. Where a promise lives in a table (a register’s step column), check the structure, not the prose.
 - Review rounds on guard code cost as much as rounds on the deliverable (Foundations: about 1.24M tokens over three rounds) and keep finding near variants. Build a guard for the class a round names, record its known limits in the R row, and stop.
 - The bridge to the Mac dropped at about 06:46 UTC, before the night’s last sync, so three review rounds of records waited in the session: sync and commit at each round’s close, not once at the end.
+- The real faces barely moved the budgets: one slot of 100 changed, and it grew, because Trade Gothic sets narrower than Inter and every module hugs its copy. Building on stand-ins while the faces could not load was sound.
+- Fonts loaded to the team Figma become loadable on the build path at once: check `listAvailableFontsAsync` before treating a face as desktop-only.
+- A second `device_commit_files` of the same staged path can resend the first upload, and PNGs arrive re-encoded: stage a changed file under a new name and compare md5 sums on the Mac after every commit.
+- An inline `//` comment pasted into a one-line function swallowed the rest of `scrolls()` in `checklib.js`: write comments on their own lines (or as `/* */` in a one-liner) and parse a probe library before a run.
 - A scan beats a list: round 2 named six pack lines still promising Gate 4’s work, and the scan built for them found five more. Fix a class with a scan, then let the scan find the instances.
 - A guard that hashes a prefix, a first tag word or only a pair’s names cannot see a change past what it hashes (F2-02: an exemplar changed after character 40, a ratio or a role, "[derived], ratified"). Hash the whole of what the board shows, and keep the cases that must fail beside the guard (`guards/tests/run_all.sh`).
 - A token description edit is a Figma edit too: the engine’s figma-plan is the source of the variables’s descriptions, so 19:5 and 19:44 changed in the same release as tokens.json.

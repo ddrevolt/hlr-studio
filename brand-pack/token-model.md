@@ -109,8 +109,8 @@ Roster (Gate 3 call 7 and Gate 2 question 1): 15 text styles named by role and s
 | Trade Gothic LT Std (Regular, Bold, Light, Light Oblique, Oblique) | `Desktop/*.otf` | no license file | unconfirmed; owner HLR |
 | Trade Gothic LT W01 (web kit) | `Web/Trade Gothic Roman + Bold/` | Monotype Webfonts Pay-As-You-Go EULA: sites the licensee owns, no email | web only |
 | Homemade Apple | `homemade-apple/` | Apache 2.0, LICENSE on disk | cleared |
-| Instrument Serif (Figma build stand-in) | `instrument-serif/` | SIL OFL 1.1, LICENSE on disk | cleared |
-| Inter (Figma build stand-in) | none on disk | no license file on disk | confirm before any use outside the Figma build |
+| Instrument Serif (the Figma build’s stand-in until 2026-10-23) | `instrument-serif/` | SIL OFL 1.1, LICENSE on disk | cleared |
+| Inter (the Figma build’s stand-in until 2026-10-23) | none on disk | no license file on disk | confirm before any use outside the Figma build |
 
 Open with HLR: whether the desktop licenses cover type rendered into email image slices and social and paid art.
 
@@ -140,7 +140,7 @@ Status: open, [observed], [derived] proposal, ruled, conflict. Owner is who clos
 | T7 | Type ramp | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 3) | section 3 | Eddie | Gate 2 |
 | T8 | Ramp per canvas | ruled (Eddie, 2026-10-18, Gate 2 question 1): canvas modes on Layout, `web`, `social`, `email`; 15 styles | `font.size.<step>` with a value per canvas mode; the engine support is 0.5.3 | lane H | 0.5.3 |
 | T9 | Leading and tracking in Figma | ruled (Eddie, 2026-10-18, Gate 2 question 3): set on each style, unbound, in percent | Figma binds them only as pixels | none | |
-| T10 | Stand-in styles: Instrument Serif has no Light, Light Italic, Regular Italic or Medium | ruled (Eddie, 2026-10-18, Gate 2 question 2) | `figma.yaml` `fonts.build_stand_in_styles`; every face the build loads exists | none | |
+| T10 | Stand-in styles: Instrument Serif has no Light, Light Italic, Regular Italic or Medium | closed: moot since 2026-10-23, the library is set in the real faces (ruled before by Eddie, 2026-10-18, Gate 2 question 2) | `figma.yaml` `fonts.build_stand_in_styles`; every face the build loads exists | none | |
 | T11 | Live-text email sizes (body 28, small 22) | conditional (C8) | no tokens until HLR says the ESP sends live text | HLR | Review 1 |
 | T12 | Case and text-style properties a variable cannot bind | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 5) | the roster in `$extensions.com.hlr.text_styles` | Chat 5 | Step 4 |
 | L1 | Space scale | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): 4-based, Tailwind numbering | normalises observed 10, 15, 50 | Eddie | Gate 2 |

@@ -68,7 +68,7 @@ T01 Product Spotlight (from 2:563, in its order: header, spotlight, text, image,
 
 ## 6. Questions for HLR, ranked by what they block
 
-1. Font licenses for Saol Display, Saol Standard and Trade Gothic LT Std (Brand Review v2 Q2): nothing ships until they are confirmed; the library runs on stand-ins.
+1. Font licenses for Saol Display, Saol Standard and Trade Gothic LT Std (Brand Review v2 Q2): nothing ships until they are confirmed; the library is set in the real faces since 2026-10-23, with the license flag raised on every board.
 2. The claims signer (Q1, C2): every line that touches health, origin, sourcing or making waits on a ruling; the demo stays inside made to order for that reason.
 3. The Shopify products export (Q5): product descriptions, metals and stones; until it lands, the product modules carry names and images only (M13 and M21 have nothing to say yet).
 4. The star and lockup vectors (Q3): the footer star and the lockup header wait for them.

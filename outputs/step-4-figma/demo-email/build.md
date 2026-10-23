@@ -54,5 +54,5 @@ Each card in slice 4 links to its own product page; the ESP's image map or four 
 ## Checks
 
 - Library checks behind it: every module and element passes structure lint, flex at 2x or better, canvas and face checks (`outputs/step-4-figma/` check notes; slot map regenerated 2026-10-23).
-- The build stand-ins render the accent in Instrument Serif Italic; server screenshots show a fallback sans for that one face (a plain, unbound Instrument Serif Italic node renders the same way), so the italic is judged in the Figma app, not in a screenshot.
-- Standing flags: fonts unlicensed (stand-ins in the file); the ledger is a test seed, so no line is cleared for production; the four-point star in the footer waits for its vector (HLR).
+- Set in the real faces since 2026-10-23 (Saol Display Light with its Light Italic accent, Saol Standard, Trade Gothic LT Std); the preview is a server screenshot of 63:354 on those faces. On the stand-ins the server screenshots showed a fallback sans for the italic accent; on Saol it renders.
+- Standing flags: fonts not yet licensed (the real faces are in the file; HLR confirms the licenses, Brand Review v2 Q2); the ledger is a test seed, so no line is cleared for production; the four-point star in the footer waits for its vector (HLR).

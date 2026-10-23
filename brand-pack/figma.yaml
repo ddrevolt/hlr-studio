@@ -7,6 +7,7 @@
 # 2026-10-23: review round 3 and Foundations review fixes: M11's image 400 x 600 with the column minimum at 600; on 00 Foundations an on-placeholder swatch cell (111:104), the marks on warm, deep and night (tiles 111:110, 111:133, 111:156), the stand-in license notice on every board (111:179, 111:182, 111:185, 111:188, 111:191).
 # 2026-10-23: Foundations review round 2 fixes: the descriptions of color/brand/forest (19:5) and component/placeholder/label (19:44) from the figma-plan; Color cell 22:267’s tag line; the five alternate pair sources on Certified pairs (29:136, 29:145, 29:154, 29:181, 29:190); the Strictness map table’s last column set to fill its row (header and 18 rows).
 # 2026-10-23: Foundations review round 3 fixes: color/brand/forest’s description (19:5) from the figma-plan; the five alternate pair cells (29:136, 29:145, 29:154, 29:181, 29:190) renamed to their source lines.
+# 2026-10-23: the library switched to HLR’s real faces at Eddie’s request (fonts.switched_to_real_faces); the six license notices on 00 Foundations renamed License notice and reworded, the Type board’s meta lines and 14 text style descriptions updated; the license flag stays raised.
 # 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
 slots:
   namespace: hlr
@@ -19,12 +20,15 @@ figma:
   boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; built 2026-10-23 (Chat 5); 00 Foundations moved to the top of the page list
   breakpoints: null
 fonts:
-  build_stand_ins: { "Saol Display": "Instrument Serif", "Saol Standard": "Instrument Serif", "Trade Gothic LT Std": "Inter" }   # Gate 3 call 7, path 1: the build sets these; Eddie switches the family variables to the real faces in the desktop app
-  build_stand_in_styles:     # Gate 2 question 2 (Eddie, 2026-10-18): per stand-in family, real style -> stand-in style; Inter carries Trade Gothic's Regular and Bold
-    "Instrument Serif": { "Light": "Regular", "Light Italic": "Italic", "Regular Italic": "Italic", "Medium": "Regular" }
+  build_stand_ins: {}        # none since 2026-10-23: the build path loads the real faces (Eddie loaded them to the team Figma), and the library was switched to them. Before that (Gate 3 call 7, path 1) the build set Instrument Serif for Saol Display and Saol Standard and Inter for Trade Gothic LT Std
+  build_stand_in_styles: {}  # none since 2026-10-23. Before: Instrument Serif carried Saol's Light, Light Italic, Regular Italic and Medium as Regular and Italic (Gate 2 question 2, Eddie, 2026-10-18)
+  switched_to_real_faces: "2026-10-23: 8 variables, 24 values (font/family/display, title, body; font/style/display, display-accent, headline-accent, quote, price) in all three Layout modes; every slot re-measured on the real faces (slotmap.yaml measured_at)"
   licensed: false            # raised until every production face is confirmed. Evidence, 2026-10-17:
                              #   Build path (Figma connector, 2026-10-17): Homemade Apple and Instrument Serif load; Saol and
-                             #   Trade Gothic do not (installed on the Mac only; a Pro team cannot host fonts)
+                             #   Trade Gothic do not (installed on the Mac only)
+                             #   Build path, 2026-10-23: Saol Display (Light, Light Italic, Regular, Regular Italic), Saol
+                             #   Standard (Regular, Regular Italic, Medium) and Trade Gothic LT Std (Regular, Bold, Light,
+                             #   Oblique, Light Oblique) load, after Eddie loaded them to the team Figma
                              #   Instrument Serif: SIL OFL 1.1 (LICENSE in instrument-serif.zip): cleared
                              #   Homemade Apple: Apache 2.0 (LICENSE in homemade-apple.zip): cleared
                              #   Saol Display, Saol Standard: no license file

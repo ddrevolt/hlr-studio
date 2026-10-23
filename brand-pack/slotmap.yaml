@@ -7,13 +7,14 @@
 # root (every variant of a set), and elements stay on Auto.
 # Budgets: an email module hugs its height, so its copy never clips. typical_chars is the drawn copy, flex_verified
 # the multiple the flex probe proved at 1200 (2x, 3x, 4x; each slot alone and all slots together; no text clipped,
-# none colliding with a painted neighbour, none overflowing a fixed box; the tightest variant; re-probed after review
-# round 2), and max_chars = typical_chars x flex_verified, the proven length that build_seam_map.py and
+# none colliding with a painted neighbour, none overflowing a fixed box; the tightest variant; re-probed on the real
+# faces), and max_chars = typical_chars x flex_verified, the proven length that build_seam_map.py and
 # copy_lint.js read. It is not a design ceiling (slot contract: no ceilings); the gap between the two contracts is
 # logged for lane H (engine gap G3).
 # Optional slots (option: ...) are hidden by default and were measured on an instance with the option switched on.
-# Measured on the build stand-ins (Instrument Serif for Saol, Inter for Trade Gothic; license flag raised): every
-# budget is provisional until re-measured on the real faces in the desktop app.
+# Measured on the real faces (Saol Display, Saol Standard, Trade Gothic LT Std, Homemade Apple), 2026-10-23, after
+# Eddie loaded them to the team Figma; the stand-in measure (Instrument Serif, Inter) differed in one slot only
+# (M06 E02.label, 3x then, 4x now). The license flag stays raised until HLR confirms the licenses.
 # case, house style (Gate 2 call 2 a, Eddie, 2026-10-18): headlines and lines in sentence case; eyebrows and CTA
 # labels in caps; names, scripts, nav labels, labels, numbered headlines, reviews and the disclaimer as written
 # (as-is). E02.label and E07.name are as-is because their styles set the caps.
@@ -35,7 +36,7 @@ meta:
   elements: 8
   status: built
   built: "2026-10-23"
-  measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+  measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
   breakpoints: ["email"]
   stamp_readback: "ok: instance children carry the stamps (probed on an M04 Align=Left instance and on option-on M02 and M09 instances, 2026-10-23)"
 
@@ -47,7 +48,7 @@ modules:
     status: built
     node_id: "40:104"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     stamps_no_text: true
     reason: "the wordmark is a placed mark (logo-assets.md); no copy slot"
   M02:
@@ -57,14 +58,14 @@ modules:
     status: built
     node_id: "40:122"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
     options: "Show eyebrow (on), Show wordmark (off), Show body (off), Show script (off), Space below (off; space/40 under the CTA for a photo whose subject sits low); the scrim is the root's second fill (background/scrim at 50 percent, on in the master), the designer's call per photo"
     slots:
       - { id: M02.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
       - { id: M02.headline, role: headline, case: sentence, typical_chars: 35, flex_verified: ">=4x", max_chars: 140 }
-      - { id: M02.body, role: body, case: sentence, typical_chars: 71, flex_verified: ">=4x", max_chars: 284, option: "Show body, off by default", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
-      - { id: M02.script, role: script, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, option: "Show script, off by default", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+      - { id: M02.body, role: body, case: sentence, typical_chars: 71, flex_verified: ">=4x", max_chars: 284, option: "Show body, off by default", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
+      - { id: M02.script, role: script, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, option: "Show script, off by default", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
   M03:
     name: "Spotlight"
     family: email
@@ -73,7 +74,7 @@ modules:
     node_id: "40:148"
     variant_ids: ["40:128", "40:138"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { link: E02.label, image: E05 }
     variants: ["Image=Right", "Image=Left"]
     slots:
@@ -87,7 +88,7 @@ modules:
     node_id: "40:161"
     variant_ids: ["40:149", "40:155"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
     options: "Show CTA (off)"
     variants: ["Align=Left", "Align=Center"]
@@ -102,7 +103,7 @@ modules:
     node_id: "41:137"
     variant_ids: ["41:129", "41:133"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { image: E04 }
     variants: ["Shape=Mat", "Shape=Full bleed"]
     stamps_no_text: true
@@ -114,7 +115,7 @@ modules:
     status: built
     node_id: "41:138"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { card: E06 }
     repeats: { card: E06, count: 4 }
     options: "Show heading (on), Second row (on)"
@@ -127,7 +128,7 @@ modules:
     status: built
     node_id: "41:181"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     options: "Show script (on)"
     slots:
       - { id: M07.mantra, role: mantra, case: sentence, typical_chars: 37, flex_verified: ">=4x", max_chars: 148 }
@@ -139,7 +140,7 @@ modules:
     status: built
     node_id: "41:184"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     slots:
       - { id: M08.line, role: line, case: sentence, typical_chars: 31, flex_verified: ">=4x", max_chars: 124 }
   M09:
@@ -149,14 +150,14 @@ modules:
     status: built
     node_id: "41:188"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     options: "Show legal line (off)"
     slots:
       - { id: M09.nav1.label, role: label, case: as-is, typical_chars: 8, flex_verified: ">=4x", max_chars: 32, repeat: true, in: "nav" }
       - { id: M09.nav2.label, role: label, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, repeat: true, in: "nav" }
       - { id: M09.nav3.label, role: label, case: as-is, typical_chars: 9, flex_verified: ">=4x", max_chars: 36, repeat: true, in: "nav" }
       - { id: M09.disclaimer, role: disclaimer, case: as-is, typical_chars: 216, flex_verified: ">=4x", max_chars: 864, verbatim: true }
-      - { id: M09.legal, role: legal, case: as-is, typical_chars: 31, flex_verified: ">=4x", max_chars: 124, option: "Show legal line, off by default; live-text sends only, never in a slice", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+      - { id: M09.legal, role: legal, case: as-is, typical_chars: 31, flex_verified: ">=4x", max_chars: 124, option: "Show legal line, off by default; live-text sends only, never in a slice", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
   M10:
     name: "Divider"
     family: email
@@ -164,7 +165,7 @@ modules:
     status: built
     node_id: "41:211"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { rule: E03 }
     stamps_no_text: true
     reason: "a rule; no copy slot"
@@ -175,7 +176,7 @@ modules:
     status: built
     node_id: "48:186"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01, image: E05 }
     slots:
       - { id: M11.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
@@ -190,7 +191,7 @@ modules:
     node_id: "48:217"
     variant_ids: ["48:197", "48:207"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01, image: E05 }
     variants: ["Image=Left", "Image=Right"]
     slots:
@@ -204,7 +205,7 @@ modules:
     status: built
     node_id: "48:218"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label, image: E04 }
     options: "Show image (on)"
     slots:
@@ -217,7 +218,7 @@ modules:
     status: built
     node_id: "54:198"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
     stamps_no_text: true
     reason: "the only copy is the composed CTA (E01.label), stamped on the element"
@@ -228,7 +229,7 @@ modules:
     status: built
     node_id: "54:201"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { card: E07 }
     repeats: { card: E07, count: 6 }
     options: "Show heading (on), Second row (on)"
@@ -242,7 +243,7 @@ modules:
     node_id: "54:276"
     variant_ids: ["54:268", "54:272"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Style=Plain", "Style=Inset"]
     slots:
       - { id: M16.headline, role: headline, case: sentence, typical_chars: 31, flex_verified: ">=4x", max_chars: 124 }
@@ -254,7 +255,7 @@ modules:
     status: built
     node_id: "54:277"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     options: "Show eyebrow (on)"
     slots:
       - { id: M17.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
@@ -269,7 +270,7 @@ modules:
     node_id: "54:309"
     variant_ids: ["54:282", "54:299"]
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { stars: E08, link: E02.label, image: E05 }
     variants: ["Layout=Split", "Layout=Centered"]
     slots:
@@ -283,7 +284,7 @@ modules:
     status: built
     node_id: "54:310"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
     slots:
       - { id: M19.eyebrow, role: eyebrow, case: upper, typical_chars: 17, flex_verified: ">=4x", max_chars: 68 }
@@ -296,7 +297,7 @@ modules:
     status: built
     node_id: "54:317"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { image: E05 }
     repeats: { image: E05, count: 2 }
     stamps_no_text: true
@@ -308,7 +309,7 @@ modules:
     status: built
     node_id: "54:324"
     canvas: email
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { image: E05 }
     repeats: { row: M21.row, count: 4 }
     options: "Rows 3 and 4 (on)"
@@ -328,7 +329,7 @@ modules:
     status: built
     node_id: "39:109"
     variant_ids: ["39:105", "39:106"]
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Surface=Ground", "Surface=Photo"]
     slots:
       - { id: E01.label, role: label, case: upper, typical_chars: 8, flex_verified: ">=4x", max_chars: 32 }
@@ -339,17 +340,17 @@ modules:
     status: built
     node_id: "39:116"
     variant_ids: ["39:110", "39:113"]
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Style=Rule", "Style=Arrow"]
     slots:
-      - { id: E02.label, role: label, case: as-is, typical_chars: 4, flex_verified: ">=3x", max_chars: 12, budget_from: "M06" }
+      - { id: E02.label, role: label, case: as-is, typical_chars: 4, flex_verified: ">=3x", max_chars: 12, budget_from: "M15" }
   E03:
     name: "Rule"
     family: element
     use_when: "The hairline divider."
     status: built
     node_id: "39:117"
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     stamps_no_text: true
     reason: "a rule"
   E04:
@@ -359,7 +360,7 @@ modules:
     status: built
     node_id: "39:131"
     variant_ids: ["39:119", "39:122", "39:125", "39:128"]
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Shape=Full bleed", "Shape=Mat square", "Shape=Mat portrait", "Shape=Mat landscape"]
     stamps_no_text: true
     reason: "an image well"
@@ -370,7 +371,7 @@ modules:
     status: built
     node_id: "39:142"
     variant_ids: ["39:132", "39:135", "39:138"]
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Crop=Square", "Crop=Portrait", "Crop=On ground"]
     stamps_no_text: true
     reason: "an image well"
@@ -380,28 +381,28 @@ modules:
     use_when: "Product image (E05 Portrait), name, optional price (Show price; its placeholder is the merge token {{ price }}), text link (E02 Rule). Names and prices from products.json only."
     status: built
     node_id: "39:143"
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { link: E02.label, image: E05 }
     slots:
       - { id: E06.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
-      - { id: E06.price, role: price, case: as-is, typical_chars: 11, flex_verified: ">=4x", max_chars: 44, option: "Show price, off by default; the placeholder is the merge token {{ price }}", measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email · on an instance with the option on" }
+      - { id: E06.price, role: price, case: as-is, typical_chars: 11, flex_verified: ">=4x", max_chars: 44, option: "Show price, off by default; the placeholder is the merge token {{ price }}", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
   E07:
     name: "Product card, labelled"
     family: element
     use_when: "The three-up card (2:7443): a square product image (E05), one italic label word, the caps name, the SHOP link (E02 Rule). Names from products.json only."
     status: built
     node_id: "53:109"
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { link: E02.label, image: E05 }
     slots:
       - { id: E07.label, role: label, case: as-is, typical_chars: 5, flex_verified: ">=4x", max_chars: 20, note: "one accent word, a month or a stone" }
-      - { id: E07.name, role: name, case: as-is, typical_chars: 10, flex_verified: ">=4x", max_chars: 40, note: "a short form: the stone, or the display name tail after in; the full name only where it fits two lines; the style sets caps; a word wider than the 320 card breaks inside the word (Chrysocolla, Dumortierite and Phosphosiderite do), so those cards are set by hand" }
+      - { id: E07.name, role: name, case: as-is, typical_chars: 10, flex_verified: ">=4x", max_chars: 40, note: "a short form: the stone, or the display name tail after in; the full name only where it fits two lines; the style sets caps; a word wider than the 320 card breaks inside the word (Phosphosiderite does on Trade Gothic LT Std Bold at 35 px, and Rhodochrosite would), so those cards are set by hand" }
   E08:
     name: "Star row"
     family: element
     use_when: "Five stars in the text ink, only beside a sourced review (EL-11; E-M02, E-M08). Never decoration, never a rating nobody gave."
     status: built
     node_id: "53:119"
-    measured_at: "2026-10-23 · 1200 · Instrument Serif and Inter stand-ins · canvas email"
+    measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     stamps_no_text: true
     reason: "five stars, no copy; only beside a sourced review"
