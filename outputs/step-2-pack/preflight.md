@@ -1,6 +1,6 @@
 # HLR Pack v0: preflight
 
-Lane E, 2026-10-20. Pack: `brand-pack/` with `brand-context.md` (written by lane E today). Engine: `hlr-studio-engine` 0.5.1, the installed release (`outputs/step-3-bundle/hlr-studio-engine-0.5.1.plugin`, sha256 0715777439f72175918dea7f86e1b64d29b72cf29fd0546e1f7f17bd83e6c8a5), unzipped to `~/rc/engine`. Every command ran in the Mac's Cowork shell; section 5 holds them, ready to rerun. The Gate 2 calls these results feed: `gate-2-package.md` (cited here as "package call N"). Results as of review round 3 (2026-10-21), after lane C's calls were ruled in lane C's chat and lane E moved the exemplars and set the role.
+Lane E, 2026-10-20. Pack: `brand-pack/` with `brand-context.md` (written by lane E today). Engine: `hlr-studio-engine` 0.5.1, the installed release (`outputs/step-3-bundle/hlr-studio-engine-0.5.1.plugin`, sha256 0715777439f72175918dea7f86e1b64d29b72cf29fd0546e1f7f17bd83e6c8a5), unzipped to `~/rc/engine`. Every command ran in the Mac's Cowork shell; section 5 holds them, ready to rerun. The Gate 2 calls these results feed: `gate-2-package.md` (cited here as "package call N"). Results as of review round 3 (2026-10-21), after lane C's calls were ruled in lane C's chat and lane E moved the exemplars and set the role. Rerun on 2026-10-23 after Gate 2 and Gate 4, on the installed engine 0.5.3, with round 3's guard fixes: section 7.
 
 ## 1. Results
 
@@ -85,11 +85,11 @@ REVIEW.md section 6, R14: a required file or board with no owning step (`slotmap
 
 - a contract role the File map does not name, and a role wired to a path that does not exist;
 - a null role with no gap row, a malformed gap row and a repeated one;
-- a gap row with no owner, or an owner still to be assigned ("to assign", "to be assigned", "unassigned", "TBD"): the owner is Eddie, HLR, a lane or a chat;
+- a gap row whose owner is not on the allowed-owner list: exactly Eddie, HLR, lane A to lane H, Chat 5, Chat 6 or Chat 7 (round 3; "Eddie or HLR", "Eddie (later)" and "to be assigned" all fail);
 - a quoted step under four words, or one not in an open line of `PROGRESSION.md`: an unticked box for a lane or chat (which may quote its own section of the chat prompts instead, with a warning), an unticked box or a Reviews line for Eddie or HLR; and a lane or chat owner with no step;
 - an HLR-owned row that cites no Brand Review v2 or token proposal question, or one the list does not hold;
-- a board in `figma.yaml` with no gap row;
-- an open row of `token-model.md`'s gap register, a gap in `products.json` `_meta`, or a topic of `legal-ledger.json` with no owner.
+- a board in `figma.yaml`, inline or block layout, that is neither recorded as built ("built <date>" in its note) nor named by a gap row (round 3);
+- an open row of `token-model.md`'s gap register, a gap in `products.json` `_meta`, or a topic of `legal-ledger.json` whose owner does not start with an owner from the list (a qualifier after a comma, a bracket or "'s" is allowed: "HLR (export)", "HLR's claims signer").
 
 It warns when a lane's or chat's step and prompt do not name the role it owns, and when a cited question shares no word with its row. Tested by mutation on a copy of the pack, each caught with its own line: a ticked line as a step; a one-word step; an HLR row no list asks; an HLR row citing a question that is not there; a dropped role; a null role with no row; a role wired to a missing file; a chat owner with no step; round 2's owner "Eddie, to be assigned"; a repeated row; a row with a cell missing; a chat anchored to a Reviews line; a board renamed out of its row; and, as a warning, an HLR row citing an unrelated question. Without the chat prompts file it prints the same two failures and one more warning.
 
@@ -113,9 +113,11 @@ The two failures are one gap, the strictness map's owner, which DECISIONS 2026-1
 
 ## 5. Tag scan: provenance on every rule in `brand-context.md`
 
-REVIEW.md rule 4 asks every brand rule in `brand-context.md` to carry [documented], [observed] or [derived]. Rules without a tag were found twice (lane E's review: round 1 B2, the Claims regime; round 2 B3, the Design system and the brand name line), so REVIEW.md section 5 step 5 asks for a guard in this release. The scan reads every line of the narrative from the first section to "Gaps and owners" (headings, table headers and lead-in lines that end in a colon aside) and fails on a line with no tag. A line passes on one tag, so it proves no line is wholly untagged, not that every clause is; a reviewer still reads the clauses. REVIEW.md has no row for it yet: package call 16.
+REVIEW.md rule 4 asks every brand rule in `brand-context.md` to carry [documented], [observed] or [derived]. Rules without a tag were found twice (lane E's review: round 1 B2, the Claims regime; round 2 B3, the Design system and the brand name line), so REVIEW.md section 5 step 5 asks for a guard in this release. The scan reads every line from the title to "Gaps and owners", the opening paragraphs and lead-in lines that end in a colon included (round 3; headings and table headers aside), and fails on a line with no tag. A line passes on one tag, so it proves no line is wholly untagged, not that every clause is; a reviewer still reads the clauses. REVIEW.md section 6, row R18 (package call 16 a).
 
-Tested by mutation: a bullet with its tag removed, and a contradiction row without its source tag: both caught, exit 1.
+Tested by mutation: a bullet with its tag removed, and a contradiction row without its source tag: both caught, exit 1. Round 3 adds an untagged opening paragraph and an untagged line ending in a colon (section 7).
+
+The pointer check (round 3) reads every `[documented, DECISIONS <date> ...]` tag and every "(ratified <date> by Eddie, <call>)" note in `brand-pack/` against `DECISIONS.md`: each cited date has a section, the section holds a ruling of Eddie's (a lane default waiting on him does not count), and a named call ("lane C call 7 a", "Gate 2 package call 13", "Q10") is named by one of his rulings that day, or by the line right after one that names its family. A tag that cites no call must quote words one of his rulings carries.
 
 Output, 2026-10-21 (round 3):
 
@@ -130,7 +132,7 @@ Set these at the top of every call (REVIEW.md section 2); each call is a fresh s
 ```
 HB=~/mnt/claude-cowork/highlight-brandbook
 RC=~/mnt/claude-cowork/_tools/release-checks
-ENG=~/rc/engine   # rm -rf ~/rc/engine && mkdir -p ~/rc && unzip -q $HB/outputs/step-3-bundle/hlr-studio-engine-0.5.1.plugin -d ~/rc/engine
+ENG=~/rc/engine   # rm -rf ~/rc/engine && mkdir -p ~/rc && unzip -q $HB/outputs/step-3-bundle/hlr-studio-engine-0.5.3.plugin -d ~/rc/engine
 ```
 
 Preflight, tokens and lookups:
@@ -205,7 +207,7 @@ Guard R14 (exit 0 when it holds):
 
 ```
 python3 - "$HB" "$ENG" <<'EOF'
-# R14 guard: every required role and artifact has an owner or a PROGRESSION step.
+# R14 guard: every required role and artifact has an owner from the allowed-owner list and, for a lane or chat, an open PROGRESSION step.
 import json, os, re, sys
 HB, ENG = sys.argv[1], sys.argv[2]
 PACK = os.path.join(HB, "brand-pack")
@@ -225,7 +227,8 @@ def prompt_of(owner):  # the owner's own section of the chat prompts, when the f
     m = re.search(r"^#{2,3} " + re.escape(w[0].capitalize() + " " + w[1]) + r"\b.*?(?=^#{2,3} |\Z)", prompts, re.M | re.S)
     return m.group(0) if m else ""
 fails, warns = [], []
-OWNER = re.compile(r"^(Eddie|HLR|lane [A-H]|Chat [5-7])\b")
+ALLOWED = ["Eddie", "HLR", "Chat 5", "Chat 6", "Chat 7"] + ["lane " + c for c in "ABCDEFGH"]  # the allowed-owner list
+LEAD = re.compile(r"^(" + "|".join(map(re.escape, ALLOWED)) + r")($|, |\s\(|'s )")  # an allowed owner, then nothing or a qualifier
 UNOWNED = re.compile(r"\b(to (be )?assign(ed)?|unassigned|tbd|tba)\b|^none$|^$", re.I)
 TEAM = re.compile(r"^(lane [A-H]|Chat [5-7])\b")
 ASKED = re.compile(r"Brand Review v2 Q(\d+)|token proposal HLR (\d+)")
@@ -253,8 +256,8 @@ for k, v in fm.items():
     if v is None and f"`{k}`" not in byitem:
         fails.append(f"`{k}` is null with no row in Gaps and owners")
 for item, (_, kind, state, owner, step, _b) in byitem.items():
-    if not OWNER.match(owner) or UNOWNED.search(owner):
-        fails.append(f"{item}: no owner ({owner or 'empty'})"); continue
+    if owner not in ALLOWED:
+        fails.append(f"{item}: owner {owner or 'empty'!r} is not on the allowed-owner list"); continue
     team = bool(TEAM.match(owner)); anchors = re.findall(r"`([^`]+)`", step); good = []
     if step.lower() != "none" and not anchors:
         fails.append(f"{item}: Step is neither none nor quoted plan text ({step})")
@@ -278,18 +281,33 @@ for item, (_, kind, state, owner, step, _b) in byitem.items():
             if not text: fails.append(f"{item}: the list it cites does not hold that question ({'Q' + q if q else 'HLR ' + t})")
             elif not (words(item + " " + state) & words(text)): warns.append(f"{item}: the cited question ({'Q' + q if q else 'HLR ' + t}) shares no word with the row")
 norm = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
-fy = rd(PACK, "figma.yaml"); m = re.search(r"^\s*boards:\s*\{(.*)\}", fy, re.M)
-for b in (re.findall(r"\"?([A-Za-z][A-Za-z -]*?)\"?\s*:\s*\"", m.group(1)) if m else []):
-    if not any(norm(b) in norm(i) for i in byitem): fails.append(f"figma.yaml board {b} has no gap row")
+fy = rd(PACK, "figma.yaml"); boards = []  # (board, the note that applies to it); inline {..} or block layout
+m = re.search(r"^\s*boards:\s*\{(.*)\}(.*)$", fy, re.M)
+if m:
+    boards = [(b, m.group(2)) for b in re.findall(r"\"?([A-Za-z][A-Za-z -]*?)\"?\s*:\s*\"?[0-9]+:[0-9]+", m.group(1))]
+elif re.search(r"^\s*boards:", fy, re.M):
+    m = re.search(r"^([ \t]*)boards:[ \t]*(#.*)?$", fy, re.M)
+    for l in (fy[m.end():].split("\n")[1:] if m else []):
+        if not l.strip() or l.lstrip().startswith("#"): continue
+        if len(l) - len(l.lstrip()) <= len(m.group(1)): break
+        b = re.match(r"^\s+\"?([A-Za-z][A-Za-z -]*?)\"?\s*:\s*\"?[0-9]+:[0-9]+\"?\s*(#.*)?$", l)
+        if b: boards.append((b.group(1), (b.group(2) or "") + " " + (m.group(2) or "")))
+        else: fails.append(f"figma.yaml boards: a line the check cannot read: {l.strip()[:60]}")
+    if not boards: fails.append("figma.yaml has a boards key the check cannot read")
+BUILT = re.compile(r"\bbuilt \d{4}-\d{2}-\d{2}\b")
+for b, note in boards:
+    if not BUILT.search(note) and not any(norm(b) in norm(i) for i in byitem): fails.append(f"figma.yaml board {b} is not recorded as built and has no gap row")
 tm = rd(PACK, "token-model.md").split("## 5. Gap register", 1)[1].split("\n## ", 1)[0]
 for l in tm.splitlines():
     c = [x.strip() for x in l.strip().strip("|").split("|")]
-    if l.startswith("| ") and len(c) >= 6 and c[0] != "#" and (c[4] == "" or UNOWNED.search(c[4]) and c[4].lower() != "none"):
-        fails.append(f"token-model.md gap {c[0]} ({c[1]}): no owner ({c[4] or 'empty'})")
+    if l.startswith("| ") and len(c) >= 6 and c[0] != "#" and c[4].lower() != "none" and (not LEAD.match(c[4]) or UNOWNED.search(c[4])):
+        fails.append(f"token-model.md gap {c[0]} ({c[1]}): owner {c[4] or 'empty'!r} is not on the allowed-owner list")
 for g in json.loads(rd(PACK, fm["product_db"]))["_meta"].get("gaps", []):
-    if not str(g.get("owner", "")).strip(): fails.append(f"products.json gap with no owner: {g.get('gap', '')[:60]}")
+    o = str(g.get("owner", "")).strip()
+    if not LEAD.match(o) or UNOWNED.search(o): fails.append(f"products.json gap, owner {o or 'empty'!r} is not on the allowed-owner list: {g.get('gap', '')[:60]}")
 for t, v in json.loads(rd(PACK, fm["legal_ledger"])).get("topics", {}).items():
-    if not str(v.get("owner", "")).strip(): fails.append(f"legal-ledger.json topic {t}: no owner")
+    o = str(v.get("owner", "")).strip()
+    if not LEAD.match(o) or UNOWNED.search(o): fails.append(f"legal-ledger.json topic {t}: owner {o or 'empty'!r} is not on the allowed-owner list")
 print(f"R14: {len(roles)} contract roles, {len(fm)} File map keys, {len(byitem)} gap rows" + ("" if prompts is not None else "; no chat prompts file here, so steps are read from PROGRESSION.md alone"))
 for f in fails: print("FAIL", f)
 for w in warns: print("WARN", w)
@@ -302,25 +320,110 @@ Tag scan (exit 0 when it holds):
 
 ```
 python3 - "$HB" <<'EOF'
-# Tag scan: every rule line of brand-context.md's narrative carries a provenance tag (round 1 B2, round 2 B3).
+# Tag scan: every line of brand-context.md above Gaps and owners carries a provenance tag (round 1 B2, round 2 B3, round 3: every line).
 import os, re, sys
 HB = sys.argv[1]
 bc = open(os.path.join(HB, "brand-pack", "brand-context.md"), encoding="utf-8").read().split("\n")
 TAG, SEP = re.compile(r"\[(documented|observed|derived)\b"), re.compile(r"^\|[-| ]+\|$")
-start = next(i for i, l in enumerate(bc) if l.startswith("## "))
+start = 0  # every line from the title down: opening paragraphs included
 stop = next(i for i, l in enumerate(bc) if l.startswith("## Gaps and owners"))
 bad, n, fence = [], 0, False
 for i in range(start, stop):
     l = bc[i].rstrip()
     if l.startswith("```"): fence = not fence; continue
-    if fence or not l.strip() or l.startswith("#") or SEP.match(l) or l.endswith(":"): continue
+    if fence or not l.strip() or l.startswith("#") or SEP.match(l): continue  # a line ending in a colon is a rule line too
     if l.startswith("|") and i + 1 < stop and SEP.match(bc[i + 1]): continue
     n += 1
     if not TAG.search(l): bad.append((i + 1, l[:110]))
-print(f"tag scan: {n} rule lines in brand-context.md's narrative, {len(bad)} without a tag")
+print(f"tag scan: {n} lines in brand-context.md above Gaps and owners, {len(bad)} without a tag")
 for ln, t in bad: print(f"FAIL line {ln}: {t}")
 sys.exit(1 if bad else 0)
 EOF
+```
+
+Pointer check (exit 0 when it holds):
+
+```
+python3 - "$HB" <<'EOF'
+# Pointer check: a "[documented, DECISIONS <date> ...]" tag or a "(ratified <date> by Eddie, <call>)" note points at a ruling of Eddie's in DECISIONS.md, not a lane default (round 3).
+import os, re, sys
+HB = sys.argv[1]
+PACK = os.path.join(HB, "brand-pack")
+dec = open(os.path.join(HB, "DECISIONS.md"), encoding="utf-8").read()
+SECT = {}
+for part in re.split(r"^## ", dec, flags=re.M)[1:]:
+    head, _, body = part.partition("\n")
+    d = re.match(r"\d{4}-\d{2}-\d{2}", head.strip())
+    if d: SECT.setdefault(d.group(0), []).extend(l for l in body.splitlines() if l.startswith("- "))
+RULING_RE = re.compile(r"\(Eddie\b|, Eddie\)|\bEddie (ruled|took|approved|ratified|installed|assigns|asked|answered|supplied|picked|owns)\b|\bEddie's (pick|picks|ruling|rulings|answer|answers|go|scope|default|word)\b|\bby Eddie\b|Reason: Eddie\b")
+DEFAULT = re.compile(r"\b(until|unless|pending|before|waits? on|goes to|go to|to|for) Eddie\b[^.;]*")  # a lane default waiting on Eddie, not his ruling
+class RULING:
+    @staticmethod
+    def search(l): return RULING_RE.search(DEFAULT.sub("", l))
+DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+CALL = re.compile(r"\b(calls?|question|questions)\s+(\d+(?:\s+[a-c]\b)?(?:(?:,\s*|\s+and\s+)\d+(?:\s+[a-c]\b)?)*)")
+TAGS = [re.compile(r"\[documented, DECISIONS ([^\]]*)\]"), re.compile(r"\(ratified (\d{4}-\d{2}-\d{2}) by Eddie, ([^)]*)\)")]
+fails, seen, n = [], set(), 0
+def family(ref):  # the words naming whose call it is: "lane C", "Gate 2 package", "Gate 2", "Gate 1"
+    m = re.search(r"\b(Gate \d(?: package)?|lane [A-H])", ref)
+    return m.group(1) if m else None
+def items(ref):
+    out = []
+    for m in CALL.finditer(ref):
+        for it in re.findall(r"\d+(?:\s+[a-c]\b)?", m.group(2)): out.append(re.sub(r"\s+", " ", it))
+    out += re.findall(r"\bQ\d+\b", ref)
+    return out
+def check(where, dates, ref):
+    global n
+    n += 1
+    for d in dates:
+        if d not in SECT: fails.append(f"{where}: cites DECISIONS {d}, which has no section"); return
+    lines = [(d, i, l) for d in dates for i, l in enumerate(SECT[d])]
+    eddie = [(d, i, l) for d, i, l in lines if RULING.search(l)]
+    if not eddie: fails.append(f"{where}: DECISIONS {', '.join(dates)} holds no ruling of Eddie's"); return
+    ref = re.sub(r"^(Eddie's (ruling|answer to)|approved by Eddie|ratified by Eddie)[, ]*", "", ref.strip(" ,:;"))
+    its, fam = items(ref), family(ref)
+    if not ref: return
+    if not its and not fam:
+        if not any(ref.split(";")[0].strip() in l for _, _, l in eddie): fails.append(f"{where}: names no call, and no ruling of Eddie's on {', '.join(dates)} carries \"{ref.split(';')[0].strip()[:60]}\"")
+        return
+    for it in (its or [None]):
+        def has(l): return it is None or (it in l if it.startswith("Q") else re.search(r"\b" + re.escape(it) + r"\b", l))
+        ok = False
+        for d, i, l in eddie:
+            if not has(l): continue
+            prev = SECT[d][i - 1] if i > 0 else ""
+            if fam is None or fam in l or (fam in prev and RULING.search(prev)): ok = True; break
+        if not ok: fails.append(f"{where}: no ruling of Eddie's on {', '.join(dates)} names {fam + ' ' if fam else ''}{'call ' + it if it and not it.startswith('Q') else it or ''}".rstrip())
+for root, _, files in os.walk(PACK):
+    for f in sorted(files):
+        p = os.path.join(root, f)
+        try: t = open(p, encoding="utf-8").read()
+        except Exception: continue
+        for ln, line in enumerate(t.splitlines(), 1):
+            for m in TAGS[0].finditer(line):
+                body = m.group(1)
+                if "<date>" in body: continue
+                dates = DATE.findall(body.split(",")[0] + " " + body.split(":")[0]) or DATE.findall(body)
+                rest = body[DATE.search(body).end():] if DATE.search(body) else body
+                rest = re.sub(r"^\s*and \d{4}-\d{2}-\d{2}", "", rest)
+                key = (os.path.relpath(p, PACK), tuple(dates), rest)
+                if key in seen: continue
+                seen.add(key); check(f"{os.path.relpath(p, PACK)}:{ln}", sorted(set(dates)), rest)
+            for m in TAGS[1].finditer(line):
+                key = (os.path.relpath(p, PACK), m.group(1), m.group(2))
+                if key in seen: continue
+                seen.add(key); check(f"{os.path.relpath(p, PACK)}:{ln}", [m.group(1)], m.group(2))
+print(f"pointer check: {n} distinct tags and ratification notes read against DECISIONS.md, {len(fails)} failure(s)")
+for x in fails: print("FAIL", x)
+sys.exit(1 if fails else 0)
+EOF
+```
+
+Mutation tests of the R14, tag scan and pointer guards (exit 0 when every mutant fails its guard and the pack itself passes; the harness reads the three guards from this section):
+
+```
+python3 $HB/outputs/step-2-pack/guards/mutation_tests.py "$HB" "$ENG"
 ```
 
 Census of the pack, then the figma-key-shaped hits read against HLR's four files (REVIEW.md rule 9 passes only when every hit is one of them):
@@ -352,6 +455,21 @@ Em dash bytes in lane E's files (prints nothing when clean):
 grep -l $'\xe2\x80\x94' $HB/brand-pack/brand-context.md $HB/outputs/step-2-pack/preflight.md $HB/outputs/step-2-pack/gate-2-package.md
 ```
 
-## 7. After Gate 2
+## 7. After Gate 2 and Gate 4 (2026-10-23)
 
-Pending Eddie's rulings: lane E applies them in `brand-pack/`, reruns sections 1 and 3 to 5 and the census, and records the results here.
+Rerun overnight by Claude (Chat 5, holding lane E's open items under Eddie's defaults, DECISIONS 2026-10-22), on the installed engine 0.5.3, against the pack after Gate 2's calls and Gate 4. The guards are the section 6 versions, with round 3's fixes.
+
+| Check | Result |
+|---|---|
+| `preflight.py --pack` | exit 0: resolved 7, blocking 0, degraded 8 (`type_registry_overlay`, `seam_map`, `options_register`, `slotmap`, `module_library`, `favorites`, `voice_calibration`, `voice_model`). Chat 6's first masters close `slotmap`, `seam_map` and `module_library` |
+| `tokens_build.js check --pack` | exit 0 in every ground (light, warm, deep, night): every declared pair clears its floor; 4 recorded failures keep their restriction (decorative only, or judged on the image) |
+| `tokens_build.js export --pack` | exit 0: 89 custom properties under `:root` (`--hlr-`) and a `[data-ground]` block per ground (15 tokens vary by ground); the CSS and Tailwind files carry the `web` canvas, and `tokens.flat.json` keeps all three (10 tokens vary by canvas); the 14 `font.style` tokens are not exported (the web takes `font.weight`); provenance 82 documented, 20 observed, 1 derived (`color.semantic.text.on-placeholder`, Gate 4) |
+| R7 guard (section 3) | holds: 15 pass, 1 note (`page_lint.js` refuses every page while web waits for Review 2) |
+| R14 guard (section 4, round 3) | holds: 44 contract roles, 44 File map keys, 32 gap rows, 0 warnings. Five rows closed (the variables, the Foundations boards and the marks, built; image usage rights, cleared by Eddie; the REVIEW.md rows, patched under call 16 a) |
+| Tag scan (section 5, round 3) | holds: 76 lines above Gaps and owners, each tagged, after two lines took tags (the Pack role line; the lead-in to the house conventions) |
+| Pointer check (section 5, round 3) | holds: 53 tags and ratification notes, each pointing at a ruling of Eddie's. The ledger line cited lane C's seed line, not a ruling: retagged to the file itself and to Eddie's answer to lane C calls 4 and 5. The taxonomy tag now names Gate 2 call 1 b, as DECISIONS does |
+| Mutation tests (`guards/mutation_tests.py`) | 14 mutants, each caught with its own line, and the pack passes all three guards. On the round 2 guards, "Eddie or HLR", "Eddie (later)" and "HLRx" passed the owner check, and both untagged-line mutants passed the tag scan |
+| Census (REVIEW.md rule 9), `brand-pack/` | 0 hits on another brand's term: 327 terms rebuilt, none new against 0.5.3's list. 14 figma-key-shaped hits, all HLR's four files: the reference copy 7, the library 5, HLR-EMAIL 1, HLR-Social 1 |
+| Em dash bytes | 0 in `brand-context.md`, this file, the Gate 2 package, `REVIEW.md`, the chat prompts and the records; `products.json` keeps 68 inside verbatim Shopify titles (source data; the house rule applies to what we write) |
+
+Nothing blocks. What still degrades is listed in section 2; each item has an owner in `brand-context.md`'s Gaps and owners.

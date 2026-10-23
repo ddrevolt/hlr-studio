@@ -1,6 +1,6 @@
 # HLR logo assets
 
-Pack role `logo_assets`. Lane B, Pack v0, 2026-10-18. Draft for ratification: Gate 1 C3 (Eddie, 2026-10-17) set the roster; HLR confirms it and supplies the missing vectors at Review 1.
+Pack role `logo_assets`. Lane B, Pack v0, 2026-10-18. Ratified 2026-10-22 by Eddie (Gate 2 package call 11). Gate 1 C3 (Eddie, 2026-10-17) set the roster; HLR confirms it and supplies the missing vectors at Review 1.
 
 Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by PDF page) or the client; [observed] the client's files and live work; [derived] our proposal, binding once Eddie ratifies it.
 
@@ -8,11 +8,11 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 
 ## Rules
 
-1. A mark is an asset, never type: placed from its file or its Figma component, never redrawn, re-set in a font or rebuilt from letterforms. A typeset lockup in live work (the email header "HIGH LIGHT" over an italic "rituals", E-H1, 6 of 28 sends) is type, not a mark, and retires. [derived] engine design-system rule; playbook section 4
-2. One Figma component per mark, named `Marks/<Mark>`. Its fill binds to `component.mark.fill`, or `component.mark.fill-on-photo` over photography, so the colourway follows the ground mode. The source file's own fill is ignored. [derived] Gate 3 call 8 a
+1. A mark is an asset, never type: placed from its file or its Figma component, never redrawn, re-set in a font or rebuilt from letterforms. A typeset lockup in live work (the email header "HIGH LIGHT" over an italic "rituals", E-H1, 6 of 28 sends) is type, not a mark, and retires. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) engine design-system rule; playbook section 4
+2. One Figma component per mark, named `Marks/<Mark>`. Its fill binds to `component.mark.fill`, or `component.mark.fill-on-photo` over photography, so the colourway follows the ground mode. The source file's own fill is ignored. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Gate 3 call 8 a
 3. Strip any full-canvas background rect before import. None of the current SVGs carries one. [observed] 2026-10-18
-4. The star is the one decorative device: at most one per surface. [derived] from Gate 1 C3
-5. A mark that exists only as PNG is not placed in a master until HLR supplies its vector. The master carries a labelled placeholder in its place. Two marks are never combined by eye into a lockup HLR has not drawn. [derived] playbook section 4 (real SVG components)
+4. The star is the one decorative device: at most one per surface. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) from Gate 1 C3
+5. A mark that exists only as PNG is not placed in a master until HLR supplies its vector. The master carries a labelled placeholder in its place. Two marks are never combined by eye into a lockup HLR has not drawn. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) playbook section 4 (real SVG components)
 6. Clear space and minimum sizes: none documented for the current roster; the book's size rules (p13) cover the 2022 HIGH LIGHT logotype. Gap, owner HLR; a proposal comes at Gate 4. [observed absence]
 
 ## Current roster (Gate 1 C3)

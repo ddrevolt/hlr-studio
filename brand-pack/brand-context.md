@@ -1,10 +1,10 @@
 # High Light Rituals: brand context
 
-Pack role: the brand context of the pack contract (`hlr-studio-engine` 0.5.1, `references/pack-contract.md`). Every skill reads the narrative below; every script parses the File map at the end. Lane E, Pack v0, 2026-10-20.
+Pack role: the brand context of the pack contract [documented] (`hlr-studio-engine` 0.5.3, `references/pack-contract.md`). Every skill reads the narrative below; every script parses the File map at the end. Lane E, Pack v0, 2026-10-20.
 
-Status: Pack v0, Gate 2 open. Lane C's eight calls were ruled on 2026-10-21 (DECISIONS); the open calls are in `outputs/step-2-pack/gate-2-package.md` at the brand home, and until Eddie rules them, every [derived] rule here is a proposal, never law. Preflight and the guards that check this file: `outputs/step-2-pack/preflight.md`.
+Status: Pack v0, Gate 2 closed 2026-10-22. Lane C's eight calls were ruled on 2026-10-21 (DECISIONS), and Eddie took every call of `outputs/step-2-pack/gate-2-package.md` at the brand home at its default on 2026-10-22 (DECISIONS); every [derived] rule still here is a proposal, never law. Preflight and the guards that check this file: `outputs/step-2-pack/preflight.md`.
 
-Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 2022-06-11, cited by PDF page), the client, or our own standing records (project rules, the playbook, the pack contract), named after the tag; a ruling of Eddie's is written [documented, DECISIONS <date>], the form package call 4 (a) proposes for ratified values, and changes if he rules otherwise; [observed] live work and the client's files, dated (`outputs/step-1-review/`; the corpus re-cut in `outputs/step-2-pack/corpus/`); [derived] our proposal, which only Eddie ratifies. Rulings cite `DECISIONS.md` at the brand home by date. Paths are relative to this folder (`brand-pack/`) unless they start with `outputs/`, `_setup/` or a file at the brand home root. No HLR fact here comes from memory; a fact with no source is a gap in the last table.
+Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 2022-06-11, cited by PDF page), the client, or our own standing records (project rules, the playbook, the pack contract), named after the tag; a ruling of Eddie's is written [documented, DECISIONS <date>]; a derived value or rule Eddie ratifies flips its leading tag to [documented] and carries "(ratified <date> by Eddie, Gate 2 package call N)" (Gate 2 package call 4, DECISIONS 2026-10-22); [observed] live work and the client's files, dated (`outputs/step-1-review/`; the corpus re-cut in `outputs/step-2-pack/corpus/`); [derived] our proposal, which only Eddie ratifies. Rulings cite `DECISIONS.md` at the brand home by date. Paths are relative to this folder (`brand-pack/`) unless they start with `outputs/`, `_setup/` or a file at the brand home root. No HLR fact here comes from memory; a fact with no source is a gap in the last table.
 
 ## Category and product
 
@@ -12,19 +12,19 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 202
 - The shelf, in the brand's words: timeless jewelry for self and space (p6, p32) [documented]. The live site calls it fine healing crystal jewelry, healer-activated [observed, site 2026-10-17], which the book does not: contradiction C2 below.
 - The shelf in customers' words: not gathered [observed: no customer material read]. The nearest first-party source is the Judge.me reviews on the site (Where they talk); a customer-evidence run supplies it (owner Eddie, who scopes the run).
 - Sessions and readings with a practitioner are sold as products; their positioning and claims are HLR's call (C2; ledger row HLR-H04) [observed, catalog 2026-10-17].
-- The product database, `products.json`: keyed by Shopify handle until HLR's export lands, then by SKU (DECISIONS 2026-10-18, Gate 2 call 7 a); display names use "in", never a dash (DECISIONS 2026-10-17, Q10; 2026-10-18, call 4 a); `kind` and `family` are [derived] and wait for Gate 2. Every `description` is empty, so no product prose is verifiable until the export (owner HLR).
+- The product database, `products.json`: keyed by Shopify handle until HLR's export lands, then by SKU (DECISIONS 2026-10-18, Gate 2 call 7 a); display names use "in", never a dash (DECISIONS 2026-10-17, Q10; 2026-10-18, call 4 a); `kind` and `family` are [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 14). Every `description` is empty, so no product prose is verifiable until the export (owner HLR).
 
 ## Who the customers are
 
-- Segments in HLR's own business terms: unknown. The book's Brand section (p3 to p11) and the client files read in Step 1 define none; no list puts the question to HLR yet (Gate 2 package call 17 asks whether Review 1 should) [observed, Step 1]. Analysis never invents a segment: it reports one undivided pool and says so [derived].
+- Segments in HLR's own business terms: unknown. The book's Brand section (p3 to p11) and the client files read in Step 1 define none [observed, Step 1]; asked at Review 1 (Gate 2 package call 17), and Eddie relays HLR's answer [documented, DECISIONS 2026-10-22, Gate 2 package call 17]. Analysis never invents a segment: it reports one undivided pool and says so [derived].
 - Who the voice speaks to, from the book's Copy section (p28, p30): carried in `voice-contract.md` section 2 with its page numbers [documented]. Read it there; a second copy here would drift.
 - Buyers observed in live work: none profiled yet [observed].
 
 ## Voice
 
-The voice contract is `voice-contract.md` (role `voice_contract`), read in full on every run. It carries the five qualities of the brand book's Copy section (p27 to p31): eloquent, refined, sensual, real, uplifting [documented]. They are also the `register` tags: every piece stays on the IS side of all five, each option leads with one, and a set covers at least two [documented, DECISIONS 2026-10-21: ratified by Eddie, lane C call 1 a]. What drafters get wrong most: writing to the live positioning (healing, witch, spell) instead of the book's while C2 is open; stacking the book's sensual words as a quota; stating a stone's meaning as an outcome rather than as a tradition or an intention. Devices (the italic accent word, the asterisk aside, the ellipsis) are seasoning, at most one per piece [derived]. The Brand section's own five principles (p9: Sensual, Connected, Curious, Real, Intentional) are named in the contract, not used as tags.
+The voice contract is `voice-contract.md` (role `voice_contract`), read in full on every run. It carries the five qualities of the brand book's Copy section (p27 to p31): eloquent, refined, sensual, real, uplifting [documented]. They are also the `register` tags: every piece stays on the IS side of all five, each option leads with one, and a set covers at least two [documented, DECISIONS 2026-10-21: ratified by Eddie, lane C call 1 a]. What drafters get wrong most: writing to the live positioning (healing, witch, spell) instead of the book's while C2 is open; stacking the book's sensual words as a quota; stating a stone's meaning as an outcome rather than as a tradition or an intention [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12). Devices (the italic accent word, the asterisk aside, the ellipsis) are seasoning, at most one per piece [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12). The Brand section's own five principles (p9: Sensual, Connected, Curious, Real, Intentional) are named in the contract, not used as tags.
 
-Status: ratified by Eddie at Gate 2 on 2026-10-21 (lane C calls 1 a, 7 a and 8 a) [documented, DECISIONS 2026-10-21]; the contract's section 4 rules 2 and 3 and its devices rule stay [derived] (Gate 2 package call 12). Exemplars: 159 lines in `exemplars.json` (role `exemplars`), approved at Gate 2 (lane C call 2 a) and moved from `_proposed/` by lane E [documented, DECISIONS 2026-10-21]; the owner's favorites outrank them once HLR's reviewers mark lines [documented, the pack contract's `favorites` row].
+Status: ratified by Eddie at Gate 2 on 2026-10-21 (lane C calls 1 a, 7 a and 8 a) [documented, DECISIONS 2026-10-21]; the contract's section 4 rules 2 and 3 and its devices rule read [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12). Exemplars: 159 lines in `exemplars.json` (role `exemplars`), approved at Gate 2 and moved from `_proposed/` by lane E [documented, DECISIONS 2026-10-21: approved by Eddie, lane C call 2 a]; the owner's favorites outrank them once HLR's reviewers mark lines [documented, the pack contract's `favorites` row].
 
 ## Where they talk
 
@@ -62,15 +62,15 @@ Kept out on purpose: "treat", "diagnose", "medical" and "ailment" on their own, 
 ## Claims regime
 
 - No one at HLR is named yet to sign claims (`legal-ledger.json` `signer: null`; C2, Review 1, owner HLR) [observed].
-- `legal-ledger.json` is a test seed (`_status: test-seed`, 19 rows): every row enforces provisionally and nothing in it is counsel-approved [documented, DECISIONS 2026-10-18, the ledger seed line (test-seed, 19 rows); `legal-ledger.json` `_note` (provisional, not counsel-approved)].
+- `legal-ledger.json` is a test seed (`_status: test-seed`, 19 rows): every row enforces provisionally and nothing in it is counsel-approved [documented] `legal-ledger.json` `_status` and `_note` (provisional, not counsel-approved); test-seed, 19 rows at v0.2.0 [documented, DECISIONS 2026-10-21: Eddie's answer to lane C calls 4 and 5].
 - Rows marked needs_legal (health, fertility, sourcing, origin) block every lint, craft mode included, until HLR's signer rules on them [documented, the lane C prompt in `_setup/next-chat-prompts.md`]. Rows marked conditional (durability and guarantees, endorsements, identity, offers) ask a person to confirm and record each use [derived: lane C's severities; their rulings wait for HLR's claims signer, C2, DECISIONS 2026-10-18]. Metal and karat (HLR-K01) and metaphysical benefit (HLR-M01 to M05) are info rows with `paraphrase_risk`: every lint lists them for the verifier with their hit counts, and none blocks or asks for a sign-off [documented, DECISIONS 2026-10-21: Eddie's answer to lane C calls 4 and 5]. `legal-ledger.json` v0.2.0: needs_legal 8, conditional 4, info 7 [observed, 2026-10-21].
-- Required language: the site footer disclaimer, verbatim (row HLR-REQ-01) [observed, the site footer, 2026-10-17]. It stays its own row, fed by the brief into the footer slot [documented, DECISIONS 2026-10-21, lane C call 6 a]; the row's `requires` names every email footer and every product page, and the email corpus carries it 0 times today, so sends change [observed, `voice-claims-notes.md` section 5]. Whether paid and organic social carry it is HLR's (C2).
+- Required language: the site footer disclaimer, verbatim (row HLR-REQ-01) [observed, the site footer, 2026-10-17]. It stays its own row, fed by the brief into the footer slot [documented, DECISIONS 2026-10-21, lane C call 6 a]; the row's `requires` names every email footer and every product page, and the email corpus carries it 0 times today, so sends change [observed, `outputs/step-2-pack/voice-claims-notes.md` section 5]. Whether paid and organic social carry it is HLR's (C2).
 - Customer and press words appear only verbatim and sourced (Judge.me, a press URL); nothing is invented [documented, project rule 3; playbook section 3]. The quote-like lines in the email and social templates are unsourced (Brand Review v2, question 7) [observed].
 - Customer material often carries claims HLR cannot make (healing, anxiety): research may read it; copy may not repeat it [derived; the engine's brand-context template].
 
 ## Existing insight or research assets
 
-- No insight register and no customer research have been received (`insight_register` null). Whether HLR holds any is not yet on a Review 1 list: Gate 2 package call 17 asks whether to put it there [observed, 2026-10-20].
+- No insight register and no customer research have been received (`insight_register` null) [observed, 2026-10-20]. Whether HLR holds any is asked at Review 1 (Gate 2 package call 17), and Eddie relays HLR's answer [documented, DECISIONS 2026-10-22, Gate 2 package call 17].
 - Evidence on file, read as corpus and never as findings about customers [documented, the engine's brand-context template]: Brand Review v2 and the pattern review with its addendum (`outputs/step-1-review/`); the site pull, catalog snapshot and claims scan (`outputs/step-1-review/site/`, 2026-10-17); the corpus re-cut of visible copy (`outputs/step-2-pack/corpus/`); the client's inventory sheet `HLR Creative AI System.xlsx` (read-only original).
 - The Judge.me review pool has not been pulled [observed, 2026-10-20].
 
@@ -88,7 +88,7 @@ An insight has to challenge one of these to count [documented, the engine's bran
 
 ## House conventions
 
-Voice-side house style lives in `voice-contract.md` section 6 and wins over this summary:
+Voice-side house style lives in `voice-contract.md` section 6 and wins over this summary [documented, DECISIONS 2026-10-21, lane C call 7 a]:
 
 - No em dashes in copy (pattern 1 enforces it); verbatim client text in the evidence files keeps its own punctuation [documented, DECISIONS 2026-10-17 and 2026-10-18].
 - Product display names from `products.json` with "in" in place of a dash ("The Seeds of Protection Bracelet in Black Tourmaline"), never the Shopify title [documented, DECISIONS 2026-10-17, Q10].
@@ -100,11 +100,11 @@ Voice-side house style lives in `voice-contract.md` section 6 and wins over this
 
 ## Design system
 
-- Tokens: `tokens.json` (DTCG; 102 tokens, 28 [documented], 23 [observed], 51 [derived]; namespace `com.hlr`, CSS prefix `--hlr-`). Ground modes on `HLR / Semantic` (`light` now; the alternates are named at Gate 4); canvas modes on `HLR / Layout` (`web`, `social`, `email`; DECISIONS 2026-10-18, Gate 2 question 1). The installed 0.5.1 passes `check` and exports the web scale; 0.5.2 stops on the canvas modes, and lane H's 0.5.3 carries them (PROGRESSION, Step 3).
-- The contrast law, the type roster, the gap register and the ratification log: `token-model.md`. The law is [derived] and waits for Gate 2: every ground in the roster carries body copy in its ink; Fawn is never an ink on Alabaster, white or the neutrals; copy on photography is judged by eye on the real image (DECISIONS 2026-10-18, question 4).
+- Tokens: `tokens.json` (DTCG; 103 tokens, 82 [documented], 20 [observed], 1 [derived] (`color.semantic.text.on-placeholder`, Gate 4), counted 2026-10-23; namespace `com.hlr`, CSS prefix `--hlr-`). Ground modes on `HLR / Semantic` (`light`, `warm`, `deep`, `night`, named at Gate 4 on 2026-10-23); canvas modes on `HLR / Layout` (`web`, `social`, `email`; DECISIONS 2026-10-18, Gate 2 question 1). The installed engine is 0.5.3 (Eddie, 2026-10-22): `check` passes in every ground and canvas.
+- The contrast law, the type roster, the gap register and the ratification log: `token-model.md`. The law is [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 2): every ground in the roster carries body copy in its ink; Fawn is never an ink on Alabaster, white or the neutrals. Copy on photography is judged by eye on the real image [documented, DECISIONS 2026-10-18: Eddie's ruling, Gate 2 question 4].
 - Faces (Gate 1, C5, for HLR to confirm): Saol Display, Saol Standard, Trade Gothic LT Std, Homemade Apple. License flag raised: Saol and Trade Gothic have no license file (`figma.yaml` `fonts.licensed: false`) [observed, 2026-10-17], so every deliverable that renders text carries the flag [documented, project rule 8]. The Figma build sets Instrument Serif and Inter as stand-ins and Eddie switches the family variables in the desktop app (Gate 3 call 7, path 1).
-- Marks: `logo-assets.md`. The wordmark and the monogram exist as SVG [observed, `HLR Logo & Marks/`, 2026-10-18]; the star and every lockup with it wait for HLR's vectors, and no lockup is composed by eye [documented, DECISIONS 2026-10-18, the marks line]; a mark is placed, never redrawn or set in a font [documented, playbook section 4; the pack contract's `logo_assets` row]. The rest of the mark rules are [derived] and wait for Gate 2 package call 11.
-- Imagery: no usage right is confirmed (Brand Review v2 section 3) [observed], so every image well is a labelled grey placeholder [documented, project rule 8]; nothing is generated in place of a real shot until Eddie rules on it for HLR (REVIEW.md rule 8: no ruling yet) [derived]. Art direction cards: `art-direction.md`. The asset roster: `asset-types.md`. Figma state: `figma.yaml` (library `Gq3yUbLs6MCRM0nOhjvnIW`, slot namespace `hlr`).
+- Marks: `logo-assets.md`. The wordmark and the monogram exist as SVG [observed, `HLR Logo & Marks/`, 2026-10-18]; the star and every lockup with it wait for HLR's vectors, and no lockup is composed by eye [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11); a mark is placed, never redrawn or set in a font [documented, playbook section 4; the pack contract's `logo_assets` row]. The rest of the mark rules are [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11).
+- Imagery: Eddie owns the images on the reference file's Images page (97: founder headshots, HLR Editorial, product shots, Zodiac Sets, Amulets; now on the library's `photos` page, 27:104) and the product images on the site, and cleared them for HLR's designs [documented, DECISIONS 2026-10-23: Eddie's ruling, image rights]; an image from any other source keeps the labelled grey placeholder until its right is confirmed [documented, project rule 8]; releases for the people in them stay HLR's question (`faces_policy`) [documented, Brand Review v2 Q6]; nothing is generated in place of a real shot until Eddie rules on it for HLR (REVIEW.md rule 8: no ruling yet) [derived]. Art direction cards: `art-direction.md`. The asset roster: `asset-types.md`. Figma state: `figma.yaml` (library `Gq3yUbLs6MCRM0nOhjvnIW`, slot namespace `hlr`).
 
 ## Channels in Phase 1
 
@@ -112,10 +112,10 @@ All four channels are in Phase 1 [documented, DECISIONS 2026-10-17, Gate 1]. Eve
 
 | Channel | Taxonomy | Slot map | What runs today |
 |---|---|---|---|
-| Email | ratified: 15 types [documented, DECISIONS 2026-10-18, lane D's call 1 b] | `slotmap` null until Chat 6 builds the masters | `email-copy` drafts; `copy_lint.js` runs with slot checking off (no seam map) |
+| Email | ratified: 15 types [documented, DECISIONS 2026-10-18, Gate 2 call 1 b] | `slotmap` null until Chat 6 builds the masters | `email-copy` drafts; `copy_lint.js` runs with slot checking off (no seam map) |
 | Organic social | ratified: formats, 8 types, 5 series [documented, the same ruling] | `slotmap-social.yaml` wired, masters unbuilt | `social-copy` drafts; `social_lint.js` asks for a sign-off on every unmeasured slot |
 | Paid | held for Review 2 [documented, the same ruling] | `slotmap-paid.yaml` planned, `slotmap_paid` null | `paid-ad-copy` on the engine's bundled ad types, in-frame checks off; a person confirms Meta's 9:16 bands before the first paid build |
-| Web | held for Review 2 [documented, the same ruling] | `section-library.json` planned, `section_library` null | `web-copy` stops by design; wiring the library now is open at Gate 2 |
+| Web | held for Review 2 [documented, the same ruling] | `section-library.json` planned, `section_library` null | `web-copy` stops by design and waits for Review 2, when the W## masters exist [documented, DECISIONS 2026-10-22, Gate 2 package call 13] |
 
 ## Contradictions (flagged, not resolved)
 
@@ -124,7 +124,7 @@ Book (2022) against live work (2023 to 2026), from Brand Review v2 sections 1 an
 | # | Contradiction | State | Owner | Source |
 |---|---|---|---|---|
 | C1 | Name: HIGH LIGHT in the book; High Light Rituals and HLR live; the handle misspelled in social | open; copy uses the form the brief gives [derived, lane C's interim] | HLR, Review 1 | Brand Review v2, C1 [documented], [observed] |
-| C2 | Positioning and claims: the book's timeless jewelry against the site's healing crystal jewelry, sessions sold as products, spell and witch language | open; the voice contract follows the book [documented, DECISIONS 2026-10-18, the C2 line]; the ledger grades the claims | HLR, Review 1 | Brand Review v2, C2 [documented], [observed] |
+| C2 | Positioning and claims: the book's timeless jewelry against the site's healing crystal jewelry, sessions sold as products, spell and witch language | open; the voice contract follows the book [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12); the ledger grades the claims | HLR, Review 1 | Brand Review v2, C2 [documented], [observed] |
 | C3 | Marks: the book's shell system against the live wordmark, monogram, star and crest | Eddie's Gate 1 pick, for HLR to confirm; vectors for the PNG-only marks | HLR, Review 1 | Brand Review v2, C3 [documented], [observed] |
 | C4 | Ink and grounds by channel: Onyx and Alabaster in the book; Forest on the site, white email pages, blush in social | Eddie's Gate 1 pick (Onyx on Alabaster), for HLR to confirm | HLR, Review 1 | Brand Review v2, C4 [documented], [observed] |
 | C5 | Faces: two families in the book; 17 in the live work | Eddie's Gate 1 pick (four faces), for HLR to confirm; licenses open | HLR, Review 1 | Brand Review v2, C5 [documented], [observed] |
@@ -134,8 +134,8 @@ Book (2022) against live work (2023 to 2026), from Brand Review v2 sections 1 an
 | C9 | Dashes: the book's and the live copy's em dashes against our rule | our rule holds in everything we make; HLR hears it at Review 1 | Eddie | Brand Review v2, C9 [documented], [observed] |
 | C10 | Offers: three free shipping thresholds and two codes in live work | open; merge tokens until HLR rules | HLR, Review 1 | Brand Review v2, C10 [documented], [observed] |
 | token-model C9 | Archive mark fills (#faf8f2, #1f2918, #baada3) against the p19 hexes | tokens carry p19; marks bind to the tokens | HLR, Review 1 | `token-model.md` gap register, C9 [documented], [observed] |
-| token-model T4 | Pull quote face: Saol Standard Regular (p16) or Saol Display (p18) | [derived] default Saol Display Light | Eddie, Gate 2 | `token-model.md` gap register, T4 [documented], [observed] |
-| token-model T6 | The italic accent word: in every channel, not in the book (p17 is roman) | [observed]; one word per line proposed | Eddie at Gate 2, then HLR | `token-model.md` gap register, T6 [documented], [observed] |
+| token-model T4 | Pull quote face: Saol Standard Regular (p16) or Saol Display (p18) | ruled: Saol Display Light [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 9) | Eddie, Gate 2 | `token-model.md` gap register, T4 [documented], [observed] |
+| token-model T6 | The italic accent word: in every channel, not in the book (p17 is roman) | [observed]; ruled: one word per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); HLR hears it at Review 1 | Eddie at Gate 2, then HLR | `token-model.md` gap register, T6 [documented], [observed] |
 
 ## Gaps and owners
 
@@ -153,37 +153,28 @@ Every null role and every required artifact with no file yet, its owner, and the
 | `module_library` | role | null until the email module masters exist | Chat 6 | `Elements and the first module batch through asset-production` | module copy is written to slot ids alone and the one-pager labels modules UNKNOWN |
 | `slotmap` | role | null; Chat 6 creates `slotmap.yaml` with the first masters | Chat 6 | `Elements and the first module batch through asset-production` | no seam map can be generated |
 | `seam_map` | role | null; generated by `build_seam_map.py` from the slot map | Chat 6 | `Elements and the first module batch through asset-production` | `copy_lint.js` runs with slot checking off |
-| `strictness_map` | role | null; the Figma board `Strictness map` (7:15) is empty | Eddie to assign; default Chat 5 (Gate 2 package call 7) | `the certified-pairs board, the strictness map` | the design pass has no posture per component |
 | `options_register` | role | null until a first real choice is recorded; then `options-register.jsonl`, created on first append | Chat 7 | `One real HLR brief` | the reason a line was kept is lost |
 | `onepager_palette` | role | null; the engine's neutral default renders | Eddie | none | nothing a reader would notice |
 | `importer` | role | null; optional, and most brands have none: a question only if HLR's team wants slates imported into a tool | Eddie | none | nothing; the JSON and the one-pager are the deliverables |
 | `slotmap_paid` | role | null; planned at `slotmap-paid.yaml`, wired at Review 2 with the first masters | Eddie | `Review 2 ({{review-2-date}}): Figma foundations and the first modules` | paid in-frame ceilings unchecked |
 | `slotmap_web` | role | null until the web masters exist | Chat 6 | `social, paid and web at the formats the review found` | web budgets would come from the section library alone |
-| `section_library` | role | null; planned at `section-library.json`, wired at Review 2 unless Gate 2 package call 13 wires it now | Eddie | `Review 2 ({{review-2-date}}): Figma foundations and the first modules` | `web-copy` stops by design |
-| `grounding_inputs` | role | null; no customer material on file; no list asks HLR yet: Gate 2 package call 17 | Eddie | none | paid concepts are labelled hypotheses |
-| `insight_register` | role | null; no research received; no list asks HLR yet: Gate 2 package call 17 | Eddie | none | nothing can be recognised as already assumed beyond the section above |
+| `section_library` | role | null; planned at `section-library.json`, wired at Review 2 with the W## masters (Gate 2 package call 13) | Eddie | `Review 2 ({{review-2-date}}): Figma foundations and the first modules` | `web-copy` stops by design |
+| `grounding_inputs` | role | null; no customer material on file; asked at Review 1 (Gate 2 package call 17), a Judge.me reviews export first; Eddie relays HLR's answer | Eddie | none | paid concepts are labelled hypotheses |
+| `insight_register` | role | null; no research received; asked at Review 1 (Gate 2 package call 17); Eddie relays HLR's answer | Eddie | none | nothing can be recognised as already assumed beyond the section above |
 | `recency_months` | role | null; the engine default (12) applies | Eddie | none | nothing |
 | `faces_policy` | role | null; image rights and releases for people in imagery; asked by token proposal HLR 5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real imagery with people |
 | `image_look` | role | null; no generation ruling for HLR, placeholders only | Eddie | none | the image layer |
-| `pack_shot_index` | role | null; pack shots wait for usage rights; asked by Brand Review v2 Q6 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real product imagery |
+| `pack_shot_index` | role | null; the cleared product shots sit on the library's `photos` page (27:104, DECISIONS 2026-10-23), and the index keys on SKUs from HLR's Shopify products export (Brand Review v2 Q5) | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real product imagery |
 | `video_rules` | role | null; video scope not set | Eddie | none | video beyond the P09 end frame |
-| Engine 0.5.3 (canvas modes, the `stroke` category) | artifact | lane H builds it | lane H | `Lane H: 0.5.3 before Chat 5` | Foundations; 0.5.2 stops on this pack |
-| Figma variables and text styles, every id in `figma.yaml` | artifact | four empty collections exist | Chat 5 | `variables with every id recorded` | every asset build |
-| Foundations boards: Color (7:10), Type (7:11), Layout (7:12), Marks (7:13) | artifact | empty boards on 00 Foundations | Chat 5 | `Foundations through the engine's design-system skill` | the token, type, layout and mark specimens |
-| Certified-pairs board (7:14) | artifact | empty board | Chat 5 | `the certified-pairs board, the strictness map` | the contrast law in Figma |
-| Marks as SVG components | artifact | not built | Chat 5 | `marks as SVG components, the certified-pairs board` | every mark in a master |
 | Star and lockup vectors, clear space, minimum sizes | artifact | PNG only; asked by Brand Review v2 Q3 and token proposal HLR 2 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | the star in every master |
 | Licenses for Saol Display, Saol Standard and Trade Gothic LT Std | artifact | no license file; asked by Brand Review v2 Q2 and token proposal HLR 1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every shipped asset (the flag stays raised) |
-| Image usage rights | artifact | none confirmed; asked by Brand Review v2 Q6 and token proposal HLR 5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real imagery |
 | Shopify products export | artifact | not received; asked by Brand Review v2 Q5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | SKUs, product prose, confirmed prices |
 | HLR's claims signer and the needs_legal rulings | artifact | not named; asked by Brand Review v2 Q1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every line a needs_legal row hits |
-| Names of the alternate ground modes | artifact | candidates in `token-model.md` section 2 | Eddie | `Eddie rules on the ground roster and batch scope` | alternate grounds |
 | Web breakpoints, margins and grid (`figma.yaml` `breakpoints: null`) | artifact | open | Eddie | none | web budgets |
 | Meta 9:16 keep-clear bands and copy limits confirmed (`_verified` in the engine's placement specs) | artifact | secondary sources only | Eddie | `Before the first paid build: a person confirms the 9:16 keep-clear bands` | the paid 9:16 masters |
 | The organic story band confirmed on a live story | artifact | one 2026 guide | Eddie | none | the S04 masters |
 | `tokens.css` and Tailwind tokens | artifact | not exported | Chat 6 | `and Tailwind tokens exported from` | web handoff |
 | Live review dates | artifact | not set | Eddie | none | Reviews 1 to 3 |
-| REVIEW.md section 6: rows R7 and R14 marked built, a row for the tag scan, rule 4's ruled-tag sentence | artifact | lane E cannot write REVIEW.md: Gate 2 package call 16 | Eddie | none | REVIEW.md lags the guards |
 
 ## File map
 
@@ -218,7 +209,7 @@ Machine-readable; scripts parse the fenced block below. Every role of the pack c
  "module_library": null,
  "slotmap": null,
  "seam_map": null,
- "strictness_map": null,
+ "strictness_map": "strictness-map.md",
  "options_register": null,
  "onepager_palette": null,
  "importer": null,

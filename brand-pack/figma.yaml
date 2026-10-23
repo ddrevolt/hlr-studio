@@ -1,5 +1,6 @@
 # HLR Figma state. Read before any Figma call; write every id here the moment it is created.
 # 2026-10-17: Gate 3 ruled (DECISIONS; outputs/step-4-figma/gate-3-conventions.md). file_key confirmed.
+# 2026-10-23: Foundations build (Chat 5, overnight run on Eddie's go): 88 variables, Layout modes web, social, email; ids below.
 # 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
 slots:
   namespace: hlr
@@ -9,7 +10,7 @@ figma:
   file_key: Gq3yUbLs6MCRM0nOhjvnIW   # Gate 1 (c) chose it; Gate 3 confirmed it, 2026-10-17
   file_name: HLR Library   # renamed by Eddie in Figma, 2026-10-17 (Gate 3 call 1 b; was Highlight-Rituals-Design-Forge)
   pages: { "00 Foundations": "0:1", "01 Elements": "7:2", "02 Modules": "7:3", "03 Templates": "7:4", "04 Staging": "7:5" }   # 2026-10-17
-  boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; empty until Pack v0 tokens
+  boards: { Color: "7:10", Type: "7:11", Layout: "7:12", Marks: "7:13", "Certified pairs": "7:14", "Strictness map": "7:15" }   # on 00 Foundations; built 2026-10-23 (Chat 5); 00 Foundations moved to the top of the page list
   breakpoints: null
 fonts:
   build_stand_ins: { "Saol Display": "Instrument Serif", "Saol Standard": "Instrument Serif", "Trade Gothic LT Std": "Inter" }   # Gate 3 call 7, path 1: the build sets these; Eddie switches the family variables to the real faces in the desktop app
@@ -26,12 +27,120 @@ fonts:
                              #   GT Walsheim Pro Bold, Cannu Regular: no license file; role unknown
 lengths:
   min_flex_multiple: 2       # engine default (probe every body slot at 2x)
-variable_ids: {}
+variable_ids:   # 2026-10-23, Chat 5 Foundations build: all 88 plan variables, values set in every mode
+  "color/brand/onyx": "VariableID:19:2"
+  "color/brand/alabaster": "VariableID:19:3"
+  "color/brand/sea-salt": "VariableID:19:4"
+  "color/brand/forest": "VariableID:19:5"
+  "color/brand/fawn": "VariableID:19:6"
+  "color/extended/white": "VariableID:19:7"
+  "color/extended/scrim": "VariableID:19:8"
+  "color/extended/neutral-50": "VariableID:19:9"
+  "color/extended/neutral-100": "VariableID:19:10"
+  "color/extended/neutral-200": "VariableID:19:11"
+  "color/extended/neutral-300": "VariableID:19:12"
+  "color/extended/neutral-400": "VariableID:19:13"
+  "color/extended/neutral-500": "VariableID:19:14"
+  "color/extended/neutral-600": "VariableID:19:15"
+  "color/extended/neutral-700": "VariableID:19:16"
+  "color/extended/neutral-800": "VariableID:19:17"
+  "color/extended/neutral-900": "VariableID:19:18"
+  "color/semantic/background/default": "VariableID:19:19"
+  "color/semantic/background/email-page": "VariableID:19:20"
+  "color/semantic/background/subtle": "VariableID:19:21"
+  "color/semantic/background/placeholder": "VariableID:19:22"
+  "color/semantic/background/scrim": "VariableID:19:23"
+  "color/semantic/text/primary": "VariableID:19:24"
+  "color/semantic/text/muted": "VariableID:19:25"
+  "color/semantic/text/on-photo": "VariableID:19:26"
+  "color/semantic/text/on-placeholder": "VariableID:31:40"   # Gate 4, 2026-10-23
+  "color/semantic/interactive/cta": "VariableID:19:27"
+  "color/semantic/interactive/link": "VariableID:19:28"
+  "component/cta/stroke": "VariableID:19:29"
+  "component/cta/label": "VariableID:19:30"
+  "component/cta/stroke-on-photo": "VariableID:19:31"
+  "component/cta/label-on-photo": "VariableID:19:32"
+  "component/cta/weight": "VariableID:19:33"
+  "component/link/label": "VariableID:19:34"
+  "component/link/rule": "VariableID:19:35"
+  "component/rule/stroke": "VariableID:19:36"
+  "component/rule/weight": "VariableID:19:37"
+  "component/callout/leader": "VariableID:19:38"
+  "component/callout/label": "VariableID:19:39"
+  "component/callout/leader-on-photo": "VariableID:19:40"
+  "component/mark/fill": "VariableID:19:41"
+  "component/mark/fill-on-photo": "VariableID:19:42"
+  "component/placeholder/fill": "VariableID:19:43"
+  "component/placeholder/label": "VariableID:19:44"
+  "font/family/display": "VariableID:19:45"
+  "font/family/title": "VariableID:19:46"
+  "font/family/body": "VariableID:19:47"
+  "font/family/script": "VariableID:19:48"
+  "font/style/display": "VariableID:19:49"
+  "font/style/display-accent": "VariableID:19:50"
+  "font/style/headline": "VariableID:19:51"
+  "font/style/headline-accent": "VariableID:19:52"
+  "font/style/quote": "VariableID:19:53"
+  "font/style/title": "VariableID:19:54"
+  "font/style/link": "VariableID:19:55"
+  "font/style/price": "VariableID:19:56"
+  "font/style/body": "VariableID:19:57"
+  "font/style/eyebrow": "VariableID:19:58"
+  "font/style/label": "VariableID:19:59"
+  "font/style/cta": "VariableID:19:60"
+  "font/style/fine": "VariableID:19:61"
+  "font/style/script": "VariableID:19:62"
+  "font/size/label": "VariableID:19:63"
+  "font/size/body": "VariableID:19:64"
+  "font/size/title": "VariableID:19:65"
+  "font/size/headline": "VariableID:19:66"
+  "font/size/display-s": "VariableID:19:67"
+  "font/size/display-m": "VariableID:19:68"
+  "font/size/display-l": "VariableID:19:69"
+  "font/size/display-xl": "VariableID:19:70"
+  "space/0": "VariableID:19:71"
+  "space/1": "VariableID:19:72"
+  "space/2": "VariableID:19:73"
+  "space/3": "VariableID:19:74"
+  "space/4": "VariableID:19:75"
+  "space/5": "VariableID:19:76"
+  "space/6": "VariableID:19:77"
+  "space/8": "VariableID:19:78"
+  "space/10": "VariableID:19:79"
+  "space/12": "VariableID:19:80"
+  "space/16": "VariableID:19:81"
+  "space/20": "VariableID:19:82"
+  "space/24": "VariableID:19:83"
+  "space/30": "VariableID:19:84"
+  "space/40": "VariableID:19:85"
+  "space/email-margin": "VariableID:19:86"
+  "space/social-margin": "VariableID:19:87"
+  "radius/none": "VariableID:19:88"
+  "stroke/cta": "VariableID:19:89"
+text_style_ids:   # 2026-10-23, Chat 5: the 15-style roster; family, style and size bound to HLR / Layout (R8 guard: 0 unbound)
+  "display/xl": "S:bab1f929d27d88b0970c42c42e10d7b85eca2179,"
+  "display/l": "S:45374a4bafcb3ced930e566841a6a20cc34584a9,"
+  "display/m": "S:effc28a382afc56a3e4a82cd0cd053613dfbc274,"
+  "display/s": "S:655a5e3d8c3dac07d0da3f5e381a12a76740e8e6,"
+  "headline": "S:2330b9be9d2a480358726b4ea3442e522d2aded3,"
+  "quote": "S:ce3966bd8ab287bac1351929a0d8b032b11584f7,"
+  "title": "S:43a50c5d8fe074d32ad00ead2b926823ea4d77a6,"
+  "link": "S:57606adffc38c8d478a76e9d336d607ddf9b28e2,"
+  "price": "S:9aa62490b47b187b5bcc0ecbc62444945f6b1654,"
+  "script": "S:ce4efd06635810cd8deae5a0f278eecc47dc6b47,"
+  "body": "S:4e3b074348a00b0daeb072c49db3b84d35940dd8,"
+  "eyebrow": "S:0d8b55b739049c2e38a1c6b24074847542a6941c,"
+  "label": "S:5bb5e412c624e867580e6bc1c4855f4f8f0c8d37,"
+  "cta": "S:2d6a9c5b974435a0e1367bf13ced881d6827f292,"
+  "fine": "S:48aa0218aa29f9480e7ba0712f173744180c9cf1,"
+components:   # 2026-10-23, Chat 5: marks as SVG components, fills bound to component/mark/fill
+  "Marks/Wordmark": "28:28"   # 16 vectors, geometry 01aacb71b78d1a59 (R13 guard)
+  "Marks/Monogram": "28:35"   # 3 vectors, geometry 991e3de808779295 (R13 guard)
 collection_ids:                    # 2026-10-17, Gate 3 scaffold: collection id, then each mode's id
   primitives: { id: "VariableCollectionId:7:6", default: "7:0" }
-  semantic: { id: "VariableCollectionId:7:7", light: "7:1" }      # ground modes; the alternates are named at Gate 4
+  semantic: { id: "VariableCollectionId:7:7", light: "7:1", warm: "31:0", deep: "31:1", night: "31:2" }   # Gate 4 (2026-10-23, Claude under Eddie's delegation): ground modes named by role, warm Fawn, deep Forest, night Onyx (pattern-review 4.1)
   component: { id: "VariableCollectionId:7:8", default: "7:2" }
-  layout: { id: "VariableCollectionId:7:9", default: "7:3" }
+  layout: { id: "VariableCollectionId:7:9", web: "7:3", social: "19:0", email: "19:1" }   # 2026-10-23, Chat 5: default renamed to web, social and email created (engine 0.5.3 plan record_as)
 variables:
   css_prefix: --hlr-               # Gate 3 call 6
   extensions_namespace: com.hlr     # Gate 3 call 6

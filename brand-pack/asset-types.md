@@ -1,6 +1,6 @@
 # HLR asset types
 
-Pack role `asset_types`, in the engine's recipe grammar (`asset-production/references/asset-types.md`). Lane B, Pack v0, 2026-10-18. Draft for ratification at Gate 2; Phase 1 covers email, organic social, paid and web (Gate 1, Brand Review Q11).
+Pack role `asset_types`, in the engine's recipe grammar (`asset-production/references/asset-types.md`). Lane B, Pack v0, 2026-10-18. Ratified 2026-10-22 by Eddie (Gate 2 package call 11); Phase 1 covers email, organic social, paid and web (Gate 1, Brand Review Q11).
 
 Tags: [documented] the brand book (cited by PDF page); [observed] HLR's live work (`outputs/step-1-review/pattern-review.md`, codes from its section 2); [derived] our proposal.
 
@@ -15,9 +15,9 @@ Every recipe: text slots stamped in namespace `hlr`, flex-proven at 2x, bound to
 | Email master | 1200 wide, sent as image slices | `email` (body 45, small 35) | email | Gate 1 C8 |
 | Feed | 1080x1350 master; 1080x1080 and 1080x1920 siblings | `social` (body 40, small 32) | organic social, Meta paid | [observed] 4:5 leads the grid, 110 of 117 frames |
 | Story | 1080x1920 | `social` | organic social, Meta paid | [observed] about 525 frames |
-| Link ad | 1200x628 | none: no overlaid copy (Gate 2 call 1) | Google | [derived] the standard size; the live 1280x628 (23) and 1260x628 (1) retire |
+| Link ad | 1200x628 | none: no overlaid copy (Gate 2 call 1) | Google | [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) the standard size; the live 1280x628 (23) and 1260x628 (1) retire |
 | Square link | 1200x1200 | none: no overlaid copy (Gate 2 call 1) | Google | [observed] 21 frames |
-| Display | 728x90, 300x250, 160x600 | `web` | IAB display | [derived] the live banners are named for IAB sizes but sized 500x300 and 600x160; display floors body 14 and small 12 (Gate 2 call 5 a) |
+| Display | 728x90, 300x250, 160x600 | `web` | IAB display | [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) the live banners are named for IAB sizes but sized 500x300 and 600x160; display floors body 14 and small 12 (Gate 2 call 5 a) |
 | Web | CSS px, designed at 1440 and 375 | `web` (body 14, small 12; Gate 2 call 5 a) | web | [observed] breakpoints at Gate 4 |
 
 ## Organic social (the engine's portable recipes)
@@ -29,7 +29,7 @@ Every recipe: text slots stamped in namespace `hlr`, flex-proven at 2x, bound to
 - Offer tile (S-OFFER): figures as merge tokens until C10 lands.
 Art direction moves: one display line, one accent word; caps eyebrow; the handle bottom centre (28 px above the foot in 2026 work [observed]); at most one script line; no drawn CTA [Gate 1 C6].
 
-**S02 Story or reel cover.** [derived] Not adopted: reel covers run as S01 photo cards and story covers as S04 frames.
+**S02 Story or reel cover.** [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 15) Not adopted: reel covers run as S01 photo cards and story covers as S04 frames.
 
 **S03 Carousel set.** Engine recipe: cover, inner and end panels at 1080x1350 from one component set, `Panel` property. Build mode: gutter, separate frames [observed: current carousels are separate frames; the 2023 seamless strips retire]. HLR series that run as carousels [observed]:
 - Words For Your Journey: weekly prompts, Mondays (4 of 23 posts in the October 2026 calendar).
@@ -45,7 +45,7 @@ Art direction moves: the cover carries the promise in display type with a swipe 
 
 **Highlight cover** [observed]: 61 highlight stories and 6 covers at 1507x1468 (ST-HL). No recipe yet: canvas and structure are a Gate 4 item (owner Eddie).
 
-**Email modules, M##, 1200.** [derived] The module roster from pattern-review 4.3, each absorbing the observed patterns listed there: Hero, Spotlight, Annotated (new in email), Product grid, Quote, Mantra, Offer, Meaning, Letter, Collage, Text block, Image, Email chrome (header bar, footer, promo bar, divider), Press. Built in Chat 6 at 1200 in the ground modes, exported as slices. Geometry seen at 1200 [observed]: an 80 px text margin (`space.email-margin`); image mats 1050 wide (75 a side) as square, 1050x1260 portrait, 1050x720 landscape, and a small 810; product cards 450x560 (4:5), two up. The CTA box is measured at build: the observed 333x94 holds a 26 px label, and C8 raises the label to 35. The nav footer keeps the star and the wordmark; the crest leaves it (C3).
+**Email modules, M##, 1200.** [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) The module roster from pattern-review 4.3, each absorbing the observed patterns listed there: Hero, Spotlight, Annotated (new in email), Product grid, Quote, Mantra, Offer, Meaning, Letter, Collage, Text block, Image, Email chrome (header bar, footer, promo bar, divider), Press. Built in Chat 6 at 1200 in the ground modes, exported as slices. Geometry seen at 1200 [observed]: an 80 px text margin (`space.email-margin`); image mats 1050 wide (75 a side) as square, 1050x1260 portrait, 1050x720 landscape, and a small 810; product cards 450x560 (4:5), two up. The CTA box is measured at build: the observed 333x94 holds a 26 px label, and C8 raises the label to 35. The nav footer keeps the star and the wordmark; the crest leaves it (C3).
 
 **Email templates, T##.** [observed] Pure instances of the modules, rebuilt from the client's most-used: Product Spotlight (2:563), Product Listing (2:683), Sale (2:984), Testimonials (2:809), Moodboard (2:913), the editorial send (2:9, 2:1330, 2:1767), Welcome 1 to 5 (2:193003, 2:8838), monthly energy medicine (2:31200); flows: browse (2:189609), cart (2:189904), abandoned cart (2:190749), checkout (2:191052). Held until C2 rules: 2:1092 ("Anxiety Calming Pieces").
 
@@ -53,7 +53,7 @@ Art direction moves: the cover carries the promise in display type with a swipe 
 
 **Web sections, W##.** [observed] Nav and announcement bar, split hero, PDP buy box (web only), trust marquee in Saol italic, story tabs ("The energy inside this piece"), testimonial, reviews and cross-sell, footer with the disclaimer, mobile drawer, mobile PDP, filter. Per-breakpoint budgets live in lane D's `section_library`; breakpoints at Gate 4.
 
-**Elements, E##.** [derived] From pattern-review 4.2: wordmark (bar, masthead, sign-off), small mark (the monogram), eyebrow (standard, spread), headline with one italic accent word, body block, CTA outline box (inverse on photo and on dark grounds), text link with a trailing rule, rule, callout (leader and label; numbered), image frame (full bleed, mat, diptych), star row (sourced reviews only), handle sign-off, offer line with merge tokens, swipe cue, proof line (icon and caps label, through the claims ledger), price, script line, labelled grey placeholder.
+**Elements, E##.** [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) From pattern-review 4.2: wordmark (bar, masthead, sign-off), small mark (the monogram), eyebrow (standard, spread), headline with one italic accent word, body block, CTA outline box (inverse on photo and on dark grounds), text link with a trailing rule, rule, callout (leader and label; numbered), image frame (full bleed, mat, diptych), star row (sourced reviews only), handle sign-off, offer line with merge tokens, swipe cue, proof line (icon and caps label, through the claims ledger), price, script line, labelled grey placeholder.
 
 ## Physical, retail and print
 
@@ -61,4 +61,4 @@ HLR makes them [observed]: press and wholesale decks at 1800x1200 (90 pages, 37 
 
 ## Delivery
 
-[derived] Screen: PNG at 1x and 2x. Email: image slices from the 1200 masters with alt text on every slice; if HLR's ESP sends live text, C8's live-text sizes replace the slice sizes. Every report lists the tokens, marks (file path), slot ids, flex results and contrast pairs it touched, and carries the standing flags: fonts unlicensed, imagery unlicensed.
+[documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Screen: PNG at 1x and 2x. Email: image slices from the 1200 masters with alt text on every slice; if HLR's ESP sends live text, C8's live-text sizes replace the slice sizes. Every report lists the tokens, marks (file path), slot ids, flex results and contrast pairs it touched, and carries the standing flags: fonts unlicensed, imagery unlicensed.

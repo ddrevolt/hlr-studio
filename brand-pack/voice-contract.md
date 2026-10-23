@@ -1,6 +1,6 @@
 # HLR voice contract
 
-Status: ratified by Eddie at Gate 2, 2026-10-21 (lane C calls 1, 7 and 8). Written by lane C, Pack v0, 2026-10-18. The five qualities and their IS and IS NOT words are [documented] (brand book p26 to p31). Lane C derived the operational definitions, checks and not-like lines (call 1), the house conventions in section 6 (call 7) and the founder rule in section 2 (call 8); each now reads [documented] with its date of ratification, the form the Gate 2 package proposes (item 4, its default until Eddie rules the tag grammar). Section 4's rules 2 and 3 and the devices rule in section 5 keep [derived]: call 1 named the qualities, their definitions and checks. Positioning and claims wait for HLR at Review 1 (C2). Sounds-like lines are verbatim: [documented] from the book by PDF page, [observed] from the corpus re-cut (`outputs/step-2-pack/corpus/`) by Figma node id.
+Status: ratified by Eddie at Gate 2, 2026-10-21 (lane C calls 1, 7 and 8) and 2026-10-22 (Gate 2 package calls 10 and 12). Written by lane C, Pack v0, 2026-10-18. The five qualities and their IS and IS NOT words are [documented] (brand book p26 to p31). Lane C derived the operational definitions, checks and not-like lines (call 1), the house conventions in section 6 (call 7) and the founder rule in section 2 (call 8); each now reads [documented] with its date of ratification, the form Eddie ratified on 2026-10-22 (Gate 2 package call 4). Section 4's rules 2 and 3 and the devices rule in section 5, left derived by call 1 (which named the qualities, their definitions and checks), were ratified by Eddie on 2026-10-22 (Gate 2 package call 12), and the italic accent word as a device with them (Gate 2 package call 10). Positioning and claims wait for HLR at Review 1 (C2). Sounds-like lines are verbatim: [documented] from the book by PDF page, [observed] from the corpus re-cut (`outputs/step-2-pack/corpus/`) by Figma node id.
 
 ## How to use it
 
@@ -115,17 +115,17 @@ Not like, lane C's illustrations rather than client copy [documented] (ratified 
 ## 4. Operating rules
 
 1. Inspire, then offer. The product is the happy side effect of a welcoming, beautiful experience (p31) [documented].
-2. Meaning is said as tradition or intention, never as an outcome: "an ancient symbol of", "long held as a stone of", "a worn reminder of whatever it is you seek" (p17, p36). Not "it protects you", not "it attracts". Every such line runs through the ledger's M rows, which list it for the verifier and never ask for a sign-off (Eddie, Gate 2 lane C call 5) [derived].
-3. One spiritual idea at a time, balanced by plain words, at 6 or 7 on the witchy scale (p27) [documented]. Spells, hexes and "witch" positioning wait for C2 [derived].
+2. Meaning is said as tradition or intention, never as an outcome: "an ancient symbol of", "long held as a stone of", "a worn reminder of whatever it is you seek" (p17, p36). Not "it protects you", not "it attracts". Every such line runs through the ledger's M rows, which list it for the verifier and never ask for a sign-off (Eddie, Gate 2 lane C call 5) [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12).
+3. One spiritual idea at a time, balanced by plain words, at 6 or 7 on the witchy scale (p27) [documented]. Spells, hexes and "witch" positioning wait for C2 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12).
 4. Quotes and references are verbatim, with the author and the work named, from a source a reviewer can check. A customer's words appear only verbatim from Judge.me (Brand Review v2, question 7). Nothing is invented or loosely attributed [documented] (standing rule 3, project instructions).
 5. Length follows the slot. Long copy is welcome where the slot allows it (p27); captions "can remain vibey, short and sweet, with room to elaborate or educate when presenting a new product or point of inspiration" (p35) [documented]. Budgets come from the slot maps, never from this file.
 6. All five qualities hold as a floor; one leads each option [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1).
 
 ## 5. Devices: seasoning, never required
 
-What the work uses: one italic accent word in a Saol headline, in every channel [observed; the book's headline is roman, p17]; the asterisk aside, "*inhales deeply*" (p34) [documented]; the parenthetical aside, "(The keyword here is *feel*.)" (p37) [documented]; a trailing ellipsis in the flows ("May we suggest...") [observed]; "Wear and repeat:" before a mantra [observed]; one short Homemade Apple script line per asset, social and email only (Gate 1, C5) [documented, DECISIONS 2026-10-17].
+What the work uses: one italic accent word in a Saol headline, in every channel [observed; the book's headline is roman, p17], one per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); the asterisk aside, "*inhales deeply*" (p34) [documented]; the parenthetical aside, "(The keyword here is *feel*.)" (p37) [documented]; a trailing ellipsis in the flows ("May we suggest...") [observed]; "Wear and repeat:" before a mantra [observed]; one short Homemade Apple script line per asset, social and email only (Gate 1, C5) [documented, DECISIONS 2026-10-17].
 
-The rule [derived]: at most one device per piece; a device never stands in for the point; none is ever required, and no check rewards one.
+The rule [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12): at most one device per piece; a device never stands in for the point; none is ever required, and no check rewards one.
 
 ## 6. House conventions
 
@@ -165,5 +165,5 @@ The live series (lane D's registry, `type-registry-core.json`) [observed]: Words
 ## 9. Open
 
 - Ruled at Gate 2 (Eddie, 2026-10-21; DECISIONS): the five qualities as the register tags, with their definitions, checks and not-like lines (call 1); the house conventions in section 6 (call 7); the founder's first person (call 8).
-- Still [derived]: section 4, rules 2 and 3, and the devices rule in section 5. The italic accent word is Gate 2 package item 10; the tag grammar for ratified values is package item 4.
+- Ruled at Gate 2 (Eddie, 2026-10-22; DECISIONS): section 4, rules 2 and 3, and the devices rule in section 5 (Gate 2 package call 12); the italic accent word, one per display line or headline (Gate 2 package call 10), which HLR hears at Review 1; the tag grammar for ratified values (Gate 2 package call 4).
 - Review 1 (HLR): C2 positioning and who signs claims; C1 name forms; C7 the tagline; C10 offers; which social franchises are current; whether founder first-person copy is wanted beyond captions and letters.
