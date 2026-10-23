@@ -2,6 +2,25 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-21: lane H, engine 0.5.3
+
+- Tests written against the real pack's shape first made the pack the oracle: on lane B's canvas-mode `tokens.json` the plan came out at the token proposal's forecast to the count (Primitives 17, Semantic 10, Component 16, Layout 45, 15 styles, 14 not planned) on the first run of the new code.
+- Moving a tier onto modes moves everything that sits in it. Family and style variables live in Layout, so canvas modes turned the stand-in switch from 8 values into 24, and the build's leave-it rule into a per-mode rule; round 1 found it, not the six-item spec. Before putting modes on a collection, list every variable it holds and what each one's per-mode value means.
+- A check that reads each value in the mode its own node resolves to proves nothing about the frame's mode. Compare every node with the mode the frame is meant to have, so a pin the inventory cannot see as an override still shows as a node off its canvas.
+- A recipe kept in markdown can be tested: the canvas tests cut the js block out of figma-recipes.md and run it on a mock of the Plugin API surface it touches, so the recipe and the script that reads its output cannot drift apart unseen.
+- A fix tested on the shape the recipe builds can miss the shape the finding names: R2-02's fix covered the recipe's own placeholder frame, and round 3 found the same failure on an `E##` placeholder element and on the agent package's rectangle. Test the inputs a finding names, in the shapes the next step will build.
+- Round 3 read a build whose Mac battery had not run, so its one blocker was a check nobody had run yet; then the Mac dropped off the bridge after a container restart and held the close. Run the battery on each build before its review round, so the round reads that build's log. A container restart stopped round 2 mid-run; messaging the same reviewer resumed it with its context.
+- The file tools turned a typed backslash-u escape into the em dash itself in a new test file (lane C and lane F saw the same); the byte grep over the added lines caught it. Build such characters with String.fromCharCode.
+- An input landed mid-lane again: lane E wrote `brand-context.md` while the release was in its checks, so resolution moved from rc 1 to rc 0 and the bundle note's pack-state line went stale (round 1, R1-04). Read each check's lines against the pack as it is at the final build, not against the last release's expected values. And lane C's Gate 2 rulings routed an engine gap to 0.5.3 after round 3 had read the final build; the DECISIONS re-read before the handover caught it, and it moved to 0.5.4.
+- The Plugin API reference names `renameMode`, `addMode` and `resolvedVariableModes` but says nothing of what a new mode copies or whether an instance reports its main component's explicit mode: the plan states every mode's value, and the check is built to hold under either answer.
+- Cost: the three review subagents 0.42M, 0.51M and 0.49M tokens (1.42M); main chat not measured; no Figma calls.
+
+## 2026-10-21: lane C, Gate 2 rulings applied
+
+- A ruling can fall between the options offered: Eddie answered calls 4 and 5 with "no strong flag" and "flag, no sign-off", which neither option carried. The engine has no flag-only severity; info with `paraphrase_risk` is its one non-blocking path, and it flags by count, not by line. Offer that posture as an option the next time a claims row goes to a gate.
+- Lane E packaged lane C's calls as items 11 to 18 while Eddie ruled them here by lane C's numbers. Cite both numbers in the record, or the two lists drift.
+- Cost: not measured; no subagents; no Figma calls.
+
 ## 2026-10-20: restart triage and git checkpoint
 
 - The lane protocol patches the records but never commits: the 2026-10-18 lanes sat untracked for two days until this checkpoint. Commit at each gate from one chat while no lane writes.

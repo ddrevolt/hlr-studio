@@ -1,8 +1,8 @@
 {
  "_role": "legal_ledger",
  "_status": "test-seed",
- "version": "hlr-ledger-0.1.0 (test-seed, 2026-10-18)",
- "_note": "HLR's claims ledger seed (Pack v0, lane C, 2026-10-18). Built from outputs/step-1-review/site/claims-scan-2026-10-17.md, the corpus re-cut (outputs/step-2-pack/corpus/), the brand book Copy section (p25 to p38) and Brand Review v2 (C2, C10, Q1, Q7); nothing from memory. Every row waits for a ruling from HLR's claims signer, who is not yet named (C2, Review 1). Status test-seed: the lints enforce every row provisionally and say so; nothing here is counsel-approved and no row clears copy for production. Severity uses the engine's words (lib/claims.js): needs_legal blocks every lint, craft mode included, until the row is ruled; conditional asks a person to confirm and record each use (craft mode reports it); info never blocks. The playbook's three statuses map as allowed = approved, needs_legal = needs_legal, blocked = prohibited, plus conditional for rows a person confirms per use. The prohibited patterns in brand-context.md are the floor every brief inherits and are not repeated here. Trigger rows are [derived]; their evidence is [observed] or [documented] as each says.",
+ "version": "hlr-ledger-0.2.0 (test-seed, 2026-10-21; Gate 2 rulings applied)",
+ "_note": "HLR's claims ledger seed (Pack v0, lane C, 2026-10-18). Built from outputs/step-1-review/site/claims-scan-2026-10-17.md, the corpus re-cut (outputs/step-2-pack/corpus/), the brand book Copy section (p25 to p38) and Brand Review v2 (C2, C10, Q1, Q7); nothing from memory. Every row waits for a ruling from HLR's claims signer, who is not yet named (C2, Review 1). Status test-seed: the lints enforce every row provisionally and say so; nothing here is counsel-approved and no row clears copy for production. Severity uses the engine's words (lib/claims.js): needs_legal blocks every lint, craft mode included, until the row is ruled; conditional asks a person to confirm and record each use (craft mode reports it); info never blocks. Rows marked paraphrase_risk are listed in every lint's checked.paraphrase_review with their hit count, matched or not, for the verifier: that is how the metal and karat row and the five metaphysical rows are flagged without a sign-off (Eddie, Gate 2, 2026-10-21). The engine has no severity that flags each matching line without blocking (engine gap, for 0.5.3). The playbook's three statuses map as allowed = approved, needs_legal = needs_legal, blocked = prohibited, plus conditional for rows a person confirms per use. The prohibited patterns in brand-context.md are the floor every brief inherits and are not repeated here. Trigger rows are [derived]; their evidence is [observed] or [documented] as each says.",
  "trigger_format": "regex",
  "signer": null,
  "sources": [
@@ -31,11 +31,11 @@
    "owner": "HLR's claims signer (not yet named; C2, Review 1)"
   },
   "materials": {
-   "posture": "conditional: a person confirms each use against the product facts",
+   "posture": "HLR-K01 metal and karat: info, listed for the verifier, never blocks (Eddie, Gate 2, 2026-10-21); HLR-K02 durability and guarantees: conditional, a person confirms each use",
    "owner": "HLR (Shopify export, Review 1)"
   },
   "metaphysical": {
-   "posture": "conditional: allowed as tradition, intention or ritual framing once C2 is ruled; each use signed until then",
+   "posture": "info: listed for the verifier in every lint report, never blocks (Eddie, Gate 2, 2026-10-21); framed as tradition or intention per the voice contract; C2 may change it",
    "owner": "HLR's claims signer (not yet named; C2, Review 1)"
   },
   "endorsements": {
@@ -301,7 +301,7 @@
   {
    "id": "HLR-K01",
    "topic": "materials",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Metal and karat",
    "lemmas": [
     "karat",
@@ -317,9 +317,10 @@
     "\\b(9|10|14|18|22|24)\\s?k(t|arat)?\\b",
     "\\b925\\b"
    ],
-   "requires": "The metal and karat exactly as the product database carries them for the piece named, from HLR's Shopify export (products.json gap: metals and karat by variant; Review 1). A person confirms and records it; nothing machine-checks it yet.",
-   "ruling": null,
-   "evidence": "[observed] claims scan: '14k / 18k / solid gold' 89 products, 'gold filled' 57, 'sterling silver' 83; corpus: email 36 lines, social 17, paid 29 ('18k solid gold Recycled'). The figure rule blocks a karat number the facts layer does not carry."
+   "requires": "Write the metal and karat exactly as the product database carries them for the piece named (variants: HLR's Shopify export, Review 1). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 4). A karat number is also a figure, and the figure rule still needs it in the facts layer or the brief.",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 4; package item 14): no strong flag. Severity info with paraphrase_risk: listed, never blocks.",
+   "evidence": "[observed] claims scan: '14k / 18k / solid gold' 89 products, 'gold filled' 57, 'sterling silver' 83; corpus: email 36 lines, social 17, paid 29 ('18k solid gold Recycled'). The figure rule blocks a karat number the facts layer does not carry.",
+   "paraphrase_risk": true
   },
   {
    "id": "HLR-K02",
@@ -348,7 +349,7 @@
   {
    "id": "HLR-M01",
    "topic": "metaphysical",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Protection and warding stated as what the piece does",
    "triggers": [
     "\\bprotects?\\s+(you|your|against|from|the wearer)\\b",
@@ -366,8 +367,8 @@
     "\\b(deflect|deflects|deflecting|release|releases|releasing)\\s+(negativity|negative energ(y|ies))\\b"
    ],
    "trigger_format": "regex",
-   "requires": "HLR's C2 ruling on how far spiritual benefit may go, then a person's sign-off on each use. Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect. Any piece that carries one also carries the footer disclaimer (HLR-REQ-01).",
-   "ruling": null,
+   "requires": "Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect; a piece that carries one also carries the footer disclaimer (HLR-REQ-01). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 5). HLR's C2 ruling may still change the posture.",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 5; package item 13): flag, no sign-off. Severity info with paraphrase_risk: listed, never blocks.",
    "evidence": "[observed] claims scan: 'protect' 50 products, 'ward off / repel / shield' 33, 'negativity' 49; corpus: 'Protect your energy', 'grounds and protects your energy', paid 'blocks evil eye & boosts divine defenses'. [documented p37] the book's own example: 'known to ward off negativity'.",
    "paraphrase_risk": true,
    "note": "Product names that carry 'Protection' (Seeds of Protection, Birthstone Protection Amulet) are not triggers; the claim forms are."
@@ -375,7 +376,7 @@
   {
    "id": "HLR-M02",
    "topic": "metaphysical",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Abundance, luck, love and manifestation stated as an outcome",
    "lemmas": [
     "attract",
@@ -393,8 +394,8 @@
     "\\bcall(s|ing)? in\\s+(abundance|wealth|money|love)\\b",
     "\\b(invite|invites|inviting)\\s+(abundance|wealth|luck|money|prosperity)\\b"
    ],
-   "requires": "As HLR-M01: C2, then a sign-off per use, framed as intention, never as a result.",
-   "ruling": null,
+   "requires": "Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect; a piece that carries one also carries the footer disclaimer (HLR-REQ-01). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 5). HLR's C2 ruling may still change the posture.",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 5; package item 13): flag, no sign-off. Severity info with paraphrase_risk: listed, never blocks.",
    "evidence": "[observed] claims scan: 'abundance / wealth / prosperity' 20 products, 'manifest / attract / luck' 29; corpus: 'This lucky stone of opportunity', paid 'Attracts love', 'THE “MERCHANT’S STONE” attracts success'.",
    "note": "'Abundance' alone is one of the book's sensual words (p29) and is not a trigger; 'attract abundance' is.",
    "paraphrase_risk": true
@@ -402,7 +403,7 @@
   {
    "id": "HLR-M03",
    "topic": "metaphysical",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Energy work done to the piece: activated, charged, infused, blessed",
    "lemmas": [
     "activate",
@@ -419,14 +420,15 @@
     "\\bblessed (by|with|under|in)\\b",
     "\\benergy[- ]charged\\b"
    ],
-   "requires": "HLR's C2 ruling, and HLR's confirmation that the process happens for the piece named.",
-   "ruling": null,
-   "evidence": "[observed] claims scan: 'charged / blessed / infused' 32 products, 'healer-activated / activated' 32; corpus: 'charged and blessed by the founder', paid 'Charged by an Energy Healer & packaged in a ceremony', 'Energy-infused Fine Jewelry'; web PDP badge 'Energy-Charged'. Brand Review v2 C2: the live positioning 'Healer-Activated'."
+   "requires": "Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect; a piece that carries one also carries the footer disclaimer (HLR-REQ-01). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 5). HLR's C2 ruling may still change the posture. Whether the process happens for the piece named is HLR's to confirm (C2).",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 5; package item 13): flag, no sign-off. Severity info with paraphrase_risk: listed, never blocks.",
+   "evidence": "[observed] claims scan: 'charged / blessed / infused' 32 products, 'healer-activated / activated' 32; corpus: 'charged and blessed by the founder', paid 'Charged by an Energy Healer & packaged in a ceremony', 'Energy-infused Fine Jewelry'; web PDP badge 'Energy-Charged'. Brand Review v2 C2: the live positioning 'Healer-Activated'.",
+   "paraphrase_risk": true
   },
   {
    "id": "HLR-M04",
    "topic": "metaphysical",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Chakra, vibration, frequency and aura",
    "lemmas": [
     "chakra",
@@ -440,14 +442,15 @@
     "\\braise(s)? your vibe",
     "\\bbalance(s)? (your )?(energy|chakras)\\b"
    ],
-   "requires": "As HLR-M01.",
-   "ruling": null,
-   "evidence": "[observed] claims scan: 'chakra' 34 products, 'vibration / frequency' 29; corpus: 'promotes alignment of the chakras', paid 'Balance your energy'. The two products with the non-stone tail 'Chakra' trip it by name."
+   "requires": "Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect; a piece that carries one also carries the footer disclaimer (HLR-REQ-01). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 5). HLR's C2 ruling may still change the posture.",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 5; package item 13): flag, no sign-off. Severity info with paraphrase_risk: listed, never blocks.",
+   "evidence": "[observed] claims scan: 'chakra' 34 products, 'vibration / frequency' 29; corpus: 'promotes alignment of the chakras', paid 'Balance your energy'. The two products with the non-stone tail 'Chakra' trip it by name.",
+   "paraphrase_risk": true
   },
   {
    "id": "HLR-M05",
    "topic": "metaphysical",
-   "severity": "conditional",
+   "severity": "info",
    "title": "Stone meaning stated as an outcome",
    "triggers": [
     "\\b(boost|boosts|enhance|enhances|amplify|amplifies|heighten|heightens|increase|increases|promote|promotes|restore|restores|cleanse|cleanses|unblock|unblocks|release|releases)\\s+(your\\s+)?(\\w+\\s+)?(intuition|clarity|confidence|courage|focus|energy|creativity|self[- ]love|love|abundance|aura|chakras?|blocks|negativity|emotions|optimism|awareness|vitality|radiance)\\b",
@@ -455,8 +458,8 @@
     "\\b(calm|calms|soothe|soothes|soothing)\\s+(your\\s+|the\\s+)?(mind|nerves|heart|spirit|soul|emotions)\\b"
    ],
    "trigger_format": "regex",
-   "requires": "As HLR-M01. A stone's meaning is said as what the stone has long stood for, never as what it will do for the reader.",
-   "ruling": null,
+   "requires": "Framed as tradition or intention ('worn as a reminder to', 'long held as a stone of'), never as a promised effect; a piece that carries one also carries the footer disclaimer (HLR-REQ-01). No sign-off: every lint lists this row for the verifier under checked.paraphrase_review with its hit count, and nothing blocks on it (Eddie, Gate 2, lane C call 5). HLR's C2 ruling may still change the posture. A stone's meaning is said as what the stone has long stood for, never as what it will do for the reader.",
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 5; package item 13): flag, no sign-off. Severity info with paraphrase_risk: listed, never blocks.",
    "evidence": "[observed] corpus: paid annotated builds 'BOOST INTUITION', 'calm the mind'; social 'boosts confidence'; email 'helps release negativity'. Lane D: annotated and meaning types carry high claims exposure.",
    "paraphrase_risk": true
   },
@@ -540,7 +543,7 @@
    ],
    "trigger_format": "literal",
    "requires": "Carried verbatim, never paraphrased, in the footer of every email and on every product page, and wherever a line carries a health-adjacent or metaphysical benefit (the M entries). Brief-fed into the disclaimer slot. Whether paid and organic social carry it, and in what form, is HLR's to rule (C2).",
-   "ruling": null,
+   "ruling": "Eddie, 2026-10-21 (Gate 2, lane C call 6; package item 16): its own row, fed by the brief into the footer slot.",
    "evidence": "[observed] highlightrituals.com footer, read 2026-10-17 (outputs/step-1-review/site/claims-scan-2026-10-17.md). Brand Review v2 Q1: the only required language found.",
    "required_language": "We have experienced the transformative power of crystals and stones firsthand, but we do not consider energy work to be a substitute for medical treatment. Our products are not intended to diagnose or treat ailments.",
    "note": "Status info, so no lint blocks on it: the lints check required language line by line, and a footer is its own slot. The literal trigger records each run that carries it. Every trigger in this ledger and every prohibited pattern is tested against this text and must not match it."
