@@ -1,0 +1,89 @@
+{
+ "brief_slug": "protection-of-energy",
+ "angle": 1,
+ "register": "real",
+ "subjects": [
+  {
+   "subject": "Scorpio season is here",
+   "preview": "Keep your energy yours. Two pieces in black tourmaline."
+  },
+  {
+   "subject": "Black tourmaline, long held as a stone of protection",
+   "preview": "Two bracelets, one stone, worn as a reminder."
+  },
+  {
+   "subject": "How will you keep your energy your own?",
+   "preview": "A few small rituals for the first days of the season."
+  }
+ ],
+ "hero": {
+  "module": "M02",
+  "slots": {
+   "M02.eyebrow": "SCORPIO SEASON",
+   "M02.headline": "Keep your energy _yours_",
+   "M02.body": "The season has just begun. Two bracelets in black tourmaline, long held as a stone of protection, worn as a reminder to keep your energy your own.",
+   "E01.label": "SHOP PROTECTION"
+  }
+ },
+ "blocks": [
+  {
+   "module": "M04",
+   "slots": {
+    "M04.headline": "One stone, long held as _protection_",
+    "M04.body": "Black tourmaline has long been held as a stone of protection. Worn as a reminder, it is a quiet, steady way to keep your energy your own."
+   }
+  },
+  {
+   "module": "M06",
+   "slots": {
+    "M06.heading": "The two for protection"
+   },
+   "cards": [
+    {
+     "product_id": "the-classic-bracelet-in-black-tourmaline",
+     "slots": {
+      "E06.name": "The Classic Bracelet in Black Tourmaline",
+      "E02.label": "Shop"
+     }
+    },
+    {
+     "product_id": "the-seeds-of-protection-bracelet",
+     "slots": {
+      "E06.name": "The Seeds of Protection Bracelet in Black Tourmaline",
+      "E02.label": "Shop"
+     }
+    }
+   ]
+  },
+  {
+   "module": "M04",
+   "slots": {
+    "M04.eyebrow": "SCORPIO SEASON",
+    "M04.headline": "A few small _rituals_ for the season",
+    "M04.body": "Three ideas for this week. Write down what you are ready to release. Light a candle and name one thing you are keeping. Spend a few quiet minutes with your phone put away."
+   },
+   "note": "The secondary block the brief asks for; the producer sets it on its own ground. The ideas are plain rituals, none promises an effect. Donnie keeps, cuts or swaps them."
+  },
+  {
+   "module": "M03",
+   "slots": {
+    "M03.eyebrow": "FOR THE SEASON",
+    "M03.name": "The Scorpio Crystal Set",
+    "E02.label": "Shop now"
+   },
+   "note": "The closing spotlight. The set lists no contents in products.json, so the block carries the name only (owner: Donnie, if a contents line is wanted)."
+  }
+ ],
+ "cta": {
+  "label": "SHOP PROTECTION",
+  "link_token": "{{cta_url}}"
+ },
+ "footer": {
+  "module": "M09",
+  "disclaimer_token": "{{footer_disclaimer}}",
+  "legal_tokens": [
+   "{{unsubscribe_url}}",
+   "{{postal_address}}"
+  ]
+ }
+}

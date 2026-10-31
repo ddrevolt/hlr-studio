@@ -276,5 +276,65 @@ class StrategistTests(Tmp):
         self.assertFails(self.go("protection-of-energy", emdash), "em dash")
 
 
+class EmailAndHygieneTests(Tmp):
+    def go(self, case, fn, intake_fn=None):
+        c = CASES[case]
+        doc = load(os.path.join(c["dir"], "email.json"))
+        fn(doc)
+        intake = load(os.path.join(c["dir"], "intake.json"))
+        if intake_fn:
+            intake_fn(intake)
+        self.write("intake.json", intake)
+        return check("email_check.py", self.write("email.json", doc))
+
+    def test_both_briefs_give_a_valid_block_list(self):
+        schema = load(os.path.join(CREW, "email", "schema.json"))
+        for name, c in CASES.items():
+            p = os.path.join(c["dir"], "email.json")
+            self.assertEqual(run.validate(load(p), schema), [], name)
+            r = check("email_check.py", p)
+            self.assertEqual(r.returncode, 0, name + r.stdout)
+
+    def test_mutated_email_fails(self):
+        cases = []
+
+        def long(d):
+            d["hero"]["slots"]["M02.headline"] = "Keep your energy _yours_ " * 8
+        cases.append((long, "max_chars"))
+
+        def foreign(d):
+            d["blocks"][0]["slots"]["M04.body"] += " Pair it with The Master Protection Spell Bracelet."
+        cases.append((foreign, "does not carry"))
+
+        def price(d):
+            d["blocks"][0]["slots"]["M04.body"] += " From $48."
+        cases.append((price, "typed"))
+
+        def token(d):
+            d["blocks"][0]["slots"]["M04.body"] += " {{invented_token}}"
+        cases.append((token, "neither in the intake"))
+
+        def name(d):
+            d["blocks"][-1]["slots"]["M03.name"] = "The Invented Set"
+        cases.append((name, "not a display name"))
+
+        def claim(d):
+            d["blocks"][0]["slots"]["M04.body"] += " It can cure worry."
+        cases.append((claim, "prohibited"))
+
+        def slug(d):
+            d["brief_slug"] = "other"
+        cases.append((slug, "slug"))
+
+        for fn, needle in cases:
+            r = self.go("protection-of-energy", fn)
+            self.assertEqual(r.returncode, 1, (needle, r.stdout))
+            self.assertIn(needle, r.stdout)
+
+    def test_em_dash_baseline_is_empty(self):
+        lines = [l for l in read(os.path.join(ROOT, "build", "emdash_baseline.txt")).splitlines() if l.strip() and not l.startswith("#")]
+        self.assertEqual(lines, [])
+
+
 if __name__ == "__main__":
     unittest.main()
