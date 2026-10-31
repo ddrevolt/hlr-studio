@@ -2,6 +2,14 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, email-html
+
+- Done: `crew/producers/email_html.py` builds one table-based twin per module (M01 to M27) at 600 and 1200 wide, each slot shown as its own id, and assembles the email writer's block list to one HTML file (protection of energy: M01, M02, M04, M06, M04, M03, M14, M09; only merge tokens left). `email_screens.py` saves a Playwright screenshot per twin and checks that the 600 render is half the 1200 render. `outputs/step-8-email/report.md` lists every [derived] dimension and every gap with its owner.
+- Checked: `bash build/checks.sh` PASS (41 crew tests, em dash 0 new). Fresh-context review: 0 blockers, 4 should-fix (hero text ink on a photo, an untagged muted color, clickable footer nav, fixed-width limit), all fixed or documented; 6 notes, three logged in the report.
+- Findings by severity: blocker 0; should-fix 4, closed; note 6, open (M02 Show wordmark unrendered, E08 stars as glyphs, no VML hero fallback).
+- Waiting on Eddie: compare the twins' geometry with the Figma masters (a Figma read in his chat); a send test once Klaviyo access exists; font licenses. Waiting on Donnie: none. Next: klaviyo-push waits on a key; paid-package.
+- Cost: not measured. One read-only review subagent.
+
 ## 2026-10-31: runner, crew-paid
 
 - Done: `brand-pack/placement-specs.json` holds Meta's placement limits as nulls with the gap and its owner (Eddie, item paid-specs), so the absence is loud. `paid_check.py` requires `spec_confidence` to equal the file's status, enforces any limit once a person fills it, and fails any numeral in ad copy that the intake does not carry. The paid prompt dropped its working limits (125, 40, 30) because no source backs them, and now includes the specs file.

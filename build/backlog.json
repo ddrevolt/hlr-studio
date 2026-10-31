@@ -226,7 +226,7 @@
       "name": "HTML twins of the module library and the assembler",
       "step": "8",
       "kind": "producer",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "One HTML and CSS twin per module (M01 to M27) built from tokens.css and the slot map, table-based for email clients, assembled from the email writer’s block list into one Klaviyo-ready HTML file, with a screenshot check (Playwright) against the Figma master’s proportions. No Figma call.",
       "sources": [],
@@ -239,7 +239,8 @@
         "crew-email"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Pull request opened by run 2026-10-31-1357: twins M01 to M27 at 600 and 1200, assembler, Playwright screenshots; layout geometry [derived], see outputs/step-8-email/report.md."
     },
     {
       "id": "klaviyo-push",

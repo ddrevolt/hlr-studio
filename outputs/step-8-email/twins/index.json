@@ -1,0 +1,126 @@
+{
+ "M01": [],
+ "M02": [
+  "E01.label",
+  "M02.body",
+  "M02.eyebrow",
+  "M02.headline",
+  "M02.script"
+ ],
+ "M03": [
+  "E02.label",
+  "M03.eyebrow",
+  "M03.name"
+ ],
+ "M04": [
+  "E01.label",
+  "M04.body",
+  "M04.eyebrow",
+  "M04.headline"
+ ],
+ "M05": [],
+ "M06": [
+  "E02.label",
+  "E06.name",
+  "M06.heading"
+ ],
+ "M07": [
+  "M07.mantra",
+  "M07.script"
+ ],
+ "M08": [
+  "M08.line"
+ ],
+ "M09": [
+  "M09.disclaimer",
+  "M09.legal",
+  "M09.nav1.label",
+  "M09.nav2.label",
+  "M09.nav3.label"
+ ],
+ "M10": [],
+ "M11": [
+  "M11.body",
+  "M11.cta",
+  "M11.eyebrow",
+  "M11.headline"
+ ],
+ "M12": [
+  "M12.body",
+  "M12.cta",
+  "M12.headline"
+ ],
+ "M13": [
+  "E01.label",
+  "M13.heading",
+  "M13.list"
+ ],
+ "M14": [
+  "E01.label"
+ ],
+ "M15": [
+  "E02.label",
+  "E07.label",
+  "E07.name",
+  "M15.heading"
+ ],
+ "M16": [
+  "M16.body",
+  "M16.headline"
+ ],
+ "M17": [
+  "M17.body",
+  "M17.eyebrow",
+  "M17.headline",
+  "M17.signoff"
+ ],
+ "M18": [
+  "E02.label",
+  "M18.attribution",
+  "M18.body",
+  "M18.quote"
+ ],
+ "M19": [
+  "E01.label",
+  "M19.eyebrow",
+  "M19.headline",
+  "M19.terms"
+ ],
+ "M20": [],
+ "M21": [
+  "M21.row1.body",
+  "M21.row1.label",
+  "M21.row2.body",
+  "M21.row2.label",
+  "M21.row3.body",
+  "M21.row3.label",
+  "M21.row4.body",
+  "M21.row4.label"
+ ],
+ "M22": [
+  "E01.label",
+  "M22.body",
+  "M22.eyebrow",
+  "M22.headline"
+ ],
+ "M23": [],
+ "M24": [
+  "M24.disclaimer",
+  "M24.legal",
+  "M24.nav1.label",
+  "M24.nav2.label",
+  "M24.nav3.label"
+ ],
+ "M25": [
+  "M25.line"
+ ],
+ "M26": [
+  "E01.label",
+  "M26.body",
+  "M26.headline"
+ ],
+ "M27": [
+  "M27.date",
+  "M27.title"
+ ]
+}
