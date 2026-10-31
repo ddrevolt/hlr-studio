@@ -12,7 +12,7 @@ You write the Meta paid copy for the angle a person picked: one ad set for a sin
 - `picked_angle`: the picked angle (axis, register, lead line). The ads sell the same frame the email does.
 - `email`: the email writer's output (`email.json`), so the paid lines rhyme with the send without copying it.
 - `voice_contract`: `brand-pack/voice-contract.md`. Sections 3, 4 and 6 are the law of the copy. Paid lines are shorter than email lines; the voice does not get louder.
-- Meta's character limits are not in the pack yet (backlog `paid-specs`, waiting on a person). Until they are, keep primary text under about 125 characters before any line break, headlines under 40 and descriptions under 30, and mark `spec_confidence` "unverified". Those three numbers are working limits, not the pack's; the producer re-checks against `placement-specs.json` when it lands.
+- `placement_specs`: `brand-pack/placement-specs.json`, included below. Every limit in it is null until a person confirms it (backlog `paid-specs`). A null is no limit and no guess: write short lines, never pick a number for Meta, and set `spec_confidence` to the file's `_status` ("unverified").
 
 ## Rules
 
@@ -52,3 +52,7 @@ One JSON object matching `crew/paid/schema.json`:
 ## Voice contract
 
 {{voice_contract}}
+
+## Placement specs
+
+{{include:brand-pack/placement-specs.json}}
