@@ -2,6 +2,15 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, paid-package
+
+- Done: `crew/producers/figma_package.py` and `outputs/step-9-paid/agent-package.md`: three paste-ready packages for the native agent (feed 1:1, feed 4:5, story 9:16) built from `slotmap-paid.yaml` (P01 to P08 at each ratio, P09 on 9:16; 50, 50 and 51 slots), `tokens.json`, `figma.yaml` and `placement-specs.json`. Every slot id carries its budget statement (all null, said so), every package carries the license flag and the notice text, the 9:16 keep-clear is flagged unverified with no number, and no copy is typed (each text layer holds its merge value). `crew/tests/test_figma_package.py`: 21 tests, a lint case per format and mutation cases.
+- Checked: `bash build/checks.sh` PASS (guard suite, 17 pack mutants, 18 engine test files, crew tests, em dash 0 new). Fresh-context review (read-only subagent): 0 blockers, 5 should-fix fixed (a keep-clear line that forbade the layers the package requires, a request for new variables outside the frames, the source status not stated, the feed padding source misquoted, the license notice without text), 5 notes, 3 fixed (budget owner wording, single-frame note, date default), 2 left (role to text style map is derived; one process note closed here).
+- Findings: none open. The role to text style map (hook, title, headline, offer to `headline`, and so on) is [derived] for Donnie; the press quote on the headline style is a design call.
+- Waiting on Eddie: `paid-specs` (the Meta numbers) and `review-2-outcome`: `slotmap-paid.yaml` is proposed and held for Review 2, so the package is a build proposal, not a ruling. Read the package, then set paid-package done if it serves. Waiting on Donnie: the style map. PR #6 (email-html) is open and conflicts with main (a stale copy of merged PR #5); the runner did not resolve it, see the run log.
+- Next: klaviyo-push waits on a key (klaviyo-access). Nothing else is ready.
+- Cost: one read-only review subagent; tokens not measured.
+
 ## 2026-10-31: runner, claude-md
 
 - Done: `CLAUDE.md` at the repo root (47 lines: where things are, ten standing rules as they stand after Phase 2, how to run the crew on any endpoint, open and close, checks, the runner) and `crew/README.md` brought current (the email HTML producer is built; the Klaviyo push and Figma package are named as not built). `crew/tests/test_records.py` keeps both under 100 lines, free of em dashes, and every path they name resolving.
