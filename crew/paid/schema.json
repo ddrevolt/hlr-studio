@@ -1,0 +1,100 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "crew paid output: Meta ad sets for the picked angle",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "brief_slug",
+  "angle",
+  "register",
+  "ad_sets"
+ ],
+ "properties": {
+  "brief_slug": {
+   "type": "string",
+   "minLength": 1
+  },
+  "angle": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "register": {
+   "type": "string",
+   "enum": [
+    "eloquent",
+    "refined",
+    "sensual",
+    "real",
+    "uplifting"
+   ]
+  },
+  "ad_sets": {
+   "type": "array",
+   "minItems": 1,
+   "maxItems": 2,
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "ad_type",
+     "primary_text",
+     "headline",
+     "description",
+     "hooks",
+     "spec_confidence"
+    ],
+    "properties": {
+     "ad_type": {
+      "type": "string",
+      "enum": [
+       "single_image",
+       "story"
+      ]
+     },
+     "primary_text": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^[^\\u2014]*$"
+      }
+     },
+     "headline": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^[^\\u2014]*$"
+      }
+     },
+     "description": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^[^\\u2014]*$"
+     },
+     "hooks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^[^\\u2014]*$"
+      }
+     },
+     "spec_confidence": {
+      "type": "string",
+      "enum": [
+       "unverified"
+      ]
+     }
+    }
+   }
+  }
+ }
+}
