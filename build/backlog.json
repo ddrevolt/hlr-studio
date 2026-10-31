@@ -227,7 +227,7 @@
       "name": "HTML twins of the module library and the assembler",
       "step": "8",
       "kind": "producer",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "One HTML and CSS twin per module (M01 to M27) built from tokens.css and the slot map, table-based for email clients, assembled from the email writer’s block list into one Klaviyo-ready HTML file, with a screenshot check (Playwright) against the Figma master’s proportions. No Figma call.",
       "sources": [],
@@ -240,7 +240,8 @@
         "crew-email"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner, fifth run): crew/producers/email_html/ with twins for M01 to M27 at 1200 and 600 (slots match slotmap.yaml), an assembler from the email writer's block list, a Playwright screenshot per module per width, and protection-of-energy rendered at both widths with no unfilled slot. Faces are stand-ins until licenses are cleared; images are labelled placeholders; nav labels and product links are merge tokens. The Figma master was not read (no Figma call), so proportions come from the email canvas sizes in tokens.flat.json and a person compares against the master."
     },
     {
       "id": "klaviyo-push",
