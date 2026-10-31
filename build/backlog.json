@@ -184,7 +184,7 @@
       "name": "Paid writer co-worker: Meta single image and story first",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "prompt.md and schema.json: primary text (3), headline (3), description, per ad type (single image, story), hook variants, with the paid specs from placement-specs.json carried as unverified until paid-specs closes. Check: paid_lint.",
       "sources": [],
@@ -199,7 +199,7 @@
       ],
       "gate": null,
       "needs_you": "",
-      "note": "Runner 2026-10-31: not started. Acceptance wants placement-specs.json, which the pack lacks until paid-specs closes (Meta numbers from a person)."
+      "note": "Built 2026-10-31 (runner, third run): brand-pack/placement-specs.json with every limit null and Eddie as owner; paid_check reads it (spec_confidence must equal its status, a filled limit is enforced, every numeral in ad copy must be in the intake); prompt no longer carries working limits. The engine paid_lint.js stays SKIPPED on the crew shape. The file is not yet listed in brand-context.md's File map (a pack contract change for Eddie)."
     },
     {
       "id": "crew-editor",

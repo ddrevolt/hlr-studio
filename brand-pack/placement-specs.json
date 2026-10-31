@@ -1,0 +1,31 @@
+{
+ "_role": "placement_specs",
+ "_status": "unverified",
+ "_note": "Meta placement limits for the paid writer. Every number is null: Meta's Ads Guide refuses automated reads (LEARNINGS 2026-10-17) and no person has confirmed the figures. The paid writer and paid_check carry the specs as unverified until the paid-specs item closes. Loud absence, not a guess.",
+ "gap": {
+  "item": "paid-specs",
+  "owner": "Eddie",
+  "ask": "Read Meta's Ads Guide for the 9:16 safe zones and the primary text and headline limits, and give the numbers with the date read, or edit this file."
+ },
+ "meta": {
+  "single_image": {
+   "primary_text_max_chars": null,
+   "headline_max_chars": null,
+   "description_max_chars": null,
+   "ratios": ["1:1", "4:5"],
+   "ratios_source": "DECISIONS 2026-10-17 (Q11): Meta 1:1, 4:5 and 9:16"
+  },
+  "story": {
+   "primary_text_max_chars": null,
+   "headline_max_chars": null,
+   "ratios": ["9:16"],
+   "safe_zone_top_px": null,
+   "safe_zone_bottom_px": null,
+   "ratios_source": "DECISIONS 2026-10-17 (Q11): Meta 1:1, 4:5 and 9:16"
+  }
+ },
+ "confidence": {
+  "numbers": "none confirmed; every figure above is null",
+  "ratios": "[documented] in DECISIONS 2026-10-17"
+ }
+}

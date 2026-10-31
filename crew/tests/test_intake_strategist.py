@@ -276,6 +276,60 @@ class StrategistTests(Tmp):
         self.assertFails(self.go("protection-of-energy", emdash), "em dash")
 
 
+class PaidTests(Tmp):
+    def go(self, fn, specs_fn=None):
+        doc = load(os.path.join(FX, "dry-run", "paid.json"))
+        fn(doc)
+        self.write("intake.json", load(os.path.join(FX, "dry-run", "intake.json")))
+        out = self.write("paid.json", doc)
+        pack = os.path.join(ROOT, "brand-pack")
+        if specs_fn:
+            import shutil
+            pack = os.path.join(self.tmp, "pack")
+            shutil.copytree(os.path.join(ROOT, "brand-pack"), pack, ignore=shutil.ignore_patterns("web"))
+            sp = load(os.path.join(pack, "placement-specs.json"))
+            specs_fn(sp)
+            self.write("pack/placement-specs.json", sp)
+        return check("paid_check.py", out, "--pack", pack)
+
+    def test_specs_file_is_all_null_and_unverified(self):
+        sp = load(os.path.join(ROOT, "brand-pack", "placement-specs.json"))
+        self.assertEqual(sp["_status"], "unverified")
+        self.assertEqual(sp["gap"]["owner"], "Eddie")
+        def nums(o):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    if k in ("meta",) or isinstance(v, (dict, list)):
+                        nums(v)
+                    elif k.endswith(("_chars", "_px")):
+                        self.assertIsNone(v, k)
+        nums(sp["meta"])
+
+    def test_fixture_passes_and_mutations_fail(self):
+        r = self.go(lambda d: None)
+        self.assertEqual(r.returncode, 0, r.stdout)
+
+        def conf(d):
+            d["ad_sets"][0]["spec_confidence"] = "confirmed"
+        r = self.go(conf)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("placement-specs.json's status", r.stdout)
+
+        def num(d):
+            d["ad_sets"][0]["headline"][0] = "Seven days of calm"
+            d["ad_sets"][0]["primary_text"][0] += " 7 days."
+        r = self.go(num)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("the number 7", r.stdout)
+
+    def test_a_filled_limit_is_enforced(self):
+        def fill(sp):
+            sp["meta"]["single_image"]["headline_max_chars"] = 10
+        r = self.go(lambda d: None, fill)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("limit 10", r.stdout)
+
+
 class EmailAndHygieneTests(Tmp):
     def go(self, case, fn, intake_fn=None):
         c = CASES[case]

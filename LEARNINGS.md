@@ -2,6 +2,13 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, crew-paid
+
+- Done: `brand-pack/placement-specs.json` holds Meta's placement limits as nulls with the gap and its owner (Eddie, item paid-specs), so the absence is loud. `paid_check.py` requires `spec_confidence` to equal the file's status, enforces any limit once a person fills it, and fails any numeral in ad copy that the intake does not carry. The paid prompt dropped its working limits (125, 40, 30) because no source backs them, and now includes the specs file.
+- Checked: `bash build/checks.sh` PASS (29 crew tests). The engine `paid_lint.js` reads the retired slate shape and stays SKIPPED, so its acceptance line "paid_lint PASS" is not met; `paid_check` stands in.
+- Waiting on Eddie: Meta's numbers for `placement-specs.json`; whether the File map in `brand-context.md` should list the new file (protected pack contract, not changed here). Waiting on Donnie: none. Next: crew-editor, then email-html.
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, crew-email
 
 - Done: `email_check.py` now reads the intake beside the output (slug, no product the intake lacks, `M03.name` a products.json display name, every merge token the intake's or a house token; a missing intake fails). Canned email block list for protection-of-energy in `crew/fixtures/protection-of-energy/email.json`: three subject pairs, hero, product text block, two-up grid, a Scorpio season block with three plain rituals, The Scorpio Crystal Set as the closing spotlight, every slot within `max_chars`. The six generated Phase 1 files that held em dashes are swept and `build/emdash_baseline.txt` is empty, with a test that keeps it empty.
