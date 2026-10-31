@@ -6,7 +6,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 
 ## 1. What `tokens.json` carries
 
-110 tokens: 85 [documented], 24 [observed], 1 [derived] by first tag (counted 2026-10-23, after the filled CTA (`component.cta.fill`, `.fill-label`, `.fill-on-photo`, `.fill-label-on-photo`, `color.semantic.text.on-photo-fill`, all [observed]) and `component.price.strike-line` ([derived]) joined; `component.cta.fill` and `.fill-label` carry a second tag, their alternate grounds [derived], for Eddie to confirm; 104 and 0 [derived] earlier the same day, after Eddie's decision sheet ratified `color.semantic.text.on-placeholder` and the placeholder label's alias and added `stroke.rule`, which `component.rule.weight` now aliases; 103 with 1 [derived] after Gate 4; 102 and 0 [derived] on 2026-10-22, after the Gate 2 rulings).
+110 tokens: 85 [documented], 24 [observed], 1 [derived] by first tag (counted 2026-10-23, after the filled CTA (`component.cta.fill`, `.fill-label`, `.fill-on-photo`, `.fill-label-on-photo`, `color.semantic.text.on-photo-fill`, all [observed]) and `component.price.strike-line` ([derived]) joined; `component.cta.fill` and `.fill-label` carry a second tag, their alternate grounds [derived], for Donnie to confirm; 104 and 0 [derived] earlier the same day, after Eddie's decision sheet ratified `color.semantic.text.on-placeholder` and the placeholder label's alias and added `stroke.rule`, which `component.rule.weight` now aliases; 103 with 1 [derived] after Gate 4; 102 and 0 [derived] on 2026-10-22, after the Gate 2 rulings).
 
 | Tier | Paths | Collection (Gate 3 call 3 a) | Modes |
 |---|---|---|---|
@@ -65,16 +65,19 @@ Values for the alternate ground modes [documented] (ratified 2026-10-22 by Eddie
 
 ## 3. Type: ramp and text style roster
 
-Ramp [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 3): body at the floor and a perfect fourth (1.333) above it, one rendered scale (pattern-review 1.2) with a value per canvas mode (Gate 2 question 1). Tokens `font.size.<step>`: `$value` is the web size, `social` and `email` sit in `$extensions.com.hlr.modes`. Ruled: web label 12 and body 14 (Gate 2 call 5 a, 2026-10-18); email label 35 and body 45 (Gate 1 C8, for HLR to confirm). The other values are ratified as built (Gate 2 package call 3), and the 12 px rendered floor holds on display and web only: social labels render at 11.1 px and email labels at 10.9 px on a 375 phone.
+Ramp [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 3): body at the floor and a perfect fourth (1.333) above it, one rendered scale (pattern-review 1.2) with a value per canvas mode (Gate 2 question 1). Tokens `font.size.<step>`: `$value` is the web size, `social` and `email` sit in `$extensions.com.hlr.modes`. Ruled: web label 12 and body 14 (Gate 2 call 5 a, 2026-10-18); email label 24, body 43, title 43, headline 94 and display-m 154, the sizes HLR's 2026 sends set at 1200 (2:9, 700 wide, scaled by 1,200/700), Eddie's call in the Review 1 session (2026-10-23, Review 1 type option 1; before, label 35 and body 45 under Gate 1 C8, title 60, headline 80, display-m 142). The other values are ratified as built (Gate 2 package call 3), and the 12 px rendered floor holds on display and web only: social labels render at 11.1 px on a 375 phone, and email labels at 7.5 px, as HLR's 2026 sends render theirs.
 
 | Step | web (CSS px) | social (1080 canvases) | email (1200 masters) |
 |---|---|---|---|
-| label (the small floor) | 12 | 32 | 35 |
-| body (the body floor) | 14 | 40 | 45 |
-| title | 19 | 54 | 60 |
-| headline | 25 | 72 | 80 |
+| label (the small floor) | 12 | 32 | 26 |
+| eyebrow (own step since 2026-10-23) | 12 | 32 | 30 |
+| body (the body floor) | 14 | 40 | 34 |
+| title | 19 | 54 | 35 |
+| link (own step since 2026-10-23) | 19 | 54 | 46 |
+| headline | 25 | 72 | 94 |
+| quote (own step since 2026-10-23) | 25 | 72 | 64 |
 | display-s | 33 | 96 | 106 |
-| display-m | 44 | 127 | 142 |
+| display-m | 44 | 127 | 154 |
 | display-l | 59 | 170 | 189 |
 | display-xl | 79 | 226 | 251 |
 
@@ -83,20 +86,20 @@ Roster (Gate 3 call 7 and Gate 2 question 1): 15 text styles named by role and s
 | Style | Family token | Style token | Size step | Leading | Tracking | Case |
 |---|---|---|---|---|---|---|
 | display/xl, /l, /m, /s | display (Saol Display) | Light | display steps | 1.0 | 0 | sentence |
-| headline | display | Regular | headline | 1.1 | 0 | sentence |
-| quote | display | Light | headline | 1.29 | 0 | sentence |
-| title | title (Saol Standard) | Regular | title | 1.2 | 0 | sentence |
-| link | title | Regular | title | 1.44 | 0 | sentence |
-| price | title | Medium | title | 1.2 | 0 | |
+| headline | display | Regular | headline | 1.1 (email 1.0, bound) | 0 | sentence |
+| quote | display | Light (email Regular) | quote (the headline size; email 64) | 1.29 (email 1.2, bound) | 0 | sentence |
+| title | title (Saol Standard; email Saol Display) | Regular | title | 1.2 | 0 | sentence |
+| link | link (Saol Standard; email Saol Display) | Regular | link (the title size; email 46) | 1.44 | 0 | sentence |
+| price | price (Saol Standard) | Medium | title | 1.2 | 0 | |
 | script | script (Homemade Apple) | Regular | title | 1.4 | 0 | as written |
-| body | body (Trade Gothic LT Std) | Regular | body | 1.47 | 0 | sentence |
-| eyebrow | body | Regular | label | 1.4 | 0.2em | caps |
+| body | body (Trade Gothic LT Std) | Regular | body | 1.47 (email 1.40, bound) | 0 | sentence |
+| eyebrow | body | Regular (email Bold) | eyebrow (the label size; email 30) | 1.4 | 0.2em (email 0.25em, bound) | caps |
 | label | body | Bold | label | 1.4 | 0.2em | caps |
 | cta | body | Bold | label | 1.4 | 0.2em | caps |
 | fine | body | Regular | label | 1.4 | 0 | as written |
 
-- The italic accent word is a range override, not a style: `font.style.display-accent` (Light Italic) or `font.style.headline-accent` (Regular Italic), same size and leading. No text style uses either, so each names its family (`$extensions.com.hlr.family`: `{font.family.display}`) for the build to load the right face (0.5.2 bundle report, section 7 item 4). One accent word per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); HLR hears it at Review 1.
-- Leading and tracking are set on each text style, unbound, in percent (0.5.2): percent follows the size, so a style stays right in every canvas mode. Figma binds a number variable to line height and letter spacing only as pixels, so binding them would need a pixel value per style and canvas. Ruled unbound (Eddie, 2026-10-18, Gate 2 question 3).
+- The italic accent word is a range override, not a style: `font.style.display-accent` (Light Italic) or `font.style.headline-accent` (Regular Italic); since 2026-10-23 the link’s italic (E02 Face=Italic) is one too, `font.style.link-accent` (Regular Italic, in the link’s family), same size and leading. No text style uses either, so each names its family (`$extensions.com.hlr.family`: `{font.family.display}`) for the build to load the right face (0.5.2 bundle report, section 7 item 4). One accent word per display line or headline [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 10); HLR hears it at Review 1.
+- Leading and tracking are set on each text style, unbound, in percent (0.5.2): percent follows the size, so a style stays right in every canvas mode. Figma binds a number variable to line height and letter spacing only as pixels, so binding them would need a pixel value per style and canvas. Ruled unbound (Eddie, 2026-10-18, Gate 2 question 3). Since 2026-10-23 four bind instead, in pixels per canvas, because HLR’s 2026 email sends set them apart from the book (Eddie, Review 1 body leading and Review 1 header match): body, headline and quote leading (`font/leading/body`, `font/leading/headline`, `font/leading/quote`) and the eyebrow’s tracking (`font/tracking/eyebrow`); each value is its size times the canvas’s ratio, so it changes with its size variable. The email faces of the eyebrow (Bold), the link (Saol Display) and the quote (Regular) are the email modes of `font/style/eyebrow`, `font/family/link` and `font/style/quote`. The engine (0.5.3) holds none of these per canvas (engine gap G11): `tokens.json` keeps the web values in `$value` and states the email values in each description, and a variable sync from it would reset them.
 - Each style exists once. Script is used on social and email only (C5); the CTA style on web and email only, since social and Meta art draw no CTA (C6) and Google art carries no overlaid copy (Gate 2 call 1).
 - CSS sets `font-style: italic` for the accent roles; weights come from `font.weight.*` (Light 300, Regular 400, Medium 500, Bold 700, from the font files).
 
@@ -141,20 +144,20 @@ Status: open, [observed], [derived] proposal, ruled, conflict. Owner is who clos
 | T6 | The italic accent word | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 10); [observed] every channel; not in the book (p17 roman); HLR hears it at Review 1 | `font.style.*-accent`, one word per display line or headline | Eddie, then HLR | Gate 2, Review 1 |
 | T7 | Type ramp | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 3) | section 3 | Eddie | Gate 2 |
 | T8 | Ramp per canvas | ruled (Eddie, 2026-10-18, Gate 2 question 1): canvas modes on Layout, `web`, `social`, `email`; 15 styles | `font.size.<step>` with a value per canvas mode; the engine support is 0.5.3 | lane H | 0.5.3 |
-| T9 | Leading and tracking in Figma | ruled (Eddie, 2026-10-18, Gate 2 question 3): set on each style, unbound, in percent | Figma binds them only as pixels | none | |
+| T9 | Leading and tracking in Figma | ruled (Eddie, 2026-10-18, Gate 2 question 3): set on each style, unbound, in percent; body and headline leading and the eyebrow’s tracking bind in pixels per canvas since 2026-10-23 (Eddie, Review 1 body leading and Review 1 header match) | Figma binds them only as pixels | none | |
 | T10 | Stand-in styles: Instrument Serif has no Light, Light Italic, Regular Italic or Medium | closed: moot since 2026-10-23, the library is set in the real faces (ruled before by Eddie, 2026-10-18, Gate 2 question 2) | `figma.yaml` `fonts.build_stand_in_styles`; every face the build loads exists | none | |
 | T11 | Live-text email sizes (body 28, small 22) | conditional (C8) | no tokens until HLR says the ESP sends live text | HLR | Review 1 |
 | T12 | Case and text-style properties a variable cannot bind | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 5) | the roster in `$extensions.com.hlr.text_styles` | Chat 5 | Step 4 |
 | L1 | Space scale | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): 4-based, Tailwind numbering | normalises observed 10, 15, 50 | Eddie | Gate 2 |
-| L2 | Social side margin 64 | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): from 62 and 63 | `space.social-margin`; with `space.email-margin` it folds into one canvas-moded `space.margin` once Eddie sets the web margins at Review 2 | Eddie | Gate 2, Review 2 |
-| L3 | Web margins, grid and breakpoints | breakpoints ruled (Eddie, 2026-10-23, decision sheet: 1440 desktop, 390 mobile); margins and grid open | `figma.yaml` `breakpoints` | Eddie | Review 2, with the web masters (the margins and grid) |
+| L2 | Social side margin 64 | ruled (ratified 2026-10-22 by Eddie, Gate 2 package call 8): from 62 and 63 | `space.social-margin`; with `space.email-margin` it folds into one canvas-moded `space.margin` once Donnie sets the web margins at Review 2 | Donnie | Gate 2, Review 2 |
+| L3 | Web margins, grid and breakpoints | breakpoints ruled (Eddie, 2026-10-23, decision sheet: 1440 desktop, 390 mobile); margins and grid open | `figma.yaml` `breakpoints` | Donnie | Review 2, with the web masters (the margins and grid) |
 | L4 | Email module geometry (mats, cards, CTA box) | [observed], measured at build | `asset-types.md` | Chat 6 | Step 4 |
 | L5 | Safe zones and display floors | ruled (Gate 2 calls 3 b and 5 a, 2026-10-18); outside the tokens | the engine's platform specs; the policy in `slotmap-paid.yaml` and `slotmap-social.yaml` meta; `font.size.label` (web 12) | Eddie | Gate 2 |
-| L6 | Motion | open: annotations fade in (p48 to p50); `video_rules` null | | Eddie | later |
+| L6 | Motion | open: annotations fade in (p48 to p50); `video_rules` null | | Donnie | later |
 | L7 | Photography grade | open: the cards only (p21 to p24) | `art-direction.md` | HLR | later |
 | K1 | CTA padding and box size | measured at build, per canvas | Layout values with a value per canvas mode, aliased by the CTA component, like `stroke.cta` | Chat 6 | Step 4 |
-| K2 | Web focus ring | open | not tokenized | Eddie | Review 2, with the web masters (Gate 4 closed without it) |
-| K3 | Strictness map | adopted at Gate 4 (2026-10-23, Claude under Eddie's delegation) and ratified by Eddie the same day (decision sheet): `strictness-map.md` | board `Strictness map` (7:15) | Eddie | 2026-10-23 |
+| K2 | Web focus ring | open | not tokenized | Donnie | Review 2, with the web masters (Gate 4 closed without it) |
+| K3 | Strictness map | adopted at Gate 4 (2026-10-23, Claude under Eddie's delegation) and ratified by Eddie the same day (decision sheet): `strictness-map.md` | board `Strictness map` (7:15) | Donnie (its owner since Eddie's ruling, 2026-10-23) | 2026-10-23 |
 | M1 | Mark vectors (the monogram lockup, the stacked lockup, the star's master), clear space, minimum sizes | open; the star is placed from HLR's live footer vector (Eddie, 2026-10-23) | `logo-assets.md` | HLR | Review 1 |
 
 ## 6. Ratification log
@@ -181,7 +184,18 @@ Status: open, [observed], [derived] proposal, ruled, conflict. Owner is who clos
 | 2026-10-23 | Strictness map (K3) | Chat 5 draft | adopted as drafted: `strictness-map.md` (two guided rows: rule placement, image crop) | Claude under Eddie's delegation (Gate 4); ratified 2026-10-23 by Eddie (decision sheet) |
 | 2026-10-23 | Hairline weight per canvas (`stroke.rule`) | [observed] 1 px on every canvas (`component.rule.weight`) | [documented] `stroke.rule`: web 1 px, social 1 px, email 2 px [derived, ruled]: the 1200 email master displays at 600, where 1 px lands at half a pixel; `component.rule.weight` aliases it, as `component.cta.weight` aliases `stroke.cta` | Eddie, decision sheet |
 | 2026-10-23 | Web breakpoints (L3) | open | 1440 (desktop) and 390 (mobile) [derived, ruled 2026-10-23 by Eddie, decision sheet: "lets start with 1440 and 390 for mobile"]; observed: design frames at 1440 and 375, the theme breaking at 576, 768, 992, 1024, 1200 and 1280; the margins and grid stay open for Review 2 | Eddie, decision sheet |
-| 2026-10-23 | The filled CTA (E01 Style=Filled) | none: Gate 1 C6 retired filled boxes | Eddie added the variant (decision sheet). Its values are [observed] in HLR's 2026 sends: `component.cta.fill` (the ink) and `.fill-label` (the page ground) on a ground; `.fill-on-photo` (white) and `.fill-label-on-photo` (`color.semantic.text.on-photo-fill`, Onyx on every ground) on a photo; two certified pairs at 12.27:1. The fill on deep and night (Alabaster) and its label on warm, deep and night are [derived], for Eddie to confirm | Eddie (the variant); Claude (the values) |
-| 2026-10-23 | `component.price.strike-line` (E09, the struck price) | none | [derived] the muted ink for a struck compare-at price, for Eddie to confirm; HLR strikes it in red #D54141, off the palette | Claude, for Eddie to confirm |
+| 2026-10-23 | The filled CTA (E01 Style=Filled) | none: Gate 1 C6 retired filled boxes | Eddie added the variant (decision sheet). Its values are [observed] in HLR's 2026 sends: `component.cta.fill` (the ink) and `.fill-label` (the page ground) on a ground; `.fill-on-photo` (white) and `.fill-label-on-photo` (`color.semantic.text.on-photo-fill`, Onyx on every ground) on a photo; two certified pairs at 12.27:1. The fill on deep and night (Alabaster) and its label on warm, deep and night are [derived], for Donnie to confirm | Eddie (the variant); Claude (the values) |
+| 2026-10-23 | Email type sizes (`font.size.label`, `.body`, `.title`, `.headline`, `.display-m`, email mode) | label 35, body 45 (Gate 1 C8), title 60, headline 80, display-m 142 | [documented] label 24, body 43, title 43, headline 94, display-m 154: HLR's 2026 sends at 1200 (2:9); the 13 module slots whose step grew re-probed and hold at 4x | Eddie, Review 1 type option 1 |
+| 2026-10-23 | `component.price.strike-line` (E09, the struck price) | none | [derived] the muted ink for a struck compare-at price, for Donnie to confirm; HLR strikes it in red #D54141, off the palette | Claude, for Donnie to confirm |
+| 2026-10-23 | Body leading in email (`font.leading.body`) | 1.47 on every canvas, unbound percent (T9) | [observed] 1.40 in email, as every Trade Gothic body run in the 2026 sends; bound in pixels per canvas (`font/leading/body`: 20.58, 58.8, 47.6 since the email scale); web and social keep the book’s 1.47 | Eddie, Review 1 body leading |
+| 2026-10-23 | The eyebrow in email (`font.style.eyebrow`, new `font.size.eyebrow`, `font.tracking.caps`) | Trade Gothic Regular at the label size (24 in email), 0.2em | [observed] Bold, 30, 0.25em in email, as 2:563’s FEATURING and most 2026 sends; web and social unchanged | Eddie, Review 1 header match |
+| 2026-10-23 | Headline leading in email (`font.leading.headline`) | 1.1 on every canvas | [observed] 1.0 in email, as the 2026 sends set Saol Display headlines; bound in pixels per canvas (27.5, 79.2, 94) | Eddie, Review 1 header match |
+| 2026-10-23 | The link face in email (new `font.family.link`) | Saol Standard (`font.family.title`) | [observed] Saol Display in email, as the 2026 sends set their arrow links; web and social keep Saol Standard | Eddie, Review 1 header match |
+| 2026-10-23 | The email scale (`font.size.body`, `.label`, `.title`, new `font.size.link`, email mode) | body 43, label 24, title 43, the link at the title size (Review 1 type option 1, from 2:9, a send designed 700 wide) | [observed] body 34, label 26, title 35, link 46, as the 13 of 17 sends designed at 1200 set them; the 4 designed at 700 are approximated | Eddie, Review 1 email scale: “1200 is the standard size for email right? I want them to match even if the original was designed for 700” |
+| 2026-10-23 | The statement (new `font.size.quote`; `font.style.quote` and `font.leading.quote` in email) | the quote at the headline size, Light, 1.29, on every canvas | [observed] email: Saol Display Regular 64 at 1.2, as 2:563’s “Invoke the magic…”; M04 Style=Statement sets its header in it; web and social unchanged | Eddie, Review 1 statement |
+| 2026-10-23 | The email ink (`color.semantic.text.primary`, `.interactive.cta`, `.interactive.link`, light ground) | Onyx on every canvas (C4, C6) | [observed] Forest in email, as 10 of the 13 sends designed at 1200 set copy, links and CTAs; web and social keep Onyx; Figma: `color/canvas/ink`, which the light-ground values alias | Eddie, Review 1 text ink |
+| 2026-10-23 | Display weight in email (`font.style.display`, `.display-accent`) | Light and Light Italic on every canvas | [observed] Regular and Regular Italic in email, as every 2026 send; web and social keep Light | Eddie, Review 1 display weight |
+| 2026-10-23 | Product names in email (`font.family.title`, email; new `font.family.price`) | Saol Standard | [observed] Saol Display in email, as the 2026 sends set product names and footer links; prices keep Saol Standard on their own token; web and social unchanged | Eddie, Review 1 product names |
+| 2026-10-23 | The italic link (new `font.style.link-accent`; E02 Face=Italic) | none | [observed] Regular Italic in the link’s family, as 2:563’s header link; T01’s header link uses it | Eddie, Review 1 italic link |
 
 Gate 2 closed on 2026-10-22: Eddie took the Gate 2 package (`outputs/step-2-pack/gate-2-package.md`) at its defaults (DECISIONS 2026-10-22), and Gate 4 named the alternate grounds on 2026-10-23 (`warm`, `deep`, `night`), which Eddie ratified the same day on his decision sheet. Eddie's Gate 1 picks are rulings recorded in `DECISIONS.md` (2026-10-17); HLR's confirmation at Review 1 and Eddie's Gate 2 ratifications are logged here, and each ratified token's tag flips to [documented] with "(ratified <date> by Eddie, Gate 2 package call N)" in its description (Gate 2 package call 4); this log keeps the derivation.

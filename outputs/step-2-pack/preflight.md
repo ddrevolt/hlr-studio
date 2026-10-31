@@ -85,8 +85,8 @@ REVIEW.md section 6, R14: a required file or board with no owning step (`slotmap
 
 - a contract role the File map does not name, and a role wired to a path that does not exist;
 - a null role with no gap row, a malformed gap row and a repeated one;
-- a gap row whose owner is not on the allowed-owner list: exactly Eddie, HLR, lane A to lane H, Chat 5, Chat 6 or Chat 7 (round 3; "Eddie or HLR", "Eddie (later)" and "to be assigned" all fail);
-- a quoted step under four words, or one not in an open line of `PROGRESSION.md`: an unticked box for a lane or chat (which may quote its own section of the chat prompts instead, with a warning), an unticked box or a Reviews line for Eddie or HLR; and a lane or chat owner with no step;
+- a gap row whose owner is not on the allowed-owner list: exactly Eddie, Donnie (since 2026-10-23, Chat 6b), HLR, lane A to lane H, Chat 5, Chat 6 or Chat 7 (round 3; "Eddie or HLR", "Eddie (later)" and "to be assigned" all fail);
+- a quoted step under four words, or one not in an open line of `PROGRESSION.md`: an unticked box for a lane or chat (which may quote its own section of the chat prompts instead, with a warning), an unticked box or a Reviews line for Eddie, Donnie or HLR; and a lane or chat owner with no step;
 - an HLR-owned row that cites no Brand Review v2 or token proposal question, or one the list does not hold;
 - a board in `figma.yaml`, inline or block layout, that is neither recorded as built ("built <date>" in its note) nor named by a gap row (round 3);
 - an open row of `token-model.md`'s gap register, a gap in `products.json` `_meta`, or a topic of `legal-ledger.json` whose owner does not start with an owner from the list (a qualifier after a comma, a bracket or "'s" is allowed: "HLR (export)", "HLR's claims signer").
@@ -117,7 +117,7 @@ REVIEW.md rule 4 asks every brand rule in `brand-context.md` to carry [documente
 
 Tested by mutation: a bullet with its tag removed, and a contradiction row without its source tag: both caught, exit 1. Round 3 adds an untagged opening paragraph and an untagged line ending in a colon (section 7).
 
-The pointer check (round 3) reads every `[documented, DECISIONS <date> ...]` tag and every "(ratified <date> by Eddie, <call>)" note in `brand-pack/` against `DECISIONS.md`: each cited date has a section, the section holds a ruling of Eddie's (a lane default waiting on him does not count), and a named call ("lane C call 7 a", "Gate 2 package call 13", "Q10") is named by one of his rulings that day, or by the line right after one that names its family. A tag that cites no call must quote words one of his rulings carries.
+The pointer check (round 3) reads every `[documented, DECISIONS <date> ...]` tag and every "(ratified <date> by Eddie, <call>)" or "(ratified <date> by Donnie, <call>)" note in `brand-pack/` against `DECISIONS.md` (Donnie's notes since Chat 6b, 2026-10-23, BR2-03): each cited date has a section, the section holds a ruling of the person the note names (Eddie's or Donnie's for a tag; a lane default waiting on either does not count), and a named call ("lane C call 7 a", "Gate 2 package call 13", "Q10") is named by one of his rulings that day, or by the line right after one that names its family. A tag that cites no call must quote words one of his rulings carries.
 
 Output, 2026-10-21 (round 3):
 
@@ -227,7 +227,7 @@ def prompt_of(owner):  # the owner's own section of the chat prompts, when the f
     m = re.search(r"^#{2,3} " + re.escape(w[0].capitalize() + " " + w[1]) + r"\b.*?(?=^#{2,3} |\Z)", prompts, re.M | re.S)
     return m.group(0) if m else ""
 fails, warns = [], []
-ALLOWED = ["Eddie", "HLR", "Chat 5", "Chat 6", "Chat 7"] + ["lane " + c for c in "ABCDEFGH"]  # the allowed-owner list
+ALLOWED = ["Eddie", "Donnie", "HLR", "Chat 5", "Chat 6", "Chat 7"] + ["lane " + c for c in "ABCDEFGH"]  # the allowed-owner list; Donnie since 2026-10-23 (Chat 6b)
 LEAD = re.compile(r"^(" + "|".join(map(re.escape, ALLOWED)) + r")($|, |\s\(|'s )")  # an allowed owner, then nothing or a qualifier
 UNOWNED = re.compile(r"\b(to (be )?assign(ed)?|unassigned|tbd|tba)\b|^none$|^$", re.I)
 TEAM = re.compile(r"^(lane [A-H]|Chat [5-7])\b")
@@ -345,7 +345,8 @@ Pointer check (exit 0 when it holds):
 
 ```
 python3 - "$HB" <<'EOF'
-# Pointer check: a "[documented, DECISIONS <date> ...]" tag or a "(ratified <date> by Eddie, <call>)" note points at a ruling of Eddie's in DECISIONS.md, not a lane default (round 3).
+# Pointer check: a "[documented, DECISIONS <date> ...]" tag or a "(ratified <date> by Eddie|Donnie, <call>)" note points at a ruling in DECISIONS.md
+# by the person it names, not a lane default (round 3; Donnie's notes since Chat 6b, 2026-10-23, BR2-03). A tag may point at either's ruling.
 import os, re, sys
 HB = sys.argv[1]
 PACK = os.path.join(HB, "brand-pack")
@@ -355,14 +356,17 @@ for part in re.split(r"^## ", dec, flags=re.M)[1:]:
     head, _, body = part.partition("\n")
     d = re.match(r"\d{4}-\d{2}-\d{2}", head.strip())
     if d: SECT.setdefault(d.group(0), []).extend(l for l in body.splitlines() if l.startswith("- "))
-RULING_RE = re.compile(r"\(Eddie\b|, Eddie\)|\bEddie (ruled|took|approved|ratified|installed|assigns|asked|answered|supplied|picked|owns)\b|\bEddie's (pick|picks|ruling|rulings|answer|answers|go|scope|default|word)\b|\bby Eddie\b|Reason: Eddie\b")
-DEFAULT = re.compile(r"\b(until|unless|pending|before|waits? on|goes to|go to|to|for) Eddie\b[^.;]*")  # a lane default waiting on Eddie, not his ruling
-class RULING:
-    @staticmethod
-    def search(l): return RULING_RE.search(DEFAULT.sub("", l))
+RULING_RE = {"Eddie": re.compile(r"\(Eddie\b|, Eddie\)|\bEddie (ruled|took|approved|ratified|installed|assigns|asked|answered|supplied|picked|owns)\b|\bEddie's (pick|picks|ruling|rulings|answer|answers|go|scope|default|word)\b|\bby Eddie\b|Reason: Eddie\b"),
+             "Donnie": re.compile(r"\(Donnie\b|, Donnie\)|\bDonnie (ruled|took|approved|ratified|answered|picked|chose|confirmed)\b|\bDonnie's (pick|picks|ruling|rulings|answer|answers|word)\b|\bby Donnie\b|Reason: Donnie\b")}
+DEFAULT = re.compile(r"\b(until|unless|pending|before|waits? on|goes to|go to|to|for) (Eddie|Donnie)\b[^.;]*")  # a lane default waiting on either, not a ruling
+class Ruling:
+    def __init__(self, who): self.who = who
+    def search(self, l):
+        l = DEFAULT.sub("", l)
+        return any(RULING_RE[w].search(l) for w in self.who)
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 CALL = re.compile(r"\b(calls?|question|questions)\s+(\d+(?:\s+[a-c]\b)?(?:(?:,\s*|\s+and\s+)\d+(?:\s+[a-c]\b)?)*)")
-TAGS = [re.compile(r"\[documented, DECISIONS ([^\]]*)\]"), re.compile(r"\(ratified (\d{4}-\d{2}-\d{2}) by Eddie, ([^)]*)\)")]
+TAGS = [re.compile(r"\[documented, DECISIONS ([^\]]*)\]"), re.compile(r"\(ratified (\d{4}-\d{2}-\d{2}) by (Eddie|Donnie), ([^)]*)\)")]
 fails, seen, n = [], set(), 0
 def family(ref):  # the words naming whose call it is: "lane C", "Gate 2 package", "Gate 2", "Gate 1"
     m = re.search(r"\b(Gate \d(?: package)?|lane [A-H])", ref)
@@ -373,19 +377,20 @@ def items(ref):
         for it in re.findall(r"\d+(?:\s+[a-c]\b)?", m.group(2)): out.append(re.sub(r"\s+", " ", it))
     out += re.findall(r"\bQ\d+\b", ref)
     return out
-def check(where, dates, ref):
+def check(where, dates, ref, who=("Eddie", "Donnie")):
     global n
     n += 1
+    RULING = Ruling(who); whose = " or ".join(w + "'s" for w in who)
     for d in dates:
         if d not in SECT: fails.append(f"{where}: cites DECISIONS {d}, which has no section"); return
     lines = [(d, i, l) for d in dates for i, l in enumerate(SECT[d])]
     eddie = [(d, i, l) for d, i, l in lines if RULING.search(l)]
-    if not eddie: fails.append(f"{where}: DECISIONS {', '.join(dates)} holds no ruling of Eddie's"); return
-    ref = re.sub(r"^(Eddie's (ruling|answer to)|approved by Eddie|ratified by Eddie)[, ]*", "", ref.strip(" ,:;"))
+    if not eddie: fails.append(f"{where}: DECISIONS {', '.join(dates)} holds no ruling of {whose}"); return
+    ref = re.sub(r"^((Eddie|Donnie)'s (ruling|answer to)|approved by (Eddie|Donnie)|ratified by (Eddie|Donnie))[, ]*", "", ref.strip(" ,:;"))
     its, fam = items(ref), family(ref)
     if not ref: return
     if not its and not fam:
-        if not any(ref.split(";")[0].strip() in l for _, _, l in eddie): fails.append(f"{where}: names no call, and no ruling of Eddie's on {', '.join(dates)} carries \"{ref.split(';')[0].strip()[:60]}\"")
+        if not any(ref.split(";")[0].strip() in l for _, _, l in eddie): fails.append(f"{where}: names no call, and no ruling of {whose} on {', '.join(dates)} carries \"{ref.split(';')[0].strip()[:60]}\"")
         return
     for it in (its or [None]):
         def has(l): return it is None or (it in l if it.startswith("Q") else re.search(r"\b" + re.escape(it) + r"\b", l))
@@ -394,7 +399,7 @@ def check(where, dates, ref):
             if not has(l): continue
             prev = SECT[d][i - 1] if i > 0 else ""
             if fam is None or fam in l or (fam in prev and RULING.search(prev)): ok = True; break
-        if not ok: fails.append(f"{where}: no ruling of Eddie's on {', '.join(dates)} names {fam + ' ' if fam else ''}{'call ' + it if it and not it.startswith('Q') else it or ''}".rstrip())
+        if not ok: fails.append(f"{where}: no ruling of {whose} on {', '.join(dates)} names {fam + ' ' if fam else ''}{'call ' + it if it and not it.startswith('Q') else it or ''}".rstrip())
 for root, _, files in os.walk(PACK):
     for f in sorted(files):
         p = os.path.join(root, f)
@@ -411,9 +416,9 @@ for root, _, files in os.walk(PACK):
                 if key in seen: continue
                 seen.add(key); check(f"{os.path.relpath(p, PACK)}:{ln}", sorted(set(dates)), rest)
             for m in TAGS[1].finditer(line):
-                key = (os.path.relpath(p, PACK), m.group(1), m.group(2))
+                key = (os.path.relpath(p, PACK), m.group(1), m.group(2), m.group(3))
                 if key in seen: continue
-                seen.add(key); check(f"{os.path.relpath(p, PACK)}:{ln}", [m.group(1)], m.group(2))
+                seen.add(key); check(f"{os.path.relpath(p, PACK)}:{ln}", [m.group(1)], m.group(3), (m.group(2),))
 print(f"pointer check: {n} distinct tags and ratification notes read against DECISIONS.md, {len(fails)} failure(s)")
 for x in fails: print("FAIL", x)
 sys.exit(1 if fails else 0)

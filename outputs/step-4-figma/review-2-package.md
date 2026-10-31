@@ -1,6 +1,6 @@
 # Review 2 package: Figma foundations and the first modules
 
-For Review 2 (Fri 2026-10-30, owner Eddie). Prepared 2026-10-23 by Claude under Eddie's delegation, and updated the same day after his morning decision sheet and the build it called for: the filled CTA, the rest of the module roster, product images per category, and the rest of HLR's email templates and the flows. Everything below is built in the library and checked: structure lint, every slot flex-probed (at least twice its drawn copy, most four times) and restored, screenshots, and the guards in `guards/` (`tests/run_all.sh` PASS). A fresh-context review (REVIEW.md) checked each batch: three rounds on the first email batch (`review-email-batch-r1.md` to `-r3.md`), three on Foundations (`review-foundations-r1.md` to `-r3.md`) and three on this batch (`review-batch-2-r1.md` to `-r3.md`): round 1 found 1 blocker, 8 should-fix and 4 notes, round 2 1 blocker, 2 should-fix and 5 notes, round 3 no blocker, 3 should-fix and 4 notes. Every blocker and should-fix was fixed and verified by its rerun (round 3's after the last round, so not re-reviewed), and each note left open has an owner in DECISIONS 2026-10-23. Section 7 holds what is still Eddie's to confirm; section 6 the questions for HLR.
+For Review 2 (Fri 2026-10-30, owner Donnie, who owns every decision since Eddie's ruling of 2026-10-23). Prepared 2026-10-23 by Claude under Eddie's delegation, and updated the same day after his morning decision sheet and the build it called for: the filled CTA, the rest of the module roster, product images per category, and the rest of HLR's email templates and the flows. Everything below is built in the library and checked: structure lint, every slot flex-probed (at least twice its drawn copy, most four times) and restored, screenshots, and the guards in `guards/` (`tests/run_all.sh` PASS). A fresh-context review (REVIEW.md) checked each batch: three rounds on the first email batch (`review-email-batch-r1.md` to `-r3.md`), three on Foundations (`review-foundations-r1.md` to `-r3.md`) and three on this batch (`review-batch-2-r1.md` to `-r3.md`): round 1 found 1 blocker, 8 should-fix and 4 notes, round 2 1 blocker, 2 should-fix and 5 notes, round 3 no blocker, 3 should-fix and 4 notes. Every blocker and should-fix was fixed and verified by its rerun (round 3's after the last round, so not re-reviewed), and each note left open has an owner in DECISIONS 2026-10-23. Section 7 holds what is still Donnie's to confirm; section 6 the questions for HLR.
 
 ## 1. What to open
 
@@ -115,14 +115,14 @@ Left out on purpose: T12's tail (a code line on a blank band). T09's two gaps an
 10. The paid and web taxonomy (Gate 2 call 1 b): ratified on these masters at this review, before the paid and web batches.
 11. Releases for people in imagery (`faces_policy`; Q6 and token proposal HLR 5): the founder headshots and the editorial images with people wait for it; so do the third parties the welcome series names (T10's causes and partners, M22's platform), which need their rights before any is named.
 
-## 7. Eddie's calls at this review
+## 7. Donnie's calls at this review
 
 None blocks the next batch. Each has a default: what is built.
 
 1. Web margins and grid (token-model L3): with the web masters. The breakpoints are set (1440 desktop, 390 mobile; Eddie, 2026-10-23).
 2. The web focus ring (token-model K2): with the web masters' interactive states.
 3. The highlight cover (`asset-types.md`): 6 covers at 1507 x 1468 observed and no recipe; its canvas and structure decide with the organic social batch.
-4. Four derived values, for Eddie to confirm:
+4. Four derived values, for Donnie to confirm:
    1. The filled CTA off the light ground (`component.cta.fill`, `component.cta.fill-label`): an Onyx box with a Fawn label on warm; an Alabaster box with a Forest label on deep and an Onyx label on night, the inverse the outline box takes there. Default: as built. The other choice keeps the filled box to the light ground and photos, as HLR's sends show it.
    2. The struck price's line (`component.price.strike-line`): the muted ink, so the struck price reads quieter than the price. Default: muted. The other choice is HLR's red, which needs a new colour on the palette (C7, HLR's to answer).
    3. Anklets and waist beads take E12 (bracelet) until HLR says otherwise. Default: as built. The other choice is an element each, which waits on their packshots.

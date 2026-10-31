@@ -215,7 +215,7 @@
     "checkout_abandon",
     "transactional"
    ],
-   "masters": "1200 wide, type sized for image slices (body 45, small 35); live-text sizes (body 28, small 22) if HLR's ESP sends live copy. C8, DECISIONS 2026-10-17",
+   "masters": "1200 wide, type sized for image slices (body 43, small 24 since 2026-10-23, Review 1 type option 1); live-text sizes (body 28, small 22) if HLR's ESP sends live copy. C8, DECISIONS 2026-10-17",
    "send_format": "[observed] 2026 sends ship as image slices at 700 (2:9 holds 10 slices); the ESP and how it builds sends are HLR's to confirm (Review 1). [observed] Klaviyo forms on the site",
    "module_ids": "M## (Gate 3 call 10). Assigned by Chat 6 with brand-pack/slotmap.yaml; `sections` above name jobs until then",
    "held": [
@@ -488,10 +488,10 @@
     "home": {"status": "observed", "evidence": "[observed] split hero, 24 hero frames (2:185212)"},
     "pdp": {"status": "observed", "evidence": "[observed] PDP redesign at 1440 and 375 (2:185628, 2:183590); live capture 2:184418"},
     "collection": {"status": "observed", "evidence": "[observed] mega menu (SHOP BY MEANING, SHOP BY TYPE) and the mobile filter (2:185324); no collection header design in the file"},
-    "editorial": {"status": "gap", "evidence": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Eddie (scope) and HLR (content)"},
-    "landing": {"status": "gap", "evidence": "no campaign landing page in the file. Owner: Eddie (scope)"}
+    "editorial": {"status": "gap", "evidence": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Donnie (scope) and HLR (content)"},
+    "landing": {"status": "gap", "evidence": "no campaign landing page in the file. Owner: Donnie (scope)"}
    },
-   "breakpoints": "desktop 1440 and mobile 375 in the design frames [observed]; the theme breaks at 576, 768, 992, 1024, 1200 and 1280 [observed]. figma.yaml breakpoints are null: open, for Eddie at Review 2 with the web masters (Gate 4 left them open)",
+   "breakpoints": "desktop 1440 and mobile 375 in the design frames [observed]; the theme breaks at 576, 768, 992, 1024, 1200 and 1280 [observed]. the breakpoints are set, 1440 and 390 (figma.yaml breakpoints; Eddie, 2026-10-23, decision sheet); the margins and grid are open, for Donnie at Review 2 with the web masters (token-model L3)",
    "forced_elements": "[observed] Shopify payment badge and the Judge.me reviews widget"
   }
  }

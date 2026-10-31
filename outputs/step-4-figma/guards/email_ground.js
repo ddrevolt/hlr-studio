@@ -1,16 +1,22 @@
-// Email ground guard (Chat 6, 2026-10-23; round 1 finding R1-01, tightened after R2-09 and R3-05/R3-06).
+// Email ground guard (Chat 6, 2026-10-23; round 1 finding R1-01, tightened after R2-09 and R3-05/R3-06; Chat 6b,
+// 2026-10-23: finds the module masters anywhere on 02 Modules, inside the registry's sections, and fails when it finds
+// fewer than slotmap.yaml lists, REVIEW.md R20).
 // R1-01: every module root bound `color/semantic/background/default` (Alabaster), so every email rendered cream
 // against Gate 1 C4, which keeps white as the email page ground. Run with use_figma (read-only) once per page: set PAGE
-// to 02 Modules 7:3, 03 Templates 7:4 or 04 Staging 7:5. It asserts, positively:
+// to 02 Modules 7:3, 03 Templates 7:4 or 04 Staging 7:5, and SETS to the number of module entries slotmap.yaml holds
+// (read on 02 Modules only). It asserts, positively:
 //   1. every visible fill on every email module root (each variant of a set on 02 Modules; each module instance placed
 //      on 03 and 04) binds `background/email-page` (VariableID:19:20); M02 Hero's and M22 Follow block's roots are photo wells, whose fills
 //      may be `component/placeholder/fill` (19:43), the scrim `background/scrim` (19:23) or a cleared photo (IMAGE);
 //   2. no paint on the page binds `background/default` (VariableID:19:19);
 //   3. once a cleared photo fills a well (an IMAGE fill), no placeholder label inside it is still visible
-//      (a "Decor / Placeholder label" frame or an IMAGE text on that node or its descendants).
+//      (a "Decor / Placeholder label" frame or an IMAGE text on that node or its descendants);
+//   4. on 02 Modules, at least SETS module masters are found, wherever they sit, so a page reorganised into sections
+//      cannot pass it empty.
 // A ground other than white comes from the instance's ground mode, never from another variable. Returns the
 // failures; [] passes.
 const PAGE = '7:3';
+const SETS = 27;
 const EMAIL_PAGE = 'VariableID:19:20', DEFAULT_GROUND = 'VariableID:19:19', WELL = 'VariableID:19:43', SCRIM = 'VariableID:19:23';
 const page = await figma.getNodeByIdAsync(PAGE);
 await figma.setCurrentPageAsync(page);
@@ -26,13 +32,14 @@ const checkRoot = (n, moduleName) => {
     if (!ok) fails.push(n.id + ' ' + moduleName + ': fill ' + (id || 'raw ' + f.type));
   }
 };
-let roots = 0;
+let roots = 0, sets = 0;
 if (PAGE === '7:3') {
-  for (const n of page.children) {
-    if (!/^Email\/M\d\d /.test(n.name)) continue;
+  for (const n of page.findAll(x => (x.type === 'COMPONENT_SET' || (x.type === 'COMPONENT' && x.parent.type !== 'COMPONENT_SET')) && /^Email\/M\d\d /.test(x.name))) {
+    sets++;
     const vs = n.type === 'COMPONENT_SET' ? n.children.filter(c => c.type === 'COMPONENT') : [n];
     for (const v of vs) { roots++; checkRoot(v, n.name); }
   }
+  if (sets < SETS) fails.push(page.name + ': ' + sets + ' module masters found, slotmap.yaml holds ' + SETS);
 } else {
   for (const inst of page.findAllWithCriteria({ types: ['INSTANCE'] })) {
     const m = await inst.getMainComponentAsync(); if (!m) continue;
@@ -53,4 +60,4 @@ for (const n of [page, ...page.findAll(() => true)]) {
     for (const l of labels) { let shown = true; for (let a = l; a && a.id !== n.id; a = a.parent) if (a.visible === false) { shown = false; break; } if (shown) fails.push(n.id + ' ' + n.name + ': placeholder label ' + l.id + ' still visible over a cleared photo'); }
   }
 }
-return { page: page.name, roots, paints, photos, fails };
+return { page: page.name, sets, roots, paints, photos, fails };

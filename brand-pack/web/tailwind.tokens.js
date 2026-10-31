@@ -44,6 +44,18 @@ module.exports = {
       "Georgia",
       "serif"
     ],
+    "price": [
+      "\"Saol Standard\"",
+      "Instrument Serif",
+      "Georgia",
+      "serif"
+    ],
+    "link": [
+      "\"Saol Standard\"",
+      "Instrument Serif",
+      "Georgia",
+      "serif"
+    ],
     "body": [
       "\"Trade Gothic LT Std\"",
       "Inter",
@@ -58,9 +70,12 @@ module.exports = {
   },
   "fontSize": {
     "label": "12px",
+    "eyebrow": "12px",
     "body": "14px",
     "title": "19px",
+    "link": "19px",
     "headline": "25px",
+    "quote": "25px",
     "display-s": "33px",
     "display-m": "44px",
     "display-l": "59px",

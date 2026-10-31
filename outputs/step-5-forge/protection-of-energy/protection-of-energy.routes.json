@@ -1,0 +1,121 @@
+{
+ "skill": "brief-intake",
+ "format": 1,
+ "slug": "protection-of-energy",
+ "brief_ref": "protection-of-energy.brief.json",
+ "brand": "High Light Rituals",
+ "mode": "attended",
+ "axes_source": {
+  "role": "route_axes",
+  "status": "ratified",
+  "path": "brand-pack/route-axes.json",
+  "axes": [
+   "benefit",
+   "occasion",
+   "product",
+   "proof",
+   "urgency",
+   "curiosity"
+  ],
+  "default_route_count": 3,
+  "max_route_count": 5,
+  "standing_angle_policy": {}
+ },
+ "routes": [
+  {
+   "id": "R1",
+   "axis": "benefit",
+   "angle": "Keep your energy your own: black tourmaline, long held as a stone of protection, worn as a daily reminder.",
+   "tension": "By the end of a full day, other people's energy is on you; something worn is a reminder to keep yours.",
+   "supported_by": {
+    "brief_facts": [
+     "Eddie's brief: an email around protection of energy",
+     "products.json: both bracelets carry Black Tourmaline",
+     "HLR's 2026 line for the Classic: Grounding meets protection (originals 228:3415)",
+     "the voice contract's tradition framing: long held as a stone of"
+    ],
+    "customer_evidence": []
+   },
+   "channels": [
+    "email"
+   ],
+   "register_held_constant": true,
+   "selected": true,
+   "selected_by": "human",
+   "weakness": "Every protection line is a metaphysical claim the ledger lists for the verifier (HLR-M01, HLR-M05) and HLR's C2 may change; the copy must keep it to tradition and intention."
+  },
+  {
+   "id": "R2",
+   "axis": "product",
+   "angle": "One stone, two ways to wear it: both pieces are black tourmaline.",
+   "tension": "Protection sounds abstract; a stone you can wear is concrete.",
+   "supported_by": {
+    "brief_facts": [
+     "products.json: Black Tourmaline on both bracelets",
+     "the two display names"
+    ],
+    "customer_evidence": []
+   },
+   "channels": [
+    "email"
+   ],
+   "register_held_constant": true,
+   "selected": false,
+   "selected_by": null,
+   "weakness": "With empty descriptions the two pieces cannot be told apart beyond their names and photos, and one photo is missing."
+  },
+  {
+   "id": "R3",
+   "axis": "occasion",
+   "angle": "Scorpio season runs deep; protection is how you meet it.",
+   "tension": "The season asks for depth and letting go; that is when people guard their energy most.",
+   "supported_by": {
+    "brief_facts": [
+     "Eddie's brief: we've just entered Scorpio season",
+     "HLR's 2025 Scorpio Season send (reference 2:5011)",
+     "the zodiac season series in the type registry"
+    ],
+    "customer_evidence": []
+   },
+   "channels": [
+    "email"
+   ],
+   "register_held_constant": true,
+   "selected": false,
+   "selected_by": null,
+   "weakness": "The brief makes Scorpio the secondary block; leading with it inverts the hierarchy Eddie set."
+  }
+ ],
+ "recommended": "R1",
+ "recommended_why": "It is the angle Eddie's brief names (protection of energy), it ties both bracelets to their shared stone through the tradition framing the voice contract allows, and it leaves Scorpio season in the secondary block where the brief puts it.",
+ "axes_left_empty": [
+  {
+   "axis": "proof",
+   "why": "No sourced review or press quote is on file: the Judge.me reviews on the Seeds of Protection page are observed, not exported verbatim (Review 1)."
+  },
+  {
+   "axis": "urgency",
+   "why": "No offer or deadline: offers stay merge tokens until C10, and the brief carries none."
+  },
+  {
+   "axis": "curiosity",
+   "why": "Stone lore beyond the tradition framing needs ledger rows and product descriptions, neither on file."
+  }
+ ],
+ "provisional": false,
+ "provenance": {
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "route_axes": "brand-pack/route-axes.json (ratified)",
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ },
+ "notes": [
+  "R1 is selected_by human because Eddie's brief names its angle (protection of energy); R2 and R3 are the frames the brief also supports, kept for the record. The scene inside R1 is picked at the email-copy angle gate."
+ ]
+}

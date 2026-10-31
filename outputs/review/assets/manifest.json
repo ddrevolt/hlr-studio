@@ -1,0 +1,280 @@
+{
+ "fonts": {
+  "display": {
+   "file": "High Light Rituals Fonts/Desktop/SaolDisplay-Light.otf",
+   "sha256": "64a50e0cac2cef8766bdcb5a1423455a723889ab0736bb82a8809010b22b9297"
+  },
+  "display-italic": {
+   "file": "High Light Rituals Fonts/Desktop/SaolDisplay-LightItalic.otf",
+   "sha256": "7fad1cd38dc5b1795f84e3196c75f6d7f791b76cd7c9fd7dea5a12d8bec46fb5"
+  },
+  "headline": {
+   "file": "High Light Rituals Fonts/Desktop/SaolDisplay-Regular.otf",
+   "sha256": "3167d26609224143f0ea49fcf7a45a7a57779550dd14aaf045848de56115ec23"
+  },
+  "headline-italic": {
+   "file": "High Light Rituals Fonts/Desktop/SaolDisplay-RegularItalic.otf",
+   "sha256": "699a3cbf0bd6c53019cc5d42da4fbc9fa8cb53c91ae0a0e8cd364983fe544828"
+  },
+  "title": {
+   "file": "High Light Rituals Fonts/Desktop/SaolStandard-Regular.otf",
+   "sha256": "0160ba2e43cbb8c09027cfbe063d49228304f91f09515bddb2a08eeecf835882"
+  },
+  "price": {
+   "file": "High Light Rituals Fonts/Desktop/SaolStandard-Medium.otf",
+   "sha256": "4583673ae4e37f9765acacc3d46c9b961cb3d4b82dc29add336b08ec3407d9fc"
+  },
+  "body": {
+   "file": "High Light Rituals Fonts/Desktop/TradeGothicLTStd.otf",
+   "sha256": "028552c038b710fa0f029f428e0b6c1f8053c78ce6556c7452c66adafa2760d6"
+  },
+  "bold": {
+   "file": "High Light Rituals Fonts/Desktop/TradeGothicLTStd-Bold.otf",
+   "sha256": "21d6337087e6af685e39f989f54fdda23f5a2155b05930250f5210904b2544c1"
+  },
+  "script": {
+   "file": "High Light Rituals Fonts/homemade-apple/static/homemade-apple-latin-400-normal.ttf",
+   "sha256": "b6d5e56c89aa168c91d5f523c570118239fc4592e1e40eb91539dca4b9a2989b"
+  }
+ },
+ "specimens": [
+  {
+   "style": "display",
+   "file": "type-display.png",
+   "width": 680,
+   "height": 136,
+   "web_px": 44,
+   "leading": 1.0,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "Timeless jewelry for self and space.",
+   "faces": [
+    "display"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "headline",
+   "file": "type-headline.png",
+   "width": 680,
+   "height": 75,
+   "web_px": 25,
+   "leading": 1.1,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "Delight in the pleasure of presence.",
+   "faces": [
+    "headline",
+    "headline-italic"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "quote",
+   "file": "type-quote.png",
+   "width": 680,
+   "height": 80,
+   "web_px": 25,
+   "leading": 1.29,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "“Surrender is not the same as giving up.”",
+   "faces": [
+    "display"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "title",
+   "file": "type-title.png",
+   "width": 680,
+   "height": 71,
+   "web_px": 19,
+   "leading": 1.2,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "The Seeds of Protection Bracelet in Black Tourmaline",
+   "faces": [
+    "title"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "link",
+   "file": "type-link.png",
+   "width": 680,
+   "height": 85,
+   "web_px": 19,
+   "leading": 1.44,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "Let the light in",
+   "faces": [
+    "title"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "price",
+   "file": "type-price.png",
+   "width": 680,
+   "height": 71,
+   "web_px": 19,
+   "leading": 1.2,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "0123456789",
+   "faces": [
+    "price"
+   ],
+   "text_source": null
+  },
+  {
+   "style": "script",
+   "file": "type-script.png",
+   "width": 680,
+   "height": 74,
+   "web_px": 19,
+   "leading": 1.4,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "With love from the altar",
+   "faces": [
+    "script"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "body",
+   "file": "type-body.png",
+   "width": 680,
+   "height": 68,
+   "web_px": 14,
+   "leading": 1.47,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "It’s eloquent, refined, sensual, real and uplifting. It is intriguing, engaging, and trustworthy.",
+   "faces": [
+    "body"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "eyebrow",
+   "file": "type-eyebrow.png",
+   "width": 680,
+   "height": 65,
+   "web_px": 12,
+   "leading": 1.4,
+   "tracking_em": 0.2,
+   "caps": true,
+   "text": "EMBODY, ADORN, RECEIVE",
+   "faces": [
+    "body"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "label",
+   "file": "type-label.png",
+   "width": 680,
+   "height": 65,
+   "web_px": 12,
+   "leading": 1.4,
+   "tracking_em": 0.2,
+   "caps": true,
+   "text": "SANCTUARIES",
+   "faces": [
+    "bold"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "cta",
+   "file": "type-cta.png",
+   "width": 680,
+   "height": 93,
+   "web_px": 12,
+   "leading": 1.4,
+   "tracking_em": 0.2,
+   "caps": true,
+   "text": "SHOP NOW",
+   "faces": [
+    "bold"
+   ],
+   "text_source": "brand-pack/voice-contract.md"
+  },
+  {
+   "style": "fine",
+   "file": "type-fine.png",
+   "width": 680,
+   "height": 65,
+   "web_px": 12,
+   "leading": 1.4,
+   "tracking_em": 0,
+   "caps": false,
+   "text": "Our products are not intended to diagnose or treat ailments.",
+   "faces": [
+    "body"
+   ],
+   "text_source": "brand-pack/legal-ledger.json"
+  }
+ ],
+ "marks": [
+  {
+   "file": "wordmark.svg",
+   "source": "HLR Logo & Marks/SVG LOGOS/HLR-BLACK LOGO.svg",
+   "sha256": "cb824523f4c33ea6d2606fd91ccc73e9fb7a1ff03a8f967a5c81e91001cd2a4d"
+  },
+  {
+   "file": "monogram.svg",
+   "source": "HLR Logo & Marks/HLR-Jewelry Logo_Monogram.svg",
+   "sha256": "78a1531c4e169cfec342897e03a452e5723825d92215c841dd35b6f6724aa371"
+  },
+  {
+   "file": "star.png",
+   "source": "HLR Logo & Marks/Logo Marks_Black/Star_black.png",
+   "sha256": "c3283af259736ed962dac606729c0e9d00cabf6fb73baca9553b95db3814cebd",
+   "size": [
+    322,
+    360
+   ]
+  },
+  {
+   "file": "monogram-star.png",
+   "source": "HLR Logo & Marks/Logo Marks_Black/HLR_black.png",
+   "sha256": "757534baa75bf2be16551feb560df4866535bf15acc766580019268830a0e617",
+   "size": [
+    287,
+    360
+   ]
+  },
+  {
+   "file": "crest.png",
+   "source": "HLR Logo & Marks/Logo Marks_Black/Crest_black.png",
+   "sha256": "e27cf17c61a14e60a05246081bcc74131ec6b22eb74a70dda48179cfe720b338",
+   "size": [
+    324,
+    360
+   ]
+  },
+  {
+   "file": "shell.png",
+   "source": "HLR Logo & Marks/Logo Marks_Black/Shell_black.png",
+   "sha256": "51c1ce68e0232bc11ca6e7a704cd085eb36e3e1dc325732bda1ce1bdaddca383",
+   "size": [
+    360,
+    353
+   ]
+  },
+  {
+   "file": "stacked.png",
+   "source": "HLR Logo & Marks/Logo Marks_Black/Logo_stacked_black.png",
+   "sha256": "656b9f67fee803ea81b1a27ce48511c9c05af7b4cb416677e36a30e4f59acee8",
+   "size": [
+    349,
+    360
+   ]
+  }
+ ]
+}

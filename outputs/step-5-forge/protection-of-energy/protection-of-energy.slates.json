@@ -1,0 +1,1452 @@
+{
+ "skill": "email-copy",
+ "format": 3,
+ "generated_at": "2026-10-23",
+ "brief_name": "Protection of energy",
+ "channel": "email",
+ "type": "product_spotlight",
+ "brief": {
+  "name": "Protection of energy",
+  "type": "product_spotlight",
+  "objective": "Send readers to HLR’s two protection bracelets, then to The Scorpio Crystal Set, in the first days of Scorpio season.",
+  "audience": "HLR’s email subscribers. No segment data is on file.",
+  "guidance": "Vocabulary: protection, energy, black tourmaline, Scorpio season. Tone: the voice contract as written, short lines, one accent word in a headline. No figures; meaning only as tradition or intention; the Scorpio ideas are small rituals, never effects; no popularity line.",
+  "must_say": [],
+  "cta": null,
+  "subject": null,
+  "preheader": null,
+  "offer": null,
+  "codes": {},
+  "products": [
+   {
+    "name": "The Classic Bracelet in Black Tourmaline (the-classic-bracelet-in-black-tourmaline)",
+    "desc": ""
+   },
+   {
+    "name": "The Seeds of Protection Bracelet in Black Tourmaline (the-seeds-of-protection-bracelet)",
+    "desc": ""
+   },
+   {
+    "name": "The Scorpio Crystal Set (the-scorpio-crystal-set)",
+    "desc": ""
+   }
+  ],
+  "macros": [],
+  "selected_route": {
+   "id": "R1",
+   "axis": "Benefit",
+   "selected_by": "human"
+  }
+ },
+ "angle_gate": {
+  "ran_inside_route": true,
+  "picked_by": "recommended",
+  "provisional": true,
+  "picked": 1
+ },
+ "routes": [
+  {
+   "route": 1,
+   "developed": true,
+   "angle": {
+    "copy": "Keep your energy your own",
+    "copy2": "Protection as a boundary you keep: black tourmaline, long held as a stone of protection, worn as the reminder.",
+    "tension": "By the end of a full day, other people’s energy is on you.",
+    "axis": "Benefit",
+    "scene": "the end of a full day, when the reader notices whose energy she is carrying home",
+    "why": "It names a moment the reader knows from her own week (the book’s coworker’s bad vibes, p30), keeps the stone to tradition and the piece to a reminder, and hands over to Scorpio season without changing the subject."
+   },
+   "composed": {
+    "subject": "Scorpio season is here. Keep your energy close.",
+    "preheader": "Two bracelets in black tourmaline, and a few rituals for the season.",
+    "hero": {
+     "eyebrow": "PROTECTION",
+     "head": "Keep your energy your own",
+     "accent": "own"
+    },
+    "cta": "SHOP THE BRACELETS",
+    "text_block": {
+     "head": "The stone they share",
+     "accent": "share",
+     "body": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+    },
+    "grid": {
+     "heading": "Wear one, or both",
+     "cards": [
+      {
+       "name": "The Classic Bracelet in Black Tourmaline",
+       "link": "SHOP"
+      },
+      {
+       "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+       "link": "SHOP"
+      }
+     ]
+    },
+    "scorpio": {
+     "eyebrow": "SCORPIO SEASON",
+     "head": "Scorpio season is here",
+     "accent": "here",
+     "body": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+    },
+    "set": {
+     "eyebrow": "FOR SCORPIO",
+     "name": "The Scorpio Crystal Set",
+     "link": "Shop now"
+    }
+   },
+   "cuts": [
+    {
+     "slot": "M02.eyebrow",
+     "from": "hero.eyebrow",
+     "composed": "PROTECTION",
+     "cut": "PROTECTION"
+    },
+    {
+     "slot": "M02.headline",
+     "from": "hero.head",
+     "composed": "Keep your energy your own",
+     "cut": "Keep your energy your own"
+    },
+    {
+     "slot": "E01.label",
+     "from": "cta",
+     "composed": "SHOP THE BRACELETS",
+     "cut": "SHOP THE BRACELETS"
+    },
+    {
+     "slot": "M16.headline",
+     "from": "text_block.head",
+     "composed": "The stone they share",
+     "cut": "The stone they share"
+    },
+    {
+     "slot": "M16.body",
+     "from": "text_block.body",
+     "composed": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door.",
+     "cut": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+    },
+    {
+     "slot": "M06.heading",
+     "from": "grid.heading",
+     "composed": "Wear one, or both",
+     "cut": "Wear one, or both"
+    },
+    {
+     "slot": "E06.name",
+     "from": "grid.cards[0].name",
+     "composed": "The Classic Bracelet in Black Tourmaline",
+     "cut": "The Classic Bracelet in Black Tourmaline"
+    },
+    {
+     "slot": "E02.label",
+     "from": "grid.cards[0].link",
+     "composed": "SHOP",
+     "cut": "SHOP"
+    },
+    {
+     "slot": "E06.name",
+     "from": "grid.cards[1].name",
+     "composed": "The Seeds of Protection Bracelet in Black Tourmaline",
+     "cut": "The Seeds of Protection Bracelet in Black Tourmaline"
+    },
+    {
+     "slot": "E02.label",
+     "from": "grid.cards[1].link",
+     "composed": "SHOP",
+     "cut": "SHOP"
+    },
+    {
+     "slot": "M04.eyebrow",
+     "from": "scorpio.eyebrow",
+     "composed": "SCORPIO SEASON",
+     "cut": "SCORPIO SEASON"
+    },
+    {
+     "slot": "M04.headline",
+     "from": "scorpio.head",
+     "composed": "Scorpio season is here",
+     "cut": "Scorpio season is here"
+    },
+    {
+     "slot": "M04.body",
+     "from": "scorpio.body",
+     "composed": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend.",
+     "cut": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+    },
+    {
+     "slot": "M03.eyebrow",
+     "from": "set.eyebrow",
+     "composed": "FOR SCORPIO",
+     "cut": "FOR SCORPIO"
+    },
+    {
+     "slot": "M03.name",
+     "from": "set.name",
+     "composed": "The Scorpio Crystal Set",
+     "cut": "The Scorpio Crystal Set"
+    },
+    {
+     "slot": "E02.label",
+     "from": "set.link",
+     "composed": "Shop now",
+     "cut": "Shop now"
+    }
+   ],
+   "gates": {
+    "hero": [
+     {
+      "copy": "Keep your energy your own",
+      "accent": "own",
+      "axis": "Benefit",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": true
+      },
+      "why": "Plain words a friend would use; the accent lands on the one word that carries the angle."
+     },
+     {
+      "copy": "A stone long held for protection",
+      "accent": "protection",
+      "axis": "Proof",
+      "register": "eloquent",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Tradition as the proof, in the voice contract’s own framing; less of a moment, more of a fact."
+     },
+     {
+      "copy": "Black tourmaline, worn close",
+      "accent": "close",
+      "axis": "Product",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": true,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Names the stone both pieces share and puts it on the body; the benefit is left implied."
+     },
+     {
+      "copy": "Whose energy are you carrying?",
+      "accent": "carrying",
+      "axis": "Curiosity",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": false,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "A question the reader would ask herself at the end of a long day; it opens the scene but asks the image to answer it."
+     },
+     {
+      "copy": "A stone for a deeper season",
+      "accent": "deeper",
+      "axis": "Occasion",
+      "register": "sensual",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": true,
+       "real": false,
+       "uplifting": true
+      },
+      "why": "Ties protection to Scorpio season from the top; it pulls the secondary block forward, which the brief did not ask for."
+     }
+    ],
+    "subject": [
+     {
+      "copy": "Scorpio season is here. Keep your energy close.",
+      "axis": "Occasion",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "The timely news first, then the angle; both blocks of the email in one line."
+     },
+     {
+      "copy": "Keep your energy your own",
+      "axis": "Benefit",
+      "register": "uplifting",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": true
+      },
+      "why": "The angle as the subject; it repeats the hero, which reads as one voice and costs a second hook."
+     },
+     {
+      "copy": "Whose energy are you carrying?",
+      "axis": "Curiosity",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": false,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "A question the reader would ask; it opens without naming a product."
+     },
+     {
+      "copy": "Two bracelets in black tourmaline",
+      "axis": "Product",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Says exactly what is inside; the plainest, and the least likely to be opened for the feeling."
+     },
+     {
+      "copy": "A stone long held for protection",
+      "axis": "Proof",
+      "register": "eloquent",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Tradition as the hook, in the ledger’s framing."
+     }
+    ],
+    "cta": [
+     {
+      "copy": "SHOP THE BRACELETS",
+      "axis": "Product",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Verb first and literal: it says where the button goes, since both pieces sit right below."
+     },
+     {
+      "copy": "KEEP IT CLOSE",
+      "axis": "Imperative",
+      "register": "sensual",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": true,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Carries the angle into the button; it does not say what the reader will find."
+     },
+     {
+      "copy": "FIND YOURS",
+      "axis": "Benefit",
+      "register": "uplifting",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": true,
+       "sensual": false,
+       "real": true,
+       "uplifting": true
+      },
+      "why": "Warm and short; generic enough to sit on any send."
+     },
+     {
+      "copy": "YOURS TO KEEP",
+      "axis": "Statement",
+      "register": "refined",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Echoes the headline; a statement, not a verb, so it breaks the house verb-first habit."
+     },
+     {
+      "copy": "SHOP FOR THE SEASON",
+      "axis": "Occasion",
+      "register": "real",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": false,
+       "refined": false,
+       "sensual": false,
+       "real": true,
+       "uplifting": false
+      },
+      "why": "Leans on Scorpio season, which the hero does not mention."
+     },
+     {
+      "copy": "MEET BLACK TOURMALINE",
+      "axis": "Curiosity",
+      "register": "eloquent",
+      "under_angle": 1,
+      "checklist": {
+       "must_say": true,
+       "offer_figures": true,
+       "in_budget": true,
+       "eloquent": true,
+       "refined": true,
+       "sensual": false,
+       "real": false,
+       "uplifting": false
+      },
+      "why": "Introduces the stone as a character; longer, and the stone is already in the text block."
+     }
+    ]
+   },
+   "modules": {
+    "M02": [
+     {
+      "id": "m1",
+      "vals": {
+       "eyebrow": "PROTECTION",
+       "headline": "Keep your energy your own"
+      },
+      "accent": {
+       "headline": "own"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "eyebrow": "ON PROTECTION",
+       "headline": "A stone long held for protection"
+      },
+      "accent": {
+       "headline": "protection"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "eyebrow": "BLACK TOURMALINE",
+       "headline": "Whose energy are you carrying?"
+      },
+      "accent": {
+       "headline": "carrying"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M16": [
+     {
+      "id": "m1",
+      "vals": {
+       "headline": "The stone they share",
+       "body": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+      },
+      "accent": {
+       "headline": "share"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "headline": "Why black tourmaline",
+       "body": "Black tourmaline has long been kept close as a stone of protection. Both bracelets below carry it, so the reminder goes wherever you do, and the day stays outside."
+      },
+      "accent": {
+       "headline": "tourmaline"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "headline": "The reminder at your wrist",
+       "body": "Some days ask more of you than others. Black tourmaline, long held as a stone of protection, sits in both bracelets below: something small and dark to touch when you need to remember what is yours."
+      },
+      "accent": {
+       "headline": "wrist"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M06": [
+     {
+      "id": "m1",
+      "vals": {
+       "heading": "Wear one, or both"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "heading": "Two ways to wear it"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "heading": "Both in black tourmaline"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M04": [
+     {
+      "id": "m1",
+      "vals": {
+       "eyebrow": "SCORPIO SEASON",
+       "headline": "Scorpio season is here",
+       "body": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+      },
+      "accent": {
+       "headline": "here"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "eyebrow": "SCORPIO SEASON",
+       "headline": "Into the deep",
+       "body": "Scorpio season has long been read as a time for depth and turning inward. Give it one evening with no plans, write down one thing you are ready to let go of, and keep black tourmaline close as a reminder of what is yours to tend."
+      },
+      "accent": {
+       "headline": "deep"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "eyebrow": "A FEW RITUALS",
+       "headline": "For a season of depth",
+       "body": "We have just entered Scorpio season, long read as a time for turning inward. Light a candle on an evening with no plans. Write down what you are ready to let go of, and close the notebook on it. Keep black tourmaline close, as a reminder of what is yours."
+      },
+      "accent": {
+       "headline": "depth"
+      },
+      "under_angle": 1
+     }
+    ],
+    "M03": [
+     {
+      "id": "m1",
+      "vals": {
+       "eyebrow": "FOR SCORPIO",
+       "name": "The Scorpio Crystal Set"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m2",
+      "vals": {
+       "eyebrow": "FEATURING",
+       "name": "The Scorpio Crystal Set"
+      },
+      "under_angle": 1
+     },
+     {
+      "id": "m3",
+      "vals": {
+       "eyebrow": "FOR THE SEASON",
+       "name": "The Scorpio Crystal Set"
+      },
+      "under_angle": 1
+     }
+    ]
+   },
+   "preheader": [
+    "Two bracelets in black tourmaline, and a few rituals for the season.",
+    "Black tourmaline, long held as a stone of protection, and a few ways into Scorpio season.",
+    "Two ways to wear black tourmaline, and three small rituals for a deeper season."
+   ]
+  },
+  {
+   "route": 2,
+   "developed": false,
+   "angle": {
+    "copy": "One stone, two ways to wear it",
+    "copy2": "Both pieces are black tourmaline: the product frame (brief-intake R2).",
+    "tension": "Protection sounds abstract; a stone you can wear is concrete.",
+    "axis": "Product",
+    "scene": "the two bracelets side by side",
+    "why": "Not developed: the brief names protection of energy as the angle."
+   }
+  },
+  {
+   "route": 3,
+   "developed": false,
+   "angle": {
+    "copy": "Meet the season protected",
+    "copy2": "Scorpio season as the frame, protection as the way to meet it (brief-intake R3).",
+    "tension": "The season asks for depth; that is when people guard their energy most.",
+    "axis": "Occasion",
+    "scene": "the first evening of Scorpio season",
+    "why": "Not developed: the brief makes Scorpio the secondary block."
+   }
+  }
+ ],
+ "provenance": {
+  "campaign": null,
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "voice": "voice-contract.md: ratified by Eddie at Gate 2 (2026-10-21, lane C calls 1, 7, 8; 2026-10-22, package calls 4, 10, 12)",
+  "register_lines": [],
+  "exemplars_shown": {
+   "angle": {
+    "favorites": [],
+    "exemplars": [],
+    "note": "angles drafted from the brief and the route plan; no exemplar role for angles"
+   },
+   "hero": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-headline-01",
+     "hlr-email-headline-02",
+     "hlr-email-headline-03",
+     "hlr-email-headline-04",
+     "hlr-email-headline-05",
+     "hlr-email-headline-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "cta": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-cta-01",
+     "hlr-email-cta-02",
+     "hlr-email-cta-03",
+     "hlr-email-cta-04",
+     "hlr-email-cta-05",
+     "hlr-email-cta-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "subject": {
+    "favorites": [],
+    "exemplars": [],
+    "exit": 1,
+    "note": "no exemplar for this role; drafted from the contract"
+   },
+   "preheader": {
+    "favorites": [],
+    "exemplars": [],
+    "exit": 1,
+    "note": "no exemplar for this role; drafted from the contract"
+   },
+   "eyebrow": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-eyebrow-01",
+     "hlr-email-eyebrow-02",
+     "hlr-email-eyebrow-03",
+     "hlr-email-eyebrow-04",
+     "hlr-email-eyebrow-05",
+     "hlr-email-eyebrow-06"
+    ],
+    "widened": true,
+    "thin": false
+   },
+   "body": {
+    "favorites": [],
+    "exemplars": [
+     "hlr-email-body-01",
+     "hlr-email-body-02",
+     "hlr-email-body-03",
+     "hlr-email-body-04",
+     "hlr-email-body-05",
+     "hlr-email-body-06"
+    ],
+    "widened": true,
+    "thin": false
+   }
+  },
+  "facts": [
+   {
+    "sku": "the-classic-bracelet-in-black-tourmaline",
+    "name": "The Classic Bracelet in Black Tourmaline",
+    "figures": []
+   },
+   {
+    "sku": "the-seeds-of-protection-bracelet",
+    "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+    "figures": []
+   },
+   {
+    "sku": "the-scorpio-crystal-set",
+    "name": "The Scorpio Crystal Set",
+    "figures": []
+   }
+  ],
+  "guardrails": [
+   "no unverified figures (allowed_figures empty)",
+   "prohibited patterns from brand-context.md (6), plus the brief’s bar on popularity lines (HLR-T01)",
+   "legal ledger hlr-ledger-0.2.0, test-seed: every row enforced provisionally, nothing cleared for production",
+   "slot budgets from seam-map.json (slotmap.yaml, 2026-10-23, 27 modules, 15 elements)",
+   "house conventions: no em dashes, serial comma, curly quotes, sentence-case headlines, caps CTAs and eyebrows, one accent word per headline"
+  ],
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ },
+ "brief_figures": [],
+ "gates": {
+  "angle": [
+   {
+    "copy": "Keep your energy your own",
+    "copy2": "Protection as a boundary you keep: black tourmaline, long held as a stone of protection, worn as the reminder.",
+    "tension": "By the end of a full day, other people’s energy is on you.",
+    "axis": "Benefit",
+    "scene": "the end of a full day, when the reader notices whose energy she is carrying home",
+    "why": "It names a moment the reader knows from her own week (the book’s coworker’s bad vibes, p30), keeps the stone to tradition and the piece to a reminder, and hands over to Scorpio season without changing the subject."
+   },
+   {
+    "copy": "A boundary you can wear",
+    "copy2": "The bracelet as a small decision made each morning about what comes with you.",
+    "tension": "A boundary is easy to set and easy to forget by noon.",
+    "axis": "Benefit",
+    "scene": "the morning ritual: putting the bracelet on before the day starts",
+    "why": "Refined and concrete, built on the act of dressing; it sits nearer to protection as an effect, so every line needs the tradition framing."
+   },
+   {
+    "copy": "Come back to yourself",
+    "copy2": "The stone at the wrist as a touchstone in the middle of a crowded day.",
+    "tension": "Mid-conversation, mid-commute, you lose the thread of yourself.",
+    "axis": "Benefit",
+    "scene": "a hand going to the wrist in a crowded room",
+    "why": "Sensual and specific, but it leans on calm and grounding, close to the ledger’s mental-health rows (HLR-H02), so it is the riskiest of the three."
+   }
+  ],
+  "hero": [
+   {
+    "copy": "Keep your energy your own",
+    "accent": "own",
+    "axis": "Benefit",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": true
+    },
+    "why": "Plain words a friend would use; the accent lands on the one word that carries the angle."
+   },
+   {
+    "copy": "A stone long held for protection",
+    "accent": "protection",
+    "axis": "Proof",
+    "register": "eloquent",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Tradition as the proof, in the voice contract’s own framing; less of a moment, more of a fact."
+   },
+   {
+    "copy": "Black tourmaline, worn close",
+    "accent": "close",
+    "axis": "Product",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": true,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Names the stone both pieces share and puts it on the body; the benefit is left implied."
+   },
+   {
+    "copy": "Whose energy are you carrying?",
+    "accent": "carrying",
+    "axis": "Curiosity",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": false,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "A question the reader would ask herself at the end of a long day; it opens the scene but asks the image to answer it."
+   },
+   {
+    "copy": "A stone for a deeper season",
+    "accent": "deeper",
+    "axis": "Occasion",
+    "register": "sensual",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": true,
+     "real": false,
+     "uplifting": true
+    },
+    "why": "Ties protection to Scorpio season from the top; it pulls the secondary block forward, which the brief did not ask for."
+   }
+  ],
+  "subject": [
+   {
+    "copy": "Scorpio season is here. Keep your energy close.",
+    "axis": "Occasion",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "The timely news first, then the angle; both blocks of the email in one line."
+   },
+   {
+    "copy": "Keep your energy your own",
+    "axis": "Benefit",
+    "register": "uplifting",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": true
+    },
+    "why": "The angle as the subject; it repeats the hero, which reads as one voice and costs a second hook."
+   },
+   {
+    "copy": "Whose energy are you carrying?",
+    "axis": "Curiosity",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": false,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "A question the reader would ask; it opens without naming a product."
+   },
+   {
+    "copy": "Two bracelets in black tourmaline",
+    "axis": "Product",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Says exactly what is inside; the plainest, and the least likely to be opened for the feeling."
+   },
+   {
+    "copy": "A stone long held for protection",
+    "axis": "Proof",
+    "register": "eloquent",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Tradition as the hook, in the ledger’s framing."
+   }
+  ],
+  "cta": [
+   {
+    "copy": "SHOP THE BRACELETS",
+    "axis": "Product",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Verb first and literal: it says where the button goes, since both pieces sit right below."
+   },
+   {
+    "copy": "KEEP IT CLOSE",
+    "axis": "Imperative",
+    "register": "sensual",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": true,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Carries the angle into the button; it does not say what the reader will find."
+   },
+   {
+    "copy": "FIND YOURS",
+    "axis": "Benefit",
+    "register": "uplifting",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": true,
+     "sensual": false,
+     "real": true,
+     "uplifting": true
+    },
+    "why": "Warm and short; generic enough to sit on any send."
+   },
+   {
+    "copy": "YOURS TO KEEP",
+    "axis": "Statement",
+    "register": "refined",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Echoes the headline; a statement, not a verb, so it breaks the house verb-first habit."
+   },
+   {
+    "copy": "SHOP FOR THE SEASON",
+    "axis": "Occasion",
+    "register": "real",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": false,
+     "refined": false,
+     "sensual": false,
+     "real": true,
+     "uplifting": false
+    },
+    "why": "Leans on Scorpio season, which the hero does not mention."
+   },
+   {
+    "copy": "MEET BLACK TOURMALINE",
+    "axis": "Curiosity",
+    "register": "eloquent",
+    "under_angle": 1,
+    "checklist": {
+     "must_say": true,
+     "offer_figures": true,
+     "in_budget": true,
+     "eloquent": true,
+     "refined": true,
+     "sensual": false,
+     "real": false,
+     "uplifting": false
+    },
+    "why": "Introduces the stone as a character; longer, and the stone is already in the text block."
+   }
+  ]
+ },
+ "composed": {
+  "subject": "Scorpio season is here. Keep your energy close.",
+  "preheader": "Two bracelets in black tourmaline, and a few rituals for the season.",
+  "hero": {
+   "eyebrow": "PROTECTION",
+   "head": "Keep your energy your own",
+   "accent": "own"
+  },
+  "cta": "SHOP THE BRACELETS",
+  "text_block": {
+   "head": "The stone they share",
+   "accent": "share",
+   "body": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+  },
+  "grid": {
+   "heading": "Wear one, or both",
+   "cards": [
+    {
+     "name": "The Classic Bracelet in Black Tourmaline",
+     "link": "SHOP"
+    },
+    {
+     "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+     "link": "SHOP"
+    }
+   ]
+  },
+  "scorpio": {
+   "eyebrow": "SCORPIO SEASON",
+   "head": "Scorpio season is here",
+   "accent": "here",
+   "body": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+  },
+  "set": {
+   "eyebrow": "FOR SCORPIO",
+   "name": "The Scorpio Crystal Set",
+   "link": "Shop now"
+  }
+ },
+ "cuts": [
+  {
+   "slot": "M02.eyebrow",
+   "from": "hero.eyebrow",
+   "composed": "PROTECTION",
+   "cut": "PROTECTION"
+  },
+  {
+   "slot": "M02.headline",
+   "from": "hero.head",
+   "composed": "Keep your energy your own",
+   "cut": "Keep your energy your own"
+  },
+  {
+   "slot": "E01.label",
+   "from": "cta",
+   "composed": "SHOP THE BRACELETS",
+   "cut": "SHOP THE BRACELETS"
+  },
+  {
+   "slot": "M16.headline",
+   "from": "text_block.head",
+   "composed": "The stone they share",
+   "cut": "The stone they share"
+  },
+  {
+   "slot": "M16.body",
+   "from": "text_block.body",
+   "composed": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door.",
+   "cut": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+  },
+  {
+   "slot": "M06.heading",
+   "from": "grid.heading",
+   "composed": "Wear one, or both",
+   "cut": "Wear one, or both"
+  },
+  {
+   "slot": "E06.name",
+   "from": "grid.cards[0].name",
+   "composed": "The Classic Bracelet in Black Tourmaline",
+   "cut": "The Classic Bracelet in Black Tourmaline"
+  },
+  {
+   "slot": "E02.label",
+   "from": "grid.cards[0].link",
+   "composed": "SHOP",
+   "cut": "SHOP"
+  },
+  {
+   "slot": "E06.name",
+   "from": "grid.cards[1].name",
+   "composed": "The Seeds of Protection Bracelet in Black Tourmaline",
+   "cut": "The Seeds of Protection Bracelet in Black Tourmaline"
+  },
+  {
+   "slot": "E02.label",
+   "from": "grid.cards[1].link",
+   "composed": "SHOP",
+   "cut": "SHOP"
+  },
+  {
+   "slot": "M04.eyebrow",
+   "from": "scorpio.eyebrow",
+   "composed": "SCORPIO SEASON",
+   "cut": "SCORPIO SEASON"
+  },
+  {
+   "slot": "M04.headline",
+   "from": "scorpio.head",
+   "composed": "Scorpio season is here",
+   "cut": "Scorpio season is here"
+  },
+  {
+   "slot": "M04.body",
+   "from": "scorpio.body",
+   "composed": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend.",
+   "cut": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+  },
+  {
+   "slot": "M03.eyebrow",
+   "from": "set.eyebrow",
+   "composed": "FOR SCORPIO",
+   "cut": "FOR SCORPIO"
+  },
+  {
+   "slot": "M03.name",
+   "from": "set.name",
+   "composed": "The Scorpio Crystal Set",
+   "cut": "The Scorpio Crystal Set"
+  },
+  {
+   "slot": "E02.label",
+   "from": "set.link",
+   "composed": "Shop now",
+   "cut": "Shop now"
+  }
+ ],
+ "modules": {
+  "M02": [
+   {
+    "id": "m1",
+    "vals": {
+     "eyebrow": "PROTECTION",
+     "headline": "Keep your energy your own"
+    },
+    "accent": {
+     "headline": "own"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "eyebrow": "ON PROTECTION",
+     "headline": "A stone long held for protection"
+    },
+    "accent": {
+     "headline": "protection"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "eyebrow": "BLACK TOURMALINE",
+     "headline": "Whose energy are you carrying?"
+    },
+    "accent": {
+     "headline": "carrying"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M16": [
+   {
+    "id": "m1",
+    "vals": {
+     "headline": "The stone they share",
+     "body": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door."
+    },
+    "accent": {
+     "headline": "share"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "headline": "Why black tourmaline",
+     "body": "Black tourmaline has long been kept close as a stone of protection. Both bracelets below carry it, so the reminder goes wherever you do, and the day stays outside."
+    },
+    "accent": {
+     "headline": "tourmaline"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "headline": "The reminder at your wrist",
+     "body": "Some days ask more of you than others. Black tourmaline, long held as a stone of protection, sits in both bracelets below: something small and dark to touch when you need to remember what is yours."
+    },
+    "accent": {
+     "headline": "wrist"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M06": [
+   {
+    "id": "m1",
+    "vals": {
+     "heading": "Wear one, or both"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "heading": "Two ways to wear it"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "heading": "Both in black tourmaline"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M04": [
+   {
+    "id": "m1",
+    "vals": {
+     "eyebrow": "SCORPIO SEASON",
+     "headline": "Scorpio season is here",
+     "body": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend."
+    },
+    "accent": {
+     "headline": "here"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "eyebrow": "SCORPIO SEASON",
+     "headline": "Into the deep",
+     "body": "Scorpio season has long been read as a time for depth and turning inward. Give it one evening with no plans, write down one thing you are ready to let go of, and keep black tourmaline close as a reminder of what is yours to tend."
+    },
+    "accent": {
+     "headline": "deep"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "eyebrow": "A FEW RITUALS",
+     "headline": "For a season of depth",
+     "body": "We have just entered Scorpio season, long read as a time for turning inward. Light a candle on an evening with no plans. Write down what you are ready to let go of, and close the notebook on it. Keep black tourmaline close, as a reminder of what is yours."
+    },
+    "accent": {
+     "headline": "depth"
+    },
+    "under_angle": 1
+   }
+  ],
+  "M03": [
+   {
+    "id": "m1",
+    "vals": {
+     "eyebrow": "FOR SCORPIO",
+     "name": "The Scorpio Crystal Set"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m2",
+    "vals": {
+     "eyebrow": "FEATURING",
+     "name": "The Scorpio Crystal Set"
+    },
+    "under_angle": 1
+   },
+   {
+    "id": "m3",
+    "vals": {
+     "eyebrow": "FOR THE SEASON",
+     "name": "The Scorpio Crystal Set"
+    },
+    "under_angle": 1
+   }
+  ]
+ },
+ "envelope": {
+  "preheader": [
+   "Two bracelets in black tourmaline, and a few rituals for the season.",
+   "Black tourmaline, long held as a stone of protection, and a few ways into Scorpio season.",
+   "Two ways to wear black tourmaline, and three small rituals for a deeper season."
+  ]
+ },
+ "notes": [
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Scene not ratified: R1 is the brief’s own angle (protection of energy); inside it Claude developed scene 1 (the end of a full day) as the recommendation. Scenes 2 and 3 stay live; pick again and only the copy below the angle changes."
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "The two bracelets sit in the M06 grid under the heading Wear one, or both. They were first built as M03 spotlights with the eyebrows WEAR ONE and OR BOTH, but at M03’s name size (the locked headline style in a 338 px column) Tourmaline and Protection broke inside the word; the grid sets the full names in the title style without a break. The Scorpio Crystal Set keeps M03, whose short words fit."
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Eddie edited the build live on 2026-10-23 and his edits stand: he cut the text block's first sentence (By the end of a full day, other people’s energy can follow you home.), so the slate now carries his body; he switched on the hero’s script line, which still shows the placeholder (a script line) and needs his line or the option off before export; and he moved the frame."
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Products resolved from products.json: the-classic-bracelet-in-black-tourmaline, the-seeds-of-protection-bracelet, the-scorpio-crystal-set. Descriptions are empty and the set lists no contents, so the copy states no metal, size, price or stone list; the one product fact used is the stone each bracelet carries (Black Tourmaline)."
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "No popularity line: Eddie names the two bracelets HLR’s top two protection sellers, and no sales source is on file (HLR-T01). Donnie can add BEST SELLERS as an eyebrow once the source is."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "The subject and preheader were drafted from the voice contract alone: the exemplar file has no subject or preheader lines. The pack has no favorites yet, so every gate saw historical exemplars only; no measured preference is on file, so the checklist carries the voice contract’s five checks and the brief items."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "Type product_spotlight read live from type-registry-core.json (ratified). Product names in the spotlights are data-fed from products.json (M03.name) and listed in cuts only to prove they fit; the footer carries HLR-REQ-01 verbatim in M09 and is not redrafted here."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "Every composed string fit its slot budget, so the cut pass changed nothing: cuts lists each mapped string unchanged so fit_check can confirm the budgets."
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "Each headline names its accent word (field accent); the build sets that word in the headline accent style."
+  },
+  {
+   "owner": "legal",
+   "severity": "note",
+   "text": "The protection and stone lines are framed as tradition or intention (HLR-M01, HLR-M05) and the footer carries the disclaimer; the ledger is a test seed (hlr-ledger-0.2.0), so no line here is cleared for production until HLR names its claims signer (C2)."
+  },
+  {
+   "owner": "system",
+   "severity": "note",
+   "text": "Library gap: M03.name breaks any word longer than about eight letters inside the word at the email headline size (338 px column); its flex probe proved length, not word width. Logged for the next library pass beside E07’s hand-setting flag."
+  }
+ ]
+}

@@ -1,0 +1,2466 @@
+{
+ "_role": "explainer content",
+ "_note": "The plain words of the HLR forge explainer. Every factual line carries its source and a verbatim quote (or, for an outside page, the date it was checked); guards/explainer_drift.py verifies each one. Numbers come from explainer-data.json through the values map, never typed here.",
+ "values": {
+  "roles_total": "roles.total",
+  "roles_null": "roles.null.#",
+  "products": "products.count",
+  "empty_desc": "products.empty_descriptions",
+  "ledger_rows": "ledger.entries.#",
+  "needs_legal": "ledger.counts.needs_legal",
+  "conditional": "ledger.counts.conditional",
+  "info": "ledger.counts.info",
+  "patterns": "prohibited_patterns.#",
+  "voice_rules": "voice.rules",
+  "exemplars": "exemplars.count",
+  "ex_email": "exemplars.by_channel.email",
+  "ex_social": "exemplars.by_channel.social",
+  "ex_paid": "exemplars.by_channel.paid",
+  "ex_web": "exemplars.by_channel.web",
+  "lex_product": "lexicon.product",
+  "lex_scene": "lexicon.scene",
+  "lex_names": "lexicon.product_names",
+  "types": "types.count",
+  "modules": "library.modules.#",
+  "elements": "library.elements.#",
+  "slots": "library.slots",
+  "variables": "library.variables",
+  "text_styles": "library.text_styles",
+  "tokens": "tokens.count",
+  "tok_doc": "tokens.by_tag.documented",
+  "tok_obs": "tokens.by_tag.observed",
+  "tok_der": "tokens.by_tag.derived",
+  "pairs": "tokens.pairs",
+  "strict_rows": "strictness.#",
+  "contradictions": "contradictions.#",
+  "gaps_total": "gaps.#",
+  "gaps_hlr": "gaps[owner=HLR].#",
+  "decision_lines": "record.decision_lines",
+  "decision_dates": "record.decision_dates"
+ },
+ "meta": {
+  "title": "HLR Forge Guide",
+  "eyebrow": "High Light Rituals · Forge guide",
+  "headline": [
+   "How the forge ",
+   "works"
+  ],
+  "lede": "The forge turns a brief into finished HLR email, built in HLR’s Figma library from HLR’s own rules. This guide follows one email through it, then opens the rulebook: what each rule controls, who owns it, and what to change when the business changes.",
+  "rehearsal": "The example is a rehearsal: a brief Claude wrote under Eddie’s delegation for Review 2, the made-to-order pendants. A real HLR brief replaces it after the forge proof.",
+  "fonts_note": "Set in Instrument Serif and Archivo, free stand-ins for Saol and Trade Gothic, whose licenses HLR has yet to confirm. Text sits only on the pack’s certified color pairs. The focus ring is this page’s own: HLR’s web focus ring is still an open gap (token-model K2)."
+ },
+ "readers": [
+  {
+   "id": "team",
+   "label": "I’m on HLR’s team",
+   "hint": "Plain language. Start with the journey, then the rulebook.",
+   "mode": "plain",
+   "start": "journey"
+  },
+  {
+   "id": "operator",
+   "label": "I run the forge",
+   "hint": "Adds file paths, ids, scripts and the record.",
+   "mode": "technical",
+   "start": "rulebook"
+  },
+  {
+   "id": "overview",
+   "label": "Just the overview",
+   "hint": "The three parts, the journey and the comparison.",
+   "mode": "plain",
+   "start": "system"
+  }
+ ],
+ "nav": [
+  {
+   "id": "system",
+   "label": "The system"
+  },
+  {
+   "id": "journey",
+   "label": "The journey"
+  },
+  {
+   "id": "rulebook",
+   "label": "The rulebook"
+  },
+  {
+   "id": "changes",
+   "label": "When things change"
+  },
+  {
+   "id": "compare",
+   "label": "Forge or Claude Design"
+  },
+  {
+   "id": "check",
+   "label": "Check yourself"
+  }
+ ],
+ "system": {
+  "headline": [
+   "One system, three ",
+   "parts"
+  ],
+  "intro": "Everything the forge knows about HLR lives in one place, and everything it does is one of a small set of skills. The people around it make the calls a machine shouldn’t.",
+  "parts": [
+   {
+    "id": "pack",
+    "name": "The pack",
+    "what": "HLR’s rules and facts, kept in files: products, claims, voice, email types, design tokens and measured slot lengths.",
+    "detail": "Read fresh on every run. A fact the pack doesn’t carry doesn’t exist for the forge.",
+    "stat": "{roles_total} roles; {roles_null} still empty, each with an owner",
+    "technical": "brand-pack/ · the File map in brand-context.md",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "No HLR fact here comes from memory; a fact with no source is a gap in the last table."
+    }
+   },
+   {
+    "id": "engine",
+    "name": "The engine",
+    "what": "The skills that do the work: intake, copy for each channel, the build in Figma, the design system, customer evidence, the squad, the verifier and the options board.",
+    "detail": "It carries no HLR fact, so the method stays the same while HLR’s rules change.",
+    "stat": "Eleven skills, one method each",
+    "technical": "hlr-studio-engine, installed as a Cowork plugin",
+    "fact": {
+     "source": "engine:README.md",
+     "quote": "Eleven skills, one method each, no brand facts"
+    }
+   },
+   {
+    "id": "library",
+    "name": "The library",
+    "what": "HLR Library in Figma: colors, type and spacing as variables, and the elements, modules and templates every email is built from.",
+    "detail": "An email is a stack of library modules. Change a module and every email built from it follows.",
+    "stat": "{variables} variables · {text_styles} text styles · {elements} elements · {modules} modules",
+    "technical": "Figma file HLR Library · ids in brand-pack/figma.yaml",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "every module built from element instances and bound to tokens"
+    }
+   },
+   {
+    "id": "people",
+    "name": "The people",
+    "what": "Eddie and HLR’s team pick the route, ratify proposals, mark lines keep or cut, and sign off claims.",
+    "detail": "The forge recommends. A person decides.",
+    "stat": "{gaps_hlr} open items wait on HLR",
+    "technical": "REVIEW.md section 4: the three tiers",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "Only Eddie ratifies a derived value (rule 4)."
+    }
+   }
+  ],
+  "rule": {
+   "text": "One rule runs through all of it: when a fact is missing, the forge stops and says who can supply it.",
+   "fact": {
+    "source": "engine:README.md",
+    "quote": "A brand fact the pack does not carry stops the run and is named, never guessed."
+   }
+  },
+  "progress_label": "Where Phase 1 stands, counted from PROGRESSION.md"
+ },
+ "journey": {
+  "headline": [
+   "From the ask to the ",
+   "send"
+  ],
+  "intro": "Follow one email, the made-to-order pendants, from the brief to the slices the email platform sends. Open a stage to see what happened, what it read, what it made and who made the call.",
+  "predict_label": "Guess first",
+  "reveal_label": "Show the answer"
+ },
+ "stages": [
+  {
+   "id": "ask",
+   "n": 1,
+   "name": "The ask",
+   "skill": null,
+   "plain": [
+    "Someone writes a brief: what the email is for, who it’s for, what it must say and what it must never say.",
+    "A rough note works too. Intake turns it into a brief."
+   ],
+   "human": "Eddie or HLR’s team writes the brief.",
+   "reads": [],
+   "makes": [
+    {
+     "file": "brief-made-to-order-pendants.md",
+     "label": "The brief"
+    }
+   ],
+   "checks": [],
+   "evidence": "brief",
+   "predict": {
+    "q": "What does a good brief hold?",
+    "a": "The rehearsal’s brief has eleven parts, from the objective and the audience to what it must never say and how success is measured. Intake reads every one, and anything missing becomes a named gap."
+   },
+   "technical": {
+    "text": "Any form works: a file, pasted text, notes or a PDF.",
+    "fact": {
+     "source": "engine:skills/brief-intake/SKILL.md",
+     "quote": "Takes a file, pasted text, notes or an extracted PDF"
+    }
+   }
+  },
+  {
+   "id": "intake",
+   "n": 2,
+   "name": "Intake",
+   "skill": "brief-intake",
+   "plain": [
+    "The forge reads the brief against the pack. It looks up each product, notes which figures the copy may use, adds HLR’s never-say rules and gives every gap an owner.",
+    "Then it proposes routes: three strategic angles on the same send by default, five at most, each on a different frame."
+   ],
+   "human": "Nobody yet. Intake hands its routes to a person and stops.",
+   "reads": [
+    "products",
+    "ledger",
+    "never-say",
+    "types",
+    "routes"
+   ],
+   "makes": [
+    {
+     "file": "made-to-order-pendants.brief.json",
+     "label": "Structured brief"
+    },
+    {
+     "file": "made-to-order-pendants.routes.json",
+     "label": "Route plan"
+    },
+    {
+     "file": "made-to-order-pendants.intake.md",
+     "label": "Intake summary"
+    }
+   ],
+   "checks": [
+    {
+     "name": "Brief lint",
+     "key": "brief"
+    }
+   ],
+   "evidence": "intake",
+   "first_run": {
+    "text": "The first run failed on a schema rule: a 1200-wide email master wasn’t an allowed width. The gap went on the engine’s list (G7), the brief was corrected, and the re-run passed. Both runs are kept.",
+    "fact": {
+     "source": "outputs/step-4-figma/engine-gaps-chat6.md",
+     "quote": "so an email master at 1200 fails the schema."
+    }
+   },
+   "predict": {
+    "q": "The brief would like to name the pendants’ metal. The product records have no descriptions yet. What does intake do?",
+    "a": "It allows no figure and names the gap, with HLR as its owner. No metal, karat, size or meaning line goes into the copy until HLR’s Shopify export arrives.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.intake.md",
+     "quote": "Product descriptions are empty until HLR's Shopify export lands (Brand Review v2 Q5), so no material, karat, size or meaning line is allowed."
+    }
+   },
+   "technical": {
+    "text": "brief_lint.js checks the brief and routes against the schema, the allowed figures, the never-say union and the ledger. It matches words, not meaning.",
+    "fact": {
+     "source": "engine:skills/brief-intake/SKILL.md",
+     "quote": "the lint matches wording and never judges meaning"
+    }
+   }
+  },
+  {
+   "id": "pick",
+   "n": 3,
+   "name": "Pick a route",
+   "skill": null,
+   "plain": [
+    "Three routes came back: product (the making), benefit (an intention) and occasion (the giving season).",
+    "The forge said which one it would pick and why, then stopped."
+   ],
+   "human": "A person picks the route. The forge never makes this call.",
+   "reads": [
+    "routes"
+   ],
+   "makes": [],
+   "checks": [],
+   "evidence": "routes",
+   "route_note": "Route 1’s angle still says “one at a time”, a claim about how the pieces are made. The brief later dropped the phrase, and the copy never used it. See Review for why no check caught it.",
+   "fact": {
+    "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.intake.md",
+    "quote": "A recommendation, not a decision: the angle is the one call the model never makes for you."
+   },
+   "predict": {
+    "q": "Why didn’t the forge recommend the benefit route?",
+    "a": "HLR’s benefit language leans on health and intention, so every benefit line goes through the claims ledger and waits for HLR’s ruling on positioning and claims (C2). The product route rests on the one fact the pack carries for all four pendants: made to order.",
+    "fact": {
+     "source": "brand-pack/route-axes.json",
+     "quote": "every benefit line goes through the claims ledger and waits for C2"
+    }
+   },
+   "technical": {
+    "text": "The pick is recorded on the route: selected_by human. Here the plan stays provisional, picked by recommendation under Eddie’s delegation.",
+    "fact": {
+     "source": "engine:skills/brief-intake/SKILL.md",
+     "quote": "A picked route is a frame, not a scene"
+    }
+   }
+  },
+  {
+   "id": "copy",
+   "n": 4,
+   "name": "Copy",
+   "skill": "email-copy",
+   "plain": [
+    "The forge writes the picked route as one whole piece. Then it maps each line into the slots of the modules it will use, trims anything over a slot’s measured length, and checks every line against the claims ledger and HLR’s voice.",
+    "Its findings come back sorted by who can act on them."
+   ],
+   "human": "A person approves the lines, or picks another angle inside the route.",
+   "reads": [
+    "voice",
+    "exemplars",
+    "lexicon",
+    "slots",
+    "ledger",
+    "never-say"
+   ],
+   "makes": [
+    {
+     "file": "made-to-order-pendants.slates.json",
+     "label": "Copy slate"
+    },
+    {
+     "file": "made-to-order-pendants.onepager.html",
+     "label": "One-pager"
+    },
+    {
+     "file": "made-to-order-pendants.findings.md",
+     "label": "Findings by owner"
+    }
+   ],
+   "checks": [
+    {
+     "name": "Claims and copy lint",
+     "key": "copy"
+    },
+    {
+     "name": "Fit check",
+     "key": "fit"
+    },
+    {
+     "name": "Voice lint, advisory",
+     "key": "voice"
+    }
+   ],
+   "evidence": "copy",
+   "voice_note": {
+    "text": "The voice lint warned because HLR has no fitted voice model yet. It ran on the engine’s default weights, said so, and stays advisory.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.voice-lint.json",
+     "quote": "This lint never fails a slate"
+    }
+   },
+   "predict": {
+    "q": "A draft line says a crystal treats anxiety. What happens?",
+    "a": "It’s blocked twice: by a never-say pattern, and by ledger row HLR-H02, which holds any line that ties a piece or a stone to anxiety until HLR’s claims signer rules.",
+    "verdict": "treats-anxiety",
+    "fact": {
+     "source": "brand-pack/legal-ledger.json",
+     "quote": "No line ties a piece or a stone to anxiety, stress, mood, grief, trauma, sleep or any mental-health state."
+    }
+   },
+   "technical": {
+    "text": "Compose whole, map to slots, cut (fit_check.js), lint (copy_lint.js, voice_lint.js). lib/claims.js is the one ledger matcher every lint shares.",
+    "fact": {
+     "source": "engine:README.md",
+     "quote": "copy is composed whole, then mapped to slots, cut to budget by a separate pass"
+    }
+   }
+  },
+  {
+   "id": "squad",
+   "n": null,
+   "name": "Squad",
+   "branch": true,
+   "skill": "squad-run · verify · options-board",
+   "plain": [
+    "For a bigger send, the forge can develop every route at once: one worker per route, an independent judge that compares the routes in pairs, and a board that lays them side by side.",
+    "The rehearsal didn’t use it. It costs far more than a single draft."
+   ],
+   "human": "A person picks from the board. The judge ranks; it doesn’t choose.",
+   "reads": [
+    "routes",
+    "taste"
+   ],
+   "makes": [
+    {
+     "file": "route packets",
+     "label": "One packet per route"
+    },
+    {
+     "file": "options board",
+     "label": "The board"
+    }
+   ],
+   "checks": [],
+   "evidence": "squad",
+   "cost": {
+    "text": "About 250K output tokens per route worker, plus the judge.",
+    "fact": {
+     "source": "engine:skills/squad-run/SKILL.md",
+     "quote": "about 250K output tokens per route worker plus the judge"
+    }
+   },
+   "predict": {
+    "q": "Does the judge pick the winning route?",
+    "a": "No. It ranks routes from pairwise comparisons and reports how often it agrees with HLR’s own blind marks. With no marks on file yet, every rank says so.",
+    "fact": {
+     "source": "engine:skills/verify/SKILL.md",
+     "quote": "Reports how often that judge agrees with the brand owner's own blind marks, or says that it has never been checked"
+    }
+   },
+   "technical": {
+    "text": "workflows/squad-run.js; the judge never sees the workers’ transcripts.",
+    "fact": {
+     "source": "engine:skills/verify/SKILL.md",
+     "quote": "never the human pick"
+    }
+   }
+  },
+  {
+   "id": "build",
+   "n": 5,
+   "name": "Build",
+   "skill": "asset-production",
+   "plain": [
+    "The forge assembles the email in HLR Library from modules: a header, a hero, a text block, a product grid, an image band, a closing button and the footer. Each line drops into its slot, and cleared photos go into the image wells.",
+    "Nothing is drawn freehand. Every piece is an instance of a library module bound to HLR’s tokens."
+   ],
+   "human": "Eddie confirms the build at Review 2.",
+   "reads": [
+    "figma",
+    "modules",
+    "slots",
+    "tokens",
+    "strictness",
+    "art"
+   ],
+   "makes": [
+    {
+     "file": "HLR Library · 04 Staging",
+     "label": "The email, in Figma"
+    },
+    {
+     "file": "build.md",
+     "label": "Build notes"
+    },
+    {
+     "file": "demo-email-preview.png",
+     "label": "Preview"
+    }
+   ],
+   "checks": [
+    {
+     "name": "Structure lint",
+     "verdict": "PASS"
+    },
+    {
+     "name": "Flex: every slot holds 2x or more",
+     "verdict": "PASS"
+    },
+    {
+     "name": "Canvas and face checks",
+     "verdict": "PASS"
+    }
+   ],
+   "checks_fact": {
+    "source": "outputs/step-4-figma/demo-email/build.md",
+    "quote": "every module and element passes structure lint, flex at 2x or better, canvas and face checks"
+   },
+   "evidence": "build",
+   "fact": {
+    "source": "outputs/step-4-figma/demo-email/build.md",
+    "quote": "Built from library instances only, no detached layers"
+   },
+   "predict": {
+    "q": "The approved headline is longer than the one in the drawing. What gives?",
+    "a": "Nothing, as long as it fits its slot. The copy was already cut to each slot’s measured length, and every module grows with its copy: each slot was tested at twice its usual length or more, on HLR’s real faces.",
+    "fact": {
+     "source": "brand-pack/slotmap.yaml",
+     "quote": "Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple"
+    }
+   },
+   "technical": {
+    "text": "Frame 63:354 on 04 Staging; seven slices, each set to export as PNG 1x and @2x, each with alt text.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/build.md",
+     "quote": "each of the seven carries PNG 1x and @2x export settings in Figma"
+    }
+   }
+  },
+  {
+   "id": "review",
+   "n": 6,
+   "name": "Review",
+   "skill": "REVIEW.md",
+   "plain": [
+    "A fresh reviewer that never saw the work checks it against the review rules, for up to three rounds.",
+    "Scripts catch what they can measure. The reviewer catches what they can’t."
+   ],
+   "human": "Eddie rules on anything still open after three rounds.",
+   "reads": [
+    "tiers",
+    "never-ships"
+   ],
+   "makes": [],
+   "checks": [],
+   "evidence": "review",
+   "lessons": [
+    {
+     "title": "Every script passed. The review still found a blocker.",
+     "text": "In the first email batch, every module sat on HLR’s cream ground, while HLR’s emails are white. No lint reads which ground a module uses; a reviewer did.",
+     "facts": [
+      {
+       "source": "LEARNINGS.md",
+       "quote": "Round 1 of the fresh-context review found a blocker in a batch that had passed every scripted check"
+      },
+      {
+       "source": "DECISIONS.md",
+       "quote": "made every email cream (round 1, R1-01, the blocker)"
+      }
+     ]
+    },
+    {
+     "title": "Checks match words, not meaning.",
+     "text": "Route 1’s angle said “one at a time”, which is a claim about how the pieces are made. No rule lists those words, so no lint fired. The brief’s author caught it and dropped it from the copy.",
+     "verdict": "one-at-a-time",
+     "facts": [
+      {
+       "source": "engine:lib/claims.js",
+       "quote": "MATCHING IS DETERMINISTIC AND ONLY EVER LEXICAL."
+      },
+      {
+       "source": "DECISIONS.md",
+       "quote": "the phrase reads as a claim about the making"
+      }
+     ]
+    }
+   ],
+   "predict": {
+    "q": "Every automated check passed. Is the email done?",
+    "a": "Not yet. A fresh reviewer still reads it, because some defects only a reader sees. Then Eddie gives his go before anything reaches HLR.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "anything that leaves this brand home for HLR"
+    }
+   },
+   "technical": {
+    "text": "Findings are graded blocker, should-fix or note; up to three rounds; a tier 2 go is a dated DECISIONS line.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "A release is an engine version, a lane's or chat's close, or a deliverable handed to Eddie or HLR."
+    }
+   }
+  },
+  {
+   "id": "ship",
+   "n": 7,
+   "name": "Ship",
+   "skill": null,
+   "plain": [
+    "The email leaves Figma as image slices, each with alt text, and goes into HLR’s email platform.",
+    "The platform’s live footer adds the unsubscribe link and the postal address, because a slice is a picture and can’t carry live links."
+   ],
+   "human": "A person sends it.",
+   "reads": [
+    "required"
+   ],
+   "makes": [
+    {
+     "file": "seven slices",
+     "label": "PNG 1x and @2x"
+    }
+   ],
+   "checks": [],
+   "evidence": "ship",
+   "status_note": {
+    "text": "Nothing ships yet. The ledger is a test seed and HLR hasn’t named a claims signer, so no line is cleared for production.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md",
+     "quote": "no line here is cleared for production until HLR names its claims signer (C2)"
+    }
+   },
+   "predict": {
+    "q": "Why is the footer’s legal line switched off in the sliced email?",
+    "a": "A slice bakes merge tokens into pixels, so the unsubscribe link and the address would stop working. The platform’s live footer carries them instead.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "a slice bakes the tokens into pixels, so the send would have no working unsubscribe link or address"
+    }
+   },
+   "technical": {
+    "text": "M09 Footer with the legal line off; the platform’s image map or separate card slices carry the four product links, an ESP question for Review 2.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/build.md",
+     "quote": "a slice cannot carry live merge tokens, so the ESP's live footer adds the unsubscribe link and the address."
+    }
+   }
+  },
+  {
+   "id": "learn",
+   "n": 8,
+   "name": "Learn",
+   "skill": null,
+   "plain": [
+    "Once real sends go out, HLR’s reviewers mark lines keep or cut without knowing which route wrote them. The marks become HLR’s favorites, a voice model fitted to HLR, and the judge’s rubric.",
+    "Until then, every run says plainly that it has no measured preference on file."
+   ],
+   "human": "Eddie marks the first sheet. HLR’s reviewers mark later.",
+   "reads": [
+    "taste",
+    "exemplars"
+   ],
+   "makes": [],
+   "checks": [],
+   "evidence": "learn",
+   "fact": {
+    "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md",
+    "quote": "no measured preference is on file"
+   },
+   "predict": {
+    "q": "How does the forge learn what HLR likes?",
+    "a": "From blind keep-or-cut marks on real output. HLR’s favorites then outrank the historical examples, and the judge’s agreement with HLR’s marks is measured and reported.",
+    "fact": {
+     "source": "engine:README.md",
+     "quote": "the brand owner's favorites outrank the historical exemplars"
+    }
+   },
+   "technical": {
+    "text": "Roles favorites, voice_calibration, voice_model, judge_rubric and judge_calibration are null until Step 5’s marks sheet.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "derived from the blind marks, ratified by Eddie before a judge reads it"
+    }
+   }
+  }
+ ],
+ "rulebook": {
+  "headline": [
+   "Every rule has an ",
+   "owner"
+  ],
+  "intro": "Each card is one part of the pack: what it controls, where it lives, who can change it, why it exists and what runs again after a change. Read the reason before changing a rule.",
+  "waiting_label": "Waiting on HLR",
+  "waiting_intro": "What HLR owes the forge, and what each item unblocks. These come straight from the pack’s gap register."
+ },
+ "layers": [
+  {
+   "id": "facts",
+   "name": "Facts",
+   "blurb": "What HLR sells and what’s true about it."
+  },
+  {
+   "id": "claims",
+   "name": "Claims",
+   "blurb": "What HLR may say, and what needs a sign-off."
+  },
+  {
+   "id": "voice",
+   "name": "Voice",
+   "blurb": "How HLR sounds, and how the forge learns HLR’s taste."
+  },
+  {
+   "id": "structure",
+   "name": "Structure",
+   "blurb": "The kinds of send, the routes, the modules and their slot lengths."
+  },
+  {
+   "id": "design",
+   "name": "Design",
+   "blurb": "Colors, type, contrast and how strict each element is."
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "blurb": "The library file and the photos it may use."
+  },
+  {
+   "id": "process",
+   "name": "Process",
+   "blurb": "Who decides, what never ships, and the record."
+  }
+ ],
+ "cards": [
+  {
+   "id": "products",
+   "layer": "facts",
+   "roles": [
+    "product_db"
+   ],
+   "name": "Products",
+   "state": "v0, catalog snapshot",
+   "file": "brand-pack/products.json",
+   "controls": "Every product HLR sells: its display name, kind and family, and what the public catalog shows.",
+   "stat": "{products} products · {empty_desc} with an empty description",
+   "example": {
+    "text": "Built from the public catalog until HLR’s Shopify export arrives.",
+    "fact": {
+     "source": "brand-pack/products.json",
+     "quote": "v0 built from the public catalog snapshot because the Shopify export has not arrived."
+    }
+   },
+   "owner": "HLR supplies the Shopify export. Eddie keeps the file.",
+   "tier": "HLR’s facts: tier 3. The derived fields (kind, family): tier 2.",
+   "why": {
+    "text": "A figure with no source doesn’t exist for the forge. No price, karat or size reaches copy unless this file carries it.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "products.json: no figure without a source"
+    }
+   },
+   "enforced": [
+    "Brief lint: every product resolves to a real record",
+    "Copy lints: every figure checked against what the brief allows"
+   ],
+   "rerun": "Re-run intake on any open brief. Names flow into copy and product cards on the next run.",
+   "gaps": [
+    "Shopify products export"
+   ]
+  },
+  {
+   "id": "context",
+   "layer": "facts",
+   "roles": [
+    "brand_domains"
+   ],
+   "name": "Brand context",
+   "state": "In force",
+   "file": "brand-pack/brand-context.md",
+   "controls": "The summary every skill reads first: category, customers, voice, the claims regime, house conventions, contradictions, gaps and owners, and the map of every file in the pack.",
+   "stat": "{roles_total} roles in the File map",
+   "example": {
+    "text": "Every line names its source, or it’s a gap.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "No HLR fact here comes from memory; a fact with no source is a gap in the last table."
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2 for a rule; tier 1 for a sourced fact.",
+   "why": {
+    "text": "One place holds the brand’s state, so no skill drafts HLR from memory.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Every skill reads the narrative below; every script parses the File map at the end."
+    }
+   },
+   "enforced": [
+    "Preflight: every role named, every gap owned",
+    "Guard R14: the gap register’s owners and steps"
+   ],
+   "rerun": "Run preflight with --pack after any change to the File map.",
+   "gaps": []
+  },
+  {
+   "id": "contradictions",
+   "layer": "facts",
+   "roles": [],
+   "name": "Contradictions",
+   "state": "Open, for HLR",
+   "file": "brand-pack/brand-context.md · Contradictions",
+   "controls": "Where the 2022 brand book and HLR’s live work disagree: the name, positioning and claims, marks, grounds, faces, the button, the tagline, email width, dashes and offers.",
+   "stat": "{contradictions} flagged, none resolved quietly",
+   "example": {
+    "text": "Each one waits for its owner, mostly HLR at Review 1.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Each stays open until its owner rules; none is resolved silently here"
+    }
+   },
+   "owner": "HLR rules most of them at Review 1.",
+   "tier": "Tier 3: HLR, through Eddie.",
+   "why": {
+    "text": "A disagreement settled quietly becomes a rule nobody chose. Until HLR rules, the pack follows Eddie’s interim pick and says so.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Each row pits the book [documented] against live work [observed]"
+    }
+   },
+   "enforced": [
+    "Flags only: nothing checks them, everyone can read them"
+   ],
+   "rerun": "A ruling changes the file it names, often the tokens or the voice contract, and that file’s checks run again.",
+   "gaps": []
+  },
+  {
+   "id": "ledger",
+   "layer": "claims",
+   "roles": [
+    "legal_ledger"
+   ],
+   "name": "Claims ledger",
+   "state": "Test seed",
+   "file": "brand-pack/legal-ledger.json",
+   "controls": "What HLR may claim and what needs a sign-off: health, fertility, sourcing, origin, metal and karat, meaning and intention, reviews, identity, offers and the footer’s required text.",
+   "stat": "{ledger_rows} rows · {needs_legal} need a legal sign-off · {conditional} ask a person · {info} are listed for review",
+   "example": {
+    "text": "Row HLR-H02 holds any line that ties a piece or a stone to anxiety, stress, mood, grief, trauma or sleep.",
+    "verdict": "treats-anxiety",
+    "fact": {
+     "source": "brand-pack/legal-ledger.json",
+     "quote": "No line ties a piece or a stone to anxiety, stress, mood, grief, trauma, sleep or any mental-health state."
+    }
+   },
+   "owner": "HLR’s claims signer, not yet named. Eddie keeps the file.",
+   "tier": "Tier 3: HLR, through Eddie.",
+   "status": {
+    "text": "A test seed: enforced provisionally, not approved by counsel.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "every row enforces provisionally and nothing in it is counsel-approved"
+    }
+   },
+   "why": {
+    "text": "A needs-legal row blocks every lint until HLR’s signer rules, so a risky line can’t slip into a send.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Rows marked needs_legal (health, fertility, sourcing, origin) block every lint, craft mode included, until HLR's signer rules on them"
+    }
+   },
+   "enforced": [
+    "lib/claims.js, the one matcher every lint shares",
+    "Brief lint, copy lint and the social lint"
+   ],
+   "rerun": "Nothing to rebuild. Every lint reads the ledger on its next run.",
+   "gaps": [
+    "HLR's claims signer"
+   ]
+  },
+  {
+   "id": "never-say",
+   "layer": "claims",
+   "roles": [
+    "prohibited_patterns"
+   ],
+   "name": "Never-say patterns",
+   "state": "Ratified",
+   "file": "brand-pack/brand-context.md · File map, prohibited_patterns",
+   "controls": "Wording that never appears in anything the forge makes: the em dash, known misspellings, cure language, treating or preventing a condition, and replacing medicine or care.",
+   "stat": "{patterns} patterns",
+   "example": {
+    "text": "“Treats anxiety” is blocked, whatever the piece.",
+    "verdict": "treats-anxiety"
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Every brief inherits this list, so no brief can forget it.",
+    "fact": {
+     "source": "engine:skills/brief-intake/SKILL.md",
+     "quote": "unions the brief's never-say list with the pack's prohibited patterns"
+    }
+   },
+   "enforced": [
+    "Every lint, on every channel"
+   ],
+   "rerun": "The next run of any skill.",
+   "gaps": []
+  },
+  {
+   "id": "required",
+   "layer": "claims",
+   "roles": [],
+   "name": "Required footer text",
+   "state": "In force",
+   "file": "brand-pack/legal-ledger.json · HLR-REQ-01",
+   "controls": "The site’s footer disclaimer, carried word for word in every email footer and on every product page.",
+   "stat": "One row, carried verbatim",
+   "example": {
+    "text": "The forge places it and never rewrites it.",
+    "fact": {
+     "source": "brand-pack/legal-ledger.json",
+     "quote": "Carried verbatim, never paraphrased, in the footer of every email and on every product page"
+    }
+   },
+   "owner": "HLR.",
+   "tier": "Tier 3.",
+   "why": {
+    "text": "The wording is HLR’s. Whether paid and organic social carry it is HLR’s call too.",
+    "fact": {
+     "source": "brand-pack/legal-ledger.json",
+     "quote": "Whether paid and organic social carry it, and in what form, is HLR's to rule (C2)."
+    }
+   },
+   "enforced": [
+    "M09 Footer carries it verbatim"
+   ],
+   "rerun": "A wording change updates the row and the footer module.",
+   "gaps": []
+  },
+  {
+   "id": "evidence",
+   "layer": "claims",
+   "roles": [],
+   "name": "Reviews and customer words",
+   "state": "Empty",
+   "file": "grounding_inputs · empty",
+   "controls": "Reviews, testimonials and press, used only word for word and only with a source a reviewer can open.",
+   "stat": "Empty until HLR sends a reviews export",
+   "example": {
+    "text": "A review is never written, never paraphrased into a quote.",
+    "fact": {
+     "source": "brand-pack/legal-ledger.json",
+     "quote": "Never written, never paraphrased into a quote"
+    }
+   },
+   "owner": "HLR supplies the reviews. Eddie keeps the evidence.",
+   "tier": "Tier 3 for the source; a person confirms each use.",
+   "why": {
+    "text": "Customer words often carry claims HLR can’t make. Research may read them; copy may not repeat them.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Customer material often carries claims HLR cannot make (healing, anxiety): research may read it; copy may not repeat it"
+    }
+   },
+   "enforced": [
+    "The Review module takes sourced reviews only",
+    "Ledger row HLR-T01 asks a person to confirm each use"
+   ],
+   "rerun": "Run customer evidence on the export once it lands.",
+   "gaps": [
+    "grounding_inputs"
+   ]
+  },
+  {
+   "id": "voice",
+   "layer": "voice",
+   "roles": [
+    "voice_contract"
+   ],
+   "name": "Voice contract",
+   "state": "Ratified",
+   "file": "brand-pack/voice-contract.md",
+   "controls": "How HLR sounds: five qualities (eloquent, refined, sensual, real, uplifting), each with a test you can apply to one line, and the operating rules.",
+   "stat": "5 qualities · {voice_rules} operating rules",
+   "example": {
+    "text": "Meaning is said as tradition or intention, never as an outcome.",
+    "fact": {
+     "source": "brand-pack/voice-contract.md",
+     "quote": "Meaning is said as tradition or intention, never as an outcome"
+    }
+   },
+   "owner": "Eddie ratified it. HLR confirms at Review 1.",
+   "tier": "Tier 2, then HLR.",
+   "why": {
+    "text": "Each quality comes with a check a reviewer can apply, so taste can be argued with evidence instead of preference.",
+    "fact": {
+     "source": "brand-pack/voice-contract.md",
+     "quote": "Check: does it say one thing exactly, with every abstract idea anchored?"
+    }
+   },
+   "enforced": [
+    "The angle gate’s checklist",
+    "Voice lint, advisory"
+   ],
+   "rerun": "The next copy run.",
+   "gaps": []
+  },
+  {
+   "id": "exemplars",
+   "layer": "voice",
+   "roles": [
+    "exemplars"
+   ],
+   "name": "Approved lines",
+   "state": "Approved",
+   "file": "brand-pack/exemplars.json",
+   "controls": "Lines from HLR’s own past sends, approved as models of rhythm for each channel.",
+   "stat": "{exemplars} lines · {ex_email} email · {ex_social} social · {ex_paid} paid · {ex_web} web",
+   "example": {
+    "text": "“Seek the sublime”, an email headline.",
+    "fact": {
+     "source": "brand-pack/exemplars.json",
+     "quote": "Seek the sublime"
+    }
+   },
+   "owner": "Eddie approves. Candidates wait in _proposed, which nothing reads.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Models are for cadence. The forge never copies them into a send.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/brief-made-to-order-pendants.md",
+     "quote": "the approved email exemplars, for cadence only"
+    }
+   },
+   "enforced": [
+    "exemplar_pick.js picks models by slot role and channel"
+   ],
+   "rerun": "The next copy run.",
+   "gaps": []
+  },
+  {
+   "id": "lexicon",
+   "layer": "voice",
+   "roles": [
+    "concrete_lexicon"
+   ],
+   "name": "Concrete words",
+   "state": "Ratified",
+   "file": "brand-pack/concrete-lexicon.json",
+   "controls": "The words for what HLR makes and the world it lives in: products, stones, metals, places and objects. The voice lint rewards copy that names real things.",
+   "stat": "{lex_product} product words · {lex_scene} scene words · {lex_names} product names",
+   "example": {
+    "text": "Product names are re-keyed when the Shopify export replaces the catalog snapshot.",
+    "fact": {
+     "source": "brand-pack/concrete-lexicon.json",
+     "quote": "re-key product_names when HLR's export replaces the snapshot."
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Copy that names real things reads as HLR. Copy that could describe anything doesn’t.",
+    "fact": {
+     "source": "brand-pack/concrete-lexicon.json",
+     "quote": "so a line that names a product earns product credit"
+    }
+   },
+   "enforced": [
+    "voice_lint.js",
+    "verify_packets.js"
+   ],
+   "rerun": "Re-derive from HLR’s keeps once favorites exist.",
+   "gaps": []
+  },
+  {
+   "id": "taste",
+   "layer": "voice",
+   "roles": [],
+   "name": "HLR’s taste",
+   "state": "Empty until marks",
+   "file": "favorites · voice_model · judge_rubric · judge_calibration · all empty",
+   "controls": "What HLR keeps and cuts, learned from blind marks: favorites, a voice model fitted to HLR, and the judge’s rubric.",
+   "stat": "Empty until the first marks sheet",
+   "example": {
+    "text": "Every run says so while it’s empty.",
+    "fact": {
+     "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md",
+     "quote": "no measured preference is on file"
+    }
+   },
+   "owner": "Eddie marks first; HLR’s reviewers later. Eddie ratifies the rubric.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "A general rubric measures an average. HLR’s marks measure HLR.",
+    "fact": {
+     "source": "engine:README.md",
+     "quote": "a preference derived from that owner's own marks did far better, which is why each brand needs its own"
+    }
+   },
+   "enforced": [
+    "The verifier reports its agreement with HLR’s marks, or that it was never checked"
+   ],
+   "rerun": "Refit the voice model and the rubric after each marks sheet.",
+   "gaps": [
+    "favorites",
+    "voice_model",
+    "judge_rubric"
+   ]
+  },
+  {
+   "id": "types",
+   "layer": "structure",
+   "roles": [
+    "type_registry_core"
+   ],
+   "name": "Kinds of send",
+   "state": "Ratified in part",
+   "file": "brand-pack/type-registry-core.json",
+   "controls": "The kinds of send HLR makes (spotlight, listing, launch, letter, The Edit, monthly ritual, testimonials, moodboard, offers, welcome, the abandonment flows and transactional) and the sections each one uses.",
+   "stat": "{types} types",
+   "example": {
+    "text": "A product listing: header, hero, text block, product grid, footer, with the grid fed from the product file.",
+    "fact": {
+     "source": "brand-pack/type-registry-core.json",
+     "quote": "the grid is data-fed from the product database"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "status": {
+    "text": "Ratified for email and organic social; paid and web wait for Review 2.",
+    "fact": {
+     "source": "brand-pack/type-registry-core.json",
+     "quote": "ratified in part: email and organic social (Gate 2 call 1 b, 2026-10-18); paid and web held for Review 2"
+    }
+   },
+   "why": {
+    "text": "A type tells the forge which sections a send has and which gates its copy must pass, so a letter and a listing each get the checks they need."
+   },
+   "enforced": [
+    "Brief lint and copy lint read the type live"
+   ],
+   "rerun": "The next brief of that type.",
+   "gaps": []
+  },
+  {
+   "id": "routes",
+   "layer": "structure",
+   "roles": [
+    "route_axes"
+   ],
+   "name": "Route frames",
+   "state": "Ratified",
+   "file": "brand-pack/route-axes.json",
+   "controls": "The strategic frames a route may take: benefit, occasion, product, proof, urgency and curiosity. Three routes by default, five at most.",
+   "stat": "6 frames · no standing angle policy",
+   "example": {
+    "text": "Benefit routes carry a warning: HLR’s live benefit language leans on health and intention.",
+    "fact": {
+     "source": "brand-pack/route-axes.json",
+     "quote": "HLR's live benefit language is health-adjacent and intention-led"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Routes that differ on frame give a real choice instead of three wordings of one idea.",
+    "fact": {
+     "source": "engine:skills/brief-intake/SKILL.md",
+     "quote": "proposes routes that differ on frame only"
+    }
+   },
+   "enforced": [
+    "Brief lint checks the route plan against these bounds"
+   ],
+   "rerun": "The next intake.",
+   "gaps": []
+  },
+  {
+   "id": "modules",
+   "layer": "structure",
+   "roles": [
+    "module_library",
+    "seam_map",
+    "asset_types"
+   ],
+   "name": "Modules and elements",
+   "state": "Built, for Eddie to confirm",
+   "file": "brand-pack/module-library.json · slotmap.yaml · seam-map.json · asset-types.md",
+   "controls": "The building blocks of every email: {modules} modules (header, hero, spotlight, product grids, letter, review, offer and more) made from {elements} elements (the button, text link, rule, image, product cards and star row), each with a note on when to use it.",
+   "stat": "{modules} modules · {elements} elements",
+   "example": {
+    "text": "Every new module arrives with three records, so nothing joins the library half-described.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "every new master gets a strictness row, a slot-map entry and a type-registry entry"
+    }
+   },
+   "owner": "Eddie. Every Figma write needs his go.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "A small, governed set of modules keeps a year of sends looking like one brand, and lets the forge measure every slot in advance.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "every Figma write and every convention"
+    }
+   },
+   "enforced": [
+    "Structure lint",
+    "canvas_check.js and face_check.js",
+    "Flex probe and a screenshot of every module a fix touches"
+   ],
+   "rerun": "A new or changed module is probed, screenshot-checked and reviewed before templates use it.",
+   "gaps": []
+  },
+  {
+   "id": "slots",
+   "layer": "structure",
+   "roles": [
+    "slotmap"
+   ],
+   "name": "Slot lengths",
+   "state": "Measured",
+   "file": "brand-pack/slotmap.yaml",
+   "controls": "How long each line can be in each module, measured on HLR’s real faces at 1200 wide. The copy step cuts to these lengths before anything is built.",
+   "stat": "{slots} slots, measured on the real faces",
+   "example": {
+    "text": "The longest allowed line is the usual length times the proven stretch.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "typical x the proven flex multiple"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Length comes from measurement, never from taste or a style guide.",
+    "fact": {
+     "source": "brand-pack/voice-contract.md",
+     "quote": "Budgets come from the slot maps, never from this file."
+    }
+   },
+   "enforced": [
+    "fit_check.js",
+    "slot_lint.js",
+    "The flex probe"
+   ],
+   "rerun": "Re-measure when a face, a module or a canvas changes. When HLR’s real faces arrived, one slot of 100 moved.",
+   "rerun_fact": {
+    "source": "LEARNINGS.md",
+    "quote": "The real faces barely moved the budgets: one slot of 100 changed"
+   },
+   "gaps": []
+  },
+  {
+   "id": "channels",
+   "layer": "structure",
+   "roles": [
+    "slotmap_social"
+   ],
+   "name": "Social, paid and web",
+   "state": "Planned",
+   "file": "brand-pack/slotmap-social.yaml · slotmap-paid.yaml (planned) · section library (planned)",
+   "controls": "The slot maps and sections for the next channels: organic social next, then paid and web once Review 2 rules their types.",
+   "stat": "Social planned · paid and web at Review 2",
+   "example": {
+    "text": "Paid and web types wait for Review 2.",
+    "fact": {
+     "source": "brand-pack/type-registry-core.json",
+     "quote": "paid and web held for Review 2"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "A channel joins only when its masters exist and its budgets are measured."
+   },
+   "enforced": [
+    "social_lint.js for captions, hashtags and the social slot map"
+   ],
+   "rerun": "Wire each slot map when its masters are built.",
+   "gaps": [
+    "slotmap_paid",
+    "slotmap_web",
+    "section_library",
+    "Meta 9:16 keep-clear bands"
+   ]
+  },
+  {
+   "id": "tokens",
+   "layer": "design",
+   "roles": [
+    "tokens",
+    "token_model"
+   ],
+   "name": "Design tokens",
+   "state": "Ratified at Gate 2",
+   "file": "brand-pack/tokens.json · token-model.md · web/",
+   "controls": "HLR’s colors, type, spacing, radius and strokes as named values, with four grounds (light, warm, deep and night) and three canvases (web, social and email).",
+   "stat": "{tokens} tokens · {tok_doc} documented · {tok_obs} observed · {tok_der} derived",
+   "example": {
+    "text": "Onyx, the default ink, cites page 19 of the brand book.",
+    "fact": {
+     "source": "brand-pack/tokens.json",
+     "quote": "[documented] book p19: Onyx, primary palette."
+    }
+   },
+   "owner": "Eddie ratifies a derived value. HLR confirms the Gate 1 picks.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "One set of values drives Figma and the web, so a change lands everywhere at once.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "[derived] our proposal, which only Eddie ratifies."
+    }
+   },
+   "enforced": [
+    "The design-system skill’s check, export and Figma plan",
+    "The board drift guard"
+   ],
+   "rerun": "Sync the Figma variables, check the boards, regenerate tokens.css and Tailwind.",
+   "gaps": []
+  },
+  {
+   "id": "contrast",
+   "layer": "design",
+   "roles": [],
+   "name": "Contrast law",
+   "state": "Ratified at Gate 2",
+   "file": "brand-pack/tokens.json · contrast-pairs · token-model.md section 2",
+   "controls": "Which text and background pairs are certified on each ground. Body text needs 4.5:1; display type and controls need 3:1.",
+   "stat": "{pairs} certified pairs",
+   "example": {
+    "text": "The default pair is Onyx on Alabaster.",
+    "fact": {
+     "source": "brand-pack/tokens.json",
+     "quote": "Onyx on Alabaster, the default pair (C4)"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Text only ever sits on a certified pair, so a new ground can’t quietly fail legibility.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "Display 3.0:1 on certified pairs"
+    }
+   },
+   "enforced": [
+    "The design-system check grades every pair on every ground it changes"
+   ],
+   "rerun": "Any token change re-certifies the pairs it touches.",
+   "gaps": []
+  },
+  {
+   "id": "strictness",
+   "layer": "design",
+   "roles": [
+    "strictness_map"
+   ],
+   "name": "Strictness map",
+   "state": "For Eddie to confirm",
+   "file": "brand-pack/strictness-map.md",
+   "controls": "For each kind of element (wordmark, headline, button, price, review stars and more): what it binds to, its legibility floor, its content rule, and who may change it.",
+   "stat": "{strict_rows} element classes",
+   "example": {
+    "text": "Price: locked and content-strict.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "products.json: no figure without a source"
+    }
+   },
+   "owner": "Eddie. Adopted at Gate 4 for him to confirm.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Looks and content are governed separately, so a layout can flex while a figure stays exact.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "so an element can be design-loose and content-strict"
+    }
+   },
+   "open": {
+    "text": "Still open: who besides Eddie may change a locked row once HLR’s team runs the forge.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "Open for Eddie: who besides him may change a locked row once HLR's team runs the forge (Gate 1 a)."
+    }
+   },
+   "enforced": [
+    "Checks flag; a person decides"
+   ],
+   "rerun": "A changed row changes the masters it governs.",
+   "gaps": []
+  },
+  {
+   "id": "art",
+   "layer": "design",
+   "roles": [
+    "art_direction",
+    "logo_assets"
+   ],
+   "name": "Art direction and marks",
+   "state": "Vectors owed",
+   "file": "brand-pack/art-direction.md · logo-assets.md",
+   "controls": "How HLR’s imagery is framed and cropped, and the rules for the wordmark and the monogram.",
+   "stat": "Marks: vectors and clear space owed by HLR",
+   "example": {
+    "text": "The wordmark’s clear space and minimum size are a gap HLR owns.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "Clear space and minimum size: gap, owner HLR"
+    }
+   },
+   "owner": "HLR for the marks. Eddie for placement.",
+   "tier": "Tier 3 for the assets; tier 2 for the rules.",
+   "why": {
+    "text": "A mark drawn from a PNG drifts. The library waits for HLR’s vectors."
+   },
+   "enforced": [
+    "Mark geometry checked by path hash (guard R13)"
+   ],
+   "rerun": "Import the vectors as components when they arrive.",
+   "gaps": [
+    "Star and lockup vectors"
+   ]
+  },
+  {
+   "id": "fonts",
+   "layer": "design",
+   "roles": [],
+   "name": "Typefaces",
+   "state": "License flag raised",
+   "file": "brand-pack/figma.yaml · fonts · token-model.md section 4",
+   "controls": "Saol Display, Saol Standard and Trade Gothic LT Std in the library, with Homemade Apple for script lines.",
+   "stat": "In the library · license flag raised",
+   "example": {
+    "text": "Eddie asked for the real faces, and the library switched to them.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "use HLR’s real faces in the library"
+    }
+   },
+   "owner": "HLR confirms the licenses.",
+   "tier": "Tier 3.",
+   "why": {
+    "text": "Every deliverable carries the license flag until HLR confirms.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "The license flag stays raised until HLR confirms the licenses"
+    }
+   },
+   "enforced": [
+    "Guard R8: every text style and text segment binds its family",
+    "face_check.js"
+   ],
+   "rerun": "Lower the flag on HLR’s written confirmation.",
+   "gaps": [
+    "Licenses for Saol Display"
+   ]
+  },
+  {
+   "id": "figma",
+   "layer": "figma",
+   "roles": [
+    "figma_config"
+   ],
+   "name": "HLR Library",
+   "state": "Built",
+   "file": "brand-pack/figma.yaml",
+   "controls": "The Figma file every asset is built in: Foundations, Elements, Modules, Templates, Staging and the cleared photos.",
+   "stat": "{variables} variables · {text_styles} text styles · 3 templates",
+   "example": {
+    "text": "Every Figma write needs Eddie’s go, and every convention was ruled before the first one.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "every Figma write and every convention"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "The boards HLR opens must say what the pack says, so a guard compares them.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "a board HLR opens at Review 2 must say what the pack says"
+    }
+   },
+   "enforced": [
+    "board_expect.py and board_drift.js"
+   ],
+   "rerun": "After a token or rule change, check the boards against the pack.",
+   "gaps": [
+    "Web breakpoints, margins and grid"
+   ]
+  },
+  {
+   "id": "photos",
+   "layer": "figma",
+   "roles": [],
+   "name": "Photos and rights",
+   "state": "Cleared",
+   "file": "HLR Library · photos page",
+   "controls": "The images the forge may place: HLR’s editorial and product photos, cleared for HLR’s designs. Any other image gets a labelled grey placeholder.",
+   "stat": "Cleared by Eddie, 2026-10-23",
+   "example": {
+    "text": "Eddie owns the photos and cleared them for HLR’s designs.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "you can also use the images, i own all of them"
+    }
+   },
+   "owner": "Eddie for these images. HLR for releases from the people in them.",
+   "tier": "Tier 3 for releases.",
+   "why": {
+    "text": "An image ships only with its usage right; otherwise it’s a labelled placeholder.",
+    "fact": {
+     "source": "brand-pack/strictness-map.md",
+     "quote": "stands in for any image whose right is not confirmed"
+    }
+   },
+   "enforced": [
+    "The ground guard fails a placeholder label left over a cleared photo"
+   ],
+   "rerun": "Add new cleared images to the photos page.",
+   "gaps": [
+    "faces_policy",
+    "pack_shot_index"
+   ]
+  },
+  {
+   "id": "provenance",
+   "layer": "process",
+   "roles": [],
+   "name": "Provenance tags",
+   "state": "In force",
+   "file": "every pack file",
+   "controls": "Every token and brand rule says where it came from: documented (the brand book or HLR), observed (HLR’s live work) or derived (a proposal).",
+   "stat": "{tok_der} derived token left to ratify",
+   "example": {
+    "text": "A derived value is a proposal until Eddie ratifies it.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "[derived] our proposal, which only Eddie ratifies."
+    }
+   },
+   "owner": "Eddie ratifies.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "A proposal presented as brand law is a blocker in review.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "a derived value used as law"
+    }
+   },
+   "enforced": [
+    "The tag scan on every pack line",
+    "The pointer check on every ruling tag"
+   ],
+   "rerun": "A ratified value flips its tag and records the ruling’s date.",
+   "gaps": []
+  },
+  {
+   "id": "tiers",
+   "layer": "process",
+   "roles": [],
+   "name": "Who decides",
+   "state": "In force",
+   "file": "REVIEW.md · section 4",
+   "controls": "Three tiers. Checks plus a fresh review for evidence and records. Eddie’s explicit go for anything derived, any Figma write, or anything HLR will see. HLR, through Eddie, for HLR’s own facts and rights.",
+   "stat": "3 tiers",
+   "example": {
+    "text": "Once HLR’s team runs the forge, checks flag and a person decides.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "In production, once HLR's team runs the forge, checks flag and never block shipping: a person decides"
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 2.",
+   "why": {
+    "text": "Every kind of decision has one named owner, so nothing is decided by default.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "Only Eddie ratifies a derived value (rule 4)."
+    }
+   },
+   "enforced": [
+    "A tier 2 go is a dated DECISIONS line"
+   ],
+   "rerun": "None: this is the rule for every other change.",
+   "gaps": []
+  },
+  {
+   "id": "never-ships",
+   "layer": "process",
+   "roles": [],
+   "name": "Never ships",
+   "state": "Fixed",
+   "file": "REVIEW.md · section 4",
+   "controls": "The list no waiver covers: an invented figure, claim, price, quote or review; another brand’s content; a write to HLR’s originals; an unlicensed face without its flag; an image without its rights or placeholder; an em dash in our own text.",
+   "stat": "No waiver, at any tier",
+   "example": {
+    "text": "Nothing invented, ever.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "Never ships, at any tier, and no waiver covers it: an invented figure, claim, price, quote or review"
+    }
+   },
+   "owner": "Fixed. Nobody waives it.",
+   "tier": "None.",
+   "why": {
+    "text": "These are the mistakes that cost trust the fastest."
+   },
+   "enforced": [
+    "Lints, guards, the census and every review"
+   ],
+   "rerun": "Not applicable.",
+   "gaps": []
+  },
+  {
+   "id": "record",
+   "layer": "process",
+   "roles": [],
+   "name": "The record",
+   "state": "Kept every session",
+   "file": "DECISIONS.md · LEARNINGS.md · PROGRESSION.md",
+   "controls": "Every decision is a dated line with its reason and what it replaced. Every working session ends with what it learned. The plan tracks every gate.",
+   "stat": "{decision_lines} decisions on {decision_dates} dates",
+   "example": {
+    "text": "Each decision says what it replaced, so an old rule can be found and restored.",
+    "fact": {
+     "source": "DECISIONS.md",
+     "quote": "Each line: the decision, its reason, what it replaced."
+    }
+   },
+   "owner": "Eddie.",
+   "tier": "Tier 1 for record lines.",
+   "why": {
+    "text": "When a rule changes, the reason for the old one is one search away."
+   },
+   "enforced": [
+    "The pointer check: every ruling tag points at a real DECISIONS line"
+   ],
+   "rerun": "Every session closes its records.",
+   "gaps": []
+  },
+  {
+   "id": "gaps",
+   "layer": "process",
+   "roles": [],
+   "name": "Gaps and owners",
+   "state": "Open",
+   "file": "brand-pack/brand-context.md · Gaps and owners",
+   "controls": "Everything still missing, who owns it and the step that carries it.",
+   "stat": "{gaps_total} open items · {gaps_hlr} wait on HLR",
+   "example": {
+    "text": "A missing fact is an empty field with a named owner, never a guess.",
+    "fact": {
+     "source": "REVIEW.md",
+     "quote": "with a gap line naming what is missing and its owner"
+    }
+   },
+   "owner": "Each row names its owner.",
+   "tier": "As the row says.",
+   "why": {
+    "text": "An unknown that’s written down can be chased. An unknown that’s guessed can’t.",
+    "fact": {
+     "source": "brand-pack/brand-context.md",
+     "quote": "Every null role and every required artifact with no file yet, its owner, and the plan step that carries it."
+    }
+   },
+   "enforced": [
+    "Guard R14 checks every row’s owner and step"
+   ],
+   "rerun": "Close a row when its owner delivers.",
+   "gaps": []
+  }
+ ],
+ "gap_plain": [
+  {
+   "match": "faces_policy",
+   "plain": "Image rights and releases for people in HLR’s photos"
+  },
+  {
+   "match": "pack_shot_index",
+   "plain": "An index of product photos keyed to SKUs"
+  },
+  {
+   "match": "Star and lockup vectors",
+   "plain": "Vector files for the star and the lockup, with clear space and minimum sizes"
+  },
+  {
+   "match": "Licenses for Saol Display",
+   "plain": "Licenses for Saol Display, Saol Standard and Trade Gothic"
+  },
+  {
+   "match": "Shopify products export",
+   "plain": "The Shopify products export: SKUs, descriptions and confirmed prices"
+  },
+  {
+   "match": "HLR's claims signer",
+   "plain": "A named claims signer, and rulings on the needs-legal rows"
+  }
+ ],
+ "changes": {
+  "headline": [
+   "When the business ",
+   "changes"
+  ],
+  "intro": "Pick a change. Guess which parts of the pack it touches, then see the ripple: what changes, who approves it and what runs again.",
+  "pick_label": "Which parts does this touch?",
+  "reveal_label": "Show the ripple"
+ },
+ "scenarios": [
+  {
+   "id": "collection",
+   "title": "A new collection launches",
+   "situation": "HLR adds a new collection to the site.",
+   "options": [
+    "products",
+    "lexicon",
+    "photos",
+    "voice",
+    "tokens",
+    "modules",
+    "ledger"
+   ],
+   "answer": [
+    "products",
+    "lexicon",
+    "photos"
+   ],
+   "ripple": [
+    {
+     "what": "HLR exports the products from Shopify. The export is still owed.",
+     "who": "HLR",
+     "fact": {
+      "source": "brand-pack/products.json",
+      "quote": "Replace it from HLR's export when it lands"
+     }
+    },
+    {
+     "what": "The product file is rebuilt from the export. Names keep the house style.",
+     "who": "Eddie"
+    },
+    {
+     "what": "Product names are re-keyed in the concrete lexicon.",
+     "who": "Eddie",
+     "fact": {
+      "source": "brand-pack/concrete-lexicon.json",
+      "quote": "re-key product_names when HLR's export replaces the snapshot."
+     }
+    },
+    {
+     "what": "Cleared product photos go on the library’s photos page.",
+     "who": "HLR supplies them; Eddie places them"
+    },
+    {
+     "what": "The longest new name is tried in the product cards. A name that breaks inside a word is set by hand.",
+     "who": "Eddie",
+     "fact": {
+      "source": "DECISIONS.md",
+      "quote": "so those cards are set by hand"
+     }
+    }
+   ],
+   "unchanged": "Modules, tokens and the voice stay as they are. The next brief finds the new products on its own."
+  },
+  {
+   "id": "claim",
+   "title": "Legal clears a claim, or blocks one",
+   "situation": "HLR’s claims signer rules on origin claims: where and by whom each piece is made.",
+   "options": [
+    "ledger",
+    "never-say",
+    "voice",
+    "products",
+    "modules",
+    "slots"
+   ],
+   "answer": [
+    "ledger",
+    "never-say"
+   ],
+   "ripple": [
+    {
+     "what": "HLR names a claims signer, who rules on the row (HLR-O01: origin, place of making, handmade).",
+     "who": "HLR",
+     "fact": {
+      "source": "brand-pack/legal-ledger.json",
+      "quote": "HLR's confirmation of where and by whom each piece is made."
+     }
+    },
+    {
+     "what": "The row’s severity and the ruling go into the ledger, with the date and the source.",
+     "who": "Eddie"
+    },
+    {
+     "what": "Every lint enforces the new posture on its next run. No skill changes.",
+     "who": "Automatic",
+     "fact": {
+      "source": "engine:lib/claims.js",
+      "quote": "now a rule fires the same way on every surface, which is the point of one ledger"
+     }
+    },
+    {
+     "what": "Wording that must never appear joins the never-say patterns.",
+     "who": "Eddie"
+    }
+   ],
+   "unchanged": "The modules, the voice and the design stay as they are."
+  },
+  {
+   "id": "sale",
+   "title": "HLR plans a sale",
+   "situation": "A holiday sale with free shipping over a threshold and a discount code.",
+   "options": [
+    "ledger",
+    "modules",
+    "types",
+    "tokens",
+    "products",
+    "voice"
+   ],
+   "answer": [
+    "ledger",
+    "modules",
+    "types"
+   ],
+   "ripple": [
+    {
+     "what": "The offer types already exist: offer launch and offer urgency.",
+     "who": "In place"
+    },
+    {
+     "what": "Every figure, threshold, code and date stays a merge token until HLR sets its offer rules (C10).",
+     "who": "HLR",
+     "fact": {
+      "source": "brand-pack/legal-ledger.json",
+      "quote": "Every figure, threshold, code and date as a merge token until HLR rules C10"
+     }
+    },
+    {
+     "what": "The Offer and Promo bar modules exist. The struck-through price isn’t built, because offers wait on the same ruling.",
+     "who": "Eddie",
+     "fact": {
+      "source": "DECISIONS.md",
+      "quote": "the struck red price of E-P4 (offers wait for C10)"
+     }
+    },
+    {
+     "what": "The copy comes back with tokens where the figures go, and a person confirms the terms against the brief.",
+     "who": "A person",
+     "fact": {
+      "source": "brand-pack/legal-ledger.json",
+      "quote": "a person confirms the terms against the brief."
+     }
+    }
+   ],
+   "unchanged": "This is what loud absence looks like in a hurry: the send can be designed and written now, and the numbers drop in once HLR rules."
+  },
+  {
+   "id": "voice-shift",
+   "title": "The voice should feel warmer",
+   "situation": "HLR’s team feels recent sends read cool and wants more warmth.",
+   "options": [
+    "voice",
+    "exemplars",
+    "taste",
+    "tokens",
+    "ledger",
+    "types"
+   ],
+   "answer": [
+    "voice",
+    "exemplars",
+    "taste"
+   ],
+   "ripple": [
+    {
+     "what": "Eddie drafts the change to a quality’s test or an operating rule. It stays a proposal until he ratifies it.",
+     "who": "Eddie",
+     "fact": {
+      "source": "brand-pack/brand-context.md",
+      "quote": "every [derived] rule still here is a proposal, never law"
+     }
+    },
+    {
+     "what": "HLR confirms the change at a review.",
+     "who": "HLR"
+    },
+    {
+     "what": "New approved lines join the exemplars, each with its channel.",
+     "who": "Eddie"
+    },
+    {
+     "what": "Blind keep-or-cut marks on the next sends refit the voice model.",
+     "who": "HLR’s reviewers"
+    }
+   ],
+   "unchanged": "The ledger still holds every claim. A warmer voice never loosens what HLR may say."
+  },
+  {
+   "id": "color",
+   "title": "A seasonal color",
+   "situation": "HLR wants a seasonal accent color for winter sends.",
+   "options": [
+    "tokens",
+    "contrast",
+    "figma",
+    "strictness",
+    "voice",
+    "slots"
+   ],
+   "answer": [
+    "tokens",
+    "contrast",
+    "figma"
+   ],
+   "ripple": [
+    {
+     "what": "The color and its uses go into the tokens, tagged derived until Eddie ratifies; HLR confirms a brand-level change.",
+     "who": "Eddie, then HLR"
+    },
+    {
+     "what": "Every text pair it touches is re-certified, on every ground.",
+     "who": "Automatic"
+    },
+    {
+     "what": "The design-system skill plans and syncs the Figma variables, and a guard checks that every board still says what the pack says.",
+     "who": "Eddie",
+     "fact": {
+      "source": "DECISIONS.md",
+      "quote": "a board HLR opens at Review 2 must say what the pack says"
+     }
+    },
+    {
+     "what": "The web exports regenerate. Modules pick up the color through their bindings; nothing is recolored by hand.",
+     "who": "Automatic"
+    }
+   ],
+   "unchanged": "Copy, claims and slot lengths stay as they are."
+  },
+  {
+   "id": "new-type",
+   "title": "A new kind of email",
+   "situation": "The welcome series needs templates.",
+   "options": [
+    "types",
+    "modules",
+    "slots",
+    "figma",
+    "ledger",
+    "tokens"
+   ],
+   "answer": [
+    "types",
+    "modules",
+    "slots",
+    "figma"
+   ],
+   "ripple": [
+    {
+     "what": "The welcome series is already a ratified email type; its sections name the modules it needs.",
+     "who": "In place"
+    },
+    {
+     "what": "Where no module covers a pattern, a new one is built with a strictness row, a slot-map entry and a type-registry entry.",
+     "who": "Eddie",
+     "fact": {
+      "source": "brand-pack/strictness-map.md",
+      "quote": "every new master gets a strictness row, a slot-map entry and a type-registry entry"
+     }
+    },
+    {
+     "what": "Its slots are measured on the real faces, and the templates are built from pure instances.",
+     "who": "Eddie"
+    },
+    {
+     "what": "Every Figma write waits for Eddie’s go.",
+     "who": "Eddie",
+     "fact": {
+      "source": "REVIEW.md",
+      "quote": "every Figma write and every convention"
+     }
+    }
+   ],
+   "unchanged": "The voice, the ledger and the tokens stay as they are."
+  },
+  {
+   "id": "channel",
+   "title": "Paid social or the website",
+   "situation": "HLR wants Meta ads, or new site pages.",
+   "options": [
+    "types",
+    "slots",
+    "figma",
+    "channels",
+    "voice",
+    "products"
+   ],
+   "answer": [
+    "types",
+    "channels",
+    "figma"
+   ],
+   "ripple": [
+    {
+     "what": "Paid and web types are ratified at Review 2, with the first masters.",
+     "who": "Eddie",
+     "fact": {
+      "source": "brand-pack/type-registry-core.json",
+      "quote": "paid and web held for Review 2"
+     }
+    },
+    {
+     "what": "The paid slot map is wired once the first paid masters exist.",
+     "who": "Eddie"
+    },
+    {
+     "what": "Before the first paid build, a person confirms Meta’s 9:16 keep-clear bands and copy limits.",
+     "who": "A person",
+     "fact": {
+      "source": "PROGRESSION.md",
+      "quote": "Before the first paid build: a person confirms the 9:16 keep-clear bands and the copy limits in Meta's Ads Guide"
+     }
+    },
+    {
+     "what": "The web needs breakpoints, margins, a grid and a focus ring, ruled by Eddie at Review 2.",
+     "who": "Eddie"
+    }
+   ],
+   "unchanged": "The claims and the voice carry over unchanged; only the slots and masters are new."
+  },
+  {
+   "id": "taste-drift",
+   "title": "The team keeps cutting one kind of line",
+   "situation": "Reviewers keep cutting the same kind of headline from the forge’s drafts.",
+   "options": [
+    "taste",
+    "exemplars",
+    "voice",
+    "ledger",
+    "modules",
+    "slots"
+   ],
+   "answer": [
+    "taste",
+    "exemplars"
+   ],
+   "ripple": [
+    {
+     "what": "Mark lines keep or cut on a blind sheet: no route names, shuffled order.",
+     "who": "HLR’s reviewers"
+    },
+    {
+     "what": "Keeps become favorites, which outrank the historical exemplars.",
+     "who": "Automatic",
+     "fact": {
+      "source": "engine:README.md",
+      "quote": "the brand owner's favorites outrank the historical exemplars"
+     }
+    },
+    {
+     "what": "The judge’s rubric is derived from the marks, and Eddie ratifies it before any judge reads it.",
+     "who": "Eddie",
+     "fact": {
+      "source": "brand-pack/brand-context.md",
+      "quote": "derived from the blind marks, ratified by Eddie before a judge reads it"
+     }
+    },
+    {
+     "what": "The verifier reports how often it agrees with HLR’s marks.",
+     "who": "Automatic"
+    }
+   ],
+   "unchanged": "The rules stay the same. The forge learns what HLR prefers within them."
+  }
+ ],
+ "compare": {
+  "headline": [
+   "Which tool for which ",
+   "job"
+  ],
+  "intro": "Claude Design and the forge both make on-brand work with Claude. They solve different problems, and they work well together.",
+  "thesis": "Claude Design knows how HLR looks. The forge also knows what HLR may say, about which product, in which module, at what length, and who signs it off.",
+  "checked": "2026-10-23",
+  "cd_facts": [
+   {
+    "text": "Claude Design now lives in Claude: new designs, design systems and slide decks are artifacts. Its standalone site closes on December 14, 2026.",
+    "source": "https://support.claude.com/en/articles/17440474-move-from-standalone-claude-design-to-claude",
+    "checked": "2026-10-23",
+    "quote": "Claude Design now lives in Claude."
+   },
+   {
+    "text": "It makes first drafts from a description, styled to your brand: one-pagers, mockups, presentations and clickable prototypes.",
+    "source": "https://claude.com/product/design",
+    "checked": "2026-10-23"
+   },
+   {
+    "text": "It builds a design system from a GitHub repo, design files or uploads, builds with your components, and checks its output against the system before you see it. Admins can lock a team to one approved system.",
+    "source": "https://claude.com/product/design",
+    "checked": "2026-10-23",
+    "quote": "makes corrections before you see it"
+   },
+   {
+    "text": "You edit by commenting on any element, editing text on the canvas, using sliders for spacing and color, and dragging, resizing and aligning.",
+    "source": "https://claude.com/product/design",
+    "checked": "2026-10-23"
+   },
+   {
+    "text": "It downloads as PPTX, PDF or HTML, connects to Canva and other tools, and hands off to Claude Code. Figma isn’t among the integrations its product page lists.",
+    "source": "https://claude.com/product/design",
+    "checked": "2026-10-23"
+   },
+   {
+    "text": "It’s included in every Claude plan and counts toward plan usage. It launched as a research preview from Anthropic Labs on April 17, 2026.",
+    "source": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "checked": "2026-10-23"
+   }
+  ],
+  "rows": [
+   {
+    "dim": "The job",
+    "cd": "Explore and make a first draft fast: one-pagers, mockups, decks, prototypes.",
+    "forge": "HLR’s recurring email and social, on brand and on claim, in HLR’s Figma library."
+   },
+   {
+    "dim": "What it knows about HLR",
+    "cd": "A design system: colors, type, components and guidelines, checked against its output.",
+    "forge": "The pack: products, claims, voice, kinds of send, tokens, measured slot lengths, owners, and where every rule came from."
+   },
+   {
+    "dim": "When a fact is missing",
+    "cd": "Works from your prompt, your files and the design system.",
+    "forge": "Stops, names the gap and says who can fill it."
+   },
+   {
+    "dim": "Claims",
+    "cd": "No claims ledger among its listed features. The review is yours.",
+    "forge": "{ledger_rows} ledger rows and {patterns} never-say patterns, checked on every run."
+   },
+   {
+    "dim": "Copy",
+    "cd": "Writes copy along with the design.",
+    "forge": "Routes on different strategic frames, written whole, cut to measured lengths, checked against the ledger and the voice."
+   },
+   {
+    "dim": "Layout",
+    "cd": "Free-form. New layouts welcome, within the design system.",
+    "forge": "{modules} email modules and {elements} elements as library instances, each slot proven to hold twice its copy, on certified contrast pairs."
+   },
+   {
+    "dim": "Where the work lands",
+    "cd": "An artifact in Claude. PPTX, PDF, HTML, Canva, Claude Code.",
+    "forge": "A frame in HLR Library in Figma, on HLR’s own faces, with slices set to export for the email platform."
+   },
+   {
+    "dim": "The person’s part",
+    "cd": "Steer by chat, comments, sliders and direct edits.",
+    "forge": "Pick the route, ratify proposals, mark keep or cut, sign off claims."
+   },
+   {
+    "dim": "Changing the rules",
+    "cd": "Refine the design system.",
+    "forge": "Change one pack file with its owner and tier. Every check runs again on the next brief."
+   },
+   {
+    "dim": "Setup and upkeep",
+    "cd": "Bring in a repo or files; Claude builds the system.",
+    "forge": "Four weeks for Phase 1, and the pack needs an owner."
+   },
+   {
+    "dim": "Speed and cost",
+    "cd": "A first draft from a description, on plan usage.",
+    "forge": "Slower and heavier. A full squad run is about 250K output tokens per route, plus the judge."
+   }
+  ],
+  "cd_better": [
+   {
+    "point": "A first draft from a sentence",
+    "detail": "Describe it and see it. The forge needs a brief and a run."
+   },
+   {
+    "point": "Any format",
+    "detail": "One-pagers, decks, prototypes and pieces the forge has no module or type for."
+   },
+   {
+    "point": "Shaping by pointing",
+    "detail": "Comment on an element, drag a slider, edit text on the canvas."
+   },
+   {
+    "point": "Light upkeep",
+    "detail": "A design system built from your files, and no pack of facts to keep current."
+   },
+   {
+    "point": "Hand-offs the forge doesn’t make",
+    "detail": "PPTX, PDF, HTML, Canva and Claude Code."
+   },
+   {
+    "point": "Open to everyone",
+    "detail": "It’s in every Claude plan, Free included."
+   }
+  ],
+  "forge_better": [
+   {
+    "point": "Claims in sensitive territory",
+    "detail": "HLR’s live site carries benefit lines such as “CALM YOUR ANXIETY”. A design system records how a brand looks, not which of its own lines need a sign-off. The forge holds any line that ties a piece or a stone to anxiety until HLR’s claims signer rules.",
+    "facts": [
+     {
+      "source": "brand-pack/route-axes.json",
+      "quote": "CALM YOUR ANXIETY"
+     },
+     {
+      "source": "brand-pack/legal-ledger.json",
+      "quote": "No line ties a piece or a stone to anxiety, stress, mood, grief, trauma, sleep or any mental-health state."
+     }
+    ]
+   },
+   {
+    "point": "Facts that stay true",
+    "detail": "All {empty_desc} product descriptions are empty today, so the rehearsal email states no metal, karat, stone meaning, size or price. The forge treats a missing fact as missing.",
+    "facts": [
+     {
+      "source": "outputs/step-4-figma/demo-email/brief-made-to-order-pendants.md",
+      "quote": "The product descriptions are empty, so the copy states no material, karat, stone meaning, size or price."
+     }
+    ]
+   },
+   {
+    "point": "Copy that fits before it’s built",
+    "detail": "Every slot has a length measured on HLR’s real faces. Copy is cut to it before the build, and every module is proven to hold at least twice its usual copy.",
+    "facts": [
+     {
+      "source": "brand-pack/slotmap.yaml",
+      "quote": "Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple"
+     },
+     {
+      "source": "outputs/step-4-figma/demo-email/build.md",
+      "quote": "every module and element passes structure lint, flex at 2x or better, canvas and face checks"
+     }
+    ]
+   },
+   {
+    "point": "One brand across a year of sends",
+    "detail": "Every email is assembled from the same library modules, as instances bound to HLR’s tokens. Nothing is drawn freehand, so a fix to a module reaches every send.",
+    "facts": [
+     {
+      "source": "outputs/step-4-figma/demo-email/build.md",
+      "quote": "Built from library instances only, no detached layers"
+     }
+    ]
+   },
+   {
+    "point": "Work lands in Figma, where HLR designs",
+    "detail": "The forge builds in HLR Library, with slices set to export for the email platform and alt text on every slice. Figma isn’t among Claude Design’s listed integrations.",
+    "facts": [
+     {
+      "source": "outputs/step-4-figma/demo-email/build.md",
+      "quote": "Alt text on every slice"
+     }
+    ]
+   },
+   {
+    "point": "Strategy before style",
+    "detail": "It proposes routes on different strategic frames, says which it would pick and why, and leaves the pick to a person.",
+    "facts": [
+     {
+      "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.intake.md",
+      "quote": "A recommendation, not a decision: the angle is the one call the model never makes for you."
+     }
+    ]
+   },
+   {
+    "point": "A trail for every line",
+    "detail": "Each run leaves a brief, a route plan, lint reports and findings sorted by owner. Every rule cites its source, and every decision is a dated line with its reason.",
+    "facts": [
+     {
+      "source": "outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md",
+      "quote": "9 findings, routed by who can act on them. 6 of them are not the drafter's."
+     }
+    ]
+   },
+   {
+    "point": "Taste that learns HLR",
+    "detail": "Blind keep-or-cut marks become HLR’s favorites, a voice model and the judge’s rubric, and the judge reports how often it agrees with HLR.",
+    "facts": [
+     {
+      "source": "engine:skills/verify/SKILL.md",
+      "quote": "Reports how often that judge agrees with the brand owner's own blind marks, or says that it has never been checked"
+     }
+    ]
+   },
+   {
+    "point": "Loud absence",
+    "detail": "When something is missing, such as a claims signer, a license or a vector, the forge says so, names the owner and keeps a placeholder. It never fills the gap with something plausible.",
+    "facts": [
+     {
+      "source": "REVIEW.md",
+      "quote": "with a gap line naming what is missing and its owner"
+     }
+    ]
+   }
+  ],
+  "together": [
+   "Explore in Claude Design. When a concept keeps coming back, it graduates into the forge as a kind of send or a module.",
+   "Use Claude Design for the one-off pieces the forge doesn’t make: a pitch deck, a one-pager, a prototype. Check any product fact or claim against the pack before it goes out.",
+   "Worth testing, not yet a claim: whether HLR’s tokens can seed a Claude Design system, so explorations start on brand."
+  ],
+  "picker": [
+   {
+    "job": "The weekly product email",
+    "pick": "forge",
+    "why": "A recurring send with product facts and claims, built where HLR already designs."
+   },
+   {
+    "job": "A one-page sheet for a wholesale meeting",
+    "pick": "cd",
+    "why": "A one-off format with no module, exported as a PDF. Check its product facts against the pack first."
+   },
+   {
+    "job": "Three moodboard directions for spring",
+    "pick": "cd",
+    "why": "Exploration, where speed and range matter more than a governed build."
+   },
+   {
+    "job": "A launch email with intention language",
+    "pick": "forge",
+    "why": "Intention lines go through the ledger’s meaning rows and the voice contract’s rule: tradition or intention, never an outcome."
+   },
+   {
+    "job": "Captions for Monday’s carousel",
+    "pick": "forge",
+    "why": "The social copy skill checks claims and Instagram’s limits now. The carousel frames come with the social batch."
+   },
+   {
+    "job": "A clickable prototype of a new site page",
+    "pick": "cd",
+    "why": "A prototype is Claude Design’s home ground. The forge’s web modules come after Review 2."
+   }
+  ]
+ },
+ "check": {
+  "headline": [
+   "Trace it ",
+   "yourself"
+  ],
+  "intro": "Five questions. Each one is a real situation the forge handles today."
+ },
+ "quiz": [
+  {
+   "q": "A draft line copies the Element Pendant’s metal and karat from the website. Can it run today?",
+   "options": [
+    "Yes, it’s on the website",
+    "No: the product description is empty, so no karat line is allowed yet",
+    "Only in the footer"
+   ],
+   "answer": 1,
+   "why": "Metal and karat are written exactly as the product file carries them, and the descriptions stay empty until HLR’s Shopify export lands.",
+   "fact": {
+    "source": "brand-pack/legal-ledger.json",
+    "quote": "Write the metal and karat exactly as the product database carries them for the piece named"
+   }
+  },
+  {
+   "q": "HLR’s claims signer clears origin claims. Which file changes?",
+   "options": [
+    "The voice contract",
+    "The claims ledger, row HLR-O01",
+    "The slot lengths"
+   ],
+   "answer": 1,
+   "why": "One row’s severity changes, and every lint reads the ledger on its next run.",
+   "fact": {
+    "source": "brand-pack/legal-ledger.json",
+    "quote": "HLR's confirmation of where and by whom each piece is made."
+   }
+  },
+  {
+   "q": "The team wants a filled button instead of the outline box. Who decides?",
+   "options": [
+    "Anyone on HLR’s team",
+    "Eddie: the button shape was ruled at Gate 1, for HLR to confirm",
+    "The forge picks the better one"
+   ],
+   "answer": 1,
+   "why": "The button is a locked element. Gate 1 ruled the outline caps box, and filled boxes retired.",
+   "fact": {
+    "source": "brand-pack/strictness-map.md",
+    "quote": "Gate 1 C6 (outline caps box; filled boxes retire)"
+   }
+  },
+  {
+   "q": "Every automated check passed. What’s still needed before HLR sees a new deliverable?",
+   "options": [
+    "Nothing",
+    "A fresh review, then Eddie’s go",
+    "The same checks again"
+   ],
+   "answer": 1,
+   "why": "Some defects only a reader sees. Anything that leaves the brand home for HLR also needs Eddie’s explicit go.",
+   "fact": {
+    "source": "REVIEW.md",
+    "quote": "anything that leaves this brand home for HLR"
+   }
+  },
+  {
+   "q": "You need a one-off pitch deck for a buyer meeting. Which tool?",
+   "options": [
+    "The forge",
+    "Claude Design",
+    "Either, it doesn’t matter"
+   ],
+   "answer": 1,
+   "why": "A one-off in a format the forge has no module for is Claude Design’s job. Check any product fact or claim against the pack before it goes out."
+  }
+ ],
+ "close": {
+  "headline": "You can now",
+  "items": [
+   "Trace one email from the ask to the send.",
+   "Find the file and the owner behind any rule.",
+   "Say what changes, who approves it and what runs again.",
+   "Choose between the forge and Claude Design."
+  ],
+  "next": "Next: open the rulebook’s Waiting on HLR view. It lists what HLR owes the forge and what each item unblocks."
+ },
+ "glossary": [
+  {
+   "term": "Pack",
+   "plain": "The folder of files that holds HLR’s rules and facts. The forge reads it fresh on every run."
+  },
+  {
+   "term": "Engine",
+   "plain": "The forge’s skills. They carry no HLR fact of their own."
+  },
+  {
+   "term": "Library",
+   "plain": "HLR Library in Figma: the variables, styles, elements, modules and templates."
+  },
+  {
+   "term": "Element",
+   "plain": "The smallest reusable piece: a button, a text link, a rule, an image frame, a product card."
+  },
+  {
+   "term": "Module",
+   "plain": "A section of an email, such as a hero, a product grid or a footer, made from elements."
+  },
+  {
+   "term": "Template",
+   "plain": "A whole email made only from module instances, ready for copy and photos."
+  },
+  {
+   "term": "Slot",
+   "plain": "One place for a line of copy inside a module, such as the hero headline."
+  },
+  {
+   "term": "Slot length",
+   "plain": "How long a slot’s copy may be, measured on HLR’s real faces."
+  },
+  {
+   "term": "Route",
+   "plain": "One strategic angle on a send, on a named frame such as product, benefit or occasion."
+  },
+  {
+   "term": "Angle gate",
+   "plain": "The point where a person picks the route or the angle. The forge recommends; it never picks."
+  },
+  {
+   "term": "Ledger",
+   "plain": "The claims ledger: what HLR may say and what needs a sign-off."
+  },
+  {
+   "term": "Lint",
+   "plain": "An automatic check that reads files and reports PASS, WARN or FAIL."
+  },
+  {
+   "term": "Gate",
+   "plain": "A stop in the plan where Eddie or HLR rules before work goes on."
+  },
+  {
+   "term": "Ground",
+   "plain": "The background a piece sits on: light, warm, deep or night. Text colors follow it."
+  },
+  {
+   "term": "Canvas",
+   "plain": "The size family a piece is built for: web, social or email."
+  },
+  {
+   "term": "Token",
+   "plain": "A named design value, such as a color or a type size, shared by Figma and the web."
+  },
+  {
+   "term": "Provenance tag",
+   "plain": "Where a rule came from: documented, observed or derived."
+  },
+  {
+   "term": "Fresh review",
+   "plain": "A review by an agent that never saw the work being made, so the work doesn’t grade itself."
+  },
+  {
+   "term": "Merge token",
+   "plain": "A placeholder such as {{ discount_code }}, filled in by a person or the email platform."
+  },
+  {
+   "term": "Loud absence",
+   "plain": "The habit of naming what’s missing, with an owner, instead of filling it in."
+  }
+ ]
+}

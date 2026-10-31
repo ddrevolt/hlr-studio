@@ -15,7 +15,7 @@
  },
  "breakpoints": {
   "desktop": {"label": "Desktop", "width": 1440, "note": "[observed] the design frames are 1440 wide; desktop side margins about 100 to 158 px"},
-  "mobile_stack": {"label": "Mobile stack", "width": 375, "note": "[observed] the design frames are 375 wide; sections stack and desktop tabs become accordions; gutter about 20 px. The engine's reference phone is 390: the breakpoints are open, for Eddie at Review 2 with the web masters (figma.yaml breakpoints null)"},
+  "mobile_stack": {"label": "Mobile stack", "width": 375, "note": "[observed] the design frames are 375 wide; sections stack and desktop tabs become accordions; gutter about 20 px. The engine's reference phone is 390: the breakpoints are set, 1440 and 390 (figma.yaml breakpoints; Eddie, 2026-10-23, decision sheet); the margins and grid are open, for Donnie at Review 2 with the web masters"},
   "mobile_carousel": {"label": "Mobile carousel", "width": 375, "note": "[observed] cross-sell cards scroll sideways on the mobile PDP (2:183590)"}
  },
  "sections": [
@@ -39,7 +39,7 @@
    "data_fed": true,
    "slots": {},
    "note": "Navigation labels and menu tiles are site structure kept in Shopify's menus, not page copy: no copy slot. [observed] menus RECOMMENDED, SHOP BY MEANING, SHOP BY TYPE; Find Your Match; the drawer on mobile.",
-   "open_decision": "The mobile drawer's About Us feature (founder line, image, eyebrow, body, button; 2:184749) is promotional copy inside navigation. Page copy with its own section, or menu settings? Eddie, at Step 4.",
+   "open_decision": "The mobile drawer's About Us feature (founder line, image, eyebrow, body, button; 2:184749) is promotional copy inside navigation. Page copy with its own section, or menu settings? Donnie, at Step 4.",
    "evidence": "[observed] W-NAV 2:184523, W-MNAV 2:184749"
   },
   {
@@ -201,7 +201,7 @@
    "data_fed": true,
    "slots": {},
    "note": "Product cards fed by the product database and Shopify collections: no copy slot.",
-   "open_decision": "A collection header (title and intro, the SEO block) is not in the file. Add one at Step 4, or keep collection pages to the grid? Eddie.",
+   "open_decision": "A collection header (title and intro, the SEO block) is not in the file. Add one at Step 4, or keep collection pages to the grid? Donnie.",
    "evidence": "[derived] from W-FILTER 2:185324 and the mega menu (SHOP BY MEANING, SHOP BY TYPE)"
   }
  ],
@@ -211,7 +211,7 @@
   "collection": {"label": "Collection page", "status": "proposed, Review 2", "typical": ["W01", "W02", "W13", "W14", "W12"], "requires": ["W14"]}
  },
  "page_type_gaps": {
-  "editorial": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Eddie (scope), HLR (content).",
-  "landing": "No campaign landing page in the file. Owner: Eddie (scope)."
+  "editorial": "The Ritualist (blog) is linked from email footers; no web design for it in the file. Owner: Donnie (scope), HLR (content).",
+  "landing": "No campaign landing page in the file. Owner: Donnie (scope)."
  }
 }

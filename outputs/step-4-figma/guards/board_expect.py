@@ -2,8 +2,8 @@
 """Board drift guard, part 1 of 2 (Chat 6, 2026-10-23; REVIEW.md section 6 row R19, after R2-05 and the Foundations
 review F1-01 to F1-05: boards on 00 Foundations kept text the pack had since changed; tightened after round 2, F2-02).
 Builds what the 00 Foundations boards must say from the pack: every colour cell's hex, alias and whole tag line
-(tokens.json; a [derived] value not yet ruled reads "[derived], for Eddie to confirm", and a [derived] part inside a
-description adds "; the alias [derived], for Eddie to confirm"), every Certified pairs cell's four lines (its ratio,
+(tokens.json; a [derived] value not yet ruled reads "[derived], for Donnie to confirm", and a [derived] part inside a
+description adds "; the alias [derived], for Donnie to confirm"; Donnie confirms since Eddie's ruling of 2026-10-23), every Certified pairs cell's four lines (its ratio,
 computed as the engine computes it; its source; "certified: <roles>" or "recorded: <restriction>"; the pair with its
 hexes), every Type specimen line in full (exemplars.json, and the two board lines that quote no exemplar) and how many
 specimens the board holds (text styles x canvases), the strictness map rows, header, closing note and status
@@ -39,10 +39,10 @@ def tag_line(desc):
         return None
     ruled = lambda rest: 'ruled' in rest or 'ratified' in rest
     k, rest, _ = tags[0]
-    s = ('[derived' + rest + ']' if ruled(rest) else '[derived], for Eddie to confirm') if k == 'derived' else '[' + k + ']'
+    s = ('[derived' + rest + ']' if ruled(rest) else '[derived], for Donnie to confirm') if k == 'derived' else '[' + k + ']'
     for k, rest, at in tags[1:]:
         if k == 'derived' and not ruled(rest):
-            s += ('; the alias' if re.search(r'\balias\b', desc[:at], re.I) else '; a part') + ' [derived], for Eddie to confirm'
+            s += ('; the alias' if re.search(r'\balias\b', desc[:at], re.I) else '; a part') + ' [derived], for Donnie to confirm'
     return s
 colors = {}
 for p, o in walk(tok):
@@ -93,8 +93,8 @@ rows = [[c.strip().replace('`', '') for c in l.strip().strip('|').split(' | ')] 
 paras = sm.split('\n\n')
 header = ' '.join(x.replace('`', '') for x in paras if x.startswith('Rules from the playbook') or x.startswith('Element classes from'))
 closing = [x for x in paras if x.startswith('Adopted with')][0].strip().replace('`', '')
-st = re.search(r"(Drafted by .*? delegation)\b.*?\(ratified (\d{4}-\d\d-\d\d) by Eddie", sm.replace('\u2019', "'"))
-status = {'drafted': st.group(1), 'ratified': st.group(2)}
+st = re.search(r"(Drafted by .*? delegation)\b.*?\(ratified (\d{4}-\d\d-\d\d) by (Eddie|Donnie)", sm.replace('\u2019', "'"))
+status = {'drafted': st.group(1), 'ratified': st.group(2), 'by': st.group(3)}   # Eddie ratified the map; Donnie ratifies from 2026-10-23
 TAG = r'\[(documented|observed|derived)((?:,[^\]]*)?)\]'
 def ruled_date(rest):
     m = re.search(r'\b(?:ruled|ratified) (\d{4}-\d\d-\d\d)', rest); return m.group(1) if m else None

@@ -1,0 +1,135 @@
+{
+ "errors": [],
+ "warns": [],
+ "needs_human_signoff": [],
+ "insufficient_input": [],
+ "verdict": "PASS",
+ "checked": {
+  "brief": "/mnt/user-data/outputs/protection-of-energy/protection-of-energy.brief.json",
+  "brief_sha256": "6743cc5afd075d0e5b9778b9437823e337bda2749e33f9104112213e917cbba8",
+  "routes": "/mnt/user-data/outputs/protection-of-energy/protection-of-energy.routes.json",
+  "routes_sha256": "c9460c2b8bb92b8bc71dc14c7753e9e15115e8b139e634a463b4e778a4dde632",
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "pack_resolved_by": "--pack",
+  "route_axes": "/home/claude/hlr/brand-pack/route-axes.json (ratified)",
+  "route_plan": {
+   "count": 3,
+   "axes": [
+    "benefit",
+    "product",
+    "occasion"
+   ],
+   "default": 3,
+   "max": 5,
+   "source": "/home/claude/hlr/brand-pack/route-axes.json"
+  },
+  "fields_scanned": 43,
+  "must_say": 0,
+  "guidance": {
+   "vocabulary": 4,
+   "tone": 3,
+   "notes": 5,
+   "mandated_vocabulary_cap": "none, by ruling (brief-schema.json must_say.$comment)"
+  },
+  "fields_exempt_from_claims": [
+   "gaps",
+   "never_say",
+   "provenance",
+   "source"
+  ],
+  "allowed_figures": [],
+  "product_db": "/home/claude/hlr/brand-pack/products.json",
+  "prohibited_source": "brand-pack/brand-context.md",
+  "prohibited_patterns": 6,
+  "ledger": "/home/claude/hlr/brand-pack/legal-ledger.json",
+  "ledger_status": "test-seed",
+  "ledger_trigger_formats": {
+   "pattern": 0,
+   "literal triggers": 1,
+   "regex triggers": 17,
+   "lemmas": 16
+  },
+  "paraphrase_review": [
+   {
+    "id": "HLR-H01",
+    "topic": "health",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-H02",
+    "topic": "health",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-F01",
+    "topic": "fertility",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-O01",
+    "topic": "origin",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-K01",
+    "topic": "materials",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-M01",
+    "topic": "metaphysical",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-M02",
+    "topic": "metaphysical",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-M03",
+    "topic": "metaphysical",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-M04",
+    "topic": "metaphysical",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   },
+   {
+    "id": "HLR-M05",
+    "topic": "metaphysical",
+    "paraphrase_review": true,
+    "lexical_hits": 0,
+    "note": "the ledger marks this topic paraphrase_risk. This lint matched listed wording only and did not judge meaning; a verifier must read the copy against the topic before it is cleared."
+   }
+  ],
+  "paraphrase_review_required": true,
+  "claims_checking": "TEST-SEED LEDGER: 19 rules enforce provisionally; flags are real, clearance is not implied",
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ }
+}

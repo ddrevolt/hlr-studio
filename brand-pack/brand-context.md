@@ -4,13 +4,13 @@ Pack role: the brand context of the pack contract [documented] (`hlr-studio-engi
 
 Status: Pack v0, Gate 2 closed 2026-10-22. Lane C's eight calls were ruled on 2026-10-21 (DECISIONS), and Eddie took every call of `outputs/step-2-pack/gate-2-package.md` at the brand home at its default on 2026-10-22 (DECISIONS); every [derived] rule still here is a proposal, never law. Preflight and the guards that check this file: `outputs/step-2-pack/preflight.md`.
 
-Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 2022-06-11, cited by PDF page), the client, or our own standing records (project rules, the playbook, the pack contract), named after the tag; a ruling of Eddie's is written [documented, DECISIONS <date>]; a derived value or rule Eddie ratifies flips its leading tag to [documented] and carries "(ratified <date> by Eddie, Gate 2 package call N)" (Gate 2 package call 4, DECISIONS 2026-10-22); [observed] live work and the client's files, dated (`outputs/step-1-review/`; the corpus re-cut in `outputs/step-2-pack/corpus/`); [derived] our proposal, which only Eddie ratifies. Rulings cite `DECISIONS.md` at the brand home by date. Paths are relative to this folder (`brand-pack/`) unless they start with `outputs/`, `_setup/` or a file at the brand home root. No HLR fact here comes from memory; a fact with no source is a gap in the last table.
+Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 2022-06-11, cited by PDF page), the client, or our own standing records (project rules, the playbook, the pack contract), named after the tag; a ruling is written [documented, DECISIONS <date>], Eddie's before 2026-10-23 and Donnie's from his ruling that day that she owns every decision; a derived value or rule she ratifies flips its leading tag to [documented] and carries "(ratified <date> by Donnie, <call>)", as the ones Eddie ratified carry "(ratified <date> by Eddie, Gate 2 package call N)" (Gate 2 package call 4, DECISIONS 2026-10-22); [observed] live work and the client's files, dated (`outputs/step-1-review/`; the corpus re-cut in `outputs/step-2-pack/corpus/`); [derived] our proposal, which only Donnie ratifies (DECISIONS 2026-10-23). Rulings cite `DECISIONS.md` at the brand home by date. Paths are relative to this folder (`brand-pack/`) unless they start with `outputs/`, `_setup/` or a file at the brand home root. No HLR fact here comes from memory; a fact with no source is a gap in the last table.
 
 ## Category and product
 
 - What HLR sells: jewelry (bracelets 94 and necklaces 65 of 182 products), ritual kits (12), crystals (3), and energy healing sessions and readings listed as products; 650 variants on Shopify [observed, `outputs/step-1-review/site/catalog-stats-2026-10-17.json`]. These counts describe the catalog for planning, never for copy: a figure reaches copy only from `products.json` through `sku_lookup.js` [documented, the pack contract's `product_db` row; project rule 3].
 - The shelf, in the brand's words: timeless jewelry for self and space (p6, p32) [documented]. The live site calls it fine healing crystal jewelry, healer-activated [observed, site 2026-10-17], which the book does not: contradiction C2 below.
-- The shelf in customers' words: not gathered [observed: no customer material read]. The nearest first-party source is the Judge.me reviews on the site (Where they talk); a customer-evidence run supplies it (owner Eddie, who scopes the run).
+- The shelf in customers' words: not gathered [observed: no customer material read]. The nearest first-party source is the Judge.me reviews on the site (Where they talk); a customer-evidence run supplies it (owner Donnie, who scopes the run).
 - Sessions and readings with a practitioner are sold as products; their positioning and claims are HLR's call (C2; ledger row HLR-H04) [observed, catalog 2026-10-17].
 - The product database, `products.json`: keyed by Shopify handle until HLR's export lands, then by SKU (DECISIONS 2026-10-18, Gate 2 call 7 a); display names use "in", never a dash (DECISIONS 2026-10-17, Q10; 2026-10-18, call 4 a); `kind` and `family` are [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 14). Every `description` is empty, so no product prose is verifiable until the export (owner HLR).
 
@@ -36,7 +36,7 @@ Status: ratified by Eddie at Gate 2 on 2026-10-21 (lane C calls 1 a, 7 a and 8 a
 | The Ritualist (blog) | linked from HLR's email footers; no web design for it in the files | likely; HLR to confirm | [observed] `section-library.json` page-type gaps |
 | lightnessbydonnie.substack.com | a newsletter linked from the site | unconfirmed (HLR, Review 1) | [observed] site, 2026-10-17 |
 
-No third-party venue is declared. Until Eddie names a roster, a customer-evidence run states that its sampling frame was not chosen in advance [documented, the engine's customer-evidence template]. `brand_domains` lists the two first-party domains the site pull confirmed [observed, site 2026-10-17]; the Substack stays out until HLR says whose it is [derived].
+No third-party venue is declared. Until Donnie names a roster, a customer-evidence run states that its sampling frame was not chosen in advance [documented, the engine's customer-evidence template]. `brand_domains` lists the two first-party domains the site pull confirmed [observed, site 2026-10-17]; the Substack stays out until HLR says whose it is [derived].
 
 ## Prohibited language
 
@@ -76,7 +76,7 @@ Kept out on purpose: "treat", "diagnose", "medical" and "ailment" on their own, 
 
 ## Recency window
 
-Twelve months, the engine default: `recency_months` stays null so the default applies [derived]. No reason to change it has come up (owner Eddie).
+Twelve months, the engine default: `recency_months` stays null so the default applies [derived]. No reason to change it has come up (owner Donnie).
 
 ## What this brand already believes
 
@@ -143,35 +143,35 @@ Every null role and every required artifact with no file yet, its owner, and the
 
 | Item | Kind | State | Owner | Step | Blocks |
 |---|---|---|---|---|---|
-| `favorites` | role | null; the Step 5 sheet is Eddie's blind keep or cut marks, HLR's reviewers mark later (lane C) | Eddie | `Eddie's blind keep or cut sheet marked` | the owner's keeps steer nothing |
-| `voice_calibration` | role | null; the Step 5 sheet is Eddie's blind keep or cut marks, HLR's reviewers mark later (lane C) | Eddie | `Eddie's blind keep or cut sheet marked` | no pack voice model can be fitted |
-| `voice_model` | role | null; the engine's default weights run, announced | Chat 7 | `Eddie's blind keep or cut sheet marked` | the advisory voice judge runs weak |
-| `judge_rubric` | role | null; derived from the blind marks, ratified by Eddie before a judge reads it | Chat 7 | `Eddie's blind keep or cut sheet marked` | every rank says no measured preference is on file |
-| `judge_calibration` | role | null | Chat 7 | `Eddie's blind keep or cut sheet marked` | every rank says it was never checked against the owner |
-| `corpus` | role | null by design: the re-cut is evidence, never retrieved per run | Eddie | none | nothing |
-| `type_registry_overlay` | role | null: the core registry governs | Eddie | none | nothing |
+| `favorites` | role | null; the Step 5 sheet is Donnie's blind keep or cut marks, HLR's reviewers mark later (lane C) | Donnie | `Donnie's blind keep or cut sheet marked` | the owner's keeps steer nothing |
+| `voice_calibration` | role | null; the Step 5 sheet is Donnie's blind keep or cut marks, HLR's reviewers mark later (lane C) | Donnie | `Donnie's blind keep or cut sheet marked` | no pack voice model can be fitted |
+| `voice_model` | role | null; the engine's default weights run, announced | Chat 7 | `Donnie's blind keep or cut sheet marked` | the advisory voice judge runs weak |
+| `judge_rubric` | role | null; derived from the blind marks, ratified by Donnie before a judge reads it | Chat 7 | `Donnie's blind keep or cut sheet marked` | every rank says no measured preference is on file |
+| `judge_calibration` | role | null | Chat 7 | `Donnie's blind keep or cut sheet marked` | every rank says it was never checked against the owner |
+| `corpus` | role | null by design: the re-cut is evidence, never retrieved per run | Donnie | none | nothing |
+| `type_registry_overlay` | role | null: the core registry governs | Donnie | none | nothing |
 | `options_register` | role | null until a first real choice is recorded; then `options-register.jsonl`, created on first append | Chat 7 | `One real HLR brief` | the reason a line was kept is lost |
-| `onepager_palette` | role | null; the engine's neutral default renders | Eddie | none | nothing a reader would notice |
-| `importer` | role | null; optional, and most brands have none: a question only if HLR's team wants slates imported into a tool | Eddie | none | nothing; the JSON and the one-pager are the deliverables |
-| `slotmap_paid` | role | null; planned at `slotmap-paid.yaml`, wired at Review 2 with the first masters | Eddie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | paid in-frame ceilings unchecked |
+| `onepager_palette` | role | null; the engine's neutral default renders | Donnie | none | nothing a reader would notice |
+| `importer` | role | null; optional, and most brands have none: a question only if HLR's team wants slates imported into a tool | Donnie | none | nothing; the JSON and the one-pager are the deliverables |
+| `slotmap_paid` | role | null; planned at `slotmap-paid.yaml`, wired at Review 2 with the first masters | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | paid in-frame ceilings unchecked |
 | `slotmap_web` | role | null until the web masters exist | Chat 6 | `social, paid and web at the formats the review found` | web budgets would come from the section library alone |
-| `section_library` | role | null; planned at `section-library.json`, wired at Review 2 with the W## masters (Gate 2 package call 13) | Eddie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | `web-copy` stops by design |
-| `grounding_inputs` | role | null; no customer material on file; asked at Review 1 (Gate 2 package call 17), a Judge.me reviews export first; Eddie relays HLR's answer | Eddie | none | paid concepts are labelled hypotheses |
-| `insight_register` | role | null; no research received; asked at Review 1 (Gate 2 package call 17); Eddie relays HLR's answer | Eddie | none | nothing can be recognised as already assumed beyond the section above |
-| `recency_months` | role | null; the engine default (12) applies | Eddie | none | nothing |
+| `section_library` | role | null; planned at `section-library.json`, wired at Review 2 with the W## masters (Gate 2 package call 13) | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | `web-copy` stops by design |
+| `grounding_inputs` | role | null; no customer material on file; asked at Review 1 (Gate 2 package call 17), a Judge.me reviews export first; Eddie relays HLR's answer | Donnie | none | paid concepts are labelled hypotheses |
+| `insight_register` | role | null; no research received; asked at Review 1 (Gate 2 package call 17); Eddie relays HLR's answer | Donnie | none | nothing can be recognised as already assumed beyond the section above |
+| `recency_months` | role | null; the engine default (12) applies | Donnie | none | nothing |
 | `faces_policy` | role | null; image rights and releases for people in imagery; asked by token proposal HLR 5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real imagery with people |
-| `image_look` | role | null; no generation ruling for HLR: the cleared photos on the `photos` page or labelled placeholders, nothing generated | Eddie | none | the image layer |
+| `image_look` | role | null; no generation ruling for HLR: the cleared photos on the `photos` page or labelled placeholders, nothing generated | Donnie | none | the image layer |
 | `pack_shot_index` | role | null; the cleared product shots sit on the library's `photos` page (27:104, DECISIONS 2026-10-23), and the index keys on SKUs from HLR's Shopify products export (Brand Review v2 Q5) | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | real product imagery |
-| `video_rules` | role | null; video scope not set | Eddie | none | video beyond the P09 end frame |
+| `video_rules` | role | null; video scope not set | Donnie | none | video beyond the P09 end frame |
 | Lockup vectors, the star's master, clear space, minimum sizes | artifact | the lockups PNG only; the star placed from HLR's live footer vector (Eddie, 2026-10-23), its master to confirm; asked by Brand Review v2 Q3 and token proposal HLR 2 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | the avatar lockup; placement rules |
 | Licenses for Saol Display, Saol Standard and Trade Gothic LT Std | artifact | no license file; asked by Brand Review v2 Q2 and token proposal HLR 1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every shipped asset (the flag stays raised) |
 | Shopify products export | artifact | not received; asked by Brand Review v2 Q5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | SKUs, product prose, confirmed prices |
 | HLR's claims signer and the needs_legal rulings | artifact | not named; asked by Brand Review v2 Q1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every line a needs_legal row hits |
-| Web margins and grid (`token-model.md` L3) | artifact | open; the breakpoints are ruled (1440 and 390, Eddie, 2026-10-23, `figma.yaml` `breakpoints`) | Eddie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | web budgets |
-| Web focus ring (`token-model.md` K2) | artifact | open, not tokenized; Gate 4 left it open | Eddie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | the web masters’ interactive states |
+| Web margins and grid (`token-model.md` L3) | artifact | open; the breakpoints are ruled (1440 and 390, Eddie, 2026-10-23, `figma.yaml` `breakpoints`) | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | web budgets |
+| Web focus ring (`token-model.md` K2) | artifact | open, not tokenized; Gate 4 left it open | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | the web masters’ interactive states |
 | Meta 9:16 keep-clear bands and copy limits confirmed (`_verified` in the engine's placement specs) | artifact | secondary sources only | Eddie | `Before the first paid build: a person confirms the 9:16 keep-clear bands` | the paid 9:16 masters |
 | The organic story band confirmed on a live story | artifact | one 2026 guide | Eddie | none | the S04 masters |
-| Live review dates | artifact | not set | Eddie | none | Reviews 1 to 3 |
+| Live review dates | artifact | not set | Donnie | none | Reviews 1 to 3 |
 
 ## File map
 

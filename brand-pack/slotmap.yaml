@@ -20,11 +20,16 @@
 # case, house style (Gate 2 call 2 a, Eddie, 2026-10-18): headlines and lines in sentence case; eyebrows and CTA
 # labels in caps; names, scripts, nav labels, labels, numbered headlines, reviews and the disclaimer as written
 # (as-is). E02.label and E07.name are as-is because their styles set the caps.
+# Chat 6b, 2026-10-23: 01 Elements and 02 Modules are grouped into titled registry sections (names and ids kept); E06 and M06 became
+# sets (Align=Left, the original, and Align=Center), E06 gained Show label, Show description and Show link, M06 sets each row's links
+# in a row of their own, M02 gained Tall, M12 gained Size=Tall and E05 Crop=Tall, all to rebuild HLR's 2026 sends (Eddie, 2026-10-23).
 # Composed elements are stamped once on the element (E##.role) and declared on the host module (composed). A composed
 # slot carries the tightest budget among the element and its hosts (budget_from names the host that sets it); a host
 # whose column cannot take the element budget stamps its own slot (M11.cta, M12.cta: the E01 label at 2x there).
 # The footer disclaimer is legal-ledger.json HLR-REQ-01, carried verbatim (verbatim: true). Reviews (M18) are a
 # sourced export, verbatim: no review slot is ever filled without a source.
+# 2026-10-23, Review 1 (Eddie, live): email type moved to HLR's 2026 sends: body leading 1.40, headline leading 1.0, the eyebrow Bold at 30 tracked 0.25em, the arrow link in Saol Display. The eyebrow and link-label slots were re-probed alone at their proven lengths in every variant on the real faces (32 placements: E02.label in E02, E06, E07, M03, M06, M15 and M18; the eyebrows of M02, M03, M04, M11, M17, M19 and M22): none clipped, collided with a painted neighbour or overflowed a fixed box, so their budgets stand. Body and headline slots only got shorter. M23 carries Marks/Lockup and opens 9 of the 17 staged sends; M01 the other 8.
+# 2026-10-23, Review 1 (Eddie, live), later: the email scale moved to the sends designed at 1200 (body 34, label 26, title 35, link 46; Review 1 email scale) and M04 gained Style=Statement (the quote style, Saol Display Regular 64 at 1.2 in email; Review 1 statement). Re-probed at proven lengths on the real faces, optional layers on: 67 label, CTA, link, fine and eyebrow placements alone, then M03, M04 Statement, M07 and M18 alone and all together (18 and 18): none clipped, collided or overflowed a fixed box, once M27's date was made to wrap (its 68-character budget ran past the masthead at 1200, before and after the change). Body, title and headline slots only got shorter.
 
 meta:
   namespace: hlr
@@ -46,7 +51,7 @@ modules:
   M01:
     name: "Header"
     family: email
-    use_when: "The wordmark bar that opens a send (E-H2). Set a ground mode on the instance for a coloured bar."
+    use_when: "The wordmark bar that opens a send (E-H2). Set a ground mode on the instance for a coloured bar. The one-line wordmark opens 8 of the 17 sends on 04 Staging (T02, T07, T08, T12 to T16); the others open with M23."
     status: built
     node_id: "40:104"
     canvas: email
@@ -62,7 +67,7 @@ modules:
     canvas: email
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
-    options: "Show eyebrow (on), Show wordmark (off), Show body (off), Show script (off), Show CTA (on; E-M17 has a head-only variant), Space below (off; space/40 under the CTA for a photo whose subject sits low); the scrim is the root's second fill (background/scrim at 50 percent, on in the master), the designer's call per photo"
+    options: "Show eyebrow (on), Show wordmark (off), Show body (off), Show script (off), Show CTA (on; E-M17 has a head-only variant), Space below (off; space/40 under the CTA for a photo whose subject sits low), Tall (off; a 504 spacer above the headline, so a hero with the wordmark, script, CTA and Space below reaches the 2026 sends' height, 1,787 at 1200 against 2:9's 1,785; Eddie, 2026-10-23); the scrim is the root's second fill (background/scrim at 50 percent, on in the master), the designer's call per photo"
     slots:
       - { id: M02.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
       - { id: M02.headline, role: headline, case: sentence, typical_chars: 35, flex_verified: ">=4x", max_chars: 140 }
@@ -79,21 +84,23 @@ modules:
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { link: E02.label, image: E05 }
     variants: ["Image=Right", "Image=Left"]
+    note: "M03.name sets in the headline style since 2026-10-23 (Saol Display Regular, 94 in email, as 2:563 sets it); it set in display/s (Light, 106) before, where its budget was proven, so the budget holds (Eddie, Review 1 header match). Since the same day the image is 622 x 812 and the eyebrow is pinned to the image top while the name and link sit centred on it (Name and link, between the eyebrow and a spacer that balances it), as 2:563 (Eddie). At full length the copy outgrows the image and the module grows (1390)."
     slots:
       - { id: M03.eyebrow, role: eyebrow, case: upper, typical_chars: 9, flex_verified: ">=4x", max_chars: 36 }
-      - { id: M03.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: M03.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64, note: "a word longer than about eight letters breaks inside the word at the email headline size in the 338 px name column (Tourmaline, Protection; found 2026-10-23); long stone names go to M06 and E06 or wait for a hand setting" }
   M04:
     name: "Text block"
     family: email
     use_when: "A short header with one italic accent word, body, and an optional CTA (E-M03 to E-M06, E-M11; two columns are M16). Align=Left or Center. Options for HLR templates (2026-10-23): an eyebrow over the header (E-M11), the header alone or the body alone (E-M05)."
     status: built
     node_id: "40:161"
-    variant_ids: ["40:149", "40:155"]
+    variant_ids: ["40:149", "40:155", "296:456", "296:462"]
     canvas: email
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01.label }
     options: "Show CTA (off), Show eyebrow (off), Show headline (on), Show body (on)"
-    variants: ["Align=Left", "Align=Center"]
+    variants: ["Align=Left, Style=Standard", "Align=Center, Style=Standard", "Align=Left, Style=Statement", "Align=Center, Style=Statement"]
+    note: "Style=Statement (Eddie, 2026-10-23, Review 1 statement): the header sets in the quote style (Saol Display Regular 64 at 1.2 in email) on an 860 column and the body on 740, as 2:563 sets “Invoke the magic…”; T01 uses it. Its budgets hold: re-probed alone and together at full length (1296)."
     slots:
       - { id: M04.eyebrow, role: eyebrow, case: upper, typical_chars: 16, flex_verified: ">=4x", max_chars: 64, option: "Show eyebrow, off by default", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
       - { id: M04.headline, role: headline, case: sentence, typical_chars: 35, flex_verified: ">=4x", max_chars: 140 }
@@ -114,14 +121,16 @@ modules:
   M06:
     name: "Product grid"
     family: email
-    use_when: "A heading and E06 product cards two up, one or two rows (E-M15, E-P1). Names from products.json; no prices on the live grid."
+    use_when: "A heading and E06 product cards two up, one or two rows (E-M15, E-P1). Names from products.json; no prices on the live grid. Each row of cards has a row of links under it (the cards' own links off through E06 Show link), so every SHOP NOW in a row sits on one line, as the 2026 sends set them (Eddie, 2026-10-23). Align=Center centres the cards (E06 Align=Center) and the links, as 2:9 does."
     status: built
-    node_id: "41:138"
+    node_id: "262:400"
+    variant_ids: ["41:138", "262:401"]
+    variants: ["Align=Left", "Align=Center"]
     canvas: email
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
-    composed: { card: E06 }
-    repeats: { card: E06, count: 4 }
-    options: "Show heading (on), Second row (on)"
+    composed: { card: E06, link: E02.label }
+    repeats: { card: E06, count: 4, link: 4 }
+    options: "Show heading (on), Second row (on; it shows or hides the second row of cards with its links); the cards' Show link is off in the grid, and their Show label and Show description stay off until a send carries them"
     slots:
       - { id: M06.heading, role: heading, case: sentence, typical_chars: 22, flex_verified: ">=4x", max_chars: 88 }
   M07:
@@ -196,12 +205,14 @@ modules:
     use_when: "A half-bleed image beside a display headline (a numbered label such as 03 / Material, or a line with one accent word), body and the CTA (E-M14, 2:193777). Image=Left or Right; alternate them for a zigzag. Usually on the deep ground. Show CTA off (2026-10-23) for a row the send leaves without a button, as T06 rebuilds 2:913."
     status: built
     node_id: "48:217"
-    variant_ids: ["48:197", "48:207"]
+    variant_ids: ["48:197", "48:207", "265:430", "265:442"]
     canvas: email
+    note: "Size=Tall's gap is space/16 (64) since 2026-10-23, so its copy column is 506 (2:9's More medicine: 502) (Eddie, Review 1 body leading)."
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { cta: E01, image: E05 }
     options: "Show CTA (on)"
-    variants: ["Image=Left", "Image=Right"]
+    variants: ["Image=Left, Size=Standard", "Image=Right, Size=Standard", "Image=Left, Size=Tall", "Image=Right, Size=Tall"]
+    sizes: "Size=Standard: the image E05 Crop=Portrait at 440 x 550. Size=Tall: E05 Crop=Tall at 550 x 777, the 5:7 portrait HLR's 2026 features use (2:9, More medicine; Eddie, 2026-10-23); probed on the real faces the same day, headline and body at 4x and the CTA at 2x, as on Standard"
     slots:
       - { id: M12.headline, role: headline, case: as-is, typical_chars: 10, flex_verified: ">=4x", max_chars: 40, note: "a numbered label (03 / Material) or a sentence-case line with one accent word" }
       - { id: M12.body, role: body, case: sentence, typical_chars: 125, flex_verified: ">=4x", max_chars: 500 }
@@ -348,13 +359,13 @@ modules:
   M23:
     name: "Lockup header"
     family: email
-    use_when: "The lockup header (E-H1, 2:563, 2:809): the lockup is a labelled placeholder until HLR supplies its vector and confirms it in the roster (logo-assets.md rules 1 and 5); until then a send opens with M01."
+    use_when: "The lockup header (E-H1): Marks/Lockup, HIGH LIGHT over an italic rituals, at 375 x 103 (Eddie, 2026-10-23; logo-assets.md rule 1). It opens the sends that open with it: 9 of the 17 on 04 Staging (T01, T03, T04, T05, T06, T09, T10, T11, T17); the rest open with M01."
     status: built
     node_id: "169:354"
     canvas: email
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     stamps_no_text: true
-    reason: "the lockup is a placeholder for a mark; no copy slot"
+    reason: "the lockup is a placed mark (logo-assets.md); no copy slot"
   M24:
     name: "Footer, stacked"
     family: email
@@ -404,7 +415,7 @@ modules:
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     slots:
       - { id: M27.title, role: name, case: as-is, typical_chars: 13, flex_verified: ">=4x", max_chars: 52, note: "the blog name as HLR sets it, The Ritualist; the style sets caps" }
-      - { id: M27.date, role: date, case: as-is, typical_chars: 17, flex_verified: ">=4x", max_chars: 68, note: "the issue month, a merge token" }
+      - { id: M27.date, role: date, case: as-is, typical_chars: 17, flex_verified: ">=4x", max_chars: 68, note: "the issue month, a merge token; it wraps inside the masthead since 2026-10-23 (fill width, auto height), as its 68 characters ran past the 1200 masthead on one line" }
   E01:
     name: "CTA"
     family: element
@@ -422,9 +433,10 @@ modules:
     use_when: "The secondary CTA (book p17): Style=Rule, a caps label over a hairline on the eyebrow style (Regular caps, as HLR SHOP links); Style=Arrow, a serif link with a long arrow on the link style."
     status: built
     node_id: "39:116"
-    variant_ids: ["39:110", "39:113"]
+    variant_ids: ["39:110", "39:113", "306:182", "306:185"]
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
-    variants: ["Style=Rule", "Style=Arrow"]
+    variants: ["Style=Rule, Face=Roman", "Style=Arrow, Face=Roman", "Style=Rule, Face=Italic", "Style=Arrow, Face=Italic"]
+    note: "Face=Italic (Eddie, 2026-10-23, Review 1 italic link): the label in Regular Italic (font/style/link-accent), bound family, size and face, as 2:563’s header link; T01’s M03 link uses it. The italic sets narrower than the roman, so E02.label’s budget holds."
     slots:
       - { id: E02.label, role: label, case: as-is, typical_chars: 4, flex_verified: ">=3x", max_chars: 12, budget_from: "M15" }
   E03:
@@ -453,21 +465,27 @@ modules:
     use_when: "The product image for a mixed grid or an unknown category, with crop variants (Square, Portrait, On ground); E11 to E14 carry the categories (Eddie, 2026-10-23: an element per category); the picture is swapped per product."
     status: built
     node_id: "39:142"
-    variant_ids: ["39:132", "39:135", "39:138"]
+    variant_ids: ["39:132", "39:135", "39:138", "263:180"]
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
-    variants: ["Crop=Square", "Crop=Portrait", "Crop=On ground"]
+    variants: ["Crop=Square", "Crop=Portrait", "Crop=On ground", "Crop=Tall"]
+    tall: "Crop=Tall, 550 x 777 (5:7), for a feature image beside its text in the 2026 sends (2:9); M12 Size=Tall places it (Eddie, 2026-10-23)"
     stamps_no_text: true
     reason: "an image well"
   E06:
     name: "Product card"
     family: element
-    use_when: "Product image (E05 Portrait), name, optional price (Show price; its placeholder is the merge token {{ price }}), text link (E02 Rule); Show struck price adds E09 for a sale grid; the image swaps to the category element (E05, or E11 to E14). Names and prices from products.json only."
+    use_when: "Product image (E05 Portrait), name, optional price (Show price; its placeholder is the merge token {{ price }}), text link (E02 Rule); Show struck price adds E09 for a sale grid; the image swaps to the category element (E05, or E11 to E14). Show label adds the stone or category label above the name and Show description a line or two under it, as the 2026 cards carry them (2:9); Show link (on) hides the card's own link where a grid sets its links in their own row (M06). Align=Left (the original) or Align=Center (every text and the link centred, as 2:9). Names, labels, descriptions and prices from products.json only."
     status: built
-    node_id: "39:143"
+    node_id: "257:176"
+    variant_ids: ["39:143", "257:177"]
+    variants: ["Align=Left", "Align=Center"]
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     composed: { link: E02.label, image: E05 or E11 to E14, struck: E09 }
+    options: "Show price (off), Show struck price (off), Show label (off), Show description (off), Show link (on), Product image (swap); Chat 6b, 2026-10-23 (Eddie)"
     slots:
+      - { id: E06.label, role: label, case: upper, typical_chars: 17, flex_verified: ">=4x", max_chars: 68, option: "Show label, off by default", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · in M06, each card with the option on, alone and with the description" }
       - { id: E06.name, role: name, case: as-is, typical_chars: 16, flex_verified: ">=4x", max_chars: 64 }
+      - { id: E06.description, role: body, case: sentence, typical_chars: 73, flex_verified: ">=4x", max_chars: 292, option: "Show description, off by default", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · in M06, each card with the option on, alone and with the label" }
       - { id: E06.price, role: price, case: as-is, typical_chars: 11, flex_verified: ">=4x", max_chars: 44, option: "Show price, off by default; the placeholder is the merge token {{ price }}", measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email · on an instance with the option on" }
   E07:
     name: "Product card, labelled"
@@ -492,7 +510,7 @@ modules:
   E09:
     name: "Price, struck"
     family: element
-    use_when: "The price and the compare-at price struck through (E-P4, 2:2153), merge tokens only; E06 carries it (Show struck price). The strike takes the muted ink, derived, for Eddie to confirm; HLR strikes it in red, off the palette."
+    use_when: "The price and the compare-at price struck through (E-P4, 2:2153), merge tokens only; E06 carries it (Show struck price). The strike takes the muted ink, derived, for Donnie to confirm; HLR strikes it in red, off the palette."
     status: built
     node_id: "168:180"
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
@@ -518,17 +536,19 @@ modules:
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Crop=Portrait", "Crop=Square", "Crop=On ground"]
     stamps_no_text: true
+    options: "Product (instance swap, Eddie, 2026-10-23): the SKU, one option per cleared photo on the photos page matched to products.json (21 here) and a placeholder for a product with no cleared photo; default The Element Pendant (27:174). The cards (E06, E07) and M03 expose the image, so the picker shows where they are used."
     reason: "an image well"
   E12:
     name: "Product image, bracelet"
     family: element
-    use_when: "products.json category Bracelet (Anklet and Waist Beads take it until HLR says otherwise, derived, for Eddie to confirm). Default Square (the site bracelet packshots run near square); Portrait for a mixed grid; On ground. Every crop shows a cleared packshot by default, the photos page image 27:244 (Eddie, 2026-10-23), until an instance swaps it per product."
+    use_when: "products.json category Bracelet (Anklet and Waist Beads take it until HLR says otherwise, derived, for Donnie to confirm). Default Square (the site bracelet packshots run near square); Portrait for a mixed grid; On ground. Every crop shows a cleared packshot by default, the photos page image 27:244 (Eddie, 2026-10-23), until an instance swaps it per product."
     status: built
     node_id: "168:199"
     variant_ids: ["168:200", "168:203", "168:206"]
     measured_at: "2026-10-23 · 1200 · Saol Display, Saol Standard, Trade Gothic LT Std and Homemade Apple · canvas email"
     variants: ["Crop=Square", "Crop=Portrait", "Crop=On ground"]
     stamps_no_text: true
+    options: "Product (instance swap, Eddie, 2026-10-23): the SKU, one option per cleared photo on the photos page matched to products.json (2 here) and a placeholder for a product with no cleared photo; default The Seeds of Self Trust Bracelet in Sunset Sodalite (27:244). The cards (E06, E07) and M03 expose the image, so the picker shows where they are used."
     reason: "an image well"
   E13:
     name: "Product image, ritual kit"

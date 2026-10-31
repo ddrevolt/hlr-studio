@@ -2,13 +2,13 @@
 
 Pack role `logo_assets`. Lane B, Pack v0, 2026-10-18. Ratified 2026-10-22 by Eddie (Gate 2 package call 11). Gate 1 C3 (Eddie, 2026-10-17) set the roster; HLR confirms it and supplies the missing vectors at Review 1.
 
-Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by PDF page) or the client; [observed] the client's files and live work; [derived] our proposal, binding once Eddie ratifies it.
+Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by PDF page) or the client; [observed] the client's files and live work; [derived] our proposal, binding once Donnie ratifies it (DECISIONS 2026-10-23).
 
 Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandbook/`. Client originals are read-only. Fills were read from the SVG source, geometry compared by hashing path data, and every match below was checked by eye on 2026-10-18.
 
 ## Rules
 
-1. A mark is an asset, never type: placed from its file or its Figma component, never redrawn, re-set in a font or rebuilt from letterforms. A typeset lockup in live work (the email header "HIGH LIGHT" over an italic "rituals", E-H1, 6 of 28 sends) is type, not a mark, and retires. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) engine design-system rule; playbook section 4
+1. A mark is an asset, never type: placed from its file or its Figma component, never redrawn, re-set in a font or rebuilt from letterforms. The email header lockup, HIGH LIGHT over an italic rituals (E-H1), is a mark: HLR’s 2026 sends carry it as outlined vectors (9 of the 17 on 04 Staging, the same 16 paths in each), so the library places it as `Marks/Lockup`, copied from 2:563’s header and never re-set in type (Eddie, 2026-10-23: “use the stacked highlight rituals mark to match the 2026 sends”; “we are cleared to use them”). Until then this rule retired it as a typeset lockup (6 of 28 sends in the pattern review). [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) engine design-system rule; playbook section 4
 2. One Figma component per mark, named `Marks/<Mark>`. Its fill binds to `component.mark.fill`, or `component.mark.fill-on-photo` over photography, so the colourway follows the ground mode. The source file's own fill is ignored. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Gate 3 call 8 a
 3. Strip any full-canvas background rect before import. None of the current SVGs carries one. [observed] 2026-10-18
 4. The star is the one decorative device: at most one per surface. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) from Gate 1 C3
@@ -21,6 +21,7 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 |---|---|---|---|---|
 | Wordmark, one line, HIGH LIGHT RITUALS | Primary | `HLR Logo & Marks/SVG LOGOS/HLR-BLACK LOGO.svg`, `HLR-DARK GREEN-LOGO.svg`, `HLR-WHITE-LOGO.svg` (2024-03-07) | `HLR-Logo_FNL.ai` (2024-01-05, source, not opened); `HLR-Logo_FNL-02.png` (3111x299); `HLR full logo_black.png` and `_white.png` (4688x1576, with clear space, 2024-07-29); `logo.pdf` (Illustrator, 2024-06-21, with clear space); `Archive/HLR-Logo_FNL-02.svg` (2024-10-07) | Ready for Step 4 |
 | Monogram, HLR letters with the tall L | Small mark | `HLR Logo & Marks/HLR-Jewelry Logo_Monogram.svg` (2024-09-11) | `HLR-Jewelry Logo_Monogram.jpg`; the same geometry as `Archive/HLR-Logo_FNL-03.svg` (2024-01-08) | Letters ready for Step 4 |
+| Lockup, HIGH LIGHT over an italic rituals (E-H1) | The email header of the sends that open with it (M23) | none on disk: HLR’s 2026 sends carry it as vectors (2:563 and eight more), copied into `Marks/Lockup` (286:166) | `Archive/HLR-Logo_FNL-01.svg` is a different two-line drawing (HIGH LIGHT / RITUALS in roman caps) | In the library since 2026-10-23 (Eddie) |
 | Monogram with the star above | Social avatar | none | `Logo Marks_Black/HLR_black.png` (966x1214), `Logo Marks_Forest Green/HLR_green.png` (741x930), `Logo Marks_White/HLR_white.png` (966x1214), all 2024-02-19; `Social Avatar.png` (3375x3375, 2024-04-12) | Vector requested from HLR |
 | Star, four long points and four short | The one decorative device | none on disk; HLR's live email file places it as a vector (reference file 2:1085) | `Logo Marks_*/Star_*.png` (507x567, 2024-02-19) | Placed from HLR's live footer vector as Marks/Star and E15 (Eddie, 2026-10-23); HLR confirms the master at Review 1 |
 | Crest | Retired | 2022 only, `Archive/High Light - Crest*` | `Logo Marks_*/Crest_*.png` (1671x1856, 2024-02-19) | Not placed |
@@ -55,7 +56,7 @@ Paths are relative to the brand home `~/Documents/claude-cowork/highlight-brandb
 - The crest PNG is an ornate shield with HIGH LIGHT RITUALS and a star. It retires; the email footers that carry it (2:192035, 2:194481) rebuild without it.
 - The live email system carries the 2022 vector, not the 2024 PNG [observed 2026-10-23]: the reference file places "High Light - Crest - 4" 15 times plus 2 footer slices (the board templates' stacked footer 2:192035, the post-purchase series 2:194032, the flows' social footer 2:194481). It reads HIGH LIGHT with EST. 2020 on the ribbon and an older star; its SVGs (`Archive/High Light - Crest/SVG/`, 2022-12-18) are one drawing (45 paths) in six fills (Onyx, #FAF8F2, Sea Salt, #1F2918, #BAADA3, a gold gradient). The 2024 PNG reads HIGH LIGHT RITUALS, with the current star and a blank ribbon. Eddie kept the crest retired on 2026-10-23 after reviewing the 2022 SVGs (DECISIONS).
 - The shell PNG is a scallop outline with a star inside. It stays on packaging (outside Phase 1). Draft vectors of the shell and its ribs sit in the reference file (Components 2:31994, 2:32016).
-- The stacked lockup is not in C3's roster and has no vector. Question for HLR at Review 1. Default: not used; the one-line wordmark covers every Phase 1 placement.
+- The stacked lockup is not in C3's roster and has no vector. Question for HLR at Review 1. Default: not used; the one-line wordmark covers every Phase 1 placement. (This is the three-line lockup under the star. The header lockup, HIGH LIGHT over an italic rituals, is `Marks/Lockup` since 2026-10-23: rule 1.)
 
 ## The book's system, 2022 [documented]
 

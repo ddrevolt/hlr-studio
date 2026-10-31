@@ -52,6 +52,8 @@
   --hlr-component-price-strike-line: #63615f;
   --hlr-font-family-display: Saol Display;
   --hlr-font-family-title: Saol Standard;
+  --hlr-font-family-price: Saol Standard;
+  --hlr-font-family-link: Saol Standard;
   --hlr-font-family-body: Trade Gothic LT Std;
   --hlr-font-family-script: Homemade Apple;
   --hlr-font-weight-light: 300;
@@ -59,9 +61,12 @@
   --hlr-font-weight-medium: 500;
   --hlr-font-weight-bold: 700;
   --hlr-font-size-label: 12px;
+  --hlr-font-size-eyebrow: 12px;
   --hlr-font-size-body: 14px;
   --hlr-font-size-title: 19px;
+  --hlr-font-size-link: 19px;
   --hlr-font-size-headline: 25px;
+  --hlr-font-size-quote: 25px;
   --hlr-font-size-display-s: 33px;
   --hlr-font-size-display-m: 44px;
   --hlr-font-size-display-l: 59px;

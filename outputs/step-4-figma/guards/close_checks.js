@@ -161,13 +161,14 @@ const checkRoot = (n, moduleName) => {
     if (!ok) fails.push(n.id + ' ' + moduleName + ': fill ' + (id || 'raw ' + f.type));
   }
 };
-let roots = 0;
+let roots = 0, sets = 0;
 if (PAGE === '7:3') {
-  for (const n of page.children) {
-    if (!/^Email\/M\d\d /.test(n.name)) continue;
+  for (const n of page.findAll(x => (x.type === 'COMPONENT_SET' || (x.type === 'COMPONENT' && x.parent.type !== 'COMPONENT_SET')) && /^Email\/M\d\d /.test(x.name))) {
+    sets++;
     const vs = n.type === 'COMPONENT_SET' ? n.children.filter(c => c.type === 'COMPONENT') : [n];
     for (const v of vs) { roots++; checkRoot(v, n.name); }
   }
+  if (sets < SETS) fails.push(page.name + ': ' + sets + ' module masters found, slotmap.yaml holds ' + SETS);
 } else {
   for (const inst of page.findAllWithCriteria({ types: ['INSTANCE'] })) {
     const m = await inst.getMainComponentAsync(); if (!m) continue;
@@ -188,13 +189,14 @@ for (const n of [page, ...page.findAll(() => true)]) {
     for (const l of labels) { let shown = true; for (let a = l; a && a.id !== n.id; a = a.parent) if (a.visible === false) { shown = false; break; } if (shown) fails.push(n.id + ' ' + n.name + ': placeholder label ' + l.id + ' still visible over a cleared photo'); }
   }
 }
-return { page: page.name, roots, paints, photos, fails };
+return { page: page.name, sets, roots, paints, photos, fails };
 }
 async function placeholders(PAGE, SETS) {
-const page = await figma.getNodeByIdAsync('7:3');
+const page = await figma.getNodeByIdAsync(PAGE);
 await figma.setCurrentPageAsync(page);
-const fails = []; let checked = 0;
-for (const mod of page.children.filter(n => /^Email\/M\d\d /.test(n.name))) {
+const fails = []; let checked = 0, sets = 0;
+for (const mod of page.findAll(n => (n.type === 'COMPONENT_SET' || (n.type === 'COMPONENT' && n.parent.type !== 'COMPONENT_SET')) && /^Email\/M\d\d /.test(n.name))) {
+  sets++;
   const vs = mod.type === 'COMPONENT_SET' ? mod.children.filter(c => c.type === 'COMPONENT') : [mod];
   for (const v of vs) for (const inst of v.findAllWithCriteria({ types: ['INSTANCE'] })) {
     const main = await inst.getMainComponentAsync(); if (!main) continue;
@@ -209,7 +211,8 @@ for (const mod of page.children.filter(n => /^Email\/M\d\d /.test(n.name))) {
     }
   }
 }
-return { checked, fails };
+if (sets < SETS) fails.push(page.name + ': ' + sets + ' module masters found, slotmap.yaml holds ' + SETS);
+return { sets, checked, fails };
 }
 const G = { entity, r8, lint, ground, placeholders };
 const RUNS = [['0:1', ['entity']], ['7:2', ['r8', 'entity', 'lint']], ['7:3', ['r8', 'entity', 'lint', 'ground', 'placeholders']], ['7:4', ['r8', 'entity', 'ground']], ['7:5', ['r8', 'entity', 'ground']]];

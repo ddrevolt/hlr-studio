@@ -1,0 +1,200 @@
+{
+ "skill": "brief-intake",
+ "format": 1,
+ "slug": "protection-of-energy",
+ "brand": "High Light Rituals",
+ "source": {
+  "kind": "file",
+  "path": "outputs/step-5-forge/protection-of-energy/brief-protection-of-energy.md",
+  "extracted_with": null,
+  "received_at": "2026-10-23"
+ },
+ "objective": "Send readers to HLR's two protection bracelets, then to The Scorpio Crystal Set, in the first days of Scorpio season.",
+ "audience": "HLR's email subscribers. No segment data is on file.",
+ "message": "Protection of energy: two pieces in black tourmaline, a stone long held as one of protection, worn as a reminder to keep your energy your own.",
+ "offer": {
+  "present": false,
+  "text": null,
+  "code_token": null,
+  "allowed_figures": []
+ },
+ "products": [
+  {
+   "name": "The Classic Bracelet in Black Tourmaline",
+   "sku": "the-classic-bracelet-in-black-tourmaline",
+   "resolved": true,
+   "figures": [],
+   "role": "hero"
+  },
+  {
+   "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+   "sku": "the-seeds-of-protection-bracelet",
+   "resolved": true,
+   "figures": [],
+   "role": "lineup"
+  },
+  {
+   "name": "The Scorpio Crystal Set",
+   "sku": "the-scorpio-crystal-set",
+   "resolved": true,
+   "figures": [],
+   "role": "lineup"
+  }
+ ],
+ "channels": [
+  {
+   "surface": "email",
+   "type": "product_spotlight",
+   "send_date": "2026-10-27",
+   "deliverables": [
+    {
+     "name": "Protection of energy, 1200 master",
+     "module": "M23 Lockup header, M02 Hero, M16 Two-column text, M06 Product grid (one row: the two bracelets), M04 Text block with eyebrow on the deep ground for the Scorpio season block (secondary), M03 Spotlight (Image=Right) for The Scorpio Crystal Set, M09 Footer, on 04 Staging",
+     "notes": "One 1200 email master, sent as image slices with alt text on every slice (asset-types.md, Delivery). The schema's breakpoint list covers web widths only (1440, 390), so the email canvas is named here rather than in breakpoints (engine gap G7). The send date is proposed, not set."
+    }
+   ]
+  }
+ ],
+ "dates": {
+  "launch": null,
+  "in_market_from": "2026-10-27",
+  "in_market_to": "2026-11-21",
+  "review_by": null
+ },
+ "must_say": [],
+ "guidance": {
+  "vocabulary": [
+   "protection",
+   "energy",
+   "black tourmaline",
+   "Scorpio season"
+  ],
+  "tone": [
+   "the voice contract as written",
+   "short lines",
+   "one accent word in a headline"
+  ],
+  "notes": [
+   "No figures: every description is empty and the set lists no contents, so no metal, size, price or stone list.",
+   "Meaning only as tradition or intention (long held as a stone of; worn as a reminder to), never as what a piece does for the reader (ledger HLR-M01, HLR-M05).",
+   "The Scorpio ideas are small rituals the reader can do this week, in plain words; none promises an effect or touches a mental or physical state (HLR-H02).",
+   "No line on how, where or by whom a piece is made (HLR-O01, HLR-S01).",
+   "The two bracelets lead because Eddie names them HLR's top two protection sellers; the copy does not say so (HLR-T01, no sales source on file)."
+  ]
+ },
+ "never_say": {
+  "brief": [
+   "\\bbest[- ]?sell(er|ers|ing)\\b|\\b(customer|fan|cult) favou?rites?\\b"
+  ],
+  "pack": [
+   "\\u2014",
+   "\\bhightlight",
+   "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+   "\\bcur(e|es|ed|ing)\\b",
+   "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+   "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+  ],
+  "union": [
+   "\\bbest[- ]?sell(er|ers|ing)\\b|\\b(customer|fan|cult) favou?rites?\\b",
+   "\\u2014",
+   "\\bhightlight",
+   "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+   "\\bcur(e|es|ed|ing)\\b",
+   "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+   "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+  ]
+ },
+ "references": {
+  "visual": [
+   "originals page 267:7109 (image 4f7e9607), HLR's own photo of crystals and their shadows with black tourmaline, from the PROTECT & GROUND row of the 2026 Welcome send (hero)",
+   "originals page 228:3425 (image 50a2b86c), HLR's packshot of The Classic Bracelet in Black Tourmaline from its September 2026 GET GROUNDED send (originals 228:3377) (spotlight 1)",
+   "no cleared photo of The Seeds of Protection Bracelet in Black Tourmaline in the library; the bracelet placeholder until Eddie pastes the packshot (spotlight 2)",
+   "photos page 27:289, Zodiac Set, Scorpio (The Scorpio Crystal Set; closing spotlight)",
+   "Eddie cleared the site's product images, the original emails and the Zodiac Sets (DECISIONS 2026-10-23)"
+  ],
+  "copy": [
+   "HLR's 2025 Scorpio Season send (reference 2:5011), for the season's themes only",
+   "HLR's 2026 line for the Classic, Grounding meets protection (originals 228:3415), for cadence only",
+   "brand-pack/exemplars.json, email lines, for cadence only"
+  ]
+ },
+ "success_metric": "Clicks to the two bracelet pages and to The Scorpio Crystal Set's page.",
+ "gaps": [
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "The send date is proposed (Tue 2026-10-27, inside the first week of Scorpio season); Eddie or Donnie sets the real one.",
+   "field": "channels[0].send_date"
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "No launch date: the three products are already on sale.",
+   "field": "dates.launch"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "No cleared photo of The Seeds of Protection Bracelet in Black Tourmaline is in the library, and this session cannot reach the site's image (the proxy refuses highlightrituals.com and cdn.shopify.com); its card carries the bracelet placeholder until Eddie pastes the packshot.",
+   "field": "products[1]"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "The Scorpio Crystal Set lists no contents in products.json; HLR's 2025 social frames name five stones, which are not product data, so the copy names none.",
+   "field": "products[2]"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Product descriptions are empty until HLR's Shopify export lands (Brand Review v2 Q5): no metal, size, price or meaning detail beyond the stone each name carries.",
+   "field": "products"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Best-seller standing: Eddie's statement; no sales export is on file, so no popularity line (HLR-T01, conditional) until Donnie confirms it with its source.",
+   "field": "message"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Audience segments: none on file; asked at Review 1 (Gate 2 package call 17).",
+   "field": "audience"
+  },
+  {
+   "owner": "data",
+   "severity": "note",
+   "text": "Success baseline: no click history on file; HLR, Review 1.",
+   "field": "success_metric"
+  },
+  {
+   "owner": "legal",
+   "severity": "note",
+   "text": "Protection lines follow the ledger's HLR-M framing (tradition or intention) and the footer carries the disclaimer; HLR's C2 ruling may change the posture.",
+   "field": "message"
+  },
+  {
+   "owner": "you",
+   "severity": "note",
+   "text": "The hero photo and the Classic packshot come from HLR's own 2026 sends on the originals page, under Eddie's clearance of the original emails and the site's product images; Donnie confirms their use in a send.",
+   "field": "references.visual"
+  }
+ ],
+ "provenance": {
+  "brand": "High Light Rituals",
+  "brand_context": "brand-pack/brand-context.md",
+  "generated_at": "2026-10-23",
+  "route_axes": "brand-pack/route-axes.json (ratified)",
+  "cost": {
+   "model": "claude-opus-5-5",
+   "input_tokens": null,
+   "output_tokens": null,
+   "media_calls": null,
+   "measured_by": "not measured"
+  }
+ },
+ "notes": [
+  "Written by Claude from Eddie's request of 2026-10-23; the pack read is the brand home's brand-pack, staged to the session."
+ ]
+}

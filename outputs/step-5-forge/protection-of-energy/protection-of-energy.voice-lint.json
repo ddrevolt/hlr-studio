@@ -1,0 +1,698 @@
+{
+ "verdict": "WARN",
+ "advisory": true,
+ "note": "Advisory. This lint never fails a slate: likelihoods and flags inform a human pick and the selection tiebreak; they do not block.",
+ "warns": [
+  "model: no voice_model role resolved (null in the file map), so the ENGINE DEFAULT weights ran: the AI-register tells only, fitted to no brand's labels and carrying no brand's taste. Its likelihood is no tiebreak and nothing here measures this brand's voice. Fit the pack's model with --calibration and name it in the File map.",
+  "model: the voice model is WEAK (leave-one-out accuracy not measured against a majority-class baseline of unknown; the bar is 65%). Likelihoods are a faint signal. Read the AI-register flags; no taste is measured until the brand fits its own model."
+ ],
+ "notes": [],
+ "lines": [
+  {
+   "where": "gates.hero[0]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Keep your energy your own",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[1]",
+   "group": "hero",
+   "role": "headline",
+   "text": "A stone long held for protection",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[2]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Black tourmaline, worn close",
+   "words": 4,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[3]",
+   "group": "hero",
+   "role": "headline",
+   "text": "Whose energy are you carrying?",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.hero[4]",
+   "group": "hero",
+   "role": "headline",
+   "text": "A stone for a deeper season",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[0]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Scorpio season is here. Keep your energy close.",
+   "words": 8,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[1]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Keep your energy your own",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[2]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Whose energy are you carrying?",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[3]",
+   "group": "subject",
+   "role": "subject",
+   "text": "Two bracelets in black tourmaline",
+   "words": 5,
+   "concrete_nouns": 2,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.subject[4]",
+   "group": "subject",
+   "role": "subject",
+   "text": "A stone long held for protection",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[0]",
+   "group": "cta",
+   "role": "cta",
+   "text": "SHOP THE BRACELETS",
+   "words": 3,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[1]",
+   "group": "cta",
+   "role": "cta",
+   "text": "KEEP IT CLOSE",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[2]",
+   "group": "cta",
+   "role": "cta",
+   "text": "FIND YOURS",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[3]",
+   "group": "cta",
+   "role": "cta",
+   "text": "YOURS TO KEEP",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[4]",
+   "group": "cta",
+   "role": "cta",
+   "text": "SHOP FOR THE SEASON",
+   "words": 4,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "gates.cta[5]",
+   "group": "cta",
+   "role": "cta",
+   "text": "MEET BLACK TOURMALINE",
+   "words": 3,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[0].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "PROTECTION",
+   "words": 1,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[0].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "Keep your energy your own",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[1].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "ON PROTECTION",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[1].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "A stone long held for protection",
+   "words": 6,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[2].eyebrow",
+   "group": "M02",
+   "role": "eyebrow",
+   "text": "BLACK TOURMALINE",
+   "words": 2,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M02[2].headline",
+   "group": "M02",
+   "role": "headline",
+   "text": "Whose energy are you carrying?",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[0].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "The stone they share",
+   "words": 4,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[0].body",
+   "group": "M16",
+   "role": "body",
+   "text": "Black tourmaline has long been held as a stone of protection, and both of these bracelets carry it: a quiet reminder, right at your wrist, to leave the rest at the door.",
+   "words": 32,
+   "concrete_nouns": 5,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[1].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "Why black tourmaline",
+   "words": 3,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[1].body",
+   "group": "M16",
+   "role": "body",
+   "text": "Black tourmaline has long been kept close as a stone of protection. Both bracelets below carry it, so the reminder goes wherever you do, and the day stays outside.",
+   "words": 29,
+   "concrete_nouns": 3,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[2].headline",
+   "group": "M16",
+   "role": "headline",
+   "text": "The reminder at your wrist",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M16[2].body",
+   "group": "M16",
+   "role": "body",
+   "text": "Some days ask more of you than others. Black tourmaline, long held as a stone of protection, sits in both bracelets below: something small and dark to touch when you need to remember what is yours.",
+   "words": 36,
+   "concrete_nouns": 3,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[0].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "Wear one, or both",
+   "words": 4,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[1].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "Two ways to wear it",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M06[2].heading",
+   "group": "M06",
+   "role": "headline",
+   "text": "Both in black tourmaline",
+   "words": 4,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[0].eyebrow",
+   "group": "M04",
+   "role": "eyebrow",
+   "text": "SCORPIO SEASON",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[0].headline",
+   "group": "M04",
+   "role": "headline",
+   "text": "Scorpio season is here",
+   "words": 4,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[0].body",
+   "group": "M04",
+   "role": "body",
+   "text": "Scorpio season has long been read as a time for depth and turning inward, and a few small rituals make room for it:\n\nAn evening with no plans, a candle lit, your phone in another room.\n\nOne thing you are ready to let go of, written down, then closed in a notebook.\n\nBlack tourmaline kept close, on your wrist or your altar, as a reminder of what is yours to tend.",
+   "words": 71,
+   "concrete_nouns": 4,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[1].eyebrow",
+   "group": "M04",
+   "role": "eyebrow",
+   "text": "SCORPIO SEASON",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[1].headline",
+   "group": "M04",
+   "role": "headline",
+   "text": "Into the deep",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[1].body",
+   "group": "M04",
+   "role": "body",
+   "text": "Scorpio season has long been read as a time for depth and turning inward. Give it one evening with no plans, write down one thing you are ready to let go of, and keep black tourmaline close as a reminder of what is yours to tend.",
+   "words": 46,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[2].eyebrow",
+   "group": "M04",
+   "role": "eyebrow",
+   "text": "A FEW RITUALS",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[2].headline",
+   "group": "M04",
+   "role": "headline",
+   "text": "For a season of depth",
+   "words": 5,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M04[2].body",
+   "group": "M04",
+   "role": "body",
+   "text": "We have just entered Scorpio season, long read as a time for turning inward. Light a candle on an evening with no plans. Write down what you are ready to let go of, and close the notebook on it. Keep black tourmaline close, as a reminder of what is yours.",
+   "words": 50,
+   "concrete_nouns": 2,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M03[0].eyebrow",
+   "group": "M03",
+   "role": "eyebrow",
+   "text": "FOR SCORPIO",
+   "words": 2,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M03[1].eyebrow",
+   "group": "M03",
+   "role": "eyebrow",
+   "text": "FEATURING",
+   "words": 1,
+   "concrete_nouns": 0,
+   "likelihood": 0.31,
+   "flags": [
+    {
+     "feature": "participial_opener",
+     "present": true,
+     "text": "AI-register tell: present participial opener",
+     "rule": true,
+     "contribution": null,
+     "calibration": null
+    }
+   ],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "modules.M03[2].eyebrow",
+   "group": "M03",
+   "role": "eyebrow",
+   "text": "FOR THE SEASON",
+   "words": 3,
+   "concrete_nouns": 0,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[0]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "Two bracelets in black tourmaline, and a few rituals for the season.",
+   "words": 12,
+   "concrete_nouns": 2,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[1]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "Black tourmaline, long held as a stone of protection, and a few ways into Scorpio season.",
+   "words": 16,
+   "concrete_nouns": 2,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  },
+  {
+   "where": "envelope.preheader[2]",
+   "group": "preheader",
+   "role": "preheader",
+   "text": "Two ways to wear black tourmaline, and three small rituals for a deeper season.",
+   "words": 14,
+   "concrete_nouns": 1,
+   "likelihood": 0.5,
+   "flags": [],
+   "in_role_band": null,
+   "band_source": null
+  }
+ ],
+ "distribution": {
+  "n": 46,
+  "mean_likelihood": 0.496,
+  "median_likelihood": 0.5,
+  "share_over_half": 0.978,
+  "bands": {
+   "under_0_35": 1,
+   "from_0_35_to_0_5": 0,
+   "from_0_5_to_0_65": 45,
+   "over_0_65": 0
+  },
+  "by_group": {
+   "hero": {
+    "n": 5,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "subject": {
+    "n": 5,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "cta": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M02": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M16": {
+    "n": 6,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M06": {
+    "n": 3,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M04": {
+    "n": 9,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "M03": {
+    "n": 3,
+    "mean_likelihood": 0.437,
+    "share_over_half": 0.667,
+    "questions": 0,
+    "bare_exclamations": 0
+   },
+   "preheader": {
+    "n": 3,
+    "mean_likelihood": 0.5,
+    "share_over_half": 1,
+    "questions": 0,
+    "bare_exclamations": 0
+   }
+  }
+ },
+ "skipped": [
+  {
+   "where": "modules.M03[0].name",
+   "role": "name",
+   "reason": "boilerplate or data slot; not a voice surface"
+  },
+  {
+   "where": "modules.M03[1].name",
+   "role": "name",
+   "reason": "boilerplate or data slot; not a voice surface"
+  },
+  {
+   "where": "modules.M03[2].name",
+   "role": "name",
+   "reason": "boilerplate or data slot; not a voice surface"
+  }
+ ],
+ "checked": {
+  "source": "protection-of-energy.slates.json",
+  "slate_sha256": "52df98f39cb7b627cf9f432ad1a74e7e21ce054392bdbadc691963c75ad4da3f",
+  "lines_scored": 46,
+  "lines_skipped": 3,
+  "brand_context": "/home/claude/hlr/brand-pack/brand-context.md",
+  "pack_resolved_by": "--pack",
+  "voice_model": {
+   "source": "/root/.claude/plugins/synced/fee23b9d-02ce-46f2-8d0d-5d57b8d57b3b_bee9053b-6ede-4ee2-8faa-b10c7cb4e847/hlr-studio-engine/lib/voice-model.default.json",
+   "version": "default-0.5.1",
+   "status": "engine default (hand-set, uncalibrated)",
+   "sha256": "a22eb2a1b97f92f0f33e2c56720e18724c1b21fdaf1f2886411d50c530a1b6ef",
+   "weak": true,
+   "loo_accuracy": null,
+   "loo_auc": null,
+   "base_rate": null,
+   "majority_class_accuracy": null,
+   "fitted_on": null
+  },
+  "lexicon": {
+   "source": "/home/claude/hlr/brand-pack/concrete-lexicon.json",
+   "status": "ratified 2026-10-22 by Eddie, Gate 2 package call 14",
+   "counts": {
+    "product": 58,
+    "scene": 42,
+    "product_families": 15,
+    "product_names": 182
+   }
+  },
+  "seam_map": "resolved (module fields carry their slot roles)"
+ }
+}

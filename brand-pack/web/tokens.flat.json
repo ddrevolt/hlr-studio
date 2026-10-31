@@ -377,6 +377,16 @@
   "provenance": "documented",
   "type": "fontFamily"
  },
+ "font.family.price": {
+  "value": "Saol Standard",
+  "provenance": "documented",
+  "type": "fontFamily"
+ },
+ "font.family.link": {
+  "value": "Saol Standard",
+  "provenance": "documented",
+  "type": "fontFamily"
+ },
  "font.family.body": {
   "value": "Trade Gothic LT Std",
   "provenance": "documented",
@@ -405,6 +415,11 @@
  "font.style.headline-accent": {
   "value": "Regular Italic",
   "provenance": "documented",
+  "type": null
+ },
+ "font.style.link-accent": {
+  "value": "Regular Italic",
+  "provenance": "observed",
   "type": null
  },
  "font.style.quote": {
@@ -484,7 +499,17 @@
   "canvas": {
    "web": "12px",
    "social": "32px",
-   "email": "35px"
+   "email": "26px"
+  }
+ },
+ "font.size.eyebrow": {
+  "value": "12px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "12px",
+   "social": "32px",
+   "email": "30px"
   }
  },
  "font.size.body": {
@@ -494,7 +519,7 @@
   "canvas": {
    "web": "14px",
    "social": "40px",
-   "email": "45px"
+   "email": "34px"
   }
  },
  "font.size.title": {
@@ -504,7 +529,17 @@
   "canvas": {
    "web": "19px",
    "social": "54px",
-   "email": "60px"
+   "email": "35px"
+  }
+ },
+ "font.size.link": {
+  "value": "19px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "19px",
+   "social": "54px",
+   "email": "46px"
   }
  },
  "font.size.headline": {
@@ -514,7 +549,17 @@
   "canvas": {
    "web": "25px",
    "social": "72px",
-   "email": "80px"
+   "email": "94px"
+  }
+ },
+ "font.size.quote": {
+  "value": "25px",
+  "provenance": "documented",
+  "type": "dimension",
+  "canvas": {
+   "web": "25px",
+   "social": "72px",
+   "email": "64px"
   }
  },
  "font.size.display-s": {
@@ -534,7 +579,7 @@
   "canvas": {
    "web": "44px",
    "social": "127px",
-   "email": "142px"
+   "email": "154px"
   }
  },
  "font.size.display-l": {

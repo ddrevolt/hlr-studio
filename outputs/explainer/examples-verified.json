@@ -1,0 +1,75 @@
+{
+ "_role": "explainer example verdicts",
+ "_note": "Written by verify_examples.js with the engine's lib/claims.js; matching is lexical only, as the module says.",
+ "engine": "hlr-studio-engine 0.5.3",
+ "ledger": "hlr-ledger-0.2.0 (test-seed, 2026-10-21; Gate 2 rulings applied)",
+ "paraphrase_risk": [
+  "HLR-H01",
+  "HLR-H02",
+  "HLR-F01",
+  "HLR-O01",
+  "HLR-K01",
+  "HLR-M01",
+  "HLR-M02",
+  "HLR-M03",
+  "HLR-M04",
+  "HLR-M05"
+ ],
+ "run_at": "2026-10-23T10:59:10Z",
+ "examples": [
+  {
+   "id": "treats-anxiety",
+   "text": "This crystal treats anxiety.",
+   "verdict": "blocked",
+   "ledger_hits": [
+    {
+     "id": "HLR-H02",
+     "severity": "needs_legal",
+     "title": "Mental and emotional health",
+     "matched": "anxiety"
+    }
+   ],
+   "pattern_hits": [
+    {
+     "index": 5,
+     "matched": "treats anxiety"
+    }
+   ]
+  },
+  {
+   "id": "handmade",
+   "text": "Handmade in our studio, each one of a kind.",
+   "verdict": "blocked",
+   "ledger_hits": [
+    {
+     "id": "HLR-O01",
+     "severity": "needs_legal",
+     "title": "Origin, place of making, handmade and one of a kind",
+     "matched": "Handmade"
+    }
+   ],
+   "pattern_hits": []
+  },
+  {
+   "id": "one-at-a-time",
+   "text": "Each pendant is made one at a time.",
+   "verdict": "clear",
+   "ledger_hits": [],
+   "pattern_hits": []
+  },
+  {
+   "id": "stone-of",
+   "text": "Long held as a stone of protection.",
+   "verdict": "clear",
+   "ledger_hits": [],
+   "pattern_hits": []
+  },
+  {
+   "id": "headline",
+   "text": "Made after you choose it",
+   "verdict": "clear",
+   "ledger_hits": [],
+   "pattern_hits": []
+  }
+ ]
+}

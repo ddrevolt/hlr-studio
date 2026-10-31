@@ -1,0 +1,63 @@
+{
+ "canvas": "email",
+ "element": false,
+ "section": false,
+ "ignored_set_border": 0,
+ "root": "317:2214",
+ "root_type": "FRAME",
+ "root_canvas": "email",
+ "variants": 0,
+ "checked": 25,
+ "total": 25,
+ "complete": true,
+ "repeated": [],
+ "texts": 21,
+ "strokes": 4,
+ "on_canvas": 25,
+ "findings": [],
+ "warnings": [
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2215",
+   "message": "Email/M23 Lockup header 317:2215 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2235",
+   "message": "Email/M02 Hero 317:2235 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2249",
+   "message": "Email/M16 Two-column text 317:2249 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "318:2375",
+   "message": "Email/M06 Product grid 318:2375 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2281",
+   "message": "Email/M04 Text block 317:2281 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2287",
+   "message": "Email/M03 Spotlight 317:2287 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  },
+  {
+   "rule": "element-sets-canvas",
+   "id": "317:2299",
+   "message": "Email/M09 Footer 317:2299 (INSTANCE) sets the canvas \"email\" itself, the same as the master around it. An element stays on Auto, so it takes the canvas of whichever master it sits in; clear its explicit layout mode unless it is a nested master."
+  }
+ ],
+ "plan": "/home/claude/hlr/checks/pack/figma-variable-plan.json",
+ "config": "/home/claude/hlr/checks/pack/figma.yaml",
+ "inventories": [
+  "canvas-inv-1.json"
+ ],
+ "checked_at": [
+  "2026-10-23T18:49:06.643Z"
+ ]
+}

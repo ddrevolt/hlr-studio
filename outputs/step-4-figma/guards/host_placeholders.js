@@ -2,11 +2,17 @@
 // "Product name" after the element E07 took "Short name"). Read-only; run with use_figma on 02 Modules (7:3).
 // For every element instance placed inside an email module master, every stamped text that is still the element's
 // own slot (stamp E##.role) must read what the element's main component reads: a master never keeps an old
-// placeholder. A host that re-stamps a slot (M11.cta, M12.cta) is outside this check. Returns the mismatches; [] passes.
-const page = await figma.getNodeByIdAsync('7:3');
+// placeholder. A host that re-stamps a slot (M11.cta, M12.cta) is outside this check. Chat 6b, 2026-10-23: it finds the
+// module masters anywhere on the page, inside the registry's sections, and fails when it finds fewer than SETS, the
+// module entries slotmap.yaml holds, so a page reorganised into sections cannot pass it empty (REVIEW.md R20).
+// Returns the mismatches; [] passes.
+const PAGE = '7:3';
+const SETS = 27;
+const page = await figma.getNodeByIdAsync(PAGE);
 await figma.setCurrentPageAsync(page);
-const fails = []; let checked = 0;
-for (const mod of page.children.filter(n => /^Email\/M\d\d /.test(n.name))) {
+const fails = []; let checked = 0, sets = 0;
+for (const mod of page.findAll(n => (n.type === 'COMPONENT_SET' || (n.type === 'COMPONENT' && n.parent.type !== 'COMPONENT_SET')) && /^Email\/M\d\d /.test(n.name))) {
+  sets++;
   const vs = mod.type === 'COMPONENT_SET' ? mod.children.filter(c => c.type === 'COMPONENT') : [mod];
   for (const v of vs) for (const inst of v.findAllWithCriteria({ types: ['INSTANCE'] })) {
     const main = await inst.getMainComponentAsync(); if (!main) continue;
@@ -21,4 +27,5 @@ for (const mod of page.children.filter(n => /^Email\/M\d\d /.test(n.name))) {
     }
   }
 }
-return { checked, fails };
+if (sets < SETS) fails.push(page.name + ': ' + sets + ' module masters found, slotmap.yaml holds ' + SETS);
+return { sets, checked, fails };

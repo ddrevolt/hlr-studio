@@ -1,4 +1,4 @@
-# Mutation tests for preflight.md's R14 guard, tag scan and pointer check (lane E's round 3, 2026-10-23).
+# Mutation tests for preflight.md's R14 guard, tag scan and pointer check (lane E's round 3, 2026-10-23; Chat 6b, 2026-10-23: the Donnie cases).
 # Usage: python3 mutation_tests.py "$HB" "$ENG". Reads the three guards from preflight.md section 6, runs each on
 # the pack as it is (must pass) and on mutated copies (each must fail with its own line). Writes nothing in $HB.
 import os, re, shutil, subprocess, sys, tempfile
@@ -30,8 +30,8 @@ def edit(path, fn):
         open(p, "w", encoding="utf-8").write(u)
     return f
 BC, FY, TM, DEC = "brand-pack/brand-context.md", "brand-pack/figma.yaml", "brand-pack/token-model.md", "DECISIONS.md"
-def owner(new):  # the first gap row owned by Eddie, given another owner
-    return edit(BC, lambda t: re.sub(r"^(\| `[a-z_]+` \| role \| [^|]* \| )Eddie( \|)", lambda m: m.group(1) + new + m.group(2), t, count=1, flags=re.M))
+def owner(new):  # the first gap row owned by Eddie or Donnie, given another owner
+    return edit(BC, lambda t: re.sub(r"^(\| `[a-z_]+` \| role \| [^|]* \| )(?:Eddie|Donnie)( \|)", lambda m: m.group(1) + new + m.group(2), t, count=1, flags=re.M))
 BOARDS = re.compile(r"^(\s*)boards:\s*\{(.*)\}(.*)$", re.M)
 def block(built_all):
     def fn(t):
@@ -55,6 +55,9 @@ cases = [
     ("pointer", "a tag citing a call no ruling names", edit(BC, lambda t: TAG.sub(lambda m: "[documented, DECISIONS " + m.group(1) + ", lane C call 99 a]", t, count=1))),
     ("pointer", "a tag citing a lane line by its words", edit(BC, lambda t: TAG.sub("[documented, DECISIONS 2026-10-18, the ledger seed line]", t, count=1))),
     ("pointer", "a date whose section holds only a lane default", lambda hb: (edit(DEC, lambda t: re.sub(r"^(## \d{4}-\d{2}-\d{2}\n)", "## 2031-01-01\n\n- Lane C's default until Eddie rules: X. Reason: lane C. Replaced: nothing.\n\n\\1", t, count=1, flags=re.M))(hb), edit(BC, lambda t: TAG.sub("[documented, DECISIONS 2031-01-01]", t, count=1))(hb))),
+    ("pointer", "a Donnie note citing a date DECISIONS lacks (BR2-03)", edit("brand-pack/tokens.json", lambda t: re.sub(r"\(ratified \d{4}-\d{2}-\d{2} by Eddie, (Gate 2 package call \d+)\)", r"(ratified 2026-11-02 by Donnie, \1)", t, count=1))),
+    ("pointer", "a Donnie note pointing at a day that holds no ruling of hers (BR2-03)", edit("brand-pack/tokens.json", lambda t: re.sub(r"\(ratified (2026-10-22) by Eddie, (Gate 2 package call \d+)\)", r"(ratified \1 by Donnie, \2)", t, count=1))),
+    ("r14", "a gap row owned by \"Donnie or HLR\"", owner("Donnie or HLR")),
     ("pointer", "a ratification note naming a call the ruling lacks", edit("brand-pack/tokens.json", lambda t: re.sub(r"by Eddie, Gate 2 package call \d+\)", "by Eddie, Gate 2 package call 99)", t, count=1))),
 ]
 bad = 0

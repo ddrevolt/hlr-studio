@@ -128,7 +128,7 @@ const hdr = sm.findAll(n => n.type === 'TEXT' && n.characters.startsWith('Rules 
 if (!hdr.length || fnv(hdr[0].characters) !== EXPECT.header) fails.push('Strictness map: header differs from strictness-map.md');
 const clo = sm.children.filter(c => c.type === 'TEXT');
 if (!clo.length || fnv(clo[clo.length - 1].characters) !== EXPECT.closing) fails.push('Strictness map: closing note differs from strictness-map.md');
-if (!sm.findAll(n => n.type === 'TEXT' && n.characters === '[documented] Adopted at Gate 4; ratified ' + EXPECT.status.ratified + ' by Eddie').length) fails.push('Strictness map: the status flag does not say adopted at Gate 4 and ratified ' + EXPECT.status.ratified + ' by Eddie');
+if (!sm.findAll(n => n.type === 'TEXT' && n.characters === '[documented] Adopted at Gate 4; ratified ' + EXPECT.status.ratified + ' by ' + (EXPECT.status.by || 'Eddie')).length) fails.push('Strictness map: the status flag does not say adopted at Gate 4 and ratified ' + EXPECT.status.ratified + ' by ' + (EXPECT.status.by || 'Eddie'));
 const sn = sm.findAll(n => n.type === 'TEXT' && n.parent && n.parent.name === 'Status flag' && !n.characters.startsWith('['));
 const adopted = (EXPECT.status.drafted.match(/on (\d{4}-\d\d-\d\d)/) || [])[1], snt = sn.length === 1 ? sn[0].characters.split(String.fromCharCode(0x2019)).join("'") : '';
 if (!(snt.includes(EXPECT.status.drafted) && (snt.includes('ratified ' + EXPECT.status.ratified) || snt.includes('ratified on ' + EXPECT.status.ratified) || (adopted === EXPECT.status.ratified && snt.includes('ratified the same day')))))

@@ -11,7 +11,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 ### 1. Grounds and pairings
 
 - Default: Alabaster with Onyx ink. [documented p19] Gate 1 C4.
-- Email page: white with Onyx ink; grey (`neutral-100`) or Alabaster bands. [observed] 96 of 109 send frames; Gate 1 C4.
+- Email page: white with Onyx ink; grey (`neutral-100`) or Alabaster bands. [observed] 96 of 109 send frames; Gate 1 C4. Since 2026-10-23 the email ink is Forest (copy, links, CTAs), as HLR’s 2026 sends designed at 1200 set it [observed] (ratified 2026-10-23 by Eddie, Review 1 text ink).
 - Alternate grounds: Forest and Onyx with Alabaster ink; Fawn with Onyx ink. Fawn is an accent ink on Forest and Onyx only. [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) Gate 1 C4; Gate 4 named the modes warm (Fawn), deep (Forest) and night (Onyx), ratified 2026-10-23 by Eddie (decision sheet).
 - Photography: white ink where the image is calm and dark enough under the copy, judged by eye on the real image at review; the 50 percent overlay is optional. [observed] white on photography in every channel; no pair test (Eddie, 2026-10-18)
 - Where each is used today [observed]: the email library cycles an Alabaster, Fawn and Forest trio; 2026 sends sit on white; stories alternate Alabaster and Onyx; the grid is photo-first.
@@ -22,21 +22,21 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (cited by 
 | Role | Face and style | Case | Leading | Where the type is the layout |
 |---|---|---|---|---|
 | display (s to xl) | Saol Display Light [documented p16, headline one] | sentence [documented p17], on every channel; caps headlines retire (Gate 2 call 2 a) | 1.0 [documented p17, 80/80] | text tiles, mantras, story text frames [observed] |
-| headline | Saol Display Regular [documented p16, headline two] | sentence | 1.1 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
+| headline | Saol Display Regular [documented p16, headline two] | sentence | 1.1 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11); email 1.0 [observed] (ratified 2026-10-23 by Eddie, Review 1 header match) | |
 | accent word | the italic of the line's face: Light Italic or Regular Italic, one word per line [observed every channel; not in the book] | as the line | as the line | |
-| quote | Saol Display Light [documented: p18 against p16, see `token-model.md`] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | sentence | 1.29 [documented p18, 35/45] | quote modules and tiles |
-| title, product name | Saol Standard Regular [documented p16] | sentence | 1.2 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
+| quote | Saol Display Light [documented: p18 against p16, see `token-model.md`] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | sentence | 1.29 [documented p18, 35/45]; email Saol Display Regular at 64, 1.2 [observed] (ratified 2026-10-23 by Eddie, Review 1 statement) | quote modules and tiles; in email, statements (M04 Style=Statement) |
+| title, product name | Saol Standard Regular [documented p16]; email Saol Display Regular [observed] (ratified 2026-10-23 by Eddie, Review 1 product names) | sentence | 1.2 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
 | price, numerals | Saol Standard Medium [documented p16] | | 1.2 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
-| link (secondary CTA) | Saol Standard Regular with a trailing rule [documented p17] | sentence | 1.44 [documented p17, 16/23] | |
-| body | Trade Gothic Regular [documented p18; Gate 1 C5 for every channel] | sentence | 1.47 [documented p18, 15/22] | long-copy slides, letters |
-| eyebrow | Trade Gothic Regular, tracked 0.2em [documented p17] | caps | 1.4 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
+| link (secondary CTA) | Saol Standard Regular with a trailing rule [documented p17]; email Saol Display [observed] (ratified 2026-10-23 by Eddie, Review 1 header match) at 46 [observed] (ratified 2026-10-23 by Eddie, Review 1 email scale); an italic option, Regular Italic [observed] (ratified 2026-10-23 by Eddie, Review 1 italic link) | sentence | 1.44 [documented p17, 16/23] | |
+| body | Trade Gothic Regular [documented p18; Gate 1 C5 for every channel] | sentence | 1.47 [documented p18, 15/22]; email 1.40 [observed] (ratified 2026-10-23 by Eddie, Review 1 body leading) | long-copy slides, letters |
+| eyebrow | Trade Gothic Regular, tracked 0.2em [documented p17]; email Bold at 30, tracked 0.25em [observed] (ratified 2026-10-23 by Eddie, Review 1 header match) | caps | 1.4 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
 | label, small headline | Trade Gothic Bold, tracked 0.2em [documented p16, p17] | caps | 1.4 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
 | CTA label | Trade Gothic Bold, tracked 0.2em, in the outline box [documented p18; weight observed; Gate 1 C6] | caps | 1.4 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
 | fine print, handle | Trade Gothic Regular [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | as written | 1.4 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11) | |
 | script | Homemade Apple, one short line per asset, social and email only [observed; Gate 1 C5] | as written | 1.4 [observed, 50/70] | |
 
 - Scale [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 11): one rendered ramp, a perfect fourth (1.333) above the body floor, with a value per canvas mode: `web`, `social` (1080 canvases), `email` (1200 masters) (Gate 2 question 1). A text style is set once and the master's canvas mode sets its size. Sizes in `token-model.md` section 3.
-- Floors: web and IAB display take body 14 and small 12 CSS px, no text under 12 px rendered (Gate 2 call 5 a). 1080 canvases take body 40 and small 32 [documented: 14 and 11 rendered px on a 375 phone] (ratified 2026-10-22 by Eddie, Gate 2 package call 11), and 1200 email masters body 45 and small 35 (Gate 1 C8). Floors bind anything a reader must read: offers, terms, claims, CTAs, names, the handle.
+- Floors: web and IAB display take body 14 and small 12 CSS px, no text under 12 px rendered (Gate 2 call 5 a). 1080 canvases take body 40 and small 32 [documented: 14 and 11 rendered px on a 375 phone] (ratified 2026-10-22 by Eddie, Gate 2 package call 11), and 1200 email masters body 43 and small 24, the sizes HLR's 2026 sends set at 1200 (Eddie, 2026-10-23, Review 1 type option 1; before, 45 and 35 under Gate 1 C8). Floors bind anything a reader must read: offers, terms, claims, CTAs, names, the handle.
 
 ### 3. Signature devices
 

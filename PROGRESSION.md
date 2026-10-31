@@ -1,6 +1,6 @@
 # HLR Phase 1: progression
 
-High Light Rituals (HLR), a client brand. Phase 1: 4 weeks from Fri 2026-10-16. Live reviews: {{review-1-date}}, Review 2 on Fri 2026-10-30 (Eddie, 2026-10-23), {{review-3-date}} (dates 1 and 3 not set; owner Eddie).
+High Light Rituals (HLR), a client brand. Phase 1: 4 weeks from Fri 2026-10-16. Live reviews: {{review-1-date}}, Review 2 on Fri 2026-10-30 (Eddie, 2026-10-23), {{review-3-date}} (dates 1 and 3 not set; owner Donnie).
 Method: `_setup/brand-forge-playbook.md`. Rules: `_setup/hlr-project-instructions.md`. Kickoff: `_setup/hlr-kickoff-prompt.md`.
 Registry id `hlr`; aliases HLR, High Light Rituals, HighLight, highlight-brandbook. Slot namespace `hlr`.
 
@@ -64,7 +64,7 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 - [ ] Before the first paid build: a person confirms the 9:16 keep-clear bands and the copy limits in Meta's Ads Guide, and `placement-specs.json`'s `_verified` moves (DECISIONS 2026-10-18)
 - [x] Elements and the first module batch through asset-production, email at 1200px with slice-sized type, slot-stamped `hlr`, flex-probed, screenshot-checked (2026-10-23, Chat 6 overnight under Eddie's delegation, ruled by Eddie on his decision sheet the same day: 8 elements and 21 modules after the comprehensiveness pass over HLR's live sends; structure lint, flex at 2x or better, canvas and face checks; `slotmap.yaml`, `module-library.json` and `seam-map.json` in the pack; DECISIONS)
   - 2026-10-23: fresh-context review, three rounds (`outputs/step-4-figma/review-email-batch-r1.md` to `-r3.md`): 2 blockers, 10 should-fix and 23 notes found in all, every blocker and should-fix fixed and verified; closed with no finding open
-- [ ] Chat 6b (Eddie, 2026-10-23): Donnie's ownership carried through every record and guard that still names Eddie for an open item; the Staging comparison of HLR's original sends beside the library's rebuild; the Elements and Modules pages grouped into a plain-language registry (prompt in `_setup/next-chat-prompts.md`)
+- [x] Chat 6b (Eddie, 2026-10-23): Donnie's ownership carried through every record and guard that still names Eddie for an open item; the Staging comparison of HLR's original sends beside the library's rebuild; the Elements and Modules pages grouped into a plain-language registry (prompt in `_setup/next-chat-prompts.md`). Done 2026-10-23 at Review 1, live: the sweep, the registry, the 17 comparisons (HLR's sends flattened from the originals page, 228:2642) and, at Eddie's rulings, the 2026 sends as the email system (the email scale at 1200 with the 700-wide sends approximated, body, headline and quote leading, the eyebrow, the link, the statement, display in Regular, the ink in Forest, the lockup in M23, M03's image and eyebrow, T02's options), then the product picker on E11 and E12, product names in Saol Display and the italic link. Open: this chat's fresh-context review; a `board_drift.js` check on the Type board's spec lines; engine gap G11; Donnie's on T02's three departures and on the photos the picker leaves out.
 - [ ] The next module batches: social, paid and web at the formats the review found, slot-stamped `hlr`, flex-probed, screenshot-checked (organic social after the rest of the email templates and the flows, Eddie, 2026-10-23, and after Chat 6b; paid and web after Review 2's taxonomy ruling)
 - [x] The first email templates rebuilt as pure instances: T01 Product Spotlight, T02 Editorial send, T03 Product listing (2026-10-23, Chat 6)
 - [x] The rest of the module roster (Eddie, 2026-10-23: "build the rest"): the filled CTA (E01) and the follow block, the lockup header (a labelled placeholder until HLR's vector) and the star (E15, HLR's own live footer vector, Eddie, 2026-10-23), the stacked and social footers without the crest (C3; Eddie kept it retired on 2026-10-23), the transactional card, the struck price, the Ritualist masthead, a press logo slot; product image elements per category (Eddie, 2026-10-23) (2026-10-23, Chat 6: M22 to M27, E09 to E15; reviewed fresh-context, `outputs/step-4-figma/review-batch-2-r1.md` and on)
@@ -76,7 +76,8 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 
 - [ ] One real HLR brief (or one Eddie supplies) through the engine for email and social: estimate before spend, measured cost after
   - 2026-10-23: a rehearsal on a brief Claude wrote under Eddie's delegation (the made-to-order pendants, email only, cost not measured) ran brief-intake, email-copy and the build end to end (`outputs/step-4-figma/demo-email/`); the real-brief run stays open
-- [ ] Eddie's blind keep or cut sheet marked; the result in LEARNINGS.md
+  - 2026-10-23: Eddie's own brief (protection of energy with Scorpio season, email only) ran brief-intake, email-copy and the build end to end (`outputs/step-5-forge/protection-of-energy/`, frame 317:2214 on 04 Staging); cost not measured and no social, so the item stays open
+- [ ] Donnie's blind keep or cut sheet marked; the result in LEARNINGS.md
 
 ## Process
 
@@ -85,6 +86,7 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 - [x] Git checkpoint of the 2026-10-18 lanes; the two 0.5.0 bundles removed from history (2026-10-20, DECISIONS)
 - [ ] Census over every commit in git history with `claude-cowork/_tools/release-checks/`, before the repo goes to HLR
 - [ ] Explainer for Eddie and HLR (the journey from the ask to the send, the rulebook, change scenarios, the forge or Claude Design): plan in `outputs/explainer/plan.md` (2026-10-23); built at the plan's defaults and published privately (Eddie, 2026-10-23); review round 1 fixed, round 2's 5 should-fix and 10 notes open; paused at Eddie's request; Eddie's go before HLR sees it
+- [ ] ai-firstify audit (2026-10-24): `outputs/ai-firstify/ai-firstify-report.md`; 11 calls for Eddie, the Project instructions at the defaults in `_setup/hlr-project-instructions.proposed.md`
 
 ## Reviews (default plan)
 

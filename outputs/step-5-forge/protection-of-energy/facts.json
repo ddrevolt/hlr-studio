@@ -1,0 +1,40 @@
+{
+ "matched": [
+  {
+   "query": "the-classic-bracelet-in-black-tourmaline",
+   "sku": "the-classic-bracelet-in-black-tourmaline",
+   "name": "The Classic Bracelet in Black Tourmaline",
+   "category": "Bracelet",
+   "description": "",
+   "ingredients": [
+    "Black Tourmaline"
+   ],
+   "nutrition": null,
+   "badges": []
+  },
+  {
+   "query": "the-seeds-of-protection-bracelet",
+   "sku": "the-seeds-of-protection-bracelet",
+   "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+   "category": "Bracelet",
+   "description": "",
+   "ingredients": [
+    "Black Tourmaline"
+   ],
+   "nutrition": null,
+   "badges": []
+  },
+  {
+   "query": "the-scorpio-crystal-set",
+   "sku": "the-scorpio-crystal-set",
+   "name": "The Scorpio Crystal Set",
+   "category": "Ritual Kit",
+   "description": "",
+   "ingredients": [],
+   "nutrition": null,
+   "badges": []
+  }
+ ],
+ "unmatched": [],
+ "allowed_figures": []
+}

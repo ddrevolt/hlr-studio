@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A working copy of HLR's pack, laid out like the brand's own pages: one reading column, full-ink
+   hairlines between sections, eyebrows in tracked caps, headlines in a serif with one italic accent
+   word. Controls are square outline boxes in the ink, as HLR's own buttons are. */
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 132px; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+  ::selection { background: var(--hlr-color-brand-fawn); color: var(--hlr-color-brand-onyx); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 45; background: var(--bg); }
+  input, textarea, select { font: inherit; color: inherit; }
+}
+
+@layer components {
+  .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .eyebrow { font-size: 11.5px; line-height: 1.4; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+  .display { font-family: "Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight: 400; letter-spacing: -0.005em; }
+  .display em { font-style: italic; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0; }
+  .hair { border-color: var(--rule); }
+  .tabnums { font-variant-numeric: tabular-nums; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); padding: 2px 8px; font-size: 12.5px; line-height: 1.35; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border: 1px solid var(--fg); padding: 6px 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--fg); cursor: pointer; transition: background-color 120ms ease, color 120ms ease; }
+  .btn:hover:not(:disabled) { background: var(--fg); color: var(--bg); }
+  .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .btn-solid { background: var(--fg); color: var(--bg); }
+  .btn-solid:hover:not(:disabled) { opacity: 0.88; }
+  .btn-quiet { border-color: var(--line); color: var(--fg); }
+  .btn-quiet:hover:not(:disabled) { border-color: var(--fg); background: transparent; color: var(--fg); }
+  .opt { display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left; border: 1px solid var(--line); padding: 9px 12px; font-size: 15px; line-height: 1.4; cursor: pointer; background: transparent; color: var(--fg); }
+  .opt:hover:not(:disabled) { border-color: var(--fg); }
+  .opt[aria-pressed="true"], .opt[aria-checked="true"] { border-color: var(--fg); box-shadow: inset 0 0 0 1px var(--fg); }
+  .opt:disabled { cursor: not-allowed; opacity: 0.6; }
+  .mark { flex: none; width: 16px; height: 16px; margin-top: 2px; border: 1px solid var(--fg); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; line-height: 1; }
+  .field { width: 100%; border: 1px solid var(--line); background: transparent; padding: 8px 10px; font-size: 15px; line-height: 1.5; }
+  .field:focus { border-color: var(--fg); outline: none; box-shadow: inset 0 0 0 1px var(--fg); }
+  .paper { background: var(--hlr-color-brand-alabaster); color: var(--hlr-color-brand-onyx); }
+  .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .changed { background: color-mix(in srgb, var(--hlr-color-brand-fawn) 28%, transparent); }
+  .strike { text-decoration: line-through; text-decoration-thickness: 1px; opacity: 0.7; }
+}
