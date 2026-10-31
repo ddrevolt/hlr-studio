@@ -20,7 +20,7 @@ Every prompt carries the same standing rules: sources never memory, nulls stay n
 4. `email`: the picked angle into subjects, a hero, module blocks with slot copy, a CTA and a footer of tokens.
 5. `paid`: Meta ad sets for `single_image` and `story`, each with three primary texts, three headlines, a description and hooks.
 6. `editor`: a list of proposed edits (`stage`, `path`, `before`, `after`, `reason`); never a rewrite. Applied only with `--accept-edits` (or by a person).
-7. `producer`: a stub. `crew/producers/README.md` names `klaviyo.py` and `figma_package.py` as the next items. `run.py` writes `producer.json`, the manifest they will read.
+7. `producer`: `run.py` writes `producer.json`, the manifest the producers read. The email HTML producer is built (`crew/producers/email_html/assemble.py`, see `crew/producers/README.md`); the Klaviyo push and the Figma package are not built yet.
 
 ## How to run
 
@@ -36,7 +36,7 @@ python3 crew/run.py --brief <file> [--dry-run] [--until <stage>] [--pick <n>] [-
 
 Exit codes: 0 done, 2 stopped for the human pick, 1 any failure, with a one-line reason on stderr.
 
-Outputs land in `crew/runs/<brief-slug>/<timestamp>/<stage>.json`, plus `pick.json`, `<stage>.edited.json` when edits were applied, `producer.json`, and `<stage>.json.invalid` when a reply failed its schema. `crew/runs/` is working state, not a record.
+Outputs land in a run folder, `crew/runs/<brief-slug>/<timestamp>/<stage>.json`, plus `pick.json`, `<stage>.edited.json` when edits were applied, `producer.json`, and `<stage>.json.invalid` when a reply failed its schema. Run folders are working state, not a record, and are created at run time.
 
 ## Environment
 

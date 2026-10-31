@@ -308,7 +308,7 @@
       "name": "CLAUDE.md and crew/README.md as the in-repo instructions",
       "step": "handoff",
       "kind": "records",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "Under 100 lines each: where things are, the standing rules as they stand after Phase 2, how to run the crew on any endpoint, open and close. No other brand, no em dash, every path exists.",
       "sources": [],
@@ -320,7 +320,8 @@
         "crew-scaffold"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner, sixth run): CLAUDE.md (47 lines) and crew/README.md (86 lines, producers section updated); test_records.py checks length, no em dash and that every named path resolves. No other brand named. Standing rules are those of the project instructions after Phase 2; Eddie confirms the wording."
     },
     {
       "id": "paid-specs",

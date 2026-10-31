@@ -2,6 +2,13 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, claude-md
+
+- Done: `CLAUDE.md` at the repo root (47 lines: where things are, ten standing rules as they stand after Phase 2, how to run the crew on any endpoint, open and close, checks, the runner) and `crew/README.md` brought current (the email HTML producer is built; the Klaviyo push and Figma package are named as not built). `crew/tests/test_records.py` keeps both under 100 lines, free of em dashes, and every path they name resolving.
+- Checked: `bash build/checks.sh` PASS (43 crew tests). The rules are written from the project instructions in this repo's record; Eddie reads the wording, since "Only Donnie ratifies a derived value" follows DECISIONS 2026-10-23.
+- Waiting on Eddie: read CLAUDE.md, set claude-md done. handoff-rebuild waits on HLR's brand home path. Next: paid-package (its slot map is held for Review 2, so it waits on review-2-outcome in practice).
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, email-html
 
 - Done: `crew/producers/email_html/`: `twins.py` (one table-based fragment per module, M01 to M27, from `tokens.css`, the email canvas sizes in `tokens.flat.json` and the slot map), `assemble.py` (block list to one HTML file, tokens kept for Klaviyo, unfilled slot or unknown module exits 1), `build_twins.py` (twins and a Playwright screenshot per module at 1200 and 600), `examples/` (protection-of-energy at both widths). 11 new tests.
