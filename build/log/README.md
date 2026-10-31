@@ -1,0 +1,1 @@
+One file per runner run, `YYYY-MM-DD-HHMM.md` (New York time): items touched, status changes, checks and their results, the fresh-context review's findings by severity, protected changes, questions for Eddie, Donnie and HLR. The newest file is what the next run reads first.

@@ -2,6 +2,62 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: HLR Studio map and the build runner (Eddie's request)
+
+- Built: the HLR Studio map (private artifact, four views: Studio, Runner, How it operates, Record), `build/` with RUNNER.md, backlog.json (15 items from PROGRESSION's open boxes, DECISIONS and the ai-firstify calls), checks.sh and the em dash scan, `.github/` with the pull request template and a checks workflow, and the hourly scheduled runner. The repo `ddrevolt/hlr-studio` carries the brand home's history.
+- `bash build/checks.sh` passes in the cloud: guard tests PASS (20 host shape mutations, 18 board expectation mutations), 17 pack mutants with 0 failures, 28 engine test files with 0 failures, em dash scan 0 new and 17 known.
+- Nothing in the record is dated after 2026-10-24, so Review 2 (Fri 2026-10-30) has no recorded outcome; the paid and web batches and the explainer wait on it in the backlog.
+- The runner cannot reach the Mac: the census, the overlap scans, Figma reads and `board_drift.js` are listed as Eddie's at every release.
+- Cost: not measured (main chat).
+- Status: done, the map, the repo scaffolding and the runner; waiting on Eddie, Review 2's outcome, the ai-firstify calls, the paid specs; waiting on Donnie, the protection email's open calls, T02 and the picker photos; next, the runner's first run (eng-054 or eng-emdash, review-chat6b).
+
+## 2026-10-24: ai-firstify audit of the forge (Eddie's request)
+
+- Scores: agent architecture GREEN; structure, skills, scope, context, safety and workflow YELLOW; no RED (`outputs/ai-firstify/ai-firstify-report.md`, 11 calls). The drag is weight and drift, not design.
+- The live Project instructions had drifted from the record: rule 4 still named Eddie after the Donnie sweep, and rule 8 (licenses) was gone with no DECISIONS line retiring it, while the `_setup/` copy still carried retired rule 6. A sweep of "every live record" should include both instruction copies.
+- Rule 1's read is about 91KB (~23k tokens): the 2026-10-23 block alone is 72KB in 124 entries (median 513 bytes, 30 narrating builds). One heading per chat would hide earlier same-day rulings; a first-sentence cut keeps every ruling visible at under 25KB.
+- 10 of the 11 HLR skill names collide with other installed plugins on Eddie's machine, and the listing showed 8 by name only. Description length is not the cause: the three shown have the same lengths.
+- The guard suite passes on the uncommitted tree (gates 1 to 4, parity, 20 and 18 mutation cases).
+- The device shell's home changed between calls in this chat, so scratch outside `mnt/` did not survive: unpack and use in one call.
+- Cost: the fresh-context review used about 171k tokens (the subagent count); the main chat not measured.
+
+## 2026-10-23: sunburst home campaign, concept round in Firefly (Eddie's request)
+
+- A flat line drawing gives image-to-3D nothing to build depth from, and text alone gave needles or a spiky ball. The drawing as Firefly's reference, prompted to become a real object, gave dimensional stars. Counts drift: eight arms asked, nine common.
+- Nano Banana 2 in Firefly runs one generation per click (a second click while it runs is dropped), about 20 seconds at 1K and 50 at 4K. Chain a master with Edit, Use as reference image. A prompt edit did not remove a single spike.
+- The reference carries the material better than prompt text: editing the master's finish to the product's satin gold and swapping it in as the reference gave every scene the same gold.
+- HLR today, for generated scenes: the HLR Editorial set (27:119) and the September and October posts are film, low-key, browns and forest greens; bright home scenes read as a catalog. Eddie's final look was simpler still: black onyx, short focus, soft directional light, a low white point.
+- The Chrome extension dropped during a batch of about 130 seconds; one generation per batch held after that.
+- Video stills: twenty 9:16 frames at 1K with one placement line (centered, a third of the frame, the reference's angle) held the object close enough to align in the edit; at 1K a generation takes about 20 seconds, and two per browser batch held.
+- Cost: about 51 Firefly generations (31 at 1K, 20 at 4K); credits not measured; tokens not measured.
+
+## 2026-10-23: the protection-of-energy email (Eddie's brief, intake to the 04 Staging build)
+
+- The engine ran end to end on a request Eddie wrote: brief-intake, email-copy and the build in one session, every lint PASS (`outputs/step-5-forge/protection-of-energy/`). The brief lint failed once on its own references: naming HLR's send series "Energy Medicine" tripped HLR-H01, because references are linted like copy. Name a send by its node or its eyebrow instead.
+- Layer names on the originals page do not describe their images: the "altar kit" layers hold moss, swimmers, quartz on linen and roses, and the "magnific" layers hold packshots. Look at an image by its hash (a temporary FIT rectangle, screenshot, delete) before using it.
+- The proxy refuses highlightrituals.com, cdn.shopify.com and Figma's MCP asset URLs from both the cloud and the Mac shell, so a site product image cannot be fetched and a screenshot cannot be downloaded. A packshot that is not already in the file needs Eddie to paste it. The tool-result copy of a base64 screenshot is the way to keep a preview.
+- `figma.createImage` on `exportAsync` bytes works through the connector: a composed frame (the Zodiac Set, 27:289) flattens to one image fill in the same file.
+- Flex probes prove length, not word width: at the email headline size M03.name breaks a word over about eight letters (Tourmaline, Protection). Long stone names go to M06 and E06 (title style) or wait for a hand setting.
+- Module instances report their master's explicit email mode as their own (`explicitVariableModes`), so canvas_check warns once per module instance (element-sets-canvas). That is expected for nested masters, and it answers the recipe's open question on how instances report a main component's mode. G1 did not show: E02's rule stroke resolved to email here. The variable plan canvas_check needs is not in the pack; it was rebuilt in a scratch copy with `tokens_build.js figma-plan`.
+- Eddie edited the frame live while it was being built (a sentence cut, the script line on, the frame moved). Only the re-read before the last screenshot caught it: re-read a frame before any close-out claim, and keep a live edit.
+- Cost not measured.
+
+## 2026-10-23: Chat 6b at Review 1 (the Donnie sweep, the registry, the staging comparison, the 2026 sends as the email system)
+
+- Figma's image URLs (screenshots and fills) return 403 from both the cloud and the Mac shells, and clientStorage is unsupported, so nothing crosses files but a paste. A pasted send is flattened in the file: clone it into a clipping frame, exportAsync at 1200 wide in slices under 4096 px (createImage's limit), createImage, one rectangle per slice.
+- Figma's description setter turns straight quotes and apostrophes into HTML entities; write descriptions with ’ and “ ”.
+- combineAsVariants changes property keys but keeps instance overrides; a cloned variant loses its componentPropertyReferences, so relink them by walking the tree. A whole-range setRangeBoundVariable detaches the text style, so bind family, size and style together.
+- A FILL child in a HUG parent collapses, wrap and grid included: bottom-aligned card links came from link rows instead. A nested instance's size cannot be overridden from an instance, so a size is a variant (M12 Size=Tall).
+- Measure the sends, not one send. One tally across 15 sends (face, size at 1200, leading and tracking per role) showed which values are HLR's system and which belong to one send (2:563's italic link).
+- Figma holds a face per canvas (string variable modes) and a leading or tracking per canvas (pixels per mode); the engine's grammar holds neither (G11). Log the gap the moment the library leads the engine, or the next sync quietly undoes the ruling.
+- A token change has three surfaces beyond its variable: the web exports, the board lines that print it, and the slot budgets. The Type board's email lines and `tokens.flat.json` kept the old sizes for hours because no guard reads the spec lines and nothing re-exported. Re-export and re-probe in the same step; a spec-line check belongs in `board_drift.js`.
+- The Mac relay dropped twice mid-edit: check whether an edit landed before applying it again.
+- Check a send's design width before reading its sizes. HLR's 2026 sends were designed at 700 (4) and at 1200 (13), and a scale taken from one 700-wide send (2:9) set every 1200-wide rebuild about a quarter too large until T01 showed it. Tally by design width first.
+- Read a layout request literally: “the eyebrow should be top aligned” meant the eyebrow alone, not its column. When a request names one element, change that element.
+- A photo's file name is not its SKU. Of the 97 cleared photos, 23 match a products.json name well enough to offer in a picker; the rest stay out until someone who knows the line names them, since a wrong name ships one product's photo under another's (G10).
+- A colour that reads black may be the brand's darkest colour: 2:563's “black” copy is Forest #17280a. Measure the fill before naming it, and offer what the sends use beside what was asked.
+- Cost: not measured precisely; the chat ran long (one compaction) because Review 1 ran live through it.
+
 ## 2026-10-23: Chat 6, batch 2 (the decision sheet, the roster, the star, the templates and flows, the guards)
 
 - A tool layer between Claude and the files decodes `\u` escapes: written through the Write tool or pasted into use_figma, an escaped U+2028 inside a JS regex literal becomes the real character and a syntax error, and escapes in Python source turn into literal characters. Build such characters from char codes (`String.fromCharCode`, `chr`), write files that need escapes from a script, and grep each written file for non-ASCII.
