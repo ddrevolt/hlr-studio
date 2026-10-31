@@ -119,7 +119,7 @@
       "name": "Intake co-worker: brief to structured brief",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "prompt.md and schema.json: products resolved from products.json by name and alias, the moment, the offer, the audience, the never-say list, every unknown null with an owner. Check: brief_lint slimmed to the schema (no legal branch).",
       "sources": [],
@@ -133,14 +133,15 @@
         "legal-delete"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner): intake_check is the slimmed lint, now cross-checking the brief (products, merge tokens, Offer None, channels, send_date gap) and typed prices and dates; canned intake for protection-of-energy; tests mutate brief and output. Open note F7 from review: the brief's own Never say bullets are not mapped to never_say patterns."
     },
     {
       "id": "crew-strategist",
       "name": "Strategist co-worker: three angles, human picks one",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "prompt.md and schema.json: three angles that differ on frame (from route-axes.json), each with the line it would lead with, the module it would open on, and the exemplar it leans on. run.py stops here and writes the pick file for a person; nothing is written until the pick exists.",
       "sources": [],
@@ -153,7 +154,8 @@
         "crew-scaffold"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner): strategist_check now reads the intake (slug, urgency needs an offer, proof needs a quote, brief never_say, 140 characters, sentence case) and fails without one; canned angles for protection-of-energy; tests cover a shared axis. Angle 3 there is benefit, which waits on C2: a person reads it at the pick."
     },
     {
       "id": "crew-email",

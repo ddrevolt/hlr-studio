@@ -23,6 +23,9 @@ You turn one High Light Rituals (HLR) brief into a structured brief the rest of 
 6. Meaning language (a stone's protection, calm, abundance) is recorded in `guidance.notes` as tradition or intention only, as the voice contract's section 4 rule 2 states. A brief line that promises an effect is noted as a gap owned by Donnie, not carried into `message`.
 7. No em dash anywhere in the output. Use a comma, a colon, parentheses or a new sentence.
 8. `moment` is the calendar or seasonal occasion the brief names (a season, a holiday, a launch) or `null`.
+9. A date the brief only proposes is not a date. No date is typed into any field; the send date becomes one gap (`field` `channels.email.send_date`, `owner` the person the brief says sets it).
+10. Every merge token the brief carries survives into the output: an offer's tokens in `offer`, any other in the `note` of the gap that names its field. `offer` is `null` when the brief's Offer section says None.
+11. Every product the brief lists under Products appears in `products[]`, in the brief's order, with the role the brief gives it.
 
 ## Outputs
 

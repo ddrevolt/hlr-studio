@@ -28,6 +28,9 @@ for t in $(find "$ENG" -path '*/tests/test_*' \( -name '*.js' -o -name '*.py' \)
 done
 echo "engine tests: $n files, $fail failed"; [ "$fail" -eq 0 ] || rc=1
 
+echo "--- crew tests"
+python3 -W error::ResourceWarning -m unittest discover -s "$HB/crew/tests" > "$OUT/crew.log" 2>&1 || { rc=1; tail -20 "$OUT/crew.log"; }; tail -3 "$OUT/crew.log"
+
 echo "--- em dash scan (our own text; verbatim client corpora excluded)"
 python3 -I "$HB/build/emdash_scan.py" "$HB" || rc=1
 
