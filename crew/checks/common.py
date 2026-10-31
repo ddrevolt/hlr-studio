@@ -10,8 +10,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 EM = chr(0x2014)
 
 
-def args(description, run=False):
+def args(description, run=False, extras=()):
     ap = argparse.ArgumentParser(description=description)
+    for flag, helptext in extras:
+        ap.add_argument(flag, default=None, help=helptext)
     ap.add_argument("--output", required=True, help="the stage output JSON to check")
     ap.add_argument("--pack", default=os.path.join(ROOT, "brand-pack"))
     if run:
@@ -132,3 +134,23 @@ def report(name, findings):
         print("%s: FAIL (%d)" % (name, len(findings)))
         sys.exit(1)
     print("%s: PASS" % name)
+
+
+def sections(markdown):
+    """A brief's '## Heading' sections as {heading: body}, in order of appearance."""
+    out, name, buf = {}, None, []
+    for line in markdown.splitlines():
+        m = re.match(r"^##\s+(.+?)\s*$", line)
+        if m:
+            if name is not None:
+                out[name] = "\n".join(buf).strip()
+            name, buf = m.group(1), []
+        elif name is not None:
+            buf.append(line)
+    if name is not None:
+        out[name] = "\n".join(buf).strip()
+    return out
+
+
+def json_blob(doc):
+    return json.dumps(doc, ensure_ascii=False)

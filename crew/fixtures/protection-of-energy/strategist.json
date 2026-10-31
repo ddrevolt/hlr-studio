@@ -1,0 +1,32 @@
+{
+ "brief_slug": "protection-of-energy",
+ "angles": [
+  {
+   "n": 1,
+   "axis": "occasion",
+   "register": "real",
+   "lead_line": "Scorpio season is here, and your energy is _yours_ to keep",
+   "opening_module": "M02",
+   "exemplar_ref": "hlr-email-headline-29",
+   "rationale": "The intake's moment is Scorpio season and its audience is HLR's subscribers; the occasion frame ties the send to the calendar (route_axes axis_notes.occasion: zodiac seasons are an observed monthly ritual). The Classic Bracelet in Black Tourmaline leads, then the season block, then The Scorpio Crystal Set closes."
+  },
+  {
+   "n": 2,
+   "axis": "product",
+   "register": "refined",
+   "lead_line": "Black tourmaline, long held as a stone of _protection_",
+   "opening_module": "M04",
+   "exemplar_ref": null,
+   "rationale": "Both lead pieces carry one stone, Black Tourmaline (intake.products[].facts.ingredients), so the product frame opens on the shared stone and says its meaning as tradition only (intake.guidance.notes; route_axes axis_notes.product). A text block opens before the two-up grid."
+  },
+  {
+   "n": 3,
+   "axis": "benefit",
+   "register": "uplifting",
+   "lead_line": "Keep your energy your _own_",
+   "opening_module": "M07",
+   "exemplar_ref": null,
+   "rationale": "The intake's message ends on a reminder to keep your energy your own, which the benefit frame can lead with as intention rather than effect (intake.message; route_axes axis_notes.benefit, which waits on C2, so a person should read this angle with that caveat). A mantra opens, then the two bracelets."
+  }
+ ]
+}

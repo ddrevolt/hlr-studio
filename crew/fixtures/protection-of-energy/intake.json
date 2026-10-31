@@ -1,0 +1,112 @@
+{
+ "slug": "protection-of-energy",
+ "brand": "High Light Rituals",
+ "source": {
+  "path": "outputs/step-5-forge/protection-of-energy/brief-protection-of-energy.md",
+  "received_at": "2026-10-23"
+ },
+ "objective": "Send readers to HLR's two protection bracelets, then to The Scorpio Crystal Set, in the first days of Scorpio season.",
+ "audience": "HLR's email subscribers. No segment data is on file.",
+ "message": "Protection of energy: two pieces in black tourmaline, a stone long held as one of protection, worn as a reminder to keep your energy your own.",
+ "moment": "Scorpio season",
+ "offer": null,
+ "products": [
+  {
+   "id": "the-classic-bracelet-in-black-tourmaline",
+   "name": "The Classic Bracelet in Black Tourmaline",
+   "role": "hero",
+   "resolved": true,
+   "facts": {
+    "category": "Bracelet",
+    "family": "Classic Bracelet",
+    "ingredients": [
+     "Black Tourmaline"
+    ],
+    "source": "brand-pack/products.json"
+   }
+  },
+  {
+   "id": "the-seeds-of-protection-bracelet",
+   "name": "The Seeds of Protection Bracelet in Black Tourmaline",
+   "role": "lineup",
+   "resolved": true,
+   "facts": {
+    "category": "Bracelet",
+    "family": "Seeds of",
+    "ingredients": [
+     "Black Tourmaline"
+    ],
+    "source": "brand-pack/products.json"
+   }
+  },
+  {
+   "id": "the-scorpio-crystal-set",
+   "name": "The Scorpio Crystal Set",
+   "role": "closing",
+   "resolved": true,
+   "facts": {
+    "category": "Ritual Kit",
+    "family": "Crystal Set",
+    "ingredients": [],
+    "source": "brand-pack/products.json"
+   }
+  }
+ ],
+ "channels": [
+  "email"
+ ],
+ "must_say": [],
+ "guidance": {
+  "vocabulary": [
+   "protection",
+   "energy",
+   "black tourmaline",
+   "Scorpio season"
+  ],
+  "tone": [
+   "the voice contract as written",
+   "short lines",
+   "one accent word in a headline"
+  ],
+  "notes": [
+   "Meaning only as tradition or intention (long held as a stone of; worn as a reminder to), never as what a piece does for the reader.",
+   "The Scorpio ideas are small rituals the reader can do this week, in plain words; none promises an effect, and none touches stress, anxiety or any mental or physical state.",
+   "No line on how, where or by whom a piece is made. No stone list for the set.",
+   "Structure the brief asks for: a Scorpio season block as a secondary block after the two bracelets, then The Scorpio Crystal Set as the closing spotlight.",
+   "The brief says the two bracelets lead because Eddie names them HLR's top two sellers for protection; the copy does not say so, and no sales source is on file.",
+   "The brief says the copy names no date, so it holds for the whole season.",
+   "Every description in products.json is empty and the set lists no contents, so no metal, size, price or stone list is stated; price is {{price}} if a slot needs it."
+  ]
+ },
+ "never_say": [
+  "\\bbest[- ]?sell(er|ers|ing)\\b|\\b(customer|fan) favou?rites?\\b",
+  "\\u2014",
+  "\\bhightlight",
+  "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+  "\\bcur(e|es|ed|ing)\\b",
+  "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+  "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+ ],
+ "gaps": [
+  {
+   "field": "channels.email.send_date",
+   "note": "the brief only proposes a date and says Eddie or Donnie sets the real one; no send date is recorded",
+   "owner": "Eddie or Donnie"
+  },
+  {
+   "field": "audience.segment",
+   "note": "no segment data is on file",
+   "owner": "HLR"
+  },
+  {
+   "field": "references.visual",
+   "note": "The Seeds of Protection Bracelet in Black Tourmaline has no cleared photo in the library; the card carries the bracelet placeholder until the packshot is pasted",
+   "owner": "Eddie"
+  },
+  {
+   "field": "success_metric.baseline",
+   "note": "the brief names clicks to the two bracelet pages and the set's page; no baseline is on file",
+   "owner": "HLR"
+  }
+ ]
+}
