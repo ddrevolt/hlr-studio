@@ -1,0 +1,92 @@
+{
+ "brief_slug": "fixtures",
+ "angle": 1,
+ "register": "real",
+ "subjects": [
+  {
+   "subject": "A quiet week, kept on purpose",
+   "preview": "Two pieces for the pause you keep putting off."
+  },
+  {
+   "subject": "The Seeds of Calm Necklace in Aquamarine",
+   "preview": "Aquamarine, long held as a stone of calm. For a slower week."
+  },
+  {
+   "subject": "What would a quiet week look like?",
+   "preview": "Not an empty one. A kept one. Two pieces to wear through it."
+  }
+ ],
+ "hero": {
+  "module": "M02",
+  "slots": {
+   "M02.eyebrow": "A QUIET WEEK",
+   "M02.headline": "Kept on _purpose_",
+   "M02.body": "A long shower. A walk without your phone. The pause you keep putting off, taken. Two pieces to wear through it.",
+   "E01.label": "SHOP THE PAIR"
+  }
+ },
+ "blocks": [
+  {
+   "module": "M04",
+   "slots": {
+    "M04.headline": "Two stones, one _slower_ pace",
+    "M04.body": "Aquamarine is long held as a stone of calm. Phosphosiderite is long held as a stone of stillness, the kind you notice only when you stop. Worn together, they are a reminder to keep the quiet you made, and a reminder to keep it."
+   }
+  },
+  {
+   "module": "M06",
+   "slots": {
+    "M06.heading": "The pair for a quieter week"
+   },
+   "cards": [
+    {
+     "product_id": "the-seeds-of-calm-necklace-aquamarine",
+     "slots": {
+      "E06.name": "The Seeds of Calm Necklace in Aquamarine",
+      "E02.label": "Shop"
+     }
+    },
+    {
+     "product_id": "the-seeds-of-stillness-bracelet-phosphosiderite",
+     "slots": {
+      "E06.name": "The Seeds of Stillness Bracelet in Phosphosiderite",
+      "E02.label": "Shop"
+     }
+    }
+   ]
+  },
+  {
+   "module": "M08",
+   "slots": {
+    "M08.line": "{{discount_value}} off with code {{discount_code}}, for {{offer_window}}."
+   }
+  },
+  {
+   "module": "M03",
+   "slots": {
+    "M03.eyebrow": "ONE MORE",
+    "M03.name": "The Classic Bracelet in Moonstone",
+    "E02.label": "Shop now"
+   },
+   "note": "The closing spotlight. Moonstone's meaning is not in the fact base, so the block carries the name only (owner: Donnie, if a meaning line is wanted)."
+  },
+  {
+   "module": "M07",
+   "slots": {
+    "M07.mantra": "What I keep quiet, I keep for myself."
+   }
+  }
+ ],
+ "cta": {
+  "label": "SHOP THE PAIR",
+  "link_token": "{{cta_url}}"
+ },
+ "footer": {
+  "module": "M09",
+  "disclaimer_token": "{{footer_disclaimer}}",
+  "legal_tokens": [
+   "{{unsubscribe_url}}",
+   "{{postal_address}}"
+  ]
+ }
+}

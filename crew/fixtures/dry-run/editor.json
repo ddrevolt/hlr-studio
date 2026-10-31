@@ -1,0 +1,20 @@
+{
+ "brief_slug": "fixtures",
+ "edits": [
+  {
+   "stage": "email",
+   "path": "/blocks/0/slots/M04.body",
+   "before": "Aquamarine is long held as a stone of calm. Phosphosiderite is long held as a stone of stillness, the kind you notice only when you stop. Worn together, they are a reminder to keep the quiet you made, and a reminder to keep it.",
+   "after": "Aquamarine is long held as a stone of calm. Phosphosiderite is long held as a stone of stillness, the kind you notice only when you stop. Worn together, they are a reminder to keep the quiet you made.",
+   "reason": "Rhythm (section 3, eloquent): the last sentence made its point twice; the shorter line keeps one idea."
+  },
+  {
+   "stage": "paid",
+   "path": "/ad_sets/0/hooks/1",
+   "before": "A quiet week is a decision, not a gift.",
+   "after": "A quiet week is something you decide.",
+   "reason": "Real, not preachy (section 3): the not-a-gift turn reads as a lesson; the plain line names the moment without one."
+  }
+ ],
+ "summary": "The send holds the voice: meaning as tradition, the offer as tokens, one accent word per headline. Two small marks, one for rhythm and one for a line that tipped toward preachy."
+}

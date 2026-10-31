@@ -1,0 +1,61 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "crew editor output: proposed edits, never a rewrite",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "brief_slug",
+  "edits",
+  "summary"
+ ],
+ "properties": {
+  "brief_slug": {
+   "type": "string",
+   "minLength": 1
+  },
+  "edits": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "stage",
+     "path",
+     "before",
+     "after",
+     "reason"
+    ],
+    "properties": {
+     "stage": {
+      "type": "string",
+      "enum": [
+       "email",
+       "paid"
+      ]
+     },
+     "path": {
+      "type": "string",
+      "pattern": "^/"
+     },
+     "before": {
+      "type": "string"
+     },
+     "after": {
+      "type": "string",
+      "pattern": "^[^\\u2014]*$"
+     },
+     "reason": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^\\u2014]*$"
+     }
+    }
+   }
+  },
+  "summary": {
+   "type": "string",
+   "minLength": 1,
+   "pattern": "^[^\\u2014]*$"
+  }
+ }
+}

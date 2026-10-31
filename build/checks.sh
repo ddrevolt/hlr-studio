@@ -15,7 +15,7 @@ echo "--- guard suite"
 sh "$HB/outputs/step-4-figma/guards/tests/run_all.sh" "$HB" "$OUT/gt" || rc=1
 
 echo "--- pack mutation tests"
-python3 -I "$HB/outputs/step-2-pack/guards/mutation_tests.py" "$HB" "$ENG" | tail -1 || rc=1
+python3 -I "$HB/outputs/step-2-pack/guards/mutation_tests.py" "$HB" "$ENG" > "$OUT/mut.log" 2>&1 || { rc=1; tail -20 "$OUT/mut.log"; }; tail -1 "$OUT/mut.log"
 
 echo "--- engine tests"
 n=0; fail=0

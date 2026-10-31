@@ -1,0 +1,32 @@
+{
+ "brief_slug": "fixtures",
+ "angles": [
+  {
+   "n": 1,
+   "axis": "occasion",
+   "register": "real",
+   "lead_line": "A quiet week, kept on _purpose_",
+   "opening_module": "M02",
+   "exemplar_ref": "hlr-email-headline-29",
+   "rationale": "The intake's moment is a quiet week and its message is the pause the reader keeps putting off; the occasion frame lets the two Seeds of pieces follow the lift (voice contract section 4, rule 1). The Seeds of Calm Necklace in Aquamarine leads."
+  },
+  {
+   "n": 2,
+   "axis": "product",
+   "register": "sensual",
+   "lead_line": "Two stones, one _slower_ pace",
+   "opening_module": "M03",
+   "exemplar_ref": "hlr-email-headline-20",
+   "rationale": "The product frame opens on the pieces themselves, aquamarine and phosphosiderite, with their meaning said as tradition (route_axes axis_notes.product; intake.guidance.notes). A spotlight opens on the necklace's display name from the intake."
+  },
+  {
+   "n": 3,
+   "axis": "urgency",
+   "register": "refined",
+   "lead_line": "The offer ends with the _week_",
+   "opening_module": "M19",
+   "exemplar_ref": null,
+   "rationale": "The intake carries an offer as tokens ({{discount_value}}, {{discount_code}}, {{offer_window}}), which the urgency frame can lead with while the figures stay merge tokens (route_axes axis_notes.urgency). An offer module opens, calm in tone."
+  }
+ ]
+}

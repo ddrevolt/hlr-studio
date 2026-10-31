@@ -96,7 +96,8 @@
       "name": "crew/: the portable shape and run.py on any OpenAI-compatible endpoint",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
+      "note": "Built 2026-10-31 on branch worktree-agent-a369b6ee7fa7b8eb4: crew/ with run.py (standard library, urllib, no openai package), five co-workers, checks, fixtures, 12 tests passing; the engine lints are SKIPPED on the crew shapes (crew/checks/README.md); the xAI run waits on a key. Pointer skill files are not written here (handoff item claude-md).",
       "owner": "runner",
       "intent": "crew/README.md (how a co-worker is defined: prompt.md with explicit inputs and outputs, schema.json, check command), crew/run.py (Python 3.9+, standard library plus the openai package: base URL, model and key from environment; reads the pack and the brief; runs the co-workers in order; writes JSON outputs; validates each against its schema; runs each check CLI; stops at the human pick), a fixture brief and a --dry-run mode that uses canned outputs so the pipeline runs with no key. Claude-specific files (SKILL.md) become thin pointers to crew/.",
       "sources": [
