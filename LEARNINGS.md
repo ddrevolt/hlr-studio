@@ -2,6 +2,14 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, email-html
+
+- Done: `crew/producers/email_html/`: `twins.py` (one table-based fragment per module, M01 to M27, from `tokens.css`, the email canvas sizes in `tokens.flat.json` and the slot map), `assemble.py` (block list to one HTML file, tokens kept for Klaviyo, unfilled slot or unknown module exits 1), `build_twins.py` (twins and a Playwright screenshot per module at 1200 and 600), `examples/` (protection-of-energy at both widths). 11 new tests.
+- Found: `tokens.css` redefines the same variables in later `[data-ground]` blocks, so reading every `--hlr-*` line takes the night ground; the twins read the first `:root` block only. A guard worth carrying to any token reader.
+- Checked: `bash build/checks.sh` PASS (40 crew tests). Screenshots read by eye at 600 and 1200; the Figma master was not read (no Figma call), so a person compares proportions. Faces render as stand-ins; image slots are labelled placeholders; nav labels and product links are merge tokens, so Eddie owns them.
+- Waiting on Eddie: set email-html done after comparing a twin with the master; supply nav labels and product URLs. Next: claude-md (handoff), then klaviyo-push waits on a key.
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, crew-editor
 
 - Done: a seeded-violation fixture (`crew/fixtures/editor-seeded/`: a misspelling the pack bars, an exclamation mark in a headline, an ampersand in body copy, a typed price) with the editor output that marks those four and nothing else. Applying it returns the clean dry-run files exactly, and `email_check` and `paid_check` fail before and pass after. `editor_check` now bars any typed figure in an `after` (the old test let one typed price replace another) and an email slot over its `max_chars`; `email_check` bars an ampersand in a body slot.

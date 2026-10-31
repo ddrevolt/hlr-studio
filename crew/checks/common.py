@@ -104,6 +104,7 @@ def slotmap(pack):
                 "role": fields.get("role", "").strip(),
                 "case": fields.get("case", "").strip(),
                 "max_chars": int(fields["max_chars"]) if fields.get("max_chars", "").strip().isdigit() else None,
+                "optional": "option:" in rest,
             }
             by_module[current].append(sid)
     return slots, by_module, composed
