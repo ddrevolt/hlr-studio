@@ -1,0 +1,60 @@
+{
+  "_note": "ENGINE DATA for social-copy: the gate model and the organic post formats. Counts live here and nowhere else; prose never restates them. A brand's recurring series (a weekly carousel, a monthly story set) and its own masters are brand data: they live in its pack (type_registry_overlay, asset_types, slotmap_social) and never come back into this file.",
+  "_version": "0.5.1",
+  "GATE_META": {
+    "angle": {
+      "title": "Angle",
+      "count": 3,
+      "axes": ["Benefit", "Occasion", "Product", "Proof", "Urgency", "Curiosity"],
+      "help": "Three framings of the post. A human picks the lens; every line below inherits it.",
+      "note": "Under a pre-selected route the gate still runs inside the route's frame: the same count, every option on the route's axis, the options differing on scene or mechanism (declared as `scene`). A series post still gets three angles on its subject."
+    },
+    "cover": {
+      "title": "Cover line",
+      "count": 3,
+      "axes": ["Problem", "Curiosity gap", "Direct address"],
+      "help": "Three lines the post leads with: a feed post's on-image line, a carousel's cover, a story set's first frame. Hooks by position.",
+      "note": "A feed post with no text on the image skips this gate by declaring `on_image: false` on the slate."
+    },
+    "caption": {
+      "title": "Caption",
+      "count": 3,
+      "axes": [],
+      "help": "Three whole captions as they will be posted, each with a different first line: what shows before the fold.",
+      "note": "Story sets carry no caption. The three differ in their first line, not in punctuation."
+    },
+    "sequence": {
+      "title": "Panels or frames",
+      "count": 1,
+      "help": "The copy for every panel or frame of the picked angle and cover, in order.",
+      "note": "Written once, on the human's pick. A carousel runs cover, inner panels, end; a story set runs frames, each one structure."
+    }
+  },
+  "FORMATS": {
+    "feed_post": {
+      "label": "Feed post",
+      "recipe": "S01",
+      "gates": ["angle", "cover", "caption", "sequence"],
+      "sequence_roles": ["post"],
+      "max_entries": 1,
+      "ratios": ["4x5", "1x1", "9x16"]
+    },
+    "carousel": {
+      "label": "Carousel",
+      "recipe": "S03",
+      "gates": ["angle", "cover", "caption", "sequence"],
+      "sequence_roles": ["cover", "inner", "end"],
+      "build_modes": ["gutter", "seamless"],
+      "ratios": ["4x5"]
+    },
+    "story_set": {
+      "label": "Story set",
+      "recipe": "S04",
+      "gates": ["angle", "cover", "sequence"],
+      "sequence_roles": ["frame"],
+      "structures": ["text", "inset", "full_bleed", "split"],
+      "ratios": ["9x16"]
+    }
+  },
+  "hook_rule": "Cover hooks are assigned by position (A Problem, B Curiosity gap, C Direct address) so the three are a spread, not three phrasings of one line."
+}

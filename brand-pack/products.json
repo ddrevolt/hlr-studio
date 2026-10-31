@@ -30,8 +30,8 @@
    "attributes": "[observed] a birth month or zodiac sign the title names.",
    "flags": "defects and open questions on the record, each with its source."
   },
-  "figures": "This database licenses no figure. sku_lookup.js draws allowed figures from description, badges and nutrition, which are empty or null. Prices are observed storefront values for reference; copy carries prices, percentages, thresholds and codes as merge tokens ({{ ... }}) until HLR's export confirms them. Karat and metal statements follow the claims ledger (lane C) and the karat question at Review 1.",
-  "claims_note": "Observed tags include intention words (Calm, Protection, Love, Emotional balance, Vitality and others). They are store data, not facts copy may state: benefit and health-adjacent language waits for C2 and the claims ledger.",
+  "figures": "This database licenses no figure. sku_lookup.js draws allowed figures from description, badges and nutrition, which are empty or null. Prices are observed storefront values for reference; copy carries prices, percentages, thresholds and codes as merge tokens ({{ ... }}) until HLR's export confirms them. Karat and metal statements follow _meta.brand_facts (metal_and_karat_statements) and the karat question at Review 1.",
+  "claims_note": "Observed tags include intention words (Calm, Protection, Love, Emotional balance, Vitality and others). They are store data, not facts copy may state: benefit and health-adjacent language waits for C2; there is no claims ledger (DECISIONS 2026-10-31), so a benefit is sourced or not written, and the voice contract frames meaning as tradition or intention.",
   "counts": {
    "products": 182,
    "by_kind": {
@@ -88,7 +88,7 @@
    },
    {
     "gap": "Metals and karat by variant (14K Solid Gold, 14K Gold Filled, Sterling Silver, 14K Rose Gold seen in options) and the karat and origin claims in paid.",
-    "owner": "HLR (Review 1); lane C ledger rows"
+    "owner": "HLR (Review 1)"
    },
    {
     "gap": "Re-key by SKU when the export lands, the handle kept as a field (Gate 2 call 7 a).",
@@ -106,7 +106,90 @@
     "gap": "Pack shots per product (pack_shot_index): imagery waits for usage rights (rule 8).",
     "owner": "HLR"
    }
-  ]
+  ],
+  "brand_facts": {
+   "_note": "Brand and product facts that lived only in the retired claims ledger (lane C's seed, v0.2.0, archived under _archive/brand-pack/), moved here with their wording and sources on 2026-10-31 (DECISIONS 2026-10-31: the legal regime is deleted, every product fact keeps its source). Each fact is what its source says, not a fact HLR has confirmed: status says which, and the gap stays open until HLR confirms it. Copy states one only as the source states it. The ledger file is archived under _archive/brand-pack/.",
+   "dropped_rows": "HLR-H01, HLR-H02, HLR-H03, HLR-F01, HLR-M01, HLR-M02, HLR-M04, HLR-M05: claim-pattern rows carrying a legal posture and counts of the claims live copy makes, no product fact. The observation that live copy makes health, anxiety and fertility claims stays in brand-context.md (Sensitive territory).",
+   "facts": [
+    {
+     "id": "site_footer_text",
+     "was": "HLR-REQ-01",
+     "fact": "We have experienced the transformative power of crystals and stones firsthand, but we do not consider energy work to be a substitute for medical treatment. Our products are not intended to diagnose or treat ailments.",
+     "source": "[observed] highlightrituals.com footer, read 2026-10-17 (outputs/step-1-review/site/claims-scan-2026-10-17.md). Brand Review v2 Q1: the only required language found.",
+     "status": "observed, verbatim site text. Whether a send carries it is the brief's must_say, not a lint's rule: the required-language row was deleted with the ledger (DECISIONS 2026-10-31). Whether paid and organic social carry it is HLR's (C2)."
+    },
+    {
+     "id": "ownership_line",
+     "was": "HLR-T02",
+     "fact": "High Light is proudly Mother-led, Black-owned, and committed to the Collective.",
+     "source": "[documented p6] 'High Light is proudly Mother-led, Black-owned, and committed to the Collective.' [observed] corpus: paid 'Black owned, Mother led', email 'As a mother-led company', a social draft 'proudly Mother led, Black owned, and Family rooted'; claims scan: 'mother-led / Black-owned' 0 products.",
+     "status": "documented in the 2022 book (p6); HLR confirms the current wording before copy carries an ownership or identity line, never paraphrased (gap owner HLR)."
+    },
+    {
+     "id": "place_of_making",
+     "was": "HLR-O01",
+     "fact": "Handmade & Shamanically Activated in Westport, CT",
+     "source": "[observed] claims scan: 'handmade / hand-' 95 products, 'made in / artisan' 1 ('Made in America'); site 'Handmade & Shamanically Activated in Westport, CT'; corpus: paid 'Handmade in America', email 'handcrafted heirlooms'. [documented p34] the book's caption example names an artist in Rome; p29 asks copy to tell 'where it's from, and how it's made'.",
+     "status": "observed on the live site; where and by whom each piece is made waits on HLR's confirmation (gap owner HLR)."
+    },
+    {
+     "id": "sourcing_statements",
+     "was": "HLR-S01",
+     "fact": "ethically sourced crystal beads; Recycled solid 18 karat gold; certified recycled; web PDP badge Earth-Conscious Production",
+     "source": "[observed] claims scan: 'ethical / ethically' 51 products, 'conflict-free / responsibly' 47, 'sustainable / recycled' 79; corpus: 'ethically sourced crystal beads', 'Recycled solid 18 karat gold', 'certified recycled'; web PDP badge 'Earth-Conscious Production'.",
+     "status": "observed; the supplier evidence behind each statement (chain of custody, recycled-content records) is HLR's to supply (gap owner HLR)."
+    },
+    {
+     "id": "stone_quality_statements",
+     "was": "HLR-S02",
+     "fact": "AAA-grade, not heat-treated; high quality, untreated natural crystals",
+     "source": "[observed] claims scan: 'natural / genuine / ethically sourced stone' 21 products; site text 'AAA-grade, not heat-treated', 'high quality, untreated natural crystals'; corpus: email 6 lines, social 1.",
+     "status": "observed site text; HLR's supplier records for treatment and grade (gap owner HLR)."
+    },
+    {
+     "id": "energy_work_statements",
+     "was": "HLR-M03",
+     "fact": "charged and blessed by the founder; Charged by an Energy Healer & packaged in a ceremony; Energy-infused Fine Jewelry; web PDP badge Energy-Charged; the live positioning Healer-Activated",
+     "source": "[observed] claims scan: 'charged / blessed / infused' 32 products, 'healer-activated / activated' 32; corpus: 'charged and blessed by the founder', paid 'Charged by an Energy Healer & packaged in a ceremony', 'Energy-infused Fine Jewelry'; web PDP badge 'Energy-Charged'. Brand Review v2 C2: the live positioning 'Healer-Activated'.",
+     "status": "observed; whether the process happens for the piece named is HLR's to confirm (C2). The voice contract frames meaning as tradition or intention, never as a promised effect."
+    },
+    {
+     "id": "services_sold_as_products",
+     "was": "HLR-H04",
+     "fact": "breathwork, 1:1 crystal healing, and Reiki; Reiki-charged; RITUALLY ACTIVATED through sacred shamanic practice",
+     "source": "[observed] claims scan: 'reiki' 19 products, 'shamanic' 24; corpus: 'breathwork, 1:1 crystal healing, and Reiki', 'Reiki-charged', 'RITUALLY ACTIVATED through sacred shamanic practice'; products.json kinds 'service' 4, 'service with jewelry' 1, 'jewelry with a service' 2.",
+     "status": "observed; how sessions and readings sold as products are described, and each credential before it is named, waits on HLR (C2; this database's kinds service 4, service with jewelry 1, jewelry with a service 2)."
+    },
+    {
+     "id": "metal_and_karat_statements",
+     "was": "HLR-K01",
+     "fact": "18k solid gold Recycled (paid); 14k / 18k / solid gold on 89 products, gold filled 57, sterling silver 83 (claims scan)",
+     "source": "[observed] claims scan: '14k / 18k / solid gold' 89 products, 'gold filled' 57, 'sterling silver' 83; corpus: email 36 lines, social 17, paid 29 ('18k solid gold Recycled'). The figure rule blocks a karat number the facts layer does not carry.",
+     "status": "observed; copy writes the metal and karat exactly as this database carries them for the piece named (variants: HLR's Shopify export, Review 1), and a karat number is a figure the figure rule needs in the facts layer or the brief (Eddie, Gate 2, lane C call 4)."
+    },
+    {
+     "id": "durability_statements",
+     "was": "HLR-K02",
+     "fact": "waterproof / tarnish on 93 products (claims scan); durable in 6 email lines; Satisfaction guranteed in a paid frame (2:194032, a source typo)",
+     "source": "[observed] claims scan: 'waterproof / tarnish' 93 products, 'lifetime / guarantee / warranty' 0; corpus: 'durable' 6 email lines; pattern review: 'Satisfaction guranteed' in a paid frame (2:194032).",
+     "status": "observed; the care facts (descriptions are empty) and any guarantee or warranty policy are HLR's to supply before copy states one."
+    },
+    {
+     "id": "offer_terms_observed",
+     "was": "HLR-P01",
+     "fact": "free shipping at three thresholds; codes LIGHT25 and LIGHT30; 30% off sitewide",
+     "source": "[observed] Brand Review v2 C10: free shipping at three thresholds, codes LIGHT25 and LIGHT30, '30% off sitewide'; corpus: email 51 offer lines, paid 14.",
+     "status": "observed; every figure, threshold, code and date stays a merge token until HLR rules C10 ({{ free_shipping_threshold }}, {{ discount_code }}); a person confirms the terms against the brief."
+    },
+    {
+     "id": "endorsement_lines_observed",
+     "was": "HLR-T01",
+     "fact": "as seen in (social, paid); best-selling Seeds Collection; Save 25% on our bestsellers; a five-star review card in paid",
+     "source": "[observed] corpus: 'as seen in' (social, paid), 'best-selling Seeds Collection', 'Save 25% on our bestsellers', a five-star review card in paid. Brand Review v2 Q7: 20 quote-like lines in email and 11 in social need sourcing before reuse.",
+     "status": "observed and unsourced: a review or press line appears only verbatim with its source (a review in Judge.me, a press piece with its URL), never written or paraphrased into a quote (Brand Review v2 Q7)."
+    }
+   ]
+  }
  },
  "the-genesis-memorial-talisman": {
   "name": "The Genesis Memorial Talisman",

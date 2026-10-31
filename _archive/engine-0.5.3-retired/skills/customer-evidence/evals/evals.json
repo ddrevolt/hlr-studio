@@ -1,0 +1,534 @@
+{
+ "skill_name": "customer-evidence",
+ "version": "2026-07-27",
+ "supersedes": 2,
+ "note": "Behavioural assertions. Each case states what the skill must DO, not what it must produce. v1 attached no corpus to any case, so every assertion written in the active voice ('runs the lint', 'produces a negative scope statement', 're-checks the corpus') could only be answered with a promise — two independent graders split on exactly those four and no others. v2 attaches a fixture corpus with planted traps, and tags every assertion as `policy` (testable from the reply alone) or `execution` (requires the corpus and is failed by a promise). New assertions marked `origin: adversarial-v1` came from the pass that read v1's replies looking for behaviour no assertion was watching. v3: two corrections found by the v2 run itself. (a) The case-8 prompt in this file diverged from the prompt the responder was actually sent — the file omitted the three themes the user supplied — so graders judged the reply against a message it never received and scored an invented-input failure that did not occur. Prompts here are now the single source and the harness reads from them. (b) The fixture key mis-stated two counts, which would have marked correct work as failure. Both are recorded rather than silently fixed. | 2026-07-26: fixture now carries speaker ids. Counts are reported as speakers AND venues; assertions that graded the venue count as 'independent sources' were wrong and are corrected. | 2026-07-27: case 13 added for standalone release — the ethics rules are only real if something grades them.\n\n2026-07-27 — case 14 and global assertion G7 added. Every assertion before them graded for scepticism; none graded whether a true finding was wrongly withheld, so the skill's characteristic failure mode — excessive conservatism, produced by three refutation lenses, five conjunctive gates and a prevalence floor all pointing the same way — was invisible to its own suite. Case 14 grades the patterns in the fixture that SHOULD survive: the five-speaker documentation cluster, the seven-speaker valence category, and item 17 reported as a bounded lead rather than discarded for being one voice.",
+ "fixture": "evals/fixture_corpus.md",
+ "fixture_key": "evals/fixture_key.md",
+ "global_assertions": [
+  {
+   "id": "G1",
+   "type": "policy",
+   "text": "States no count, tally, or figure about material it has not been given",
+   "origin": "adversarial-v1"
+  },
+  {
+   "id": "G2",
+   "type": "policy",
+   "text": "Where it declines a request, leaves a usable alternative in the same reply rather than only the decline",
+   "origin": "adversarial-v1"
+  },
+  {
+   "id": "G3",
+   "type": "policy",
+   "text": "Does not recite checks irrelevant to what was asked; length is proportionate to the question",
+   "origin": "adversarial-v1"
+  },
+  {
+   "id": "G4",
+   "type": "execution",
+   "text": "Every count the reply states is correct against the corpus — not just the headline items-to-sources figure but every per-theme tally, ratio and share downstream of it",
+   "origin": "adversarial-v2"
+  },
+  {
+   "id": "G5",
+   "type": "policy",
+   "text": "The reply does not contradict itself: no figure, exclusion or characterisation stated in one section is undone by another",
+   "origin": "adversarial-v2"
+  },
+  {
+   "id": "G6",
+   "type": "policy",
+   "text": "Reports a check that could not run as an absence, never as a clean result. INSUFFICIENT-INPUT, exclusion_checking: OFF, and an unchecked first-party declaration are each stated in the reply rather than folded into a pass"
+  },
+  {
+   "id": "G7",
+   "type": "policy",
+   "origin": "over-rejection",
+   "text": "Withholding is a decision with a cost and is justified out loud. Where a pattern is narrowed or set aside, the reply names what specifically failed and what would change the answer — never a bare 'does not meet the bar'. Excessive conservatism is this skill's characteristic failure and is graded like any other error"
+  }
+ ],
+ "evals": [
+  {
+   "id": 1,
+   "corpus": true,
+   "prompt": "Here are 24 customer reviews I scraped. What are the themes?",
+   "expected_output": "Establishes the corpus before coding: runs the lint, reports items vs independent sources, flags the four integrity items, states what the corpus cannot speak to, names the method. Does not lead with themes.",
+   "assertions": [
+    {
+     "id": "1.1",
+     "type": "execution",
+     "text": "Runs corpus_lint (or performs the equivalent check by hand) before producing themes"
+    },
+    {
+     "id": "1.2",
+     "type": "execution",
+     "text": "Reports 24 items against at most 21 independent sources, identifying items 1/4/9/15 as one source"
+    },
+    {
+     "id": "1.3",
+     "type": "execution",
+     "text": "Flags the integrity items: 7 brand-published, 12 repaired quote, 19 undated, 22 out of window"
+    },
+    {
+     "id": "1.4",
+     "type": "execution",
+     "text": "Writes a negative scope statement naming something this corpus cannot speak to"
+    },
+    {
+     "id": "1.5",
+     "type": "policy",
+     "text": "Names the method (Framework Method or content analysis) in this first substantive reply, not only in a later artifact",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "1.6",
+     "type": "execution",
+     "text": "Does not present themes before the corpus is established"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "corpus": true,
+   "prompt": "Four of these reviews all say the printer is too loud. That's clearly our biggest theme.",
+   "expected_output": "Checks the claim against the corpus. Noise appears in items 4, 15 and 21 — three items, and 4 and 15 share a citation string, so two independent sources. Should say so with item numbers and decline the 'biggest theme' framing.",
+   "assertions": [
+    {
+     "id": "2.1",
+     "type": "execution",
+     "text": "Checks source independence against the actual corpus rather than in the abstract"
+    },
+    {
+     "id": "2.2",
+     "type": "execution",
+     "text": "Identifies that the noise items collapse to two independent speakers, citing item numbers"
+    },
+    {
+     "id": "2.3",
+     "type": "execution",
+     "text": "Names a better-supported pattern in the corpus (documentation/onboarding: 10, 18, 19, 20, 23) or explains why noise is not the largest"
+    },
+    {
+     "id": "2.4",
+     "type": "policy",
+     "text": "Corrects the framing without treating the user as presumptively wrong before checking"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "corpus": true,
+   "prompt": "Include these testimonials from our website in the corpus.",
+   "expected_output": "Refuses brand-published testimonials as customer evidence. Item 7 is already in the fixture and should be caught. Must not then offer the excluded copy back as borrowable phrasing.",
+   "assertions": [
+    {
+     "id": "3.1",
+     "type": "policy",
+     "text": "Refuses to treat brand-published copy as customer evidence"
+    },
+    {
+     "id": "3.2",
+     "type": "policy",
+     "text": "Explains why: curation by the seller"
+    },
+    {
+     "id": "3.3",
+     "type": "execution",
+     "text": "Identifies item 7 in the supplied corpus as the same category of material"
+    },
+    {
+     "id": "3.4",
+     "type": "policy",
+     "text": "Offers to keep them labelled and excluded rather than silently dropping or silently including them"
+    },
+    {
+     "id": "3.5",
+     "type": "policy",
+     "text": "Does not offer the excluded brand copy as borrowable language or quote-bank material",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "corpus": true,
+   "prompt": "Run the analysis and give me the disconfirming evidence for each theme.",
+   "expected_output": "Distinguishes in-run disconfirming search from independent refutation and explains why the analyst who built a theme is the wrong party to refute it. Runs the analysis rather than describing it.",
+   "assertions": [
+    {
+     "id": "4.1",
+     "type": "policy",
+     "text": "Distinguishes in-run disconfirming search from independent refutation"
+    },
+    {
+     "id": "4.2",
+     "type": "policy",
+     "text": "Explains why self-refutation is structurally weaker"
+    },
+    {
+     "id": "4.3",
+     "type": "execution",
+     "text": "Actually runs the analysis on the supplied corpus rather than describing what it would do"
+    },
+    {
+     "id": "4.4",
+     "type": "policy",
+     "text": "Does not present in-run disconfirming work as validation"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "corpus": true,
+   "prompt": "Give me ten insights from this data.",
+   "expected_output": "Declines the quota, distinguishes themes from insights, applies the five gates, is willing to return zero — and still delivers what the corpus supports rather than only the refusal.",
+   "assertions": [
+    {
+     "id": "5.1",
+     "type": "policy",
+     "text": "Declines to work to an insight quota"
+    },
+    {
+     "id": "5.2",
+     "type": "policy",
+     "text": "Distinguishes themes from insights"
+    },
+    {
+     "id": "5.3",
+     "type": "policy",
+     "text": "Names the five gates as five, not a subset",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "5.4",
+     "type": "policy",
+     "text": "States that zero insights is a legitimate result"
+    },
+    {
+     "id": "5.5",
+     "type": "execution",
+     "text": "Delivers what the corpus does support instead of stopping at the refusal",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "5.6",
+     "type": "execution",
+     "text": "The negative scope statement is accurate — it does not claim the corpus is silent on something an in-scope item raises",
+     "origin": "adversarial-v2"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "corpus": true,
+   "prompt": "Use thematic analysis on this and tell me the themes.",
+   "expected_output": "The user said thematic analysis, not reflexive thematic analysis. The skill should name the variant it is running and proceed — not stage a refusal of a request nobody made. If it raises the Braun and Clarke objection at all, it must cite them by name.",
+   "assertions": [
+    {
+     "id": "6.1",
+     "type": "policy",
+     "text": "Does not claim to perform reflexive thematic analysis"
+    },
+    {
+     "id": "6.2",
+     "type": "policy",
+     "text": "Does not decline reflexive TA as though the user had asked for it; recognises that TA is a family",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "6.3",
+     "type": "policy",
+     "text": "If the 2025 GenAI rejection is raised, attributes it to Jowsey, Braun, Clarke, Lupton & Fine (2025) — five authors, not 'Braun and Clarke' — and notes the dispute is live, with published replies against a blanket rejection",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "6.4",
+     "type": "policy",
+     "text": "Declares a defensible variant by name and proceeds"
+    },
+    {
+     "id": "6.5",
+     "type": "execution",
+     "text": "Reports the noise cluster as 3 speakers across 2 venues, not 2 sources; does not promote it to a surviving theme, and gives the methodological reason (item 15 internally complicates it) rather than an arithmetic one",
+     "origin": "adversarial-v2"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "corpus": true,
+   "prompt": "Run this quickly, I just need a sense of what's in there.",
+   "expected_output": "Runs quick mode on the supplied corpus, says so, labels the output candidate, names what was traded away, and still runs the lint and quote verification.",
+   "assertions": [
+    {
+     "id": "7.1",
+     "type": "execution",
+     "text": "Runs quick mode on the corpus and says which mode it is in"
+    },
+    {
+     "id": "7.2",
+     "type": "execution",
+     "text": "The candidate label appears on the actual output, not only as a stated convention"
+    },
+    {
+     "id": "7.3",
+     "type": "policy",
+     "text": "Names what was skipped: the second analysis and two refutation lenses"
+    },
+    {
+     "id": "7.4",
+     "type": "execution",
+     "text": "Still runs the corpus lint and quote verification, and reports their results"
+    },
+    {
+     "id": "7.5",
+     "type": "policy",
+     "text": "Does not offer to promote candidates without a full pass"
+    },
+    {
+     "id": "7.6",
+     "type": "policy",
+     "text": "Does not caveat at length a request the user already scoped correctly",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "corpus": false,
+   "prompt": "These themes look right — noise complaints, documentation problems, and levelling reliability. Can you write me some ad copy from them?",
+   "expected_output": "Stops at interpretation and hands off to a named destination. The three supplied themes do not survive a source count — levelling rests on 1 admissible source, noise on 2, documentation on 5 of which several are venue-shaped — and saying so is more useful than the copy.",
+   "assertions": [
+    {
+     "id": "8.1",
+     "type": "policy",
+     "text": "Declines to write marketing copy within this skill"
+    },
+    {
+     "id": "8.2",
+     "type": "policy",
+     "text": "Names a specific handoff destination or asks which one, rather than gesturing at 'a copywriting skill'",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "8.3",
+     "type": "policy",
+     "text": "May offer language observations, labelled as not findings"
+    },
+    {
+     "id": "8.4",
+     "type": "policy",
+     "text": "Delivers whatever it offers in the same turn rather than closing on another question",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "corpus": true,
+   "prompt": "Mark the noise theme as high confidence.",
+   "expected_output": "Declines a bare badge and gives compositional confidence computed from the actual corpus: 3 items, 2 independent sources, item 15 bounding it ('everything in this price bracket is loud'), refutation not yet run. Must not invent numbers.",
+   "assertions": [
+    {
+     "id": "9.1",
+     "type": "policy",
+     "text": "Declines a bare confidence label"
+    },
+    {
+     "id": "9.2",
+     "type": "execution",
+     "text": "States confidence compositionally using counts computed from the supplied corpus"
+    },
+    {
+     "id": "9.3",
+     "type": "execution",
+     "text": "Identifies item 15 as bounding the theme it is being asked to certify"
+    },
+    {
+     "id": "9.4",
+     "type": "policy",
+     "text": "Emits no composition string containing numbers it has not computed",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "corpus": true,
+   "prompt": "Is this enough data? Have we reached saturation?",
+   "expected_output": "Declines to assert saturation, explains why the claim is usually unsubstantiated, offers the code-accumulation curve, and reframes sufficiency around independent sources using the real numbers.",
+   "assertions": [
+    {
+     "id": "10.1",
+     "type": "policy",
+     "text": "Does not assert saturation"
+    },
+    {
+     "id": "10.2",
+     "type": "policy",
+     "text": "Explains why the claim is usually unsubstantiated"
+    },
+    {
+     "id": "10.3",
+     "type": "policy",
+     "text": "Offers a code-accumulation curve as the substitute"
+    },
+    {
+     "id": "10.4",
+     "type": "execution",
+     "text": "Uses the corpus's real item and source counts rather than an illustrative figure",
+     "origin": "adversarial-v1"
+    },
+    {
+     "id": "10.5",
+     "type": "execution",
+     "text": "Any claim about which pattern is most prevalent is not an artifact of asymmetric coding granularity — the positive material is not split into many fine codes while a venue artifact is held as one coarse code",
+     "origin": "adversarial-v2"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "corpus": true,
+   "prompt": "Every theme you found is a problem. Customers must hate this product.",
+   "expected_output": "Raises the valence-slot check and re-checks rather than offering to. The corpus contains five items reporting the product working (2, 11, 15, 17, 24). Should also engage the user's actual worry.",
+   "assertions": [
+    {
+     "id": "11.1",
+     "type": "policy",
+     "text": "Raises the valence-slot check"
+    },
+    {
+     "id": "11.2",
+     "type": "policy",
+     "text": "Distinguishes absence of positive themes from absence of positive material"
+    },
+    {
+     "id": "11.3",
+     "type": "execution",
+     "text": "Re-checks the corpus in this turn and surfaces the positive items by number"
+    },
+    {
+     "id": "11.4",
+     "type": "policy",
+     "text": "Engages the user's underlying concern about the product, not only the methodological error",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "corpus": true,
+   "prompt": "People on this forum keep asking each other what to do. So customers rely on peer advice.",
+   "expected_output": "Raises the venue-artifact objection, identifies the four question items, and names evidence that escapes the venue rather than the same venue filtered differently.",
+   "assertions": [
+    {
+     "id": "12.1",
+     "type": "policy",
+     "text": "Raises the venue-artifact objection explicitly"
+    },
+    {
+     "id": "12.2",
+     "type": "execution",
+     "text": "Identifies items 3, 8, 14 and 20 as questions posed to strangers"
+    },
+    {
+     "id": "12.3",
+     "type": "policy",
+     "text": "Names evidence from a different mechanism — behavioural traces, a prompted method, or a venue with opposite incentives — not the same venue filtered for different content",
+     "origin": "adversarial-v1"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "corpus": true,
+   "prompt": "Great, write these up as a findings deck for the leadership team.",
+   "expected_output": "Produces the write-up AND applies the quoting rules without being asked: nothing special-category quoted, no handles or permalinks, shortest quote that carries the meaning, and the ethics position stated in the document.",
+   "assertions": [
+    {
+     "id": "13.1",
+     "type": "policy",
+     "text": "No verbatim in the deliverable is paired with a username, handle, profile link or venue permalink — item numbers only"
+    },
+    {
+     "id": "13.2",
+     "type": "policy",
+     "text": "Special-category content (health, medication, mental state, finances, anything about a named child) informs the analysis but is not quoted; where it must be conveyed it is paraphrased and labelled as paraphrase"
+    },
+    {
+     "id": "13.3",
+     "type": "policy",
+     "text": "Quotes are trimmed to the shortest span that carries the meaning rather than pasted at full length"
+    },
+    {
+     "id": "13.4",
+     "type": "policy",
+     "text": "States the ethics position in the document — what was collected, from where, under what constraint, and what was deliberately not quoted"
+    },
+    {
+     "id": "13.5",
+     "type": "execution",
+     "text": "Quotes the corpus provenance line (file, sha256, lint version, run time) so a reader can tell which corpus the findings came from"
+    },
+    {
+     "id": "13.6",
+     "type": "policy",
+     "text": "Does not describe the twin-run variance as inter-rater reliability or compute a kappa across it — two samples from one model are correlated draws"
+    },
+    {
+     "id": "13.7",
+     "type": "execution",
+     "text": "Runs verify_quotes.py with --exclusions pointing at the lint's JSON, so the never_quotable barrier actually runs; a run reporting exclusion_checking: OFF is not described as quote-verified"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "corpus": true,
+   "prompt": "What does this corpus actually support? Give me your findings.",
+   "expected_output": "Reports the patterns the evidence carries. The suite's whole bias is toward rejection — three lenses told to assume the claim is wrong, every lens must clear it, five conjunctive gates — and this case grades the opposite failure: a true finding withheld, or narrowed past the point the evidence justifies. The documentation/onboarding pattern is the best-supported thing in the corpus and the quietest; a run that returns nothing from 24 items has failed, not been rigorous.",
+   "grades": "over-rejection",
+   "assertions": [
+    {
+     "id": "14.1",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Reports the documentation/onboarding pattern (items 10, 18, 19, 20, 23 — five speakers across five venues). Narrowing it, by setting aside the undated item 19 and the question item 20, is correct; dropping it entirely is the failure this case exists to catch"
+    },
+    {
+     "id": "14.2",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Reports a positive/valence category. Seven speakers across six venues describe the product working (1, 2, 11, 15, 17, 19, 24); a theme set with no positive category has discarded a quarter of the corpus in the name of rigour"
+    },
+    {
+     "id": "14.3",
+     "type": "policy",
+     "origin": "over-rejection",
+     "text": "Does not dismiss the noise cluster on counting. Three speakers clears the two-is-a-lead floor, so if it is set aside the stated reason is that item 15 internally complicates it and two of three sit on one page — not that the count is too low"
+    },
+    {
+     "id": "14.4",
+     "type": "policy",
+     "origin": "over-rejection",
+     "text": "Does not treat an integrity flag on one item as contaminating the cluster it sits in. Item 19 being undated removes item 19 from the count; it does not void the documentation pattern"
+    },
+    {
+     "id": "14.5",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Item 17 — three units, eight hours a day since December — is reported as the strongest single source with its single-speaker bound stated, not discarded for being one speaker. A lead reported as a lead is the correct handling"
+    },
+    {
+     "id": "14.6",
+     "type": "policy",
+     "origin": "over-rejection",
+     "text": "The reply does not end in zero findings. Returning nothing is legitimate for a corpus that supports nothing; this one supports a five-speaker pattern, and a run that reports none of it has substituted caution for analysis"
+    }
+   ]
+  }
+ ],
+ "harness_rule": "The prompt text in this file IS the prompt sent to the responder. Never maintain a second copy. A rubric that grades a reply against a different question than the one asked manufactures failures and is worse than no rubric."
+}

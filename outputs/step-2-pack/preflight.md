@@ -19,7 +19,7 @@ Lane E, 2026-10-20. Pack: `brand-pack/` with `brand-context.md` (written by lane
 | Census (REVIEW.md rule 9), `brand-pack/` | 0 hits on any other brand's term (327 terms rebuilt 2026-10-21: no new term against 0.5.2's list); 14 figma-key-shaped hits, all HLR's own files: the reference copy 7, the library 5, HLR-EMAIL 1, HLR-Social 1. The brand home's tracked and untracked files (rule 9's copy): 58 hits, all HLR's four keys; the ignored list holds `_setup/` and the client originals only |
 | Em dash bytes in lane E's three files | 0 |
 
-Nothing blocks. `preflight.py` grades four required roles (voice contract, claims ledger, product database, type registry) and they resolve, with the concrete lexicon and the exemplars; the rest of the pack degrades or stops by design, as section 2 lists.
+Nothing blocks. `preflight.py` grades three required roles (voice contract, product database, type registry; the claims ledger role was removed in engine 0.6.0, DECISIONS 2026-10-31) and they resolve, with the concrete lexicon and the exemplars; the rest of the pack degrades or stops by design, as section 2 lists.
 
 ## 2. What degrades, and who closes it
 
@@ -39,7 +39,7 @@ From `preflight.py` (its nine degraded roles) and from the pack contract's cost 
 | `section_library` null | `web-copy` stops and `page_lint.js` refuses every page (blocking by design, lane D's Gate 2 call 1 b) | Eddie | Review 2, unless package call 13 b |
 | `grounding_inputs` null | paid concepts are labelled hypotheses | Eddie, then HLR | Review 1, if package call 17 puts the question there |
 | `insight_register` null | customer-evidence cannot tell what is already believed beyond `brand-context.md`'s section | Eddie, then HLR | Review 1, if package call 17 puts the question there |
-| `legal_ledger` at `test-seed` (v0.2.0) | claims checking runs, nothing is cleared; every needs_legal row blocks; the karat and metaphysical rows are listed for the verifier, never blocking (Eddie, 2026-10-21) | HLR's claims signer | Review 1 (C2) |
+| the claims ledger role | removed in engine 0.6.0 (DECISIONS 2026-10-31): no legal status, no counsel sign-off; its product facts are in `products.json` `_meta.brand_facts` with their sources, the file archived under `_archive/brand-pack/`; every lint carries a `sourcing` line in place of `claims_checking` | none | none |
 | `faces_policy`, `image_look`, `pack_shot_index`, `video_rules` null | image and video layers report the gap; every image well is a labelled grey placeholder | HLR, Eddie | Review 1; scope |
 | `fonts.licensed: false` | every deliverable that renders text carries the license flag | HLR | before production |
 | Canvas modes in `tokens.json` | 0.5.1 exports the web scale only; 0.5.2's `check`, `export` and `figma-plan` stop | lane H | 0.5.3 |
@@ -89,7 +89,7 @@ REVIEW.md section 6, R14: a required file or board with no owning step (`slotmap
 - a quoted step under four words, or one not in an open line of `PROGRESSION.md`: an unticked box for a lane or chat (which may quote its own section of the chat prompts instead, with a warning), an unticked box or a Reviews line for Eddie, Donnie or HLR; and a lane or chat owner with no step;
 - an HLR-owned row that cites no Brand Review v2 or token proposal question, or one the list does not hold;
 - a board in `figma.yaml`, inline or block layout, that is neither recorded as built ("built <date>" in its note) nor named by a gap row (round 3);
-- an open row of `token-model.md`'s gap register, a gap in `products.json` `_meta`, or a topic of `legal-ledger.json` whose owner does not start with an owner from the list (a qualifier after a comma, a bracket or "'s" is allowed: "HLR (export)", "HLR's claims signer").
+- an open row of `token-model.md`'s gap register, a gap in `products.json` `_meta`, (the claims ledger's topics went with it in engine 0.6.0) whose owner does not start with an owner from the list (a qualifier after a comma, a bracket or "'s" is allowed: "HLR (export)", "HLR's claims signer").
 
 It warns when a lane's or chat's step and prompt do not name the role it owns, and when a cited question shares no word with its row. Tested by mutation on a copy of the pack, each caught with its own line: a ticked line as a step; a one-word step; an HLR row no list asks; an HLR row citing a question that is not there; a dropped role; a null role with no row; a role wired to a missing file; a chat owner with no step; round 2's owner "Eddie, to be assigned"; a repeated row; a row with a cell missing; a chat anchored to a Reviews line; a board renamed out of its row; and, as a warning, an HLR row citing an unrelated question. Without the chat prompts file it prints the same two failures and one more warning.
 
@@ -162,13 +162,14 @@ let fail = 0; const say = (ok, m) => { if (!ok) fail++; console.log((ok ? 'PASS 
 say(fm.prohibited_patterns.includes(FRAG), 'the fragment (backslash, u2014) is in prohibited_patterns, as text');
 say(!raw.includes(EM), 'brand-context.md carries no em dash character');
 const RE = new RegExp('(' + fm.prohibited_patterns.join('|') + ')', 'i');
-const led = JSON.parse(fs.readFileSync(path.join(PACK, fm.legal_ledger), 'utf8'));
-const disc = led.entries.find(e => e.id === 'HLR-REQ-01').required_language;
+const db = JSON.parse(fs.readFileSync(path.join(PACK, fm.product_db), 'utf8'));
+const disc = db._meta.brand_facts.facts.find(e => e.id === 'site_footer_text').fact;   // 0.6.0: the footer text lives in products.json, not a ledger
 const LINE = 'A quiet line' + EM + 'with a dash';
 say((LINE.match(RE) || [])[0] === EM, 'compiled as the lints compile it, its match on a line with U+2014 is the em dash itself');
-say(!RE.test(disc), 'it does not match the footer disclaimer (HLR-REQ-01)');
+say(!RE.test(disc), 'it does not match the footer disclaimer (products.json _meta.brand_facts site_footer_text)');
 say(!RE.test('A quiet line, with a comma'), 'it does not match the same line with a comma');
-const LINTS = { copy: 'email-copy/scripts/copy_lint.js', social: 'social-copy/scripts/social_lint.js', paid: 'paid-ad-copy/scripts/paid_lint.js', page: 'web-copy/scripts/page_lint.js', brief: 'brief-intake/scripts/brief_lint.js' };
+// 0.6.0: the social and web copy lints left the bundle (DECISIONS 2026-10-31); the three that remain are probed.
+const LINTS = { copy: 'email-copy/scripts/copy_lint.js', paid: 'paid-ad-copy/scripts/paid_lint.js', brief: 'brief-intake/scripts/brief_lint.js' };
 const COMPILE = "new RegExp('(' + prohibitedPatterns.join('|') + ')', 'i')";
 for (const [k, rel] of Object.entries(LINTS)) {
   const src = fs.readFileSync(path.join(ENG, 'skills', rel), 'utf8');
@@ -178,16 +179,13 @@ const reg = JSON.parse(fs.readFileSync(path.join(PACK, fm.type_registry_core), '
 const opt = c => ({ copy: c, axis: 'Benefit', score: 15, why: 'probe' });
 const slates = {
   copy: ['--slate', { skill: 'email-copy', format: 2, type: etype, brief: { name: 'R7 probe', type: etype, objective: 'probe', audience: 'probe' }, provenance: { generated_at: '2026-10-20', facts: [], guardrails: ['R7 probe'] }, gates: { hero: [opt(LINE)] }, modules: {}, routes: [] }],
-  social: ['--slate', { skill: 'social-copy', format: 1, post_format: 'story_set', module: 'S04', ratios: ['9x16'], brief: { name: 'R7 probe', objective: 'probe', frames: 1 }, angle_gate: { picked_by: 'human', provisional: false, picked: 0 }, gates: { angle: [{ copy: 'Probe angle', axis: 'Benefit', why: 'probe' }], cover: [{ copy: LINE, axis: 'Benefit' }], sequence: [{ role: 'frame', structure: 'text', slots: { headline: LINE } }] }, provenance: { brand: 'High Light Rituals' } }],
   paid: ['--slate', { skill: 'paid-ad-copy', format: 1, type: 'problem_solution', brief: { name: 'R7 probe', objective: 'probe', audience: 'probe' }, provenance: { generated_at: '2026-10-20' }, ratios: ['4x5'], gates: { copy: [{ axis: 'Problem', primary_text: LINE, headline: 'Probe headline', description: 'Probe', on_image: LINE }] } }],
-  page: ['--page', { skill: 'web-copy', format: 1, page_type: 'pdp', brief: { name: 'R7 probe', objective: 'probe' }, provenance: { generated_at: '2026-10-20' }, breakpoints: ['desktop'], sections: [{ id: 'W01', slots: { message: LINE } }] }],
-  page_held: ['--page', null, ['--sections', path.join(PACK, 'section-library.json')]],
   brief: ['--brief', { skill: 'brief-intake', format: 1, slug: 'r7-probe', brand: 'High Light Rituals', objective: 'probe', audience: 'probe', message: LINE, products: [], channels: [], must_say: [], never_say: { brief: [], pack: fm.prohibited_patterns, union: fm.prohibited_patterns }, gaps: [], provenance: { brand: 'High Light Rituals' } }],
 };
 const COMMA = 'A quiet line, with a comma', hitsOf = out => [...out.split(String.fromCharCode(92) + '"').join('"').matchAll(/prohibited territory[^"\n]*"([^"\n]*)"/g)].map(x => x[1]);
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'r7-'));
 for (const [k, [flag, doc0, extra]] of Object.entries(slates)) {
-  const doc = doc0 || slates.page[1], lint = LINTS[k] || LINTS.page;
+  const doc = doc0, lint = LINTS[k];
   const p = path.join(tmp, k + '.json'); fs.writeFileSync(p, JSON.stringify(doc));
   const r = cp.spawnSync('node', [path.join(ENG, 'skills', lint), flag, p, '--pack', PACK, ...(extra || [])], { encoding: 'utf8' });
   const out = (r.stdout || '') + (r.stderr || ''), hit = hitsOf(out).includes(EM);
@@ -305,9 +303,7 @@ for l in tm.splitlines():
 for g in json.loads(rd(PACK, fm["product_db"]))["_meta"].get("gaps", []):
     o = str(g.get("owner", "")).strip()
     if not LEAD.match(o) or UNOWNED.search(o): fails.append(f"products.json gap, owner {o or 'empty'!r} is not on the allowed-owner list: {g.get('gap', '')[:60]}")
-for t, v in json.loads(rd(PACK, fm["legal_ledger"])).get("topics", {}).items():
-    o = str(v.get("owner", "")).strip()
-    if not LEAD.match(o) or UNOWNED.search(o): fails.append(f"legal-ledger.json topic {t}: owner {o or 'empty'!r} is not on the allowed-owner list")
+# 0.6.0: no claims ledger role (DECISIONS 2026-10-31); its topics and owners are gone with it.
 print(f"R14: {len(roles)} contract roles, {len(fm)} File map keys, {len(byitem)} gap rows" + ("" if prompts is not None else "; no chat prompts file here, so steps are read from PROGRESSION.md alone"))
 for f in fails: print("FAIL", f)
 for w in warns: print("WARN", w)

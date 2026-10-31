@@ -1,0 +1,517 @@
+{
+ "_note": "TEST FIXTURE ONLY. A synthetic section library for exercising page_lint's budget and composition checks: invented names, invented budgets, no reach counts. Not any brand's site; never ship it as an engine fallback or as brand truth.",
+ "_version": "2026-10-17",
+ "pins": null,
+ "_budget_method": {
+  "how": "chars = (slot width in px / (font size x advance ratio)) x lines. The advance ratio is the average for the brand's own type stacks at these sizes; it is a planning figure, not a renderer.",
+  "why": "A slot budget is not a style preference. Components are built to measured geometry: a card title that overruns re-wraps and changes the card's height, and on a fixed-height mobile slide it clips. The budget is the shape of the box the copy has to live in.",
+  "confidence": "Budgets are DERIVED, not measured per string. They are a warning threshold, not a ceiling: over budget means look at it in the file, not that it is wrong."
+ },
+ "breakpoints": {
+  "desktop": {
+   "label": "Desktop",
+   "width": 1440
+  },
+  "mobile_stack": {
+   "label": "Mobile Stack",
+   "width": 390
+  },
+  "mobile_carousel": {
+   "label": "Mobile Carousel",
+   "width": 390
+  }
+ },
+ "sections": [
+  {
+   "id": "W01",
+   "name": "Split Promo",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "eyebrow": {
+     "budget": {
+      "desktop": 35,
+      "mobile_stack": 30
+     },
+     "role": "text"
+    },
+    "heading": {
+     "budget": {
+      "desktop": 38,
+      "mobile_stack": 32
+     },
+     "role": "text"
+    },
+    "body": {
+     "budget": {
+      "desktop": 188,
+      "mobile_stack": 150
+     },
+     "role": "text"
+    },
+    "cta_label": {
+     "budget": {
+      "desktop": 22,
+      "mobile_stack": 22
+     },
+     "role": "cta"
+    }
+   },
+   "open_decision": "FIXTURE: this master carries a synthetic unresolved modelling decision : its heading renders at two sizes and changing the master touches multiple pages, so it is held. Exists to test that open decisions surface on every page composing the section."
+  },
+  {
+   "id": "W02",
+   "name": "Review Wall",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "pull_quote": {
+     "budget": {
+      "desktop": 88,
+      "mobile_stack": 60
+     },
+     "role": "text"
+    },
+    "subcopy": {
+     "budget": {
+      "desktop": 138,
+      "mobile_stack": 0
+     },
+     "role": "text"
+    },
+    "review_quote": {
+     "budget": {
+      "desktop": 188,
+      "mobile_stack": 188
+     },
+     "role": "verbatim",
+     "repeat": true
+    },
+    "attribution": {
+     "budget": {
+      "desktop": 25,
+      "mobile_stack": 25
+     },
+     "role": "text",
+     "repeat": true
+    }
+   },
+   "requires_verbatim": true
+  },
+  {
+   "id": "W03",
+   "name": "Reasons Row",
+   "breakpoints": [
+    "desktop",
+    "mobile_carousel"
+   ],
+   "slots": {
+    "heading": {
+     "budget": {
+      "desktop": 42,
+      "mobile_carousel": 42
+     },
+     "role": "text"
+    },
+    "card_title": {
+     "budget": {
+      "desktop": 32,
+      "mobile_carousel": 28
+     },
+     "role": "text",
+     "repeat": 3
+    },
+    "card_body": {
+     "budget": {
+      "desktop": 112,
+      "mobile_carousel": 78
+     },
+     "role": "text",
+     "repeat": 3
+    },
+    "cta_label": {
+     "budget": {
+      "desktop": 28,
+      "mobile_carousel": 28
+     },
+     "role": "cta"
+    }
+   }
+  },
+  {
+   "id": "W04",
+   "name": "Questions",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "heading": {
+     "budget": {
+      "desktop": 38,
+      "mobile_stack": 32
+     },
+     "role": "text"
+    },
+    "question": {
+     "budget": {
+      "desktop": 100,
+      "mobile_stack": 80
+     },
+     "role": "text",
+     "repeat": [
+      5,
+      8
+     ]
+    },
+    "answer": {
+     "budget": {
+      "desktop": 525,
+      "mobile_stack": 525
+     },
+     "role": "text",
+     "repeat": [
+      5,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "W08",
+   "name": "Steps",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {
+    "heading": {
+     "budget": {
+      "desktop": 38
+     },
+     "role": "text"
+    },
+    "sub": {
+     "budget": {
+      "desktop": 150
+     },
+     "role": "text"
+    },
+    "cta_label": {
+     "budget": {
+      "desktop": 30
+     },
+     "role": "cta"
+    }
+   }
+  },
+  {
+   "id": "W09",
+   "name": "Announcement Bar",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "message": {
+     "budget": {
+      "desktop": 75,
+      "mobile_stack": 50
+     },
+     "role": "text"
+    }
+   }
+  },
+  {
+   "id": "W10",
+   "name": "Link Cards",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack",
+    "mobile_carousel"
+   ],
+   "slots": {
+    "heading": {
+     "budget": {
+      "desktop": 42,
+      "mobile_stack": 38,
+      "mobile_carousel": 38
+     },
+     "role": "text"
+    },
+    "sub": {
+     "budget": {
+      "desktop": 150,
+      "mobile_stack": 112,
+      "mobile_carousel": 112
+     },
+     "role": "text"
+    },
+    "card_title": {
+     "budget": {
+      "desktop": 30,
+      "mobile_stack": 30,
+      "mobile_carousel": 20
+     },
+     "role": "text",
+     "repeat": [
+      3,
+      6
+     ]
+    }
+   }
+  },
+  {
+   "id": "W11",
+   "name": "Site Footer",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "link_label": {
+     "budget": {
+      "desktop": 32,
+      "mobile_stack": 32
+     },
+     "role": "link",
+     "repeat": 24
+    }
+   }
+  },
+  {
+   "id": "W12",
+   "name": "Category Header",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "title": {
+     "budget": {
+      "desktop": 45,
+      "mobile_stack": 32
+     },
+     "role": "text"
+    },
+    "description": {
+     "budget": {
+      "desktop": 250,
+      "mobile_stack": 188
+     },
+     "role": "text"
+    }
+   }
+  },
+  {
+   "id": "W13",
+   "name": "Product Grid",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "_repeat_of": "E13 Item Card"
+   }
+  },
+  {
+   "id": "W14",
+   "name": "Filters",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "chip_label": {
+     "budget": {
+      "desktop": 22,
+      "mobile_stack": 18
+     },
+     "role": "link",
+     "repeat": true
+    }
+   }
+  },
+  {
+   "id": "W15",
+   "name": "Buy Box",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {
+    "title": {
+     "budget": {
+      "desktop": 50
+     },
+     "role": "text"
+    },
+    "plan_label": {
+     "budget": {
+      "desktop": 38
+     },
+     "role": "text",
+     "repeat": true
+    },
+    "legal": {
+     "budget": {
+      "desktop": 150
+     },
+     "role": "legal"
+    }
+   }
+  },
+  {
+   "id": "W16",
+   "name": "Set Contents",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {
+    "heading": {
+     "budget": {
+      "desktop": 38
+     },
+     "role": "text"
+    },
+    "item_name": {
+     "budget": {
+      "desktop": 35
+     },
+     "role": "text",
+     "repeat": true
+    }
+   }
+  },
+  {
+   "id": "W17",
+   "name": "Checklist",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {
+    "headline": {
+     "budget": {
+      "desktop": 50
+     },
+     "role": "text"
+    },
+    "line": {
+     "budget": {
+      "desktop": 75
+     },
+     "role": "text",
+     "repeat": 4
+    }
+   }
+  },
+  {
+   "id": "W18",
+   "name": "Long Read",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {
+    "body": {
+     "budget": {
+      "desktop": 2500
+     },
+     "role": "text"
+    }
+   },
+   "seo_block": true
+  },
+  {
+   "id": "W19",
+   "name": "Image Strip",
+   "breakpoints": [
+    "desktop"
+   ],
+   "slots": {}
+  },
+  {
+   "id": "W20",
+   "name": "Spec Bar",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "label": {
+     "budget": {
+      "desktop": 28,
+      "mobile_stack": 22
+     },
+     "role": "text",
+     "repeat": 5
+    }
+   }
+  },
+  {
+   "id": "E18",
+   "name": "Notice Toast",
+   "breakpoints": [
+    "desktop",
+    "mobile_stack"
+   ],
+   "slots": {
+    "message": {
+     "budget": {
+      "desktop": 88,
+      "mobile_stack": 60
+     },
+     "role": "text"
+    }
+   }
+  }
+ ],
+ "page_types": {
+  "collection": {
+   "label": "Collection page",
+   "typical": [
+    "W12",
+    "W13",
+    "W03",
+    "W04",
+    "W11"
+   ]
+  },
+  "pdp": {
+   "label": "Product / bundle page",
+   "typical": [
+    "W15",
+    "W16",
+    "W02",
+    "W04",
+    "W11"
+   ],
+   "requires": [
+    "W15"
+   ]
+  },
+  "landing": {
+   "label": "Campaign landing page",
+   "typical": [
+    "W01",
+    "W03",
+    "W02",
+    "W04",
+    "W11"
+   ]
+  },
+  "editorial": {
+   "label": "Editorial / SEO page",
+   "typical": [
+    "W12",
+    "W18",
+    "W04",
+    "W11"
+   ],
+   "requires": [
+    "W18"
+   ]
+  }
+ }
+}

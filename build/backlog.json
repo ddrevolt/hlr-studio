@@ -47,7 +47,7 @@
       "name": "Engine 0.6.0: delete the legal regime, keep product facts with sources",
       "step": "6",
       "kind": "engine",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "Remove lib/claims.js’s legal regime and brand-pack/legal-ledger.json’s role from the HLR bundle: the signer, needs_legal and blocked, the disclaimer row, counsel placeholders, and every branch of brief_lint, copy_lint, paid_lint, social_lint and route_findings that reads them. never_say (the brief) and prohibited_patterns (voice) stay. Product facts that lived in the ledger move to products.json with their sources; the ledger file goes to _archive/. Update references/pack-contract.md, the SKILL.md files, the tests, REVIEW.md (section 1 Not for, section 2 check 3, section 4 tier 3, the never-ships list keeps \"invented figure, claim, price, quote or review\" as sourcing) and build/emdash_baseline.txt where regenerated outputs change.",
       "sources": [
@@ -64,14 +64,15 @@
       ],
       "depends": [],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "2026-10-31, runner: built into engine 0.6.0 (outputs/step-3-bundle/bundle-report-0.6.0.md); the grep test is clean, the ledger is archived under _archive/brand-pack/, its facts are in products.json _meta.brand_facts; checks.sh PASS; the fresh-context review (acceptance 4) has not run."
     },
     {
       "id": "retire-phase1",
       "name": "Engine 0.6.0: retire routes, slates, the judge, verify, options-board, squad-run, web and social copy from the HLR bundle",
       "step": "6",
       "kind": "engine",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "Move the retired skills and their references out of the bundle to _archive/ (never deleted), keep every lint and script the crew reuses (brief_lint, copy_lint, paid_lint, fit_check, slot_lint, tokens_build, preflight), update the registry, README and BUNDLE.md, and the skill descriptions.",
       "sources": [
@@ -87,7 +88,8 @@
         "legal-delete"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "2026-10-31, runner: built into engine 0.6.0; the bundle lists brief-intake, email-copy, paid-ad-copy, design-system and asset-production; the retired skills are under _archive/engine-0.5.3-retired/ with a README; 18 test files, 466 checks pass; the fresh-context review has not run."
     },
     {
       "id": "crew-scaffold",

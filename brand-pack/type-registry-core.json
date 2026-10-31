@@ -98,7 +98,7 @@
    "observed_sequence": "H3>P2+ON filled \"READ MORE\">M04>P1 2x2>AL block>tail",
    "template_nodes": ["2:31200"],
    "evidence": "[observed] \"9/30 - October energy medicine\" send; the same series runs monthly in organic social (S-ENERGY)",
-   "content": "meaning lines are claims (C2): the ledger governs them"
+   "content": "meaning lines are claims (C2): a sourced fact or tradition and intention wording, never a promised effect"
   },
   "testimonials": {
    "label": "Testimonials",
@@ -172,7 +172,7 @@
    "observed_sequence": "H2>M04>M12>M05>M16>M05>M18>M20>F1 | H3>founder quote>star>M04>P5 x4>M16>grey block",
    "template_nodes": ["2:189904", "2:190749"],
    "evidence": "[observed] cart flow and abandoned-cart flow at 1200; the second carries spec rows (E-P5)",
-   "content": "spec rows (meaning) resolve through the product database and the ledger"
+   "content": "spec rows (meaning) resolve through the product database"
   },
   "checkout_abandon": {
    "label": "Checkout abandonment flow",
@@ -249,7 +249,7 @@
      "formats": ["carousel", "story_set"],
      "patterns": ["S-ANNOT"],
      "evidence": "[documented p48 to p50] annotations; [observed] 9 feed and 32 story frames",
-     "content": "callout words come from the claims ledger"
+     "content": "callout words come from sourced facts in products.json"
     },
     "education": {
      "label": "Education: stone meaning, ritual how-to",
@@ -370,7 +370,7 @@
      "module": "P03",
      "patterns": ["P-ANNOT-BUILD", "P-ANNOT-MODEL", "P-STACK"],
      "nodes": ["2:42498", "2:37799", "2:57502"],
-     "claims_exposure": "high: callout benefit lines (\"BOOST INTUITION\") are claims; the ledger governs every callout"
+     "claims_exposure": "high: callout benefit lines (\"BOOST INTUITION\") are claims; every callout is a sourced fact or is not written"
     },
     {
      "id": "meaning",
@@ -392,7 +392,7 @@
      "module": "P08",
      "patterns": ["P-GRID"],
      "nodes": ["2:57657"],
-     "claims_exposure": "tiles are data-fed (product database attributes.birth_month); any meaning line goes through the ledger"
+     "claims_exposure": "tiles are data-fed (product database attributes.birth_month); any meaning line is tradition or intention wording, never a promised effect"
     },
     {
      "id": "brand_line",

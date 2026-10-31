@@ -70,7 +70,7 @@
     "claim7": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"},
     "claim8": {"budget": {"desktop": null, "mobile_stack": null}, "role": "text", "case": "sentence", "status": "proposed, unbuilt"}
    },
-   "note": "Every line is a claim (\"Healer-led\" and seven more [observed]): each needs a claims-ledger row before it ships (C2, lane C).",
+   "note": "Every line is a claim (\"Healer-led\" and seven more [observed]): each needs a sourced fact in products.json before it ships (C2; no ledger since DECISIONS 2026-10-31).",
    "evidence": "[observed] W-TRUST 2:185646"
   },
   {
@@ -176,7 +176,7 @@
    "breakpoints": ["desktop", "mobile_stack"],
    "requires_verbatim": true,
    "slots": {
-    "disclaimer": {"budget": {"desktop": null, "mobile_stack": null}, "role": "verbatim", "case": "as-is", "status": "proposed, unbuilt", "note": "the site's disclaimer, the only required language found (Brand Review v2 Q1): set verbatim from the claims ledger's required_language (lane C), never trimmed"}
+    "disclaimer": {"budget": {"desktop": null, "mobile_stack": null}, "role": "verbatim", "case": "as-is", "status": "proposed, unbuilt", "note": "the site's disclaimer, the only required language found (Brand Review v2 Q1): set verbatim from products.json _meta.brand_facts site_footer_text, never trimmed"}
    },
    "note": "Links and the copyright line are site structure and data, not copy.",
    "evidence": "[observed] W-FOOT 2:185644, 2:185645"

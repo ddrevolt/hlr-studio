@@ -1,0 +1,46 @@
+# Synthetic social slot map, for tests only. Not any brand's library: the module ids, node ids,
+# names and ceilings are invented. It carries what social_lint.js's slot checks need: a feed post,
+# a panel set with cover, inner and end masters, and a story set with one slot whose budget is not
+# measured yet.
+
+meta:
+  namespace: fixture
+  key: slot
+  file_key: FIXTURE00000000000000
+  page: "Social"
+  modules: 3
+
+modules:
+  S01:
+    name: "Feed Post"
+    family: social
+    status: built
+    node_id: "9101:1"
+    slots:
+      - { id: S01.headline, role: headline, max_chars: 48, case: sentence }
+      - { id: S01.subline, role: subline, max_chars: 72, case: sentence }
+  S03:
+    name: "Panel Set"
+    family: social
+    status: built
+    set_node_id: "9102:1"
+    property: { Panel: ["Cover", "Inner", "End"] }
+    slots:
+      - { id: S03.cover.headline, role: headline, max_chars: 40, case: sentence }
+      - { id: S03.cover.subline, role: subline, max_chars: 60, case: sentence }
+      - { id: S03.inner.headline, role: headline, max_chars: 44, case: sentence }
+      - { id: S03.inner.body, role: body, max_chars: 160, case: sentence }
+      - { id: S03.end.headline, role: headline, max_chars: 40, case: sentence }
+      - { id: S03.end.cta, role: cta, max_chars: 24, case: upper }
+  S04:
+    name: "Story Set"
+    family: social
+    status: built
+    set_node_id: "9103:1"
+    property: { Structure: ["Text", "Inset", "Full bleed", "Split"] }
+    slots:
+      - { id: S04.text.headline, role: headline, max_chars: 60, case: sentence }
+      - { id: S04.inset.headline, role: headline, max_chars: 40, case: sentence }
+      - { id: S04.full_bleed.headline, role: headline, max_chars: 36, case: sentence }
+      - { id: S04.split.headline, role: headline, max_chars: 40, case: sentence }
+      - { id: S04.split.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }

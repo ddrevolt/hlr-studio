@@ -1,0 +1,55 @@
+{
+  "_note": "Platform facts for organic Instagram posts, not brand facts. Verified 17 October 2026 against the sources listed. Platforms move these; re-verify at build time and update this file, never a brand pack. Every number carries its confidence: 'agreed' (the sources agree, or the platform announced it), 'derived' (arithmetic on agreed numbers), 'approximate' (a rule of thumb the platform renders differently by device and layout; the lint warns and never errors on it), 'contested' (sources disagree; the lint warns and never errors on it).",
+  "_verified": "2026-10-17",
+  "_sources": [
+    "https://www.blogdumoderateur.com/instagram-limite-hashtags-5-par-publication/ (19 December 2025: a five-hashtag limit per post or Reel, announced by Instagram's @creators account on Threads)",
+    "https://later.com/blog/instagram-hashtags/ (21 April 2026: a hard five-hashtag limit on posts and Reels since December 2025)",
+    "https://www.sendcove.app/integrations/instagram/character-limits (10 April 2026: caption 2,200 characters, 125 shown before 'more'; still lists the old 30 hashtags)",
+    "https://bundle.social/blog/instagram-character-limits-guide (17 August 2026: the visible preview before 'more' is about 125 characters on mobile)",
+    "https://www.mallary.ai/blog/instagram-caption-space (11 June 2026: the 125-character 'more' point is a widely cited rule of thumb, and spaces count toward it)",
+    "https://vistasocial.com/insights/instagram-carousel-limit-doubled-to-20-photos-or-videos/ (23 August 2024: carousels raised from 10 to 20 items)",
+    "https://www.inro.social/blog/instagram-post-size (updated 19 March 2026: the profile grid previews every post at 3:4)",
+    "https://www.inro.social/blog/instagram-story-size (2026: keep 250 px clear at the top and bottom of a 1080x1920 story)",
+    "https://www.inro.social/blog/how-to-add-link-to-instagram-post (updated 22 July 2026: links in captions and Reels are not clickable)"
+  ],
+  "caption": {
+    "max": 2200,
+    "visible": 125,
+    "confidence": "agreed",
+    "visible_confidence": "approximate",
+    "note": "max is the hard ceiling (agreed). visible is about where the caption folds behind 'more' on mobile, spaces included (approximate: every source gives it as a rule of thumb, and the cut moves with the device). What has to land (the hook, a must-say, the offer) goes before the fold."
+  },
+  "hashtags": {
+    "max": 5,
+    "confidence": "agreed",
+    "note": "Rolled out December 2025 and announced by Instagram. One April 2026 guide still lists the old 30; the announcement wins."
+  },
+  "links": {
+    "clickable_in_caption": false,
+    "confidence": "agreed",
+    "note": "A URL in an organic caption does not click. Point to the profile link instead, or to a story link sticker where the brand uses one."
+  },
+  "carousel": {
+    "min_panels": 2,
+    "max_panels": 20,
+    "confidence": "agreed",
+    "note": "The maximum rose from 10 to 20 in August 2024. The minimum is definitional: one item is a single post."
+  },
+  "grid": {
+    "preview_ratio": "3:4",
+    "confidence": "agreed",
+    "crop_px": {
+      "4x5": { "visible": [1012, 1350], "note": "full height kept, about 34 px off each side" },
+      "1x1": { "visible": [810, 1080], "note": "full height kept, 135 px off each side" },
+      "9x16": { "visible": [1080, 1440], "note": "full width kept, 240 px off the top and the bottom" }
+    },
+    "crop_confidence": "derived",
+    "crop_note": "Arithmetic of a 3:4 preview centred on the post. One 2026 guide says 4:5 posts lose their top and bottom instead; check one live post before relying on either reading."
+  },
+  "story": {
+    "canvas": [1080, 1920],
+    "keep_clear_px": { "top": 250, "bottom": 250 },
+    "confidence": "contested",
+    "note": "One 2026 guide. The ads zone in paid-ad-copy/references/placement-specs.json (9x16: top 270, bottom 670) is stricter and is the default for any story that may also run as an ad. Stickers (link, poll, countdown) are added in the app and need a clear band the frame leaves."
+  }
+}

@@ -1,0 +1,233 @@
+{
+ "skill_name": "web-copy",
+ "version": "2026-07-27",
+ "note": "First eval set, written with the skill. The evals assume the brand has a measured section library (masters, assembled pages, a slot map), so these grade composition and copy-to-budget, not design. Case 6 grades over-rejection because every other case grades scepticism, and a skill whose characteristic failure is refusing to produce is invisible to a suite that only tests refusing. | 2026-09-07 (0.3.0): 1.3 reworded: it graded writing the benefit-row card bodies to their mobile budget directly, which the compose, map, cut, lint order replaces (compose whole, cut to the tightest breakpoint first, record the cut); case 7 added for the composed block, fit_check and the advisory voice judge.",
+ "fixture": "evals/fixture_brief.md",
+ "fixture_key": "evals/fixture_key.md",
+ "harness_rule": "The prompt text in this file IS the prompt sent to the responder. Never maintain a second copy.",
+ "global_assertions": [
+  {
+   "id": "G1",
+   "type": "policy",
+   "text": "Composes from the existing library. A section the library does not have is named as a request for a new master with its slot shape, never described as a layout"
+  },
+  {
+   "id": "G2",
+   "type": "policy",
+   "text": "States no figure it has not resolved through the facts layer"
+  },
+  {
+   "id": "G3",
+   "type": "execution",
+   "text": "Writes to the tightest breakpoint the section ships, not to desktop — and says which breakpoint set the constraint"
+  },
+  {
+   "id": "G4",
+   "type": "policy",
+   "text": "Reports a check that could not run as an absence. Undeclared breakpoints, an unratified page type and an unresolvable ledger topic are each stated, never folded into a pass"
+  },
+  {
+   "id": "G5",
+   "type": "policy",
+   "text": "Never presents a clean accessibility run as an accessible page; names what automated checking does not cover"
+  }
+ ],
+ "evals": [
+  {
+   "id": 1,
+   "brief": true,
+   "prompt": "Write the copy for a new collection page for the launch line.",
+   "expected_output": "Composes the standard collection sequence from the library, writes each class-A section whole, and cuts to the tightest breakpoint first with every cut recorded.",
+   "assertions": [
+    {
+     "id": "1.1",
+     "type": "execution",
+     "text": "Composes from the section library's existing masters for the page type (or a stated subset), not from invented sections"
+    },
+    {
+     "id": "1.2",
+     "type": "execution",
+     "text": "Notes that the library's existing collection pages differ mostly in copy, rather than treating this as a new design problem"
+    },
+    {
+     "id": "1.3",
+     "type": "execution",
+     "text": "Benefit-row card bodies are composed whole (stored as `composed`) and then cut to the tightest mobile budget first, the cut recorded in `cuts` with its breakpoint; the delivered strings fit that budget, not only the desktop one, and no card body was written directly to a character count"
+    },
+    {
+     "id": "1.4",
+     "type": "policy",
+     "text": "Does not write copy into the product grid, whose content is the product database"
+    },
+    {
+     "id": "1.5",
+     "type": "execution",
+     "text": "Declares the breakpoints the page ships so the lint can check both"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "brief": true,
+   "prompt": "Add a section comparing us to the two big competitors, with a photo of each.",
+   "expected_output": "The library has no slot shape for this. Says so, and describes the master that would need building rather than a layout.",
+   "assertions": [
+    {
+     "id": "2.1",
+     "type": "policy",
+     "text": "Does not invent a near-duplicate of an existing section to avoid saying no"
+    },
+    {
+     "id": "2.2",
+     "type": "execution",
+     "text": "Names the slot shape a new master would need, in the form the library is grouped by"
+    },
+    {
+     "id": "2.3",
+     "type": "policy",
+     "text": "Raises that a named-competitor comparison needs substantiation against that competitor set, not a product figure"
+    },
+    {
+     "id": "2.4",
+     "type": "policy",
+     "text": "Leaves the user with something usable — what could be done with the existing library in the meantime"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "brief": true,
+   "prompt": "Here's the page. Can you check it before we push?",
+   "expected_output": "Runs both checks and reports them as two different things, without letting one stand in for the other.",
+   "assertions": [
+    {
+     "id": "3.1",
+     "type": "execution",
+     "text": "Runs page_lint AND a11y_check, and reports them separately"
+    },
+    {
+     "id": "3.2",
+     "type": "policy",
+     "text": "Does not present a clean copy lint as evidence the page is accessible"
+    },
+    {
+     "id": "3.3",
+     "type": "policy",
+     "text": "Distinguishes findings that block (claims, a slot that is not rendered) from findings that are advisory (budgets, accessibility callouts)"
+    },
+    {
+     "id": "3.4",
+     "type": "execution",
+     "text": "Names what automated accessibility checking does not cover — keyboard order, focus visibility, motion, whether it reads aloud sensibly"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "brief": true,
+   "prompt": "Make the footer links shorter, they're wrapping.",
+   "expected_output": "Recognises the collision between a slot budget and link purpose, and does not resolve it by shipping vague labels.",
+   "assertions": [
+    {
+     "id": "4.1",
+     "type": "policy",
+     "text": "Does not shorten to 'Learn more' or equivalents; recognises the footer's link slots as the widest accessibility surface on the site"
+    },
+    {
+     "id": "4.2",
+     "type": "execution",
+     "text": "Names the real trade-off: a budget that cannot take an honest label is a finding about the component, not a licence for a vague one"
+    },
+    {
+     "id": "4.3",
+     "type": "execution",
+     "text": "Offers shorter labels that still name their destination"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "brief": true,
+   "prompt": "Write the How It Works section for the landing page.",
+   "expected_output": "Writes it and, where the section library records that the live site ships the section as baked images, flags that the copy will not appear until the site changes.",
+   "assertions": [
+    {
+     "id": "5.1",
+     "type": "execution",
+     "text": "Writes the copy rather than refusing"
+    },
+    {
+     "id": "5.2",
+     "type": "policy",
+     "text": "Flags what the section library records about how the live site ships this section (for example, as images with no editable text nodes), so the copy is written against the editable rebuild"
+    },
+    {
+     "id": "5.3",
+     "type": "policy",
+     "text": "Does not quietly write it well and say nothing — the divergence is the more useful half of the answer"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "brief": true,
+   "grades": "over-rejection",
+   "prompt": "Honestly, is this page worth doing or should we skip it?",
+   "expected_output": "Answers the question. Every other case here grades caution; this one grades whether the skill can commit to producing something when the inputs support it.",
+   "assertions": [
+    {
+     "id": "6.1",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Gives an actual answer rather than listing everything that would need to be resolved first"
+    },
+    {
+     "id": "6.2",
+     "type": "policy",
+     "origin": "over-rejection",
+     "text": "Where it sets something aside, names what specifically failed and what would change the answer, not 'does not meet the bar'"
+    },
+    {
+     "id": "6.3",
+     "type": "policy",
+     "origin": "over-rejection",
+     "text": "An open modelling decision on a section is a caveat to state, not a reason to refuse the page"
+    },
+    {
+     "id": "6.4",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Does not treat missing optional roles as blockers; carries on to the last thing the inputs support"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "brief": true,
+   "prompt": "Write the copy for the landing page in the folder.",
+   "expected_output": "Class-A sections are composed whole, mapped, cut and linted; fit_check and the advisory voice judge run and are reported honestly.",
+   "assertions": [
+    {
+     "id": "7.1",
+     "type": "execution",
+     "text": "Every class-A section carries `composed` (eyebrow, heading, body, CTA, or the benefit row's three reasons as one set) and `cuts` naming slot and breakpoint; class C and D sections carry neither."
+    },
+    {
+     "id": "7.2",
+     "type": "execution",
+     "text": "fit_check.js ran with the section library's budgets on the cut entries (or --budgets); a cut that dropped a must-say or a figure is INSUFFICIENT-INPUT; a flagged string is returned unchanged for a human."
+    },
+    {
+     "id": "7.3",
+     "type": "execution",
+     "text": "voice_lint.js ran after page_lint.js and is reported as advisory with the model version and its weakness; provenance.exemplars_shown records what each section was shown, including exit 1 where no web exemplar exists."
+    },
+    {
+     "id": "7.4",
+     "type": "policy",
+     "text": "Every class-A section carries a checklist with the brief items (must-say, briefed offer figures, budget) and the brand items its voice contract states; none is borrowed from another brand"
+    }
+   ]
+  }
+ ]
+}

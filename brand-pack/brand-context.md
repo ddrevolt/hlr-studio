@@ -11,7 +11,7 @@ Tags: [documented] the brand book `061022_HighLight_BrandBook_DS.pdf` (dated 202
 - What HLR sells: jewelry (bracelets 94 and necklaces 65 of 182 products), ritual kits (12), crystals (3), and energy healing sessions and readings listed as products; 650 variants on Shopify [observed, `outputs/step-1-review/site/catalog-stats-2026-10-17.json`]. These counts describe the catalog for planning, never for copy: a figure reaches copy only from `products.json` through `sku_lookup.js` [documented, the pack contract's `product_db` row; project rule 3].
 - The shelf, in the brand's words: timeless jewelry for self and space (p6, p32) [documented]. The live site calls it fine healing crystal jewelry, healer-activated [observed, site 2026-10-17], which the book does not: contradiction C2 below.
 - The shelf in customers' words: not gathered [observed: no customer material read]. The nearest first-party source is the Judge.me reviews on the site (Where they talk); a customer-evidence run supplies it (owner Donnie, who scopes the run).
-- Sessions and readings with a practitioner are sold as products; their positioning and claims are HLR's call (C2; ledger row HLR-H04) [observed, catalog 2026-10-17].
+- Sessions and readings with a practitioner are sold as products; their positioning and claims are HLR's call (C2; `products.json` `_meta.brand_facts` services_sold_as_products) [observed, catalog 2026-10-17].
 - The product database, `products.json`: keyed by Shopify handle until HLR's export lands, then by SKU (DECISIONS 2026-10-18, Gate 2 call 7 a); display names use "in", never a dash (DECISIONS 2026-10-17, Q10; 2026-10-18, call 4 a); `kind` and `family` are [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 14). Every `description` is empty, so no product prose is verifiable until the export (owner HLR).
 
 ## Who the customers are
@@ -51,22 +51,22 @@ Barred in all output, whatever a brief asks, and enforced by `prohibited_pattern
 | 5 | Treating, preventing or reversing a named condition (anxiety, depression, disease, illness, cancer, infertility, insomnia, pain, symptoms, conditions, disorders) | Against the same footer | [documented] site footer; the pattern [derived] |
 | 6 | Standing in for medical care (instead of, replaces, replacement for, no need for, alternative to medication, medicine, a doctor, a therapist, therapy, treatment or a prescription) | The footer says energy work is no substitute for medical treatment | [documented] site footer; the pattern [derived] |
 
-Kept out on purpose: "treat", "diagnose", "medical" and "ailment" on their own, because the required footer text uses them, and the en dash, which Eddie's rule does not name [derived; lane C, `outputs/step-2-pack/voice-claims-notes.md` section 4]. Every pattern was run against the footer text and none matches it [observed: lane C's test, rerun for the compiled list by guard R7]. Everything else that carries a claim is graded in the claims ledger rather than barred [derived; lane C].
+Kept out on purpose: "treat", "diagnose", "medical" and "ailment" on their own, because the required footer text uses them, and the en dash, which Eddie's rule does not name [derived; lane C, `outputs/step-2-pack/voice-claims-notes.md` section 4]. Every pattern was run against the footer text and none matches it [observed: lane C's test, rerun for the compiled list by guard R7]. Everything else is sourcing, not law: a figure, price, quote or review traces to `products.json` or the brief, or it is not written [documented, DECISIONS 2026-10-31].
 
 ## Sensitive territory
 
-- Live copy makes mental and emotional health claims ("CALM YOUR ANXIETY"; "soothes anxiety and restores emotional equilibrium"), uses fertility symbolism, and sells energy healing sessions and readings (Brand Review v2, question 1; ledger rows HLR-H01, H02, H04 and F01, with their corpus hits in `outputs/step-2-pack/voice-claims-notes.md` section 5) [observed].
+- Live copy makes mental and emotional health claims ("CALM YOUR ANXIETY"; "soothes anxiety and restores emotional equilibrium"), uses fertility symbolism, and sells energy healing sessions and readings (Brand Review v2, question 1; the corpus hits in `outputs/step-2-pack/voice-claims-notes.md` section 5) [observed].
 - No customer material has been read yet. A customer-evidence run treats health, mental state, fertility and pregnancy as sensitive, with the special-category data the engine names (health, medication, mental state, finances, sexuality, minors): read and counted, never quoted [derived; the engine's customer-evidence template].
-- Copy never repeats a customer's health words (Claims regime) [derived].
+- Copy never repeats a customer's health words (Sourcing) [derived].
 
-## Claims regime
+## Sourcing
 
-- No one at HLR is named yet to sign claims (`legal-ledger.json` `signer: null`; C2, Review 1, owner HLR) [observed].
-- `legal-ledger.json` is a test seed (`_status: test-seed`, 19 rows): every row enforces provisionally and nothing in it is counsel-approved [documented] `legal-ledger.json` `_status` and `_note` (provisional, not counsel-approved); test-seed, 19 rows at v0.2.0 [documented, DECISIONS 2026-10-21: Eddie's answer to lane C calls 4 and 5].
-- Rows marked needs_legal (health, fertility, sourcing, origin) block every lint, craft mode included, until HLR's signer rules on them [documented, the lane C prompt in `_setup/next-chat-prompts.md`]. Rows marked conditional (durability and guarantees, endorsements, identity, offers) ask a person to confirm and record each use [derived: lane C's severities; their rulings wait for HLR's claims signer, C2, DECISIONS 2026-10-18]. Metal and karat (HLR-K01) and metaphysical benefit (HLR-M01 to M05) are info rows with `paraphrase_risk`: every lint lists them for the verifier with their hit counts, and none blocks or asks for a sign-off [documented, DECISIONS 2026-10-21: Eddie's answer to lane C calls 4 and 5]. `legal-ledger.json` v0.2.0: needs_legal 8, conditional 4, info 7 [observed, 2026-10-21].
-- Required language: the site footer disclaimer, verbatim (row HLR-REQ-01) [observed, the site footer, 2026-10-17]. It stays its own row, fed by the brief into the footer slot [documented, DECISIONS 2026-10-21, lane C call 6 a]; the row's `requires` names every email footer and every product page, and the email corpus carries it 0 times today, so sends change [observed, `outputs/step-2-pack/voice-claims-notes.md` section 5]. Whether paid and organic social carry it is HLR's (C2).
+- The claims ledger role is removed: no legal status, no counsel sign-off, no ledger file in the pack. Its product facts moved to `products.json` `_meta.brand_facts` with their sources, and the file is archived under `_archive/brand-pack/` [documented, DECISIONS 2026-10-31].
+- Every figure, price, quote or review in copy traces to `products.json` or the brief; the lints' figure rule and the prohibited patterns above are the checks, and a check that could not run says so [documented, DECISIONS 2026-10-31].
+- Positioning and claims (health, fertility, sourcing, origin, energy work, sessions sold as products) are HLR's call (C2) and are answered as facts with sources, never as a legal posture; until HLR answers, copy states none of them [documented, DECISIONS 2026-10-31].
+- The site footer disclaimer is recorded verbatim in `products.json` `_meta.brand_facts` (site_footer_text) [observed, the site footer, 2026-10-17]. Whether a send carries it is the brief's `must_say`, fed into the footer slot; the email corpus carries it 0 times today, so sends change [observed, `outputs/step-2-pack/voice-claims-notes.md` section 5]. Whether paid and organic social carry it is HLR's (C2).
 - Customer and press words appear only verbatim and sourced (Judge.me, a press URL); nothing is invented [documented, project rule 3; playbook section 3]. The quote-like lines in the email and social templates are unsourced (Brand Review v2, question 7) [observed].
-- Customer material often carries claims HLR cannot make (healing, anxiety): research may read it; copy may not repeat it [derived; the engine's brand-context template].
+- Customer material often carries health words HLR does not state (healing, anxiety): research may read it; copy may not repeat it [derived; the engine's brand-context template].
 
 ## Existing insight or research assets
 
@@ -124,7 +124,7 @@ Book (2022) against live work (2023 to 2026), from Brand Review v2 sections 1 an
 | # | Contradiction | State | Owner | Source |
 |---|---|---|---|---|
 | C1 | Name: HIGH LIGHT in the book; High Light Rituals and HLR live; the handle misspelled in social | open; copy uses the form the brief gives [derived, lane C's interim] | HLR, Review 1 | Brand Review v2, C1 [documented], [observed] |
-| C2 | Positioning and claims: the book's timeless jewelry against the site's healing crystal jewelry, sessions sold as products, spell and witch language | open; the voice contract follows the book [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12); the ledger grades the claims | HLR, Review 1 | Brand Review v2, C2 [documented], [observed] |
+| C2 | Positioning and claims: the book's timeless jewelry against the site's healing crystal jewelry, sessions sold as products, spell and witch language | open; the voice contract follows the book [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12); claims are sourced facts, not graded [documented, DECISIONS 2026-10-31] | HLR, Review 1 | Brand Review v2, C2 [documented], [observed] |
 | C3 | Marks: the book's shell system against the live wordmark, monogram, star and crest | Eddie's Gate 1 pick, for HLR to confirm; vectors for the PNG-only marks | HLR, Review 1 | Brand Review v2, C3 [documented], [observed] |
 | C4 | Ink and grounds by channel: Onyx and Alabaster in the book; Forest on the site, white email pages, blush in social | Eddie's Gate 1 pick (Onyx on Alabaster), for HLR to confirm | HLR, Review 1 | Brand Review v2, C4 [documented], [observed] |
 | C5 | Faces: two families in the book; 17 in the live work | Eddie's Gate 1 pick (four faces), for HLR to confirm; licenses open | HLR, Review 1 | Brand Review v2, C5 [documented], [observed] |
@@ -166,7 +166,6 @@ Every null role and every required artifact with no file yet, its owner, and the
 | Lockup vectors, the star's master, clear space, minimum sizes | artifact | the lockups PNG only; the star placed from HLR's live footer vector (Eddie, 2026-10-23), its master to confirm; asked by Brand Review v2 Q3 and token proposal HLR 2 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | the avatar lockup; placement rules |
 | Licenses for Saol Display, Saol Standard and Trade Gothic LT Std | artifact | no license file; asked by Brand Review v2 Q2 and token proposal HLR 1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every shipped asset (the flag stays raised) |
 | Shopify products export | artifact | not received; asked by Brand Review v2 Q5 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | SKUs, product prose, confirmed prices |
-| HLR's claims signer and the needs_legal rulings | artifact | not named; asked by Brand Review v2 Q1 | HLR | `Review 1 ({{review-1-date}}): the Brand Review and the token proposal` | every line a needs_legal row hits |
 | Web margins and grid (`token-model.md` L3) | artifact | open; the breakpoints are ruled (1440 and 390, Eddie, 2026-10-23, `figma.yaml` `breakpoints`) | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | web budgets |
 | Web focus ring (`token-model.md` K2) | artifact | open, not tokenized; Gate 4 left it open | Donnie | `Review 2 (Fri 2026-10-30): Figma foundations and the first modules` | the web masters’ interactive states |
 | Meta 9:16 keep-clear bands and copy limits confirmed (`_verified` in the engine's placement specs) | artifact | secondary sources only | Eddie | `Before the first paid build: a person confirms the 9:16 keep-clear bands` | the paid 9:16 masters |
@@ -175,7 +174,7 @@ Every null role and every required artifact with no file yet, its owner, and the
 
 ## File map
 
-Machine-readable; scripts parse the fenced block below. Every role of the pack contract is named; a null is a recorded gap with its row above. `prohibited_patterns` is lane C's list as written in `outputs/step-2-pack/voice-claims-notes.md` section 2; `type_ruling` is lane B's (`outputs/step-2-pack/token-proposal.md` section 7); `brand_domains` is [observed] (site, 2026-10-17).
+Machine-readable; scripts parse the fenced block below. Every role of the pack contract is named; a null is a recorded gap with its row above. The claims ledger role is removed: no key, no file, no legal status (DECISIONS 2026-10-31); its product facts are in `products.json` `_meta.brand_facts` and the file is archived under `_archive/brand-pack/`. `prohibited_patterns` is lane C's list as written in `outputs/step-2-pack/voice-claims-notes.md` section 2; `type_ruling` is lane B's (`outputs/step-2-pack/token-proposal.md` section 7); `brand_domains` is [observed] (site, 2026-10-17).
 
 ```json
 {
@@ -200,7 +199,6 @@ Machine-readable; scripts parse the fenced block below. Every role of the pack c
   "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
   "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
  ],
- "legal_ledger": "legal-ledger.json",
  "type_registry_core": "type-registry-core.json",
  "type_registry_overlay": null,
  "module_library": "module-library.json",

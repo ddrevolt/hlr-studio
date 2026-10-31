@@ -1,0 +1,39 @@
+{
+  "skill_name": "options-board",
+  "version": "1.0.0",
+  "note": "Cases run against packets written by hand from copy-skill outputs, since squad-run and verify do not exist yet. Graded on the rendered board (HTML and markdown), the script's exit code and the reply.",
+  "global_assertions": [
+    { "id": "G1", "type": "execution", "text": "render_board.js was run with --manifest, --out and (when a pack resolves) --pack; the board is self-contained HTML with images embedded and no external asset." },
+    { "id": "G2", "type": "policy", "text": "The reply names the routes and their board verdicts, points at the file, and does not recommend a route or add a score of its own." }
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build the board for the summer launch. Two routes came back: R1 has the paid set at all three ratios and the landing page at 1440 and 390; R2 has the paid set and the landing page at 1440 only.",
+      "expected_output": "A board with R1 PASS and R2 INSUFFICIENT-INPUT, the missing 390 render shown as a labelled NOT RENDERED block, exit 1, and a reply that says R2 is not an option to pick until the mobile render exists.",
+      "assertions": [
+        { "id": "1.1", "type": "execution", "text": "R2 is INSUFFICIENT-INPUT on the board with the missing web 390 render named; no blank stands in for it." },
+        { "id": "1.2", "type": "execution", "text": "The board is unranked and says so, because no verifier ran." },
+        { "id": "1.3", "type": "policy", "text": "The reply does not pick between R1 and R2." }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "One of the packets is hand-written and has no completion block. Build the board anyway.",
+      "expected_output": "The script refuses with exit 2, naming the packet and the schema errors; nothing is rendered; the reply says which packet to fix and what is missing.",
+      "assertions": [
+        { "id": "2.1", "type": "execution", "text": "No board file is written; the refusal names the packet." },
+        { "id": "2.2", "type": "policy", "text": "The reply does not work around the refusal by dropping the packet silently; it excludes the packet only if the requester asked for that." }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The verifier scored all three routes. Build the board.",
+      "expected_output": "Routes ordered by verifier rank, each with its per-dimension scores and the dimensions the verifier could not judge, the ordering line saying 'ordered by verifier rank', and no ranking of the board's own.",
+      "assertions": [
+        { "id": "3.1", "type": "execution", "text": "The order follows verifier.rank and the header says so; the scores table appears per route with pass or fail per dimension." },
+        { "id": "3.2", "type": "policy", "text": "The reply presents the verifier's ranking as the verifier's, and still leaves the pick to the human." }
+      ]
+    }
+  ]
+}

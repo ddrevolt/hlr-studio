@@ -4,7 +4,7 @@ Status: ratified by Eddie at Gate 2, 2026-10-21 (lane C calls 1, 7 and 8) and 20
 
 ## How to use it
 
-- This file is the source of truth for voice. Exemplars show cadence, never wording. Facts come from the product database, claims law from the legal ledger and the prohibited patterns. When this file and a brief disagree on voice, say so in the notes; when the ledger and this file disagree, the ledger wins.
+- This file is the source of truth for voice. Exemplars show cadence, never wording. Facts come from the product database (every figure sourced; no claims ledger since DECISIONS 2026-10-31), and the prohibited patterns. When this file and a brief disagree on voice, say so in the notes; when products.json and this file disagree on a fact, products.json wins.
 - Five qualities, which are also the `register` tags: `eloquent`, `refined`, `sensual`, `real`, `uplifting` [documented p27 to p31]. Every piece stays on the IS side of all five; each option leads with one and is tagged with it; a set of options covers at least two [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1).
 - Each quality's check below is one brand item on a gate's selection checklist [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1).
 - This is not a list of mannerisms. Section 5 lists the devices the work uses, and they stay seasoning.
@@ -63,9 +63,9 @@ Not like, lane C's illustrations rather than client copy [documented] (ratified 
 
 ### Sensual
 
-The book [documented p29]: "We embody the divine feminine, existing in a space where sensuality and spirituality overlap." IS: lush, divine, feminine. IS NOT: sexual, forced, flirty. Use warm, encouraging, nurturing language. "Speak intimately with the customer." Be the invisible narrator telling a beautiful story about each product: "paint the picture, add color, show don’t tell (...but by telling)." The words the book loves: sublime, divine, decadent, transcendent, alchemy, out of body, divinity, corporeal, lush, abundance, feminine (a palette, never a quota). The same page names fertility as part of the brand's energy; that describes the voice and licenses no claim (ledger HLR-F01).
+The book [documented p29]: "We embody the divine feminine, existing in a space where sensuality and spirituality overlap." IS: lush, divine, feminine. IS NOT: sexual, forced, flirty. Use warm, encouraging, nurturing language. "Speak intimately with the customer." Be the invisible narrator telling a beautiful story about each product: "paint the picture, add color, show don’t tell (...but by telling)." The words the book loves: sublime, divine, decadent, transcendent, alchemy, out of body, divinity, corporeal, lush, abundance, feminine (a palette, never a quota). The same page names fertility as part of the brand's energy; that describes the voice and licenses no claim (fertility language is HLR's to rule on, C2).
 
-Operational definition [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1): the line gives the reader something to see, touch, smell or feel (light, texture, a place, a ritual), and it is warm toward the reader. A piece's story uses only what the product database carries; where it is from and how it is made are claims until HLR's signer rules (ledger HLR-O01, HLR-S01).
+Operational definition [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1): the line gives the reader something to see, touch, smell or feel (light, texture, a place, a ritual), and it is warm toward the reader. A piece's story uses only what the product database carries; where it is from and how it is made are claims until HLR confirms them (products.json _meta.brand_facts: place_of_making, sourcing_statements, stone_quality_statements; C2).
 
 Check: can the reader picture or feel something, and is it warm without flirting?
 
@@ -80,7 +80,7 @@ Not like, lane C's illustrations rather than client copy [documented] (ratified 
 
 ### Real
 
-The book [documented p30]: "We are genuine and in-touch, using real-world examples to illustrate the intention behind, and benefits of, our products." Balance lofty or poetic sentiments with familiar, casual language. IS: grounded, friendly, intentional. IS NOT: overpowering, cliche, perfect. Speak to specific life events or emotions the customer can relate to. Benefits stay inside the ledger.
+The book [documented p30]: "We are genuine and in-touch, using real-world examples to illustrate the intention behind, and benefits of, our products." Balance lofty or poetic sentiments with familiar, casual language. IS: grounded, friendly, intentional. IS NOT: overpowering, cliche, perfect. Speak to specific life events or emotions the customer can relate to. Benefits are sourced facts or tradition and intention wording, never a promised effect.
 
 Operational definition [documented] (ratified 2026-10-21 by Eddie, Gate 2 lane C call 1): the line names a specific, recognizable moment or feeling from everyday life, in words a friend would use. Lofty language is balanced by plain language in the same piece. It never promises perfection or a transformed life.
 
@@ -115,7 +115,7 @@ Not like, lane C's illustrations rather than client copy [documented] (ratified 
 ## 4. Operating rules
 
 1. Inspire, then offer. The product is the happy side effect of a welcoming, beautiful experience (p31) [documented].
-2. Meaning is said as tradition or intention, never as an outcome: "an ancient symbol of", "long held as a stone of", "a worn reminder of whatever it is you seek" (p17, p36). Not "it protects you", not "it attracts". Every such line runs through the ledger's M rows, which list it for the verifier and never ask for a sign-off (Eddie, Gate 2 lane C call 5) [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12).
+2. Meaning is said as tradition or intention, never as an outcome: "an ancient symbol of", "long held as a stone of", "a worn reminder of whatever it is you seek" (p17, p36). Not "it protects you", not "it attracts". Every such line is read at review as tradition or intention (no ledger since DECISIONS 2026-10-31; nothing blocks on it) (Eddie, Gate 2 lane C call 5) [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12).
 3. One spiritual idea at a time, balanced by plain words, at 6 or 7 on the witchy scale (p27) [documented]. Spells, hexes and "witch" positioning wait for C2 [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12).
 4. Quotes and references are verbatim, with the author and the work named, from a source a reviewer can check. A customer's words appear only verbatim from Judge.me (Brand Review v2, question 7). Nothing is invented or loosely attributed [documented] (standing rule 3, project instructions).
 5. Length follows the slot. Long copy is welcome where the slot allows it (p27); captions "can remain vibey, short and sweet, with room to elaborate or educate when presenting a new product or point of inspiration" (p35) [documented]. Budgets come from the slot maps, never from this file.
@@ -146,13 +146,13 @@ The rule [documented] (ratified 2026-10-22 by Eddie, Gate 2 package call 12): at
 | Hashtags | At the end of a caption. The book's franchise tags: #inhighspirits, #sublimeintervention, #seekthesublime (p35); 2026 captions use #wordsforyourjourney and #gentlereminders | [documented], [observed] |
 | Links in captions | "Link in bio"; a URL in a caption does not click | [observed] |
 | Offers, prices, dates, codes, thresholds | Merge tokens until HLR rules C10: `{{ discount_code }}`, `{{ free_shipping_threshold }}` | [documented] DECISIONS 2026-10-17 (C10) |
-| Required language | The site footer disclaimer, verbatim, in every email footer and on every product page (ledger HLR-REQ-01) | [observed] site, 2026-10-17 |
+| Required language | The site footer disclaimer, verbatim, in every email footer and on every product page (`products.json` `_meta.brand_facts` site_footer_text; carried when the brief's `must_say` names it) | [observed] site, 2026-10-17 |
 
 ## 7. Social franchises and series
 
 The book's franchises (p35) [documented]: HIGH SPIRITS (mantras and words of affirmation, #inhighspirits); SANCTUARIES (the sanctuaries of artists, creators and thinkers); SUBLIME INTERVENTION (weekly mini-lists of sublimely beautiful things that inspire gratitude and promote presence).
 
-The live series (lane D's registry, `type-registry-core.json`) [observed]: Words For Your Journey (weekly, Mondays), Energy medicine (monthly; "medicine" is ledger HLR-H01 language), Field Notes, Zodiac season crystals, proof of magic. Which names are current is HLR's (Review 1).
+The live series (lane D's registry, `type-registry-core.json`) [observed]: Words For Your Journey (weekly, Mondays), Energy medicine (monthly; "medicine" is health language HLR has not ruled on, C2), Field Notes, Zodiac season crystals, proof of magic. Which names are current is HLR's (Review 1).
 
 ## 8. The brand's own words [documented]
 

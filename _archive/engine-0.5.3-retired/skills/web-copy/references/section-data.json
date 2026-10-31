@@ -1,0 +1,38 @@
+{
+ "_note": "SCHEMA ONLY, EMPTY ROSTER. The measured section library is BRAND data: it is generated from the brand's built web masters (asset-production builds them; measure each slot at each breakpoint) and named in the pack's `section_library` role. page_lint.js reads that file, or --sections; this file is what it falls back to, and it refuses to grade a page against an empty roster. Never populate this file with one brand's geometry: grading a page against another brand's geometry is worse than not grading it.",
+ "_version": "2026-09-06",
+ "_schema": {
+  "sections": "array of section objects: {id: 'W01', name, reach, breakpoints: [names from `breakpoints`], slots: {<slot>: {budget: {<breakpoint>: chars}, role, note}}, requires_verbatim, seo_block, open_decision, note}. A slot that is NOT RENDERED at a breakpoint carries budget 0 there, never an omitted key: copy written into it disappears rather than truncating.",
+  "page_types": "map of page type id to {label, typical: [section ids], requires: [section ids]}",
+  "breakpoints": "map of breakpoint name to {label, width, note}; the names are what pages declare",
+  "pins": "{slotmap_generated, checked_on}: which slotmap_web the budgets were measured against"
+ },
+ "pins": {
+  "note": "Null in the engine. The pack's section library carries real pins.",
+  "slotmap_generated": null,
+  "checked_on": null
+ },
+ "_budget_method": {
+  "how": "chars ≈ (slot width in px ÷ (font size × 0.52)) × lines. 0.52 is the average advance ratio for the brand's type stacks at these sizes; it is a planning figure, not a renderer.",
+  "why": "A slot budget is not a style preference. These components are built to measured site geometry — a card title that overruns re-wraps and changes the card's height, and on a fixed-height mobile slide it clips. The budget is the shape of the box the copy has to live in.",
+  "confidence": "Budgets are DERIVED, not measured per string. They are a warning threshold, not a ceiling: over budget means look at it in the file, not that it is wrong."
+ },
+ "breakpoints": {
+  "desktop": {
+   "label": "Desktop",
+   "width": 1440
+  },
+  "mobile_stack": {
+   "label": "Mobile Stack",
+   "width": 390,
+   "note": "cards stack vertically"
+  },
+  "mobile_carousel": {
+   "label": "Mobile Carousel",
+   "width": 390,
+   "note": "cards become slides with a Next control"
+  }
+ },
+ "sections": [],
+ "page_types": {}
+}

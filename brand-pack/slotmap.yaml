@@ -26,7 +26,7 @@
 # Composed elements are stamped once on the element (E##.role) and declared on the host module (composed). A composed
 # slot carries the tightest budget among the element and its hosts (budget_from names the host that sets it); a host
 # whose column cannot take the element budget stamps its own slot (M11.cta, M12.cta: the E01 label at 2x there).
-# The footer disclaimer is legal-ledger.json HLR-REQ-01, carried verbatim (verbatim: true). Reviews (M18) are a
+# The footer disclaimer is products.json _meta.brand_facts site_footer_text, carried verbatim (verbatim: true) when the brief's must_say names it. Reviews (M18) are a
 # sourced export, verbatim: no review slot is ever filled without a source.
 # 2026-10-23, Review 1 (Eddie, live): email type moved to HLR's 2026 sends: body leading 1.40, headline leading 1.0, the eyebrow Bold at 30 tracked 0.25em, the arrow link in Saol Display. The eyebrow and link-label slots were re-probed alone at their proven lengths in every variant on the real faces (32 placements: E02.label in E02, E06, E07, M03, M06, M15 and M18; the eyebrows of M02, M03, M04, M11, M17, M19 and M22): none clipped, collided with a painted neighbour or overflowed a fixed box, so their budgets stand. Body and headline slots only got shorter. M23 carries Marks/Lockup and opens 9 of the 17 staged sends; M01 the other 8.
 # 2026-10-23, Review 1 (Eddie, live), later: the email scale moved to the sends designed at 1200 (body 34, label 26, title 35, link 46; Review 1 email scale) and M04 gained Style=Statement (the quote style, Saol Display Regular 64 at 1.2 in email; Review 1 statement). Re-probed at proven lengths on the real faces, optional layers on: 67 label, CTA, link, fine and eyebrow placements alone, then M03, M04 Statement, M07 and M18 alone and all together (18 and 18): none clipped, collided or overflowed a fixed box, once M27's date was made to wrap (its 68-character budget ran past the masthead at 1200, before and after the change). Body, title and headline slots only got shorter.
@@ -158,7 +158,7 @@ modules:
   M09:
     name: "Footer"
     family: email
-    use_when: "Nav labels, the wordmark, the footer disclaimer verbatim from legal-ledger.json HLR-REQ-01, and an optional legal line of ESP merge tokens for live-text sends only (in a slice they never resolve, so the ESP footer carries them) (E-F1). Every email ends on it."
+    use_when: "Nav labels, the wordmark, the footer disclaimer verbatim from products.json _meta.brand_facts site_footer_text, and an optional legal line of ESP merge tokens for live-text sends only (in a slice they never resolve, so the ESP footer carries them) (E-F1). Every email ends on it."
     status: built
     node_id: "41:188"
     canvas: email
@@ -326,7 +326,7 @@ modules:
   M21:
     name: "Spec rows"
     family: email
-    use_when: "Rows of a square image, a label with one accent word (Crystal: Clear Quartz) and body (E-P5, 2:190749). Two or four rows (Rows 3 and 4). Values from products.json; meanings as ledger claims framed as tradition or intention."
+    use_when: "Rows of a square image, a label with one accent word (Crystal: Clear Quartz) and body (E-P5, 2:190749). Two or four rows (Rows 3 and 4). Values from products.json; meanings framed as tradition or intention, never as a promised effect."
     status: built
     node_id: "54:324"
     canvas: email
@@ -369,7 +369,7 @@ modules:
   M24:
     name: "Footer, stacked"
     family: email
-    use_when: "Shop, Follow Us and The Ritualist stacked (E-F0, the board templates 2:192035), without the crest (C3; Eddie kept it retired, 2026-10-23), with the footer disclaimer verbatim from legal-ledger.json HLR-REQ-01 and an optional legal line of ESP merge tokens for live-text sends only. Ends a send."
+    use_when: "Shop, Follow Us and The Ritualist stacked (E-F0, the board templates 2:192035), without the crest (C3; Eddie kept it retired, 2026-10-23), with the footer disclaimer verbatim from products.json _meta.brand_facts site_footer_text and an optional legal line of ESP merge tokens for live-text sends only. Ends a send."
     status: built
     node_id: "169:357"
     canvas: email

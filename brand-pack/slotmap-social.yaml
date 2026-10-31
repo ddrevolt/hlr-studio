@@ -57,7 +57,7 @@ modules:
   S03:
     name: "Carousel Set"
     family: social
-    use_when: "The default post: a cover, one or more inner panels and an end panel, separate 4:5 frames in gutter mode (social types education, annotated_product, mantra; series words_for_your_journey, energy_medicine, field_notes, season_crystals, proof_of_magic). Patterns S-WFYJ, S-ENERGY, S-ANNOT, S-SEASON, S-LONG, S-PROOF; nodes 2:181816, 2:181792, 2:180130, 2:181620, 2:180943, 2:181769. Inner items carry callouts and stone labels; their words come from the claims ledger."
+    use_when: "The default post: a cover, one or more inner panels and an end panel, separate 4:5 frames in gutter mode (social types education, annotated_product, mantra; series words_for_your_journey, energy_medicine, field_notes, season_crystals, proof_of_magic). Patterns S-WFYJ, S-ENERGY, S-ANNOT, S-SEASON, S-LONG, S-PROOF; nodes 2:181816, 2:181792, 2:180130, 2:181620, 2:180943, 2:181769. Inner items carry callouts and stone labels; their words are sourced facts from products.json."
     status: "proposed, unbuilt"
     parts: [cover, inner, end]
     build_modes: [gutter]
@@ -95,7 +95,7 @@ modules:
   S04:
     name: "Story Set"
     family: social
-    use_when: "A run of 9x16 frames, each one structure: text on a solid ground, an inset image on a mat, a full-bleed photo with a title, or a photo over a solid panel (social types launch, product_spotlight, mantra, quote, offer; series energy_medicine, field_notes). Patterns ST-TEXT, ST-INSET, ST-FULL, ST-SPLIT; nodes 2:62552, 2:62473, 2:64042, 2:178746. Benefit and callout lines come from the claims ledger."
+    use_when: "A run of 9x16 frames, each one structure: text on a solid ground, an inset image on a mat, a full-bleed photo with a title, or a photo over a solid panel (social types launch, product_spotlight, mantra, quote, offer; series energy_medicine, field_notes). Patterns ST-TEXT, ST-INSET, ST-FULL, ST-SPLIT; nodes 2:62552, 2:62473, 2:64042, 2:178746. Benefit and callout lines are sourced facts from products.json."
     status: "proposed, unbuilt"
     parts: [text, inset, full_bleed, split]
     property: { Structure: ["Text", "Inset", "Full bleed", "Split"] }

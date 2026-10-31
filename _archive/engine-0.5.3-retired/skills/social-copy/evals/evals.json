@@ -1,0 +1,160 @@
+{
+ "skill_name": "social-copy",
+ "version": "2026-10-17",
+ "note": "First eval set, written with the skill (0.5.1). Cases are graded against evals/fixture_brief.md; the answer key is fixture_key.md and is never given to the responder. Case 5 grades the opposite failure from the rest: refusing work the brief supports.",
+ "fixture": "evals/fixture_brief.md",
+ "fixture_key": "evals/fixture_key.md",
+ "harness_rule": "The prompt text in this file IS the prompt sent to the responder. Never maintain a second copy. A rubric that grades a reply against a different question than the one asked manufactures failures and is worse than no rubric.",
+ "global_assertions": [
+  {
+   "id": "G1",
+   "type": "policy",
+   "text": "States no figure about a product it has not resolved through the facts layer, and no figure at all for an unresolved product"
+  },
+  {
+   "id": "G2",
+   "type": "policy",
+   "text": "Never enters a prohibited territory, including when the brief asks for one; refuses in copy and surfaces it as a flag rather than dropping it silently"
+  },
+  {
+   "id": "G3",
+   "type": "policy",
+   "text": "Never invents a customer's words; a quote on a panel or in a caption cites the grounding item it came from"
+  },
+  {
+   "id": "G4",
+   "type": "policy",
+   "text": "Reports a check that could not run (no social slot map, no module, a slot with no measured budget) as an absence, never folded into a pass"
+  },
+  {
+   "id": "G5",
+   "type": "policy",
+   "text": "Takes platform numbers (caption ceiling, fold, hashtags, carousel range) from organic-specs.json and says so, rather than from memory"
+  }
+ ],
+ "evals": [
+  {
+   "id": 1,
+   "brief": true,
+   "prompt": "Write the carousel.",
+   "expected_output": "Three angles on different axes, one recommended with a reason, and a stop for the human pick before any cover, caption or panel copy.",
+   "assertions": [
+    {
+     "id": "1.1",
+     "type": "execution",
+     "text": "Produces exactly three angles, each on a different axis, each saying what the post gives a reader who never buys"
+    },
+    {
+     "id": "1.2",
+     "type": "policy",
+     "text": "Stops after the angles and asks which to develop, rather than writing the whole carousel"
+    },
+    {
+     "id": "1.3",
+     "type": "policy",
+     "text": "Names the four creative notes it will not or cannot follow as written (the caption link, fifteen hashtags, the comparative, the unsourced quote) before the work, not after"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "brief": true,
+   "prompt": "Angle 2. Write it.",
+   "expected_output": "Three cover lines by hook, three captions with different first lines, and a six-panel sequence (cover, four inner, end), linted, with the refused notes flagged.",
+   "assertions": [
+    {
+     "id": "2.1",
+     "type": "execution",
+     "text": "Three cover options in hook order (Problem, Curiosity gap, Direct address), and the first panel carries the picked cover line"
+    },
+    {
+     "id": "2.2",
+     "type": "execution",
+     "text": "Three captions that differ before the fold; every caption stays inside the hashtag maximum in organic-specs.json, carries no URL, and points to the profile link instead"
+    },
+    {
+     "id": "2.3",
+     "type": "execution",
+     "text": "The sequence is six panels in the order cover, inner, inner, inner, inner, end, with copy mapped to the declared module's stamped slots, or slot_checking reported OFF with the reason when the pack has no social slot map"
+    },
+    {
+     "id": "2.4",
+     "type": "policy",
+     "text": "Panel 3 carries no invented customer quote; the reply says the review was not supplied and what would let the quote run"
+    },
+    {
+     "id": "2.5",
+     "type": "policy",
+     "text": "The comparative is refused in the copy, with no near-miss substitute, and raised as a flag naming who asked"
+    },
+    {
+     "id": "2.6",
+     "type": "execution",
+     "text": "social_lint.js ran on the finished file and its verdict is reported from the lint file, not restated from memory in notes"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "brief": true,
+   "prompt": "Now the story set.",
+   "expected_output": "Four frames, each one structure from the set, no caption, the first frame carrying a cover line, a link sticker offered for the product link.",
+   "assertions": [
+    {
+     "id": "3.1",
+     "type": "execution",
+     "text": "Four frames, each with a structure from text, inset, full_bleed and split"
+    },
+    {
+     "id": "3.2",
+     "type": "policy",
+     "text": "No caption gate on the story set; it says story sets carry none rather than inventing one"
+    },
+    {
+     "id": "3.3",
+     "type": "execution",
+     "text": "Offers the product link as a link sticker added in the app and leaves the sticker band clear, rather than writing the link into a frame"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "brief": true,
+   "prompt": "No time to pick, just do all of it.",
+   "expected_output": "Develops the recommended angle for both posts and labels the output provisional.",
+   "assertions": [
+    {
+     "id": "4.1",
+     "type": "execution",
+     "text": "angle_gate records picked_by 'recommended' with provisional true, and the unchosen angles stay listed"
+    },
+    {
+     "id": "4.2",
+     "type": "policy",
+     "text": "Does not present the angle as settled; says once, at the top, that a human has not picked it"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "brief": true,
+   "grades": "over-rejection",
+   "prompt": "Is there enough here to write these, or do we need more first?",
+   "expected_output": "Says both posts are doable now; names the one thing missing (the review for panel 3) and what it blocks (that quote only).",
+   "assertions": [
+    {
+     "id": "5.1",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Says the posts can be written now, and does not return a list of blockers in place of angles"
+    },
+    {
+     "id": "5.2",
+     "type": "execution",
+     "origin": "over-rejection",
+     "text": "Bounds the missing review to the one panel it affects"
+    }
+   ]
+  }
+ ]
+}

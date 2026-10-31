@@ -68,7 +68,7 @@ Live families with no card [observed], with a proposed handling [documented] (ra
 - Founder portraits (letters, press pages, the mobile nav): photographer and usage unknown.
 - Found and historical art, painterly (inset stories, a 700 hero, moodboards): third-party rights; reference only.
 - Black and white documentary (2023 strips, the email follow block): inside AD1's black and white allowance.
-- Illustration and line icons (a mantra email; seven draft icon sets): no card; the proof icons carry claims, so they go through the claims ledger.
+- Illustration and line icons (a mantra email; seven draft icon sets): no card; the proof icons carry claims, so each needs a sourced fact in products.json.
 - Stock (Website, Inspiration): license unknown; out.
 - Aura gradients (500x500 on the paid page, not ads): not ad imagery; move out of paid.
 

@@ -1,0 +1,69 @@
+{
+  "_note": "The completion contract: what 'complete' means per brief type, from the squad strategy. A route is complete only when its brief type's list is met. render_board.js recomputes completion from the packet's deliverables and the render files on disk, never from the packet's own `complete` flag alone: a placeholder render, a missing file, or a missing mobile or ratio makes the route INSUFFICIENT-INPUT on the board, never PASS. The required renders come from the brief's deliverables (ratios, breakpoints) when the brief is readable, and from `required_renders` here otherwise (for social, `required_renders_by_format`, and one render per panel or frame of a carousel or story set).",
+  "types": {
+    "email": {
+      "label": "Email",
+      "items": [
+        "subject and preheader",
+        "full body copy at every module",
+        "final imagery with the pack composited",
+        "editable Figma design",
+        "responsive email implementation",
+        "render check in the agreed clients"
+      ],
+      "required_renders": ["email"],
+      "surface": "email"
+    },
+    "paid_static": {
+      "label": "Paid static",
+      "items": [
+        "finished exports for every requested placement",
+        "complete platform copy inside Meta's limits",
+        "editable source",
+        "safe-zone check passed"
+      ],
+      "required_renders": ["4x5", "1x1", "9x16"],
+      "surface": "paid"
+    },
+    "web": {
+      "label": "Web and ecommerce",
+      "items": [
+        "working responsive page with all copy and media",
+        "desktop and mobile previews at 1440 and 390",
+        "links tested",
+        "specified commerce interactions exercised by a browser check"
+      ],
+      "required_renders": [1440, 390],
+      "surface": "web"
+    },
+    "social": {
+      "label": "Organic social",
+      "items": [
+        "the angle picked, or the recommendation labelled provisional",
+        "cover lines and captions inside the platform's limits",
+        "copy for every panel or frame, mapped to the brand's social masters",
+        "finished exports for every panel or frame",
+        "editable source"
+      ],
+      "required_renders": ["4x5"],
+      "required_renders_by_format": {
+        "feed_post": ["4x5"],
+        "carousel": ["4x5"],
+        "story_set": ["9x16"]
+      },
+      "renders_per": "A carousel or a story set renders one file per panel or frame at each ratio, each render carrying its 1-based `item`; the count comes from the brief (panels, frames), else from the copy file's sequence. A feed post renders one file per ratio.",
+      "surface": "social"
+    },
+    "video": {
+      "label": "Video",
+      "items": [
+        "rendered video with final shots, timing and on-screen type",
+        "captions and audio where briefed",
+        "editable source or assembly instructions",
+        "safe-zone check passed per ratio"
+      ],
+      "required_renders": ["4x5", "1x1", "9x16"],
+      "surface": "video"
+    }
+  }
+}

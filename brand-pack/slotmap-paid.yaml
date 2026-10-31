@@ -80,7 +80,7 @@ modules:
   P03:
     name: "Annotated"
     family: paid
-    use_when: "The piece with one to four callouts on hairline leaders, on a ground or on model; a build adds one callout per frame (types annotated). Patterns P-ANNOT-BUILD, P-ANNOT-MODEL, P-STACK; nodes 2:42498, 2:37799, 2:57502. Callout words come from the claims ledger."
+    use_when: "The piece with one to four callouts on hairline leaders, on a ground or on model; a build adds one callout per frame (types annotated). Patterns P-ANNOT-BUILD, P-ANNOT-MODEL, P-STACK; nodes 2:42498, 2:37799, 2:57502. Callout words are sourced facts from products.json."
     status: "proposed, unbuilt"
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["On ground", "On model"], Callouts: ["1", "2", "3", "4"] }
     variants:
@@ -152,7 +152,7 @@ modules:
   P07:
     name: "Meaning"
     family: paid
-    use_when: "A stone or material card, or a list of intention and stone pairs (types meaning). Card style: itemN.name and itemN.line, the gloss (one card; 9x16 stacks two). List style: itemN.label, the intention, over itemN.name, the stone, up to eight. Patterns P-INGRED, P-LIST; nodes 2:47064, 2:54733. Meaning is a benefit claim (C2): the ledger governs every line."
+    use_when: "A stone or material card, or a list of intention and stone pairs (types meaning). Card style: itemN.name and itemN.line, the gloss (one card; 9x16 stacks two). List style: itemN.label, the intention, over itemN.name, the stone, up to eight. Patterns P-INGRED, P-LIST; nodes 2:47064, 2:54733. Meaning is a benefit claim (C2): every line is a sourced fact or tradition and intention wording."
     status: "proposed, unbuilt"
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Card", "List"] }
     variants:
