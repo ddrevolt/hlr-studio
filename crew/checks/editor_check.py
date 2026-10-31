@@ -2,7 +2,7 @@
 """editor_check: the editor's proposed edits against the stage files they would change.
 Usage: python3 crew/checks/editor_check.py --output <run>/editor.json --run <run> [--pack brand-pack]
 Checks: every edit's path resolves in <run>/<stage>.json; `before` is the exact current string there;
-`after` differs from `before`, carries no em dash or prohibited hit and no new typed price; one edit
+`after` differs from `before`, an email slot `after` stays within its max_chars, carries no em dash or prohibited hit and no typed price; one edit
 per path. No engine lint covers a diff. Exit 0 PASS, 1 FAIL."""
 import os
 import re
@@ -11,6 +11,7 @@ import common
 a = common.args(__doc__, run=True)
 doc = common.read_json(a.output)
 pats = common.prohibited(a.pack)
+slots, _, _ = common.slotmap(a.pack)
 f = []
 money = re.compile(r"\$\s?\d|\d+\s?(usd|dollars)\b|\b\d+\s?%\s?off", re.I)
 cache = {}
@@ -44,10 +45,13 @@ for i, e in enumerate(doc.get("edits", [])):
         f.append("%s: %s" % (w, err))
     elif cur != e["before"]:
         f.append("%s: before does not match the current string at %s" % (w, e["path"]))
+    sid = e["path"].rstrip("/").split("/")[-1]
+    if e["stage"] == "email" and sid in slots and slots[sid]["max_chars"] and len(e["after"]) > slots[sid]["max_chars"]:
+        f.append("%s: after is %d chars, %s allows %d" % (w, len(e["after"]), sid, slots[sid]["max_chars"]))
     if e["after"] == e["before"]:
         f.append("%s: after equals before" % w)
-    if money.search(e["after"]) and not money.search(e["before"]):
-        f.append("%s: after introduces a typed figure" % w)
+    if money.search(e["after"]):
+        f.append("%s: after carries a typed figure; figures are merge tokens or absent" % w)
 f += common.scan_text({"edits": [{"after": e["after"], "reason": e["reason"]} for e in doc.get("edits", [])],
                        "summary": doc.get("summary", "")}, pats)
 common.report("editor_check", f)

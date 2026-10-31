@@ -2,6 +2,13 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, crew-editor
+
+- Done: a seeded-violation fixture (`crew/fixtures/editor-seeded/`: a misspelling the pack bars, an exclamation mark in a headline, an ampersand in body copy, a typed price) with the editor output that marks those four and nothing else. Applying it returns the clean dry-run files exactly, and `email_check` and `paid_check` fail before and pass after. `editor_check` now bars any typed figure in an `after` (the old test let one typed price replace another) and an email slot over its `max_chars`; `email_check` bars an ampersand in a body slot.
+- Checked: `bash build/checks.sh` PASS (31 crew tests). The acceptance line "copy_lint still passes" is met by `email_check` and `paid_check`; the engine lints still read the retired slate shape and stay SKIPPED.
+- Waiting on Eddie: set crew-editor done after review. Next: email-html (step 8), then claude-md (handoff). crew-intake, crew-strategist, crew-email, crew-paid and crew-editor are all in review, so Step 7 is built but for Eddie's sign-off.
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, crew-paid
 
 - Done: `brand-pack/placement-specs.json` holds Meta's placement limits as nulls with the gap and its owner (Eddie, item paid-specs), so the absence is loud. `paid_check.py` requires `spec_confidence` to equal the file's status, enforces any limit once a person fills it, and fails any numeral in ad copy that the intake does not carry. The paid prompt dropped its working limits (125, 40, 30) because no source backs them, and now includes the specs file.

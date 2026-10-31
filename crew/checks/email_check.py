@@ -49,6 +49,8 @@ def check_slots(where, module, slot_dict):
             f.append("%s: %s is a caps slot" % (where, sid))
         if spec["role"] in ("price", "disclaimer") and not token.match(text):
             f.append("%s: %s takes a merge token, never typed copy" % (where, sid))
+        if spec["role"] == "body" and "&" in text:
+            f.append("%s: %s has an ampersand in body copy; display lines only" % (where, sid))
         if spec["role"] == "headline" and "!" in text:
             f.append("%s: %s has an exclamation mark in a headline" % (where, sid))
 

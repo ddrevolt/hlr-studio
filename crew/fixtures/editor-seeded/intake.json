@@ -1,0 +1,127 @@
+{
+ "slug": "fixtures",
+ "brand": "High Light Rituals",
+ "source": {
+  "path": "crew/fixtures/brief.md",
+  "received_at": null
+ },
+ "objective": "Send readers to two pieces for a quieter week, The Seeds of Calm Necklace in Aquamarine and The Seeds of Stillness Bracelet in Phosphosiderite, with The Classic Bracelet in Moonstone as the closing spotlight, and run the same frame as Meta paid.",
+ "audience": "HLR's email subscribers and a Meta prospecting audience. No segment data is on file.",
+ "message": "A quiet week, kept on purpose: two pieces whose stones are long held as stones of calm and stillness, worn as a reminder to take the pause you keep putting off.",
+ "moment": "a quiet week",
+ "offer": {
+  "text": "{{discount_value}} off with code {{discount_code}} for {{offer_window}}",
+  "code_token": "{{discount_code}}",
+  "figures_as_tokens": [
+   "{{discount_value}}",
+   "{{offer_window}}"
+  ]
+ },
+ "products": [
+  {
+   "id": "the-seeds-of-calm-necklace-aquamarine",
+   "name": "The Seeds of Calm Necklace in Aquamarine",
+   "role": "hero",
+   "resolved": true,
+   "facts": {
+    "category": "Necklace",
+    "family": "Seeds of",
+    "ingredients": [
+     "Aquamarine"
+    ],
+    "source": "brand-pack/products.json"
+   }
+  },
+  {
+   "id": "the-seeds-of-stillness-bracelet-phosphosiderite",
+   "name": "The Seeds of Stillness Bracelet in Phosphosiderite",
+   "role": "lineup",
+   "resolved": true,
+   "facts": {
+    "category": "Bracelet",
+    "family": "Seeds of",
+    "ingredients": [
+     "Phosphosiderite"
+    ],
+    "source": "brand-pack/products.json"
+   }
+  },
+  {
+   "id": "the-classic-bracelet-in-moonstone",
+   "name": "The Classic Bracelet in Moonstone",
+   "role": "closing",
+   "resolved": true,
+   "facts": {
+    "category": "Bracelet",
+    "family": "Classic Bracelet",
+    "ingredients": [
+     "Moonstone"
+    ],
+    "source": "brand-pack/products.json"
+   }
+  }
+ ],
+ "channels": [
+  "email",
+  "paid"
+ ],
+ "must_say": [],
+ "guidance": {
+  "vocabulary": [
+   "calm",
+   "stillness",
+   "pause",
+   "a quiet week",
+   "aquamarine",
+   "phosphosiderite",
+   "moonstone"
+  ],
+  "tone": [
+   "the voice contract as written",
+   "short lines",
+   "one accent word in a headline"
+  ],
+  "notes": [
+   "Meaning only as tradition or intention (long held as a stone of; worn as a reminder to), never as what a piece does for the reader.",
+   "Nothing on stress, anxiety, sleep or any mental or physical state.",
+   "No line on how, where or by whom a piece is made. No stone list beyond the one stone each piece carries.",
+   "Every description in products.json is empty, so no metal, size or price is stated; price is {{price}} if a slot needs it."
+  ]
+ },
+ "never_say": [
+  "\\bbest[- ]?sell(er|ers|ing)\\b|\\b(customer|fan) favou?rites?\\b",
+  "\\u2014",
+  "\\bhightlight",
+  "\\btoumaline\\b|\\bpendent\\b|\\bguranteed\\b|\\breail\\b|\\bstres\\b|\\bjouney\\b",
+  "\\bcur(e|es|ed|ing)\\b",
+  "\\b(treat|treats|treating|prevent|prevents|preventing|reverse|reverses)\\s+(your\\s+)?(anxiety|depression|disease|diseases|illness|illnesses|cancer|infertility|insomnia|pain|symptoms|conditions?|disorders?)\\b",
+  "\\b(instead of|replaces?|replacement for|no need for|alternative to)\\s+(your\\s+|a\\s+)?(medication|medicine|doctor|therapist|therapy|treatment|prescription)s?\\b"
+ ],
+ "gaps": [
+  {
+   "field": "source.received_at",
+   "note": "the brief carries no date",
+   "owner": "Eddie"
+  },
+  {
+   "field": "channels.email.send_date",
+   "note": "{{send_date}} in the brief",
+   "owner": "Donnie"
+  },
+  {
+   "field": "offer",
+   "note": "{{discount_value}}, {{discount_code}} and {{offer_window}} stay tokens until HLR rules on offers (C10)",
+   "owner": "HLR"
+  },
+  {
+   "field": "references.visual",
+   "note": "{{hero_photo}}: no cleared photo named",
+   "owner": "Eddie"
+  },
+  {
+   "field": "audience.segment",
+   "note": "no segment data on file",
+   "owner": "HLR"
+  }
+ ]
+}

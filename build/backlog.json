@@ -206,7 +206,7 @@
       "name": "Editor co-worker: one voice pass that returns a diff, never a rewrite",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "prompt.md and schema.json: the voice contract’s sounds-like and not-like lines, rhythm, prohibited patterns, the em dash. Output is a list of proposed edits with a reason each; run.py applies only the ones a person accepts (or all, with --accept-edits).",
       "sources": [],
@@ -219,7 +219,8 @@
         "crew-paid"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner, fourth run): crew/fixtures/editor-seeded holds an email and a paid file with four seeded faults and the editor output that fixes exactly those; applying it gives back the clean files byte for byte and both checks pass again. editor_check now bars any typed figure in an edit and any email slot over max_chars; email_check bars an ampersand in a body slot. The engine copy_lint.js stays SKIPPED on the crew shape, so email_check and paid_check stand in for it."
     },
     {
       "id": "email-html",

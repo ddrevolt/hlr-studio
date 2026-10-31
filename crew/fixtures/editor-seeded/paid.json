@@ -1,0 +1,45 @@
+{
+ "brief_slug": "fixtures",
+ "angle": 1,
+ "register": "real",
+ "ad_sets": [
+  {
+   "ad_type": "single_image",
+   "primary_text": [
+    "A quiet week, kept on purpose. Aquamarine, long held as a stone of calm, worn as a reminder to take the pause. From $48.",
+    "Not an empty week. A kept one. The Seeds of Calm Necklace in Aquamarine, for the days you decide to slow down.",
+    "A long shower. A walk without your phone. The Seeds of Calm Necklace in Aquamarine, a reminder to keep the quiet you made."
+   ],
+   "headline": [
+    "Kept on purpose",
+    "The Seeds of Calm Necklace in Aquamarine",
+    "A quieter week, worn"
+   ],
+   "description": "Timeless jewelry for self and space.",
+   "hooks": [
+    "When did you last take the pause you keep putting off?",
+    "A quiet week is a decision, not a gift."
+   ],
+   "spec_confidence": "unverified"
+  },
+  {
+   "ad_type": "story",
+   "primary_text": [
+    "A quiet week, kept on purpose.",
+    "Aquamarine, long held as a stone of calm.",
+    "The pause you keep putting off. Take it."
+   ],
+   "headline": [
+    "Kept on purpose",
+    "Long held as a stone of calm",
+    "A slower week, worn"
+   ],
+   "description": null,
+   "hooks": [
+    "Keep the quiet you made.",
+    "Not an empty week. A kept one."
+   ],
+   "spec_confidence": "unverified"
+  }
+ ]
+}
