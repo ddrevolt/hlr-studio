@@ -10,7 +10,7 @@ import os, sys, json
 
 EM = chr(0x2014)
 SKIP_DIRS = {
-    ".git", "node_modules", "_setup", "_archive", "HLR Content", "HLR Logo & Marks", "High Light Rituals Fonts",
+    ".git", ".claude", "node_modules", "_setup", "_archive", "HLR Content", "HLR Logo & Marks", "High Light Rituals Fonts",
     "outputs/step-2-pack/corpus", "outputs/step-1-review/site", "outputs/step-1-review/figma",
     "outputs/step-1-review/patterns", "outputs/step-1-review/pattern-inventories", "outputs/review/app",
     "outputs/review/assets", "outputs/explainer", "outputs/concepts", "build/log",
