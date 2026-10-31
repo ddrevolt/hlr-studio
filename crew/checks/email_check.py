@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """email_check: the email block list against slotmap.yaml, module-library.json and products.json.
-Usage: python3 crew/checks/email_check.py --output <run>/email.json [--pack brand-pack]
+Usage: python3 crew/checks/email_check.py --output <run>/email.json [--pack brand-pack] [--intake <intake.json>]
 Checks: every module in MOD_LABEL; every slot id belongs to its module (own slot or a composed element
 slot); every string within the slot's max_chars; upper-case slots in caps; verbatim slots (the disclaimer)
 and price slots hold merge tokens only; card product ids exist in products.json and E06.name is the
@@ -11,7 +11,7 @@ import os
 import re
 import common
 
-a = common.args(__doc__)
+a = common.args(__doc__, extras=[("--intake", "the intake.json this run used (default: beside the output)")])
 doc = common.read_json(a.output)
 slots, by_module, composed = common.slotmap(a.pack)
 lib = common.read_json(os.path.join(a.pack, "module-library.json"))
@@ -64,6 +64,37 @@ for i, b in enumerate(doc.get("blocks", [])):
         elif c["slots"].get("E06.name") and c["slots"]["E06.name"] != prods[c["product_id"]]["name"]:
             f.append("%s: E06.name is not the display name %r" % (cw, prods[c["product_id"]]["name"]))
         check_slots(cw, b["module"], c.get("slots", {}))
+
+# every product named anywhere traces to products.json by key, and to the intake
+for b in [doc["hero"]] + doc.get("blocks", []):
+    if b.get("module") == "M03":
+        nm = b.get("slots", {}).get("M03.name")
+        if nm and nm not in {v.get("name") for v in prods.values()}:
+            f.append("M03.name %r is not a display name in products.json" % nm)
+intake_path = a.intake or os.path.join(os.path.dirname(os.path.abspath(a.output)), "intake.json")
+if os.path.isfile(intake_path):
+    intake = common.read_json(intake_path)
+    if doc.get("brief_slug") != intake.get("slug"):
+        f.append("brief_slug %r is not the intake's slug %r" % (doc.get("brief_slug"), intake.get("slug")))
+    allowed_names = {p.get("name") for p in intake.get("products", [])}
+    for pid, v in prods.items():
+        nm = v.get("name")
+        if nm and nm not in allowed_names:
+            for path, text in common.walk_strings(doc):
+                if nm in text:
+                    f.append("%s: names %r, which the intake does not carry" % (path, nm))
+    for b in doc.get("blocks", []):
+        for c in b.get("cards", []):
+            if prods.get(c.get("product_id"), {}).get("name") not in allowed_names:
+                f.append("card %s is not a product in the intake" % c.get("product_id"))
+    tokens_ok = set(__import__("re").findall(r"\{\{[A-Za-z0-9_]+\}\}", common.json_blob(intake)))
+    house = {"{{cta_url}}", "{{footer_disclaimer}}", "{{unsubscribe_url}}", "{{postal_address}}", "{{price}}"}
+    for path, text in common.walk_strings(doc):
+        for tok in __import__("re").findall(r"\{\{[A-Za-z0-9_]+\}\}", text):
+            if tok not in tokens_ok and tok not in house:
+                f.append("%s: merge token %s is neither in the intake nor a house token" % (path, tok))
+else:
+    f.append("no intake.json at %s; pass --intake, the product and token checks cannot run" % intake_path)
 
 if len(doc.get("subjects", [])) != 3:
     f.append("subjects: %d, want 3" % len(doc.get("subjects", [])))

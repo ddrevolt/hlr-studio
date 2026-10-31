@@ -113,7 +113,7 @@
   "craft_mode": false,
   "craft_claims_for_review": [],
   "ledger_status": "test-seed",
-  "claims_checking": "TEST-SEED LEDGER (hlr-ledger-0.2.0 (test-seed, 2026-10-21; Gate 2 rulings applied)) — 19 topics enforce provisionally, rulings are counsel placeholders. Flags are real; wording is not final.",
-  "slot_checking": "on — fields and character ceilings resolved against the slot map"
+  "claims_checking": "TEST-SEED LEDGER (hlr-ledger-0.2.0 (test-seed, 2026-10-21; Gate 2 rulings applied)), 19 topics enforce provisionally, rulings are counsel placeholders. Flags are real; wording is not final.",
+  "slot_checking": "on, fields and character ceilings resolved against the slot map"
  }
 }

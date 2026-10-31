@@ -1,18 +1,1 @@
 # Known em dash hits in engine-generated output (copy_lint.js strings, the findings and one-pager templates). Backlog item eng-emdash clears them; a line leaves this file when its hit is gone. New hits fail the scan.
-outputs/step-4-figma/demo-email/made-to-order-pendants.copy_lint.json:116
-outputs/step-4-figma/demo-email/made-to-order-pendants.copy_lint.json:117
-outputs/step-4-figma/demo-email/made-to-order-pendants.onepager.html:1
-outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md:1
-outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md:7
-outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md:13
-outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md:17
-outputs/step-4-figma/demo-email/made-to-order-pendants.findings.md:21
-outputs/step-5-forge/protection-of-energy/protection-of-energy.findings.md:1
-outputs/step-5-forge/protection-of-energy/protection-of-energy.findings.md:7
-outputs/step-5-forge/protection-of-energy/protection-of-energy.findings.md:14
-outputs/step-5-forge/protection-of-energy/protection-of-energy.findings.md:19
-outputs/step-5-forge/protection-of-energy/protection-of-energy.findings.md:23
-outputs/step-5-forge/protection-of-energy/protection-of-energy.onepager.html:1
-outputs/step-5-forge/protection-of-energy/protection-of-energy.onepager.html:7
-outputs/step-5-forge/protection-of-energy/protection-of-energy.copy_lint.json:116
-outputs/step-5-forge/protection-of-energy/protection-of-energy.copy_lint.json:117

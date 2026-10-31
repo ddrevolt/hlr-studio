@@ -162,7 +162,7 @@
       "name": "Email writer co-worker: the picked angle into Klaviyo blocks mapped to the module library",
       "step": "7",
       "kind": "crew",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "prompt.md and schema.json: subject and preview (3 pairs), hero, body blocks as module ids with slot values by slot id and budget (slotmap.yaml, module-library.json), CTA, footer. Check: copy_lint on budgets, voice and never-say; the em dash. Fixes the engine templates that wrote em dashes into outputs (build/emdash_baseline.txt empties).",
       "sources": [],
@@ -176,7 +176,8 @@
         "crew-intake"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner, second run): email_check reads the intake (slug, products, merge tokens, M03.name); canned block list for protection-of-energy, slots within budget; em dash baseline emptied by sweeping the 6 generated Phase 1 files. The engine copy_lint.js stays SKIPPED on the crew shape (it reads the retired slate shape). The protection copy is a draft for Donnie's keep or cut."
     },
     {
       "id": "crew-paid",
@@ -197,7 +198,8 @@
         "crew-intake"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Runner 2026-10-31: not started. Acceptance wants placement-specs.json, which the pack lacks until paid-specs closes (Meta numbers from a person)."
     },
     {
       "id": "crew-editor",

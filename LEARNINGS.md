@@ -2,6 +2,13 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, crew-email
+
+- Done: `email_check.py` now reads the intake beside the output (slug, no product the intake lacks, `M03.name` a products.json display name, every merge token the intake's or a house token; a missing intake fails). Canned email block list for protection-of-energy in `crew/fixtures/protection-of-energy/email.json`: three subject pairs, hero, product text block, two-up grid, a Scorpio season block with three plain rituals, The Scorpio Crystal Set as the closing spotlight, every slot within `max_chars`. The six generated Phase 1 files that held em dashes are swept and `build/emdash_baseline.txt` is empty, with a test that keeps it empty.
+- Checked: `bash build/checks.sh` PASS (26 crew tests, em dash scan 0 known, 0 new). The engine `copy_lint.js` still reads the retired slate shape and stays SKIPPED, so voice quality is not proven by a lint; a person reads the draft.
+- Waiting on Eddie: set crew-email done after review. Waiting on Donnie: keep, cut or swap the three Scorpio rituals; a contents line for the set if wanted. crew-paid not started: its acceptance needs `placement-specs.json`, which waits on paid-specs (Meta numbers from a person). Next: email-html once crew-email is done.
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, crew-intake and crew-strategist
 
 - Done: `intake_check.py` is now the slimmed brief lint. Besides the pack checks it reads the brief the intake came from: every Products bullet is in `products[]`, every merge token survives (an Offer token must sit in `offer`), an Offer of None means `offer` is null, each named channel is present, a named send date leaves a `send_date` gap, and a typed price or date in a copy field fails. `strategist_check.py` now reads `intake.json`: the slug matches, an `urgency` angle needs an offer, a `proof` angle needs a quote in `must_say`, the brief's `never_say` applies, lead lines stay within 140 characters in sentence case, and a missing intake fails. Intake prompt rules 9 to 11 added. Canned intake and angles for the protection-of-energy brief in `crew/fixtures/protection-of-energy/`, written from the brief and `products.json` only. `build/checks.sh` now runs the crew tests.
