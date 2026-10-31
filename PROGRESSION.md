@@ -88,6 +88,17 @@ Runs as parallel lanes A to E (`_setup/next-chat-prompts.md`).
 - [ ] Explainer for Eddie and HLR (the journey from the ask to the send, the rulebook, change scenarios, the forge or Claude Design): plan in `outputs/explainer/plan.md` (2026-10-23); built at the plan's defaults and published privately (Eddie, 2026-10-23); review round 1 fixed, round 2's 5 should-fix and 10 notes open; paused at Eddie's request; Eddie's go before HLR sees it
 - [ ] ai-firstify audit (2026-10-24): `outputs/ai-firstify/ai-firstify-report.md`; 11 calls for Eddie, the Project instructions at the defaults in `_setup/hlr-project-instructions.proposed.md`
 
+## Phase 2 (from 2026-10-31): email and paid, Klaviyo, portable to Grok
+
+Purpose: a short brief in, ready-to-send Klaviyo emails and ready-to-launch Meta paid ads out, on brand, Donnie picks from options, runs on the xAI API at handoff. Rulings and defaults: DECISIONS 2026-10-31; the proposal in the project doc `claude/phase-2-rescope.md`. The build runner (`build/RUNNER.md`, `build/backlog.json`) works the steps below between gates; the map is https://claude.ai/artifact/WUNWtFcYGhX2k9emJN6cGz.
+
+- [ ] Step 6. Engine 0.6.0: the legal regime deleted (ledger role, signer, needs_legal, blocked, disclaimer row, every lint branch that reads them); product facts keep their sources; routes, slates, the judge, verify, options-board and squad-run retired from the HLR bundle; REVIEW.md and the pack contract updated; checks pass
+- [ ] Step 7. The crew, portable by construction: `crew/` with one `prompt.md` and `schema.json` per co-worker (Intake, Strategist, Email writer, Paid writer, Editor, Producer), `crew/run.py` on any OpenAI-compatible endpoint, every check a file-reading CLI, a dry run on a fixture brief
+- [ ] Step 8. Email to Klaviyo: HTML twins of the module library from tokens.css, the assembler from the email writer's block list, the template push through Klaviyo's API (waits on a key with Templates write)
+- [ ] Step 9. Paid, Meta first: the specs confirmed by a person; the paid writer's single image and story outputs; the Figma masters at 1:1, 4:5 and 9:16 built in Eddie's chat from the runner's package
+- [ ] Step 10. Portability proof: one real brief end to end through `crew/run.py` on an xAI key, cost measured; Donnie's keep or cut on the output (the forge proof, moved from Step 5)
+- [ ] Handoff: CLAUDE.md and `crew/README.md` as the in-repo instructions; the bundle rebuilt with HLR's pack path; the repo checked once for other brands
+
 ## Reviews (default plan)
 
 - Review 1 ({{review-1-date}}): the Brand Review and the token proposal, with Eddie's Gate 1 picks (C3, C4, C5, C6, C8) for HLR to confirm

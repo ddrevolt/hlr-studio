@@ -25,13 +25,13 @@ You are the build runner for HLR Studio: High Light Rituals' design system and b
 
 - If four runner pull requests are already open, start nothing new and stop.
 - An item is ready when its status is `todo` or `build`, its `needs_you` is empty, its `gate` (if any) is recorded as open in `PROGRESSION.md` with a dated DECISIONS line, and its `depends` are all `done`, or `review` and already merged into `main`.
-- Pick from the lowest step in `PROGRESSION.md` order that has a ready item, at most two items. Prefer in this order: a failing check or an open blocker or should-fix from the latest review; a guard or test for a finding seen twice (`REVIEW.md` section 6); engine work; record hygiene; copy routes; gate or review packages.
+- Pick from the lowest step in `PROGRESSION.md` order that has a ready item (Phase 2 steps 6 to 10 and handoff), at most two items, in the order `backlog.json` lists them. Prefer in this order: a failing check or an open blocker or should-fix from the latest review; a guard or test for a finding seen twice (`REVIEW.md` section 6); engine work; record hygiene; copy routes; gate or review packages.
 - If nothing is ready and an open PROGRESSION step has work not yet in `backlog.json`, add it as `todo` items (id, name, step, kind, intent, acceptance, gate, needs_you) and open the pull request with that change alone, building nothing, so Eddie can review the new work before it is built.
 - If nothing is ready and nothing is missing, open no pull request and stop.
 
 ## 3. What you may build
 
-Everything between gates that needs no go and writes nothing outside this repo:
+Phase 2 (DECISIONS 2026-10-31): the crew in `crew/`, engine 0.6.0, the email HTML twins and the Klaviyo push, the paid package, the portability proof. The legal regime is gone: no lint, check or review asks for a legal status; every product fact still needs its source. Everything between gates that needs no go and writes nothing outside this repo:
 
 - **Engine.** Fixes, guards, lints, tests and new versions of `studio-engine` and the `hlr-studio-engine` bundle, through `REVIEW.md` section 3 (its checks run on the built plugin). An engine release ships as marked defaults for Eddie to rule on; the runner never installs it.
 - **Guards and checks.** New tests, lints, census terms and scans; the recurring-findings table gets its guard for any finding seen twice.

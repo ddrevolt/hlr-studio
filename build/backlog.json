@@ -14,154 +14,375 @@
     "max_items_per_run": 2,
     "max_open_prs": 4,
     "fan_out_budget_tokens": 400000,
-    "protected": ["build/RUNNER.md", ".github/", "REVIEW.md", "DECISIONS.md", "brand-pack/tokens.json", "brand-pack/figma.yaml"],
-    "never": ["open a gate", "ratify a derived value", "write to Figma", "write to the client originals", "invent an HLR fact", "install or publish", "message HLR or Donnie"]
+    "protected": [
+      "build/RUNNER.md",
+      ".github/",
+      "REVIEW.md",
+      "DECISIONS.md",
+      "brand-pack/tokens.json",
+      "brand-pack/figma.yaml"
+    ],
+    "never": [
+      "open a gate",
+      "ratify a derived value",
+      "write to Figma",
+      "write to the client originals",
+      "invent an HLR fact",
+      "install or publish",
+      "message HLR or Donnie"
+    ],
+    "order": "Within a step, the runner takes items in the order listed; legal-delete first."
   },
-  "steps": ["3", "4", "5", "process"],
+  "steps": [
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "handoff"
+  ],
   "items": [
     {
-      "id": "eng-054",
-      "name": "studio-engine 0.5.4 and the hlr-studio-engine 0.5.4 bundle",
-      "step": "3",
+      "id": "legal-delete",
+      "name": "Engine 0.6.0: delete the legal regime, keep product facts with sources",
+      "step": "6",
       "kind": "engine",
       "status": "todo",
       "owner": "runner",
-      "intent": "Lane H's queue: slot_lint.js on every prefix; R3-01, R3-02 and R3x-02; engine gaps G1 to G9 from outputs/step-4-figma/engine-gaps-chat6.md and G11 from Chat 6b; the K tests for R16 and R20's must-fail fixtures. Built from the 0.5.3 bundle in outputs/step-3-bundle, released through REVIEW.md section 3, never installed by the runner.",
-      "sources": ["PROGRESSION.md Step 3", "DECISIONS.md 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23", "outputs/step-3-bundle/bundle-report-0.5.3.md sections 6 and 7", "outputs/step-4-figma/engine-gaps-chat6.md"],
+      "intent": "Remove lib/claims.js’s legal regime and brand-pack/legal-ledger.json’s role from the HLR bundle: the signer, needs_legal and blocked, the disclaimer row, counsel placeholders, and every branch of brief_lint, copy_lint, paid_lint, social_lint and route_findings that reads them. never_say (the brief) and prohibited_patterns (voice) stay. Product facts that lived in the ledger move to products.json with their sources; the ledger file goes to _archive/. Update references/pack-contract.md, the SKILL.md files, the tests, REVIEW.md (section 1 Not for, section 2 check 3, section 4 tier 3, the never-ships list keeps \"invented figure, claim, price, quote or review\" as sourcing) and build/emdash_baseline.txt where regenerated outputs change.",
+      "sources": [
+        "DECISIONS.md 2026-10-31",
+        "claude/phase-2-rescope.md call 1",
+        "lib/claims.js",
+        "brand-pack/legal-ledger.json"
+      ],
       "acceptance": [
-        "bash build/checks.sh passes with the 0.5.4 bundle as the newest",
-        "every item above is either built with a test or listed in the bundle report as moved to 0.5.5 with the reason",
-        "outputs/step-3-bundle/bundle-report-0.5.4.md follows the 0.5.3 report's sections, section 7 listing the defaults for Eddie",
-        "REVIEW.md section 3 checks 1, 5, 6, 7 and 8 run and pass in the cloud; checks 2, 3, 4 and 9 listed as not run here (Eddie runs them on the Mac)",
-        "a fresh-context review with no open blocker or should-fix, or the open ones in needs_you"
+        "no needs_legal, blocked, signer or ledger reference remains in the bundle or the pack (grep is the test)",
+        "every fact that was a ledger row is in products.json with a source",
+        "bash build/checks.sh passes with 0.6.0 as the newest bundle; bundle-report-0.6.0.md follows the 0.5.3 report’s sections",
+        "REVIEW.md updated and a fresh-context review with no open blocker"
       ],
       "depends": [],
       "gate": null,
       "needs_you": ""
     },
     {
-      "id": "eng-emdash",
-      "name": "Engine templates stop writing em dashes into HLR outputs",
-      "step": "3",
+      "id": "retire-phase1",
+      "name": "Engine 0.6.0: retire routes, slates, the judge, verify, options-board, squad-run, web and social copy from the HLR bundle",
+      "step": "6",
       "kind": "engine",
       "status": "todo",
       "owner": "runner",
-      "intent": "copy_lint.js's claims_checking and slot_checking strings, the findings template and the one-pager template emit the character into outputs/ (17 known lines in build/emdash_baseline.txt). R7's second sighting in HLR-bound output; the fix ships in the next engine version with a test, and the baseline empties.",
-      "sources": ["build/emdash_baseline.txt", "REVIEW.md section 6 R7"],
-      "acceptance": ["the templates and lint strings carry no em dash", "a test fails if one returns", "build/emdash_baseline.txt is empty and the scan passes on regenerated outputs"],
-      "depends": [],
+      "intent": "Move the retired skills and their references out of the bundle to _archive/ (never deleted), keep every lint and script the crew reuses (brief_lint, copy_lint, paid_lint, fit_check, slot_lint, tokens_build, preflight), update the registry, README and BUNDLE.md, and the skill descriptions.",
+      "sources": [
+        "DECISIONS.md 2026-10-31",
+        "claude/phase-2-rescope.md calls 2 and 3"
+      ],
+      "acceptance": [
+        "the bundle lists only brief-intake, email-copy, paid-ad-copy, design-system and asset-production, or their crew successors",
+        "every reused script still has its tests and they pass",
+        "bundle-report-0.6.0.md names what was retired and where it went"
+      ],
+      "depends": [
+        "legal-delete"
+      ],
       "gate": null,
       "needs_you": ""
     },
     {
-      "id": "review-chat6b",
-      "name": "Fresh-context review of Chat 6b's close",
-      "step": "4",
-      "kind": "review",
+      "id": "crew-scaffold",
+      "name": "crew/: the portable shape and run.py on any OpenAI-compatible endpoint",
+      "step": "7",
+      "kind": "crew",
       "status": "todo",
       "owner": "runner",
-      "intent": "PROGRESSION lists Chat 6b's own fresh-context review as open: the Donnie sweep, the registry, the 17 staging comparisons, the 2026 sends as the email system, the product picker. Review what the files and the record hold against REVIEW.md; Figma-side checks (board_drift.js on the Type board's spec lines) are listed as needing the Mac.",
-      "sources": ["PROGRESSION.md Step 4, Chat 6b", "LEARNINGS.md 2026-10-23 Chat 6b", "REVIEW.md sections 2, 5 and 6"],
-      "acceptance": ["outputs/step-4-figma/review-chat6b-r1.md in REVIEW.md's finding format, first line naming what was read and run", "blockers and should-fix items fixed where the fix is in files; the rest in needs_you with owners"],
+      "intent": "crew/README.md (how a co-worker is defined: prompt.md with explicit inputs and outputs, schema.json, check command), crew/run.py (Python 3.9+, standard library plus the openai package: base URL, model and key from environment; reads the pack and the brief; runs the co-workers in order; writes JSON outputs; validates each against its schema; runs each check CLI; stops at the human pick), a fixture brief and a --dry-run mode that uses canned outputs so the pipeline runs with no key. Claude-specific files (SKILL.md) become thin pointers to crew/.",
+      "sources": [
+        "claude/phase-2-rescope.md call 6",
+        "DECISIONS.md 2026-10-31"
+      ],
+      "acceptance": [
+        "python3 crew/run.py --brief fixture --dry-run completes end to end and writes validated outputs",
+        "the same command with XAI_BASE_URL and XAI_API_KEY set is documented and untested here (needs a key)",
+        "no step imports a Claude, Cowork or MCP dependency",
+        "tests under crew/tests/ cover the schema validation and the stop at the human pick"
+      ],
       "depends": [],
       "gate": null,
       "needs_you": ""
     },
     {
-      "id": "forge-copy",
-      "name": "Forge proof, copy side: the real brief through the engine for email and social, cost measured",
-      "step": "5",
-      "kind": "copy",
+      "id": "crew-intake",
+      "name": "Intake co-worker: brief to structured brief",
+      "step": "7",
+      "kind": "crew",
       "status": "todo",
       "owner": "runner",
-      "intent": "Eddie's protection-of-energy brief (outputs/step-5-forge/protection-of-energy/) already ran email. Run it through squad-run with sequential: true for email and organic social, every route lint-clean, cost measured per route and in total, landing in outputs/step-5-forge/ as routes for Donnie's keep or cut. No Figma build; a paste-ready agent package for the social set instead.",
-      "sources": ["PROGRESSION.md Step 5", "DECISIONS.md 2026-10-23 protection-of-energy lines", "outputs/ai-firstify/ai-firstify-report.md call 4"],
-      "acceptance": ["routes for email and social with copy_lint and social_lint PASS, every fact traced to the pack with its key", "a cost line per route and in total in the LEARNINGS entry", "an options board built from the packets (options-board skill) in outputs/step-5-forge/", "nulls stay null with their gap and owner; no popularity line (HLR-T01)"],
-      "depends": [],
+      "intent": "prompt.md and schema.json: products resolved from products.json by name and alias, the moment, the offer, the audience, the never-say list, every unknown null with an owner. Check: brief_lint slimmed to the schema (no legal branch).",
+      "sources": [],
+      "acceptance": [
+        "the fixture brief and the protection-of-energy brief both produce a valid structured brief",
+        "an unknown price or date stays a merge token",
+        "brief_lint passes on both and fails on a mutated brief"
+      ],
+      "depends": [
+        "crew-scaffold",
+        "legal-delete"
+      ],
       "gate": null,
       "needs_you": ""
     },
     {
-      "id": "social-package",
-      "name": "Organic social module batch: the agent package and slot maps, ready for the Figma build",
-      "step": "4",
+      "id": "crew-strategist",
+      "name": "Strategist co-worker: three angles, human picks one",
+      "step": "7",
+      "kind": "crew",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "prompt.md and schema.json: three angles that differ on frame (from route-axes.json), each with the line it would lead with, the module it would open on, and the exemplar it leans on. run.py stops here and writes the pick file for a person; nothing is written until the pick exists.",
+      "sources": [],
+      "acceptance": [
+        "three angles with distinct axes on the fixture brief",
+        "run.py stops and resumes on a pick file",
+        "a test that two angles sharing an axis fail the check"
+      ],
+      "depends": [
+        "crew-scaffold"
+      ],
+      "gate": null,
+      "needs_you": ""
+    },
+    {
+      "id": "crew-email",
+      "name": "Email writer co-worker: the picked angle into Klaviyo blocks mapped to the module library",
+      "step": "7",
+      "kind": "crew",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "prompt.md and schema.json: subject and preview (3 pairs), hero, body blocks as module ids with slot values by slot id and budget (slotmap.yaml, module-library.json), CTA, footer. Check: copy_lint on budgets, voice and never-say; the em dash. Fixes the engine templates that wrote em dashes into outputs (build/emdash_baseline.txt empties).",
+      "sources": [],
+      "acceptance": [
+        "a valid block list on the fixture brief and on protection of energy, every slot within budget",
+        "copy_lint PASS; the em dash scan baseline is empty",
+        "every product fact in the copy traces to products.json by key"
+      ],
+      "depends": [
+        "crew-strategist",
+        "crew-intake"
+      ],
+      "gate": null,
+      "needs_you": ""
+    },
+    {
+      "id": "crew-paid",
+      "name": "Paid writer co-worker: Meta single image and story first",
+      "step": "7",
+      "kind": "crew",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "prompt.md and schema.json: primary text (3), headline (3), description, per ad type (single image, story), hook variants, with the paid specs from placement-specs.json carried as unverified until paid-specs closes. Check: paid_lint.",
+      "sources": [],
+      "acceptance": [
+        "valid ad sets on the fixture brief",
+        "paid_lint PASS",
+        "every number in the output traces to placement-specs.json and carries its confidence"
+      ],
+      "depends": [
+        "crew-strategist",
+        "crew-intake"
+      ],
+      "gate": null,
+      "needs_you": ""
+    },
+    {
+      "id": "crew-editor",
+      "name": "Editor co-worker: one voice pass that returns a diff, never a rewrite",
+      "step": "7",
+      "kind": "crew",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "prompt.md and schema.json: the voice contract’s sounds-like and not-like lines, rhythm, prohibited patterns, the em dash. Output is a list of proposed edits with a reason each; run.py applies only the ones a person accepts (or all, with --accept-edits).",
+      "sources": [],
+      "acceptance": [
+        "on a fixture with seeded violations the editor proposes the fixes and nothing else",
+        "the diff applies cleanly and copy_lint still passes"
+      ],
+      "depends": [
+        "crew-email",
+        "crew-paid"
+      ],
+      "gate": null,
+      "needs_you": ""
+    },
+    {
+      "id": "email-html",
+      "name": "HTML twins of the module library and the assembler",
+      "step": "8",
+      "kind": "producer",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "One HTML and CSS twin per module (M01 to M27) built from tokens.css and the slot map, table-based for email clients, assembled from the email writer’s block list into one Klaviyo-ready HTML file, with a screenshot check (Playwright) against the Figma master’s proportions. No Figma call.",
+      "sources": [],
+      "acceptance": [
+        "every module has a twin whose slots match slotmap.yaml",
+        "the assembler renders protection of energy to HTML with no unfilled slot",
+        "a Playwright screenshot per module saved beside the twin; width 600 and 1200 both render"
+      ],
+      "depends": [
+        "crew-email"
+      ],
+      "gate": null,
+      "needs_you": ""
+    },
+    {
+      "id": "klaviyo-push",
+      "name": "Klaviyo template push through the API",
+      "step": "8",
+      "kind": "producer",
+      "status": "todo",
+      "owner": "runner",
+      "intent": "crew/producers/klaviyo.py: create an HTML email template from the assembler’s file (POST /api/templates), optionally assign it to a campaign message; never sends. Dry-run writes the request body without a key.",
+      "sources": [],
+      "acceptance": [
+        "dry-run produces a valid request body",
+        "with a key (waiting), one template lands in the test account and its id is recorded in LEARNINGS"
+      ],
+      "depends": [
+        "email-html"
+      ],
+      "gate": "Klaviyo key",
+      "needs_you": ""
+    },
+    {
+      "id": "paid-package",
+      "name": "Paid masters package for the Figma build at 1:1, 4:5 and 9:16",
+      "step": "9",
       "kind": "package",
       "status": "todo",
       "owner": "runner",
-      "intent": "Organic social comes after the email templates, the flows and Chat 6b (all done 2026-10-23). The Figma build is Eddie's chat; the runner prepares everything that is files: the S01 to S04 formats the pattern review found, slotmap-social.yaml budgets proposed from the corpus, the asset-production agent package and the structure lint cases.",
-      "sources": ["PROGRESSION.md Step 4", "outputs/step-1-review/pattern-review.md", "brand-pack/slotmap-social.yaml", "DECISIONS.md 2026-10-23 Gate 4"],
-      "acceptance": ["outputs/step-4-figma/social-batch/agent-package.md paste-ready, every slot stamped hlr", "slotmap-social.yaml budgets proposed and tagged [derived], none ratified", "flex and contrast expectations listed per format for the build chat to probe"],
-      "depends": ["review-chat6b"],
+      "intent": "The asset-production agent package for the paid masters (single image feed 1:1 and 4:5, story 9:16) from the email elements where they carry over, slot-stamped for the paid writer, with the keep-clear bands from placement-specs.json flagged unverified until paid-specs closes. Eddie builds in Figma from it.",
+      "sources": [],
+      "acceptance": [
+        "outputs/step-9-paid/agent-package.md paste-ready with every slot id and budget",
+        "a structure lint case per format",
+        "the license flag carried on every format"
+      ],
+      "depends": [
+        "crew-paid"
+      ],
       "gate": null,
       "needs_you": ""
     },
     {
-      "id": "records-diet",
-      "name": "Rule 1's read under 25KB: the open script and the first-sentence cut",
-      "step": "process",
-      "kind": "records",
+      "id": "portability-proof",
+      "name": "One real brief end to end on an xAI key, cost measured",
+      "step": "10",
+      "kind": "proof",
       "status": "waiting",
       "owner": "Eddie",
-      "intent": "ai-firstify call 5: a script that prints PROGRESSION, the latest day's DECISIONS cut to each entry's first sentence with line numbers, and the latest LEARNINGS entry. Past entries untouched.",
-      "sources": ["outputs/ai-firstify/ai-firstify-report.md calls 5 and 6", "LEARNINGS.md 2026-10-24"],
-      "acceptance": ["build/open.py prints the rule 1 read under 25KB", "a test on a fixture DECISIONS block"],
-      "depends": [],
-      "gate": null,
-      "needs_you": "ai-firstify calls 1 to 11 (outputs/ai-firstify/ai-firstify-report.md): take the defaults, or rule per call? Call 1 is the Project instructions paste only you can do."
+      "intent": "Run protection of energy (or a brief Eddie supplies) through crew/run.py with XAI_BASE_URL and XAI_API_KEY, Claude nowhere in the path; record per-step tokens and cost, differences from the Claude run, and what broke.",
+      "sources": [],
+      "acceptance": [
+        "a LEARNINGS entry with the run, its cost and its diffs",
+        "the outputs validate against every schema",
+        "Donnie’s keep or cut sheet prepared from the outputs"
+      ],
+      "depends": [
+        "crew-editor",
+        "email-html"
+      ],
+      "gate": "xAI key",
+      "needs_you": "An xAI API key for the proof run (and later HLR’s). Until then the crew is tested with --dry-run and on Claude."
     },
     {
       "id": "claude-md",
-      "name": "HLR-clean CLAUDE.md at the repo root",
-      "step": "process",
+      "name": "CLAUDE.md and crew/README.md as the in-repo instructions",
+      "step": "handoff",
       "kind": "records",
-      "status": "waiting",
-      "owner": "Eddie",
-      "intent": "ai-firstify call 10 (a): under 100 lines, where things are, standing rules, open and close, so the repo carries its own instructions when HLR's team runs it.",
-      "sources": ["outputs/ai-firstify/ai-firstify-report.md call 10", "_setup/hlr-project-instructions.proposed.md (Mac only)"],
-      "acceptance": ["CLAUDE.md under 100 lines, no other brand, no em dash, every path it names exists"],
-      "depends": ["records-diet"],
+      "status": "todo",
+      "owner": "runner",
+      "intent": "Under 100 lines each: where things are, the standing rules as they stand after Phase 2, how to run the crew on any endpoint, open and close. No other brand, no em dash, every path exists.",
+      "sources": [],
+      "acceptance": [
+        "both files exist and every path they name resolves",
+        "the em dash scan passes"
+      ],
+      "depends": [
+        "crew-scaffold"
+      ],
       "gate": null,
-      "needs_you": "Call 10: (a) the in-repo CLAUDE.md, default, or (b) Project instructions stay the only copy?"
+      "needs_you": ""
     },
     {
       "id": "paid-specs",
       "name": "Before the first paid build: the 9:16 keep-clear bands and copy limits confirmed in Meta's Ads Guide",
-      "step": "4",
+      "step": "9",
       "kind": "ruling",
       "status": "waiting",
       "owner": "Eddie",
       "intent": "A person confirms the numbers and placement-specs.json's _verified moves (DECISIONS 2026-10-18).",
-      "sources": ["PROGRESSION.md Step 4", "DECISIONS.md 2026-10-18", "REVIEW.md R6"],
-      "acceptance": ["_verified dated by the person who read the guide"],
+      "sources": [
+        "PROGRESSION.md Step 4",
+        "DECISIONS.md 2026-10-18",
+        "REVIEW.md R6"
+      ],
+      "acceptance": [
+        "_verified dated by the person who read the guide"
+      ],
       "depends": [],
       "gate": null,
       "needs_you": "Read Meta's Ads Guide for the 9:16 safe zones and the primary text and headline limits, and tell the runner the numbers and the date, or do the edit."
     },
     {
-      "id": "paid-web-batches",
-      "name": "Paid and web module batches",
-      "step": "4",
-      "kind": "package",
+      "id": "klaviyo-access",
+      "name": "Klaviyo private API key with Templates write and a test list",
+      "step": "8",
+      "kind": "ruling",
       "status": "waiting",
-      "owner": "Donnie",
-      "intent": "After Review 2's ruling on the paid and web taxonomy (Gate 2 call 1 b). The runner prepares packages once the taxonomy is ratified; the build is Eddie's chat.",
-      "sources": ["PROGRESSION.md Step 4 and Reviews", "DECISIONS.md 2026-10-18 Gate 2"],
-      "acceptance": ["as social-package, per channel"],
-      "depends": ["social-package", "paid-specs"],
-      "gate": "Review 2 taxonomy ruling",
-      "needs_you": "Did Review 2 (Fri 2026-10-30) close, and was the paid and web taxonomy ratified? Nothing in the record is dated after 2026-10-24."
+      "owner": "Eddie",
+      "intent": "Needed for klaviyo-push and for reading how HLR’s account is set up (universal blocks, lists, the sending domain).",
+      "sources": [],
+      "acceptance": [
+        "a key in the runner’s environment (never in the repo) and a test list named"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "A Klaviyo private API key scoped to Templates write and Campaigns read, plus the name of a test list. Does HLR already use universal blocks?"
+    },
+    {
+      "id": "review-2-outcome",
+      "name": "Review 2 (Fri 2026-10-30): what was ruled",
+      "step": "9",
+      "kind": "ruling",
+      "status": "waiting",
+      "owner": "Eddie",
+      "intent": "Nothing in the record is dated after 2026-10-24. The paid taxonomy ruling gates the paid writer’s taxonomy fields.",
+      "sources": [],
+      "acceptance": [
+        "a DECISIONS line for Review 2"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "Did Review 2 happen, and was the paid taxonomy ratified?"
     },
     {
       "id": "donnie-keep-cut",
       "name": "Donnie's blind keep or cut sheet on the forge proof",
-      "step": "5",
+      "step": "10",
       "kind": "ruling",
       "status": "waiting",
       "owner": "Donnie",
       "intent": "The forge proof's grade (tier 2, Donnie). The result goes in LEARNINGS.md.",
-      "sources": ["PROGRESSION.md Step 5", "REVIEW.md section 4"],
-      "acceptance": ["the marked sheet recorded with its date; the LEARNINGS entry"],
-      "depends": ["forge-copy"],
+      "sources": [
+        "PROGRESSION.md Step 5",
+        "REVIEW.md section 4"
+      ],
+      "acceptance": [
+        "the marked sheet recorded with its date; the LEARNINGS entry"
+      ],
+      "depends": [
+        "portability-proof"
+      ],
       "gate": null,
       "needs_you": "Donnie marks the sheet at Review 3; Eddie records it."
     },
@@ -173,8 +394,12 @@
       "status": "waiting",
       "owner": "Donnie",
       "intent": "Scene 1 as the angle gate's provisional pick, the proposed send date (Tue 2026-10-27, now past), the hero script line still showing its placeholder, the Seeds of Protection placeholder photo, the M06 grid instead of M03 spotlights.",
-      "sources": ["DECISIONS.md 2026-10-23 protection-of-energy lines"],
-      "acceptance": ["each call ruled as a DECISIONS line"],
+      "sources": [
+        "DECISIONS.md 2026-10-23 protection-of-energy lines"
+      ],
+      "acceptance": [
+        "each call ruled as a DECISIONS line"
+      ],
       "depends": [],
       "gate": null,
       "needs_you": "Confirm scene 1, set the send date, give the script line or switch it off, confirm the photos, confirm the M06 grid."
@@ -187,53 +412,217 @@
       "status": "waiting",
       "owner": "Donnie",
       "intent": "Chat 6b left Donnie's call on T02's three departures from the original send and on the product photos the picker has no cleared image for.",
-      "sources": ["PROGRESSION.md Step 4 Chat 6b", "DECISIONS.md 2026-10-23 product picker"],
-      "acceptance": ["ruled as DECISIONS lines"],
+      "sources": [
+        "PROGRESSION.md Step 4 Chat 6b",
+        "DECISIONS.md 2026-10-23 product picker"
+      ],
+      "acceptance": [
+        "ruled as DECISIONS lines"
+      ],
       "depends": [],
       "gate": null,
       "needs_you": "Donnie's call, recorded by Eddie."
     },
     {
+      "id": "handoff-rebuild",
+      "name": "At handoff: rebuild the bundle with HLR's own pack path",
+      "step": "handoff",
+      "kind": "release",
+      "status": "waiting",
+      "owner": "HLR",
+      "intent": "Unless their brand home sits under a claude-cowork folder, the registry's pack path changes and the bundle is rebuilt and checked.",
+      "sources": [
+        "PROGRESSION.md Step 3"
+      ],
+      "acceptance": [
+        "the rebuilt bundle passes REVIEW.md section 3; sha recorded"
+      ],
+      "depends": [
+        "retire-phase1",
+        "claude-md"
+      ],
+      "gate": null,
+      "needs_you": "HLR's brand home path, through Eddie."
+    },
+    {
       "id": "census-history",
       "name": "Census over every commit in git history before the repo goes to HLR",
-      "step": "process",
+      "step": "handoff",
       "kind": "release",
       "status": "waiting",
       "owner": "Eddie",
       "intent": "Needs claude-cowork/_tools/release-checks on the Mac (the tools name other brands and never enter the repo). The runner cannot run it.",
-      "sources": ["PROGRESSION.md Process", "REVIEW.md section 2 rule 9"],
-      "acceptance": ["every commit censused, result 0 or the rewrite ruled"],
+      "sources": [
+        "PROGRESSION.md Process",
+        "REVIEW.md section 2 rule 9"
+      ],
+      "acceptance": [
+        "every commit censused, result 0 or the rewrite ruled"
+      ],
       "depends": [],
       "gate": null,
       "needs_you": "Run the census over history on the Mac when the repo is ready for handoff; also ai-firstify call 9 (which plugin builds stay in history)."
+    },
+    {
+      "id": "eng-054",
+      "name": "studio-engine 0.5.4 and the hlr-studio-engine 0.5.4 bundle",
+      "step": "3",
+      "kind": "engine",
+      "status": "ruled",
+      "owner": "runner",
+      "intent": "Lane H's queue: slot_lint.js on every prefix; R3-01, R3-02 and R3x-02; engine gaps G1 to G9 from outputs/step-4-figma/engine-gaps-chat6.md and G11 from Chat 6b; the K tests for R16 and R20's must-fail fixtures. Built from the 0.5.3 bundle in outputs/step-3-bundle, released through REVIEW.md section 3, never installed by the runner.",
+      "sources": [
+        "PROGRESSION.md Step 3",
+        "DECISIONS.md 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23",
+        "outputs/step-3-bundle/bundle-report-0.5.3.md sections 6 and 7",
+        "outputs/step-4-figma/engine-gaps-chat6.md"
+      ],
+      "acceptance": [
+        "bash build/checks.sh passes with the 0.5.4 bundle as the newest",
+        "every item above is either built with a test or listed in the bundle report as moved to 0.5.5 with the reason",
+        "outputs/step-3-bundle/bundle-report-0.5.4.md follows the 0.5.3 report's sections, section 7 listing the defaults for Eddie",
+        "REVIEW.md section 3 checks 1, 5, 6, 7 and 8 run and pass in the cloud; checks 2, 3, 4 and 9 listed as not run here (Eddie runs them on the Mac)",
+        "a fresh-context review with no open blocker or should-fix, or the open ones in needs_you"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "eng-emdash",
+      "name": "Engine templates stop writing em dashes into HLR outputs",
+      "step": "3",
+      "kind": "engine",
+      "status": "ruled",
+      "owner": "runner",
+      "intent": "copy_lint.js's claims_checking and slot_checking strings, the findings template and the one-pager template emit the character into outputs/ (17 known lines in build/emdash_baseline.txt). R7's second sighting in HLR-bound output; the fix ships in the next engine version with a test, and the baseline empties.",
+      "sources": [
+        "build/emdash_baseline.txt",
+        "REVIEW.md section 6 R7"
+      ],
+      "acceptance": [
+        "the templates and lint strings carry no em dash",
+        "a test fails if one returns",
+        "build/emdash_baseline.txt is empty and the scan passes on regenerated outputs"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "review-chat6b",
+      "name": "Fresh-context review of Chat 6b's close",
+      "step": "4",
+      "kind": "review",
+      "status": "ruled",
+      "owner": "runner",
+      "intent": "PROGRESSION lists Chat 6b's own fresh-context review as open: the Donnie sweep, the registry, the 17 staging comparisons, the 2026 sends as the email system, the product picker. Review what the files and the record hold against REVIEW.md; Figma-side checks (board_drift.js on the Type board's spec lines) are listed as needing the Mac.",
+      "sources": [
+        "PROGRESSION.md Step 4, Chat 6b",
+        "LEARNINGS.md 2026-10-23 Chat 6b",
+        "REVIEW.md sections 2, 5 and 6"
+      ],
+      "acceptance": [
+        "outputs/step-4-figma/review-chat6b-r1.md in REVIEW.md's finding format, first line naming what was read and run",
+        "blockers and should-fix items fixed where the fix is in files; the rest in needs_you with owners"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "social-package",
+      "name": "Organic social module batch: the agent package and slot maps, ready for the Figma build",
+      "step": "4",
+      "kind": "package",
+      "status": "ruled",
+      "owner": "runner",
+      "intent": "Organic social comes after the email templates, the flows and Chat 6b (all done 2026-10-23). The Figma build is Eddie's chat; the runner prepares everything that is files: the S01 to S04 formats the pattern review found, slotmap-social.yaml budgets proposed from the corpus, the asset-production agent package and the structure lint cases.",
+      "sources": [
+        "PROGRESSION.md Step 4",
+        "outputs/step-1-review/pattern-review.md",
+        "brand-pack/slotmap-social.yaml",
+        "DECISIONS.md 2026-10-23 Gate 4"
+      ],
+      "acceptance": [
+        "outputs/step-4-figma/social-batch/agent-package.md paste-ready, every slot stamped hlr",
+        "slotmap-social.yaml budgets proposed and tagged [derived], none ratified",
+        "flex and contrast expectations listed per format for the build chat to probe"
+      ],
+      "depends": [
+        "review-chat6b"
+      ],
+      "gate": null,
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "paid-web-batches",
+      "name": "Paid and web module batches",
+      "step": "4",
+      "kind": "package",
+      "status": "ruled",
+      "owner": "Donnie",
+      "intent": "After Review 2's ruling on the paid and web taxonomy (Gate 2 call 1 b). The runner prepares packages once the taxonomy is ratified; the build is Eddie's chat.",
+      "sources": [
+        "PROGRESSION.md Step 4 and Reviews",
+        "DECISIONS.md 2026-10-18 Gate 2"
+      ],
+      "acceptance": [
+        "as social-package, per channel"
+      ],
+      "depends": [
+        "social-package",
+        "paid-specs"
+      ],
+      "gate": "Review 2 taxonomy ruling",
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "records-diet",
+      "name": "Rule 1's read under 25KB: the open script and the first-sentence cut",
+      "step": "process",
+      "kind": "records",
+      "status": "ruled",
+      "owner": "Eddie",
+      "intent": "ai-firstify call 5: a script that prints PROGRESSION, the latest day's DECISIONS cut to each entry's first sentence with line numbers, and the latest LEARNINGS entry. Past entries untouched.",
+      "sources": [
+        "outputs/ai-firstify/ai-firstify-report.md calls 5 and 6",
+        "LEARNINGS.md 2026-10-24"
+      ],
+      "acceptance": [
+        "build/open.py prints the rule 1 read under 25KB",
+        "a test on a fixture DECISIONS block"
+      ],
+      "depends": [],
+      "gate": null,
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
     },
     {
       "id": "explainer",
       "name": "Explainer for Eddie and HLR",
       "step": "process",
       "kind": "package",
-      "status": "waiting",
+      "status": "ruled",
       "owner": "Eddie",
       "intent": "Built at the plan's defaults and published privately; round 2's 5 should-fix and 10 notes open; paused at Eddie's request (2026-10-23); ai-firstify call 8 parks it until Review 2 closes.",
-      "sources": ["PROGRESSION.md Process", "outputs/explainer/plan.md"],
-      "acceptance": ["round 2's findings fixed and verified; Eddie's go before HLR sees it"],
+      "sources": [
+        "PROGRESSION.md Process",
+        "outputs/explainer/plan.md"
+      ],
+      "acceptance": [
+        "round 2's findings fixed and verified; Eddie's go before HLR sees it"
+      ],
       "depends": [],
       "gate": "Review 2 closed",
-      "needs_you": "Unpause after Review 2, or keep parked?"
-    },
-    {
-      "id": "handoff-rebuild",
-      "name": "At handoff: rebuild the bundle with HLR's own pack path",
-      "step": "3",
-      "kind": "release",
-      "status": "waiting",
-      "owner": "HLR",
-      "intent": "Unless their brand home sits under a claude-cowork folder, the registry's pack path changes and the bundle is rebuilt and checked.",
-      "sources": ["PROGRESSION.md Step 3"],
-      "acceptance": ["the rebuilt bundle passes REVIEW.md section 3; sha recorded"],
-      "depends": ["eng-054", "census-history"],
-      "gate": null,
-      "needs_you": "HLR's brand home path, through Eddie."
+      "needs_you": "",
+      "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
     }
-  ]
+  ],
+  "phase": "Phase 2 (DECISIONS 2026-10-31)"
 }

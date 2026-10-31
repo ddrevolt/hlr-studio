@@ -2,6 +2,15 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: Phase 2 re-scope (Eddie's rulings)
+
+- Ruled: the legal regime is deleted from the engine; product facts keep their sources; paid starts with Meta; portability targets the xAI API. Defaults taken on purpose, crew, paid formats, Klaviyo path and portability shape (DECISIONS 2026-10-31; proposal in the project doc `claude/phase-2-rescope.md`).
+- The runner was paused by `build/KILL` while the backlog was rewritten (a settings-side pause was not available to this chat); the kill switch is off again with the Phase 2 backlog: 13 live items across Steps 6 to 10 and handoff, 8 waiting on a person, 7 Phase 1 items retired with their record kept.
+- Inventory before the deletion: `lib/claims.js`, `brand-pack/legal-ledger.json` (10 topics), 16 needs_legal and 95 blocked references across the lints and templates; 71 prohibited_patterns references are voice and stay.
+- Klaviyo's API creates HTML templates and assigns them to campaign messages; sends stay manual; flows are read-only. The xAI API is OpenAI-SDK compatible with function calling and server-side tools; Grok Build and the CLI are waitlisted, so the crew is built as files and CLIs with one orchestrator script.
+- Cost: not measured (main chat).
+- Status: done, the re-scope recorded, the backlog and map rewritten, the runner resumed; waiting on Eddie, a Klaviyo key and test list, an xAI key, the Meta specs, Review 2's outcome; waiting on Donnie, the protection email's calls, T02 and the picker; next, the runner's first Phase 2 run: legal-delete, then crew-scaffold.
+
 ## 2026-10-31: HLR Studio map and the build runner (Eddie's request)
 
 - Built: the HLR Studio map (private artifact, four views: Studio, Runner, How it operates, Record), `build/` with RUNNER.md, backlog.json (15 items from PROGRESSION's open boxes, DECISIONS and the ai-firstify calls), checks.sh and the em dash scan, `.github/` with the pull request template and a checks workflow, and the hourly scheduled runner. The repo `ddrevolt/hlr-studio` carries the brand home's history.
