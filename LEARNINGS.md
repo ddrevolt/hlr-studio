@@ -466,3 +466,7 @@ One dated entry per chat, newest first.
 ## 2026-11-01: paid complements note, Full bleed toggle fix
 - A cloned variant can carry a component property that drives nothing. After cloning, check componentPropertyReferences on the toggled nodes before relying on the property.
 - Cost: not measured.
+
+## 2026-11-01: paid pairing verification
+- The first draft of the paid note said there were no paid originals; the boards reference them by node id in the client file. Read figma.yaml before asserting what the library lacks.
+- Cost: not measured.
