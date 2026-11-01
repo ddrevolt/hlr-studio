@@ -457,3 +457,8 @@ One dated entry per chat, newest first.
 - A screenshot tool call can fail with "MCP server connection lost"; retry once and continue.
 - Not verified: S01 Offer tile Top screenshot; all S01 variants beyond the six spot checks; 2x tests; real-copy tests.
 - Cost: not measured.
+
+## 2026-11-01: S04 Full bleed and S05 fixes
+- Each new variant property multiplies variants; S04 is at 13, so grow the section and move whatever sits below it (S05 moved to y 38000).
+- Centred Full bleed shows item labels by default; hide items for story use. Not verified: Statement and Quote Full bleed screenshots, the board instances (still on old variants).
+- Cost: not measured.
