@@ -2,6 +2,17 @@
 
 One dated entry per chat, newest first.
 
+## 2026-11-01: S01 Feed Post built in the library (Eddie's go, S01 only)
+
+- An instance's child cannot change its stack positioning ("layoutPositioning cannot be overridden in an instance"), so E04's centred IMAGE chip cannot be nudged on an instance. The Offer tile's offer line sits in the lower third, clear of the chip; moving the chip means changing the E04 master.
+- `setRangeBoundVariable` over a whole text range for fontStyle left the node's fontSize unbound; the unbound-property audit caught it and `setBoundVariable('fontSize', ...)` fixed it. Run that audit after any range binding.
+- Changing a text node's characters drops the accent range's italic binding, so a flex probe re-applies the accent to the last word at every step or it measures roman widths.
+- A `node.screenshot()` returned from use_figma shows inline, and returning anything else with it drops the data: read evidence in a separate call. `get_screenshot` with `enableBase64Response` shows the client's reference where the proxy blocks the URL.
+- The client page (Highlight-Rituals-Design-Pull) is reachable through get_metadata and get_screenshot; only downloading its PNGs from the shell is blocked.
+- `social-design-scope.md` lives only on the PR #9 branch, not on the Mac, and the Mac repo has no remote, so the PR goes through a cloud clone with a patch of this chat's edits.
+- Flex probe, tightest variants at 1080 x 1350 on the social canvas, all toggles on, wide-word corpus: eyebrow 26 characters on one line; headline 63 (Headline on photo), 54 (Text tile), 21 (Offer tile); body 243 on five lines; script 27; cue 33. The Text tile headline (54 against 60 for 2x) and the Offer line (21 against 28) fail the 2x check, and the Offer line breaks inside Rhodochrosite and Phosphosiderite at display/l.
+- Cost not measured.
+
 ## 2026-10-31: runner, paid-package
 
 - Done: `crew/producers/figma_package.py` and `outputs/step-9-paid/agent-package.md`: three paste-ready packages for the native agent (feed 1:1, feed 4:5, story 9:16) built from `slotmap-paid.yaml` (P01 to P08 at each ratio, P09 on 9:16; 50, 50 and 51 slots), `tokens.json`, `figma.yaml` and `placement-specs.json`. Every slot id carries its budget statement (all null, said so), every package carries the license flag and the notice text, the 9:16 keep-clear is flagged unverified with no number, and no copy is typed (each text layer holds its merge value). `crew/tests/test_figma_package.py`: 21 tests, a lint case per format and mutation cases.

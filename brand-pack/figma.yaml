@@ -21,6 +21,7 @@
 # 2026-10-23, after Review 1 (Eddie's yes to three questions): product names in Saol Display in email (font/family/title email mode; font/family/price 306:166 keeps prices on Saol Standard); E02 Face=Italic (306:182, 306:185; font/style/link-accent 306:167) with T01's header link on it; the product picker on E11 (Product#307:0) and E12 (Product#307:4) over packshot components in section 307:166 on the photos page; the image exposed on E06 (39:144, 257:178), E07 (53:110) and M03 (40:135, 40:145).
 # 2026-10-23, the protection-of-energy email (Eddie's brief): frame 317:2214 on 04 Staging under staging, three photo hashes under photos (one of them 27:289 flattened in the file); no library change.
 # 2026-10-18: fonts.build_stand_in_styles added (Gate 2 question 2, Eddie). Layout canvas modes (web, social, email) arrive with engine 0.5.3, which renames the recorded layout mode.
+# 2026-11-01, S01 Feed Post (Eddie's go, defaults; scope doc on PR #9): Social section 334:454 on 02 Modules, Social/S01 Feed Post 334:502 (four structures, social canvas on each root), E16 Handle 331:459 on 01 Elements; no variable created, bindings under s01_bindings.
 slots:
   namespace: hlr
   key: slot                  # setSharedPluginData('hlr', 'slot', '<prefix>##.role')
@@ -195,6 +196,7 @@ components:   # 2026-10-23, Chat 5: marks as SVG components, fills bound to comp
   "Elements/E13 Product image, ritual kit": "168:210" # Crop=Portrait 168:214 (default), Square 168:211, On ground 168:217
   "Elements/E14 Product image, crystal": "168:221"    # Crop=Portrait 168:225 (default), Square 168:222, On ground 168:228
   "Elements/E15 Star": "201:175"                      # an instance of Marks/Star at 64 x 71 (201:176); in M09 (201:365) and M10 Style=Star at 94 x 104.28 (201:368); Eddie, 2026-10-23; auto-layout since the batch 2 review round 2 (BR2-01): its Marks/Star (201:176) fills it, so a placement resized in proportion scales the star
+  "Elements/E16 Handle": "331:459"                    # 2026-11-01, S01 build: set Surface=Ground 331:455, Surface=Photo 331:457; the handle @HIGHLIGHTRITUALS, fine style, an element not a slot; in the Marks section
   "Specimen: E01 on photo": "39:152"                # frame, filled with the cleared photo 27:137
   # 2026-10-23, Chat 6: email modules on 02 Modules, 1200 wide, email canvas set on every root
   "Email/M01 Header": "40:104"
@@ -225,6 +227,13 @@ components:   # 2026-10-23, Chat 5: marks as SVG components, fills bound to comp
   "Email/M25 Social footer": "169:364"              # E-M20 without the crest; deep ground
   "Email/M26 Transactional card": "169:366"         # E-P7; Show closing line#169:1
   "Email/M27 Ritualist masthead": "169:374"         # E-M10; warm ground; the date wraps (fill width, auto height) since 2026-10-23
+  # 2026-11-01, S01 Feed Post (Eddie's go): Social section 334:454, social canvas set on each variant root
+  "Social/S01 Feed Post": "334:502"                 # set: Structure=Photo 334:455, Structure=Headline on photo 334:459, Structure=Text tile 334:474, Structure=Offer tile 334:491; props Show eyebrow#334:0, Show body#334:5, Show script#334:10, Show cue#334:15, Show rule#334:20, Show star#334:25, Show scrim#334:30; slots S01.* stamped hlr/slot; caption layer 334:505 (S01.caption) beside the set
+s01_bindings:   # 2026-11-01, S01 Feed Post: existing variables only, none created
+  fills: { "color/semantic/background/default": "VariableID:19:19", "color/semantic/background/scrim": "VariableID:19:23", "color/semantic/text/primary": "VariableID:19:24", "color/semantic/text/on-photo": "VariableID:19:26", "color/semantic/background/email-page": "VariableID:19:20" }   # email-page: the section only
+  spacing: { "space/30": "VariableID:19:84", "space/24": "VariableID:19:83", "space/10": "VariableID:19:79", "space/8": "VariableID:19:78", "space/6": "VariableID:19:77" }
+  type: { "font/style/display-accent": "VariableID:19:50", "font/size/display-l": "VariableID:19:69" }   # text styles by name: display/s, display/m, display/l, eyebrow, body, script, fine (E16)
+  placed_components: { "Elements/E04 Image": "39:119", "Elements/E03 Rule": "39:117", "Elements/E15 Star": "201:175", "Elements/E16 Handle": "331:455 and 331:457" }
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09; opens with M23 (the lockup) where it opened with M01, since 2026-10-23
   "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767; M07 (46:262) on Auto (Eddie, kept 2026-10-23)
@@ -267,7 +276,7 @@ staging:     # 2026-10-23, Chat 6: on 04 Staging
   "T17 comparison": { section: "250:1939", send: "273:1497", rebuild: "250:1946" }   # send from originals 267:7852 (reference 2:194122), pasted as "Email 5", its texts match 2:194122, sliced under 4096 px
 registry:    # 2026-10-23, Chat 6b: titled sections (a large title and one plain line each), on the email canvas; masters keep their names and ids
   elements: { "Buttons and links": "245:176", "Images": "245:179", "Product images": "245:182", "Products and prices": "245:185", "Reviews and press": "245:188", "Dividers": "245:191", "Marks": "245:194" }   # 01 Elements; Eddie's 2022 sparkle frame 161:2420 stays outside, untouched
-  modules: { "Headers and heroes": "245:2191", "Text": "245:2194", "Images": "245:2197", "Features and splits": "245:2200", "Products": "245:2203", "Reviews": "245:2206", "Offers and promos": "245:2209", "Calls to action": "245:2212", "Dividers": "245:2215", "Footers": "245:2218", "Order and flow pieces": "245:2221" }   # 02 Modules
+  modules: { "Headers and heroes": "245:2191", "Text": "245:2194", "Images": "245:2197", "Features and splits": "245:2200", "Products": "245:2203", "Reviews": "245:2206", "Offers and promos": "245:2209", "Calls to action": "245:2212", "Dividers": "245:2215", "Footers": "245:2218", "Order and flow pieces": "245:2221", "Social": "334:454" }   # 02 Modules
 photos:      # 2026-10-23: cleared images on the photos page used by the build (fills reuse these hashes in this file only)
   hero_27_137: "3cf0754f86b885891e1c949e49b47c194695bfc6"
   band_27_136: "39dbf9fccbe65446d23a81c29ecfcf70610deb75"
