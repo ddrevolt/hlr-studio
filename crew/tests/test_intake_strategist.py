@@ -330,6 +330,50 @@ class PaidTests(Tmp):
         self.assertIn("limit 10", r.stdout)
 
 
+class EditorTests(Tmp):
+    S = os.path.join(FX, "editor-seeded")
+
+    def test_seeded_faults_fail_before_and_the_edits_fix_exactly_those(self):
+        self.assertEqual(check("email_check.py", os.path.join(self.S, "email.json")).returncode, 1)
+        self.assertEqual(check("paid_check.py", os.path.join(self.S, "paid.json")).returncode, 1)
+        r = check("editor_check.py", os.path.join(self.S, "editor.json"), "--run", self.S)
+        self.assertEqual(r.returncode, 0, r.stdout)
+        editor = load(os.path.join(self.S, "editor.json"))
+        outputs = {"email": load(os.path.join(self.S, "email.json")), "paid": load(os.path.join(self.S, "paid.json"))}
+        run_dir = os.path.join(self.tmp, "run")
+        os.makedirs(run_dir)
+        for n in ("intake.json",):
+            self.write("run/" + n, load(os.path.join(self.S, n)))
+        run.apply_edits(editor, outputs, run_dir, {"dir": os.path.join(ROOT, "brand-pack")})
+        for stage in ("email", "paid"):
+            applied = load(os.path.join(run_dir, stage + ".edited.json"))
+            clean = load(os.path.join(FX, "dry-run", stage + ".json"))
+            self.assertEqual(applied, clean, stage)
+            script = "email_check.py" if stage == "email" else "paid_check.py"
+            r = check(script, os.path.join(run_dir, stage + ".edited.json"))
+            self.assertEqual(r.returncode, 0, r.stdout)
+        seeded = [e["path"] for e in editor["edits"]]
+        self.assertEqual(len(seeded), 4)
+        self.assertEqual(len(set(seeded)), 4)
+
+    def test_editor_mutations_fail(self):
+        def mutate(fn):
+            d = load(os.path.join(self.S, "editor.json"))
+            fn(d)
+            return check("editor_check.py", self.write("editor.json", d), "--run", self.S)
+        r = mutate(lambda d: d["edits"][0].update(before="not the string"))
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("before does not match", r.stdout)
+        r = mutate(lambda d: d["edits"][1].update(after=d["edits"][1]["after"] + " " * 0 + "x" * 200))
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("allows", r.stdout)
+        r = mutate(lambda d: d["edits"][3].update(after="Only $9 today."))
+        self.assertEqual(r.returncode, 1)
+        r = mutate(lambda d: d["edits"].append(dict(d["edits"][0])))
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("a second edit", r.stdout)
+
+
 class EmailAndHygieneTests(Tmp):
     def go(self, case, fn, intake_fn=None):
         c = CASES[case]
@@ -379,6 +423,10 @@ class EmailAndHygieneTests(Tmp):
         def slug(d):
             d["brief_slug"] = "other"
         cases.append((slug, "slug"))
+
+        def amp(d):
+            d["blocks"][0]["slots"]["M04.body"] += " Calm & still."
+        cases.append((amp, "ampersand"))
 
         for fn, needle in cases:
             r = self.go("protection-of-energy", fn)

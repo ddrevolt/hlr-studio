@@ -2,13 +2,27 @@
 
 One dated entry per chat, newest first.
 
+## 2026-10-31: runner, claude-md
+
+- Done: `CLAUDE.md` at the repo root (47 lines: where things are, ten standing rules as they stand after Phase 2, how to run the crew on any endpoint, open and close, checks, the runner) and `crew/README.md` brought current (the email HTML producer is built; the Klaviyo push and Figma package are named as not built). `crew/tests/test_records.py` keeps both under 100 lines, free of em dashes, and every path they name resolving.
+- Checked: `bash build/checks.sh` PASS (43 crew tests). The rules are written from the project instructions in this repo's record; Eddie reads the wording, since "Only Donnie ratifies a derived value" follows DECISIONS 2026-10-23.
+- Waiting on Eddie: read CLAUDE.md, set claude-md done. handoff-rebuild waits on HLR's brand home path. Next: paid-package (its slot map is held for Review 2, so it waits on review-2-outcome in practice).
+- Cost: not measured, no subagent.
+
 ## 2026-10-31: runner, email-html
 
-- Done: `crew/producers/email_html.py` builds one table-based twin per module (M01 to M27) at 600 and 1200 wide, each slot shown as its own id, and assembles the email writer's block list to one HTML file (protection of energy: M01, M02, M04, M06, M04, M03, M14, M09; only merge tokens left). `email_screens.py` saves a Playwright screenshot per twin and checks that the 600 render is half the 1200 render. `outputs/step-8-email/report.md` lists every [derived] dimension and every gap with its owner.
-- Checked: `bash build/checks.sh` PASS (41 crew tests, em dash 0 new). Fresh-context review: 0 blockers, 4 should-fix (hero text ink on a photo, an untagged muted color, clickable footer nav, fixed-width limit), all fixed or documented; 6 notes, three logged in the report.
-- Findings by severity: blocker 0; should-fix 4, closed; note 6, open (M02 Show wordmark unrendered, E08 stars as glyphs, no VML hero fallback).
-- Waiting on Eddie: compare the twins' geometry with the Figma masters (a Figma read in his chat); a send test once Klaviyo access exists; font licenses. Waiting on Donnie: none. Next: klaviyo-push waits on a key; paid-package.
-- Cost: not measured. One read-only review subagent.
+- Done: `crew/producers/email_html/`: `twins.py` (one table-based fragment per module, M01 to M27, from `tokens.css`, the email canvas sizes in `tokens.flat.json` and the slot map), `assemble.py` (block list to one HTML file, tokens kept for Klaviyo, unfilled slot or unknown module exits 1), `build_twins.py` (twins and a Playwright screenshot per module at 1200 and 600), `examples/` (protection-of-energy at both widths). 11 new tests.
+- Found: `tokens.css` redefines the same variables in later `[data-ground]` blocks, so reading every `--hlr-*` line takes the night ground; the twins read the first `:root` block only. A guard worth carrying to any token reader.
+- Checked: `bash build/checks.sh` PASS (40 crew tests). Screenshots read by eye at 600 and 1200; the Figma master was not read (no Figma call), so a person compares proportions. Faces render as stand-ins; image slots are labelled placeholders; nav labels and product links are merge tokens, so Eddie owns them.
+- Waiting on Eddie: set email-html done after comparing a twin with the master; supply nav labels and product URLs. Next: claude-md (handoff), then klaviyo-push waits on a key.
+- Cost: not measured, no subagent.
+
+## 2026-10-31: runner, crew-editor
+
+- Done: a seeded-violation fixture (`crew/fixtures/editor-seeded/`: a misspelling the pack bars, an exclamation mark in a headline, an ampersand in body copy, a typed price) with the editor output that marks those four and nothing else. Applying it returns the clean dry-run files exactly, and `email_check` and `paid_check` fail before and pass after. `editor_check` now bars any typed figure in an `after` (the old test let one typed price replace another) and an email slot over its `max_chars`; `email_check` bars an ampersand in a body slot.
+- Checked: `bash build/checks.sh` PASS (31 crew tests). The acceptance line "copy_lint still passes" is met by `email_check` and `paid_check`; the engine lints still read the retired slate shape and stay SKIPPED.
+- Waiting on Eddie: set crew-editor done after review. Next: email-html (step 8), then claude-md (handoff). crew-intake, crew-strategist, crew-email, crew-paid and crew-editor are all in review, so Step 7 is built but for Eddie's sign-off.
+- Cost: not measured, no subagent.
 
 ## 2026-10-31: runner, crew-paid
 

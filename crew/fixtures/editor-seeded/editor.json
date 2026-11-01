@@ -1,0 +1,34 @@
+{
+ "brief_slug": "fixtures",
+ "edits": [
+  {
+   "stage": "email",
+   "path": "/hero/slots/M02.body",
+   "before": "A long shower. A walk without your phone. The pause you keep putting off, taken. Two pieces to wear through it, a hightlight of the week.",
+   "after": "A long shower. A walk without your phone. The pause you keep putting off, taken. Two pieces to wear through it.",
+   "reason": "A misspelt word the pack bars (prohibited patterns) and a tag-on that adds nothing; the fix restores the writer's line."
+  },
+  {
+   "stage": "email",
+   "path": "/blocks/0/slots/M04.headline",
+   "before": "Two stones, one _slower_ pace!",
+   "after": "Two stones, one _slower_ pace",
+   "reason": "An exclamation mark in a headline (voice contract section 6); the fix removes it."
+  },
+  {
+   "stage": "email",
+   "path": "/blocks/0/slots/M04.body",
+   "before": "Aquamarine is long held as a stone of calm. Phosphosiderite is long held as a stone of stillness, the kind you notice only when you stop. Worn together & quiet, they are a reminder to keep the quiet you made, and a reminder to keep it.",
+   "after": "Aquamarine is long held as a stone of calm. Phosphosiderite is long held as a stone of stillness, the kind you notice only when you stop. Worn together, they are a reminder to keep the quiet you made, and a reminder to keep it.",
+   "reason": "An ampersand in body copy (voice contract section 6: display lines only); the fix restores the words."
+  },
+  {
+   "stage": "paid",
+   "path": "/ad_sets/0/primary_text/0",
+   "before": "A quiet week, kept on purpose. Aquamarine, long held as a stone of calm, worn as a reminder to take the pause. From $48.",
+   "after": "A quiet week, kept on purpose. Aquamarine, long held as a stone of calm, worn as a reminder to take the pause.",
+   "reason": "A typed price; the intake carries none and price is a merge token (voice contract section 6); the fix removes it."
+  }
+ ],
+ "summary": "Four seeded faults marked, each restored to the writer's line; nothing else touched."
+}
