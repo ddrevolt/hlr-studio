@@ -26,9 +26,9 @@ meta:
   file_key: Gq3yUbLs6MCRM0nOhjvnIW
   page: "02 Modules"
   modules: 3
-  status: "proposed, unbuilt"
-  built: null
-  measured_at: null
+  status: "S01 built 2026-11-01; S03 and S04 proposed, unbuilt"
+  built: { S01: "2026-11-01" }
+  measured_at: { S01: "2026-11-01" }
   safe_zones:
     status: "ruled (Gate 2 call 3 b, Eddie, 2026-10-18)"
     authority: "Platform numbers live in the engine, never here: social-copy/references/organic-specs.json (grid crop, story band) and paid-ad-copy/references/placement-specs.json (the ads 9x16 zone)."
@@ -42,18 +42,22 @@ modules:
     name: "Feed Post"
     family: social
     use_when: "A single 4:5 post: photo only, headline on photo, text tile on a flat ground, or offer tile (social types photo, mantra, quote, offer, product_spotlight). Patterns S-PHOTO, S-PHOTOTEXT, S-TEXT, S-OFFER; nodes 2:181774, 2:181982, 2:181328, 2:181188. 1x1 and 9x16 siblings are the engine recipe's; HLR's live feed is 4:5 only and its older 1:1 posts retire."
-    status: "proposed, unbuilt"
-    property: { Ratio: ["4x5"], Structure: ["Photo", "Headline on photo", "Text tile", "Offer tile"] }
+    status: "built 2026-11-01 (Eddie's go); every max_chars stays null until Eddie ratifies the measured proposals (outputs/step-4-figma/s01-feed-post-notes.md)"
+    node: "334:502"   # Social/S01 Feed Post on 02 Modules, section 334:454
+    property: { Structure: ["Photo", "Headline on photo", "Text tile", "Offer tile"] }
     variants:
-      - { name: "Ratio=4x5", size: "1080x1350" }
+      - { name: "Structure=Photo", size: "1080x1350", node: "334:455" }
+      - { name: "Structure=Headline on photo", size: "1080x1350", node: "334:459" }
+      - { name: "Structure=Text tile", size: "1080x1350", node: "334:474" }
+      - { name: "Structure=Offer tile", size: "1080x1350", node: "334:491" }
     slots:
-      - { id: S01.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S01.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S01.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S01.script, role: script, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S01.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S01.image, role: image, status: "proposed, unbuilt" }
-      - { id: S01.caption, role: caption, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S01.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 26, lines: 1, by_structure: "Headline on photo 26, Text tile 26, Offer tile 26", probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus" } }
+      - { id: S01.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 54, lines: 3, by_structure: "Headline on photo 63, Text tile 54, Offer tile 21 (2 lines, display/l)", note: "Offer tile line is the tightest; Eddie to rule whether it gets its own slot", probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus" } }
+      - { id: S01.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 243, lines: 5, by_structure: "Headline on photo 243, Text tile 243", probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus" } }
+      - { id: S01.script, role: script, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 27, lines: 1, by_structure: "Headline on photo 27", probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus" } }
+      - { id: S01.cue, role: cue, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 33, lines: 1, by_structure: "Text tile 33", probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus" } }
+      - { id: S01.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S01.caption, role: caption, max_chars: null, case: as-is, status: "built 2026-11-01 (layer 334:505 beside the set); not measured, it has no box on the art" }
   S03:
     name: "Carousel Set"
     family: social

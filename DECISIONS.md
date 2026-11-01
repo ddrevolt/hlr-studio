@@ -2,6 +2,10 @@
 
 Newest first. Each line: the decision, its reason, what it replaced. Only Donnie ratifies a derived value (Eddie's ruling, 2026-10-23); a ratification note that names Eddie is his, whatever its date, and one that names Donnie is hers.
 
+## 2026-11-01
+
+- S01 Feed Post build (Eddie, 2026-11-01: "go" to the ranked questions at their defaults; S01 only, stop for his review before S03 and S04): E16 Handle added to 01 Elements; the side inset binds space/30 (120), at least the 34 px crop plus the 64 px margin, and no derived crop token is added; the Offer tile sits on photo; the draft PR opens on ddrevolt/hlr-studio. Reason: Eddie's go. Replaced: the slotmap's planned Ratio property (Structure only now) and S01's "proposed, unbuilt" status.
+
 ## 2026-10-31
 
 - Phase 2 rulings (Eddie, 2026-10-31, on `claude/phase-2-rescope.md`): the legal regime is deleted from the engine (call 1 a): the claims ledger role, the counsel signer, the needs_legal and blocked statuses, the disclaimer row and every lint branch that reads them; the brief's never-say list and the voice prohibited patterns stay; every product fact keeps its source so copy stays accurate ("yes we should keep all product facts to maintain accuracy in copy"). Paid starts with Meta ("we'll start with meta and go from there"). HLR's team is assumed to have the xAI API, so portability targets the API, not the grok.com UI. Reason: Eddie's rulings. Replaced: the legal gate as load-bearing (playbook section 3); rule 3's "claims" now means sourced facts, not a legal status.
