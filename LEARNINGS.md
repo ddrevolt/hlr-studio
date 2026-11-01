@@ -449,3 +449,11 @@ One dated entry per chat, newest first.
 - The copy grew between reads (email went from 304 to 527 frames). Re-read once the owner says the copy is complete.
 - Neither shell can download Figma screenshot URLs (www.figma.com/api/mcp/asset). Visual review needs inline screenshots (enableBase64Response), best inside subagents so the images stay out of the main chat.
 - Cost: not measured.
+
+## 2026-11-01: audit build (S01 Ratio, Scale, Placement; S03 Cover Placement and Callouts; S04 Scale; S05 Grid cover; S03 to S05 board)
+- A component set does not grow its bounds when variants are moved. After repositioning variants, resize the set, or the variants outside it render blank (screenshots came back 1x1).
+- Quote and Statement variants lose the accent italic range unless it is applied per instance; spot-check shows upright text.
+- Writing a board note before looking at the original produced two wrong claims ("lower third", "title inside the grid"). View the original first, then write the note.
+- A screenshot tool call can fail with "MCP server connection lost"; retry once and continue.
+- Not verified: S01 Offer tile Top screenshot; all S01 variants beyond the six spot checks; 2x tests; real-copy tests.
+- Cost: not measured.

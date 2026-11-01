@@ -252,6 +252,17 @@ organic:   # 2026-11-01, S03 and S04 built (Eddie's go): existing variables only
   placed_components: { "Elements/E04 Image": "39:119 (Full bleed), 39:128 (Mat landscape)", "Elements/E03 Rule": "39:117", "Elements/E15 Star": "201:175", "Elements/E16 Handle": "331:455 and 331:457" }
   padding: "9x16 top and bottom 250 px unbound (organic story band, [derived] gap, owner Eddie)"
   comparison_board_s01: { "S-PHOTO": "355:6817", "S-PHOTOTEXT": "355:6826", "S-TEXT": "355:6847", "S-OFFER": "355:6888" }   # 04 Staging, x 17000, y 0 to 9345 (a column beside the paid boards at x 11000; moved 2026-11-01 from y 139700); originals cloned read only from the originals page (349:127393, 349:125609, 349:6841, 349:9601, 349:127444)
+  audit_build_2026_11_01:   # Eddie's "go on all 3"; existing variables only, none created
+    s01_set: "334:502"   # 33 variants; properties Ratio {4x5, 1x1, 9x16}, Structure, Scale {Display, Statement, Quote}, Placement {Top, Low, Centred}
+    s01_scale: "Statement = headline 72 px (var 19:66, style headline); Quote = title 54 px (var 19:65, Light). Accent italic is applied per instance, not stored in the variant"
+    s01_ratio: "1x1 1080x1080; 9x16 1080x1920 with 250 px top and bottom unbound"
+    s01_spot_checked: { "Text tile Quote": "361:2177", "Text tile Statement": "361:2161", "Headline on photo Statement Low": "361:1950", "Headline on photo 9x16 Centred": "361:2100", "Text tile 1x1": "361:2193" }   # Offer tile Top 361:1880 screenshot failed (connection lost), not yet viewed
+    s03_cover_placement: "Panel=Cover, Placement=Top 356:1787; Low 362:1903; Centred 362:1916; Inner 356:1804 and End 356:1837 carry Placement=Top; set resized to 3480x2800"
+    s03_inner_callouts: "362:2078 (Panel=Inner callouts; 4 circle markers with hairline leaders over a 400 px photo; item 4 hidden by default)"
+    s04_scale: "S04 set 357:1882 now 8 variants: Structure {Text, Inset, Full bleed, Split} x Scale=Display; Text and Inset also Statement (362:1935, 362:1959) and Quote (362:1947, 362:1973; 54 px)"
+    s04_layout: "section 356:1857 now 5000x7730; S04 at y 3530, notes below each set"
+    s05_grid_cover: { set: "362:2077", variants: "Grid=3x3 362:1991 (1080x1350, tiles 312x312), Grid=3x4 362:2029 (1080x1920, tiles 312x360)", toggles: "Show title, Show eyebrow, Show star", position: "page level on 02 Modules at x 5520 y 33900 (below section 356:1857)", bindings: "gap space/2 (19:73), margin social-margin (19:87), title spacing space/8 (19:78), fills bg default 19:19" }
+    board_s03_s04_s05: { "S04 Full bleed": "362:7649", "S04 Text, Quote": "362:7671", "S03 Inner callouts": "362:7686", "S05 Grid 3x3": "362:7731", "S05 Grid 3x4": "362:7771" }   # 04 Staging x 17000 y 9500 to 21760; originals cloned read only: Moon 349:7055, Seeking the Sublime 349:6871, Field Notes feed 349:124711, monthly energy 349:128048, zodiac 349:123303
   originals_page: { "hlr stories and work in progress": "349:6817", "social templates": "349:124710", "social grid": "349:127373", "sept-october 2026": "349:128295" }   # organic only; no paid originals
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09; opens with M23 (the lockup) where it opened with M01, since 2026-10-23
