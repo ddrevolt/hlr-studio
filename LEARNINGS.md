@@ -2,6 +2,17 @@
 
 One dated entry per chat, newest first.
 
+## 2026-11-01: Paid masters P01 to P09 built in the library (Eddie's go, no review stop)
+
+- Custom properties cannot be set on Figma nodes ("no such property '_row'"): keep per-variant layout metadata in a Map keyed by node id. A failed run leaves stray components named after the temp name, so a retry starts by removing page-level components with that name.
+- A whole-range `setRangeBoundVariable` for fontStyle detaches the text style (textStyleId becomes empty). A merge token has no space, so "last word" was the whole token: the masters carry the style only, and the accent word is applied on the instance in the example.
+- Component properties for toggles belong on the set (`addComponentProperty`), then each variant's layer references the returned key; a layer absent from a variant is simply skipped.
+- Auto-layout rows with FILL children share height only if the row and the tile are FILL vertical; long tracked labels at 32 px wrap inside 215 px columns (Aquamarine, White Topaz), so a 4-column birthstone grid fails at 1080 wide.
+- Cross-file image transfer is not possible here: `download_assets` returns URLs, but both the cloud shell and the Mac get 403 on them, so the client's originals can only be referenced and described, not pasted into the library.
+- Sections take an explicit variable mode, so notes on a board use the social type sizes and stay readable.
+- Flex probe (1080x1080, all toggles on): see `outputs/step-4-figma/paid-masters-notes.md`. P06.offer measures 23 characters on the Offer style, below 2x of the client's "30% off sitewide" (16 needs 32).
+- Cost not measured.
+
 ## 2026-11-01: S01 Feed Post built in the library (Eddie's go, S01 only)
 
 - An instance's child cannot change its stack positioning ("layoutPositioning cannot be overridden in an instance"), so E04's centred IMAGE chip cannot be nudged on an instance. The Offer tile's offer line sits in the lower third, clear of the chip; moving the chip means changing the E04 master.

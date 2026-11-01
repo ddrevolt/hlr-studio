@@ -27,9 +27,9 @@ meta:
   file_key: Gq3yUbLs6MCRM0nOhjvnIW
   page: "02 Modules"
   modules: 11
-  status: "proposed, unbuilt"
-  built: null
-  measured_at: null
+  status: "P01 to P09 built 2026-11-01 (67 variants); P10 and P11 proposed, unbuilt"
+  built: { P01: "2026-11-01", P02: "2026-11-01", P03: "2026-11-01", P04: "2026-11-01", P05: "2026-11-01", P06: "2026-11-01", P07: "2026-11-01", P08: "2026-11-01", P09: "2026-11-01" }
+  measured_at: { P01: "2026-11-01", P02: "2026-11-01", P03: "2026-11-01", P04: "2026-11-01", P05: "2026-11-01", P06: "2026-11-01", P07: "2026-11-01", P08: "2026-11-01", P09: "2026-11-01" }
   safe_zones:
     status: "ruled (Gate 2 call 3 b, Eddie, 2026-10-18)"
     authority: "Platform numbers live in the engine, never here: skills/paid-ad-copy/references/placement-specs.json (ratios, keep_clear_px; verified 2026-07-27). Meta's Ads Guide refuses automated reads, so confirm the 9x16 zone in Ads Manager's placement preview before the first paid build (LEARNINGS 2026-10-17; owner Eddie)."
@@ -52,36 +52,45 @@ modules:
     name: "Brand Line"
     family: paid
     use_when: "One Saol line with one italic accent word over a model photo, or the wordmark as a masthead with a short line (types brand_line). Patterns P-LINE, P-MAST; nodes 2:50853, 2:60736."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "341:622", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Line: { headline: 67, body: ">=400" }, Masthead: { headline: 128, body: ">=400" } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Line", "Masthead"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
       - { name: "Ratio=4x5", size: "1080x1350" }
       - { name: "Ratio=9x16", size: "1080x1920" }
     slots:
-      - { id: P01.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P01.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P01.headline, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P01.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01" }
   P02:
     name: "Product Hero"
     family: paid
     use_when: "One piece cut out on a plain ground or inset on Alabaster, named in Saol (types product_hero). Patterns P-HERO, P-INSET; nodes 2:53235, 2:46166, 2:52919."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "341:830", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Cut-out: { eyebrow: 345, name: 252, subline: 141, side_label: 175, offer: 162 }, Inset: { eyebrow: 316, name: 224, subline: 125, side_label: 154, offer: 162 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Cut-out", "Inset"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
       - { name: "Ratio=4x5", size: "1080x1350" }
       - { name: "Ratio=9x16", size: "1080x1920" }
     slots:
-      - { id: P02.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P02.name, role: name, max_chars: null, case: as-is, feed: product_db, status: "proposed, unbuilt" }
-      - { id: P02.subline, role: hook, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P02.side_label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P02.offer, role: offer, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P02.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P02.name, role: name, max_chars: null, case: as-is, feed: product_db, status: "built 2026-11-01" }
+      - { id: P02.subline, role: hook, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P02.side_label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P02.offer, role: offer, max_chars: null, case: sentence, status: "built 2026-11-01" }
   P03:
     name: "Annotated"
     family: paid
     use_when: "The piece with one to four callouts on hairline leaders, on a ground or on model; a build adds one callout per frame (types annotated). Patterns P-ANNOT-BUILD, P-ANNOT-MODEL, P-STACK; nodes 2:42498, 2:37799, 2:57502. Callout words are sourced facts from products.json."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "342:1882", section: "341:466", page: "02 Modules" }
+    measured_proposal: { On-ground-4: { title: 57, subline: 66, callout_name: 86, callout_line: 66 }, On-model-2: { title: 162, subline: 316, callout_name: 220, callout_line: 316 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["On ground", "On model"], Callouts: ["1", "2", "3", "4"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
@@ -90,21 +99,24 @@ modules:
     repeats:
       - { group: callout, max: 4 }
     slots:
-      - { id: P03.title, role: title, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P03.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P03.callout1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P03.callout1.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P03.callout2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P03.callout2.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P03.callout3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P03.callout3.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P03.callout4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P03.callout4.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P03.title, role: title, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P03.subline, role: subline, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P03.callout1.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P03.callout1.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P03.callout2.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P03.callout2.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P03.callout3.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P03.callout3.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P03.callout4.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P03.callout4.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
   P04:
     name: "Quote"
     family: paid
     use_when: "Someone else's words: a press quote with the publication's logo, one or two customer reviews over customer imagery, or a DM reply bubble (types press_quote, customer_review, dm_reply). Patterns P-PRESS, P-REVIEW, P-DM; nodes 2:36273, 2:58872, 2:48723. Verbatim and sourced only: never trimmed to fit."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "342:2148", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Press: { quote: 229, attribution: ">=400" }, Review: { review_quote: 162, attribution: ">=400" }, DM: { quote: 282 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Press", "Review", "DM"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
@@ -113,27 +125,33 @@ modules:
     repeats:
       - { group: review, max: 2 }
     slots:
-      - { id: P04.quote, role: hook, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
-      - { id: P04.attribution, role: attribution, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P04.review1.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
-      - { id: P04.review2.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "proposed, unbuilt" }
+      - { id: P04.quote, role: hook, max_chars: null, case: as-is, verbatim: true, status: "built 2026-11-01" }
+      - { id: P04.attribution, role: attribution, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P04.review1.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "built 2026-11-01" }
+      - { id: P04.review2.quote, role: quote, max_chars: null, case: as-is, verbatim: true, status: "built 2026-11-01" }
   P05:
     name: "Mantra"
     family: paid
     use_when: "A short affirmation alone on an image or a flat ground, or built word by word for motion (types mantra). Pattern P-MANTRA; nodes 2:47957, 2:40303."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "341:1002", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Photo: { line: 78 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Ground: ["Photo", "Flat"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
       - { name: "Ratio=4x5", size: "1080x1350" }
       - { name: "Ratio=9x16", size: "1080x1920" }
     slots:
-      - { id: P05.line, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P05.line, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
   P06:
     name: "Offer"
     family: paid
     use_when: "The offer is the headline over full-bleed photo; a gift-with-purchase variant names what comes free and on what terms (types offer). Patterns P-OFFER, P-GWP; nodes 2:53265, 2:51663. Percent, code, threshold and dates are merge tokens until C10."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "343:1666", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Offer: { eyebrow: 223, offer: 23, headline: 111, side_label: 112, subline: 223, terms: ">=400" }, Gift: { eyebrow: 191, offer: 31, headline: 111, side_label: 101, subline: 191, terms: 373 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Offer", "Gift with purchase"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
@@ -142,18 +160,21 @@ modules:
     repeats:
       - { group: side, max: 2 }
     slots:
-      - { id: P06.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P06.offer, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P06.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P06.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P06.terms, role: disclaimer, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P06.side1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P06.side2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P06.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P06.offer, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P06.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P06.subline, role: subline, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P06.terms, role: disclaimer, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P06.side1.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P06.side2.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
   P07:
     name: "Meaning"
     family: paid
     use_when: "A stone or material card, or a list of intention and stone pairs (types meaning). Card style: itemN.name and itemN.line, the gloss (one card; 9x16 stacks two). List style: itemN.label, the intention, over itemN.name, the stone, up to eight. Patterns P-INGRED, P-LIST; nodes 2:47064, 2:54733. Meaning is a benefit claim (C2): every line is a sourced fact or tradition and intention wording."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "343:1923", section: "341:466", page: "02 Modules" }
+    measured_proposal: { Card: { headline: 184, item1_name: 113, item1_line: ">=400" }, List: { headline: 57, label: 61, name: 47 } }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"], Style: ["Card", "List"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
@@ -162,48 +183,54 @@ modules:
     repeats:
       - { group: item, max: 8 }
     slots:
-      - { id: P07.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P07.item1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item1.line, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P07.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item2.line, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: P07.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item5.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item5.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item6.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item6.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item7.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item7.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P07.item8.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: P07.item8.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
+      - { id: P07.headline, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P07.item1.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item1.line, role: body, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P07.item1.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item2.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item2.line, role: body, max_chars: null, case: sentence, status: "built 2026-11-01" }
+      - { id: P07.item2.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item3.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item3.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item4.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item4.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item5.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item5.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item6.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item6.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item7.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item7.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P07.item8.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01" }
+      - { id: P07.item8.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01" }
   P08:
     name: "Birthstone Grid"
     family: paid
     use_when: "Twelve months, each a tile with the piece, the month and the stone (types birthstone_grid). Pattern P-GRID; nodes 2:57657, 2:54760. Tiles are an element repeat fed by the product database (attributes.birth_month and the stone in the name), not copy slots."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "343:2228", section: "341:466", page: "02 Modules" }
+    measured_proposal: { tiles: "element repeat, not slots", eyebrow_headline: "not probed" }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["1x1", "4x5", "9x16"] }
     variants:
       - { name: "Ratio=1x1", size: "1080x1080" }
       - { name: "Ratio=4x5", size: "1080x1350" }
       - { name: "Ratio=9x16", size: "1080x1920" }
     slots:
-      - { id: P08.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: P08.headline, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P08.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01" }
+      - { id: P08.headline, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
   P09:
     name: "End Frame"
     family: paid
     use_when: "The video end frame: the wordmark centered and an optional line. Pattern P-VIDEO; node 2:48703. Supers and storyboards wait for video_rules (null in the pack)."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01, max_chars null until Eddie ratifies"
+    built: "2026-11-01"
+    figma: { component_set: "341:1029", section: "341:466", page: "02 Modules" }
+    measured_proposal: { line: 390 }   # tightest variant at 1080x1080, wide-word corpus; proposals only, see outputs/step-4-figma/paid-masters-notes.md
     property: { Ratio: ["9x16"] }
     variants:
       - { name: "Ratio=9x16", size: "1080x1920" }
     slots:
-      - { id: P09.line, role: hook, max_chars: null, case: sentence, status: "proposed, unbuilt" }
+      - { id: P09.line, role: hook, max_chars: null, case: sentence, status: "built 2026-11-01" }
   P10:
     name: "Link Image"
     family: paid

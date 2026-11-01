@@ -234,6 +234,17 @@ s01_bindings:   # 2026-11-01, S01 Feed Post: existing variables only, none creat
   spacing: { "space/30": "VariableID:19:84", "space/24": "VariableID:19:83", "space/10": "VariableID:19:79", "space/8": "VariableID:19:78", "space/6": "VariableID:19:77" }
   type: { "font/style/display-accent": "VariableID:19:50", "font/size/display-l": "VariableID:19:69" }   # text styles by name: display/s, display/m, display/l, eyebrow, body, script, fine (E16)
   placed_components: { "Elements/E04 Image": "39:119", "Elements/E03 Rule": "39:117", "Elements/E15 Star": "201:175", "Elements/E16 Handle": "331:455 and 331:457" }
+paid:   # 2026-11-01, Paid masters P01 to P09 (Eddie's go): existing variables only, none created
+  section: { "Paid": "341:466" }   # on 02 Modules
+  component_sets: { "P01 Brand Line": "341:622", "P02 Product Hero": "341:830", "P03 Annotated": "342:1882", "P04 Quote": "342:2148", "P05 Mantra": "341:1002", "P06 Offer": "343:1666", "P07 Meaning": "343:1923", "P08 Birthstone Grid": "343:2228", "P09 End Frame": "341:1029" }
+  variants: 67   # P01 6, P02 6, P03 24, P04 9, P05 6, P06 6, P07 6, P08 3, P09 1
+  placed_components: { "Marks/Wordmark": "28:28", "Marks/Star": "200:161", "Elements/E03 Rule": "39:117", "Elements/E04 Image": "39:119" }
+  fills: { "color/semantic/background/default": "VariableID:19:19", "color/semantic/background/scrim": "VariableID:19:23", "color/semantic/text/primary": "VariableID:19:24", "color/semantic/text/muted": "VariableID:19:25", "color/semantic/text/on-photo": "VariableID:19:26", "component/mark/fill-on-photo": "VariableID:19:42", "component/callout/label": "VariableID:19:39", "component/callout/leader-on-photo": "VariableID:19:40", "component/rule/stroke": "VariableID:19:36" }
+  spacing: { "space/social-margin": "VariableID:19:87", "space/12": "VariableID:19:80", "space/8": "VariableID:19:78", "space/6": "VariableID:19:77" }
+  type: { "font/style/display-accent": "VariableID:19:50" }   # text styles by name; no variable holds the 9x16 provisional band (250 px, unbound, [derived] gap)
+  guide: "Decor / Guide provisional keep-clear on every 9x16 variant: the organic band, labelled, NOT the paid zone (placement-specs.json null, item paid-specs, owner Eddie)"
+  comparison_board: { "P01": "346:3722", "P02": "346:3886", "P03": "346:4101", "P04": "346:4361", "P05": "346:4634", "P06": "346:4813", "P07": "346:5031", "P08": "346:5291", "P09": "346:5603" }   # 04 Staging, x 11000; originals referenced by node id, not pasted (asset downloads 403)
+  examples: { "Paid examples": "347:5871" }   # 04 Staging, 46 pure instances, 16 rows
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09; opens with M23 (the lockup) where it opened with M01, since 2026-10-23
   "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767; M07 (46:262) on Auto (Eddie, kept 2026-10-23)

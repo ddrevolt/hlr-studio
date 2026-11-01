@@ -4,6 +4,12 @@ Newest first. Each line: the decision, its reason, what it replaced. Only Donnie
 
 ## 2026-11-01
 
+- Paid social build (Eddie, 2026-11-01: build out paid social the way S01 was done, no review stop until assets are fully built): P01 to P09 masters built as nine component sets (67 variants) in a Paid section on 02 Modules; a comparison board and a Paid examples section on 04 Staging; expansion proposals in `outputs/step-9-paid/expansion.md`. Reason: Eddie's go. Replaced: the "proposed, unbuilt" status of P01 to P09 in `slotmap-paid.yaml`; every max_chars stays null until Eddie ratifies the measured proposals.
+- The 9x16 guide (Eddie's instruction, 2026-11-01): the organic story band (250 px top and bottom) is drawn as a labelled provisional guide on every 9x16 master and padding follows it; paid zone numbers stay unknown (placement-specs.json null, item paid-specs, owner Eddie). The 250 px padding is unbound because no variable holds it. Reason: Eddie's instruction. Replaced: the agent package's "add no guide layer" line for the story format.
+- Decided by Claude, for Eddie to confirm: the comparison board references the client's originals by node id and quotes their observed structure, because Figma asset downloads from the client file return 403 from the cloud shell and the Mac, so no original could be pasted. Reason: the originals cannot be moved cross-file. Replaced: nothing (the T01 to T17 sections pasted from the originals page).
+- Decided by Claude, for Eddie to confirm: the examples place no cleared photo and no press, review or DM text (none is sourced on file); quotes stay labelled merge tokens, product facts name their products.json key, client lines are quoted as [observed]. Reason: rule 3, loud absence. Replaced: nothing.
+- Decided by Claude, for Donnie: P08 at 1x1 is 3 by 4 with chip-height images (stone names wrap at four columns), and P07 List is two columns at every ratio. Reason: measured overflow at 1080x1080 and 1080x1920. Replaced: the first build (4 by 3; one column at 9x16).
+
 - S01 Feed Post build (Eddie, 2026-11-01: "go" to the ranked questions at their defaults; S01 only, stop for his review before S03 and S04): E16 Handle added to 01 Elements; the side inset binds space/30 (120), at least the 34 px crop plus the 64 px margin, and no derived crop token is added; the Offer tile sits on photo; the draft PR opens on ddrevolt/hlr-studio. Reason: Eddie's go. Replaced: the slotmap's planned Ratio property (Structure only now) and S01's "proposed, unbuilt" status.
 
 ## 2026-10-31
