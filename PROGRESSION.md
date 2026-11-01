@@ -105,3 +105,5 @@ Purpose: a short brief in, ready-to-send Klaviyo emails and ready-to-launch Meta
   - 2026-10-23: the review workbook (`outputs/review/`, private artifact) published for today's review with Donnie; its decisions reach the pack only on Eddie's go after the review closes
 - Review 2 (Fri 2026-10-30): Figma foundations and the first modules, with the paid and web taxonomy ratified on them (Gate 2 call 1 b)
 - Review 3 ({{review-3-date}}): templates and the forge proof
+
+- 2026-11-01: hlr-recreate skill saved (method for rebuilding originals as pure instances). Audit proposals 1 to 5 built; S04 Full bleed Placement and S05 title overlay open.
