@@ -2,6 +2,16 @@
 
 One dated entry per chat, newest first.
 
+## 2026-11-01: Organic board, S03 and S04 built (Eddie's go)
+
+- Eddie's first upload to the originals page was organic social only; the 19 paid nodes were never there. Inventory by name family and ratio (findAll over the sections) answers "is it all here" in one call; never trust a section name.
+- Pasted nodes get new ids, so originals match by name and size, not client id. Clone inside the same file (node.clone(), then appendChild into the board section) works across pages in two calls: clone on the source page, reparent on the target page.
+- A screenshot fired in the same turn as a use_figma edit can render the state before the edit. Screenshot in a later turn after edits.
+- Cloning S01 variants (clone() on a component returns a component) keeps every variable binding, so new organic masters start bound. New text must be cloned from a bound node or bound by hand (fontSize), since styles alone do not carry the social-mode size.
+- A single long affirmation (190 characters) cannot be a display/m headline (cap 54): rebuilt in Body it loses Saol and the italics. S01 needs a long-quote option or a shorter line (open for Eddie and Donnie).
+- Flex probe floor: with the wide-word corpus every one-line slot lands at 24 characters (two words); read it as a floor, not a tuned budget.
+- Cost: not measured.
+
 ## 2026-11-01: Paid masters P01 to P09 built in the library (Eddie's go, no review stop)
 
 - Custom properties cannot be set on Figma nodes ("no such property '_row'"): keep per-variant layout metadata in a Map keyed by node id. A failed run leaves stray components named after the temp name, so a retry starts by removing page-level components with that name.
