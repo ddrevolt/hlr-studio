@@ -26,7 +26,7 @@ meta:
   file_key: Gq3yUbLs6MCRM0nOhjvnIW
   page: "02 Modules"
   modules: 3
-  status: "S01 built 2026-11-01; S03 and S04 proposed, unbuilt"
+  status: "S01, S03 and S04 built 2026-11-01"
   built: { S01: "2026-11-01" }
   measured_at: { S01: "2026-11-01" }
   safe_zones:
@@ -62,7 +62,7 @@ modules:
     name: "Carousel Set"
     family: social
     use_when: "The default post: a cover, one or more inner panels and an end panel, separate 4:5 frames in gutter mode (social types education, annotated_product, mantra; series words_for_your_journey, energy_medicine, field_notes, season_crystals, proof_of_magic). Patterns S-WFYJ, S-ENERGY, S-ANNOT, S-SEASON, S-LONG, S-PROOF; nodes 2:181816, 2:181792, 2:180130, 2:181620, 2:180943, 2:181769. Inner items carry callouts and stone labels; their words are sourced facts from products.json."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01 (Eddie's go); every max_chars stays null until Eddie ratifies the measured proposals (outputs/step-4-figma/s03-s04-notes.md)"
     parts: [cover, inner, end]
     build_modes: [gutter]
     property: { Panel: ["Cover", "Inner", "End"] }
@@ -73,34 +73,34 @@ modules:
     repeats:
       - { group: item, in: inner, max: 4 }
     slots:
-      - { id: S03.cover.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.cover.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S03.cover.script, role: script, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.cover.subline, role: subline, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.cover.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.cover.image, role: image, status: "proposed, unbuilt" }
-      - { id: S03.inner.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.inner.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S03.inner.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S03.inner.item1.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.inner.item1.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.inner.item2.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.inner.item2.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.inner.item3.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.inner.item3.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.inner.item4.name, role: name, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.inner.item4.line, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S03.inner.image, role: image, status: "proposed, unbuilt" }
-      - { id: S03.end.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S03.end.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S03.end.cue, role: cue, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S03.end.image, role: image, status: "proposed, unbuilt" }
-      - { id: S03.caption, role: caption, max_chars: null, case: as-is, status: "proposed, unbuilt" }
+      - { id: S03.cover.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.cover.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 40, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.cover.script, role: script, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.cover.subline, role: subline, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.cover.cue, role: cue, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.cover.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S03.inner.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 40, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 211, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item1.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item1.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item2.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item2.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item3.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item3.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item4.name, role: name, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.item4.line, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.inner.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S03.end.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.end.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 211, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.end.cue, role: cue, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S03.end.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S03.caption, role: caption, max_chars: null, case: as-is, status: "proposed, caption layer not built" }
   S04:
     name: "Story Set"
     family: social
     use_when: "A run of 9x16 frames, each one structure: text on a solid ground, an inset image on a mat, a full-bleed photo with a title, or a photo over a solid panel (social types launch, product_spotlight, mantra, quote, offer; series energy_medicine, field_notes). Patterns ST-TEXT, ST-INSET, ST-FULL, ST-SPLIT; nodes 2:62552, 2:62473, 2:64042, 2:178746. Benefit and callout lines are sourced facts from products.json."
-    status: "proposed, unbuilt"
+    status: "built 2026-11-01 (Eddie's go); every max_chars stays null until Eddie ratifies the measured proposals (outputs/step-4-figma/s03-s04-notes.md)"
     parts: [text, inset, full_bleed, split]
     property: { Structure: ["Text", "Inset", "Full bleed", "Split"] }
     variants:
@@ -112,24 +112,24 @@ modules:
       - { group: item, in: full_bleed, max: 4 }
       - { group: item, in: split, max: 4 }
     slots:
-      - { id: S04.text.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.text.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.inset.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.inset.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.inset.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.inset.attribution, role: attribution, max_chars: null, case: as-is, status: "proposed, unbuilt" }
-      - { id: S04.inset.image, role: image, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.body, role: body, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.full_bleed.image, role: image, status: "proposed, unbuilt" }
-      - { id: S04.split.headline, role: headline, max_chars: null, case: sentence, status: "proposed, unbuilt" }
-      - { id: S04.split.item1.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.split.item2.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.split.item3.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.split.item4.label, role: label, max_chars: null, case: upper, status: "proposed, unbuilt" }
-      - { id: S04.split.image, role: image, status: "proposed, unbuilt" }
+      - { id: S04.text.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.text.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 50, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.inset.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.inset.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 40, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.inset.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 211, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.inset.attribution, role: attribution, max_chars: null, case: as-is, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.inset.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S04.full_bleed.eyebrow, role: eyebrow, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 40, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.body, role: body, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 211, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.item1.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.item2.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.item3.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.item4.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.full_bleed.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
+      - { id: S04.split.headline, role: headline, max_chars: null, case: sentence, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 40, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.split.item1.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.split.item2.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.split.item3.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.split.item4.label, role: label, max_chars: null, case: upper, status: "built 2026-11-01, budget measured not applied", measured: { proposed_max_chars: 24, probe: "flex probe 2026-11-01, tightest variant, all toggles on, wide-word corpus (24 is the two-word floor: one line holds Rhodochrosite Protection)" } }
+      - { id: S04.split.image, role: image, status: "built 2026-11-01 (E04 instance, labelled placeholder)" }
