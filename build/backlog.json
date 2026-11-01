@@ -267,7 +267,7 @@
       "name": "Paid masters package for the Figma build at 1:1, 4:5 and 9:16",
       "step": "9",
       "kind": "package",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "The asset-production agent package for the paid masters (single image feed 1:1 and 4:5, story 9:16) from the email elements where they carry over, slot-stamped for the paid writer, with the keep-clear bands from placement-specs.json flagged unverified until paid-specs closes. Eddie builds in Figma from it.",
       "sources": [],
@@ -280,7 +280,8 @@
         "crew-paid"
       ],
       "gate": null,
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Built 2026-10-31 (runner, sixth run): crew/producers/figma_package.py compiles outputs/step-9-paid/agent-package.md from slotmap-paid.yaml, tokens.json, figma.yaml and placement-specs.json: three packages (feed 1:1, feed 4:5, story 9:16), P01 to P08 at each ratio and P09 on 9:16, 50, 50 and 51 slots, every budget null and said so, the license flag and notice on each, keep-clear flagged unverified with no number. A lint with one case per format and mutation tests. The slot map is still proposed and held for Review 2 (review-2-outcome waiting), so the package is a proposal to build from, not a ruling. Role to text style map is [derived] for Donnie."
     },
     {
       "id": "portability-proof",
