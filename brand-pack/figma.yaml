@@ -246,12 +246,12 @@ paid:   # 2026-11-01, Paid masters P01 to P09 (Eddie's go): existing variables o
   comparison_board: { "P01": "346:3722", "P02": "346:3886", "P03": "346:4101", "P04": "346:4361", "P05": "346:4634", "P06": "346:4813", "P07": "346:5031", "P08": "346:5291", "P09": "346:5603" }   # 04 Staging, x 11000; originals referenced by node id, not pasted (asset downloads 403)
   examples: { "Paid examples": "347:5871" }   # 04 Staging, 46 pure instances, 16 rows
 organic:   # 2026-11-01, S03 and S04 built (Eddie's go): existing variables only, none created; bindings cloned from S01 (s01_bindings)
-  section: { "Social / S03 and S04": "356:1857" }   # on 02 Modules, y 29000
+  section: { "Social: S03 Carousel Set and S04 Story Set": "356:1857" }   # on 02 Modules, x 5400 y 26070 beside the Social section (moved 2026-11-01; at y 29000 it overlapped Paid)
   component_sets: { "S03 Carousel Set": "356:1858", "S04 Story Set": "357:1882" }
   variants: { S03: "Panel=Cover 356:1787, Panel=Inner 356:1804, Panel=End 356:1837", S04: "Structure=Text 357:1799, Inset 357:1816, Full bleed 357:1837, Split 357:1857" }
   placed_components: { "Elements/E04 Image": "39:119 (Full bleed), 39:128 (Mat landscape)", "Elements/E03 Rule": "39:117", "Elements/E15 Star": "201:175", "Elements/E16 Handle": "331:455 and 331:457" }
   padding: "9x16 top and bottom 250 px unbound (organic story band, [derived] gap, owner Eddie)"
-  comparison_board_s01: { "S-PHOTO": "355:6817", "S-PHOTOTEXT": "355:6826", "S-TEXT": "355:6847", "S-OFFER": "355:6888" }   # 04 Staging, x 11000, y 139700; originals cloned read only from the originals page (349:127393, 349:125609, 349:6841, 349:9601, 349:127444)
+  comparison_board_s01: { "S-PHOTO": "355:6817", "S-PHOTOTEXT": "355:6826", "S-TEXT": "355:6847", "S-OFFER": "355:6888" }   # 04 Staging, x 17000, y 0 to 9345 (a column beside the paid boards at x 11000; moved 2026-11-01 from y 139700); originals cloned read only from the originals page (349:127393, 349:125609, 349:6841, 349:9601, 349:127444)
   originals_page: { "hlr stories and work in progress": "349:6817", "social templates": "349:124710", "social grid": "349:127373", "sept-october 2026": "349:128295" }   # organic only; no paid originals
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09; opens with M23 (the lockup) where it opened with M01, since 2026-10-23

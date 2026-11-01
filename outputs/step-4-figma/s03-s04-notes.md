@@ -1,6 +1,6 @@
 # S03 Carousel Set and S04 Story Set: build notes (2026-11-01)
 
-Built in library Gq3yUbLs6MCRM0nOhjvnIW, page 02 Modules, section "Social / S03 and S04" 356:1857, on Eddie's go. Every max_chars in the pack stays null; the measured numbers are proposals.
+Built in library Gq3yUbLs6MCRM0nOhjvnIW, page 02 Modules, section "Social: S03 Carousel Set and S04 Story Set" 356:1857 (x 5400, y 26070, beside Social), on Eddie's go. Every max_chars in the pack stays null; the measured numbers are proposals.
 
 ## What exists
 - S03 Carousel Set 356:1858, 1080x1350: Panel=Cover 356:1787 (photo, scrim, eyebrow, headline, subline, script, cue off), Panel=Inner 356:1804 (eyebrow, rule, image, headline, body off, up to 4 items each a Saol name over a caps line), Panel=End 356:1837 (star, image, headline, body off, cue off). Toggles: Show subline, script, cue, body, image, item 1 to 4.
