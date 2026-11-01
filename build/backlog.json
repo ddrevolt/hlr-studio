@@ -248,7 +248,7 @@
       "name": "Klaviyo template push through the API",
       "step": "8",
       "kind": "producer",
-      "status": "todo",
+      "status": "review",
       "owner": "runner",
       "intent": "crew/producers/klaviyo.py: create an HTML email template from the assembler’s file (POST /api/templates), optionally assign it to a campaign message; never sends. Dry-run writes the request body without a key.",
       "sources": [],
@@ -260,7 +260,8 @@
         "email-html"
       ],
       "gate": "Klaviyo key",
-      "needs_you": ""
+      "needs_you": "",
+      "note": "Dry-run half built (crew/producers/klaviyo.py, 7 tests). Live push and the template id wait on klaviyo-access (key, test list). Request shape and API revision are unverified against Klaviyo docs."
     },
     {
       "id": "paid-package",
