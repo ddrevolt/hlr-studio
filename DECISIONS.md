@@ -298,3 +298,6 @@ Newest first. Each line: the decision, its reason, what it replaced. Only Donnie
 - 2026-11-01: S03/S04/S05 "Original against ours" board added on 04 Staging below the S01 board. Reason: Eddie asked for it. Finding: S04 Full bleed does not match the Moon original (centred title, about 60 px); S05 does not overlay the title. Not fixed; proposed in the board notes.
 
 - 2026-11-01: S04 Full bleed gains Scale (Statement 72, Quote 54) and Placement (Top, Centred); every S04 variant carries Placement=Top. S05 gains Title=Overlay (no margin, 4 px gap, white script title over the centre tile). Reason: the board showed both missed their originals (Moon centred about 60 px; monthly energy overlay). Replaced: Full bleed fixed 96 px top left; S05 band title only. [derived] for Donnie.
+
+- 2026-11-01: Paid complements start as a pairing note (`outputs/step-9-organic/paid-complements.md`), not a build. Reason: Eddie said paid comes after the organic work; the P masters were not re-read, and paid specs are null. Replaced: the preview section of the organic deep dive.
+- 2026-11-01: S04 Full bleed Show body and Show item toggles were unbound and are now bound in all six Full bleed variants. Board Moon and monthly energy instances swapped to Quote Centred (363:2049) and Title=Overlay 3x3 (363:2102). Reason: toggles did nothing in Full bleed; board showed old variants.
