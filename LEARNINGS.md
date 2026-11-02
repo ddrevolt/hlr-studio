@@ -2,6 +2,14 @@
 
 One dated entry per chat, newest first.
 
+## 2026-11-01: runner, klaviyo-push
+
+- Done: `crew/producers/klaviyo.py` (dry run by default, `--live` posts once, never sends, no campaign), `crew/tests/test_klaviyo.py` (7 tests, mocked network), a committed example request in `outputs/step-8-email/klaviyo-dry-run/`.
+- Checked: bash build/checks.sh (result in the run log); census and overlap scans are Eddie's, on the Mac.
+- Findings: should-fix, open: the request shape and API revision are unverified against Klaviyo's documentation (the runner may not read it). Note: merge tokens need mapping to Klaviyo variables before a send.
+- Cost: not measured.
+- Status: done: the dry run, in review. Waiting on Eddie: confirm the request shape and revision; `klaviyo-access` (key, test list). Waiting on Donnie: none. Next: the live push once the key arrives.
+
 ## 2026-11-01: Organic board, S03 and S04 built (Eddie's go)
 
 - Eddie's first upload to the originals page was organic social only; the 19 paid nodes were never there. Inventory by name family and ratio (findAll over the sections) answers "is it all here" in one call; never trust a section name.
