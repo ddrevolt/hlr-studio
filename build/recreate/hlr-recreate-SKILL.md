@@ -22,18 +22,19 @@ Builds on the generic `figma-recreate` skill (structure, slot and fidelity contr
 ## Method
 1. Inventory: census the originals by name family and ratio. Never trust a section name. Pasted nodes get new ids; match by name and size.
 2. Map the family to a master (S01, S03, S04, S05, P01 to P09) and a variant. Paid originals map through outputs/step-9-organic/paid-complements.md. No CTA and no handle on paid; handle is the E16 element on organic. If no master fits, that is a gap.
-3. Build A: createInstance of the exact variant, toggle properties, override text only. Set Semantic mode on the instance (night gave the exact Onyx ground). Accent words take the system italic variable on the range, never on the master.
-4. Score: paste measure_compare.js at the top of a use_figma call. `measure(original)` and `measure(rebuild)` read text, marks and ground as fractions of the frame; `compare(o, r, 'A')`. Read only.
-5. Gate A: every row passes, or each FAIL traces to a declared gap. Thresholds [derived, Donnie ratifies]: size equals the nearest step; placement within 0.06 and the same third; colour within 0.2; a quantising jump beyond x1.25 or x0.8 is listed in gaps as a scale gap.
-6. Library gap: if the cause is a missing master option, propose a property with its variant cost and stop for Eddie's go. When built: one axis at a time off the default, cap 30 variants per set, resize the set and reflow the section after variants move, pin the Layout collection to Social on the new master, bind spacing to variables, rebind toggles by node name after any clone (a clone drops componentPropertyReferences), then rerun the compare.
-7. Build B from a clone of A, in this order, stopping at the first rung that scores:
+3. Copy: the original's wording is kept verbatim for comparison. Offers, percents, codes and dates stay merge tokens. No invented quote, review, price or claim; an unknown is null plus a named gap with an owner. If the copy exceeds a slot, say so and rebuild in the nearest slot; never truncate it.
+4. Build A: createInstance of the exact variant, toggle properties, override text only. Set Semantic mode on the instance (night gave the exact Onyx ground). Accent words take the system italic variable on the range, never on the master.
+5. Score: paste measure_compare.js at the top of a use_figma call. `measure(original)` and `measure(rebuild)` read text, marks and ground as fractions of the frame; `compare(o, r, 'A')`. Read only.
+6. Gate A: every row passes, or each FAIL traces to a declared gap. Thresholds [derived, Donnie ratifies]: size equals the nearest step; placement within 0.06 and the same third; colour within 0.2; a quantising jump beyond x1.25 or x0.8 is listed in gaps as a scale gap.
+7. Library gap: if the cause is a missing master option, propose a property with its variant cost and stop for Eddie's go. When built: one axis at a time off the default, cap 30 variants per set, resize the set and reflow the section after variants move, pin the Layout collection to Social on the new master, bind spacing to variables, rebind toggles by node name after any clone (a clone drops componentPropertyReferences), then rerun the compare.
+8. Build B from a clone of A, in this order, stopping at the first rung that scores:
    1. system part and property toggles;
    2. bind colours to the exact variable (distance 0.005 or less; a primitive when no semantic role fits, flagged);
    3. unbind fontSize, set the original's size, copy its line height and letter spacing; keep the face on system variables where one matches (Regular is 19:51, Regular Italic 19:52);
    4. spacing: Content to MIN, zero gaps, then one paddingTop per block; shift the centre with side padding;
    5. wrapper frame holding the instance plus a separate system part (Star, Handle) for any element that must sit off the layout;
    6. detach, only if nothing else scores, logged as off-system.
-8. Gate B: `compare(o, r, 'B')` passes with no declared gap: size within 3 percent, position within 0.01, colour within 0.03, same face, displayed case, alignment and line count. Run `offSystem` on the A and B instances; the ledger is B minus A (master-owned unbound values appear in both).
+9. Gate B: `compare(o, r, 'B')` passes with no declared gap: size within 3 percent, position within 0.01, colour within 0.03, same face, displayed case, alignment and line count. Run `offSystem` on the A and B instances; the ledger is B minus A (master-owned unbound values appear in both).
 
 ## Figma limits learned (do not rediscover)
 - In an instance these cannot be overridden: stack-positioning (absolute), x and y of absolute children, max width. Padding, gaps, size, fills, fontSize (unbind first), range font bindings can.
@@ -46,7 +47,7 @@ Builds on the generic `figma-recreate` skill (structure, slot and fidelity contr
 04 Staging, one section 3700 wide per pattern: Original | A | B at x 100, 1280, 2460, then one note: what is the same, what changed, declared gaps G1, G2 with proposals, each marked [derived] for Donnie, and "Reference only, not cleared for reuse". Images stay E04 placeholders unless cleared. Name the frames "Ours A / system-faithful" and "Ours B / work-faithful". Defects of the original are named, not copied.
 
 ## Checks before reporting
-- No override in A that is not bound to a variable; master-owned unbound values (the 250 px story padding) are listed as gaps, not fixed in the instance. Slots stamped with the module prefix.
+- Every text layer is on a text style or has size, face and fill bound to variables. No override in A that is not bound to a variable; master-owned unbound values (the 250 px story padding) are listed as gaps, not fixed in the instance. Slots stamped with the module prefix.
 - Safe margins: 4x5 crop about 34 px a side and 64 px margin; the 9x16 band is 250 px top and bottom, unbound and provisional (owner Eddie, proposal space/story-safe).
 - Flex: the original's longest line against the slot budget at 1x and 2x. Report; never widen a budget silently.
 - Contrast on the Semantic ground.
