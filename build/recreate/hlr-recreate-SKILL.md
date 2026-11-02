@@ -46,7 +46,7 @@ Builds on the generic `figma-recreate` skill (structure, slot and fidelity contr
 04 Staging, one section 3700 wide per pattern: Original | A | B at x 100, 1280, 2460, then one note: what is the same, what changed, declared gaps G1, G2 with proposals, each marked [derived] for Donnie, and "Reference only, not cleared for reuse". Images stay E04 placeholders unless cleared. Name the frames "Ours A / system-faithful" and "Ours B / work-faithful". Defects of the original are named, not copied.
 
 ## Checks before reporting
-- No unbound fill, space or size in A; slots stamped with the module prefix.
+- No override in A that is not bound to a variable; master-owned unbound values (the 250 px story padding) are listed as gaps, not fixed in the instance. Slots stamped with the module prefix.
 - Safe margins: 4x5 crop about 34 px a side and 64 px margin; the 9x16 band is 250 px top and bottom, unbound and provisional (owner Eddie, proposal space/story-safe).
 - Flex: the original's longest line against the slot budget at 1x and 2x. Report; never widen a budget silently.
 - Contrast on the Semantic ground.
