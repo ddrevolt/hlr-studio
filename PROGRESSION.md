@@ -107,3 +107,5 @@ Purpose: a short brief in, ready-to-send Klaviyo emails and ready-to-launch Meta
 - Review 3 ({{review-3-date}}): templates and the forge proof
 
 - 2026-11-01: hlr-recreate skill saved (method for rebuilding originals as pure instances). Audit proposals 1 to 5 built; S04 Full bleed Placement and S05 title overlay open.
+
+- 2026-11-01: hlr-recreate v2 (two modes, compare gate) proven on Moon, monthly energy and Seeking the Sublime; library defects fixed; skill text in build/recreate for Eddie to save.

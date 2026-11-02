@@ -475,4 +475,12 @@ One dated entry per chat, newest first.
 - Cross products grow fast: 3 scales x 3 placements x 6 base variants is 54. Vary one axis at a time off the default (30) and say so.
 - Growing a component set inside a stacked section means reflowing every set and notice below it; do it in order from the section's own children.
 - Not verified: all 60 new variants (8 spot checks), Masthead placements, 2x tests, real copy.
+
+## 2026-11-01: hlr-recreate v2, two modes, proof on three originals
+- Compare before you look: the numbers found what the eye missed. The monthly title was 38 px low (0.029 of the height), Sublime A failed placement because the star and an 18 px eyebrow have no system home, and Sublime B passed only after the line count matched.
+- A clone drops component property references; after cloning, rebind toggles by node name (S01 112, S03 16, S04 9, S05 6, P01 24). A new master must also pin the Layout collection to Social, or sizes resolve to web values.
+- In an instance, absolute positioning, x and y of absolute children, and max width cannot be overridden. Use padding overrides and a wrapper frame with a separate system part. A FIXED text in an instance can keep a stale width; hug it.
+- Compare displayed case (text case applied), not the textCase flag; treat "@" text as the handle mark; match marks by kind, nearest first.
+- Mode B finds exact variables: Onyx 353535 is the Night ground (distance 0), warm white fbf7ef is color/brand/alabaster; the monthly ground f0dfcf has no variable (nearest neutral-200, distance 0.049), so it stays raw in the ledger.
+- Not verified: the A and B frames hold placeholder grey, not cleared photography; Mode B on the other S03 and S01 originals; the 250 px story padding has no variable.
 - Cost: not measured.
