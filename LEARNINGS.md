@@ -470,3 +470,9 @@ One dated entry per chat, newest first.
 ## 2026-11-01: paid pairing verification
 - The first draft of the paid note said there were no paid originals; the boards reference them by node id in the client file. Read figma.yaml before asserting what the library lacks.
 - Cost: not measured.
+
+## 2026-11-01: P01 and P05 Scale and Placement
+- Cross products grow fast: 3 scales x 3 placements x 6 base variants is 54. Vary one axis at a time off the default (30) and say so.
+- Growing a component set inside a stacked section means reflowing every set and notice below it; do it in order from the section's own children.
+- Not verified: all 60 new variants (8 spot checks), Masthead placements, 2x tests, real copy.
+- Cost: not measured.
