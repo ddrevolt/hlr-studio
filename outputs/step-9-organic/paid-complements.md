@@ -44,4 +44,4 @@ The client's paid originals are not pasted into the library. Each paid compariso
 3. P10 and P11 unbuilt; no organic evidence for either.
 
 ## Next
-Default: proposal 1 (Scale and Placement on P01 and P05), behind Eddie's go. Nothing in Figma was changed in this pass.
+Proposal 1 built 2026-11-01 (Eddie's go): P01 and P05 carry Scale and Placement, 30 variants each, spot-checked only. Next default: proposal 2 (copy P03's Callouts count into S03 Inner callouts), behind Eddie's go.
