@@ -301,3 +301,5 @@ Newest first. Each line: the decision, its reason, what it replaced. Only Donnie
 
 - 2026-11-01: Paid complements start as a pairing note (`outputs/step-9-organic/paid-complements.md`), not a build. Reason: Eddie said paid comes after the organic work; the P masters were not re-read, and paid specs are null. Replaced: the preview section of the organic deep dive.
 - 2026-11-01: S04 Full bleed Show body and Show item toggles were unbound and are now bound in all six Full bleed variants. Board Moon and monthly energy instances swapped to Quote Centred (363:2049) and Title=Overlay 3x3 (363:2102). Reason: toggles did nothing in Full bleed; board showed old variants.
+
+- 2026-11-01: Paid pairings verified against the P01 to P09 structure in Figma (read only) and the note rewritten. Corrections: P07 Meaning has a likely organic sibling (S03 Inner items); paid originals exist by node id in the client file, not absent. Replaced: the unverified pairing table in the 2026-11-01 first draft.
