@@ -273,6 +273,12 @@ organic:   # 2026-11-01, S03 and S04 built (Eddie's go): existing variables only
       instance_limits: "Not overridable in an instance: stack-positioning (absolute), x and y of absolute children, max width. A FIXED text in an instance can keep a stale width; hug it. Mode B uses padding overrides and a wrapper frame with a separate system Star instance."
       tooling: "build/recreate/measure_compare.js (measure, compare A and B, colorVars, offSystem; read only) and build/recreate/hlr-recreate-SKILL.md (the v2 skill text)"
   originals_page: { "hlr stories and work in progress": "349:6817", "social templates": "349:124710", "social grid": "349:127373", "sept-october 2026": "349:128295" }   # organic only; no paid originals
+design_loop:   # 2026-11-02, researcher first run and designer shortlist; no Figma write yet, so no new node ids
+  catalog: "brand-pack/design-catalog.json (33 seeded entries; gate build/design-loop/catalog_lint.py)"
+  skills: "build/design-loop/ (hlr-design-researcher, hlr-designer, hlr-design-curator; the critic is verify plus build/recreate/measure_compare.js)"
+  research: "outputs/design-loop/research-2026-11-02.md"
+  shortlist: "outputs/design-loop/shortlist-2026-11-02.md (6 options, default 1, 2 and 3; waits on Eddie's pick)"
+  inspiration_page: "reference file LYyYXPDUHVoAABh865EvMI page 2:35848, read only; screenshots 2:35849 to 2:35856 viewed 2026-11-02"
 templates:   # 2026-10-23, Chat 6: pure instances on 03 Templates, email canvas set on the frame
   "T01 Product Spotlight": "46:104"   # from 2:563, in its order: M01, M03, M04, M05, M14 (73:688), M13 (73:691), M08, M09; opens with M23 (the lockup) where it opened with M01, since 2026-10-23
   "T02 Editorial send": "46:227"      # from 2:9, 2:1330, 2:1767; M07 (46:262) on Auto (Eddie, kept 2026-10-23)

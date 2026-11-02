@@ -633,6 +633,31 @@
       "gate": "Review 2 closed",
       "needs_you": "",
       "note": "Retired by the Phase 2 re-scope (DECISIONS 2026-10-31)."
+    },
+    {
+      "id": "design-loop",
+      "name": "Design loop: researcher, designer and curator skills, the repo catalog, first batch of designs",
+      "step": "process",
+      "kind": "package",
+      "status": "waiting",
+      "owner": "Eddie",
+      "intent": "Add to the repository of designs (Figma masters, boards and brand-pack/design-catalog.json) for organic Instagram and email: the researcher ranks opportunities and suggests content, the designer shortlists and builds only the options Eddie picks, the curator keeps the catalog and boards true. Web research is reference only; an outside design is adopted through hlr-recreate (Mode A by default).",
+      "sources": [
+        "DECISIONS.md 2026-11-02",
+        "outputs/design-loop/research-2026-11-02.md",
+        "outputs/design-loop/shortlist-2026-11-02.md",
+        "build/design-loop/"
+      ],
+      "acceptance": [
+        "Eddie saves the three skills from the save cards (sources in build/design-loop)",
+        "Eddie picks from the shortlist and gives the go on conventions; each pick is built in Mode A on 04 Staging and passes the designer's gates, or lists declared gaps",
+        "every built design has an entry in brand-pack/design-catalog.json that passes build/design-loop/catalog_lint.py; status approved only on Eddie's word",
+        "bash build/checks.sh passes"
+      ],
+      "depends": [],
+      "gate": "Eddie's pick from the shortlist",
+      "needs_you": "Pick from the six options in outputs/design-loop/shortlist-2026-11-02.md (default 1, 2 and 3), name the piece or set for options 1 and 2, and give the go on build conventions. Save the three skills from the cards.",
+      "note": "2026-11-02: skills, catalog (33 seeded entries), lint and tests, first researcher run and the shortlist are built; nothing is built in Figma."
     }
   ],
   "phase": "Phase 2 (DECISIONS 2026-10-31)"
