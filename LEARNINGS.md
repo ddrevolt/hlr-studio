@@ -484,3 +484,12 @@ One dated entry per chat, newest first.
 - Mode B finds exact variables: Onyx 353535 is the Night ground (distance 0), warm white fbf7ef is color/brand/alabaster; the monthly ground f0dfcf has no variable (nearest neutral-200, distance 0.049), so it stays raw in the ledger.
 - Not verified: the A and B frames hold placeholder grey, not cleared photography; Mode B on the other S03 and S01 originals; the 250 px story padding has no variable.
 - Cost: not measured.
+
+## 2026-11-02: design loop, researcher first run
+- `products.json` carries no product prose: `description` is empty on all 182 records, 105 list one material, 1 lists two, 76 list none. A callout story can name a piece and its stone and nothing more; read the data before promising callouts.
+- The client Inspiration page is a photography board (121 images, no text layers) with 8 screenshots of outside ads, not a layout library. Layout evidence comes from the originals; photography evidence from the board. Repeated near-identical crops read as one shoot cropped as a carousel series.
+- Two ratified email types have no template of their own: product_launch and offer_urgency. The registry cites reference nodes that no T01 to T17 recreates. Check `template_nodes` against the `figma.yaml` templates sources when counting coverage.
+- `voice_lint.js` on the engine's default model scores every line 0.5 and flags a caps eyebrow as a participial opener. It is advisory and weak until `voice_model` exists (Donnie's blind marks).
+- The Write tool turned an em dash escape typed in Python source into the literal character and the scan caught it. Write the code point as `chr(0x2014)`. `python3 -I` still wrote a `__pycache__`; remove it before committing.
+- Not verified: whether S04 reserves a reply-sticker band; the Field Notes story frame ids in the library; zodiac season dates; the web figures beyond what the two pages state; every shortlist line against a human ear (the lint is advisory).
+- Cost: not measured.

@@ -109,3 +109,5 @@ Purpose: a short brief in, ready-to-send Klaviyo emails and ready-to-launch Meta
 - 2026-11-01: hlr-recreate skill saved (method for rebuilding originals as pure instances). Audit proposals 1 to 5 built; S04 Full bleed Placement and S05 title overlay open.
 
 - 2026-11-01: hlr-recreate v2 (two modes, compare gate) proven on Moon, monthly energy and Seeking the Sublime; library defects fixed; skill text in build/recreate for Eddie to save.
+
+- 2026-11-02: design loop built (researcher, designer, curator skills in build/design-loop; brand-pack/design-catalog.json seeded and linted); first researcher run and a six-option shortlist in outputs/design-loop; nothing built in Figma, waits on Eddie's pick.

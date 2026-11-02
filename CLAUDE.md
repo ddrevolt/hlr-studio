@@ -4,7 +4,8 @@ HLR is a client. This repo holds its design system (DTCG tokens, a Figma library
 
 ## Where things are
 
-- `brand-pack/`: the only source of HLR facts. `brand-context.md` (File map), `voice-contract.md`, `products.json`, `route-axes.json`, `module-library.json`, `slotmap.yaml`, `slotmap-paid.yaml`, `placement-specs.json`, `tokens.json`, `figma.yaml`, `brand-pack/web/tokens.css`.
+- `brand-pack/`: the only source of HLR facts. `brand-context.md` (File map), `voice-contract.md`, `products.json`, `route-axes.json`, `module-library.json`, `slotmap.yaml`, `slotmap-paid.yaml`, `placement-specs.json`, `tokens.json`, `figma.yaml`, `design-catalog.json` (the design repository's catalog), `brand-pack/web/tokens.css`.
+- `build/design-loop/`: the design loop (researcher, designer, curator skill sources, `catalog_lint.py` and its tests). `build/recreate/`: `hlr-recreate` v2 and the compare tool. Research and shortlists go to `outputs/design-loop/`.
 - `PROGRESSION.md` is the plan and its gates. `DECISIONS.md` and `LEARNINGS.md` are the record. `REVIEW.md` holds the review rules.
 - `crew/`: the portable crew. `crew/README.md` says how it runs. `crew/run.py`, one folder per co-worker, `crew/checks/`, `crew/producers/`, `crew/fixtures/`, `crew/tests/`.
 - `outputs/`: what was made, by step. `build/`: `build/RUNNER.md`, `build/backlog.json`, `build/checks.sh`, `build/log/`. `_archive/`: retired work, never deleted.
