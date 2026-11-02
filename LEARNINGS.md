@@ -471,6 +471,11 @@ One dated entry per chat, newest first.
 - The first draft of the paid note said there were no paid originals; the boards reference them by node id in the client file. Read figma.yaml before asserting what the library lacks.
 - Cost: not measured.
 
+## 2026-11-01: P01 and P05 Scale and Placement
+- Cross products grow fast: 3 scales x 3 placements x 6 base variants is 54. Vary one axis at a time off the default (30) and say so.
+- Growing a component set inside a stacked section means reflowing every set and notice below it; do it in order from the section's own children.
+- Not verified: all 60 new variants (8 spot checks), Masthead placements, 2x tests, real copy.
+
 ## 2026-11-01: hlr-recreate v2, two modes, proof on three originals
 - Compare before you look: the numbers found what the eye missed. The monthly title was 38 px low (0.029 of the height), Sublime A failed placement because the star and an 18 px eyebrow have no system home, and Sublime B passed only after the line count matched.
 - A clone drops component property references; after cloning, rebind toggles by node name (S01 112, S03 16, S04 9, S05 6, P01 24). A new master must also pin the Layout collection to Social, or sizes resolve to web values.
