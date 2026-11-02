@@ -1,0 +1,1217 @@
+{
+ "_role": "design_catalog",
+ "_status": "seeded 2026-11-02 from brand-pack/figma.yaml; the curator keeps it; Eddie approves every status change to approved",
+ "_note": "One entry per design the repository holds: masters, designs, kits and boards. Figma holds the frames; this file holds what each is for and what it passed. Rule: a new or researched design is added only if it beats an existing entry on a named job (field beats). Tool: build/design-loop/catalog_lint.py.",
+ "version": 1,
+ "enums": {
+  "kind": [
+   "master",
+   "design",
+   "kit",
+   "board"
+  ],
+  "channel": [
+   "organic_instagram",
+   "email",
+   "paid"
+  ],
+  "mode": [
+   "native",
+   "A",
+   "B",
+   "A+B"
+  ],
+  "source": [
+   "seed",
+   "original",
+   "researched",
+   "new"
+  ],
+  "status": [
+   "proposed",
+   "approved",
+   "retired"
+  ],
+  "provenance": [
+   "documented",
+   "observed",
+   "derived"
+  ]
+ },
+ "gate_keys": [
+  "compare",
+  "bound_variables",
+  "scale_steps",
+  "safe_margins",
+  "contrast",
+  "slot_budgets",
+  "copy"
+ ],
+ "designs": [
+  {
+   "id": "HLR-IG-001",
+   "kind": "master",
+   "title": "S01 Feed Post",
+   "channel": "organic_instagram",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "S01",
+    "node": "334:502"
+   },
+   "variant": "33 variants: Structure {Photo, Headline on photo, Text tile, Offer tile} x Ratio x Scale {Display, Statement, Quote} x Placement {Top, Low, Centred}",
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml organic.audit_build_2026_11_01 (Eddie's go 2026-11-01)",
+   "type": "feed_post: photo, mantra, quote, offer, product_spotlight",
+   "content_job": "single post: photo, headline on photo, text tile, offer",
+   "provenance": "documented",
+   "nodes": {
+    "set": "334:502"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "built from the organic originals S-PHOTO, S-PHOTOTEXT, S-TEXT, S-OFFER"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-IG-002",
+   "kind": "master",
+   "title": "S03 Carousel Set",
+   "channel": "organic_instagram",
+   "ratios": [
+    "4x5"
+   ],
+   "master": {
+    "name": "S03",
+    "node": "356:1858"
+   },
+   "variant": "Panel {Cover (Top, Low, Centred), Inner, Inner callouts, End}",
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml organic (Eddie's go 2026-11-01); callouts 362:2078 from the audit go",
+   "type": "carousel: launch, annotated_product, education",
+   "content_job": "carousel panels: cover, inner, callouts, end",
+   "provenance": "documented",
+   "nodes": {
+    "set": "356:1858",
+    "cover": "356:1787",
+    "inner": "356:1804",
+    "end": "356:1837",
+    "inner_callouts": "362:2078"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "built from the 2023 strips, the Field Notes and energy medicine carousels"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-IG-003",
+   "kind": "master",
+   "title": "S04 Story Set",
+   "channel": "organic_instagram",
+   "ratios": [
+    "9x16"
+   ],
+   "master": {
+    "name": "S04",
+    "node": "357:1882"
+   },
+   "variant": "13 variants: Structure {Text, Inset, Full bleed, Split} with Scale and Placement",
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml organic (Eddie's go 2026-11-01)",
+   "type": "story_set: launch, product_spotlight, mantra, quote, offer",
+   "content_job": "story frames: text, inset, full bleed, split",
+   "provenance": "documented",
+   "nodes": {
+    "set": "357:1882"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "built from the story families Moon, Spell Bracelets, Seeking The Sublime, Launch, zodiac sets"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-IG-004",
+   "kind": "master",
+   "title": "S05 Grid Cover",
+   "channel": "organic_instagram",
+   "ratios": [
+    "4x5",
+    "9x16"
+   ],
+   "master": {
+    "name": "S05",
+    "node": "362:2077"
+   },
+   "variant": "4 variants: Grid {3x3, 3x4} x Title {Band, Overlay}",
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml organic.audit_build_2026_11_01.s05_grid_cover (Eddie: go on all 3)",
+   "type": "series: energy_medicine, season_crystals",
+   "content_job": "image grid cover for monthly and season series",
+   "provenance": "documented",
+   "nodes": {
+    "set": "362:2077"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "[derived] proposed 2026-11-01; no source in the book, Donnie to ratify"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-IG-005",
+   "kind": "board",
+   "title": "Moon, S04 Full bleed",
+   "channel": "organic_instagram",
+   "ratios": [
+    "9x16"
+   ],
+   "master": {
+    "name": "S04",
+    "node": "357:1882"
+   },
+   "variant": "Structure=Full bleed",
+   "mode": "A+B",
+   "source": "original",
+   "status": "proposed",
+   "approved_by": null,
+   "approval_ref": null,
+   "type": null,
+   "content_job": "full-bleed photo story with a title",
+   "provenance": "observed",
+   "nodes": {
+    "original": "362:2123",
+    "A": "370:8516",
+    "B": "370:8542"
+   },
+   "evidence": [
+    {
+     "tag": "observed",
+     "ref": "figma.yaml organic.audit_build_2026_11_01.recreate_proof_2026_11_01",
+     "note": "Moon story, original 349:7055"
+    }
+   ],
+   "gates": {
+    "compare_A": "pass",
+    "compare_B": "pass"
+   },
+   "gate_gap": null,
+   "origin_note": "hlr-recreate v2 proof board; placeholder grey images, reference only, not cleared for reuse; a proof of the method, not yet ratified as a catalog design"
+  },
+  {
+   "id": "HLR-IG-006",
+   "kind": "board",
+   "title": "Seeking the Sublime quote, S04 Text Quote",
+   "channel": "organic_instagram",
+   "ratios": [
+    "9x16"
+   ],
+   "master": {
+    "name": "S04",
+    "node": "357:1882"
+   },
+   "variant": "Structure=Text, Scale=Quote (362:1947)",
+   "mode": "A+B",
+   "source": "original",
+   "status": "proposed",
+   "approved_by": null,
+   "approval_ref": null,
+   "type": null,
+   "content_job": "quote story on a flat ground",
+   "provenance": "observed",
+   "nodes": {
+    "original": "362:2129",
+    "A": "362:7672",
+    "B_wrapper": "378:7170",
+    "B_instance": "378:7171",
+    "B_star": "378:7185"
+   },
+   "evidence": [
+    {
+     "tag": "observed",
+     "ref": "figma.yaml organic.audit_build_2026_11_01.recreate_proof_2026_11_01",
+     "note": "Seeking The Sublime story, original 349:6871"
+    }
+   ],
+   "gates": {
+    "compare_A": "pass with declared gaps G1 (star at the foot) and G2 (no label step near 18 px)",
+    "compare_B": "pass"
+   },
+   "gate_gap": null,
+   "origin_note": "hlr-recreate v2 proof board; placeholder grey images, reference only, not cleared for reuse; a proof of the method, not yet ratified as a catalog design"
+  },
+  {
+   "id": "HLR-IG-007",
+   "kind": "board",
+   "title": "Monthly energy, S05 Grid 3x3",
+   "channel": "organic_instagram",
+   "ratios": [
+    "4x5"
+   ],
+   "master": {
+    "name": "S05",
+    "node": "362:2077"
+   },
+   "variant": "Grid=3x3, Title=Band",
+   "mode": "A+B",
+   "source": "original",
+   "status": "proposed",
+   "approved_by": null,
+   "approval_ref": null,
+   "type": null,
+   "content_job": "monthly series grid cover",
+   "provenance": "observed",
+   "nodes": {
+    "original": "362:2163",
+    "A": "362:7732",
+    "B": "381:7161"
+   },
+   "evidence": [
+    {
+     "tag": "observed",
+     "ref": "figma.yaml organic.audit_build_2026_11_01.recreate_proof_2026_11_01",
+     "note": "monthly energy cover, original 349:128048"
+    }
+   ],
+   "gates": {
+    "compare_A": "pass",
+    "compare_B": "pass"
+   },
+   "gate_gap": null,
+   "origin_note": "hlr-recreate v2 proof board; placeholder grey images, reference only, not cleared for reuse; a proof of the method, not yet ratified as a catalog design"
+  },
+  {
+   "id": "HLR-EM-001",
+   "kind": "design",
+   "title": "T01 Product Spotlight",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "product_spotlight",
+   "content_job": "spotlight a product",
+   "provenance": "documented",
+   "nodes": {
+    "template": "46:104"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:563"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-002",
+   "kind": "design",
+   "title": "T02 Editorial send",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "editorial_letter",
+   "content_job": "founder or editorial letter",
+   "provenance": "documented",
+   "nodes": {
+    "template": "46:227"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:9, 2:1330, 2:1767"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-003",
+   "kind": "design",
+   "title": "T03 Product listing",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "product_listing",
+   "content_job": "list products",
+   "provenance": "documented",
+   "nodes": {
+    "template": "64:354"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:683"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-004",
+   "kind": "design",
+   "title": "T04 Sale",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "offer_launch",
+   "content_job": "announce an offer",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:569"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:984"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-005",
+   "kind": "design",
+   "title": "T05 Testimonials",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "testimonials",
+   "content_job": "prove with reviews and press",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:680"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:809"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-006",
+   "kind": "design",
+   "title": "T06 Moodboard",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "moodboard",
+   "content_job": "mood and story",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:862"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:913"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-007",
+   "kind": "design",
+   "title": "T07 Welcome 1",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "welcome",
+   "content_job": "welcome, send 1",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:972"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:8838"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-008",
+   "kind": "design",
+   "title": "T08 Welcome 2",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "welcome",
+   "content_job": "welcome, send 2",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1079"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:8917"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-009",
+   "kind": "design",
+   "title": "T09 Welcome 3",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "welcome",
+   "content_job": "welcome, send 3",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1136"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:193004"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-010",
+   "kind": "design",
+   "title": "T10 Welcome 4",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "welcome",
+   "content_job": "welcome, send 4",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1196"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:193050"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-011",
+   "kind": "design",
+   "title": "T11 Welcome 5",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "welcome",
+   "content_job": "welcome, send 5",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1286"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:193107"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-012",
+   "kind": "design",
+   "title": "T12 Energy medicine",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "monthly_ritual",
+   "content_job": "monthly ritual send",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1373"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:31200"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-013",
+   "kind": "design",
+   "title": "T13 Browse flow",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "browse_abandon",
+   "content_job": "recover a browse",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1510"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:189609"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-014",
+   "kind": "design",
+   "title": "T14 Cart flow",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "cart_abandon",
+   "content_job": "recover a cart",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1572"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:189904"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-015",
+   "kind": "design",
+   "title": "T15 Abandoned cart flow",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "cart_abandon",
+   "content_job": "recover an abandoned cart",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1648"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:190749"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-016",
+   "kind": "design",
+   "title": "T16 Checkout flow",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "checkout_abandon",
+   "content_job": "recover a checkout",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1761"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:191052"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-EM-017",
+   "kind": "design",
+   "title": "T17 Post-purchase",
+   "channel": "email",
+   "ratios": [
+    "1200w"
+   ],
+   "master": {
+    "name": "M## modules (brand-pack/slotmap.yaml)",
+    "node": null
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml templates (Eddie's go 2026-10-23, 'the rest of the templates and the flows')",
+   "type": "transactional",
+   "content_job": "post-purchase send",
+   "provenance": "documented",
+   "nodes": {
+    "template": "174:1853"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "pure instances of M## modules; client original reference 2:194122"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; the curator records gate results on the next touch (owner: curator)"
+  },
+  {
+   "id": "HLR-PD-001",
+   "kind": "master",
+   "title": "P01 Brand Line",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P01",
+    "node": "341:622"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "341:622"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-002",
+   "kind": "master",
+   "title": "P02 Product Hero",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P02",
+    "node": "341:830"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "341:830"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-003",
+   "kind": "master",
+   "title": "P03 Annotated",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P03",
+    "node": "342:1882"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "342:1882"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-004",
+   "kind": "master",
+   "title": "P04 Quote",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P04",
+    "node": "342:2148"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "342:2148"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-005",
+   "kind": "master",
+   "title": "P05 Mantra",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P05",
+    "node": "341:1002"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "341:1002"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-006",
+   "kind": "master",
+   "title": "P06 Offer",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P06",
+    "node": "343:1666"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "343:1666"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-007",
+   "kind": "master",
+   "title": "P07 Meaning",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P07",
+    "node": "343:1923"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "343:1923"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-008",
+   "kind": "master",
+   "title": "P08 Birthstone Grid",
+   "channel": "paid",
+   "ratios": [
+    "4x5",
+    "1x1",
+    "9x16"
+   ],
+   "master": {
+    "name": "P08",
+    "node": "343:2228"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "343:2228"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  },
+  {
+   "id": "HLR-PD-009",
+   "kind": "master",
+   "title": "P09 End Frame",
+   "channel": "paid",
+   "ratios": [
+    "9x16"
+   ],
+   "master": {
+    "name": "P09",
+    "node": "341:1029"
+   },
+   "variant": null,
+   "mode": "native",
+   "source": "seed",
+   "status": "approved",
+   "approved_by": "Eddie",
+   "approval_ref": "figma.yaml paid (Eddie's go 2026-11-01)",
+   "type": null,
+   "content_job": "paid master (see outputs/step-9-organic/paid-complements.md)",
+   "provenance": "documented",
+   "nodes": {
+    "set": "341:1029"
+   },
+   "evidence": [
+    {
+     "tag": "documented",
+     "ref": "brand-pack/figma.yaml",
+     "note": "no paid originals exist; mapped from organic and email families"
+    }
+   ],
+   "gates": null,
+   "gate_gap": "not re-run at seed; paid specs stay null (owner Eddie, placement-specs.json)"
+  }
+ ]
+}
